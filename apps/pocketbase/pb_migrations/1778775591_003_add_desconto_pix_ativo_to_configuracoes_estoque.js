@@ -1,0 +1,31 @@
+/// <reference path="../pb_data/types.d.ts" />
+migrate((app) => {
+  const collection = app.findCollectionByNameOrId("configuracoes_estoque");
+
+  const existing = collection.fields.getByName("desconto_pix_ativo");
+  if (existing) {
+    if (existing.type === "bool") {
+      return; // field already exists with correct type, skip
+    }
+    collection.fields.removeByName("desconto_pix_ativo"); // exists with wrong type, remove first
+  }
+
+  collection.fields.add(new BoolField({
+    name: "desconto_pix_ativo",
+    required: false
+  }));
+
+  return app.save(collection);
+}, (app) => {
+  try {
+    const collection = app.findCollectionByNameOrId("configuracoes_estoque");
+    collection.fields.removeByName("desconto_pix_ativo");
+    return app.save(collection);
+  } catch (e) {
+    if (e.message.includes("no rows in result set")) {
+      console.log("Collection not found, skipping revert");
+      return;
+    }
+    throw e;
+  }
+})
