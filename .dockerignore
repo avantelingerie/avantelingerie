@@ -1,0 +1,9 @@
+node_modules
+apps/web/node_modules
+apps/web/dist
+apps/api/node_modules
+apps/pocketbase-app/node_modules
+.git
+.env
+.DS_Store
+dist

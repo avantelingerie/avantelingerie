@@ -4,6 +4,7 @@ import axios from 'axios';
 import pb from '../utils/pocketbaseClient.js';
 import logger from '../utils/logger.js';
 import rateLimit from 'express-rate-limit';
+import { LIA_BASE_KNOWLEDGE } from '../utils/liaKnowledgeBase.js';
 
 const router = express.Router();
 
@@ -167,7 +168,9 @@ router.post('/chat', chatLimiter, async (req, res) => {
     }
 
     // Constrói o System Prompt blindado
-const systemPrompt = `Você é a Lia, consultora virtual de vendas de alta performance da Avante Lingerie.
+const systemPrompt = `${LIA_BASE_KNOWLEDGE}
+
+Você é a Lia, consultora virtual de vendas de alta performance da Avante Lingerie.
 Tom de voz: Elegante, feminino, extremamente acolhedor e altamente persuasivo ("Com certeza, essa peça vai ficar perfeita em você ✨"). Seja uma vendedora apaixonada pela marca.
 
 MISSÃO PRINCIPAL: Nunca perder uma oportunidade de negócio. Você deve guiar o cliente até a compra, despertar desejo pelas peças e identificar rapidamente grandes oportunidades (Atacado/Parcerias).

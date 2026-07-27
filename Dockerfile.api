@@ -1,0 +1,15 @@
+FROM node:20-alpine
+
+WORKDIR /app
+
+# Copia tudo, exceto o que está no .dockerignore
+COPY . .
+
+# Instala as dependências de todos os workspaces
+RUN npm ci --omit=dev
+
+WORKDIR /app/apps/api
+
+EXPOSE 3001
+
+CMD ["npm", "start"]
