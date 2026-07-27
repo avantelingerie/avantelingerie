@@ -25,7 +25,9 @@ export default function LiaWidget() {
   useEffect(() => {
     let sid = sessionStorage.getItem('lia_session_id');
     if (!sid) {
-      sid = crypto.randomUUID();
+      sid = typeof crypto !== 'undefined' && crypto.randomUUID 
+        ? crypto.randomUUID() 
+        : Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
       sessionStorage.setItem('lia_session_id', sid);
     }
     setSessionId(sid);
