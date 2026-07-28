@@ -1,0 +1,18 @@
+avantelingerie.com.br, www.avantelingerie.com.br {
+    # Redireciona chamadas da API para o container api
+    handle /hcgi/api/* {
+        uri strip_prefix /hcgi/api
+        reverse_proxy api:3001
+    }
+
+    # Redireciona chamadas do PocketBase para o container pocketbase
+    handle /hcgi/platform/* {
+        uri strip_prefix /hcgi/platform
+        reverse_proxy pocketbase:8090
+    }
+
+    # O restante (Front-end Vite/React) vai para o nginx do container web
+    handle {
+        reverse_proxy web:80
+    }
+}

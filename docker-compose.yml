@@ -5,8 +5,8 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.web
-    ports:
-      - "80:80"
+    expose:
+      - "80"
     depends_on:
       - api
       - pocketbase
@@ -41,6 +41,23 @@ services:
     networks:
       - avante-network
 
+  caddy:
+    image: caddy:latest
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile
+      - caddy_data:/data
+      - caddy_config:/config
+    networks:
+      - avante-network
+
 networks:
   avante-network:
     driver: bridge
+
+volumes:
+  caddy_data:
+  caddy_config:
