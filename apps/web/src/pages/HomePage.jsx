@@ -187,7 +187,7 @@ export default function HomePage() {
       <section id="home" className="relative min-h-[100dvh] w-full overflow-hidden bg-black flex items-center justify-center">
         <video
           key={videoVersion}
-          src="https://lmdesignerweb.com/video/video_avante.mp4"
+          src="/video/video_avante.mp4"
           className="absolute inset-0 w-full h-full object-cover z-[1] opacity-75"
           autoPlay muted loop playsInline controls={false} preload="none"
         />

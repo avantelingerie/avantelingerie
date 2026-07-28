@@ -206,7 +206,7 @@ export default function LiaWidget() {
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-full overflow-hidden bg-[#B8860B]/20 border border-[#B8860B]/50 flex items-center justify-center">
                 <img 
-                  src="https://lmdesignerweb.com/imagens/lia_avatar.png" 
+                  src="/imagens/lia_avatar.png" 
                   alt="Lia" 
                   className="w-full h-full object-cover"
                   onError={(e) => {
@@ -322,7 +322,7 @@ export default function LiaWidget() {
 
           {!imageError ? (
             <img 
-              src="https://lmdesignerweb.com/imagens/lia_avatar.png" 
+              src="/imagens/lia_avatar.png" 
               alt="Falar com a Lia" 
               className="h-full w-auto object-contain drop-shadow-2xl filter contrast-105"
               onError={() => setImageError(true)}

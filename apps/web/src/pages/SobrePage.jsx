@@ -20,7 +20,7 @@ const BackgroundVideo = memo(() => {
         className="w-full h-full object-cover opacity-75 transform translate-z-0 will-change-transform"
         style={{ transform: 'translate3d(0, 0, 0)', backfaceVisibility: 'hidden' }}
       >
-        <source src="https://lmdesignerweb.com/video/nf_sobre.mp4" type="video/mp4" />
+        <source src="/video/nf_sobre.mp4" type="video/mp4" />
         <source src="/videos/nova_friburgo_bg.mp4" type="video/mp4" />
       </video>
     </div>

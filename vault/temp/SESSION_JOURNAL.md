@@ -6209,3 +6209,212 @@
 ## 2026-07-28 15:05:45.783Z click
 - element: {"tag":"div","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Cérebro da LiaGerencie a inteligência artificial, treine seu conhecimento e monitore os chats ao vivo. Chats Ao Vivo Treinamento (Knowledge)Nova Regra / PromoçãoEnsine a Lia a responder sobre novas campanhas, regras de frete ou avisos.Título (Para organização)Instrução para a IA Data de Expiração (Opcional)A Lia esquecerá essa regra após essa data.Treinar LiaConhecimento Ativo da LiaTodas as regras e instruções dinâmicas que a Lia lê antes de responder qualquer mensagem.Sobre a Avante Lingerie (Identidade e História)Desativar\"Origem: Nova Friburgo/RJ (capital da lingerie). Foco: Conforto Real para o dia a dia. Materiais: Forro 100% algodão nobre, rendas francesas hipoalergênicas, metais sem níquel. Operação: Fabricação própria, CNPJ 54.615.037/0001-53.\"Políticas de Revenda, Parcerias e Atacado B2BDesativar\"Público: Revendedores e Atacadistas. Gatilho de Desconto de Fábrica: R$ 500,00 no carrinho. Vantagens: Alta margem de lucro, cadastro com CPF, Portal Restrito (para baixar fotos e vídeos). Instrução para IA: Se o cliente demonstrar interesse em revender, encaminhe de forma objetiva para a aba 'Quero Revender'.\"Prazos de Envio, Logística e Melhor EnvioDesativar\"Despacho: Em até 24h úteis após pagamento. Logística: Melhor Envio (Correios, Jadlog, Latam Cargo). Prazo de Entrega Médio: 5 a 15 dias úteis. Rastreio: Enviado via WhatsApp e e-mail.\"Política de Trocas, Devoluções e ReembolsosDesativar\"Prazo de Arrependimento: 7 dias (Frete pago pelo cliente). Defeito de Fábrica: 30 dias (Frete pago pela loja). REGRA DE HIGIENE PROIBITIVA: Calcinhas e meias-calças NÃO possuem troca por tamanho ou arrependimento. Sutiãs e croppeds podem ser trocados se intactos e com etiqueta.\"Guia de Medidas Perfeitas e Estruturação das PeçasDesativar\"Tabela (Sutiã): P(38-40), M(42), G(44), GG(46). Modelagem: P possui bojo com bolha interna (volume). M/G/GG possuem bojo casquinha liso (sustentação). Elasticidade das rendas: 25%. Instrução para IA: Na dúvida de sutiã, recomende o maior.\"Esto..."}
 
+## 2026-07-28 15:31:06.438Z load
+- url: http://localhost:3000/
+- title: Avante Lingerie | Oficial
+
+## 2026-07-28 15:31:09.444Z navigate
+- url: http://localhost:3000/
+- via: replaceState
+
+## 2026-07-28 15:31:10.909Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 15:31:10.914Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 15:31:11.013Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 15:31:11.013Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 15:31:11.043Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 15:31:11.043Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 15:31:11.054Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 15:31:11.055Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 15:31:16.174Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Falar com a Lia ✨"}
+
+## 2026-07-28 15:31:18.056Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"","valueLength":0,"text":""}
+
+## 2026-07-28 15:31:18.263Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"","valueLength":0,"text":""}
+
+## 2026-07-28 15:31:22.471Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"bom dia","valueLength":7,"text":""}
+
+## 2026-07-28 15:31:22.472Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"submit","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-07-28 15:31:22.481Z submit
+- action: http://localhost:3000/
+- fields: [{"label":"Escreva sua dúvida...","type":"text","value":"bom dia","length":7,"redacted":false},{"label":"[submit]","type":"submit","value":"","length":0,"redacted":false}]
+
+## 2026-07-28 15:31:22.504Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"bom dia","valueLength":7,"text":""}
+
+## 2026-07-28 15:31:53.843Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"","valueLength":0,"text":""}
+
+## 2026-07-28 15:31:54.022Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"","valueLength":0,"text":""}
+
+## 2026-07-28 15:32:20.936Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"Onde fica a avante?","valueLength":19,"text":""}
+
+## 2026-07-28 15:32:20.937Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"submit","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-07-28 15:32:20.945Z submit
+- action: http://localhost:3000/
+- fields: [{"label":"Escreva sua dúvida...","type":"text","value":"Onde fica a avante?","length":19,"redacted":false},{"label":"[submit]","type":"submit","value":"","length":0,"redacted":false}]
+
+## 2026-07-28 15:32:20.984Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"Onde fica a avante?","valueLength":19,"text":""}
+
+## 2026-07-28 15:33:07.164Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-07-28 15:33:08.270Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 15:33:08.289Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 15:33:08.327Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 15:33:08.327Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 15:33:08.337Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 15:33:08.338Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 15:33:08.344Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 15:33:08.345Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 15:33:08.452Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 15:33:08.452Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 15:33:08.461Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 15:33:08.461Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 15:33:08.466Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 15:33:08.466Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 15:33:08.469Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 15:33:08.469Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 15:33:28.653Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 15:33:28.660Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 15:33:28.693Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 15:33:28.694Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 15:33:28.707Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 15:33:28.707Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 15:33:28.716Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 15:33:28.716Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 15:33:28.761Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 15:33:28.761Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 15:33:28.767Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 15:33:28.767Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 15:33:28.770Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 15:33:28.770Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 15:33:28.776Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 15:33:28.777Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 15:35:03.108Z load
+- url: http://localhost:3000/
+- title: Avante Lingerie | Oficial
+
+## 2026-07-28 15:35:04.937Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 15:35:04.940Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 15:35:04.962Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 15:35:04.962Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 15:35:04.968Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 15:35:04.968Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 15:35:04.979Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 15:35:04.979Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 15:35:18.703Z click
+- element: {"tag":"div","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-07-28 15:35:20.783Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Falar com a Lia ✨"}
+
+## 2026-07-28 15:35:26.927Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+

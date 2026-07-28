@@ -11,6 +11,16 @@ avantelingerie.com.br, www.avantelingerie.com.br {
         reverse_proxy pocketbase:8090
     }
 
+    # Serve midia estatica migrada da antiga hospedagem
+    handle_path /video/* {
+        root * /var/www/public_media/video
+        file_server
+    }
+    handle_path /imagens/* {
+        root * /var/www/public_media/imagens
+        file_server
+    }
+
     # O restante (Front-end Vite/React) vai para o nginx do container web
     handle {
         reverse_proxy web:80

@@ -301,7 +301,7 @@ export default function QueroRevenderPage() {
             <div className="absolute inset-0 bg-[#C59B5F]/10 rounded-3xl filter blur-3xl transform rotate-6 scale-95" />
             <div className="relative border-4 border-[#C59B5F]/30 bg-[#1a1a1a] rounded-[32px] overflow-hidden shadow-2xl w-full max-w-[420px] aspect-[4/5] flex items-center justify-center group transition-transform duration-500 hover:scale-[1.01]">
               <video
-                src="https://lmdesignerweb.com/video/video_revenda_avante.mp4"
+                src="/video/video_revenda_avante.mp4"
                 autoPlay
                 loop
                 muted

@@ -50,7 +50,7 @@ export default function ResellersSection({ className }) {
           >
             <div className="relative rounded-[2rem] overflow-hidden shadow-xl border border-[#c59b5f]/20 bg-gray-50 aspect-video lg:aspect-[4/5] group">
               <video
-                src="https://lmdesignerweb.com/video/video_revenda_avante.mp4"
+                src="/video/video_revenda_avante.mp4"
                 className="w-full h-full object-cover"
                 controls
                 preload="metadata"

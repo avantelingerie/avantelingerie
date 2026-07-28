@@ -19,8 +19,8 @@ import {
 } from 'lucide-react';
 
 // URLs Externas de Mídia hospedadas com sucesso na lmdesignerweb.com
-const IMAGE_PATH = "https://lmdesignerweb.com/imagens/img_pagina_medida.png"; // Formato 3:4 vertical
-const VIDEO_PATH = "https://lmdesignerweb.com/video/video_pagina_medidas.mp4"; // Formato 9:16 vertical
+const IMAGE_PATH = "/imagens/img_pagina_medida.png"; // Formato 3:4 vertical
+const VIDEO_PATH = "/video/video_pagina_medidas.mp4"; // Formato 9:16 vertical
 
 export default function MedidasPage() {
   const [activeTab, setActiveTab] = useState('sutias');

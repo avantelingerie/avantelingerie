@@ -9,49 +9,49 @@ const testimonials = [
     name: "Dani",
     location: "Minas Gerais",
     text: "Comecei com pouco investimento e hoje a Avante é minha principal fonte de renda. As peças se vendem sozinhas!",
-    video: "https://lmdesignerweb.com/video/dani_minasgerais.mp4"
+    video: "/video/dani_minasgerais.mp4"
   },
   {
     id: 2,
     name: "Stella",
     location: "Rio Grande do Sul",
     text: "A qualidade das lingeries fideliza as clientes. Quem compra uma vez, sempre volta pra comprar mais.",
-    video: "https://lmdesignerweb.com/video/stella_riograndedosul.mp4"
+    video: "/video/stella_riograndedosul.mp4"
   },
   {
     id: 3,
     name: "Silvane",
     location: "Rio de Janeiro",
     text: "Sempre tive o sonho de empreender. Com a Avante, conquistei minha independência financeira.",
-    video: "https://lmdesignerweb.com/video/silvane_riodejaneiro.mp4"
+    video: "/video/silvane_riodejaneiro.mp4"
   },
   {
     id: 4,
     name: "Clara",
     location: "Espírito Santo",
     text: "O suporte e os materiais de marketing me ajudaram a faturar logo no primeiro mês. É incrível!",
-    video: "https://lmdesignerweb.com/video/clara_espiritosanto.mp4"
+    video: "/video/clara_espiritosanto.mp4"
   },
   {
     id: 5,
     name: "Sonia",
     location: "Bahia",
     text: "Revender Avante mudou minha vida e a da minha família. A lucratividade é real e garantida.",
-    video: "https://lmdesignerweb.com/video/sonia_bahia.mp4"
+    video: "/video/sonia_bahia.mp4"
   },
   {
     id: 6,
     name: "Fernanda",
     location: "São Paulo",
     text: "As clientes amam o conforto e o design. É um produto maravilhoso de trabalhar.",
-    video: "https://lmdesignerweb.com/video/fernanda_saopaulo.mp4"
+    video: "/video/fernanda_saopaulo.mp4"
   },
   {
     id: 7,
     name: "Vanda",
     location: "Goias",
     text: "A melhor decisão que tomei. Flexibilidade de horários e um retorno financeiro excelente.",
-    video: "https://lmdesignerweb.com/video/vanda_RJ.mp4"
+    video: "/video/vanda_RJ.mp4"
   }
 ];
 
