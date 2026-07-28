@@ -482,7 +482,7 @@ export default function OrderConfirmation() {
                     <RefreshCcw className="w-5 h-5" strokeWidth={1.5} />
                   </div>
                   <span className="font-bold text-sm text-white">Troca Facilitada</span>
-                  <span className="text-xs text-gray-400 leading-relaxed font-light">Primeira troca grátis em até 7 dias após o recebimento.</span>
+                  <span className="text-xs text-gray-400 leading-relaxed font-light">Troca em até 7 dias após o recebimento.</span>
                 </div>
 
                 <div className="flex flex-col gap-2">

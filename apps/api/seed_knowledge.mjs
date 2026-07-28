@@ -5,11 +5,11 @@ const pb = new PocketBase('http://127.0.0.1:8090');
 const regras = [
   {
     titulo: "Sobre a Avante Lingerie (Identidade e História)",
-    conteudo: "Nós somos a Avante Lingerie, nascida e criada no bairro de Olaria, em Nova Friburgo/RJ, a verdadeira capital da lingerie! Nossa missão é entregar o 'Conforto Real' para o seu dia a dia. Você sentirá na pele a diferença do nosso toque: forro 100% algodão nobre, rendas antialérgicas francesas incrivelmente macias e metais sem níquel (zero irritação). Somos fabricantes próprios com rigoroso controle de qualidade (CNPJ 12.345.678/0001-90)."
+    conteudo: "Nós somos a Avante Lingerie, nascida e criada no bairro de Olaria, em Nova Friburgo/RJ, a verdadeira capital da lingerie! Nossa missão é entregar o 'Conforto Real' para o seu dia a dia. Você sentirá na pele a diferença do nosso toque: forro 100% algodão nobre, rendas antialérgicas francesas incrivelmente macias e metais sem níquel (zero irritação). Somos fabricantes próprios com rigoroso controle de qualidade (CNPJ 54.615.037/0001-53)."
   },
   {
     titulo: "Políticas de Revenda, Parcerias e Atacado B2B",
-    conteudo: "Você quer crescer com a gente? Nosso programa de Atacado B2B é a oportunidade perfeita! O lucro é maravilhoso e você pode começar usando apenas o seu CPF. O gatilho de ativação (valor mínimo) e as porcentagens de lucro são totalmente dinâmicos, bastando atingir a faixa inicial no carrinho para que todo o seu pedido ganhe o desconto de fábrica. Nossas parceiras de Elite têm acesso ao Portal Restrito para baixar fotos profissionais, vídeos e catálogos. DICA CRÍTICA PARA LIA: Se a cliente mostrar qualquer intenção de revenda, atacado ou alto volume, seja agressiva (no bom sentido)! Encante-a com os lucros, incentive-a a atingir o valor mínimo no carrinho e redirecione para a aba 'Quero Revender'."
+    conteudo: "Você quer crescer com a gente? Nosso programa de Atacado B2B é a oportunidade perfeita! O lucro é maravilhoso e você pode começar usando apenas o seu CPF. O gatilho oficial (pedido mínimo) é de R$ 500,00 (mas no sistema o painel admin pode configurar valores diferentes promocionais). Atingindo a faixa inicial no carrinho, todo o seu pedido ganhe o desconto de fábrica. Nossas parceiras de Elite têm acesso ao Portal Restrito para baixar fotos profissionais, vídeos e catálogos. DICA CRÍTICA PARA LIA: Se a cliente mostrar intenção de revenda, atacado ou alto volume, seja agressiva (no bom sentido)! Encante-a com os lucros, incentive-a a atingir os R$ 500,00 no carrinho e redirecione para a aba 'Quero Revender'."
   },
   {
     titulo: "Prazos de Envio, Logística e Melhor Envio",
@@ -17,7 +17,7 @@ const regras = [
   },
   {
     titulo: "Política de Trocas, Devoluções e Reembolsos",
-    conteudo: "Nós queremos você 100% satisfeita! Você tem 7 dias para troca por arrependimento e 30 dias caso haja alguma inconformidade de fábrica. REGRA DE OURO (HIGIENE): Por respeito absoluto à saúde íntima das nossas clientes, peças de baixo (calcinhas, bodies e meias-calças) NÃO possuem troca por arrependimento ou tamanho, apenas por defeito de fábrica comprovado. Para trocar um sutiã, a peça deve estar intacta, sem sinais de uso, sem perfumes e com a etiqueta fixada. O estorno via PIX cai em até 7 dias, e no cartão de crédito a operadora pode levar até 2 faturas."
+    conteudo: "Nós queremos você 100% satisfeita! Você tem 7 dias para troca por arrependimento e 30 dias caso haja alguma inconformidade de fábrica. REGRAS DE FRETE: No caso de arrependimento (7 dias), o custo do frete de devolução é de responsabilidade da cliente. Já no caso de defeito de fábrica comprovado (30 dias), o frete é por nossa conta (da loja). REGRA DE OURO (HIGIENE): Peças de baixo (calcinhas e meias-calças) NÃO possuem troca por arrependimento ou tamanho. Croppeds são peças de cima e entram na política normal de 7 dias. Para trocar um sutiã ou cropped, a peça deve estar intacta, sem sinais de uso, sem perfumes e com a etiqueta fixada."
   },
   {
     titulo: "Guia de Medidas Perfeitas e Estruturação das Peças",

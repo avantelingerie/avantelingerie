@@ -615,8 +615,8 @@ export default function CentralDaClientePage() {
             </div>
             <div className="summary-card">
               <i className="fas fa-box-open summary-icon"></i>
-              <h4>Troca Facilitada</h4>
-              <p>Primeira troca grátis em até 7 dias para produtos elegíveis.</p>
+              <h4>Troca Simplificada</h4>
+              <p>Troca por arrependimento em até 7 dias, ou por defeito em até 30 dias.</p>
             </div>
             <div className="summary-card">
               <i className="fas fa-truck-fast summary-icon"></i>
@@ -640,7 +640,7 @@ export default function CentralDaClientePage() {
           <section id="politica-de-privacidade">
             <h2>1. Política de Privacidade</h2>
             <p>
-              A Avante Lingerie, sediada na Rua Folly, 69, Olaria, Nova Friburgo — RJ, CEP 28623-790, valoriza a sua privacidade e garante a segurança dos seus dados pessoais em conformidade com a Lei Geral de Proteção de Dados (LGPD).
+              A Avante Lingerie, sediada na Rua Folly, 69, Olaria, Nova Friburgo — RJ, CEP 28623-780, valoriza a sua privacidade e garante a segurança dos seus dados pessoais em conformidade com a Lei Geral de Proteção de Dados (LGPD).
             </p>
 
             <h3 id="politica-dados">1.1. Coleta de Dados</h3>
@@ -712,7 +712,7 @@ export default function CentralDaClientePage() {
             <ul className="list-disc list-inside text-gray-600 mb-6 leading-relaxed pl-4">
               <li className="mb-2"><strong>E-mail:</strong> privacidade@avantelingerie.com.br</li>
               <li className="mb-2"><strong>WhatsApp:</strong> (22) 99761-8591</li>
-              <li><strong>Endereço Postal:</strong> Rua Folly, 69, Olaria, Nova Friburgo — RJ, CEP 28623-790</li>
+              <li><strong>Endereço Postal:</strong> Rua Folly, 69, Olaria, Nova Friburgo — RJ, CEP 28623-780</li>
             </ul>
           </section>
 
@@ -801,7 +801,7 @@ export default function CentralDaClientePage() {
             <div className="gold-alert" style={{ borderLeftColor: '#d9534f', backgroundColor: '#FFF5F5' }}>
               <strong style={{ color: '#d9534f' }}><i className="fas fa-ban mr-2"></i>RESTRIÇÃO DE HIGIENE E SAÚDE PÚBLICA:</strong>
               <p className="m-0 mt-1" style={{ color: '#555' }}>
-                Por razões sanitárias e de proteção à saúde coletiva, <strong>NÃO trocamos calcinhas, bodies/bodysuits e meias-calças por arrependimento ou tamanho</strong>. A única exceção é no caso de defeitos de fabricação de origem comprovados. Sutiãs, pijamas e robes são elegíveis para trocas normalmente dentro dos 7 dias.
+                Por razões sanitárias e de proteção à saúde coletiva, <strong>NÃO trocamos calcinhas, bodies/bodysuits e meias-calças por arrependimento ou tamanho</strong>. A única exceção é no caso de defeitos de fabricação de origem comprovados. Sutiãs, croppeds (peças de cima), pijamas e robes são elegíveis para trocas normalmente dentro dos 7 dias.
               </p>
             </div>
 

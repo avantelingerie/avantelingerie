@@ -110,7 +110,7 @@ export default function Footer() {
               </div>
               <span className="text-base font-bold font-serif text-gray-900 mb-2">Troca Facilitada</span>
               <p className="text-gray-500 text-sm leading-relaxed max-w-[240px]">
-                A primeira troca de suas lingeries é grátis em até 7 dias após o recebimento.
+                A troca por arrependimento ocorre em até 7 dias, e por defeito em até 30 dias.
               </p>
             </div>
 
@@ -353,8 +353,8 @@ export default function Footer() {
               &copy; {new Date().getFullYear()} Avante Lingerie. Todos os direitos reservados.
             </p>
             <p className="text-[11px] text-gray-300 font-medium leading-relaxed">
-              AVANTE INDUSTRIA E COMERCIO DE VESTUARIO LTDA | CNPJ: 12.345.678/0001-90<br />
-              Ateliê & Showroom: Rua Folly, 69, Olaria, Nova Friburgo — RJ | CEP: 28620-190
+              AVANTE INDUSTRIA E COMERCIO DE VESTUARIO LTDA | CNPJ: 54.615.037/0001-53<br />
+              Ateliê & Showroom: Rua Folly, 69, Olaria, Nova Friburgo — RJ | CEP: 28623-780
             </p>
           </div>
 

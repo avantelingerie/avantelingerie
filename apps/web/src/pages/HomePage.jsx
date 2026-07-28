@@ -168,7 +168,7 @@ export default function HomePage() {
 
   const guarantees = [
     { icon: Lock, title: "Compra 100% Segura", desc: "Seus dados pessoais e de pagamento totalmente blindados." },
-    { icon: ArrowLeftRight, title: "Troca Facilitada", desc: "Sua primeira troca é por nossa conta em até 7 dias úteis." },
+    { icon: ArrowLeftRight, title: "Troca Simplificada", desc: "Arrependimento em 7 dias, ou defeitos de fábrica em 30 dias." },
     { icon: Package, title: "Envio Ultra Discreto", desc: "Caixa premium lacrada, perfumada e sem marcas externas." },
     { icon: Star, title: "Padrão de Qualidade", desc: "Rendas francesas e tecidos tecnológicos hipoalergênicos." },
     { icon: Headphones, title: "Suporte Dedicado", desc: "Nossa equipe VIP disponível para te ajudar no pós-venda." }
@@ -437,8 +437,8 @@ export default function HomePage() {
                       <ArrowLeftRight className="w-4.5 h-4.5 text-[#c59b5f]" />
                     </div>
                     <div>
-                      <h4 className="text-sm font-bold text-white">1ª Troca Grátis Garantida</h4>
-                      <p className="text-xs text-gray-400 font-light mt-0.5">Ficou pequena ou grande? Trocamos sem nenhum custo para você em até 30 dias.</p>
+                      <h4 className="text-sm font-bold text-white">Troca Simplificada Garantida</h4>
+                      <p className="text-xs text-gray-400 font-light mt-0.5">Ficou pequena ou grande? Oferecemos troca simplificada em até 7 dias úteis.</p>
                     </div>
                   </li>
                 </ul>
@@ -710,7 +710,7 @@ export default function HomePage() {
             answer: "Sim. A linha Avante Invisível utiliza tecnologia Seamless e corte a laser nas bordas, eliminando elásticos e costuras grossas. Elas desaparecem completamente, mesmo sob vestidos de seda ou calças justas."
           }, {
             question: "Como funciona a garantia de troca?",
-            answer: "Se a sua joia não vestir com perfeição, a primeira troca é totalmente por nossa conta. Você tem até 7 dias corridos após o recebimento para solicitar, basta manter as etiquetas originais."
+            answer: "Se a sua joia não vestir com perfeição, oferecemos um fluxo de troca simplificada. Você tem até 7 dias corridos após o recebimento para solicitar por arrependimento (frete da cliente), ou 30 dias para defeitos (frete da loja), basta manter as etiquetas originais."
           }, {
             question: "Quais os métodos de pagamento aceitos?",
             answer: "Aceitamos cartões de crédito Visa, MasterCard, Elo e Amex com parcelamento in até 6x sem juros, além de PIX seguro com processamento imediato."

@@ -50,7 +50,7 @@ export default function StoreSection() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4 text-gray-600 font-sans text-sm">
             <a 
-              href="https://maps.google.com/?q=Rua+Folly,+69+-+Olaria,+Nova+Friburgo+-+RJ,+28623-790" 
+              href="https://maps.google.com/?q=Rua+Folly,+69+-+Olaria,+Nova+Friburgo+-+RJ,+28623-780" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="flex items-start gap-3 hover:text-[#c59b5f] transition-all group p-3 bg-white border border-gray-100 rounded-xl shadow-sm"
@@ -58,7 +58,7 @@ export default function StoreSection() {
               <MapPin className="w-5 h-5 text-[#c59b5f] shrink-0 mt-0.5 group-hover:scale-105 transition-transform" />
               <div>
                 <p className="font-bold text-gray-900 mb-0.5">Endereço Oficial</p>
-                <p className="font-light">Rua Folly, 69 - Olaria, Nova Friburgo - RJ, 28623-790</p>
+                <p className="font-light">Rua Folly, 69 - Olaria, Nova Friburgo - RJ, 28623-780</p>
               </div>
             </a>
             

@@ -153,11 +153,11 @@ export default function SobrePage() {
             <div>
               <p className="font-bold text-gray-700 uppercase tracking-wider text-[10px] mb-0.5">Razão Social</p>
               <p className="font-medium text-gray-600">AVANTE INDUSTRIA E COMERCIO DE VESTUARIO LTDA</p>
-              <p className="font-light text-gray-400 mt-1">Rua Folly, 69, Olaria, Nova Friburgo - RJ | CEP 28620-190</p>
+              <p className="font-light text-gray-400 mt-1">Rua Folly, 69, Olaria, Nova Friburgo - RJ | CEP 28623-780</p>
             </div>
-            <div className="bg-white border border-gray-200 px-4 py-2.5 rounded-lg shadow-xs shrink-0">
+            <div className="bg-white border border-gray-200 px-4 py-2.5 rounded-lg shadow-xs shrink-0 flex flex-col items-center">
               <span className="text-[9px] text-gray-400 font-bold uppercase tracking-wider block text-center">CNPJ</span>
-              <span className="text-xs font-mono font-semibold text-gray-700">12.345.678/0001-90</span>
+              <span className="text-xs font-mono font-semibold text-gray-700">54.615.037/0001-53</span>
             </div>
           </div>
         </div>

@@ -815,7 +815,7 @@ export default function MedidasPage() {
     },
     {
       q: 'Posso trocar se não servir?',
-      a: 'Com certeza! Nós compreendemos a ansiedade de comprar online. Oferecemos a primeira troca gratuita em até 7 dias corridos após o recebimento do pedido para sutiãs, pijamas, croppeds e fitness. Por razões de segurança sanitária e higiene coletiva, pedimos especial atenção ao medir calcinhas e bodys, pois estes itens íntimos de contato direto não possuem troca por erro de tamanho.'
+      a: 'Com certeza! Nós compreendemos a ansiedade de comprar online. Oferecemos troca simplificada em até 7 dias corridos (por arrependimento) após o recebimento do pedido para sutiãs, pijamas, croppeds (peças de cima) e fitness. Por razões de segurança sanitária e higiene coletiva, pedimos especial atenção ao medir calcinhas e bodys, pois estes itens íntimos de contato direto não possuem troca por erro de tamanho ou arrependimento.'
     },
     {
       q: 'Como saber meu tamanho ideal?',

@@ -1289,7 +1289,7 @@ export default function ProductPage() {
                   <RefreshCw className="w-5 h-5 text-[#c59b5f]" />
                 </div>
                 <h4 className="text-[11px] font-bold text-gray-900 uppercase tracking-wider mb-0.5">Troca Fácil</h4>
-                <p className="text-[9px] text-gray-400 leading-normal">Primeira grátis em até 7 dias</p>
+                <p className="text-[9px] text-gray-400 leading-normal">Arrependimento em 7 dias, ou defeitos em 30 dias.</p>
               </div>
 
               <div className="flex flex-col items-center text-center p-3.5 bg-gradient-to-b from-[#FFFBF8] to-white border border-[#c59b5f]/15 rounded-2xl hover:border-[#c59b5f] transition-all duration-300">

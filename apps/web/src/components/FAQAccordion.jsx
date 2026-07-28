@@ -23,7 +23,7 @@ const faqData = [
   },
   {
     question: "E se a peça não vestir bem? Como funciona a troca?",
-    answer: "Sua satisfação e conforto são nossa prioridade máxima. Se a sua lingerie não vestir com perfeição cirúrgica, a primeira troca é totalmente por nossa conta em até 7 dias corridos após a entrega, de forma rápida e humanizada.",
+    answer: "Sua satisfação e conforto são nossa prioridade máxima. Oferecemos troca simplificada! Você tem até 7 dias corridos após o recebimento para trocas por arrependimento, e 30 dias para trocas por defeito de fábrica comprovado.",
     link: "/trocas-e-devolucoes",
     linkLabel: "Política de trocas"
   },
@@ -35,7 +35,7 @@ const faqData = [
   },
   {
     question: "Como funciona o plano de lucro para revendedoras?",
-    answer: "Nosso sistema foi feito para impulsionar sua independência financeira. Oferecemos descontos progressivos incríveis: pedidos acima de R$300 garantem 15% OFF, e acima de R$900 garantem 20% OFF direto no carrinho. Margens excelentes de revenda de até 100% de lucro.",
+    answer: "Nosso sistema foi feito para impulsionar sua independência financeira. Oferecemos descontos progressivos incríveis: pedidos acima de R$500 garantem ativação automática do desconto de atacado (B2B) direto no carrinho. Margens excelentes de revenda de até 100% de lucro.",
     link: "/revendedora",
     linkLabel: "Seja uma revendedora"
   },

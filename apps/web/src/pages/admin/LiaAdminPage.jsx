@@ -291,7 +291,7 @@ export default function LiaAdminPage() {
                 <div className="space-y-2">
                   <label className="text-sm font-medium">Instrução para a IA</label>
                   <Textarea 
-                    placeholder="Ex: Informe que em compras acima de R$300,00 o frete é grátis até o fim do mês."
+                    placeholder="Ex: Informe que em compras acima de R$500,00 o frete é grátis até o fim do mês."
                     className="min-h-[120px]"
                     value={novaRegra.conteudo}
                     onChange={(e) => setNovaRegra({...novaRegra, conteudo: e.target.value})}

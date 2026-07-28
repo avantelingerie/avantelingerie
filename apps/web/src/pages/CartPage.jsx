@@ -618,7 +618,7 @@ export default function CartPage() {
               </div>
               <FAQAccordion items={[
                 { question: 'Quais as formas de pagamento?', answer: 'Aceitamos PIX com aprovação imediata (e com 5% de desconto extra) e cartão de crédito em até 6x sem juros.' },
-                { question: 'Posso trocar se não servir?', answer: 'Com certeza! A primeira troca na Avante é totalmente grátis. Você tem até 30 dias após o recebimento para iniciar a sua solicitação.' },
+                { question: 'Posso trocar se não servir?', answer: 'Oferecemos troca por arrependimento em até 7 dias corridos, ou troca por defeito em até 30 dias.' },
                 { question: 'Qual o prazo de entrega?', answer: 'O prazo varia conforme o seu CEP, mas despachamos a sua compra em até 24h úteis para garantir o frete mais rápido do mercado.' },
                 { question: 'O site é seguro?', answer: 'Sim. Possuímos criptografia SSL blindada activa em toda a jornada de compra, garantindo proteção total para seus dados.' }
               ]} />
