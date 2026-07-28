@@ -444,3 +444,21 @@ ormalizeText na função geradora de variações; Atualização para renderizaç
 
 ### Próximos Passos
 1. Aguardar o fornecimento das chaves de API do Bling / Melhor Envio para iniciar a Fase 2 (Integração de Rastreio de Pedidos via Chatbot / Function Calling).
+
+## [28-07-2026] Lobotomia da Lia (Correção de Horários) e Migração de Infraestrutura
+
+### O que foi feito e resolvido
+1. **Varredura Panorâmica de Horários:** Identificamos que o horário de funcionamento antigo da loja estava "espalhado" por todo o código e na memória fixa da Lia. Modificamos 5 arquivos cruciais (incluindo o cérebro `liaKnowledgeBase.js`, `App.jsx`, `CentralDaClientePage.jsx`, `OrderConfirmation.jsx` e `ConfiguracoesLoja.jsx`) para refletir o novo horário: **Seg-Qui 08h-17h, Sex 08h-13h**.
+2. **Configuração da VPS Hostinger:** 
+   - Acesso SSH estabelecido com sucesso usando a chave criptografada.
+   - Diagnóstico apontou que a API estava em crash-loop (reiniciando) devido à falta de um arquivo `.env` na produção. O arquivo foi recriado na VPS corrigindo a falha.
+3. **Caddy Proxy & SSL (Domínio Principal):** O sistema `docker-compose.yml` da VPS foi reestruturado. O container web cedeu a porta 80, e implementamos o **Caddy** como proxy reverso para assumir o domínio `avantelingerie.com.br`, gerando o cadeado SSL automaticamente (HTTPS) e balanceando a carga entre web, api e pocketbase.
+4. **Fuga dos Limites do GitHub (Migração de Mídia):**
+   - Descobrimos 15 arquivos pesados (12 vídeos de layout e depoimentos, 3 imagens) apontando para a hospedagem antiga (`lmdesignerweb.com`).
+   - Para evitar o bloqueio de 100MB do GitHub (que nos impediu de comitar o `nova_friburgo_bg.mp4`), a VPS fez o download NATIVO via `wget` das mídias direto para um volume host (`/public_media`).
+   - O Caddyfile foi atualizado com `handle_path` para entregar nativamente as rotas `/video/*` e `/imagens/*` na velocidade da luz.
+   - O código frontend (React) foi totalmente higienizado: substituímos as URLs engessadas da `lmdesignerweb.com` pelas rotas relativas da própria VPS.
+
+### Próximos Passos
+1. A infraestrutura e a hospedagem da loja agora pertencem 100% à VPS da Hostinger. A hospedagem antiga (`lmdesignerweb.com`) pode ser formalmente cancelada pela cliente.
+2. Iniciar novos fluxos pendentes e continuar o acompanhamento da Lia em produção.
