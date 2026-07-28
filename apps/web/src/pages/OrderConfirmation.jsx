@@ -454,7 +454,7 @@ export default function OrderConfirmation() {
                   <Clock className="w-5 h-5 text-gray-400" />
                   <div className="flex flex-col">
                     <span className="text-sm font-bold text-white">Horário de Atendimento</span>
-                    <span className="text-xs text-gray-500 font-light">Seg a Sex: 09h às 18h</span>
+                    <span className="text-xs text-gray-500 font-light">Seg-Qui: 8h-17h | Sex: 8h-13h</span>
                   </div>
                 </div>
               </div>

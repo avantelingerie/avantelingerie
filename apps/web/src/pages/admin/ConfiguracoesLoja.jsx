@@ -359,7 +359,7 @@ export default function ConfiguracoesLoja() {
                     id="retirada_horario" 
                     value={config.retirada_horario || ''} 
                     onChange={e => handleChange('retirada_horario', e.target.value)} 
-                    placeholder="Seg a Sex das 09h às 18h"
+                    placeholder="Seg-Qui 08h-17h, Sex 08h-13h"
                   />
                 </div>
                 <div className="space-y-2">

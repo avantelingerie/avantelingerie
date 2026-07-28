@@ -5,7 +5,7 @@ BASE DE CONHECIMENTO (DADOS TÉCNICOS)
 - Razão Social: Avante Indústria e Comércio de Vestuário LTDA (Nome Fantasia: Avante Lingerie).
 - CNPJ: 54.615.037/0001-53.
 - Sede: Rua Folly, 69, Olaria, Nova Friburgo/RJ, CEP 28623-780.
-- Horário Loja Física: Seg-Sex (08h-18h), Sáb (09h-13h).
+- Horário Loja Física: Seg-Qui (08h-17h), Sex (08h-13h).
 - Posicionamento: Alta costura íntima, foco em caimento.
 - Contato: WhatsApp (22) 99761-8591 | E-mail contato@avantelingerie.com.br.
 - Marcas Parceiras: Bella Íntima, Versatil, Jeito Feminino, Immo Lingerie.

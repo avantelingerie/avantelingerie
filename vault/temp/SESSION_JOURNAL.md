@@ -1,6562 +1,6 @@
 # SESSION_JOURNAL.md (rotated - earlier entries trimmed)
 
-.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:30.797Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:30.800Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:30.803Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:30.804Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:30.817Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:30.818Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:30.820Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:30.821Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:30.822Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:30.823Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:30.838Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:30.839Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:30.840Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:30.841Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:30.850Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:30.851Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:30.859Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:30.860Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:30.862Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:30.862Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:30.863Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:30.864Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:31.371Z click
-- element: {"tag":"button","role":null,"ariaLabel":"Ativar som","name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-07-15 22:57:31.375Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:31.376Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:31.377Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:31.378Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:31.378Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:31.379Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:31.512Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:31.513Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:31.514Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:31.514Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:31.516Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:31.517Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:52.674Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:52.675Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:52.677Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:52.678Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:52.679Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:52.680Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:52.691Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:52.692Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:52.692Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:52.694Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:52.695Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:52.695Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:53.143Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:53.144Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:53.146Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:53.150Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:53.151Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:53.152Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:53.161Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:53.161Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:53.163Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:53.163Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:53.166Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:53.167Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:53.176Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:53.177Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:53.177Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:53.179Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:53.179Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:53.180Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:53.191Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:53.192Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:53.193Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:53.193Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:53.194Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:53.195Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:53.206Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:53.207Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:53.208Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:53.208Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:53.209Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:53.209Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:53.226Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:53.226Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:53.227Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:53.228Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:53.229Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:53.229Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:53.241Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:53.242Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:53.243Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:53.244Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:53.244Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:53.245Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:53.257Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:53.258Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:53.258Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:53.260Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:53.261Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:53.261Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:53.272Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:53.273Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:53.273Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:53.274Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:53.275Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:53.275Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:53.291Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:53.292Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:53.293Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:53.294Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:53.294Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:53.295Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:54.735Z click
-- element: {"tag":"button","role":null,"ariaLabel":"Ver imagem 2","name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-07-15 22:57:54.741Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:54.742Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:54.743Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:54.744Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:54.745Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:54.746Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:57.135Z click
-- element: {"tag":"button","role":null,"ariaLabel":"Ver imagem 1","name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-07-15 22:57:57.139Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:57.139Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:57.140Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:57.141Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:57.141Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:57.141Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:57.842Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:57.843Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:57.843Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:57.844Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:57.845Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:57.846Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:57.860Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:57.861Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:57.862Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:57.863Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:57.866Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:57.868Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:57.877Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:57.878Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:57.878Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:57.879Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:57.881Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:57.885Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:57.894Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:57.894Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:57.895Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:57.896Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:57.896Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:57.898Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:57.908Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:57.908Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:57.909Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:57.909Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:57.910Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:57.910Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:57.924Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:57.924Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:57.925Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:57.926Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:57.926Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:57:57.927Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:09.570Z click
-- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Configurações"}
-
-## 2026-07-15 22:58:14.146Z click
-- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Descontos"}
-
-## 2026-07-15 22:58:14.155Z navigate
-- url: http://localhost:3000/admin/descontos
-- via: pushState
-
-## 2026-07-15 22:58:18.284Z click
-- element: {"tag":"button","role":"tab","ariaLabel":null,"name":null,"type":"button","id":"radix-:r10:-trigger-progressivo","placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Desconto Progressivo"}
-
-## 2026-07-15 22:58:37.171Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.173Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.174Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.174Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.175Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.175Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.187Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.188Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.188Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.189Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.190Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.190Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.203Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.204Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.204Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.205Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.205Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.206Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.219Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.221Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.222Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.223Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.223Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.224Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.236Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.237Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.237Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.238Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.239Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.240Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.251Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.252Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.253Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.253Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.254Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.254Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.269Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.270Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.271Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.272Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.272Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.272Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.286Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.287Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.288Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.288Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.289Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.289Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.302Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.303Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.304Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.305Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.306Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.306Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.319Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.320Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.321Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.321Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.322Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.322Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.337Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.338Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.339Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.339Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.340Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.340Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.353Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.354Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.354Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.355Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.356Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.356Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.369Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.370Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.371Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.371Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.372Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.372Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.386Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.387Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.387Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.388Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.388Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.389Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.404Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.405Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.406Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.407Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.407Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.408Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.420Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.421Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.422Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.422Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.423Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.423Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.435Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.436Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.436Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.437Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.437Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.438Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.452Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.453Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.453Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.454Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.454Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.455Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.470Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.470Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.471Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.471Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.472Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.472Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.490Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.492Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.492Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.493Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.494Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:37.495Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:38.157Z click
-- element: {"tag":"button","role":null,"ariaLabel":"Ver imagem 2","name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-07-15 22:58:38.160Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:38.161Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:38.162Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:38.164Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:38.164Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:38.165Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:41.919Z load
-- url: http://localhost:3000/produto/7ex5coghj95r2ve
-- title: Hostinger Horizons
-
-## 2026-07-15 22:58:42.404Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:42.406Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:42.406Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:42.406Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:42.406Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:42.406Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:42.406Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:42.406Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:42.406Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:42.464Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:42.466Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:42.467Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:42.468Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:42.469Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:42.470Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:45.221Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:45.222Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:45.223Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:45.223Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:45.224Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:45.225Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:45.237Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:45.238Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:45.238Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:45.239Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:45.240Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:45.241Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:45.252Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:45.252Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:45.253Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:45.254Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:45.255Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:45.256Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:45.270Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:45.271Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:45.271Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:45.272Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:45.273Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:45.273Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:45.285Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:45.285Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:45.286Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:45.287Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:45.287Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:45.288Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:45.301Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:45.303Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:45.303Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:45.304Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:45.304Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:45.305Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:49.520Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:49.521Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:49.522Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:49.523Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:49.524Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:49.524Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:49.538Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:49.539Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:49.540Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:49.541Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:49.542Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:49.542Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:49.552Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:49.553Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:49.553Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:49.554Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:49.555Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:49.556Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:49.567Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:49.568Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:49.569Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:49.569Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:49.570Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:49.571Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:49.583Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:49.584Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:49.585Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:49.586Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:49.586Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:49.587Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:49.602Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:49.603Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:49.604Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:49.605Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:49.605Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:49.606Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:49.617Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:49.619Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:49.620Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:49.621Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:49.621Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:49.622Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:49.651Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:49.652Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:49.653Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:49.653Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:49.654Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:49.654Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:49.683Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:49.684Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:49.685Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:49.686Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:49.686Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:49.687Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:50.103Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:50.104Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:50.105Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:50.106Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:50.106Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:50.107Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:50.119Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:50.120Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:50.120Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:50.121Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:50.122Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:50.122Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:50.135Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:50.136Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:50.137Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:50.137Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:50.138Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:50.138Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:50.150Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:50.152Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:50.153Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:50.153Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:50.154Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:50.154Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:50.168Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:50.168Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:50.169Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:50.169Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:50.170Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:50.171Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:50.200Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:50.200Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:50.201Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:50.202Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:50.202Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:50.203Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:50.233Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:50.234Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:50.235Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:50.235Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:50.236Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:50.236Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:50.807Z click
-- element: {"tag":"button","role":null,"ariaLabel":"Ativar som","name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-07-15 22:58:50.814Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:50.815Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:50.816Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:50.817Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:50.818Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:50.818Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:50.916Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:50.918Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:50.919Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:50.921Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:50.922Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:58:50.922Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.572Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.573Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.574Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.574Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.575Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.575Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.586Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.586Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.587Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.587Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.588Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.588Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.603Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.604Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.605Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.605Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.606Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.606Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.618Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.619Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.620Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.620Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.621Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.622Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.636Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.637Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.638Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.638Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.639Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.639Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.652Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.652Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.653Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.654Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.654Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.655Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.670Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.671Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.672Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.672Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.673Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.673Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.685Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.686Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.687Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.687Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.688Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.688Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.703Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.703Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.704Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.705Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.706Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.706Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.719Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.719Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.720Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.721Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.721Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.722Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.735Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.736Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.736Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.737Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.737Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.738Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.752Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.753Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.753Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.754Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.754Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.755Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.768Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.769Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.770Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.770Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.771Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.771Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.786Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.786Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.787Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.787Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.788Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.788Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.802Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.803Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.803Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.804Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.804Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.805Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.819Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.820Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.820Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.821Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.821Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.822Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.835Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.836Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.837Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.837Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.838Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.838Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.852Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.852Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.853Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.853Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.854Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.854Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.870Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.870Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.871Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.871Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.872Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.872Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.885Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.886Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.886Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.887Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.887Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.888Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.902Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.902Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.903Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.903Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.904Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.904Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.918Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.919Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.920Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.920Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.921Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.921Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.935Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.936Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.936Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.937Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.937Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.938Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.951Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.952Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.953Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.953Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.954Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.954Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.969Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.970Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.970Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.971Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.971Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.972Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.985Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.986Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.986Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.987Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.987Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:01.988Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:02.002Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:02.003Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:02.003Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:02.004Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:02.004Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:02.005Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:02.554Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:02.555Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:02.556Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:02.556Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:02.556Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:02.557Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:02.569Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:02.570Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:02.570Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:02.571Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:02.571Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:02.572Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:02.585Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:02.586Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:02.586Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:02.587Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:02.587Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:02.588Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:02.603Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:02.603Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:02.604Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:02.604Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:02.605Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:02.605Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:02.618Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:02.619Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:02.620Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:02.620Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:02.621Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:02.621Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:02.636Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:02.637Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:02.637Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:02.638Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:02.638Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:02.639Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.587Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.589Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.590Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.596Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.598Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.599Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.608Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.609Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.614Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.615Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.616Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.617Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.625Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.628Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.631Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.632Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.633Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.634Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.643Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.647Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.648Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.649Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.649Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.650Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.657Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.658Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.661Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.664Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.665Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.666Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.674Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.677Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.681Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.682Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.683Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.684Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.690Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.691Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.691Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.695Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.697Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.698Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.705Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.706Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.706Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.707Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.707Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.708Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.719Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.720Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.721Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.721Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.722Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.723Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.736Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.737Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.738Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.738Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.739Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.739Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.758Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.762Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.765Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.767Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.768Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.769Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.781Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.783Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.783Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.784Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.785Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.786Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.804Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.805Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.806Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.806Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.807Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.808Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.819Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.819Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.820Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.821Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.822Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.822Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.832Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.833Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.834Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.834Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.835Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.835Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.847Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.848Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.849Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.850Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.850Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.851Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.857Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.857Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.858Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.859Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.863Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.864Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.872Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.872Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.873Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.875Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.875Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.878Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.887Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.888Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.888Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.889Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.889Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.890Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.937Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.938Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.938Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.939Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.940Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:26.940Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:27.021Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:27.023Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:27.023Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:27.024Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:27.024Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:27.025Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:27.086Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:27.087Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:27.088Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:27.088Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:27.089Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:27.090Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:27.101Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:27.102Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:27.103Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:27.103Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:27.104Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:27.105Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:27.119Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:27.120Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:27.121Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:27.121Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:27.122Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:27.122Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:27.136Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:27.137Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:27.138Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:27.139Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:27.141Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:27.143Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:27.155Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:27.155Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:27.157Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:27.157Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:27.158Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:27.158Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:27.185Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:27.185Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:27.186Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:27.187Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:27.188Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:27.189Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:27.203Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:27.205Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:27.205Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:27.206Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:27.207Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:27.207Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:27.251Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:27.252Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:27.252Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:27.253Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:27.253Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:27.254Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:27.269Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:27.269Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:27.270Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:27.271Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:27.271Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:27.272Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:27.286Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:27.287Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:27.287Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:27.288Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:27.288Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:27.289Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.616Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.617Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.618Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.619Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.619Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.619Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.635Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.636Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.637Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.637Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.638Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.638Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.650Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.651Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.652Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.652Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.652Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.653Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.667Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.668Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.668Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.669Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.669Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.670Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.684Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.684Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.685Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.685Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.686Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.686Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.700Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.701Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.702Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.702Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.703Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.703Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.717Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.718Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.718Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.719Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.719Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.720Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.734Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.734Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.735Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.736Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.736Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.737Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.750Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.751Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.752Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.752Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.753Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.753Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.767Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.768Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.768Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.769Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.769Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.770Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.783Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.784Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.784Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.785Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.785Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.786Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.800Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.801Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.802Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.802Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.803Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.803Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.818Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.819Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.820Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.820Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.821Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.821Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.834Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.835Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.835Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.836Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.836Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.837Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.850Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.850Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.851Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.851Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.852Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.852Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.866Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.867Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.867Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.868Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.868Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.868Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.918Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.919Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.920Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.920Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.921Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.922Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.950Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.950Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.951Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.951Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.952Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.952Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.968Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.968Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.969Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.969Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.970Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.970Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.983Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.984Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.985Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.985Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.986Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:29.986Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:30.001Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:30.001Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:30.002Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:30.002Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:30.003Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:30.003Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:30.016Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:30.017Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:30.017Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:30.018Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:30.018Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:30.019Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:30.049Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:30.050Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:30.051Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:30.051Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:30.051Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:30.052Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:30.136Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:30.136Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:30.137Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:30.137Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:30.138Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:30.138Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:30.857Z click
-- element: {"tag":"button","role":null,"ariaLabel":"Desativar som","name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-07-15 22:59:30.867Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:30.868Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:30.869Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:30.870Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:30.870Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:30.871Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:32.036Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:32.037Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:32.038Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:32.038Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:32.039Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:32.039Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:39.601Z click
-- element: {"tag":"button","role":null,"ariaLabel":"Aumentar quantidade","name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-07-15 22:59:39.605Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:39.606Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:39.607Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:39.607Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:39.608Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:39.611Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:39.790Z click
-- element: {"tag":"button","role":null,"ariaLabel":"Aumentar quantidade","name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-07-15 22:59:39.797Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:39.797Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:39.798Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:39.799Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:39.800Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:39.801Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:39.974Z click
-- element: {"tag":"button","role":null,"ariaLabel":"Aumentar quantidade","name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-07-15 22:59:39.982Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:39.983Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:39.983Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:39.984Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:39.985Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:39.985Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:40.173Z click
-- element: {"tag":"button","role":null,"ariaLabel":"Aumentar quantidade","name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-07-15 22:59:40.177Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:40.178Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:40.179Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:40.180Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:40.181Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:40.182Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:40.371Z click
-- element: {"tag":"button","role":null,"ariaLabel":"Aumentar quantidade","name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-07-15 22:59:40.374Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:40.376Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:40.378Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:40.380Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:40.382Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:40.382Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:40.599Z click
-- element: {"tag":"button","role":null,"ariaLabel":"Aumentar quantidade","name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-07-15 22:59:40.605Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:40.606Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:40.607Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:40.607Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:40.608Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:40.611Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:41.662Z click
-- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Adicionar"}
-
-## 2026-07-15 22:59:41.687Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:41.690Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:41.692Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:41.694Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:41.695Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:41.696Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:43.366Z click
-- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"COMPRAR AGORA"}
-
-## 2026-07-15 22:59:43.379Z navigate
-- url: http://localhost:3000/cart
-- via: pushState
-
-## 2026-07-15 22:59:43.809Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:43.810Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:43.813Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:43.814Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:50.033Z click
-- element: {"tag":"button","role":null,"ariaLabel":"Aumentar quantidade","name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-07-15 22:59:50.036Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:50.037Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:50.037Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:50.038Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:50.087Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:50.087Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:50.088Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:50.089Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:50.195Z click
-- element: {"tag":"button","role":null,"ariaLabel":"Aumentar quantidade","name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-07-15 22:59:50.200Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:50.200Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:50.201Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:50.202Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:50.324Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:50.325Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:50.326Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:50.328Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:50.372Z click
-- element: {"tag":"button","role":null,"ariaLabel":"Aumentar quantidade","name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-07-15 22:59:50.377Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:50.377Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:50.378Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:50.379Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:50.438Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:50.438Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:50.440Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:50.443Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:50.556Z click
-- element: {"tag":"button","role":null,"ariaLabel":"Aumentar quantidade","name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-07-15 22:59:50.566Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:50.566Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:50.566Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:50.567Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:50.624Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:50.625Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:50.626Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:50.627Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:50.740Z click
-- element: {"tag":"div","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Cropped Regata Gola Alta BlingCor:Verde-MilitarTam: MQuantidade11R$ 29,90 / unR$ 328,90"}
-
-## 2026-07-15 22:59:50.938Z click
-- element: {"tag":"div","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Seus Itens (1)Cropped Regata Gola Alta BlingCor:Verde-MilitarTam: MQuantidade11R$ 29,90 / unR$ 328,90"}
-
-## 2026-07-15 22:59:51.151Z click
-- element: {"tag":"div","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Seus Itens (1)Cropped Regata Gola Alta BlingCor:Verde-MilitarTam: MQuantidade11R$ 29,90 / unR$ 328,90"}
-
-## 2026-07-15 22:59:52.293Z click
-- element: {"tag":"button","role":null,"ariaLabel":"Aumentar quantidade","name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-07-15 22:59:52.297Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:52.297Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:52.297Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:52.298Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:52.329Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:52.329Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:52.330Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:52.330Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:52.485Z click
-- element: {"tag":"button","role":null,"ariaLabel":"Aumentar quantidade","name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-07-15 22:59:52.488Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:52.488Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:52.488Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:52.489Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:52.513Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:52.514Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:52.514Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:52.515Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:52.679Z click
-- element: {"tag":"button","role":null,"ariaLabel":"Aumentar quantidade","name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-07-15 22:59:52.682Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:52.682Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:52.683Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:52.684Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:52.712Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:52.712Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:52.713Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:52.713Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:52.866Z click
-- element: {"tag":"button","role":null,"ariaLabel":"Aumentar quantidade","name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-07-15 22:59:52.870Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:52.870Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:52.871Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:52.872Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:52.896Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:52.896Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:52.897Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:52.898Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:53.062Z click
-- element: {"tag":"button","role":null,"ariaLabel":"Aumentar quantidade","name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-07-15 22:59:53.064Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:53.064Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:53.065Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:53.066Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:53.088Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:53.088Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:53.089Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:53.089Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:53.250Z click
-- element: {"tag":"button","role":null,"ariaLabel":"Aumentar quantidade","name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-07-15 22:59:53.252Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:53.252Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:53.253Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:53.254Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:53.280Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:53.280Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:53.281Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:53.283Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:53.443Z click
-- element: {"tag":"button","role":null,"ariaLabel":"Aumentar quantidade","name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-07-15 22:59:53.447Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:53.448Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:53.448Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:53.449Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:53.469Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:53.469Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:53.470Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:53.470Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:53.669Z click
-- element: {"tag":"button","role":null,"ariaLabel":"Aumentar quantidade","name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-07-15 22:59:53.672Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:53.673Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:53.673Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:53.674Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:53.706Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:53.706Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:53.707Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:53.707Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:54.318Z click
-- element: {"tag":"button","role":null,"ariaLabel":"Aumentar quantidade","name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-07-15 22:59:54.321Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:54.321Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:54.322Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:54.323Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:54.347Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:54.347Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:54.350Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 22:59:54.352Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:00.862Z click
-- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Finalizar Compra"}
-
-## 2026-07-15 23:00:00.865Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:00.865Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:00.866Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:00.866Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:03.038Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Ex: Maria das Dores Silva","label":"Ex: Maria das Dores Silva","value":"","valueLength":0,"text":""}
-
-## 2026-07-15 23:00:03.256Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Ex: Maria das Dores Silva","label":"Ex: Maria das Dores Silva","value":"","valueLength":0,"text":""}
-
-## 2026-07-15 23:00:04.787Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:04.788Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:04.788Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:04.789Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:05.222Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:05.222Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:05.223Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:05.228Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:05.520Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:05.521Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:05.521Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:05.522Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:05.651Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:05.651Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:05.652Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:05.653Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:06.120Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:06.120Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:06.121Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:06.121Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:06.311Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:06.312Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:06.314Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:06.316Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:06.570Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:06.570Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:06.571Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:06.571Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:06.936Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:06.936Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:06.937Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:06.938Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:07.104Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:07.105Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:07.106Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:07.106Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:07.288Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:07.288Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:07.289Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:07.290Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:07.638Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:07.638Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:07.638Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:07.639Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:07.762Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:07.762Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:07.763Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:07.765Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:07.884Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:07.884Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:07.885Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:07.886Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:08.133Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:08.133Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:08.134Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:08.135Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:08.356Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:08.356Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:08.357Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:08.360Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:08.689Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:08.689Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:08.689Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:08.690Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:08.823Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:08.823Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:08.827Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:08.830Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:08.989Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:08.989Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:08.992Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:08.994Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:09.340Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:09.340Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:09.343Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:09.347Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:09.764Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:09.766Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:09.768Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:09.770Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:09.991Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:09.993Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:09.996Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:09.999Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:10.387Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:10.387Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:10.388Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:10.389Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:10.521Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:10.522Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:10.522Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:10.523Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:10.689Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:10.689Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:10.691Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:10.696Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:11.389Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:11.389Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:11.390Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:11.394Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:11.647Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:11.648Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:11.649Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:11.650Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:11.821Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:11.821Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:11.822Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:11.823Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:12.220Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:12.220Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:12.221Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:12.221Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:12.322Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:12.322Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:12.322Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:12.323Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:12.556Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:12.557Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:12.562Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:12.567Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:12.953Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:12.953Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:12.954Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:12.954Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:14.833Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Ex: Maria das Dores Silva","label":"Ex: Maria das Dores Silva","value":"Roseli Trajano de Souza Machado","valueLength":31,"text":""}
-
-## 2026-07-15 23:00:14.833Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Ex: Maria das Dores Silva","label":"Ex: Maria das Dores Silva","value":"Roseli Trajano de Souza Machado","valueLength":31,"text":""}
-
-## 2026-07-15 23:00:14.834Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"email","id":null,"placeholder":"revenda@gmail.com","label":"revenda@gmail.com","value":"","valueLength":0,"text":""}
-
-## 2026-07-15 23:00:15.051Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"email","id":null,"placeholder":"revenda@gmail.com","label":"revenda@gmail.com","value":"","valueLength":0,"text":""}
-
-## 2026-07-15 23:00:17.371Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:17.371Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:17.372Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:17.380Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:17.401Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"email","id":null,"placeholder":"revenda@gmail.com","label":"revenda@gmail.com","value":"mimolingerie18@gmail.com","valueLength":24,"text":""}
-
-## 2026-07-15 23:00:18.251Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"email","id":null,"placeholder":"revenda@gmail.com","label":"revenda@gmail.com","value":"mimolingerie18@gmail.com","valueLength":24,"text":""}
-
-## 2026-07-15 23:00:18.251Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"password","id":null,"placeholder":"Mínimo 8 caracteres","label":"Mínimo 8 caracteres","value":"[redacted:length=0]","valueLength":0,"text":""}
-
-## 2026-07-15 23:00:18.463Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"password","id":null,"placeholder":"Mínimo 8 caracteres","label":"Mínimo 8 caracteres","value":"[redacted:length=0]","valueLength":0,"text":""}
-
-## 2026-07-15 23:00:19.314Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:19.315Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:19.318Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:19.319Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:19.438Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:19.439Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:19.439Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:19.440Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:19.937Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:19.937Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:19.937Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:19.938Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:20.020Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:20.020Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:20.021Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:20.037Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:20.549Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:20.550Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:20.552Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:20.552Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:20.670Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:20.672Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:20.673Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:20.678Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:20.987Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:20.988Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:20.988Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:20.989Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:21.103Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:21.103Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:21.104Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:21.105Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:22.350Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"password","id":null,"placeholder":"Mínimo 8 caracteres","label":"Mínimo 8 caracteres","value":"[redacted:length=8]","valueLength":8,"text":""}
-
-## 2026-07-15 23:00:22.350Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"password","id":null,"placeholder":"Mínimo 8 caracteres","label":"Mínimo 8 caracteres","value":"[redacted:length=8]","valueLength":8,"text":""}
-
-## 2026-07-15 23:00:22.351Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"000.000.000-00","label":"000.000.000-00","value":"","valueLength":0,"text":""}
-
-## 2026-07-15 23:00:22.570Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"000.000.000-00","label":"000.000.000-00","value":"","valueLength":0,"text":""}
-
-## 2026-07-15 23:00:23.306Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:23.306Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:23.309Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:23.309Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:23.585Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:23.586Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:23.587Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:23.588Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:23.988Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:23.988Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:23.989Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:23.990Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:24.472Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:24.472Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:24.473Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:24.476Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:24.920Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:24.920Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:24.921Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:24.922Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:25.268Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:25.269Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:25.271Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:25.272Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:25.511Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:25.512Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:25.513Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:25.514Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:25.969Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:25.970Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:25.970Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:25.971Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:26.172Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:26.172Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:26.176Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:26.177Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:26.430Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:26.431Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:26.433Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:26.434Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:26.831Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:26.832Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:26.833Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:26.836Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:28.138Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"000.000.000-00","label":"000.000.000-00","value":"08203996710","valueLength":11,"text":""}
-
-## 2026-07-15 23:00:28.138Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"000.000.000-00","label":"000.000.000-00","value":"08203996710","valueLength":11,"text":""}
-
-## 2026-07-15 23:00:28.139Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"(00) 90000-0000","label":"(00) 90000-0000","value":"","valueLength":0,"text":""}
-
-## 2026-07-15 23:00:28.362Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"(00) 90000-0000","label":"(00) 90000-0000","value":"","valueLength":0,"text":""}
-
-## 2026-07-15 23:00:28.449Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:28.451Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:28.453Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:28.454Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:28.603Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:28.603Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:28.604Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:28.604Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:29.037Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:29.037Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:29.039Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:29.040Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:29.306Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:29.307Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:29.309Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:29.310Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:29.570Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:29.570Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:29.571Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:29.572Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:29.721Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:29.721Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:29.722Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:29.725Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:30.032Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:30.033Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:30.035Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:30.038Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:30.645Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:30.645Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:30.647Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:30.649Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:30.878Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:30.878Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:30.884Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:30.888Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:31.526Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:31.526Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:31.528Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:31.531Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:31.755Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:31.755Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:31.759Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:31.760Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:32.978Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"(00) 90000-0000","label":"(00) 90000-0000","value":"22981125489","valueLength":11,"text":""}
-
-## 2026-07-15 23:00:32.978Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"(00) 90000-0000","label":"(00) 90000-0000","value":"22981125489","valueLength":11,"text":""}
-
-## 2026-07-15 23:00:33.195Z click
-- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"submit","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Ativar Meu Cadastro Revenda & Recalcular"}
-
-## 2026-07-15 23:00:33.202Z submit
-- action: http://localhost:3000/cart
-- fields: [{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"Ex: Maria das Dores Silva","type":"text","value":"Roseli Trajano de Souza Machado","length":31,"redacted":false},{"label":"revenda@gmail.com","type":"email","value":"mimolingerie18@gmail.com","length":24,"redacted":false},{"label":"Mínimo 8 caracteres","type":"password","value":"[redacted:length=8]","length":8,"redacted":true},{"label":"000.000.000-00","type":"text","value":"08203996710","length":11,"redacted":false},{"label":"(00) 90000-0000","type":"text","value":"22981125489","length":11,"redacted":false},{"label":"[submit]","type":"submit","value":"","length":0,"redacted":false}]
-
-## 2026-07-15 23:00:33.219Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:33.219Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:33.220Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:33.220Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:34.102Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:34.102Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:34.103Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:34.104Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:34.169Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:34.169Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:34.170Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:34.170Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:34.204Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:34.204Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:34.205Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:34.206Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:34.215Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:34.215Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:34.216Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:34.217Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:34.221Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:34.221Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:34.222Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:34.224Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:34.229Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:34.229Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:34.230Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:34.231Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:34.282Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:34.282Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:34.282Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:34.283Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:00:38.944Z click
-- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Finalizar Compra"}
-
-## 2026-07-15 23:00:45.926Z click
-- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Finalizar Compra"}
-
-## 2026-07-15 23:00:56.726Z click
-- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Finalizar Compra"}
-
-## 2026-07-15 23:01:19.452Z click
-- element: {"tag":"button","role":null,"ariaLabel":"Aumentar quantidade","name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-07-15 23:01:19.460Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:01:19.460Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:01:19.461Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:01:19.462Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:01:19.483Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:01:19.483Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:01:19.485Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:01:19.488Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:01:19.634Z click
-- element: {"tag":"button","role":null,"ariaLabel":"Aumentar quantidade","name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-07-15 23:01:19.638Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:01:19.638Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:01:19.641Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:01:19.642Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:01:19.661Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:01:19.661Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:01:19.662Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:01:19.664Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:01:19.831Z click
-- element: {"tag":"button","role":null,"ariaLabel":"Aumentar quantidade","name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-07-15 23:01:19.836Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:01:19.836Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:01:19.840Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:01:19.842Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:01:19.868Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:01:19.868Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:01:19.869Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:01:19.870Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:01:20.061Z click
-- element: {"tag":"button","role":null,"ariaLabel":"Aumentar quantidade","name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-07-15 23:01:20.065Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:01:20.065Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:01:20.066Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:01:20.067Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:01:20.093Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:01:20.093Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:01:20.094Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:01:20.095Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:01:20.561Z click
-- element: {"tag":"button","role":null,"ariaLabel":"Aumentar quantidade","name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-07-15 23:01:20.567Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:01:20.567Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:01:20.568Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:01:20.569Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:01:20.587Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:01:20.587Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:01:20.590Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:01:20.591Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:01:21.061Z click
-- element: {"tag":"button","role":null,"ariaLabel":"Aumentar quantidade","name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-07-15 23:01:21.065Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:01:21.066Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:01:21.067Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:01:21.067Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:01:21.095Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:01:21.095Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:01:21.097Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:01:21.098Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:01:22.592Z click
-- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Finalizar Compra"}
-
-## 2026-07-15 23:01:22.600Z navigate
-- url: http://localhost:3000/checkout
-- via: pushState
-
-## 2026-07-15 23:01:27.992Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":"cep","type":null,"id":"billing-cep","placeholder":"00000-000","label":"cep","value":"","valueLength":0,"text":""}
-
-## 2026-07-15 23:01:28.207Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":"cep","type":null,"id":"billing-cep","placeholder":"00000-000","label":"cep","value":"","valueLength":0,"text":""}
-
-## 2026-07-15 23:01:32.984Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":"cep","type":null,"id":"billing-cep","placeholder":"00000-000","label":"cep","value":"21921-970","valueLength":9,"text":""}
-
-## 2026-07-15 23:01:32.984Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":"cep","type":null,"id":"billing-cep","placeholder":"00000-000","label":"cep","value":"21921-970","valueLength":9,"text":""}
-
-## 2026-07-15 23:01:32.991Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":"rua","type":null,"id":"billing-rua","placeholder":"Ex: Av. Paulista","label":"rua","value":"","valueLength":0,"text":""}
-
-## 2026-07-15 23:01:35.065Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":"rua","type":null,"id":"billing-rua","placeholder":"Ex: Av. Paulista","label":"rua","value":"Rua Capitão Barbosa","valueLength":19,"text":""}
-
-## 2026-07-15 23:01:35.065Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":"numero","type":null,"id":"billing-numero","placeholder":"Ex: 1000","label":"numero","value":"","valueLength":0,"text":""}
-
-## 2026-07-15 23:01:36.679Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":"numero","type":null,"id":"billing-numero","placeholder":"Ex: 1000","label":"numero","value":"100","valueLength":3,"text":""}
-
-## 2026-07-15 23:01:36.679Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":"numero","type":null,"id":"billing-numero","placeholder":"Ex: 1000","label":"numero","value":"100","valueLength":3,"text":""}
-
-## 2026-07-15 23:01:36.680Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":"complemento","type":null,"id":"billing-complemento","placeholder":"Apto, Bloco, etc.","label":"complemento","value":"","valueLength":0,"text":""}
-
-## 2026-07-15 23:01:45.304Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":"complemento","type":null,"id":"billing-complemento","placeholder":"Apto, Bloco, etc.","label":"complemento","value":"Casa","valueLength":4,"text":""}
-
-## 2026-07-15 23:01:45.304Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":"complemento","type":null,"id":"billing-complemento","placeholder":"Apto, Bloco, etc.","label":"complemento","value":"Casa","valueLength":4,"text":""}
-
-## 2026-07-15 23:01:45.523Z click
-- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"CONCLUIR COMPRA"}
-
-## 2026-07-15 23:02:42.376Z load
-- url: http://localhost:3000/order-confirmation/u6gab1dxrjjjt8s?session_id=cs_test_a1N9SAN4TFbSEwajvASEiLsT1OfsF84sJVqQCo1ohhpTOpLkFnvpEC6YU3
-- title: Hostinger Horizons
-
-## 2026-07-15 23:02:42.748Z navigate
-- url: http://localhost:3000/order-confirmation/u6gab1dxrjjjt8s?session_id=cs_test_a1N9SAN4TFbSEwajvASEiLsT1OfsF84sJVqQCo1ohhpTOpLkFnvpEC6YU3
-- via: replaceState
-
-## 2026-07-15 23:02:43.370Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:02:43.373Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:12:42.334Z focus
-- element: {"tag":"textarea","role":null,"ariaLabel":null,"name":null,"type":null,"id":"cz-clipboard-copier","placeholder":null,"label":"cz-clipboard-copier","value":"#B38D57","valueLength":7,"text":""}
-
-## 2026-07-15 23:12:42.345Z blur
-- element: {"tag":"textarea","role":null,"ariaLabel":null,"name":null,"type":null,"id":"cz-clipboard-copier","placeholder":null,"label":"cz-clipboard-copier","value":"#B38D57","valueLength":7,"text":""}
-
-## 2026-07-15 23:12:42.538Z click
-- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Adicionar Faixa B2C"}
-
-## 2026-07-15 23:24:32.097Z load
-- url: http://localhost:3000/
-- title: Hostinger Horizons
-
-## 2026-07-15 23:24:32.456Z navigate
-- url: http://localhost:3000/
-- via: replaceState
-
-## 2026-07-15 23:24:33.429Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:33.433Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:33.476Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:33.476Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:33.482Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:33.482Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:33.497Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:33.497Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:38.410Z click
-- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-07-15 23:24:38.416Z navigate
-- url: http://localhost:3000/produto/7ex5coghj95r2ve
-- via: pushState
-
-## 2026-07-15 23:24:38.576Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:38.582Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:38.582Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:38.582Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:38.582Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:38.582Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:38.582Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:38.582Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:38.583Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:38.688Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:38.694Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:38.696Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:38.698Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:38.699Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:38.704Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:44.463Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:44.465Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:44.468Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:44.471Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:44.472Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:44.472Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:44.486Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:44.488Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:44.489Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:44.490Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:44.492Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:44.494Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:44.506Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:44.506Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:44.508Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:44.508Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:44.509Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:44.511Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:44.521Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:44.522Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:44.523Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:44.524Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:44.525Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:44.526Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:44.536Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:44.537Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:44.538Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:44.538Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:44.539Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:44.540Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:44.547Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:44.548Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:44.548Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:44.549Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:44.550Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:44.551Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:44.561Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:44.562Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:44.563Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:44.565Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:44.566Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:44.569Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:44.579Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:44.580Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:44.581Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:44.582Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:44.585Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:44.586Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:44.596Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:44.596Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:44.597Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:44.598Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:44.599Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:44.600Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:45.819Z click
-- element: {"tag":"button","role":null,"ariaLabel":"Ver imagem 2","name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-07-15 23:24:45.824Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:45.825Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:45.826Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:45.827Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:45.828Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:45.829Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:47.602Z click
-- element: {"tag":"button","role":null,"ariaLabel":"Ver imagem 1","name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-07-15 23:24:47.606Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:47.607Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:47.607Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:47.608Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:47.609Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:47.609Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:49.458Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:49.459Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:49.460Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:49.460Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:49.461Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:49.462Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:49.475Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:49.476Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:49.477Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:49.477Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:49.478Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:49.479Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:49.492Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:49.493Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:49.493Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:49.494Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:49.495Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:49.496Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:49.506Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:49.507Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:49.507Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:49.508Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:49.508Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:49.509Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:49.524Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:49.525Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:49.526Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:49.526Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:49.528Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:49.529Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:49.541Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:49.542Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:49.543Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:49.544Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:49.544Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:24:49.545Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:25:00.102Z click
-- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Produtos"}
-
-## 2026-07-15 23:25:00.123Z navigate
-- url: http://localhost:3000/admin/produtos
-- via: pushState
-
-## 2026-07-15 23:25:00.267Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:25:00.271Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:25:03.131Z click
-- element: {"tag":"html","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"\n\t\timport { injectIntoGlobalHook } from \"/@react-refresh\";\ninjectIntoGlobalHook(window);\nwindow.$RefreshReg$ = () => {};\nwindow.$RefreshSig$ = () => (type) => type;\n\n\t\t\n\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\tHostinger Horizons\n\t\tconst SITE_PAGES_ENDPOINT = '/__horizons/site-pages';\n\nconst OUTGOING_SITE_PAGES_MESSAGE = 'sitePages';\nconst INCOMING_REQUEST_SITE_PAGES_MESSAGE = 'request-site-pages';\n\nconst ALLOWED_PARENT_ORIGINS = [\n\t'https://horizons.hostinger.com',\n\t'https://horizons.hostinger.dev',\n\t'https://horizons-frontend-local.hostinger.dev',\n\t'http://localhost:4000',\n];\n\nfunction postSitePages(pages) {\n\tlet parentOrigin = window.location.ancestorOrigins?.[0];\n\tif (!parentOrigin && document.referrer) {\n\t\ttry {\n\t\t\tparentOrigin = new URL(document.referrer).origin;\n\t\t} catch {}\n\t}\n\tif (parentOrigin && ALLOWED_PARENT_ORIGINS.includes(parentOrigin)) {\n\t\twindow.parent.postMessage({ type: OUTGOING_SITE_PAGES_MESSAGE, payload: { pages } }, parentOrigin);\n\t}\n}\n\nasync function sendSitePagesToParent() {\n\tif (window.self === window.top) {\n\t\treturn;\n\t}\n\n\ttry {\n\t\tconst response = await fetch(SITE_PAGES_ENDPOINT);\n\t\tif (!response.ok) {\n\t\t\tthrow new Error(`HTTP ${response.status}`);\n\t\t}\n\t\tpostSitePages(await response.json());\n\t} catch (error) {\n\t\tconsole.error('[site-pages] Failed to send site pages to parent:', error);\n\t}\n}\n\nif (window.self !== window.top) {\n\twindow.addEventListener('load', sendSitePagesToParent);\n\twindow.addEventListener('message', (event) => {\n\t\tif (event.data?.type === INCOMING_REQUEST_SITE_PAGES_MESSAGE) {\n\t\t\tsendSitePagesToParent();\n\t\t}\n\t});\n}\n\n\t\t\n\t#root[data-edit-mode-enabled=\"true\"] {\n\t\tcursor: pointer;\n\t}\n\n\t#root[data-edit-mode-enabled=\"true\"] [data-edit-id] {\n\t\tcursor: pointer;\n\t\toutline: 2px dashed #357DF9;\n\t\toutline-offset: 2px;\n\t\tmin-height: 1em;\n\t\toverflow-wrap: anywhere;\n\t\tmin-width: 0;\n\t}\n\t#root[data-edit-mode-enabled=\"true\"] img[data-edit-id] {\n\t\toutline-offset: -2px;\n\t}\n\t#root[data-edit-mode-enabled=\"true\"] [data-edit-id]:hover {\n\t\tbackground-color: #357DF933;\n\t\to..."}
-
-## 2026-07-15 23:25:04.689Z click
-- element: {"tag":"div","role":"menuitem","ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Editar"}
-
-## 2026-07-15 23:25:04.690Z navigate
-- url: http://localhost:3000/admin/produtos/7ex5coghj95r2ve/editar
-- via: pushState
-
-## 2026-07-15 23:25:04.758Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:25:04.758Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:25:04.758Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:25:04.758Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:25:08.313Z click
-- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-07-15 23:25:08.314Z navigate
-- url: http://localhost:3000/admin/produtos
-- via: pushState
-
-## 2026-07-15 23:25:08.377Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:25:08.377Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:25:11.580Z load
-- url: http://localhost:3000/admin/produtos
-- title: Hostinger Horizons
-
-## 2026-07-15 23:25:12.347Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:25:12.349Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:25:15.528Z load
-- url: http://localhost:3000/produto/7ex5coghj95r2ve
-- title: Hostinger Horizons
-
-## 2026-07-15 23:25:15.984Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:25:15.984Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:25:15.984Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:25:15.984Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:25:15.985Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:25:15.985Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:25:15.985Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:25:15.985Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:25:15.985Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:25:16.020Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:25:16.022Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:25:16.023Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:25:16.024Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:25:16.025Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:25:16.027Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:25:23.033Z click
-- element: {"tag":"button","role":null,"ariaLabel":"Aumentar quantidade","name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-07-15 23:25:23.042Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:25:23.044Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:25:23.044Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:25:23.045Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:25:23.046Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:25:23.047Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:25:23.200Z click
-- element: {"tag":"button","role":null,"ariaLabel":"Aumentar quantidade","name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-07-15 23:25:23.207Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:25:23.209Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:25:23.211Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:25:23.212Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:25:23.213Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:25:23.213Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:25:23.426Z click
-- element: {"tag":"button","role":null,"ariaLabel":"Aumentar quantidade","name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-07-15 23:25:23.429Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:25:23.430Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:25:23.430Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:25:23.432Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:25:23.433Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:25:23.434Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:25:24.386Z click
-- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Adicionar"}
-
-## 2026-07-15 23:25:24.395Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:25:24.396Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:25:24.397Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:25:24.398Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:25:24.399Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:25:24.400Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:25:26.153Z click
-- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"COMPRAR AGORA"}
-
-## 2026-07-15 23:25:26.158Z navigate
-- url: http://localhost:3000/cart
-- via: pushState
-
-## 2026-07-15 23:25:26.288Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:25:26.288Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:25:26.290Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:25:26.291Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:25:30.550Z click
-- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Finalizar Compra"}
-
-## 2026-07-15 23:25:30.551Z navigate
-- url: http://localhost:3000/checkout
-- via: pushState
-
-## 2026-07-15 23:25:33.451Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":"personal-nome","placeholder":"Nome e Sobrenome","label":"Nome Completo","value":"","valueLength":0,"text":""}
-
-## 2026-07-15 23:25:33.666Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":"personal-nome","placeholder":"Nome e Sobrenome","label":"Nome Completo","value":"","valueLength":0,"text":""}
-
-## 2026-07-15 23:25:43.721Z click
-- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Pedidos"}
-
-## 2026-07-15 23:25:43.728Z navigate
-- url: http://localhost:3000/admin/pedidos
-- via: pushState
-
-## 2026-07-15 23:25:48.650Z click
-- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Clientes"}
-
-## 2026-07-15 23:25:48.651Z navigate
-- url: http://localhost:3000/admin/clientes
-- via: pushState
-
-## 2026-07-15 23:25:58.027Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":"personal-nome","placeholder":"Nome e Sobrenome","label":"Nome Completo","value":"","valueLength":0,"text":""}
-
-## 2026-07-15 23:25:59.953Z click
-- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-07-15 23:26:02.100Z click
-- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Já tenho cadastro"}
-
-## 2026-07-15 23:26:02.102Z navigate
-- url: http://localhost:3000/login
-- via: pushState
-
-## 2026-07-15 23:26:03.680Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"email","id":"login-email","placeholder":"seu@email.com","label":"E-mail","value":"","valueLength":0,"text":""}
-
-## 2026-07-15 23:26:03.902Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"email","id":"login-email","placeholder":"seu@email.com","label":"E-mail","value":"","valueLength":0,"text":""}
-
-## 2026-07-15 23:26:11.407Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"email","id":"login-email","placeholder":"seu@email.com","label":"E-mail","value":"","valueLength":0,"text":""}
-
-## 2026-07-15 23:26:22.884Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"email","id":"login-email","placeholder":"seu@email.com","label":"E-mail","value":"mimolingerie18@gmail.com","valueLength":24,"text":""}
-
-## 2026-07-15 23:26:22.884Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"email","id":"login-email","placeholder":"seu@email.com","label":"E-mail","value":"mimolingerie18@gmail.com","valueLength":24,"text":""}
-
-## 2026-07-15 23:26:22.887Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"password","id":"login-password","placeholder":"••••••••","label":"Senha","value":"[redacted:length=0]","valueLength":0,"text":""}
-
-## 2026-07-15 23:26:23.101Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"password","id":"login-password","placeholder":"••••••••","label":"Senha","value":"[redacted:length=0]","valueLength":0,"text":""}
-
-## 2026-07-15 23:26:26.982Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"password","id":"login-password","placeholder":"••••••••","label":"Senha","value":"[redacted:length=8]","valueLength":8,"text":""}
-
-## 2026-07-15 23:26:26.982Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"password","id":"login-password","placeholder":"••••••••","label":"Senha","value":"[redacted:length=8]","valueLength":8,"text":""}
-
-## 2026-07-15 23:26:27.199Z click
-- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"submit","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"ACESSAR MINHA CONTA "}
-
-## 2026-07-15 23:26:27.206Z submit
-- action: http://localhost:3000/login
-- fields: [{"label":"E-mail","type":"email","value":"mimolingerie18@gmail.com","length":24,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"Senha","type":"password","value":"[redacted:length=8]","length":8,"redacted":true},{"label":"[submit]","type":"submit","value":"","length":0,"redacted":false}]
-
-## 2026-07-15 23:26:27.375Z navigate
-- url: http://localhost:3000/checkout
-- via: replaceState
-
-## 2026-07-15 23:26:27.392Z navigate
-- url: http://localhost:3000/checkout
-- via: replaceState
-
-## 2026-07-15 23:26:45.550Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":"cep","type":null,"id":"billing-cep","placeholder":"00000-000","label":"cep","value":"","valueLength":0,"text":""}
-
-## 2026-07-15 23:26:45.764Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":"cep","type":null,"id":"billing-cep","placeholder":"00000-000","label":"cep","value":"","valueLength":0,"text":""}
-
-## 2026-07-15 23:26:49.141Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":"cep","type":null,"id":"billing-cep","placeholder":"00000-000","label":"cep","value":"21921-970","valueLength":9,"text":""}
-
-## 2026-07-15 23:26:49.439Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":"cep","type":null,"id":"billing-cep","placeholder":"00000-000","label":"cep","value":"21921-970","valueLength":9,"text":""}
-
-## 2026-07-15 23:26:49.447Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":"rua","type":null,"id":"billing-rua","placeholder":"Ex: Av. Paulista","label":"rua","value":"","valueLength":0,"text":""}
-
-## 2026-07-15 23:26:50.914Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":"rua","type":null,"id":"billing-rua","placeholder":"Ex: Av. Paulista","label":"rua","value":"Rua Capitão Barbosa","valueLength":19,"text":""}
-
-## 2026-07-15 23:26:50.914Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":"numero","type":null,"id":"billing-numero","placeholder":"Ex: 1000","label":"numero","value":"","valueLength":0,"text":""}
-
-## 2026-07-15 23:26:51.130Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":"numero","type":null,"id":"billing-numero","placeholder":"Ex: 1000","label":"numero","value":"","valueLength":0,"text":""}
-
-## 2026-07-15 23:26:51.795Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":"numero","type":null,"id":"billing-numero","placeholder":"Ex: 1000","label":"numero","value":"100","valueLength":3,"text":""}
-
-## 2026-07-15 23:26:51.795Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":"numero","type":null,"id":"billing-numero","placeholder":"Ex: 1000","label":"numero","value":"100","valueLength":3,"text":""}
-
-## 2026-07-15 23:26:51.795Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":"complemento","type":null,"id":"billing-complemento","placeholder":"Apto, Bloco, etc.","label":"complemento","value":"","valueLength":0,"text":""}
-
-## 2026-07-15 23:26:59.452Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":"complemento","type":null,"id":"billing-complemento","placeholder":"Apto, Bloco, etc.","label":"complemento","value":"Casa","valueLength":4,"text":""}
-
-## 2026-07-15 23:26:59.452Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":"complemento","type":null,"id":"billing-complemento","placeholder":"Apto, Bloco, etc.","label":"complemento","value":"Casa","valueLength":4,"text":""}
-
-## 2026-07-15 23:26:59.456Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":"bairro","type":null,"id":"billing-bairro","placeholder":null,"label":"bairro","value":"Praia da Bandeira","valueLength":17,"text":""}
-
-## 2026-07-15 23:27:01.079Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":"bairro","type":null,"id":"billing-bairro","placeholder":null,"label":"bairro","value":"Praia da Bandeira","valueLength":17,"text":""}
-
-## 2026-07-15 23:27:01.080Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":"cidade","type":null,"id":"billing-cidade","placeholder":null,"label":"cidade","value":"Rio de Janeiro","valueLength":14,"text":""}
-
-## 2026-07-15 23:27:01.462Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":"cidade","type":null,"id":"billing-cidade","placeholder":null,"label":"cidade","value":"Rio de Janeiro","valueLength":14,"text":""}
-
-## 2026-07-15 23:27:01.464Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":"estado","type":null,"id":"billing-estado","placeholder":"SP","label":"estado","value":"RJ","valueLength":2,"text":""}
-
-## 2026-07-15 23:27:13.679Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":"estado","type":null,"id":"billing-estado","placeholder":"SP","label":"estado","value":"RJ","valueLength":2,"text":""}
-
-## 2026-07-15 23:27:13.879Z click
-- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Voltar ao Carrinho"}
-
-## 2026-07-15 23:27:13.880Z navigate
-- url: http://localhost:3000/cart
-- via: pushState
-
-## 2026-07-15 23:27:14.052Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:14.056Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:14.060Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:14.062Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:24.721Z click
-- element: {"tag":"button","role":null,"ariaLabel":"Aumentar quantidade","name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-07-15 23:27:24.747Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:24.747Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:24.748Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:24.749Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:24.796Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:24.796Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:24.797Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:24.798Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:24.889Z click
-- element: {"tag":"button","role":null,"ariaLabel":"Aumentar quantidade","name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-07-15 23:27:24.896Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:24.897Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:24.899Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:24.899Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:24.922Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:24.922Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:24.924Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:24.926Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:25.066Z click
-- element: {"tag":"button","role":null,"ariaLabel":"Aumentar quantidade","name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-07-15 23:27:25.069Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:25.070Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:25.070Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:25.071Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:25.089Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:25.089Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:25.090Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:25.090Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:25.236Z click
-- element: {"tag":"button","role":null,"ariaLabel":"Aumentar quantidade","name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-07-15 23:27:25.240Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:25.240Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:25.241Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:25.245Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:25.282Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:25.283Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:25.285Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:25.286Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:25.390Z click
-- element: {"tag":"button","role":null,"ariaLabel":"Aumentar quantidade","name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-07-15 23:27:25.399Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:25.400Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:25.400Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:25.401Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:25.418Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:25.418Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:25.419Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:25.420Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:25.552Z click
-- element: {"tag":"button","role":null,"ariaLabel":"Aumentar quantidade","name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-07-15 23:27:25.555Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:25.555Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:25.556Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:25.557Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:25.583Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:25.583Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:25.584Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:25.585Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:25.733Z click
-- element: {"tag":"button","role":null,"ariaLabel":"Aumentar quantidade","name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-07-15 23:27:25.738Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:25.738Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:25.739Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:25.740Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:25.757Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:25.757Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:25.760Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:25.761Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:25.905Z click
-- element: {"tag":"button","role":null,"ariaLabel":"Aumentar quantidade","name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-07-15 23:27:25.911Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:25.912Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:25.913Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:25.914Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:25.934Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:25.934Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:25.935Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:25.936Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:26.081Z click
-- element: {"tag":"button","role":null,"ariaLabel":"Aumentar quantidade","name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-07-15 23:27:26.086Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:26.087Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:26.090Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:26.097Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:26.123Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:26.123Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:26.124Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:26.127Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:26.259Z click
-- element: {"tag":"button","role":null,"ariaLabel":"Aumentar quantidade","name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-07-15 23:27:26.266Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:26.266Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:26.267Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:26.268Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:26.284Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:26.284Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:26.285Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:26.285Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:26.449Z click
-- element: {"tag":"button","role":null,"ariaLabel":"Aumentar quantidade","name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-07-15 23:27:26.452Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:26.452Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:26.453Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:26.454Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:26.469Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:26.469Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:26.470Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:26.471Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:26.634Z click
-- element: {"tag":"button","role":null,"ariaLabel":"Aumentar quantidade","name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-07-15 23:27:26.637Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:26.637Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:26.638Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:26.638Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:26.655Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:26.655Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:26.656Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:26.656Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:26.816Z click
-- element: {"tag":"button","role":null,"ariaLabel":"Aumentar quantidade","name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-07-15 23:27:26.820Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:26.820Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:26.820Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:26.821Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:26.841Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:26.841Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:26.844Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:26.845Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:27.000Z click
-- element: {"tag":"button","role":null,"ariaLabel":"Aumentar quantidade","name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-07-15 23:27:27.003Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:27.003Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:27.004Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:27.005Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:27.020Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:27.020Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:27.021Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:27.022Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:27.171Z click
-- element: {"tag":"button","role":null,"ariaLabel":"Aumentar quantidade","name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-07-15 23:27:27.179Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:27.179Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:27.181Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:27.182Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:27.199Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:27.199Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:27.200Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:27.201Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:27.348Z click
-- element: {"tag":"button","role":null,"ariaLabel":"Aumentar quantidade","name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-07-15 23:27:27.352Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:27.352Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:27.353Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:27.354Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:27.369Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:27.370Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:27.371Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:27.372Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:27.518Z click
-- element: {"tag":"button","role":null,"ariaLabel":"Aumentar quantidade","name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-07-15 23:27:27.521Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:27.521Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:27.522Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:27.522Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:27.540Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:27.540Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:27.545Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:27.547Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:27.713Z click
-- element: {"tag":"button","role":null,"ariaLabel":"Aumentar quantidade","name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-07-15 23:27:27.717Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:27.717Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:27.718Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:27.719Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:27.734Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:27.734Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:27.735Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:27.735Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:27.899Z click
-- element: {"tag":"button","role":null,"ariaLabel":"Aumentar quantidade","name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-07-15 23:27:27.903Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:27.903Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:27.904Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:27.905Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:27.920Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:27.920Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:27.921Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:27.922Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:28.084Z click
-- element: {"tag":"button","role":null,"ariaLabel":"Aumentar quantidade","name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-07-15 23:27:28.089Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:28.089Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:28.090Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:28.090Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:28.104Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:28.105Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:28.106Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:28.106Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:28.298Z click
-- element: {"tag":"button","role":null,"ariaLabel":"Aumentar quantidade","name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-07-15 23:27:28.302Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:28.302Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:28.303Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:28.304Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:28.319Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:28.319Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:28.320Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:28.321Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:28.831Z click
-- element: {"tag":"button","role":null,"ariaLabel":"Aumentar quantidade","name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-07-15 23:27:28.836Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:28.836Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:28.837Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:28.837Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:28.852Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:28.853Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:28.854Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:28.855Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:27:30.763Z click
-- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Finalizar Compra"}
-
-## 2026-07-15 23:27:30.764Z navigate
-- url: http://localhost:3000/checkout
-- via: pushState
-
-## 2026-07-15 23:27:36.570Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":"cep","type":null,"id":"billing-cep","placeholder":"00000-000","label":"cep","value":"","valueLength":0,"text":""}
-
-## 2026-07-15 23:27:36.776Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":"cep","type":null,"id":"billing-cep","placeholder":"00000-000","label":"cep","value":"","valueLength":0,"text":""}
-
-## 2026-07-15 23:27:39.476Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":"cep","type":null,"id":"billing-cep","placeholder":"00000-000","label":"cep","value":"21921-970","valueLength":9,"text":""}
-
-## 2026-07-15 23:27:39.927Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":"cep","type":null,"id":"billing-cep","placeholder":"00000-000","label":"cep","value":"21921-970","valueLength":9,"text":""}
-
-## 2026-07-15 23:27:39.935Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":"rua","type":null,"id":"billing-rua","placeholder":"Ex: Av. Paulista","label":"rua","value":"","valueLength":0,"text":""}
-
-## 2026-07-15 23:27:41.229Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":"rua","type":null,"id":"billing-rua","placeholder":"Ex: Av. Paulista","label":"rua","value":"Rua Capitão Barbosa","valueLength":19,"text":""}
-
-## 2026-07-15 23:27:41.231Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":"numero","type":null,"id":"billing-numero","placeholder":"Ex: 1000","label":"numero","value":"","valueLength":0,"text":""}
-
-## 2026-07-15 23:27:42.895Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":"numero","type":null,"id":"billing-numero","placeholder":"Ex: 1000","label":"numero","value":"100","valueLength":3,"text":""}
-
-## 2026-07-15 23:27:42.895Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":"numero","type":null,"id":"billing-numero","placeholder":"Ex: 1000","label":"numero","value":"100","valueLength":3,"text":""}
-
-## 2026-07-15 23:27:42.895Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":"complemento","type":null,"id":"billing-complemento","placeholder":"Apto, Bloco, etc.","label":"complemento","value":"","valueLength":0,"text":""}
-
-## 2026-07-15 23:27:44.853Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":"complemento","type":null,"id":"billing-complemento","placeholder":"Apto, Bloco, etc.","label":"complemento","value":"Casa","valueLength":4,"text":""}
-
-## 2026-07-15 23:27:44.853Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":"complemento","type":null,"id":"billing-complemento","placeholder":"Apto, Bloco, etc.","label":"complemento","value":"Casa","valueLength":4,"text":""}
-
-## 2026-07-15 23:27:44.855Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":"bairro","type":null,"id":"billing-bairro","placeholder":null,"label":"bairro","value":"Praia da Bandeira","valueLength":17,"text":""}
-
-## 2026-07-15 23:27:49.530Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":"bairro","type":null,"id":"billing-bairro","placeholder":null,"label":"bairro","value":"Praia da Bandeira","valueLength":17,"text":""}
-
-## 2026-07-15 23:27:49.746Z click
-- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"CONCLUIR COMPRA"}
-
-## 2026-07-15 23:28:35.797Z load
-- url: http://localhost:3000/order-confirmation/u6r4srbejty1pnv?session_id=cs_test_a1KmDFstyVHY4G0IaBoSP32ywbBf9OcOVjiaGT0lYmwiQdxhyL66jR912B
-- title: Hostinger Horizons
-
-## 2026-07-15 23:28:36.324Z navigate
-- url: http://localhost:3000/order-confirmation/u6r4srbejty1pnv?session_id=cs_test_a1KmDFstyVHY4G0IaBoSP32ywbBf9OcOVjiaGT0lYmwiQdxhyL66jR912B
-- via: replaceState
-
-## 2026-07-15 23:28:36.885Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:28:36.887Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:30:18.598Z click
-- element: {"tag":"h2","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Complete sua experiência Avante"}
-
-## 2026-07-15 23:30:35.066Z click
-- element: {"tag":"span","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Sugestões do Nosso Ateliê"}
-
-## 2026-07-15 23:31:45.925Z click
-- element: {"tag":"main","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Pedido confirmado com sucesso ✨Seu pedido Avante já está sendo preparado com todo o nosso carinho e rigor de alta costura. Enviamos os detalhes completos para o seu e-mail.Pedido Confirmado15 de jul., 20:27Em separaçãoEnviadoEntregueItens do PedidoPED-002Cropped Regata Gola Alta BlingTamanho: M | Cor: Verde-MilitarQtd: 26R$ 777,40Resumo FinanceiroSubtotalR$ 517,40Frete (3 a 5 dias úteis)R$ 28,04Total PagoR$ 545,44Pago via Cartão de CréditoEndereço de EntregaSua ResidênciaRua Capitão Barbosa, 100 - CasaPraia da BandeiraRio de Janeiro - RJCEP: 21921-970Um presente para sua próxima experiênciaCada compra na Avante Lingerie destrava benefícios de alta costura. Utilize o cupom abaixo e garanta 10% OFF em seu próximo pedido.AVANTE10CopiarCupom válido por 48 horas.Sugestões do Nosso AteliêComplete sua experiência Avante-23%LingerieREF: AVL-CRO-4678Cropped Regata Gola Alta Bling5.0(128 avaliações)R$ 38,87R$ 29,90 PAGUE NO PIX 5% OFFATÊ 20% OFF PROGRESSIVOMais de 42 vendidos essa semana!Restam apenas 600 unidades em estoque!ADICIONAR À SACOLAPrecisa de ajuda?Falar no WhatsAppE-mail de Suportecontato@avantelingerie.com.brHorário de AtendimentoSeg a Sex: 09h às 18hGarantias AvanteCompra SeguraSeus dados estão 100% protegidos e criptografados.Troca FacilitadaPrimeira troca grátis em até 7 dias após o recebimento.Envio GarantidoAcompanhe cada passo da sua entrega em tempo real.Suporte HumanizadoNossa equipe de suporte está sempre pronta para te ouvir.Obrigada por escolher a Avante Lingerie. Cada detalhe do seu pedido foi pensado para proporcionar uma experiência elegante do início ao fim.CONTINUAR COMPRANDO"}
-
-## 2026-07-15 23:31:50.213Z click
-- element: {"tag":"main","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Pedido confirmado com sucesso ✨Seu pedido Avante já está sendo preparado com todo o nosso carinho e rigor de alta costura. Enviamos os detalhes completos para o seu e-mail.Pedido Confirmado15 de jul., 20:27Em separaçãoEnviadoEntregueItens do PedidoPED-002Cropped Regata Gola Alta BlingTamanho: M | Cor: Verde-MilitarQtd: 26R$ 777,40Resumo FinanceiroSubtotalR$ 517,40Frete (3 a 5 dias úteis)R$ 28,04Total PagoR$ 545,44Pago via Cartão de CréditoEndereço de EntregaSua ResidênciaRua Capitão Barbosa, 100 - CasaPraia da BandeiraRio de Janeiro - RJCEP: 21921-970Um presente para sua próxima experiênciaCada compra na Avante Lingerie destrava benefícios de alta costura. Utilize o cupom abaixo e garanta 10% OFF em seu próximo pedido.AVANTE10CopiarCupom válido por 48 horas.Sugestões do Nosso AteliêComplete sua experiência Avante-23%LingerieREF: AVL-CRO-4678Cropped Regata Gola Alta Bling5.0(128 avaliações)R$ 38,87R$ 29,90 PAGUE NO PIX 5% OFFATÊ 20% OFF PROGRESSIVOMais de 42 vendidos essa semana!Restam apenas 600 unidades em estoque!ADICIONAR À SACOLAPrecisa de ajuda?Falar no WhatsAppE-mail de Suportecontato@avantelingerie.com.brHorário de AtendimentoSeg a Sex: 09h às 18hGarantias AvanteCompra SeguraSeus dados estão 100% protegidos e criptografados.Troca FacilitadaPrimeira troca grátis em até 7 dias após o recebimento.Envio GarantidoAcompanhe cada passo da sua entrega em tempo real.Suporte HumanizadoNossa equipe de suporte está sempre pronta para te ouvir.Obrigada por escolher a Avante Lingerie. Cada detalhe do seu pedido foi pensado para proporcionar uma experiência elegante do início ao fim.CONTINUAR COMPRANDO"}
-
-## 2026-07-15 23:36:13.430Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:36:13.437Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:36:14.560Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:36:14.562Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:36:14.710Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:36:14.711Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:36:53.255Z load
-- url: http://localhost:3000/order-confirmation/u6r4srbejty1pnv?session_id=cs_test_a1KmDFstyVHY4G0IaBoSP32ywbBf9OcOVjiaGT0lYmwiQdxhyL66jR912B
-- title: Hostinger Horizons
-
-## 2026-07-15 23:36:54.453Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:36:54.455Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:37:16.031Z load
-- url: http://localhost:3000/order-confirmation/u6r4srbejty1pnv?session_id=cs_test_a1KmDFstyVHY4G0IaBoSP32ywbBf9OcOVjiaGT0lYmwiQdxhyL66jR912B
-- title: Hostinger Horizons
-
-## 2026-07-15 23:37:16.781Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:37:16.781Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:37:20.982Z load
-- url: http://localhost:3000/order-confirmation/u6r4srbejty1pnv?session_id=cs_test_a1KmDFstyVHY4G0IaBoSP32ywbBf9OcOVjiaGT0lYmwiQdxhyL66jR912B
-- title: Hostinger Horizons
-
-## 2026-07-15 23:37:21.687Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:37:21.687Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:39:05.641Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:39:05.654Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:39:06.414Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:39:06.414Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:39:06.468Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:39:06.469Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-15 23:40:03.818Z load
-- url: http://localhost:3000/admin/clientes
-- title: Hostinger Horizons
-
-## 2026-07-15 23:40:09.445Z click
-- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Pedidos"}
-
-## 2026-07-15 23:40:09.456Z navigate
-- url: http://localhost:3000/admin/pedidos
-- via: pushState
-
-## 2026-07-15 23:40:14.638Z click
-- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Clientes"}
-
-## 2026-07-15 23:40:14.639Z navigate
-- url: http://localhost:3000/admin/clientes
-- via: pushState
-
-## 2026-07-15 23:40:21.126Z click
-- element: {"tag":"button","role":"tab","ariaLabel":null,"name":null,"type":"button","id":"radix-:rj:-trigger-solicitacoes","placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Solicitações B2B1"}
-
-## 2026-07-15 23:40:27.306Z click
-- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Aprovar"}
-
-## 2026-07-15 23:40:31.612Z click
-- element: {"tag":"button","role":"tab","ariaLabel":null,"name":null,"type":"button","id":"radix-:rj:-trigger-clientes","placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Base de Clientes"}
-
-## 2026-07-15 23:40:33.494Z load
-- url: http://localhost:3000/admin/clientes
-- title: Hostinger Horizons
-
-## 2026-07-15 23:40:38.574Z click
-- element: {"tag":"button","role":"tab","ariaLabel":null,"name":null,"type":"button","id":"radix-:r3:-trigger-solicitacoes","placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Solicitações B2B"}
-
-## 2026-07-15 23:41:08.058Z click
-- element: {"tag":"button","role":"tab","ariaLabel":null,"name":null,"type":"button","id":"radix-:r3:-trigger-clientes","placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Base de Clientes"}
-
-## 2026-07-15 23:42:07.842Z click
-- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Pedidos"}
-
-## 2026-07-15 23:42:07.857Z navigate
-- url: http://localhost:3000/admin/pedidos
-- via: pushState
-
-## 2026-07-15 23:42:21.468Z click
-- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-07-15 23:42:21.475Z navigate
-- url: http://localhost:3000/admin/pedidos/u6r4srbejty1pnv
-- via: pushState
-
-## 2026-07-15 23:42:26.297Z click
-- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-07-15 23:42:26.299Z navigate
-- url: http://localhost:3000/admin/pedidos
-- via: pushState
-
-## 2026-07-15 23:42:28.447Z click
-- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-07-15 23:42:28.448Z navigate
-- url: http://localhost:3000/admin/pedidos/u6gab1dxrjjjt8s
-- via: pushState
-
-## 2026-07-15 23:42:31.997Z click
-- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-07-15 23:42:31.998Z navigate
-- url: http://localhost:3000/admin/pedidos
-- via: pushState
-
-## 2026-07-15 23:42:39.648Z click
-- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Clientes"}
-
-## 2026-07-15 23:42:39.666Z navigate
-- url: http://localhost:3000/admin/clientes
-- via: pushState
-
-## 2026-07-15 23:42:45.681Z click
-- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-07-15 23:42:45.683Z navigate
-- url: http://localhost:3000/admin/clientes/gyq9khwylozm36h
-- via: pushState
-
-## 2026-07-15 23:42:54.348Z click
-- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-07-15 23:42:54.349Z navigate
-- url: http://localhost:3000/admin/clientes
-- via: pushState
-
-## 2026-07-18 10:16:49.718Z load
-- url: http://192.168.1.162:3000/
-- title: Hostinger Horizons
-
-## 2026-07-18 10:16:59.721Z navigate
-- url: http://192.168.1.162:3000/
-- via: replaceState
-
-## 2026-07-18 10:17:00.384Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-18 10:17:00.388Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-18 10:17:00.444Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-18 10:17:00.445Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-18 10:17:00.458Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-18 10:17:00.459Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-18 10:17:00.475Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-18 10:17:00.475Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-20 21:51:00.826Z load
-- url: http://localhost:3000/
-- title: Hostinger Horizons
-
-## 2026-07-20 21:51:11.527Z navigate
-- url: http://localhost:3000/
-- via: replaceState
-
-## 2026-07-20 21:51:13.406Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-20 21:51:13.410Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-20 21:51:13.462Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-20 21:51:13.463Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-20 21:51:13.475Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-20 21:51:13.476Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-20 21:51:13.484Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-20 21:51:13.485Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-20 21:51:15.581Z click
-- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Aceitar & Continuar"}
-
-## 2026-07-20 21:51:23.913Z click
-- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-07-20 21:51:23.926Z navigate
-- url: http://localhost:3000/produto/7ex5coghj95r2ve
-- via: pushState
-
-## 2026-07-20 21:51:24.141Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-20 21:51:24.152Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-20 21:51:24.152Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-20 21:51:24.153Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-20 21:51:24.153Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-20 21:51:24.153Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-20 21:51:24.153Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-20 21:51:24.154Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-20 21:51:24.154Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-20 21:51:24.208Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-20 21:51:24.369Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-20 21:51:24.409Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-20 21:54:47.015Z load
-- url: http://localhost:3000/produto/7ex5coghj95r2ve
-- title: Hostinger Horizons
-
-## 2026-07-20 21:54:49.520Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-20 21:54:49.537Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-20 21:54:49.537Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-20 21:54:49.537Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-20 21:54:49.537Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-20 21:54:49.537Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-20 21:54:49.537Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-20 21:54:49.538Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-20 21:54:49.538Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-20 21:54:49.630Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-20 21:57:13.385Z load
-- url: http://localhost:3000/produto/7ex5coghj95r2ve
-- title: Hostinger Horizons
-
-## 2026-07-20 21:57:14.134Z click
-- element: {"tag":"html","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"\n\t\timport { injectIntoGlobalHook } from \"/@react-refresh\";\ninjectIntoGlobalHook(window);\nwindow.$RefreshReg$ = () => {};\nwindow.$RefreshSig$ = () => (type) => type;\n\n\t\t\n\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\tHostinger Horizons\n\t\tconst SITE_PAGES_ENDPOINT = '/__horizons/site-pages';\n\nconst OUTGOING_SITE_PAGES_MESSAGE = 'sitePages';\nconst INCOMING_REQUEST_SITE_PAGES_MESSAGE = 'request-site-pages';\n\nconst ALLOWED_PARENT_ORIGINS = [\n\t'https://horizons.hostinger.com',\n\t'https://horizons.hostinger.dev',\n\t'https://horizons-frontend-local.hostinger.dev',\n\t'http://localhost:4000',\n];\n\nfunction postSitePages(pages) {\n\tlet parentOrigin = window.location.ancestorOrigins?.[0];\n\tif (!parentOrigin && document.referrer) {\n\t\ttry {\n\t\t\tparentOrigin = new URL(document.referrer).origin;\n\t\t} catch {}\n\t}\n\tif (parentOrigin && ALLOWED_PARENT_ORIGINS.includes(parentOrigin)) {\n\t\twindow.parent.postMessage({ type: OUTGOING_SITE_PAGES_MESSAGE, payload: { pages } }, parentOrigin);\n\t}\n}\n\nasync function sendSitePagesToParent() {\n\tif (window.self === window.top) {\n\t\treturn;\n\t}\n\n\ttry {\n\t\tconst response = await fetch(SITE_PAGES_ENDPOINT);\n\t\tif (!response.ok) {\n\t\t\tthrow new Error(`HTTP ${response.status}`);\n\t\t}\n\t\tpostSitePages(await response.json());\n\t} catch (error) {\n\t\tconsole.error('[site-pages] Failed to send site pages to parent:', error);\n\t}\n}\n\nif (window.self !== window.top) {\n\twindow.addEventListener('load', sendSitePagesToParent);\n\twindow.addEventListener('message', (event) => {\n\t\tif (event.data?.type === INCOMING_REQUEST_SITE_PAGES_MESSAGE) {\n\t\t\tsendSitePagesToParent();\n\t\t}\n\t});\n}\n\n\t\t\n\t#root[data-edit-mode-enabled=\"true\"] {\n\t\tcursor: pointer;\n\t}\n\n\t#root[data-edit-mode-enabled=\"true\"] [data-edit-id] {\n\t\tcursor: pointer;\n\t\toutline: 2px dashed #357DF9;\n\t\toutline-offset: 2px;\n\t\tmin-height: 1em;\n\t\toverflow-wrap: anywhere;\n\t\tmin-width: 0;\n\t}\n\t#root[data-edit-mode-enabled=\"true\"] img[data-edit-id] {\n\t\toutline-offset: -2px;\n\t}\n\t#root[data-edit-mode-enabled=\"true\"] [data-edit-id]:hover {\n\t\tbackground-color: #357DF933;\n\t\to..."}
-
-## 2026-07-20 21:57:15.465Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-20 21:57:15.467Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-20 21:57:15.468Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-20 21:57:15.468Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-20 21:57:15.468Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-20 21:57:15.468Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-20 21:57:15.469Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-20 21:57:15.469Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-20 21:57:15.469Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-20 21:57:15.505Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-20 22:00:47.603Z load
-- url: http://localhost:3000/produto/7ex5coghj95r2ve
-- title: Hostinger Horizons
-
-## 2026-07-20 22:00:50.062Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-20 22:00:50.065Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-20 22:00:50.065Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-20 22:00:50.066Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-20 22:00:50.066Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-20 22:00:50.067Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-20 22:00:50.067Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-20 22:00:50.067Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-20 22:00:50.068Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-20 22:00:50.122Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-20 22:03:02.685Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-20 22:03:02.770Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-20 22:11:01.428Z load
-- url: http://localhost:3000/produto/7ex5coghj95r2ve
-- title: Hostinger Horizons
-
-## 2026-07-20 22:11:03.123Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-20 22:11:03.127Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-20 22:11:03.128Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-20 22:11:03.128Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-20 22:11:03.128Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-20 22:11:03.128Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-20 22:11:03.129Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-20 22:11:03.129Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-20 22:11:03.129Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-20 22:11:03.210Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-20 22:21:45.496Z load
-- url: http://localhost:3000/produto/7ex5coghj95r2ve
-- title: Hostinger Horizons
-
-## 2026-07-20 22:21:55.564Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-20 22:21:55.596Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-20 22:21:55.597Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-20 22:21:55.598Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-20 22:21:55.598Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-20 22:21:55.599Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-20 22:21:55.599Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-20 22:21:55.599Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-20 22:21:55.600Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-20 22:21:56.421Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-20 22:31:09.853Z load
-- url: http://localhost:3000/produto/7ex5coghj95r2ve
-- title: Hostinger Horizons
-
-## 2026-07-20 22:31:14.936Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-20 22:31:14.947Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-07-20 22:31:14.947Z console.warn
+2026-07-20 22:31:14.947Z console.warn
 - text: Please replace pb.files.getUrl() with pb.files.getURL()
 
 ## 2026-07-20 22:31:14.947Z console.warn
@@ -11097,4 +4541,1671 @@
 
 ## 2026-07-27 16:27:18.445Z click
 - element: {"tag":"div","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Oi! Eu sou a Lia, sua consultora aqui na Avante. Posso te ajudar a encontrar a peça perfeita hoje? ✨Oi Lia, boa tarde! Vc sabe que horas são agora?Boa tarde! ✨ \n\nQue alegria te receber por aqui! Honestamente, o relógio não é meu forte — meu tempo é todo dedicado a te ajudar a encontrar a lingerie perfeita! 😊\n\n**O que te traz à Avante hoje?** Você está procurando por algo específico ou quer explorar nossas novidades?Como funciona seus descontos em relação a barra de descontos progressivos?Que ótima pergunta! 😊\n\nPosso te dizer que trabalhamos com condições especiais de pagamento — por exemplo, o **PIX tem um desconto automático e exclusivo** aplicado direto no carrinho, sempre muito vantajoso! ✨\n\nPara os **descontos progressivos** especificamente, você poderia me contar um pouquinho mais sobre o que está buscando? Por exemplo:\n- Está pensando em comprar **várias peças** para você mesma?\n- Ou talvez esteja pensando em **revender**? 🛍️\n\nAssim consigo te orientar da melhor forma possível! 💕Para revenderAh, que **maravilha**! 🎉 Você veio ao lugar certo!\n\nTemos um programa de **Atacado B2B exclusivo** que é uma oportunidade de ouro! Você começa usando apenas seu CPF, e os lucros são **incríveis**. O melhor: basta atingir o valor mínimo no carrinho para que **todo o seu pedido ganhe desconto de fábrica** — quanto maior a compra, melhor a margem! 💰\n\nNossas parceiras de Elite ainda têm acesso ao **Portal Restrito** com fotos profissionais, vídeos e catálogos prontos para vender.\n\n**Clica na aba \"Quero Revender\"** aqui no site ou me diz: **qual é o seu perfil?** Você quer começar com uma pequena testagem ou já tem um valor em mente para o primeiro pedido? Assim consigo te guiar melhor! ✨Tenho um valor em menteQue animadora essa notícia! 💕✨\n\nMe conta, **qual valor você está pensando em investir no primeiro pedido?** \n\nAssim consigo te mostrar exatamente os benefícios e o desconto que você vai conquistar! 🛍️1000Excelente visão de negócio! 🎉💰\n\nPara te passar todos os de..."}
+
+## 2026-07-27 18:29:38.067Z load
+- url: http://localhost:3000/
+- title: Avante Lingerie | Oficial
+
+## 2026-07-27 18:29:47.271Z load
+- url: http://localhost:3000/
+- title: Avante Lingerie | Oficial
+
+## 2026-07-27 18:29:48.606Z navigate
+- url: http://localhost:3000/
+- via: replaceState
+
+## 2026-07-27 18:29:49.748Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-27 18:29:49.751Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-27 18:29:49.780Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-27 18:29:49.780Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-27 18:29:49.801Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-27 18:29:49.802Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-27 18:29:49.810Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-27 18:29:49.811Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-27 18:30:09.361Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Categorias"}
+
+## 2026-07-27 18:30:09.398Z navigate
+- url: http://localhost:3000/categoria/todas
+- via: pushState
+
+## 2026-07-27 18:30:09.587Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-27 18:30:09.589Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-27 18:30:15.485Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Cropped Regata Gola Alta Bling"}
+
+## 2026-07-27 18:30:15.488Z navigate
+- url: http://localhost:3000/produto/7ex5coghj95r2ve
+- via: pushState
+
+## 2026-07-27 18:30:15.617Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-27 18:30:15.623Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-27 18:30:15.623Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-27 18:30:15.623Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-27 18:30:15.623Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-27 18:30:15.623Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-27 18:30:15.623Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-27 18:30:15.623Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-27 18:30:15.624Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-27 18:30:15.660Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-27 18:30:16.598Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-27 18:30:16.646Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-27 18:30:16.668Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-27 18:30:16.680Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-27 18:30:16.692Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-27 18:30:24.815Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"","valueLength":0,"text":""}
+
+## 2026-07-27 18:30:25.015Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"","valueLength":0,"text":""}
+
+## 2026-07-27 18:30:43.887Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"Oi, boa tarde! Vcs trabalham com revenda?","valueLength":41,"text":""}
+
+## 2026-07-27 18:30:43.888Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"submit","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-07-27 18:30:43.893Z submit
+- action: http://localhost:3000/produto/7ex5coghj95r2ve
+- fields: [{"label":"Escreva sua dúvida...","type":"text","value":"Oi, boa tarde! Vcs trabalham com revenda?","length":41,"redacted":false},{"label":"[submit]","type":"submit","value":"","length":0,"redacted":false}]
+
+## 2026-07-27 18:30:43.904Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"Oi, boa tarde! Vcs trabalham com revenda?","valueLength":41,"text":""}
+
+## 2026-07-27 18:31:39.114Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Falar no WhatsApp"}
+
+## 2026-07-27 18:32:17.367Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-07-27 18:32:27.186Z click
+- element: {"tag":"button","role":null,"ariaLabel":"Selecionar cor vinho","name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-07-27 18:32:27.232Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-27 18:32:28.201Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"M"}
+
+## 2026-07-27 18:32:28.214Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-27 18:32:28.262Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-27 18:32:30.475Z click
+- element: {"tag":"button","role":null,"ariaLabel":"Selecionar cor Verde-Militar","name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-07-27 18:32:30.485Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-27 18:32:30.506Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-27 18:32:32.411Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"P"}
+
+## 2026-07-27 18:32:32.416Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-27 18:32:33.714Z click
+- element: {"tag":"button","role":null,"ariaLabel":"Aumentar quantidade","name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-07-27 18:32:33.726Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-27 18:32:33.897Z click
+- element: {"tag":"button","role":null,"ariaLabel":"Aumentar quantidade","name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-07-27 18:32:33.906Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-27 18:32:34.095Z click
+- element: {"tag":"button","role":null,"ariaLabel":"Aumentar quantidade","name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-07-27 18:32:34.104Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-27 18:32:34.279Z click
+- element: {"tag":"button","role":null,"ariaLabel":"Aumentar quantidade","name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-07-27 18:32:34.287Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-27 18:32:34.461Z click
+- element: {"tag":"button","role":null,"ariaLabel":"Aumentar quantidade","name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-07-27 18:32:34.467Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-27 18:32:34.690Z click
+- element: {"tag":"button","role":null,"ariaLabel":"Aumentar quantidade","name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-07-27 18:32:34.700Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-27 18:32:35.637Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Adicionar"}
+
+## 2026-07-27 18:32:35.670Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-27 19:42:33.465Z load
+- url: http://localhost:3000/
+- title: Avante Lingerie | Oficial
+
+## 2026-07-27 19:42:33.899Z navigate
+- url: http://localhost:3000/
+- via: replaceState
+
+## 2026-07-27 19:42:35.047Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-27 19:42:35.050Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-27 19:42:35.077Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-27 19:42:35.077Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-27 19:42:35.082Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-27 19:42:35.082Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-27 19:42:35.086Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-27 19:42:35.086Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-27 19:42:37.150Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Falar com a Lia ✨"}
+
+## 2026-07-27 19:42:38.552Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"","valueLength":0,"text":""}
+
+## 2026-07-27 19:42:38.764Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"","valueLength":0,"text":""}
+
+## 2026-07-27 19:42:40.118Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"Posso trocar uma calcinha se não servir?","valueLength":40,"text":""}
+
+## 2026-07-27 19:42:40.118Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"submit","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-07-27 19:42:40.122Z submit
+- action: http://localhost:3000/
+- fields: [{"label":"Escreva sua dúvida...","type":"text","value":"Posso trocar uma calcinha se não servir?","length":40,"redacted":false},{"label":"[submit]","type":"submit","value":"","length":0,"redacted":false}]
+
+## 2026-07-27 19:42:40.139Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"Posso trocar uma calcinha se não servir?","valueLength":40,"text":""}
+
+## 2026-07-27 19:43:39.891Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"","valueLength":0,"text":""}
+
+## 2026-07-27 19:43:40.075Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"","valueLength":0,"text":""}
+
+## 2026-07-27 19:44:10.386Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"Tá mas sendo cropped e eu me arrepender antes dos 7 dias posso trocar? E como devo proceder?","valueLength":92,"text":""}
+
+## 2026-07-27 19:44:10.389Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"submit","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-07-27 19:44:10.398Z submit
+- action: http://localhost:3000/
+- fields: [{"label":"Escreva sua dúvida...","type":"text","value":"Tá mas sendo cropped e eu me arrepender antes dos 7 dias posso trocar? E como devo proceder?","length":92,"redacted":false},{"label":"[submit]","type":"submit","value":"","length":0,"redacted":false}]
+
+## 2026-07-27 19:44:10.479Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"Tá mas sendo cropped e eu me arrepender antes dos 7 dias posso trocar? E como devo proceder?","valueLength":92,"text":""}
+
+## 2026-07-27 19:44:50.910Z click
+- element: {"tag":"div","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Oi! Eu sou a Lia, sua consultora aqui na Avante. Posso te ajudar a encontrar a peça perfeita hoje? ✨Posso trocar uma calcinha se não servir?Ótima pergunta! 💙\n\nAqui na Avante, a gente zela muito pela **saúde íntima das nossas clientes**, então **calcinhas não possuem troca por arrependimento ou tamanho** — apenas se houver um defeito de fábrica comprovado.\n\n**MAS deixa eu te dar um segredo:** Na dúvida de tamanho, a menor vira uma segunda pele (mais ajustada), e a maior dá mais conforto e cobertura. Qual é o seu tipo de preferência? \n\nSe você tiver dúvida na hora de escolher, posso ajudar com as medidas perfeitas! Qual tamanho você normalmente usa? ✨Tá mas sendo cropped e eu me arrepender antes dos 7 dias posso trocar? E como devo proceder?Perfeita pergunta! 💙\n\n**Sim, você pode trocar!** Cropped é uma **peça de cima** (não é calcinha), então entra na nossa política normal de **7 dias para troca por arrependimento**.\n\n**Como proceder:**\n1. A peça deve estar **intacta, sem sinais de uso**\n2. **Sem perfumes ou desodorizantes** (queremos preservar a qualidade)\n3. **Com a etiqueta fixada** na peça\n4. Entre em contato com nosso atendimento no prazo de 7 dias\n\nVocê receberá um link de rastreio assim que a gente receber de volta, e a nova peça sai rapidinho! 🚀\n\n**Agora me diz:** Qual cropped você está pensando em levar? Temos modelos incríveis com renda francesa antialérgica e forro 100% algodão nobre — o \"Conforto Real\" que a gente promete! Qual cor chama mais seu olho? ✨"}
+
+## 2026-07-27 19:47:04.193Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"","valueLength":0,"text":""}
+
+## 2026-07-27 19:47:04.345Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"","valueLength":0,"text":""}
+
+## 2026-07-27 19:47:07.216Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"Quero comprar para revender, como funciona?","valueLength":43,"text":""}
+
+## 2026-07-27 19:47:07.216Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"submit","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-07-27 19:47:07.221Z submit
+- action: http://localhost:3000/
+- fields: [{"label":"Escreva sua dúvida...","type":"text","value":"Quero comprar para revender, como funciona?","length":43,"redacted":false},{"label":"[submit]","type":"submit","value":"","length":0,"redacted":false}]
+
+## 2026-07-27 19:47:07.245Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"Quero comprar para revender, como funciona?","valueLength":43,"text":""}
+
+## 2026-07-27 19:47:24.911Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"","valueLength":0,"text":""}
+
+## 2026-07-27 19:47:25.113Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"","valueLength":0,"text":""}
+
+## 2026-07-27 19:48:10.183Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"Qual é o cep de vcs?","valueLength":20,"text":""}
+
+## 2026-07-27 19:48:10.186Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"Qual é o cep de vcs?","valueLength":20,"text":""}
+
+## 2026-07-27 19:48:13.168Z load
+- url: http://localhost:3000/quero-revender
+- title: Avante Lingerie | Oficial
+
+## 2026-07-27 19:48:14.136Z navigate
+- url: http://localhost:3000/quero-revender
+- via: replaceState
+
+## 2026-07-27 19:48:20.955Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"submit","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-07-27 19:48:20.964Z submit
+- action: http://localhost:3000/
+- fields: [{"label":"Escreva sua dúvida...","type":"text","value":"Qual é o cep de vcs?","length":20,"redacted":false},{"label":"[submit]","type":"submit","value":"","length":0,"redacted":false}]
+
+## 2026-07-27 19:48:59.091Z click
+- element: {"tag":"div","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Lia | Consultora AvanteOnlineOi! Eu sou a Lia, sua consultora aqui na Avante. Posso te ajudar a encontrar a peça perfeita hoje? ✨Posso trocar uma calcinha se não servir?Ótima pergunta! 💙\n\nAqui na Avante, a gente zela muito pela **saúde íntima das nossas clientes**, então **calcinhas não possuem troca por arrependimento ou tamanho** — apenas se houver um defeito de fábrica comprovado.\n\n**MAS deixa eu te dar um segredo:** Na dúvida de tamanho, a menor vira uma segunda pele (mais ajustada), e a maior dá mais conforto e cobertura. Qual é o seu tipo de preferência? \n\nSe você tiver dúvida na hora de escolher, posso ajudar com as medidas perfeitas! Qual tamanho você normalmente usa? ✨Tá mas sendo cropped e eu me arrepender antes dos 7 dias posso trocar? E como devo proceder?Perfeita pergunta! 💙\n\n**Sim, você pode trocar!** Cropped é uma **peça de cima** (não é calcinha), então entra na nossa política normal de **7 dias para troca por arrependimento**.\n\n**Como proceder:**\n1. A peça deve estar **intacta, sem sinais de uso**\n2. **Sem perfumes ou desodorizantes** (queremos preservar a qualidade)\n3. **Com a etiqueta fixada** na peça\n4. Entre em contato com nosso atendimento no prazo de 7 dias\n\nVocê receberá um link de rastreio assim que a gente receber de volta, e a nova peça sai rapidinho! 🚀\n\n**Agora me diz:** Qual cropped você está pensando em levar? Temos modelos incríveis com renda francesa antialérgica e forro 100% algodão nobre — o \"Conforto Real\" que a gente promete! Qual cor chama mais seu olho? ✨Quero comprar para revender, como funciona?Que notícia INCRÍVEL! 🎉 Você escolheu a melhor marca para crescer junto!\n\n**Por que revender Avante é um negócio de ouro?** ✨\n- 💰 **Lucro maravilhoso** com desconto de fábrica direto no seu pedido\n- 📦 Você começa usando **apenas o seu CPF** — sem burocracia!\n- 🖼️ Acesso ao **Portal Restrito de Revendedoras Elite** com fotos profissionais, vídeos e catálogos prontos para vender\n- 🚚 **Vantagens exclusivas de frete** para revendedo..."}
+
+## 2026-07-28 12:00:55.372Z load
+- url: http://localhost:3000/
+- title: Avante Lingerie | Oficial
+
+## 2026-07-28 12:01:01.782Z navigate
+- url: http://localhost:3000/
+- via: replaceState
+
+## 2026-07-28 12:01:03.721Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 12:01:03.727Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 12:01:03.847Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 12:01:03.848Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 12:01:03.873Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 12:01:03.873Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 12:01:03.890Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 12:01:03.890Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 12:01:29.633Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"","valueLength":0,"text":""}
+
+## 2026-07-28 12:01:29.836Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"","valueLength":0,"text":""}
+
+## 2026-07-28 12:01:38.397Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"Brinque com ela! Pergunte qual o CNPJ da empresa, pergunte se você pode trocar um sutiã que não serviu (e como fica o frete) e fale que você quer fazer uma comprinha de 500 reais para ver se ela joga os gatilhos de atacado!","valueLength":223,"text":""}
+
+## 2026-07-28 12:01:47.414Z click
+- element: {"tag":"div","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"HomeMais VendidosCategoriasCroppedPijamaContatoQuero ser RevendedoraEntrar BuscarHomeMais VendidosCategoriasCroppedPijamaContatoQuero ser Revendedora Entrar / Cadastro Coleção Ouro PremiumA Joia que Abraça o Seu CorpoDescubra a harmonia perfeita entre sustentação absoluta, costuras inteligentes e a elegância atemporal que você merece sentir todos os dias.Explorar ColeçãoQuero RevenderCompra 100% SeguraSeus dados pessoais e de pagamento totalmente blindados.Troca SimplificadaArrependimento em 7 dias, ou defeitos de fábrica em 30 dias.Envio Ultra DiscretoCaixa premium lacrada, perfumada e sem marcas externas.Padrão de QualidadeRendas francesas e tecidos tecnológicos hipoalergênicos.Suporte DedicadoNossa equipe VIP disponível para te ajudar no pós-venda.Compra 100% SeguraSeus dados pessoais e de pagamento totalmente blindados.Troca SimplificadaArrependimento em 7 dias, ou defeitos de fábrica em 30 dias.Envio Ultra DiscretoCaixa premium lacrada, perfumada e sem marcas externas.Padrão de QualidadeRendas francesas e tecidos tecnológicos hipoalergênicos.Suporte DedicadoNossa equipe VIP disponível para te ajudar no pós-venda.O Closet de LuxoNossas CategoriasToque no tecido, escolha o caimento ideal e explore o melhor de Avante.ConjuntosCalcinhasSutiãsModeladoresKitsSensuaisConsagrados por MilharesMais Vendidos da AvanteOs modelos favoritos eleitos por nossas clientes por seu caimento esculpido e durabilidade.-23%CroppedREF: AVL-CRO-4678Cropped Regata Gola Alta Bling5.0(128 avaliações)R$ 38,87R$ 29,90 PAGUE NO PIX 5% OFFATÉ 20% OFF PROGRESSIVOMais de 42 vendidos essa semana!Restam apenas 600 unidades em estoque!ADICIONAR À SACOLA-23%CONJUNTOSREF: MAIS-VEConjunto em Microfibra Cropped Regata Gola Alta4.8(124 avaliações)R$ 25,87R$ 19,90 PAGUE NO PIX 5% OFFATÉ 20% OFF PROGRESSIVOMais de 42 vendidos essa semana!Restam apenas 5 unidades em estoque!ADICIONAR À SACOLA-23%CONJUNTOSREF: MAIS-VEConjunto em Microfibra Cropped Regata Gola Alta4.8(124 avaliações)R$ 25,87R$ 19,90 PAGUE NO..."}
+
+## 2026-07-28 12:01:51.536Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"Qual o CNPJ da empresa?","valueLength":23,"text":""}
+
+## 2026-07-28 12:01:51.538Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"submit","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-07-28 12:01:51.544Z submit
+- action: http://localhost:3000/
+- fields: [{"label":"Escreva sua dúvida...","type":"text","value":"Qual o CNPJ da empresa?","length":23,"redacted":false},{"label":"[submit]","type":"submit","value":"","length":0,"redacted":false}]
+
+## 2026-07-28 12:01:51.555Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"Qual o CNPJ da empresa?","valueLength":23,"text":""}
+
+## 2026-07-28 12:02:14.887Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"","valueLength":0,"text":""}
+
+## 2026-07-28 12:02:15.080Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"","valueLength":0,"text":""}
+
+## 2026-07-28 12:02:17.919Z click
+- element: {"tag":"div","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"HomeMais VendidosCategoriasCroppedPijamaContatoQuero ser RevendedoraEntrar BuscarHomeMais VendidosCategoriasCroppedPijamaContatoQuero ser Revendedora Entrar / Cadastro Coleção Ouro PremiumA Joia que Abraça o Seu CorpoDescubra a harmonia perfeita entre sustentação absoluta, costuras inteligentes e a elegância atemporal que você merece sentir todos os dias.Explorar ColeçãoQuero RevenderCompra 100% SeguraSeus dados pessoais e de pagamento totalmente blindados.Troca SimplificadaArrependimento em 7 dias, ou defeitos de fábrica em 30 dias.Envio Ultra DiscretoCaixa premium lacrada, perfumada e sem marcas externas.Padrão de QualidadeRendas francesas e tecidos tecnológicos hipoalergênicos.Suporte DedicadoNossa equipe VIP disponível para te ajudar no pós-venda.Compra 100% SeguraSeus dados pessoais e de pagamento totalmente blindados.Troca SimplificadaArrependimento em 7 dias, ou defeitos de fábrica em 30 dias.Envio Ultra DiscretoCaixa premium lacrada, perfumada e sem marcas externas.Padrão de QualidadeRendas francesas e tecidos tecnológicos hipoalergênicos.Suporte DedicadoNossa equipe VIP disponível para te ajudar no pós-venda.O Closet de LuxoNossas CategoriasToque no tecido, escolha o caimento ideal e explore o melhor de Avante.ConjuntosCalcinhasSutiãsModeladoresKitsSensuaisConsagrados por MilharesMais Vendidos da AvanteOs modelos favoritos eleitos por nossas clientes por seu caimento esculpido e durabilidade.-23%CroppedREF: AVL-CRO-4678Cropped Regata Gola Alta Bling5.0(128 avaliações)R$ 38,87R$ 29,90 PAGUE NO PIX 5% OFFATÉ 20% OFF PROGRESSIVOMais de 42 vendidos essa semana!Restam apenas 600 unidades em estoque!ADICIONAR À SACOLA-23%CONJUNTOSREF: MAIS-VEConjunto em Microfibra Cropped Regata Gola Alta4.8(124 avaliações)R$ 25,87R$ 19,90 PAGUE NO PIX 5% OFFATÉ 20% OFF PROGRESSIVOMais de 42 vendidos essa semana!Restam apenas 5 unidades em estoque!ADICIONAR À SACOLA-23%CONJUNTOSREF: MAIS-VEConjunto em Microfibra Cropped Regata Gola Alta4.8(124 avaliações)R$ 25,87R$ 19,90 PAGUE NO..."}
+
+## 2026-07-28 12:02:19.045Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"pergunte se você pode trocar um sutiã que não serviu (e como fica o frete) e fale que você quer fazer uma comprinha de 500 reais para ver se ela joga os gatilhos de atacado!","valueLength":173,"text":""}
+
+## 2026-07-28 12:02:24.163Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"pergunte se você pode trocar um sutiã que não serviu (e como fica o frete) e fale que você quer fazer uma comprinha de 500 reais para ver se ela joga os gatilhos de atacado!","valueLength":173,"text":""}
+
+## 2026-07-28 12:02:44.642Z click
+- element: {"tag":"form","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-07-28 12:02:54.648Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"Pode trocar um sutiã que não serviu (e como fica o frete) ?","valueLength":59,"text":""}
+
+## 2026-07-28 12:02:54.649Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"submit","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-07-28 12:02:54.652Z submit
+- action: http://localhost:3000/
+- fields: [{"label":"Escreva sua dúvida...","type":"text","value":"Pode trocar um sutiã que não serviu (e como fica o frete) ?","length":59,"redacted":false},{"label":"[submit]","type":"submit","value":"","length":0,"redacted":false}]
+
+## 2026-07-28 12:02:54.667Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"Pode trocar um sutiã que não serviu (e como fica o frete) ?","valueLength":59,"text":""}
+
+## 2026-07-28 12:04:05.595Z click
+- element: {"tag":"div","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Sim, pode trocar sim! 🥰 Aqui está o resumo rápido:\n\n**✅ Troca de Sutiã por Tamanho**\n- Prazo: **7 dias corridos** após o recebimento\n- A peça deve estar **intacta, sem uso, sem perfume e com etiqueta**\n\n**📦 E o frete?**\n- Por ser troca por arrependimento/tamanho, o **frete de devolução fica por conta da cliente** — tudo bem combinado? 😊\n\n---\n\n💡 **Dica para não errar o tamanho da próxima vez:**\nNa dúvida entre dois tamanhos, **sempre vá para o maior** — nossos sutiãs abraçam as curvas com até 25% de elasticidade nas rendas!\n\nNossa tabela rápida:\n| Tam | Medida |\n|-----|--------|\n| P | 38-40 |\n| M | 42 |\n| G | 44 |\n| GG | 46 |\n\n---\n\nQuer que eu te ajude a encontrar o tamanho certinho antes de finalizar o pedido? Me conta suas medidas e eu gar"}
+
+## 2026-07-28 12:04:07.790Z click
+- element: {"tag":"div","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Sim, pode trocar sim! 🥰 Aqui está o resumo rápido:\n\n**✅ Troca de Sutiã por Tamanho**\n- Prazo: **7 dias corridos** após o recebimento\n- A peça deve estar **intacta, sem uso, sem perfume e com etiqueta**\n\n**📦 E o frete?**\n- Por ser troca por arrependimento/tamanho, o **frete de devolução fica por conta da cliente** — tudo bem combinado? 😊\n\n---\n\n💡 **Dica para não errar o tamanho da próxima vez:**\nNa dúvida entre dois tamanhos, **sempre vá para o maior** — nossos sutiãs abraçam as curvas com até 25% de elasticidade nas rendas!\n\nNossa tabela rápida:\n| Tam | Medida |\n|-----|--------|\n| P | 38-40 |\n| M | 42 |\n| G | 44 |\n| GG | 46 |\n\n---\n\nQuer que eu te ajude a encontrar o tamanho certinho antes de finalizar o pedido? Me conta suas medidas e eu gar"}
+
+## 2026-07-28 12:04:16.373Z click
+- element: {"tag":"div","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Espera! Esqueceu alguma peça? Posso te mostrar nossas mais vendidas antes de você ir. 💖Qual o CNPJ da empresa?O CNPJ da Avante Lingerie é **54.615.037/0001-53** ✨\n\nSomos a Avante Indústria e Comércio de Vestuário LTDA, fabricantes próprios aqui em Nova Friburgo/RJ, a verdadeira capital da lingerie!\n\nPosso ajudá-la com algo mais? Está procurando por alguma peça especial ou quer conhecer nosso programa de revenda? 💕Pode trocar um sutiã que não serviu (e como fica o frete) ?Sim, pode trocar sim! 🥰 Aqui está o resumo rápido:\n\n**✅ Troca de Sutiã por Tamanho**\n- Prazo: **7 dias corridos** após o recebimento\n- A peça deve estar **intacta, sem uso, sem perfume e com etiqueta**\n\n**📦 E o frete?**\n- Por ser troca por arrependimento/tamanho, o **frete de devolução fica por conta da cliente** — tudo bem combinado? 😊\n\n---\n\n💡 **Dica para não errar o tamanho da próxima vez:**\nNa dúvida entre dois tamanhos, **sempre vá para o maior** — nossos sutiãs abraçam as curvas com até 25% de elasticidade nas rendas!\n\nNossa tabela rápida:\n| Tam | Medida |\n|-----|--------|\n| P | 38-40 |\n| M | 42 |\n| G | 44 |\n| GG | 46 |\n\n---\n\nQuer que eu te ajude a encontrar o tamanho certinho antes de finalizar o pedido? Me conta suas medidas e eu gar"}
+
+## 2026-07-28 12:04:22.427Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"","valueLength":0,"text":""}
+
+## 2026-07-28 12:04:22.615Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"","valueLength":0,"text":""}
+
+## 2026-07-28 12:04:38.239Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"Quero comprar cropped pode me ajudar?","valueLength":37,"text":""}
+
+## 2026-07-28 12:04:38.240Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"submit","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-07-28 12:04:38.243Z submit
+- action: http://localhost:3000/
+- fields: [{"label":"Escreva sua dúvida...","type":"text","value":"Quero comprar cropped pode me ajudar?","length":37,"redacted":false},{"label":"[submit]","type":"submit","value":"","length":0,"redacted":false}]
+
+## 2026-07-28 12:04:38.259Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"Quero comprar cropped pode me ajudar?","valueLength":37,"text":""}
+
+## 2026-07-28 12:05:00.507Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"","valueLength":0,"text":""}
+
+## 2026-07-28 12:05:00.737Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"","valueLength":0,"text":""}
+
+## 2026-07-28 12:05:02.021Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"P","valueLength":1,"text":""}
+
+## 2026-07-28 12:05:02.022Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"submit","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-07-28 12:05:02.022Z submit
+- action: http://localhost:3000/
+- fields: [{"label":"Escreva sua dúvida...","type":"text","value":"P","length":1,"redacted":false},{"label":"[submit]","type":"submit","value":"","length":0,"redacted":false}]
+
+## 2026-07-28 12:05:02.030Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"P","valueLength":1,"text":""}
+
+## 2026-07-28 12:05:23.823Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"","valueLength":0,"text":""}
+
+## 2026-07-28 12:05:24.044Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"","valueLength":0,"text":""}
+
+## 2026-07-28 12:05:49.642Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"sem bojo e liso","valueLength":15,"text":""}
+
+## 2026-07-28 12:05:49.643Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"sem bojo e liso","valueLength":15,"text":""}
+
+## 2026-07-28 12:05:49.867Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"submit","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-07-28 12:05:49.872Z submit
+- action: http://localhost:3000/
+- fields: [{"label":"Escreva sua dúvida...","type":"text","value":"sem bojo e liso","length":15,"redacted":false},{"label":"[submit]","type":"submit","value":"","length":0,"redacted":false}]
+
+## 2026-07-28 12:06:16.055Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"","valueLength":0,"text":""}
+
+## 2026-07-28 12:06:16.280Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"","valueLength":0,"text":""}
+
+## 2026-07-28 12:06:22.538Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"verde-militar","valueLength":13,"text":""}
+
+## 2026-07-28 12:06:22.539Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"submit","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-07-28 12:06:22.544Z submit
+- action: http://localhost:3000/
+- fields: [{"label":"Escreva sua dúvida...","type":"text","value":"verde-militar","length":13,"redacted":false},{"label":"[submit]","type":"submit","value":"","length":0,"redacted":false}]
+
+## 2026-07-28 12:06:22.553Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"verde-militar","valueLength":13,"text":""}
+
+## 2026-07-28 12:07:02.268Z click
+- element: {"tag":"div","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Espera! Esqueceu alguma peça? Posso te mostrar nossas mais vendidas antes de você ir. 💖Qual o CNPJ da empresa?O CNPJ da Avante Lingerie é **54.615.037/0001-53** ✨\n\nSomos a Avante Indústria e Comércio de Vestuário LTDA, fabricantes próprios aqui em Nova Friburgo/RJ, a verdadeira capital da lingerie!\n\nPosso ajudá-la com algo mais? Está procurando por alguma peça especial ou quer conhecer nosso programa de revenda? 💕Pode trocar um sutiã que não serviu (e como fica o frete) ?Sim, pode trocar sim! 🥰 Aqui está o resumo rápido:\n\n**✅ Troca de Sutiã por Tamanho**\n- Prazo: **7 dias corridos** após o recebimento\n- A peça deve estar **intacta, sem uso, sem perfume e com etiqueta**\n\n**📦 E o frete?**\n- Por ser troca por arrependimento/tamanho, o **frete de devolução fica por conta da cliente** — tudo bem combinado? 😊\n\n---\n\n💡 **Dica para não errar o tamanho da próxima vez:**\nNa dúvida entre dois tamanhos, **sempre vá para o maior** — nossos sutiãs abraçam as curvas com até 25% de elasticidade nas rendas!\n\nNossa tabela rápida:\n| Tam | Medida |\n|-----|--------|\n| P | 38-40 |\n| M | 42 |\n| G | 44 |\n| GG | 46 |\n\n---\n\nQuer que eu te ajude a encontrar o tamanho certinho antes de finalizar o pedido? Me conta suas medidas e eu garQuero comprar cropped pode me ajudar?Que escolha incrível! 😍 Os croppeds da Avante são uma paixão — conforto real com aquele toque de luxo que você merece!\n\nPara te indicar a peça perfeita, me conta rapidinho:\n\n**1️⃣ Qual o seu tamanho?** (P, M, G ou GG)\n**2️⃣ Prefere com bojo ou sem bojo?**\n**3️⃣ Tem preferência de cor?** (básico, colorido, rendado...)\n\n---\n\n💡 **Curiosidade:** Nossos croppeds são peças de cima e entram na **política normal de trocas** (7 dias) — então você compra com total segurança! ✨\n\nMe conta esses detalhes e já te mostro as opções mais lindas do nosso catálogo! 🛍️💕PÓtimo, tamanho P! 🎉\n\nSó mais duas perguntinhas rápidas para encontrar o cropped **perfeito** para você:\n\n**1️⃣ Prefere com bojo ou sem bojo?**\n- 🌸 **Com bojo** — dá um ..."}
+
+## 2026-07-28 12:07:05.629Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Croppeds"}
+
+## 2026-07-28 12:07:06.774Z load
+- url: http://localhost:3000/categoria/croppeds
+- title: Avante Lingerie | Oficial
+
+## 2026-07-28 12:07:07.429Z navigate
+- url: http://localhost:3000/categoria/croppeds
+- via: replaceState
+
+## 2026-07-28 12:17:25.109Z load
+- url: http://localhost:3000/
+- title: Avante Lingerie | Oficial
+
+## 2026-07-28 12:17:25.726Z navigate
+- url: http://localhost:3000/
+- via: replaceState
+
+## 2026-07-28 12:17:26.788Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 12:17:26.791Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 12:17:26.839Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 12:17:26.840Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 12:17:26.845Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 12:17:26.845Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 12:17:26.851Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 12:17:26.851Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 12:17:32.380Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Falar com a Lia ✨"}
+
+## 2026-07-28 12:17:34.184Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"","valueLength":0,"text":""}
+
+## 2026-07-28 12:17:34.405Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"","valueLength":0,"text":""}
+
+## 2026-07-28 12:17:43.852Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"Bom dia!","valueLength":8,"text":""}
+
+## 2026-07-28 12:17:43.852Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"submit","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-07-28 12:17:43.854Z submit
+- action: http://localhost:3000/
+- fields: [{"label":"Escreva sua dúvida...","type":"text","value":"Bom dia!","length":8,"redacted":false},{"label":"[submit]","type":"submit","value":"","length":0,"redacted":false}]
+
+## 2026-07-28 12:17:43.857Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"Bom dia!","valueLength":8,"text":""}
+
+## 2026-07-28 12:18:19.349Z click
+- element: {"tag":"div","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Bom dia, querida! ☀️ Bem-vinda à Avante Lingerie! \n\nSou a Lia, sua consultora de vendas, e estou aqui para te ajudar a encontrar as peças que vão fazer você se sentir incrível! \n\nAqui na Avante, a gente trabalha com o **Conforto Real**: forro 100% algodão nobre, rendas francesas antialérgicas e zero irritação. Somos fabricantes próprios aqui em Nova Friburgo, a capital nacional da lingerie! ✨\n\n**Está procurando por algo específico ou quer descobrir nossas novidades?** 💕"}
+
+## 2026-07-28 12:25:21.053Z load
+- url: http://localhost:3000/
+- title: Avante Lingerie | Oficial
+
+## 2026-07-28 12:25:22.520Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 12:25:22.525Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 12:25:22.540Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 12:25:22.540Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 12:25:22.545Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 12:25:22.545Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 12:25:22.549Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 12:25:22.549Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 12:25:26.081Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Falar com a Lia ✨"}
+
+## 2026-07-28 12:25:46.805Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"","valueLength":0,"text":""}
+
+## 2026-07-28 12:25:47.018Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"","valueLength":0,"text":""}
+
+## 2026-07-28 12:25:51.013Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"Bom dia","valueLength":7,"text":""}
+
+## 2026-07-28 12:25:51.013Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"submit","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-07-28 12:25:51.022Z submit
+- action: http://localhost:3000/
+- fields: [{"label":"Escreva sua dúvida...","type":"text","value":"Bom dia","length":7,"redacted":false},{"label":"[submit]","type":"submit","value":"","length":0,"redacted":false}]
+
+## 2026-07-28 12:25:51.042Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"Bom dia","valueLength":7,"text":""}
+
+## 2026-07-28 12:26:29.906Z click
+- element: {"tag":"div","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Lia | Consultora AvanteOnlineOi! Eu sou a Lia, sua consultora aqui na Avante. Posso te ajudar a encontrar a peça perfeita hoje? ✨Bom dia!Bom dia, querida! ☀️ Bem-vinda à Avante Lingerie! \n\nSou a Lia, sua consultora de vendas, e estou aqui para te ajudar a encontrar as peças que vão fazer você se sentir incrível! \n\nAqui na Avante, a gente trabalha com o **Conforto Real**: forro 100% algodão nobre, rendas francesas antialérgicas e zero irritação. Somos fabricantes próprios aqui em Nova Friburgo, a capital nacional da lingerie! ✨\n\n**Está procurando por algo específico ou quer descobrir nossas novidades?** 💕Bom diaBom dia! 🌸\n\nQue alegria te receber por aqui! Sou a **Lia**, sua consultora da Avante Lingerie.\n\nEstou pronta para te ajudar a encontrar aquela lingerie perfeita que te faz se sentir confiante e confortável! A gente trabalha com qualidade premium: rendas francesas macias, algodão nobre e design impecável.\n\n**O que te traz por aqui hoje? Está procurando um sutiã, calcinha, ou quer explorar nossas coleções?** 💕✨"}
+
+## 2026-07-28 12:34:12.306Z load
+- url: http://localhost:3000/
+- title: Avante Lingerie | Oficial
+
+## 2026-07-28 12:34:12.885Z navigate
+- url: http://localhost:3000/
+- via: replaceState
+
+## 2026-07-28 12:34:13.762Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 12:34:13.764Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 12:34:13.796Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 12:34:13.797Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 12:34:13.801Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 12:34:13.802Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 12:34:13.806Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 12:34:13.806Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 12:34:17.061Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Falar com a Lia ✨"}
+
+## 2026-07-28 12:34:18.580Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"","valueLength":0,"text":""}
+
+## 2026-07-28 12:34:18.800Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"","valueLength":0,"text":""}
+
+## 2026-07-28 12:34:24.049Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"Oi. Bom dia!","valueLength":12,"text":""}
+
+## 2026-07-28 12:34:24.050Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"submit","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-07-28 12:34:24.053Z submit
+- action: http://localhost:3000/
+- fields: [{"label":"Escreva sua dúvida...","type":"text","value":"Oi. Bom dia!","length":12,"redacted":false},{"label":"[submit]","type":"submit","value":"","length":0,"redacted":false}]
+
+## 2026-07-28 12:34:24.058Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"Oi. Bom dia!","valueLength":12,"text":""}
+
+## 2026-07-28 12:34:56.086Z click
+- element: {"tag":"div","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Oi! Eu sou a Lia, sua consultora aqui na Avante. Posso te ajudar a encontrar a peça perfeita hoje? ✨Oi. Bom dia!Bom dia! 🌸 Que alegria receber você por aqui!\n\nEu sou a **Lia**, sua consultora de vendas da **Avante Lingerie** — a marca que nasceu aqui em Nova Friburgo, a Capital Nacional da Lingerie! \n\nAqui a gente oferece o verdadeiro **\"Conforto Real\"**: peças em alta costura íntima com forro 100% algodão nobre, rendas francesas antialérgicas e metais sem níquel. Tudo pensado para você se sentir absolutamente linda e confortável! ✨\n\n**O que traz você até a gente hoje?** Está procurando um sutiã perfeito, um conjunto especial, ou quer conhecer melhor nossa coleção? 💕"}
+
+## 2026-07-28 12:45:39.144Z load
+- url: http://localhost:3000/
+- title: Avante Lingerie | Oficial
+
+## 2026-07-28 12:45:40.436Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 12:45:40.442Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 12:45:40.464Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 12:45:40.464Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 12:45:40.472Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 12:45:40.472Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 12:45:40.478Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 12:45:40.478Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 12:45:45.196Z load
+- url: http://localhost:3000/
+- title: Avante Lingerie | Oficial
+
+## 2026-07-28 12:45:45.958Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 12:45:45.960Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 12:45:45.979Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 12:45:45.979Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 12:45:45.983Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 12:45:45.984Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 12:45:45.989Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 12:45:45.990Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 12:45:48.009Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Falar com a Lia ✨"}
+
+## 2026-07-28 12:45:50.792Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-07-28 12:45:53.081Z load
+- url: http://localhost:3000/
+- title: Avante Lingerie | Oficial
+
+## 2026-07-28 12:45:53.775Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 12:45:53.776Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 12:45:53.794Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 12:45:53.795Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 12:45:53.798Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 12:45:53.798Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 12:45:53.805Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 12:45:53.805Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 12:45:55.728Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Falar com a Lia ✨"}
+
+## 2026-07-28 12:46:01.808Z click
+- element: {"tag":"button","role":null,"ariaLabel":"Cart","name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"7R$ 209,30"}
+
+## 2026-07-28 12:46:01.825Z navigate
+- url: http://localhost:3000/cart
+- via: pushState
+
+## 2026-07-28 12:46:01.977Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 12:46:01.978Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 12:46:01.982Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 12:46:01.985Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 12:46:04.113Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-07-28 12:46:07.838Z click
+- element: {"tag":"button","role":null,"ariaLabel":"Remover item","name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-07-28 12:46:31.191Z load
+- url: http://localhost:3000/cart
+- title: Avante Lingerie | Oficial
+
+## 2026-07-28 12:46:34.986Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Home"}
+
+## 2026-07-28 12:46:34.991Z navigate
+- url: http://localhost:3000/
+- via: pushState
+
+## 2026-07-28 12:46:35.212Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 12:46:35.214Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 12:46:35.226Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 12:46:35.226Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 12:46:35.231Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 12:46:35.231Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 12:46:35.238Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 12:46:35.239Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 12:46:37.248Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Aceitar & Continuar"}
+
+## 2026-07-28 12:46:38.522Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Falar com a Lia ✨"}
+
+## 2026-07-28 12:46:40.455Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"","valueLength":0,"text":""}
+
+## 2026-07-28 12:46:40.672Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"","valueLength":0,"text":""}
+
+## 2026-07-28 12:46:42.678Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"Bom dia","valueLength":7,"text":""}
+
+## 2026-07-28 12:46:42.679Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"submit","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-07-28 12:46:42.684Z submit
+- action: http://localhost:3000/
+- fields: [{"label":"Escreva sua dúvida...","type":"text","value":"Bom dia","length":7,"redacted":false},{"label":"[submit]","type":"submit","value":"","length":0,"redacted":false}]
+
+## 2026-07-28 12:46:42.689Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"Bom dia","valueLength":7,"text":""}
+
+## 2026-07-28 12:47:55.445Z load
+- url: http://localhost:3000/
+- title: Avante Lingerie | Oficial
+
+## 2026-07-28 12:47:56.111Z navigate
+- url: http://localhost:3000/
+- via: replaceState
+
+## 2026-07-28 12:47:57.289Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 12:47:57.293Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 12:47:57.323Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 12:47:57.324Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 12:47:57.336Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 12:47:57.336Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 12:47:57.342Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 12:47:57.342Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 12:48:00.376Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Falar com a Lia ✨"}
+
+## 2026-07-28 12:48:01.857Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"","valueLength":0,"text":""}
+
+## 2026-07-28 12:48:02.084Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"","valueLength":0,"text":""}
+
+## 2026-07-28 12:48:04.160Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"bom dia","valueLength":7,"text":""}
+
+## 2026-07-28 12:48:04.160Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"submit","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-07-28 12:48:04.165Z submit
+- action: http://localhost:3000/
+- fields: [{"label":"Escreva sua dúvida...","type":"text","value":"bom dia","length":7,"redacted":false},{"label":"[submit]","type":"submit","value":"","length":0,"redacted":false}]
+
+## 2026-07-28 12:48:04.170Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"bom dia","valueLength":7,"text":""}
+
+## 2026-07-28 13:02:49.322Z load
+- url: http://localhost:3000/
+- title: Avante Lingerie | Oficial
+
+## 2026-07-28 13:02:51.219Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 13:02:51.222Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 13:02:51.248Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 13:02:51.248Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 13:02:51.264Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 13:02:51.264Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 13:02:51.276Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 13:02:51.277Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 13:19:56.677Z load
+- url: http://localhost:3000/
+- title: Avante Lingerie | Oficial
+
+## 2026-07-28 13:19:57.943Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 13:19:57.950Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 13:19:57.988Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 13:19:57.988Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 13:19:58.001Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 13:19:58.001Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 13:19:58.008Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 13:19:58.009Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 13:20:00.004Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Falar com a Lia ✨"}
+
+## 2026-07-28 13:20:01.089Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"","valueLength":0,"text":""}
+
+## 2026-07-28 13:20:01.308Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"","valueLength":0,"text":""}
+
+## 2026-07-28 13:20:09.433Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"Bom dia","valueLength":7,"text":""}
+
+## 2026-07-28 13:20:09.433Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"submit","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-07-28 13:20:09.437Z submit
+- action: http://localhost:3000/
+- fields: [{"label":"Escreva sua dúvida...","type":"text","value":"Bom dia","length":7,"redacted":false},{"label":"[submit]","type":"submit","value":"","length":0,"redacted":false}]
+
+## 2026-07-28 13:20:09.445Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"Bom dia","valueLength":7,"text":""}
+
+## 2026-07-28 13:20:33.919Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"","valueLength":0,"text":""}
+
+## 2026-07-28 13:20:34.139Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"","valueLength":0,"text":""}
+
+## 2026-07-28 13:20:46.050Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"Vc trabalham com revenda?","valueLength":25,"text":""}
+
+## 2026-07-28 13:20:46.050Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"submit","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-07-28 13:20:46.050Z submit
+- action: http://localhost:3000/
+- fields: [{"label":"Escreva sua dúvida...","type":"text","value":"Vc trabalham com revenda?","length":25,"redacted":false},{"label":"[submit]","type":"submit","value":"","length":0,"redacted":false}]
+
+## 2026-07-28 13:20:46.053Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"Vc trabalham com revenda?","valueLength":25,"text":""}
+
+## 2026-07-28 13:21:48.608Z click
+- element: {"tag":"div","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Lia | Consultora AvanteOnlineOi! Eu sou a Lia, sua consultora aqui na Avante. Posso te ajudar a encontrar a peça perfeita hoje? ✨Bom diaBom dia! ☀️ \n\nQue alegria te receber por aqui! Sou a **Lia**, sua consultora da Avante Lingerie. \n\nEstou aqui para tornar sua experiência especial e ajudá-la a encontrar aquela peça que faz toda diferença no dia a dia — com o conforto que você merece! 💕\n\n**Como posso te ajudar hoje?** Está em busca de um sutiã confortável, quer montar um conjunto, ou quer conhecer nossas peças mais procuradas?Vc trabalham com revenda?Ótima pergunta! **SIM, com certeza!** 🎉\n\nA Avante Lingerie tem um **Programa de Revenda Premium** sensacional! Aqui está o melhor:\n\n✨ **Preço de Fábrica** — você compra com até **50% de desconto**  \n💰 **Margem de lucro** que pode chegar a **120-150%**  \n📱 **Começa fácil** — só precisa do seu CPF (não exige CNPJ obrigatório)  \n🎯 **Pedido mínimo inicial** — apenas **R$ 500,00** para destravar o preço de fábrica  \n🌟 **Portal Elite** — acesso exclusivo a fotos profissionais, vídeos e catálogos para suas vendas\n\nQuanto maior seu faturamento, maiores os descontos progressivos! É luxo que se sente, economia que se vive. 💎\n\n**Você está pensando em começar a revender?** Se sim, convido você a conhecer melhor nosso programa! Posso te redirecionar para a página Quero Revender ou você prefere f"}
+
+## 2026-07-28 13:22:12.020Z click
+- element: {"tag":"div","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Bom dia"}
+
+## 2026-07-28 13:23:05.480Z click
+- element: {"tag":"div","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Coleção Ouro PremiumA Joia que Abraça o Seu CorpoDescubra a harmonia perfeita entre sustentação absoluta, costuras inteligentes e a elegância atemporal que você merece sentir todos os dias.Explorar ColeçãoQuero Revender"}
+
+## 2026-07-28 13:23:08.876Z click
+- element: {"tag":"div","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"HomeMais VendidosCategoriasCroppedPijamaContatoQuero ser RevendedoraEntrar BuscarHomeMais VendidosCategoriasCroppedPijamaContatoQuero ser Revendedora Entrar / Cadastro Coleção Ouro PremiumA Joia que Abraça o Seu CorpoDescubra a harmonia perfeita entre sustentação absoluta, costuras inteligentes e a elegância atemporal que você merece sentir todos os dias.Explorar ColeçãoQuero RevenderCompra 100% SeguraSeus dados pessoais e de pagamento totalmente blindados.Troca SimplificadaArrependimento em 7 dias, ou defeitos de fábrica em 30 dias.Envio Ultra DiscretoCaixa premium lacrada, perfumada e sem marcas externas.Padrão de QualidadeRendas francesas e tecidos tecnológicos hipoalergênicos.Suporte DedicadoNossa equipe VIP disponível para te ajudar no pós-venda.Compra 100% SeguraSeus dados pessoais e de pagamento totalmente blindados.Troca SimplificadaArrependimento em 7 dias, ou defeitos de fábrica em 30 dias.Envio Ultra DiscretoCaixa premium lacrada, perfumada e sem marcas externas.Padrão de QualidadeRendas francesas e tecidos tecnológicos hipoalergênicos.Suporte DedicadoNossa equipe VIP disponível para te ajudar no pós-venda.O Closet de LuxoNossas CategoriasToque no tecido, escolha o caimento ideal e explore o melhor de Avante.ConjuntosCalcinhasSutiãsModeladoresKitsSensuaisConsagrados por MilharesMais Vendidos da AvanteOs modelos favoritos eleitos por nossas clientes por seu caimento esculpido e durabilidade.-23%CroppedREF: AVL-CRO-4678Cropped Regata Gola Alta Bling5.0(128 avaliações)R$ 38,87R$ 29,90 PAGUE NO PIX 5% OFFATÉ 20% OFF PROGRESSIVOMais de 42 vendidos essa semana!Restam apenas 600 unidades em estoque!ADICIONAR À SACOLA-23%CONJUNTOSREF: MAIS-VEConjunto em Microfibra Cropped Regata Gola Alta4.8(124 avaliações)R$ 25,87R$ 19,90 PAGUE NO PIX 5% OFFATÉ 20% OFF PROGRESSIVOMais de 42 vendidos essa semana!Restam apenas 5 unidades em estoque!ADICIONAR À SACOLA-23%CONJUNTOSREF: MAIS-VEConjunto em Microfibra Cropped Regata Gola Alta4.8(124 avaliações)R$ 25,87R$ 19,90 PAGUE NO..."}
+
+## 2026-07-28 13:24:13.053Z click
+- element: {"tag":"div","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Oi! Eu sou a Lia, sua consultora aqui na Avante. Posso te ajudar a encontrar a peça perfeita hoje? ✨Bom diaBom dia! ☀️ \n\nQue alegria te receber por aqui! Sou a **Lia**, sua consultora da Avante Lingerie. \n\nEstou aqui para tornar sua experiência especial e ajudá-la a encontrar aquela peça que faz toda diferença no dia a dia — com o conforto que você merece! 💕\n\n**Como posso te ajudar hoje?** Está em busca de um sutiã confortável, quer montar um conjunto, ou quer conhecer nossas peças mais procuradas?Vc trabalham com revenda?Ótima pergunta! **SIM, com certeza!** 🎉\n\nA Avante Lingerie tem um **Programa de Revenda Premium** sensacional! Aqui está o melhor:\n\n✨ **Preço de Fábrica** — você compra com até **50% de desconto**  \n💰 **Margem de lucro** que pode chegar a **120-150%**  \n📱 **Começa fácil** — só precisa do seu CPF (não exige CNPJ obrigatório)  \n🎯 **Pedido mínimo inicial** — apenas **R$ 500,00** para destravar o preço de fábrica  \n🌟 **Portal Elite** — acesso exclusivo a fotos profissionais, vídeos e catálogos para suas vendas\n\nQuanto maior seu faturamento, maiores os descontos progressivos! É luxo que se sente, economia que se vive. 💎\n\n**Você está pensando em começar a revender?** Se sim, convido você a conhecer melhor nosso programa! Posso te redirecionar para a página Quero Revender ou você prefere f"}
+
+## 2026-07-28 13:50:23.550Z load
+- url: http://localhost:3000/
+- title: Avante Lingerie | Oficial
+
+## 2026-07-28 13:50:24.914Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 13:50:24.917Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 13:50:24.942Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 13:50:24.943Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 13:50:24.954Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 13:50:24.954Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 13:50:24.958Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 13:50:24.958Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 13:50:28.544Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Falar com a Lia ✨"}
+
+## 2026-07-28 13:50:51.433Z load
+- url: http://localhost:3000/
+- title: Avante Lingerie | Oficial
+
+## 2026-07-28 13:50:51.973Z navigate
+- url: http://localhost:3000/
+- via: replaceState
+
+## 2026-07-28 13:50:52.690Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 13:50:52.694Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 13:50:52.740Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 13:50:52.740Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 13:50:52.760Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 13:50:52.761Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 13:50:52.781Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 13:50:52.781Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 13:50:54.857Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Falar com a Lia ✨"}
+
+## 2026-07-28 13:50:56.831Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"","valueLength":0,"text":""}
+
+## 2026-07-28 13:50:57.053Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"","valueLength":0,"text":""}
+
+## 2026-07-28 13:51:00.103Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"bom dia","valueLength":7,"text":""}
+
+## 2026-07-28 13:51:00.103Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"submit","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-07-28 13:51:00.106Z submit
+- action: http://localhost:3000/
+- fields: [{"label":"Escreva sua dúvida...","type":"text","value":"bom dia","length":7,"redacted":false},{"label":"[submit]","type":"submit","value":"","length":0,"redacted":false}]
+
+## 2026-07-28 13:51:00.110Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"bom dia","valueLength":7,"text":""}
+
+## 2026-07-28 13:52:07.717Z load
+- url: http://localhost:3000/
+- title: Avante Lingerie | Oficial
+
+## 2026-07-28 13:52:08.579Z navigate
+- url: http://localhost:3000/
+- via: replaceState
+
+## 2026-07-28 13:52:09.364Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 13:52:09.366Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 13:52:09.404Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 13:52:09.405Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 13:52:09.419Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 13:52:09.420Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 13:52:09.426Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 13:52:09.426Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 13:52:20.862Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Falar com a Lia ✨"}
+
+## 2026-07-28 13:52:22.159Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"","valueLength":0,"text":""}
+
+## 2026-07-28 13:52:22.365Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"","valueLength":0,"text":""}
+
+## 2026-07-28 13:52:24.151Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"Bom dia","valueLength":7,"text":""}
+
+## 2026-07-28 13:52:24.152Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"submit","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-07-28 13:52:24.155Z submit
+- action: http://localhost:3000/
+- fields: [{"label":"Escreva sua dúvida...","type":"text","value":"Bom dia","length":7,"redacted":false},{"label":"[submit]","type":"submit","value":"","length":0,"redacted":false}]
+
+## 2026-07-28 13:52:24.161Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"Bom dia","valueLength":7,"text":""}
+
+## 2026-07-28 13:52:42.778Z click
+- element: {"tag":"div","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Lia | Consultora AvanteOnlineOi! Eu sou a Lia, sua consultora aqui na Avante. Posso te ajudar a encontrar a peça perfeita hoje? ✨Bom diaBom dia, linda! ✨\n\nBem-vinda à Avante Lingerie! Sou a **Lia**, sua consultora de conforto real.\n\nAqui a gente acredita que lingerie perfeita é aquela que você **sente** — forro 100% algodão nobre, rendas francesas hipoalergênicas e zero irritação (metais sem níquel mesmo!). \n\n**O que te traz por aqui hoje?** Está procurando um sutiã confortável, um conjunto especial, ou quer conhecer nossas peças de alta costura íntima? 💕"}
+
+## 2026-07-28 13:54:14.766Z load
+- url: http://localhost:3000/admin
+- title: Avante Lingerie | Oficial
+
+## 2026-07-28 13:54:15.242Z navigate
+- url: http://localhost:3000/admin
+- via: replaceState
+
+## 2026-07-28 13:54:15.666Z navigate
+- url: http://localhost:3000/admin/login
+- via: replaceState
+
+## 2026-07-28 13:54:17.065Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"email","id":null,"placeholder":"admin@avantelingerie.com.br","label":"admin@avantelingerie.com.br","value":"","valueLength":0,"text":""}
+
+## 2026-07-28 13:54:17.288Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"email","id":null,"placeholder":"admin@avantelingerie.com.br","label":"admin@avantelingerie.com.br","value":"","valueLength":0,"text":""}
+
+## 2026-07-28 13:54:31.136Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"email","id":null,"placeholder":"admin@avantelingerie.com.br","label":"admin@avantelingerie.com.br","value":"admin@avantelingerie.com.br","valueLength":27,"text":""}
+
+## 2026-07-28 13:54:31.137Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"email","id":null,"placeholder":"admin@avantelingerie.com.br","label":"admin@avantelingerie.com.br","value":"admin@avantelingerie.com.br","valueLength":27,"text":""}
+
+## 2026-07-28 13:54:31.137Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"password","id":null,"placeholder":"••••••••","label":"••••••••","value":"[redacted:length=0]","valueLength":0,"text":""}
+
+## 2026-07-28 13:54:31.353Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"password","id":null,"placeholder":"••••••••","label":"••••••••","value":"[redacted:length=0]","valueLength":0,"text":""}
+
+## 2026-07-28 13:54:36.414Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"password","id":null,"placeholder":"••••••••","label":"••••••••","value":"[redacted:length=12]","valueLength":12,"text":""}
+
+## 2026-07-28 13:54:36.414Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"password","id":null,"placeholder":"••••••••","label":"••••••••","value":"[redacted:length=12]","valueLength":12,"text":""}
+
+## 2026-07-28 13:54:36.624Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"submit","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"ACESSAR PAINEL"}
+
+## 2026-07-28 13:54:36.628Z submit
+- action: http://localhost:3000/admin/login
+- fields: [{"label":"admin@avantelingerie.com.br","type":"email","value":"admin@avantelingerie.com.br","length":27,"redacted":false},{"label":"••••••••","type":"password","value":"[redacted:length=12]","length":12,"redacted":true},{"label":"Mostrar senha","type":"button","value":"","length":0,"redacted":false},{"label":"[submit]","type":"submit","value":"","length":0,"redacted":false}]
+
+## 2026-07-28 13:54:36.832Z navigate
+- url: http://localhost:3000/admin
+- via: pushState
+
+## 2026-07-28 13:54:36.965Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 13:54:37.007Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 13:54:37.239Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 13:54:37.240Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 13:54:37.318Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 13:54:37.319Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 13:54:37.406Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 13:54:37.406Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 13:54:40.470Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Cérebro da Lia"}
+
+## 2026-07-28 13:54:40.471Z navigate
+- url: http://localhost:3000/admin/lia
+- via: pushState
+
+## 2026-07-28 13:55:58.337Z click
+- element: {"tag":"button","role":"tab","ariaLabel":null,"name":null,"type":"button","id":"radix-:r3:-trigger-treinamento","placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Treinamento (Knowledge)"}
+
+## 2026-07-28 14:03:11.509Z click
+- element: {"tag":"div","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Oi! Eu sou a Lia, sua consultora aqui na Avante. Posso te ajudar a encontrar a peça perfeita hoje? ✨Bom diaBom dia, linda! ✨\n\nBem-vinda à Avante Lingerie! Sou a **Lia**, sua consultora de conforto real.\n\nAqui a gente acredita que lingerie perfeita é aquela que você **sente** — forro 100% algodão nobre, rendas francesas hipoalergênicas e zero irritação (metais sem níquel mesmo!). \n\n**O que te traz por aqui hoje?** Está procurando um sutiã confortável, um conjunto especial, ou quer conhecer nossas peças de alta costura íntima? 💕"}
+
+## 2026-07-28 14:03:13.890Z click
+- element: {"tag":"div","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Lia | Consultora AvanteOnlineOi! Eu sou a Lia, sua consultora aqui na Avante. Posso te ajudar a encontrar a peça perfeita hoje? ✨Bom diaBom dia, linda! ✨\n\nBem-vinda à Avante Lingerie! Sou a **Lia**, sua consultora de conforto real.\n\nAqui a gente acredita que lingerie perfeita é aquela que você **sente** — forro 100% algodão nobre, rendas francesas hipoalergênicas e zero irritação (metais sem níquel mesmo!). \n\n**O que te traz por aqui hoje?** Está procurando um sutiã confortável, um conjunto especial, ou quer conhecer nossas peças de alta costura íntima? 💕"}
+
+## 2026-07-28 14:29:02.487Z click
+- element: {"tag":"div","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Bom dia, linda! ✨\n\nBem-vinda à Avante Lingerie! Sou a **Lia**, sua consultora de conforto real.\n\nAqui a gente acredita que lingerie perfeita é aquela que você **sente** — forro 100% algodão nobre, rendas francesas hipoalergênicas e zero irritação (metais sem níquel mesmo!). \n\n**O que te traz por aqui hoje?** Está procurando um sutiã confortável, um conjunto especial, ou quer conhecer nossas peças de alta costura íntima? 💕"}
+
+## 2026-07-28 14:36:36.490Z load
+- url: http://localhost:3000/
+- title: Avante Lingerie | Oficial
+
+## 2026-07-28 14:36:37.222Z navigate
+- url: http://localhost:3000/
+- via: replaceState
+
+## 2026-07-28 14:36:38.428Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 14:36:38.431Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 14:36:38.479Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 14:36:38.479Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 14:36:38.507Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 14:36:38.507Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 14:36:38.518Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 14:36:38.518Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 14:36:47.859Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"","valueLength":0,"text":""}
+
+## 2026-07-28 14:36:48.023Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"","valueLength":0,"text":""}
+
+## 2026-07-28 14:36:56.437Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"Bom dia","valueLength":7,"text":""}
+
+## 2026-07-28 14:36:56.439Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"submit","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-07-28 14:36:56.444Z submit
+- action: http://localhost:3000/
+- fields: [{"label":"Escreva sua dúvida...","type":"text","value":"Bom dia","length":7,"redacted":false},{"label":"[submit]","type":"submit","value":"","length":0,"redacted":false}]
+
+## 2026-07-28 14:36:56.461Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"Bom dia","valueLength":7,"text":""}
+
+## 2026-07-28 14:37:19.481Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"","valueLength":0,"text":""}
+
+## 2026-07-28 14:37:19.637Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"","valueLength":0,"text":""}
+
+## 2026-07-28 14:37:36.734Z load
+- url: http://localhost:3000/admin
+- title: Avante Lingerie | Oficial
+
+## 2026-07-28 14:37:37.305Z navigate
+- url: http://localhost:3000/admin
+- via: replaceState
+
+## 2026-07-28 14:37:37.791Z navigate
+- url: http://localhost:3000/admin/login
+- via: replaceState
+
+## 2026-07-28 14:37:38.996Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"email","id":null,"placeholder":"admin@avantelingerie.com.br","label":"admin@avantelingerie.com.br","value":"","valueLength":0,"text":""}
+
+## 2026-07-28 14:37:39.211Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"email","id":null,"placeholder":"admin@avantelingerie.com.br","label":"admin@avantelingerie.com.br","value":"","valueLength":0,"text":""}
+
+## 2026-07-28 14:37:52.916Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"email","id":null,"placeholder":"admin@avantelingerie.com.br","label":"admin@avantelingerie.com.br","value":"admin@avantelingerie.com.br","valueLength":27,"text":""}
+
+## 2026-07-28 14:37:52.917Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"email","id":null,"placeholder":"admin@avantelingerie.com.br","label":"admin@avantelingerie.com.br","value":"admin@avantelingerie.com.br","valueLength":27,"text":""}
+
+## 2026-07-28 14:37:52.919Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"password","id":null,"placeholder":"••••••••","label":"••••••••","value":"[redacted:length=0]","valueLength":0,"text":""}
+
+## 2026-07-28 14:37:53.126Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"password","id":null,"placeholder":"••••••••","label":"••••••••","value":"[redacted:length=0]","valueLength":0,"text":""}
+
+## 2026-07-28 14:37:58.253Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"password","id":null,"placeholder":"••••••••","label":"••••••••","value":"[redacted:length=12]","valueLength":12,"text":""}
+
+## 2026-07-28 14:37:58.253Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"password","id":null,"placeholder":"••••••••","label":"••••••••","value":"[redacted:length=12]","valueLength":12,"text":""}
+
+## 2026-07-28 14:37:58.475Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"submit","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"ACESSAR PAINEL"}
+
+## 2026-07-28 14:37:58.480Z submit
+- action: http://localhost:3000/admin/login
+- fields: [{"label":"admin@avantelingerie.com.br","type":"email","value":"admin@avantelingerie.com.br","length":27,"redacted":false},{"label":"••••••••","type":"password","value":"[redacted:length=12]","length":12,"redacted":true},{"label":"Mostrar senha","type":"button","value":"","length":0,"redacted":false},{"label":"[submit]","type":"submit","value":"","length":0,"redacted":false}]
+
+## 2026-07-28 14:37:58.785Z navigate
+- url: http://localhost:3000/admin
+- via: pushState
+
+## 2026-07-28 14:37:58.971Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 14:37:58.986Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 14:37:59.186Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 14:37:59.187Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 14:37:59.231Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 14:37:59.231Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 14:37:59.270Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 14:37:59.272Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 14:38:01.075Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Cérebro da Lia"}
+
+## 2026-07-28 14:38:01.076Z navigate
+- url: http://localhost:3000/admin/lia
+- via: pushState
+
+## 2026-07-28 14:38:06.009Z click
+- element: {"tag":"button","role":"tab","ariaLabel":null,"name":null,"type":"button","id":"radix-:r3:-trigger-treinamento","placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Treinamento (Knowledge)"}
+
+## 2026-07-28 14:38:37.048Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"","valueLength":0,"text":""}
+
+## 2026-07-28 14:39:50.683Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"","valueLength":0,"text":""}
+
+## 2026-07-28 14:40:25.263Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"","valueLength":0,"text":""}
+
+## 2026-07-28 14:40:32.790Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Ver Loja"}
+
+## 2026-07-28 14:40:32.800Z navigate
+- url: http://localhost:3000/
+- via: pushState
+
+## 2026-07-28 14:40:33.572Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 14:40:33.590Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 14:40:33.610Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 14:40:33.610Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 14:40:33.619Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 14:40:33.620Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 14:40:33.627Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 14:40:33.627Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 14:40:35.383Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Falar com a Lia ✨"}
+
+## 2026-07-28 14:40:36.490Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"","valueLength":0,"text":""}
+
+## 2026-07-28 14:40:36.658Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"","valueLength":0,"text":""}
+
+## 2026-07-28 14:40:38.328Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"bom dia","valueLength":7,"text":""}
+
+## 2026-07-28 14:40:38.328Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"submit","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-07-28 14:40:38.332Z submit
+- action: http://localhost:3000/
+- fields: [{"label":"Escreva sua dúvida...","type":"text","value":"bom dia","length":7,"redacted":false},{"label":"[submit]","type":"submit","value":"","length":0,"redacted":false}]
+
+## 2026-07-28 14:40:38.341Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"bom dia","valueLength":7,"text":""}
+
+## 2026-07-28 14:41:16.239Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"","valueLength":0,"text":""}
+
+## 2026-07-28 14:41:16.416Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"","valueLength":0,"text":""}
+
+## 2026-07-28 14:41:35.576Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"Como faço pra trocar uma calcinha que comprei?","valueLength":46,"text":""}
+
+## 2026-07-28 14:41:35.577Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"submit","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-07-28 14:41:35.581Z submit
+- action: http://localhost:3000/
+- fields: [{"label":"Escreva sua dúvida...","type":"text","value":"Como faço pra trocar uma calcinha que comprei?","length":46,"redacted":false},{"label":"[submit]","type":"submit","value":"","length":0,"redacted":false}]
+
+## 2026-07-28 14:41:35.615Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"Como faço pra trocar uma calcinha que comprei?","valueLength":46,"text":""}
+
+## 2026-07-28 14:42:42.786Z click
+- element: {"tag":"div","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Lia | Consultora AvanteOnlineOi! Eu sou a Lia, sua consultora aqui na Avante. Posso te ajudar a encontrar a peça perfeita hoje? ✨bom diaBom dia! ☀️ Seja bem-vinda à Avante Lingerie! \n\nSou a **Lia**, sua consultora virtual de vendas. Estou aqui para ajudá-la a encontrar peças de alta costura íntima que combinam **conforto real com luxo** — forro 100% algodão nobre, rendas francesas hipoalergênicas e aquele caimento perfeito que a gente sente! ✨\n\nO que a traz por aqui hoje? Está procurando um sutiã confortável, um conjunto especial, ou gostaria de explorar nossa coleção?Como faço pra trocar uma calcinha que comprei?Ótimo, vou esclarecer isso para você com transparência! 💙\n\nTemos uma **política de higiene e saúde pública** (conforme regulamentação do Procon/CDC) que protege todas as nossas clientes:\n\n**Calcinhas NÃO podem ser trocadas por:**\n- Arrependimento\n- Tamanho errado\n- Qualquer motivo relacionado a preferência pessoal\n\nIsso é uma questão sanitária inegociável — é para o bem de todas nós!\n\n**MAS, se houver DEFEITO DE FÁBRICA** (costuras soltas, tecido rasgado, problema na renda, etc.), aí sim! Você tem **30 dias** para comunicar, e **a Avante arca com o frete de devolução**. 🎁\n\n---\n\n**A calcinha que você comprou tem algum defeito?** Se sim, peço para você chamar nossa equipe pelo **WhatsApp clicando no botão abaixo** — vamos resolver rapidinho!\n\nSe foi só uma questão de tamanho ou preferência, infelizmente não conseguimos fazer a troca, mas fico à disposição se precisar de ajuda para a próxFalar no WhatsApp"}
+
+## 2026-07-28 14:47:23.323Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"","valueLength":0,"text":""}
+
+## 2026-07-28 14:47:34.464Z load
+- url: http://localhost:3000/admin
+- title: Avante Lingerie | Oficial
+
+## 2026-07-28 14:47:35.133Z navigate
+- url: http://localhost:3000/admin
+- via: replaceState
+
+## 2026-07-28 14:47:38.115Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Cérebro da Lia"}
+
+## 2026-07-28 14:47:38.118Z navigate
+- url: http://localhost:3000/admin/lia
+- via: pushState
+
+## 2026-07-28 14:47:41.165Z click
+- element: {"tag":"button","role":"tab","ariaLabel":null,"name":null,"type":"button","id":"radix-:r3:-trigger-treinamento","placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Treinamento (Knowledge)"}
+
+## 2026-07-28 14:47:48.906Z click
+- element: {"tag":"div","role":"tabpanel","ariaLabel":null,"name":null,"type":null,"id":"radix-:r3:-content-treinamento","placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Nova Regra / PromoçãoEnsine a Lia a responder sobre novas campanhas, regras de frete ou avisos.Título (Para organização)Instrução para a IA Data de Expiração (Opcional)A Lia esquecerá essa regra após essa data.Treinar LiaConhecimento Ativo da LiaTodas as regras e instruções dinâmicas que a Lia lê antes de responder qualquer mensagem.Sobre a Avante Lingerie (Identidade e História)Desativar\"Origem: Nova Friburgo/RJ (capital da lingerie). Foco: Conforto Real para o dia a dia. Materiais: Forro 100% algodão nobre, rendas francesas hipoalergênicas, metais sem níquel. Operação: Fabricação própria, CNPJ 54.615.037/0001-53.\"Políticas de Revenda, Parcerias e Atacado B2BDesativar\"Público: Revendedores e Atacadistas. Gatilho de Desconto de Fábrica: R$ 500,00 no carrinho. Vantagens: Alta margem de lucro, cadastro com CPF, Portal Restrito (para baixar fotos e vídeos). Instrução para IA: Se o cliente demonstrar interesse em revender, encaminhe de forma objetiva para a aba 'Quero Revender'.\"Prazos de Envio, Logística e Melhor EnvioDesativar\"Despacho: Em até 24h úteis após pagamento. Logística: Melhor Envio (Correios, Jadlog, Latam Cargo). Prazo de Entrega Médio: 5 a 15 dias úteis. Rastreio: Enviado via WhatsApp e e-mail.\"Política de Trocas, Devoluções e ReembolsosDesativar\"Prazo de Arrependimento: 7 dias (Frete pago pelo cliente). Defeito de Fábrica: 30 dias (Frete pago pela loja). REGRA DE HIGIENE PROIBITIVA: Calcinhas e meias-calças NÃO possuem troca por tamanho ou arrependimento. Sutiãs e croppeds podem ser trocados se intactos e com etiqueta.\"Guia de Medidas Perfeitas e Estruturação das PeçasDesativar\"Tabela (Sutiã): P(38-40), M(42), G(44), GG(46). Modelagem: P possui bojo com bolha interna (volume). M/G/GG possuem bojo casquinha liso (sustentação). Elasticidade das rendas: 25%. Instrução para IA: Na dúvida de sutiã, recomende o maior.\"Estoque Esgotado e Encomendas Especiais VIPDesativar\"Se um item estiver fora de estoque, NÃO diga simplesmente 'não temos'. Instrução para IA: O..."}
+
+## 2026-07-28 15:00:11.729Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"","valueLength":0,"text":""}
+
+## 2026-07-28 15:00:14.710Z load
+- url: http://localhost:3000/
+- title: Avante Lingerie | Oficial
+
+## 2026-07-28 15:00:17.380Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 15:00:17.384Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 15:00:17.417Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 15:00:17.418Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 15:00:17.433Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 15:00:17.434Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 15:00:17.455Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 15:00:17.456Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 15:00:25.806Z load
+- url: http://localhost:3000/
+- title: Avante Lingerie | Oficial
+
+## 2026-07-28 15:00:27.719Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 15:00:27.722Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 15:00:27.764Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 15:00:27.765Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 15:00:27.786Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 15:00:27.787Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 15:00:27.806Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 15:00:27.806Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 15:00:34.166Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-07-28 15:00:36.966Z load
+- url: http://localhost:3000/
+- title: Avante Lingerie | Oficial
+
+## 2026-07-28 15:00:38.285Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 15:00:38.287Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 15:00:38.305Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 15:00:38.306Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 15:00:38.315Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 15:00:38.315Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 15:00:38.321Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 15:00:38.321Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 15:00:47.628Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-07-28 15:00:52.352Z load
+- url: http://localhost:3000/
+- title: Avante Lingerie | Oficial
+
+## 2026-07-28 15:00:53.972Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 15:00:53.976Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 15:00:54.012Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 15:00:54.013Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 15:00:54.019Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 15:00:54.019Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 15:00:54.037Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 15:00:54.037Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-28 15:00:56.334Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Falar com a Lia ✨"}
+
+## 2026-07-28 15:00:57.898Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"","valueLength":0,"text":""}
+
+## 2026-07-28 15:00:58.112Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"","valueLength":0,"text":""}
+
+## 2026-07-28 15:01:02.549Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"Bom dia","valueLength":7,"text":""}
+
+## 2026-07-28 15:01:02.550Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"submit","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-07-28 15:01:02.554Z submit
+- action: http://localhost:3000/
+- fields: [{"label":"Escreva sua dúvida...","type":"text","value":"Bom dia","length":7,"redacted":false},{"label":"[submit]","type":"submit","value":"","length":0,"redacted":false}]
+
+## 2026-07-28 15:01:02.563Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"Bom dia","valueLength":7,"text":""}
+
+## 2026-07-28 15:01:20.810Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"","valueLength":0,"text":""}
+
+## 2026-07-28 15:01:21.018Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"","valueLength":0,"text":""}
+
+## 2026-07-28 15:01:27.699Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"Onde fica a avante?","valueLength":19,"text":""}
+
+## 2026-07-28 15:01:27.700Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"submit","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-07-28 15:01:27.704Z submit
+- action: http://localhost:3000/
+- fields: [{"label":"Escreva sua dúvida...","type":"text","value":"Onde fica a avante?","length":19,"redacted":false},{"label":"[submit]","type":"submit","value":"","length":0,"redacted":false}]
+
+## 2026-07-28 15:01:27.754Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"Onde fica a avante?","valueLength":19,"text":""}
+
+## 2026-07-28 15:02:24.444Z click
+- element: {"tag":"div","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Ótima pergunta! 📍\n\nA **Avante Lingerie** fica em **Nova Friburgo — RJ**, a capital nacional da lingerie! \n\n**Nossa Sede e Showroom:**\n🏢 Rua Folly, 69 — Olaria, Nova Friburgo — RJ  \n📮 CEP: 28623-780\n\n**Horário de Funcionamento:**\n- 📅 Seg a Sex: 08h às 18h\n- 📅 Sábado: 09h às 13h\n\nSe você estiver por lá, adoraríamos recebê-la pessoalmente para uma experiência completa! \n\nMas se preferir comprar **online com todo o conforto**, estou aqui para ajudar — entregamos em todo o Brasil com embalagem discreta e fragrância exclusiva Avante. 🎁\n\n**Você gostaria de explorar nossa coleção agora ou tem alguma dúvida sobre as peças?** ✨"}
+
+## 2026-07-28 15:05:45.783Z click
+- element: {"tag":"div","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Cérebro da LiaGerencie a inteligência artificial, treine seu conhecimento e monitore os chats ao vivo. Chats Ao Vivo Treinamento (Knowledge)Nova Regra / PromoçãoEnsine a Lia a responder sobre novas campanhas, regras de frete ou avisos.Título (Para organização)Instrução para a IA Data de Expiração (Opcional)A Lia esquecerá essa regra após essa data.Treinar LiaConhecimento Ativo da LiaTodas as regras e instruções dinâmicas que a Lia lê antes de responder qualquer mensagem.Sobre a Avante Lingerie (Identidade e História)Desativar\"Origem: Nova Friburgo/RJ (capital da lingerie). Foco: Conforto Real para o dia a dia. Materiais: Forro 100% algodão nobre, rendas francesas hipoalergênicas, metais sem níquel. Operação: Fabricação própria, CNPJ 54.615.037/0001-53.\"Políticas de Revenda, Parcerias e Atacado B2BDesativar\"Público: Revendedores e Atacadistas. Gatilho de Desconto de Fábrica: R$ 500,00 no carrinho. Vantagens: Alta margem de lucro, cadastro com CPF, Portal Restrito (para baixar fotos e vídeos). Instrução para IA: Se o cliente demonstrar interesse em revender, encaminhe de forma objetiva para a aba 'Quero Revender'.\"Prazos de Envio, Logística e Melhor EnvioDesativar\"Despacho: Em até 24h úteis após pagamento. Logística: Melhor Envio (Correios, Jadlog, Latam Cargo). Prazo de Entrega Médio: 5 a 15 dias úteis. Rastreio: Enviado via WhatsApp e e-mail.\"Política de Trocas, Devoluções e ReembolsosDesativar\"Prazo de Arrependimento: 7 dias (Frete pago pelo cliente). Defeito de Fábrica: 30 dias (Frete pago pela loja). REGRA DE HIGIENE PROIBITIVA: Calcinhas e meias-calças NÃO possuem troca por tamanho ou arrependimento. Sutiãs e croppeds podem ser trocados se intactos e com etiqueta.\"Guia de Medidas Perfeitas e Estruturação das PeçasDesativar\"Tabela (Sutiã): P(38-40), M(42), G(44), GG(46). Modelagem: P possui bojo com bolha interna (volume). M/G/GG possuem bojo casquinha liso (sustentação). Elasticidade das rendas: 25%. Instrução para IA: Na dúvida de sutiã, recomende o maior.\"Esto..."}
 

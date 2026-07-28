@@ -842,7 +842,7 @@ export default function CentralDaClientePage() {
                 <i className="fa-brands fa-whatsapp"></i>
                 <h5>WhatsApp</h5>
                 <p><strong>(22) 99761-8591</strong></p>
-                <p>Segunda a Sexta, 9h às 18h</p>
+                <p>Seg a Qui 8h às 17h, Sex 8h às 13h</p>
               </div>
               <div className="contact-card">
                 <i className="fa-solid fa-envelope"></i>
