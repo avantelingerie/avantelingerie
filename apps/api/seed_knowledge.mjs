@@ -5,31 +5,31 @@ const pb = new PocketBase('http://127.0.0.1:8090');
 const regras = [
   {
     titulo: "Sobre a Avante Lingerie (Identidade e História)",
-    conteudo: "A Avante Lingerie nasceu e foi criada no bairro de Olaria, em Nova Friburgo/RJ, a verdadeira capital da lingerie. A missão da loja é entregar o 'Conforto Real' para o dia a dia. A diferença do toque está nos detalhes: forro 100% algodão nobre, rendas antialérgicas francesas incrivelmente macias e metais sem níquel (zero irritação). A Avante é fabricante própria com rigoroso controle de qualidade (CNPJ 54.615.037/0001-53)."
+    conteudo: "Origem: Nova Friburgo/RJ (capital da lingerie). Foco: Conforto Real para o dia a dia. Materiais: Forro 100% algodão nobre, rendas francesas hipoalergênicas, metais sem níquel. Operação: Fabricação própria, CNPJ 54.615.037/0001-53."
   },
   {
     titulo: "Políticas de Revenda, Parcerias e Atacado B2B",
-    conteudo: "Você quer crescer com a gente? Nosso programa de Atacado B2B é a oportunidade perfeita! O lucro é maravilhoso e você pode começar usando apenas o seu CPF. O gatilho oficial (pedido mínimo) é de R$ 500,00 (mas no sistema o painel admin pode configurar valores diferentes promocionais). Atingindo a faixa inicial no carrinho, todo o seu pedido ganhe o desconto de fábrica. Nossas parceiras de Elite têm acesso ao Portal Restrito para baixar fotos profissionais, vídeos e catálogos. DICA CRÍTICA PARA LIA: Se a cliente mostrar intenção de revenda, atacado ou alto volume, seja agressiva (no bom sentido)! Encante-a com os lucros, incentive-a a atingir os R$ 500,00 no carrinho e redirecione para a aba 'Quero Revender'."
+    conteudo: "Público: Revendedores e Atacadistas. Gatilho de Desconto de Fábrica: R$ 500,00 no carrinho. Vantagens: Alta margem de lucro, cadastro com CPF, Portal Restrito (para baixar fotos e vídeos). Instrução para IA: Se o cliente demonstrar interesse em revender, encaminhe de forma objetiva para a aba 'Quero Revender'."
   },
   {
     titulo: "Prazos de Envio, Logística e Melhor Envio",
-    conteudo: "A ansiedade para receber as peças é grande, a gente sabe! Por isso, nosso despacho é a jato: em até 24h úteis após a confirmação do pagamento. Trabalhamos com a tecnologia do Melhor Envio (Correios, Jadlog, Latam Cargo) para garantir o frete mais rápido e barato para a sua região. O prazo médio fica entre 5 a 15 dias úteis, dependendo do CEP. Assim que despacharmos, você receberá um link mágico de rastreio direto no seu WhatsApp e e-mail. DICA PARA LIA: Reforce que revendedoras (Atacado) possuem vantagens de frete!"
+    conteudo: "Despacho: Em até 24h úteis após pagamento. Logística: Melhor Envio (Correios, Jadlog, Latam Cargo). Prazo de Entrega Médio: 5 a 15 dias úteis. Rastreio: Enviado via WhatsApp e e-mail."
   },
   {
     titulo: "Política de Trocas, Devoluções e Reembolsos",
-    conteudo: "Nós queremos você 100% satisfeita! Você tem 7 dias para troca por arrependimento e 30 dias caso haja alguma inconformidade de fábrica. REGRAS DE FRETE: No caso de arrependimento (7 dias), o custo do frete de devolução é de responsabilidade da cliente. Já no caso de defeito de fábrica comprovado (30 dias), o frete é por nossa conta (da loja). REGRA DE OURO (HIGIENE): Peças de baixo (calcinhas e meias-calças) NÃO possuem troca por arrependimento ou tamanho. Croppeds são peças de cima e entram na política normal de 7 dias. Para trocar um sutiã ou cropped, a peça deve estar intacta, sem sinais de uso, sem perfumes e com a etiqueta fixada."
+    conteudo: "Prazo de Arrependimento: 7 dias (Frete pago pelo cliente). Defeito de Fábrica: 30 dias (Frete pago pela loja). REGRA DE HIGIENE PROIBITIVA: Calcinhas e meias-calças NÃO possuem troca por tamanho ou arrependimento. Sutiãs e croppeds podem ser trocados se intactos e com etiqueta."
   },
   {
     titulo: "Guia de Medidas Perfeitas e Estruturação das Peças",
-    conteudo: "Usamos a tabela ABNT Brasil para que o caimento seja perfeito. Tamanhos de Sutiãs: P (38-40), M (42), G (44), GG (46). SEGREDO DE MODELAGEM: Nossos sutiãs tamanho P possuem bojo com 'bolha interna' para um up maravilhoso. Já os tamanhos M, G e GG possuem bojo 'casquinha' (liso), focado em sustentação elegante sem aumentar o volume. Nossas rendas têm até 25% de elasticidade, abraçando as curvas. DICA PARA LIA: Na dúvida de tamanho de calcinha, diga que 'a menor vira uma segunda pele, e a maior dá mais conforto e cobertura'. Em sutiãs, recomende sempre a medida maior para não apertar os seios."
+    conteudo: "Tabela (Sutiã): P(38-40), M(42), G(44), GG(46). Modelagem: P possui bojo com bolha interna (volume). M/G/GG possuem bojo casquinha liso (sustentação). Elasticidade das rendas: 25%. Instrução para IA: Na dúvida de sutiã, recomende o maior."
   },
   {
     titulo: "Estoque Esgotado e Encomendas Especiais VIP",
-    conteudo: "CRÍTICO PARA LIA: Nós nunca deixamos nossas clientes na mão! Se um produto, cor ou tamanho estiver fora de estoque ou se a cliente quiser algo muito específico em grande quantidade que não tem no site, NUNCA finalize a conversa com 'está em falta'. Mude para o modo VIP! Diga que a nossa fábrica tem um setor de 'Encomendas Especiais VIP' e que podemos produzir as peças exclusivas para ela. Instrua a cliente a falar com nossa equipe de produção no WhatsApp agora mesmo (adicione a frase 'WhatsApp clicando no botão abaixo' na sua resposta)."
+    conteudo: "Se um item estiver fora de estoque, NÃO diga simplesmente 'não temos'. Instrução para IA: Ofereça a produção por 'Encomendas Especiais VIP' e peça para contatar o WhatsApp clicando no botão abaixo."
   },
   {
     titulo: "Formas de Pagamento e Descontos",
-    conteudo: "Para facilitar, aceitamos parcelamento no cartão de crédito em até 6x sem juros, de forma 100% segura (Stripe). Mas o grande segredo é: pagamentos via PIX possuem desconto automático e exclusivo no final do carrinho! O valor exato do desconto do Pix é dinâmico, mas sempre vale muito a pena. O pagamento via PIX também aprova seu pedido na hora, acelerando o envio. DICA PARA LIA: Sempre que falar de pagamento, mencione sutilmente que o PIX tem vantagem!"
+    conteudo: "Cartão de Crédito: Até 6x sem juros (Stripe). PIX: Possui desconto automático no carrinho. Aprovação imediata."
   }
 ];
 
