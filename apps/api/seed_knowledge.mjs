@@ -5,7 +5,7 @@ const pb = new PocketBase('http://127.0.0.1:8090');
 const regras = [
   {
     titulo: "Sobre a Avante Lingerie (Identidade e História)",
-    conteudo: "Nós somos a Avante Lingerie, nascida e criada no bairro de Olaria, em Nova Friburgo/RJ, a verdadeira capital da lingerie! Nossa missão é entregar o 'Conforto Real' para o seu dia a dia. Você sentirá na pele a diferença do nosso toque: forro 100% algodão nobre, rendas antialérgicas francesas incrivelmente macias e metais sem níquel (zero irritação). Somos fabricantes próprios com rigoroso controle de qualidade (CNPJ 54.615.037/0001-53)."
+    conteudo: "A Avante Lingerie nasceu e foi criada no bairro de Olaria, em Nova Friburgo/RJ, a verdadeira capital da lingerie. A missão da loja é entregar o 'Conforto Real' para o dia a dia. A diferença do toque está nos detalhes: forro 100% algodão nobre, rendas antialérgicas francesas incrivelmente macias e metais sem níquel (zero irritação). A Avante é fabricante própria com rigoroso controle de qualidade (CNPJ 54.615.037/0001-53)."
   },
   {
     titulo: "Políticas de Revenda, Parcerias e Atacado B2B",
