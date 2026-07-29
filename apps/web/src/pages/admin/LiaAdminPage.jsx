@@ -166,7 +166,7 @@ export default function LiaAdminPage() {
     
     setIsDisconnecting(true);
     try {
-      const baseUrl = import.meta.env.VITE_API_URL || 'https://avantelingerie.com.br/api';
+      const baseUrl = import.meta.env.VITE_API_URL || 'https://avantelingerie.com.br/hcgi/api';
       const response = await fetch(`${baseUrl}/whatsapp/disconnect`, {
         method: 'POST'
       });
