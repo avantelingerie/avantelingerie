@@ -9,6 +9,20 @@ const MEDIA_DIR = process.env.MEDIA_DIR || '/var/www/public_media/imagens';
 
 console.log('Iniciando o Porteiro (WhatsApp Bot)...');
 
+const flagPath = path.join(__dirname, '.reset_flag');
+const authPath = path.join(__dirname, '.wwebjs_auth');
+if (fs.existsSync(flagPath)) {
+    console.log('Detectada flag de reset! Apagando a sessão anterior de forma ultra limpa...');
+    const { execSync } = require('child_process');
+    try {
+        execSync(`rm -rf ${authPath}/* ${authPath}/.[!.]*`, { stdio: 'ignore' });
+    } catch (err) {
+        console.error('Aviso: falha ao usar rm -rf no boot, ignorando...', err.message);
+    }
+    fs.unlinkSync(flagPath);
+    console.log('Limpeza concluída. Prosseguindo com a inicialização normal...');
+}
+
 const client = new Client({
     authStrategy: new LocalAuth(),
     puppeteer: {
@@ -89,39 +103,28 @@ const app = express();
 app.use(express.json());
 
 app.post('/disconnect', async (req, res) => {
-    console.log('Recebido comando de desconexão (RESET)...');
-    res.json({ sucesso: true, mensagem: 'Reiniciando o bot...' });
+    console.log('Recebido comando de desconexão pelo Painel...');
     
     try {
+        // Cria a flag sinalizadora para o próximo boot apagar a sessão
+        fs.writeFileSync(flagPath, 'reset');
+        
         // Apaga o QR Code antigo se existir
         const qrPath = path.join(MEDIA_DIR, 'qr.png');
         if (fs.existsSync(qrPath)) {
             fs.unlinkSync(qrPath);
         }
         
-        // Destrói a sessão no navegador (ignorando erros caso o navegador já tenha travado)
-        try {
-            await client.destroy();
-        } catch (e) {
-            console.error('Aviso: erro ao fechar puppeteer, ignorando...', e.message);
-        }
+        // Retorna sucesso para o painel IMEDIATAMENTE antes de iniciar o suicídio do processo
+        res.json({ sucesso: true, mensagem: 'Reiniciando o bot de forma limpa...' });
         
-        // Apaga a pasta de sessão de forma segura e bruta usando o shell do Linux
-        const authPath = path.join(__dirname, '.wwebjs_auth');
-        if (fs.existsSync(authPath)) {
-            const { execSync } = require('child_process');
-            try {
-                execSync(`rm -rf ${authPath}/* ${authPath}/.[!.]*`, { stdio: 'ignore' });
-            } catch (err) {
-                console.error('Aviso: falha ao usar rm -rf, ignorando...', err.message);
-            }
-        }
-        
-        console.log('Sessão apagada. Reiniciando container...');
-        // Mata o processo. O Docker vai reiniciar ele automaticamente (unless-stopped)
+        // Mata o processo (Docker vai reiniciar automaticamente)
         setTimeout(() => process.exit(0), 1000);
+        
     } catch (e) {
-        console.error('Erro ao desconectar:', e);
+        console.error('Erro ao preparar desconexão:', e);
+        // Mesmo com erro, tentamos avisar o painel para não travar a tela
+        res.status(500).json({ erro: 'Erro ao agendar desconexão' });
         setTimeout(() => process.exit(1), 1000);
     }
 });
