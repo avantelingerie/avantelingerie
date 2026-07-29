@@ -55,6 +55,21 @@ services:
     networks:
       - avante-network
 
+  whatsapp-bot:
+    build:
+      context: ./apps/whatsapp-bot
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    environment:
+      - API_URL=http://api:3000
+      - MEDIA_DIR=/var/www/public_media/imagens
+    volumes:
+      - ./public_media:/var/www/public_media
+    networks:
+      - avante-network
+    depends_on:
+      - api
+
 networks:
   avante-network:
     driver: bridge

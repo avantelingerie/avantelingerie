@@ -272,4 +272,111 @@ ${knowledgeContext}
   }
 });
 
+// Endpoint dedicado para o Bot do WhatsApp
+router.post('/whatsapp-webhook', async (req, res) => {
+  try {
+    const { telefone, mensagem, nome_cliente } = req.body;
+
+    if (!telefone || !mensagem) {
+      return res.status(400).json({ sucesso: false, mensagem: 'telefone e mensagem são obrigatórios.' });
+    }
+
+    const apiKey = await getAnthropicKey();
+    if (!apiKey) {
+      return res.json({ sucesso: true, resposta: "Estou em manutenção! Volto logo." });
+    }
+
+    // 1. Busca a conversa no PocketBase
+    let conversa;
+    try {
+      const records = await pb.collection('lia_conversas').getFullList({
+        filter: `session_id = "${telefone}" && canal = "whatsapp"`,
+      });
+      if (records.length > 0) {
+        conversa = records[0];
+      } else {
+        conversa = await pb.collection('lia_conversas').create({
+          session_id: telefone,
+          canal: 'whatsapp',
+          mensagens: [],
+          converteu: false
+        });
+      }
+    } catch (err) {
+      logger.error(`Erro WhatsApp lia_conversas: ${err.message}`);
+      return res.status(500).json({ sucesso: false });
+    }
+
+    const historico = conversa.mensagens || [];
+    
+    // Se o humano assumiu a conversa, grava a mensagem mas diz pro bot ignorar (ficar mudo)
+    if (conversa.assumida_por_humano) {
+      historico.push({ role: 'user', content: mensagem });
+      await pb.collection('lia_conversas').update(conversa.id, { mensagens: historico });
+      return res.json({ sucesso: true, ignorar: true });
+    }
+
+    historico.push({ role: 'user', content: mensagem });
+
+    // 2. Monta o contexto (reduzido para WhatsApp)
+    const knowledgeContext = await getLiaKnowledge();
+    const catalogContext = await getLiaProducts();
+
+    const systemPrompt = `Você é a Lia, consultora virtual da Avante Lingerie.
+Tom de voz: Feminino, direto e acolhedor. Você está falando NO WHATSAPP com a cliente ${nome_cliente}.
+Frases muito curtas, sem enrolação. MÁXIMO de 20 palavras por resposta.
+REGRA: NUNCA mande textões ou listas. SEJA NATURAL COMO UM HUMANO.
+FECHAMENTO SEMPRE COM UMA PERGUNTA.
+
+${catalogContext}
+
+=========================================
+BASE DE CONHECIMENTO DA LOJA:
+${LIA_BASE_KNOWLEDGE}
+${knowledgeContext}
+=========================================
+`;
+
+    const modelo = 'claude-haiku-4-5-20251001'; // No WhatsApp usamos modelo rápido
+    
+    logger.info(`Lia WhatsApp respondendo ${telefone}`);
+
+    const anthropicResponse = await axios.post(
+      'https://api.anthropic.com/v1/messages',
+      {
+        model: modelo,
+        max_tokens: 200,
+        system: systemPrompt,
+        messages: historico.map(m => ({ role: m.role, content: m.content })),
+        temperature: 0.7
+      },
+      {
+        headers: {
+          'x-api-key': apiKey,
+          'anthropic-version': '2023-06-01',
+          'content-type': 'application/json'
+        },
+        timeout: 15000
+      }
+    );
+
+    const respostaLia = anthropicResponse.data.content[0].text;
+
+    historico.push({ role: 'assistant', content: respostaLia });
+    
+    await pb.collection('lia_conversas').update(conversa.id, {
+      mensagens: historico
+    });
+
+    return res.json({
+      sucesso: true,
+      resposta: respostaLia
+    });
+
+  } catch (error) {
+    logger.error(`Erro na API Lia (WhatsApp): ${error.message}`);
+    return res.json({ sucesso: true, ignorar: true }); // Fica muda em caso de erro grave
+  }
+});
+
 export default router;
