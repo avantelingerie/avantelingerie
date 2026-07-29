@@ -12,7 +12,7 @@ console.log('Iniciando o Porteiro (WhatsApp Bot)...');
 const client = new Client({
     authStrategy: new LocalAuth(),
     puppeteer: {
-        args: ['--no-sandbox', '--disable-setuid-sandbox']
+        args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-dev-shm-usage']
     }
 });
 
@@ -99,16 +99,22 @@ app.post('/disconnect', async (req, res) => {
             fs.unlinkSync(qrPath);
         }
         
-        // Destrói a sessão no navegador
-        await client.destroy();
+        // Destrói a sessão no navegador (ignorando erros caso o navegador já tenha travado)
+        try {
+            await client.destroy();
+        } catch (e) {
+            console.error('Aviso: erro ao fechar puppeteer, ignorando...', e.message);
+        }
         
-        // Apaga a pasta de sessão de forma segura (apagando o conteúdo, pois a raiz é um bind-mount)
+        // Apaga a pasta de sessão de forma segura e bruta usando o shell do Linux
         const authPath = path.join(__dirname, '.wwebjs_auth');
         if (fs.existsSync(authPath)) {
-            fs.readdirSync(authPath).forEach(file => {
-                const curPath = path.join(authPath, file);
-                fs.rmSync(curPath, { recursive: true, force: true });
-            });
+            const { execSync } = require('child_process');
+            try {
+                execSync(`rm -rf ${authPath}/* ${authPath}/.[!.]*`, { stdio: 'ignore' });
+            } catch (err) {
+                console.error('Aviso: falha ao usar rm -rf, ignorando...', err.message);
+            }
         }
         
         console.log('Sessão apagada. Reiniciando container...');
