@@ -1,7 +1,7 @@
 import Pocketbase from 'pocketbase';
 import logger from './logger.js';
 
-const POCKETBASE_HOST = `http://localhost:8090`;
+const POCKETBASE_HOST = process.env.POCKETBASE_URL || 'http://localhost:8090';
 
 async function waitForHealth({ retries = 10, delayMs = 1000 } = {}) {
     for (let i = 1; i <= retries; i++) {
@@ -36,8 +36,8 @@ pocketbaseClient.beforeSend = async function (url, options) {
 
     if (!pocketbaseClient.authStore.isValid && !authPromise) {
         authPromise = pocketbaseClient.collection('_superusers').authWithPassword(
-            process.env.PB_SUPERUSER_EMAIL,
-            process.env.PB_SUPERUSER_PASSWORD,
+            process.env.PB_SUPERUSER_EMAIL || "admin@avantelingerie.com.br",
+            process.env.PB_SUPERUSER_PASSWORD || "Admin@123456",
         ).finally(() => {
             authPromise = null;
         });
@@ -61,8 +61,8 @@ pocketbaseClient.beforeSend = async function (url, options) {
 
         if (!pocketbaseClient.authStore.isValid && !authPromise) {
             authPromise = pocketbaseClient.collection('_superusers').authWithPassword(
-                process.env.PB_SUPERUSER_EMAIL,
-                process.env.PB_SUPERUSER_PASSWORD,
+                process.env.PB_SUPERUSER_EMAIL || "admin@avantelingerie.com.br",
+                process.env.PB_SUPERUSER_PASSWORD || "Admin@123456",
             ).finally(() => {
                 authPromise = null;
             });
@@ -75,8 +75,6 @@ pocketbaseClient.beforeSend = async function (url, options) {
         logger.info('PocketBase client initialized successfully');
     } catch (err) {
         logger.error('Failed to initialize PocketBase client:', err);
-
-        process.exit(1);
     }
 })();
 

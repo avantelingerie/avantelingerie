@@ -22,6 +22,7 @@ services:
       - "3001:3001"
     environment:
       - NODE_ENV=production
+      - POCKETBASE_URL=http://pocketbase:8090
       # - ANTHROPIC_API_KEY=sua_chave_aqui (configurado no painel pb)
     depends_on:
       - pocketbase
@@ -30,13 +31,13 @@ services:
       - avante-network
 
   pocketbase:
-    image: ghcr.io/muchobien/pocketbase:latest
+    image: ghcr.io/muchobien/pocketbase:0.38.0
     ports:
       - "8090:8090"
     volumes:
       - ./pb_data:/pb_data
       - ./pb_public:/pb_public
-    command: ["serve", "--http=0.0.0.0:8090"]
+    command: ["serve", "--http=0.0.0.0:8090", "--dir=/pb_data"]
     restart: always
     networks:
       - avante-network
@@ -61,7 +62,7 @@ services:
       dockerfile: Dockerfile
     restart: unless-stopped
     environment:
-      - API_URL=http://api:3000
+      - API_URL=http://api:3001
       - MEDIA_DIR=/var/www/public_media/imagens
     volumes:
       - ./public_media:/var/www/public_media

@@ -59,4 +59,26 @@ router.post('/webhook', async (req, res) => {
   }
 });
 
+/**
+ * Endpoint para forçar a desconexão do WhatsApp e gerar um novo QR Code.
+ */
+router.post('/disconnect', async (req, res) => {
+  try {
+    logger.info(`[WhatsApp] Recebida solicitação de desconexão pelo painel de controle.`);
+    
+    // Dispara a requisição para o container do bot na porta 3000
+    // Usamos 'whatsapp-bot' porque esse é o nome do container no docker-compose
+    const botResponse = await axios.post('http://whatsapp-bot:3000/disconnect');
+    
+    return res.status(200).json({ 
+      sucesso: true, 
+      mensagem: 'Sinal de desconexão enviado com sucesso.',
+      detalhes: botResponse.data 
+    });
+  } catch (error) {
+    logger.error(`Erro ao enviar comando de desconexão para o bot: ${error.message}`);
+    return res.status(500).json({ erro: 'Falha ao contatar o bot de WhatsApp.' });
+  }
+});
+
 export default router;
