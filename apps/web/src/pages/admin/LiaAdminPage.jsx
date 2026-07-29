@@ -447,27 +447,28 @@ export default function LiaAdminPage() {
             <CardContent className="flex flex-col items-center justify-center py-8">
               <div className="bg-[#1A1A1A] p-8 rounded-3xl border border-[#D4AF37]/20 shadow-inner flex flex-col items-center relative overflow-hidden w-full max-w-sm">
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-[#D4AF37]/5 rounded-full blur-3xl pointer-events-none"></div>
-                <img 
-                  src={`https://avantelingerie.com.br/imagens/qr.png?t=${qrTimestamp}`} 
-                  alt="QR Code WhatsApp"
-                  className="w-64 h-64 object-contain bg-white p-3 rounded-2xl shadow-md border border-[#D4AF37]/20 relative z-10 transition-all duration-300 hover:scale-105"
-                  onError={(e) => {
-                    e.target.style.display = 'none';
-                    e.target.nextElementSibling.style.display = 'flex';
-                  }}
-                />
-                <div className="hidden flex-col items-center justify-center p-8 space-y-4 text-center relative z-10 w-full h-64">
-                  <div className="w-20 h-20 bg-gradient-to-br from-emerald-500 to-emerald-700 rounded-full flex items-center justify-center shadow-lg shadow-emerald-900/50">
-                    <CheckCircle2 className="w-10 h-10 text-white" />
+                {!qrError ? (
+                  <img 
+                    src={`https://avantelingerie.com.br/imagens/qr.png?t=${qrTimestamp}`} 
+                    alt="QR Code WhatsApp"
+                    className="w-64 h-64 object-contain bg-white p-3 rounded-2xl shadow-md border border-[#D4AF37]/20 relative z-10 transition-all duration-300 hover:scale-105"
+                    onError={() => setQrError(true)}
+                    onLoad={() => setQrError(false)}
+                  />
+                ) : (
+                  <div className="flex flex-col items-center justify-center p-8 space-y-4 text-center relative z-10 w-full h-64">
+                    <div className="w-20 h-20 bg-gradient-to-br from-emerald-500 to-emerald-700 rounded-full flex items-center justify-center shadow-lg shadow-emerald-900/50">
+                      <CheckCircle2 className="w-10 h-10 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="font-serif font-semibold text-2xl text-white">Conectado!</h3>
+                      <p className="text-sm text-gray-400 mt-2">
+                        A Lia está online e pronta para trabalhar.<br />
+                        Nenhuma ação adicional é necessária.
+                      </p>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="font-serif font-semibold text-2xl text-white">Conectado!</h3>
-                    <p className="text-sm text-gray-400 mt-2">
-                      A Lia está online e pronta para trabalhar.<br />
-                      Nenhuma ação adicional é necessária.
-                    </p>
-                  </div>
-                </div>
+                )}
               </div>
               <p className="text-xs text-gray-500 mt-6 text-center max-w-sm">
                 Se o QR Code não estiver aparecendo e o WhatsApp não estiver respondendo, o bot pode estar reiniciando. Aguarde alguns segundos.
