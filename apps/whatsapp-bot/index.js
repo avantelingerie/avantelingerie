@@ -13,16 +13,15 @@ const flagPath = path.join(__dirname, '.reset_flag');
 const authPath = path.join(__dirname, '.wwebjs_auth');
 
 // Limpeza de travas fantasmas do Chromium sempre que o container iniciar (Causa Raiz Code 21)
+// NOTA: SingletonLock no Linux é um symlink que fica "quebrado" quando o processo morre.
+// fs.existsSync() retorna false para symlinks quebrados! Por isso, devemos apagar de forma cega.
 const sessionPath = path.join(authPath, 'session');
 if (fs.existsSync(sessionPath)) {
     const lockPath = path.join(sessionPath, 'SingletonLock');
     const cookiePath = path.join(sessionPath, 'SingletonCookie');
-    if (fs.existsSync(lockPath)) {
-        try { fs.unlinkSync(lockPath); console.log('Trava SingletonLock removida com sucesso no boot.'); } catch(e) { console.error('Erro ao remover SingletonLock:', e.message); }
-    }
-    if (fs.existsSync(cookiePath)) {
-        try { fs.unlinkSync(cookiePath); console.log('Trava SingletonCookie removida com sucesso no boot.'); } catch(e) { console.error('Erro ao remover SingletonCookie:', e.message); }
-    }
+    
+    try { fs.unlinkSync(lockPath); console.log('Trava SingletonLock removida com sucesso no boot.'); } catch(e) { }
+    try { fs.unlinkSync(cookiePath); console.log('Trava SingletonCookie removida com sucesso no boot.'); } catch(e) { }
 }
 
 if (fs.existsSync(flagPath)) {
