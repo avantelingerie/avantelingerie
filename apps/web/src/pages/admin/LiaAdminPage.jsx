@@ -16,7 +16,9 @@ export default function LiaAdminPage() {
   
   const [conversas, setConversas] = useState([]);
   const [selectedSessionId, setSelectedSessionId] = useState(null);
+  const [searchTerm, setSearchTerm] = useState('');
   const [isLoadingConversas, setIsLoadingConversas] = useState(true);
+  const [showQrCode, setShowQrCode] = useState(false);
 
   const [knowledge, setKnowledge] = useState([]);
   const [isKnowledgeLoading, setIsKnowledgeLoading] = useState(true);
@@ -39,18 +41,18 @@ export default function LiaAdminPage() {
     fetchConversas();
     fetchKnowledge();
     
-    // Inscreve no Realtime para novas mensagens
     pb.collection('lia_conversas').subscribe('*', function (e) {
       if (e.action === 'create' || e.action === 'update') {
         setConversas(prev => {
           const exists = prev.findIndex(c => c.id === e.record.id);
+          const recordWithTime = { ...e.record, local_updated: Date.now() };
+          
           if (exists >= 0) {
             const copy = [...prev];
-            copy[exists] = e.record;
-            // Re-sort by updated date
-            return copy.sort((a, b) => new Date(b.updated) - new Date(a.updated));
+            copy.splice(exists, 1); // Remove da posição atual
+            return [recordWithTime, ...copy]; // Coloca no topo
           } else {
-            return [e.record, ...prev];
+            return [recordWithTime, ...prev]; // Nova no topo
           }
         });
       }
@@ -71,8 +73,9 @@ export default function LiaAdminPage() {
     try {
       setIsLoadingConversas(true);
       const records = await pb.collection('lia_conversas').getFullList();
-      // Ordenar no frontend caso o banco local não tenha o campo de data indexado
-      records.sort((a, b) => new Date(b.updated || Date.now()) - new Date(a.updated || Date.now()));
+      // O banco SQLite retorna pela ordem de inserção. 
+      // Como não temos 'updated', invertemos para os mais novos ficarem no topo.
+      records.reverse(); 
       setConversas(records);
     } catch (error) {
       console.error('Erro ao buscar conversas:', error);
@@ -186,6 +189,14 @@ export default function LiaAdminPage() {
     }
   };
 
+  const filteredConversas = conversas.filter(c => {
+    if (!searchTerm) return true;
+    const term = searchTerm.toLowerCase();
+    const matchSession = c.session_id?.toLowerCase().includes(term);
+    const matchMessage = c.mensagens?.some(m => m.content?.toLowerCase().includes(term));
+    return matchSession || matchMessage;
+  });
+
   const selectedConversa = conversas.find(c => c.session_id === selectedSessionId);
 
   return (
@@ -224,17 +235,22 @@ export default function LiaAdminPage() {
               <CardHeader className="p-4 border-b border-[#D4AF37]/10 bg-[#1A1A1A]">
                 <div className="relative">
                   <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-500" />
-                  <Input placeholder="Buscar por sessão..." className="pl-9 bg-[#121212] border-[#D4AF37]/30 text-white focus-visible:ring-[#D4AF37] rounded-xl placeholder:text-gray-600" />
+                  <Input 
+                    placeholder="Buscar sessão ou mensagem..." 
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                    className="pl-9 bg-[#121212] border-[#D4AF37]/30 text-white focus-visible:ring-[#D4AF37] rounded-xl placeholder:text-gray-600" 
+                  />
                 </div>
               </CardHeader>
               <ScrollArea className="flex-1 min-h-0 p-2">
                 {isLoadingConversas ? (
                   <div className="p-4 text-center text-gray-400 text-sm">Carregando...</div>
-                ) : conversas.length === 0 ? (
+                ) : filteredConversas.length === 0 ? (
                   <div className="p-4 text-center text-gray-400 text-sm">Nenhuma conversa encontrada.</div>
                 ) : (
                   <div className="space-y-2">
-                    {conversas.map(conversa => {
+                    {filteredConversas.map(conversa => {
                       const msgCount = conversa.mensagens?.length || 0;
                       const ultimaMsg = conversa.mensagens?.[msgCount - 1]?.content || 'Nova Conversa';
                       const isSelected = selectedSessionId === conversa.session_id;
@@ -257,7 +273,7 @@ export default function LiaAdminPage() {
                             </span>
                             <span className={`text-[10px] flex items-center gap-1 font-medium ${isSelected ? 'text-[#D4AF37]' : 'text-gray-500'}`}>
                               <Clock className="w-3 h-3" />
-                              {conversa.updated ? new Date(conversa.updated).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) : 'Agora'}
+                              {conversa.local_updated ? new Date(conversa.local_updated).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) : 'Histórico'}
                             </span>
                           </div>
                           <p className="text-xs text-gray-400 truncate max-w-[250px]">{ultimaMsg}</p>
@@ -448,7 +464,19 @@ export default function LiaAdminPage() {
             <CardContent className="flex flex-col items-center justify-center py-8">
               <div className="bg-[#1A1A1A] p-8 rounded-3xl border border-[#D4AF37]/20 shadow-inner flex flex-col items-center relative overflow-hidden w-full max-w-sm">
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-[#D4AF37]/5 rounded-full blur-3xl pointer-events-none"></div>
-                {!qrError ? (
+                {!showQrCode ? (
+                  <div className="flex flex-col items-center justify-center p-8 space-y-4 text-center relative z-10 w-full h-64">
+                    <div className="w-20 h-20 bg-[#121212] rounded-full flex items-center justify-center shadow-md border border-[#D4AF37]/30">
+                      <Smartphone className="w-10 h-10 text-[#D4AF37]" />
+                    </div>
+                    <div>
+                      <h3 className="font-serif font-semibold text-xl text-white mb-3">Pronto para conectar?</h3>
+                      <Button onClick={() => setShowQrCode(true)} className="bg-[#D4AF37] hover:bg-[#b58825] text-[#1A1A1A] font-semibold rounded-xl">
+                        Exibir QR Code
+                      </Button>
+                    </div>
+                  </div>
+                ) : !qrError ? (
                   <img 
                     src={`https://avantelingerie.com.br/imagens/qr.png?t=${qrTimestamp}`} 
                     alt="QR Code WhatsApp"
@@ -471,14 +499,20 @@ export default function LiaAdminPage() {
                   </div>
                 )}
               </div>
-              <p className="text-xs text-gray-500 mt-6 text-center max-w-sm">
-                Se o QR Code não estiver aparecendo e o WhatsApp não estiver respondendo, o bot pode estar reiniciando. Aguarde alguns segundos.
-              </p>
+              
+              {showQrCode && (
+                <p className="text-xs text-gray-500 mt-6 text-center max-w-sm">
+                  Se o QR Code não estiver aparecendo e o WhatsApp não estiver respondendo, o bot pode estar reiniciando. Aguarde alguns segundos.
+                </p>
+              )}
               
               <div className="mt-8 flex justify-center w-full">
                 <Button 
                   variant="outline" 
-                  onClick={handleDisconnect} 
+                  onClick={async () => {
+                    await handleDisconnect();
+                    setShowQrCode(true); // Garante que o QR novo vai aparecer
+                  }} 
                   disabled={isDisconnecting}
                   className="border-red-900 text-red-400 hover:bg-red-900/30 hover:text-red-300 bg-transparent rounded-xl transition-all"
                 >
