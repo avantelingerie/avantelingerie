@@ -191,9 +191,8 @@ export default function LiaWidget() {
     }
   };
 
+  const [imageError, setImageError] = useState(false);
 
-
-  // ... (manter o restante igual e alterar o render do botão)
   if (isDismissed && !isOpen) return null;
 
   return (
@@ -205,7 +204,16 @@ export default function LiaWidget() {
           <div className="bg-[#1A1A1A] text-[#FDF0F0] p-4 flex items-center justify-between border-b border-[#B8860B]/30">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-full overflow-hidden bg-[#B8860B]/20 border border-[#B8860B]/50 flex items-center justify-center shadow-inner">
-                <Sparkles className="w-5 h-5 text-[#B8860B]" />
+                <img 
+                  src="/imagens/lia_avatar.png" 
+                  alt="Lia" 
+                  className="w-full h-full object-cover"
+                  onError={(e) => {
+                    e.target.style.display = 'none';
+                    e.target.nextSibling.style.display = 'flex';
+                  }}
+                />
+                <Sparkles className="w-5 h-5 text-[#B8860B] hidden" />
               </div>
               <div>
                 <h3 className="font-semibold text-[15px]">Lia | Consultora Avante</h3>
@@ -301,14 +309,25 @@ export default function LiaWidget() {
           )}
           
           {/* Balão de chamariz (opcional, aparece no hover) */}
-          <div className="absolute -top-6 right-1/2 translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white text-[#1A1A1A] text-xs font-medium py-2 px-4 rounded-2xl rounded-br-sm shadow-xl border border-[#B8860B]/20 whitespace-nowrap z-10">
-            Falar com a Lia ✨
-          </div>
+          {!imageError && (
+            <div className="absolute -top-6 right-1/2 translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white text-[#1A1A1A] text-xs font-medium py-2 px-4 rounded-2xl rounded-br-sm shadow-xl border border-[#B8860B]/20 whitespace-nowrap z-10">
+              Falar com a Lia ✨
+            </div>
+          )}
 
-          <div className="w-16 h-16 bg-[#1A1A1A] text-white rounded-full shadow-2xl ring-2 ring-[#B8860B]/50 flex items-center justify-center relative overflow-hidden">
-             <div className="absolute inset-0 bg-gradient-to-tr from-[#B8860B]/20 to-transparent"></div>
-             <MessageSquare className="w-7 h-7 relative z-10 text-[#B8860B]" />
-          </div>
+          {!imageError ? (
+            <img 
+              src="/imagens/lia_avatar.png" 
+              alt="Falar com a Lia" 
+              className="h-full w-auto object-contain drop-shadow-2xl filter contrast-105"
+              onError={() => setImageError(true)}
+            />
+          ) : (
+            <div className="w-16 h-16 bg-[#1A1A1A] text-white rounded-full shadow-2xl ring-2 ring-[#B8860B]/50 flex items-center justify-center relative overflow-hidden">
+               <div className="absolute inset-0 bg-gradient-to-tr from-[#B8860B]/20 to-transparent"></div>
+               <MessageSquare className="w-7 h-7 relative z-10 text-[#B8860B]" />
+            </div>
+          )}
         </button>
       )}
     </div>

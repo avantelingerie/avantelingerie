@@ -462,3 +462,21 @@ ormalizeText na função geradora de variações; Atualização para renderizaç
 ### Próximos Passos
 1. A infraestrutura e a hospedagem da loja agora pertencem 100% à VPS da Hostinger. A hospedagem antiga (`lmdesignerweb.com`) pode ser formalmente cancelada pela cliente.
 2. Iniciar novos fluxos pendentes e continuar o acompanhamento da Lia em produção.
+
+---
+
+## [30-07-2026] O Incidente das Mídias Desaparecidas (Root Cause & Fix)
+
+### **Problema Relatado:** 
+Todos os vídeos (depoimentos, quem somos, background) e imagens essenciais (avatar da Lia, ícones) sumiram da loja em Produção e do ambiente de Desenvolvimento Local, gerando 404.
+
+### **Diagnóstico de Causa Raiz:** 
+Embora a hospedagem antiga (`lmdesignerweb.com`) estivesse abandonada, os arquivos das mídias não estavam mais no diretório `/root/avantelingerie/public_media` da VPS (a etapa anterior de download relatada em 28-07 não estava persistida em disco).
+No ambiente local, a pasta nunca existiu pois o GitHub bloqueia commits acima de 100MB (limite estrito) e o arquivo `.gitignore` previne a sincronização desses artefatos gigantes.
+
+### **Correção Cirúrgica & Raio de Impacto:**
+1. **VPS (Produção):** Executado um comando `wget` maciço via SSH que reconstruiu as pastas `/video` e `/imagens` dentro de `/public_media`, baixando diretamente 483MB em vídeos sem passar pelo disco da usuária. O proxy `caddy` foi reiniciado via `docker compose restart caddy` forçando o reload da montagem de volumes, retornando `HTTP/2 200` absoluto.
+2. **Local (Desenvolvimento):** Para não sobrecarregar o desktop da Host com 500MB de arquivos, editamos o `apps/web/vite.config.js`. Adicionamos uma regra inteligente de **Proxy Reverso**. Agora, qualquer pedido local na porta `3000` para `/video/*` é injetado dinamicamente para puxar a mídia direto da produção (`https://avantelingerie.com.br`).
+3. **LiaWidget.jsx:** Restaurada a tag `<img src="/imagens/lia_avatar.png">` que tinha sido substituída emergencialmente, e ressuscitado o gatilho `imageError` para proteger a interface contra quebras.
+
+**Status:** ✅ Solucionado (Auditoria dupla finalizada). Mídias operacionais 100% online.

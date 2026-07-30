@@ -382,6 +382,14 @@ export default defineConfig({
 				target: 'http://127.0.0.1:3001',
 				changeOrigin: true,
 				rewrite: (path) => path.replace(/^\/hcgi\/api/, '')
+			},
+			'/video': {
+				target: 'https://avantelingerie.com.br',
+				changeOrigin: true
+			},
+			'/imagens': {
+				target: 'https://avantelingerie.com.br',
+				changeOrigin: true
 			}
 		},
 		headers: {
