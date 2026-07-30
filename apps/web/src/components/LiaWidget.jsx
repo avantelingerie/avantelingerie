@@ -299,7 +299,11 @@ export default function LiaWidget() {
       {!isOpen && (
         <button
           onClick={() => { setIsOpen(true); setHasTriggered(true); if(messages.length === 0) triggerLia('manual'); }}
-          className="relative group flex items-center justify-center transition-transform duration-500 hover:scale-105 origin-bottom animate-in slide-in-from-bottom-10 w-16 h-16 bg-[#1A1A1A] text-white rounded-full shadow-lg ring-2 ring-[#B8860B]/50"
+          className={`relative group flex items-center justify-center transition-transform duration-500 hover:scale-105 origin-bottom animate-in slide-in-from-bottom-10 ${
+            !imageError 
+              ? 'w-24 h-24 sm:w-28 sm:h-28' 
+              : 'w-16 h-16 bg-[#1A1A1A] text-white rounded-full shadow-lg ring-2 ring-[#B8860B]/50'
+          }`}
         >
           {messages.length > 0 && !isTyping && (
             <span className="absolute flex z-10 top-0 right-0 h-3 w-3">
@@ -319,7 +323,7 @@ export default function LiaWidget() {
             <img 
               src="/imagens/lia_avatar.png" 
               alt="Falar com a Lia" 
-              className="h-full w-auto object-contain drop-shadow-2xl filter contrast-105"
+              className="w-full h-full object-contain drop-shadow-2xl"
               onError={() => setImageError(true)}
             />
           ) : (
