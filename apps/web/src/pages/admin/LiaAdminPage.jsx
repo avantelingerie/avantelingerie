@@ -24,6 +24,7 @@ export default function LiaAdminPage() {
   const [novaRegra, setNovaRegra] = useState({ titulo: '', conteudo: '', data_expiracao: '' });
   const [qrTimestamp, setQrTimestamp] = useState(Date.now());
   const [isDisconnecting, setIsDisconnecting] = useState(false);
+  const [qrError, setQrError] = useState(false);
 
   const messagesEndRef = useRef(null);
 
