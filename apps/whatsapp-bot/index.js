@@ -73,8 +73,21 @@ client.on('ready', () => {
         fs.unlinkSync(qrPath);
     }
 });
+// Cache para evitar mensagens duplicadas (bug do whatsapp-web.js com Multi-Device)
+const processedMessageIds = new Set();
+const maxCacheSize = 500;
 
 client.on('message', async msg => {
+    // Evita processar a exata mesma mensagem mais de uma vez
+    if (processedMessageIds.has(msg.id.id)) return;
+    
+    // Adiciona ao cache
+    processedMessageIds.add(msg.id.id);
+    if (processedMessageIds.size > maxCacheSize) {
+        // Remove o mais antigo (o Set mantem a ordem de inserção)
+        const first = processedMessageIds.values().next().value;
+        processedMessageIds.delete(first);
+    }
     // Ignora mensagens de grupos ou status
     if (msg.from === 'status@broadcast' || msg.from.includes('@g.us')) return;
 
