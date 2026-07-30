@@ -480,3 +480,20 @@ No ambiente local, a pasta nunca existiu pois o GitHub bloqueia commits acima de
 3. **LiaWidget.jsx:** Restaurada a tag `<img src="/imagens/lia_avatar.png">` que tinha sido substituída emergencialmente, e ressuscitado o gatilho `imageError` para proteger a interface contra quebras.
 
 **Status:** ✅ Solucionado (Auditoria dupla finalizada). Mídias operacionais 100% online.
+
+## [30-07-2026] (Parte 2) Melhorias no Painel Admin e Bugfixes no Bot WhatsApp
+
+### O que foi feito e resolvido
+1. **Amnésia Cronológica no Painel Admin:** As mensagens do WhatsApp que chegavam não subiam para o topo do painel administrativo. 
+   - **Solução:** Como o PocketBase gerado via WebSocket no frontend não envia `updated` dinâmico em eventos de webhook em tempo real (já que quem atualiza o banco é a API backend), injetamos um `local_updated: new Date()` no frontend durante o evento do WebSocket e ordenamos as sessões combinando `updated` e `local_updated`. Adicionamos um `.reverse()` no fetch inicial.
+2. **Barra de Pesquisa e Horários (UX):** A barra de pesquisa do painel não funcionava. 
+   - **Solução:** Implementado filtro por `telefone/session_id` e conteúdo. Adicionada formatação de horário amigável para mensagens no formato "HH:mm".
+3. **QR Code Inteligente:** O QR code do WhatsApp estava aparecendo permanentemente (e já vencido) ao acessar a aba.
+   - **Solução:** Criado botão `Exibir QR Code` sob demanda (`showQrCode`) ocultando a imagem até a usuária solicitar.
+4. **Bug do Disparo Fantasma (6x):** A IA estava recebendo e respondendo a exata mesma mensagem do usuário 6 vezes.
+   - **Diagnóstico:** Bug da biblioteca `whatsapp-web.js` em contas com Múltiplos Dispositivos (Multi-Device). Ao receber o "history sync", ela disparava múltiplos eventos `@lid`.
+   - **Solução:** Implementado um Filtro de Cache em Memória (`Set`) no `apps/whatsapp-bot/index.js` guardando os últimos 500 IDs (`msg.id.id`). Agora as cópias descartáveis que chegam no mesmo segundo são sumariamente ignoradas.
+5. **Correção dos Links Absolutos (Haiku):** A IA estava enviando mensagens textuais instruindo a "Clicar no Menu" (já que leu isso no catálogo), ignorando que o cliente estava no WhatsApp.
+   - **Solução:** O prompt de sistema do cérebro (`apps/api/src/routes/lia.js`) foi reescrito injetando alertas imperativos de que o cliente NÃO tem acesso ao menu, acompanhado das URLs hardcoded para Revenda e Shop.
+
+**Status:** ✅ Todas as correções aplicadas na VPS, validadas e 100% operacionais. Tudo pronto para o próximo dia de trabalho!
