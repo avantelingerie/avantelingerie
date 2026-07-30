@@ -211,7 +211,7 @@ ${knowledgeContext}
     const palavrasComplexas = ['comprar', 'problema', 'defeito', 'caro', 'desconto', 'tamanho', 'medida', 'pagamento', 'cartão', 'frete', 'entrega'];
     const precisaDeNuance = palavrasComplexas.some(palavra => mensagem.toLowerCase().includes(palavra)) || historico.length > 6;
     
-    const modelo = precisaDeNuance ? 'claude-3-5-sonnet-20240620' : 'claude-3-haiku-20240307';
+    const modelo = precisaDeNuance ? 'claude-sonnet-4-6' : 'claude-haiku-4-5-20251001';
     
     logger.info(`Lia roteando mensagem via modelo: ${modelo} (Sessão: ${session_id})`);
 
@@ -338,7 +338,7 @@ ${knowledgeContext}
 =========================================
 `;
 
-    const modelo = 'claude-3-haiku-20240307'; // No WhatsApp usamos modelo rápido
+    const modelo = 'claude-haiku-4-5-20251001'; // No WhatsApp usamos modelo rápido
     
     logger.info(`Lia WhatsApp respondendo ${telefone}`);
 
