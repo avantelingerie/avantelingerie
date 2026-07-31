@@ -48,9 +48,17 @@ export default function TrackingPixelsTab() {
         filter: 'servico = "marketing"',
       });
 
-      // Helper para salvar ou criar
+      // Helper para salvar, atualizar ou deletar se estiver vazio
       const saveOrUpdate = async (chave_nome, chave_valor) => {
         const existing = records.find(r => r.chave_nome === chave_nome);
+        
+        if (!chave_valor) {
+          if (existing) {
+            await pb.collection('integracoes_config').delete(existing.id);
+          }
+          return;
+        }
+
         if (existing) {
           if (existing.chave_valor !== chave_valor) {
              await pb.collection('integracoes_config').update(existing.id, {

@@ -7218,3 +7218,15 @@
 ## 2026-07-31 16:23:37.758Z click
 - element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Tracking & Pixels"}
 
+## 2026-07-31 17:08:35.189Z load
+- url: http://localhost:3000/admin/analytics
+- title: Avante Lingerie | Oficial
+
+## 2026-07-31 17:41:07.354Z load
+- url: http://localhost:3000/admin/analytics
+- title: Avante Lingerie | Oficial
+
+## 2026-07-31 18:09:09.641Z load
+- url: http://localhost:3000/admin/analytics
+- title: Avante Lingerie | Oficial
+
