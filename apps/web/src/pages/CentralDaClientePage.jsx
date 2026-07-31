@@ -640,7 +640,7 @@ export default function CentralDaClientePage() {
           <section id="politica-de-privacidade">
             <h2>1. Política de Privacidade</h2>
             <p>
-              A Avante Lingerie, sediada na Rua Folly, 69, Olaria, Nova Friburgo — RJ, CEP 28623-780, valoriza a sua privacidade e garante a segurança dos seus dados pessoais em conformidade com a Lei Geral de Proteção de Dados (LGPD).
+              A Avante Lingerie, sediada na Rua Odenir Pinheiro, nº 20 - 3º Andar, Loteamento Nosso Sonho - Olaria, Nova Friburgo, RJ, CEP: 28623-620, valoriza a sua privacidade e garante a segurança dos seus dados pessoais em conformidade com a Lei Geral de Proteção de Dados (LGPD).
             </p>
 
             <h3 id="politica-dados">1.1. Coleta de Dados</h3>
@@ -712,7 +712,7 @@ export default function CentralDaClientePage() {
             <ul className="list-disc list-inside text-gray-600 mb-6 leading-relaxed pl-4">
               <li className="mb-2"><strong>E-mail:</strong> privacidade@avantelingerie.com.br</li>
               <li className="mb-2"><strong>WhatsApp:</strong> (22) 99761-8591</li>
-              <li><strong>Endereço Postal:</strong> Rua Folly, 69, Olaria, Nova Friburgo — RJ, CEP 28623-780</li>
+              <li><strong>Endereço Postal:</strong> Rua Odenir Pinheiro, nº 20 - 3º Andar, Loteamento Nosso Sonho - Olaria, Nova Friburgo, RJ, CEP: 28623-620</li>
             </ul>
           </section>
 
@@ -853,7 +853,7 @@ export default function CentralDaClientePage() {
               <div className="contact-card">
                 <i className="fa-solid fa-location-dot"></i>
                 <h5>Sede</h5>
-                <p>Rua Folly, 69, Olaria</p>
+                <p>Rua Odenir Pinheiro, 20</p>
                 <p>Nova Friburgo — RJ</p>
               </div>
             </div>

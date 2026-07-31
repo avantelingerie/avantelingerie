@@ -37,7 +37,7 @@ export default function StoreSection() {
           
           <div className="w-full rounded-2xl overflow-hidden border border-[#c59b5f]/20 shadow-md aspect-video">
             <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3691.2009313000763!2d-42.5385156258409!3d-22.308239416751956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x978bdb9789feb5%3A0x5d20d7898a7ded38!2sAvante%20Lingerie%20%7C%20Confec%C3%A7%C3%A3o%20de%20Moda%20%C3%8Dntima!5e0!3m2!1spt-BR!2sbr!4v1778602642697!5m2!1spt-BR!2sbr" 
+              src="https://maps.google.com/maps?q=Avante+Lingerie,+Rua+Odenir+Pinheiro,+20,+Olaria,+Nova+Friburgo+-+RJ&t=&z=16&ie=UTF8&iwloc=&output=embed" 
               width="100%" 
               height="100%" 
               className="border-0" 
@@ -50,7 +50,7 @@ export default function StoreSection() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4 text-gray-600 font-sans text-sm">
             <a 
-              href="https://maps.google.com/?q=Rua+Folly,+69+-+Olaria,+Nova+Friburgo+-+RJ,+28623-780" 
+              href="https://maps.google.com/?q=Rua+Odenir+Pinheiro,+20,+Loteamento+Nosso+Sonho,+Olaria,+Nova+Friburgo+-+RJ,+28623-620" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="flex items-start gap-3 hover:text-[#c59b5f] transition-all group p-3 bg-white border border-gray-100 rounded-xl shadow-sm"
@@ -58,7 +58,7 @@ export default function StoreSection() {
               <MapPin className="w-5 h-5 text-[#c59b5f] shrink-0 mt-0.5 group-hover:scale-105 transition-transform" />
               <div>
                 <p className="font-bold text-gray-900 mb-0.5">Endereço Oficial</p>
-                <p className="font-light">Rua Folly, 69 - Olaria, Nova Friburgo - RJ, 28623-780</p>
+                <p className="font-light text-xs">Rua Odenir Pinheiro, nº 20 - 3º Andar, Olaria, Nova Friburgo, RJ, 28623-620</p>
               </div>
             </a>
             
@@ -66,7 +66,7 @@ export default function StoreSection() {
               <Clock className="w-5 h-5 text-[#c59b5f] shrink-0 mt-0.5" />
               <div>
                 <p className="font-bold text-gray-900 mb-0.5">Horário de Funcionamento</p>
-                <p className="font-light">Segunda a Quinta: 08:00 às 18:00<br />Sexta: 08:00 às 13:00</p>
+                <p className="font-light">Segunda a Quinta: 8h às 17h<br />Sexta: 8h às 13h</p>
               </div>
             </div>
             

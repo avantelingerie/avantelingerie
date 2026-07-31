@@ -86,7 +86,7 @@ const LojasPage = () => (
     </p>
     <div className="bg-white border border-[#c59b5f]/15 rounded-3xl p-8 max-w-md w-full shadow-premium-sm text-left mb-8">
       <h3 className="font-bold text-gray-900 mb-2 font-serif text-lg">Ateliê Nova Friburgo</h3>
-      <p className="text-xs text-gray-500 mb-4">Rua Folly, 69, Olaria, Nova Friburgo — RJ</p>
+      <p className="text-xs text-gray-500 mb-4">Rua Odenir Pinheiro, nº 20 - 3º Andar, Olaria, Nova Friburgo - RJ</p>
       <p className="text-xs text-gray-600 font-bold mb-1">Segunda a Quinta: 08:00h às 17:00h</p>
       <p className="text-xs text-gray-600 font-bold">Sexta: 08:00h às 13:00h</p>
     </div>

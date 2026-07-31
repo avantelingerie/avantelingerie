@@ -6418,3 +6418,175 @@
 ## 2026-07-28 15:35:26.927Z click
 - element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
 
+## 2026-07-31 12:15:43.187Z load
+- url: http://localhost:3000/
+- title: Avante Lingerie | Oficial
+
+## 2026-07-31 12:15:47.355Z navigate
+- url: http://localhost:3000/
+- via: replaceState
+
+## 2026-07-31 12:15:48.913Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 12:15:48.918Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 12:15:49.002Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 12:15:49.002Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 12:15:49.038Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 12:15:49.039Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 12:15:49.060Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 12:15:49.060Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 12:30:19.828Z load
+- url: http://localhost:3000/
+- title: Avante Lingerie | Oficial
+
+## 2026-07-31 12:30:20.999Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 12:30:21.004Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 12:30:21.022Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 12:30:21.022Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 12:30:21.037Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 12:30:21.038Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 12:30:21.044Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 12:30:21.044Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 12:30:59.753Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-07-31 12:31:03.298Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Aceitar & Continuar"}
+
+## 2026-07-31 13:26:31.806Z load
+- url: http://localhost:3000/
+- title: Avante Lingerie | Oficial
+
+## 2026-07-31 13:26:33.348Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 13:26:33.352Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 13:26:33.385Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 13:26:33.386Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 13:26:33.405Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 13:26:33.405Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 13:26:33.420Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 13:26:33.420Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 13:44:35.899Z load
+- url: http://localhost:3000/
+- title: Avante Lingerie | Oficial
+
+## 2026-07-31 13:44:37.205Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 13:44:37.207Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 13:44:37.229Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 13:44:37.229Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 13:44:37.237Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 13:44:37.237Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 13:44:37.242Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 13:44:37.242Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 13:57:27.606Z load
+- url: http://localhost:3000/
+- title: Avante Lingerie | Oficial
+
+## 2026-07-31 13:57:29.305Z navigate
+- url: http://localhost:3000/
+- via: replaceState
+
+## 2026-07-31 13:57:30.094Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 13:57:30.098Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 13:57:30.125Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 13:57:30.126Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 13:57:30.140Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 13:57:30.143Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 13:57:30.155Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 13:57:30.156Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 13:58:47.736Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":"radix-:r6:","placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Vocês realizam entregas para todo o território nacional?"}
+
+## 2026-07-31 13:58:49.320Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":"radix-:r6:","placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Vocês realizam entregas para todo o território nacional?"}
+
+## 2026-07-31 13:58:55.812Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":"radix-:rc:","placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Quais as formas de pagamento aceitas?"}
+
+## 2026-07-31 13:59:05.863Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":"radix-:rc:","placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Quais as formas de pagamento aceitas?"}
+
+## 2026-07-31 14:00:05.593Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-07-31 14:00:30.016Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Endereço OficialRua Odenir Pinheiro, nº 20 - 3º Andar, Olaria, Nova Friburgo, RJ, 28623-620"}
+

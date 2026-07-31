@@ -301,7 +301,7 @@ export default function ConfiguracoesLoja() {
                   className="pl-9 min-h-[80px]"
                   value={config.endereco_completo || ''} 
                   onChange={e => handleChange('endereco_completo', e.target.value)} 
-                  placeholder="Rua Exemplo, 123 - Bairro, Cidade - UF"
+                  placeholder="Rua Odenir Pinheiro, nº 20 - 3º Andar..."
                 />
               </div>
             </div>
@@ -359,7 +359,7 @@ export default function ConfiguracoesLoja() {
                     id="retirada_horario" 
                     value={config.retirada_horario || ''} 
                     onChange={e => handleChange('retirada_horario', e.target.value)} 
-                    placeholder="Seg-Qui 08h-17h, Sex 08h-13h"
+                    placeholder="Segunda à Quinta: 8h às 17h, Sexta: 8h às 13h"
                   />
                 </div>
                 <div className="space-y-2">
