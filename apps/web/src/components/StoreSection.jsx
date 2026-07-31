@@ -37,13 +37,13 @@ export default function StoreSection() {
           
           <div className="w-full rounded-2xl overflow-hidden border border-[#c59b5f]/20 shadow-md aspect-video">
             <iframe 
-              src="https://maps.google.com/maps?q=Avante+Lingerie,+Rua+Odenir+Pinheiro,+20,+Olaria,+Nova+Friburgo+-+RJ&t=&z=16&ie=UTF8&iwloc=&output=embed" 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3691.1987251313058!2d-42.53743612470715!3d-22.308322879680734!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x978a696111a4df%3A0x9c881f173c9a29cf!2sRua%20Odenir%20Pinheiro%2C%2020%20-%20Lot.%20Nosso%20Sonho%2C%20Nova%20Friburgo%20-%20RJ%2C%2028623-620!5e0!3m2!1spt-PT!2sbr!4v1785507054099!5m2!1spt-PT!2sbr" 
               width="100%" 
               height="100%" 
               className="border-0" 
               allowFullScreen="" 
               loading="lazy" 
-              referrerPolicy="no-referrer-when-downgrade" 
+              referrerPolicy="strict-origin-when-cross-origin" 
               title="Mapa da Loja Avante Lingerie"
             ></iframe>
           </div>
