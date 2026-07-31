@@ -14,6 +14,7 @@ import { Button } from '@/components/ui/button.jsx';
 import { Skeleton } from '@/components/ui/skeleton.jsx';
 import { toast } from 'sonner';
 import pb from '@/lib/pocketbaseClient.js';
+import TrackingPixelsTab from '@/components/admin/TrackingPixelsTab.jsx';
 
 export default function AnalyticsPage() {
   const [isLoading, setIsLoading] = useState(true);
@@ -523,6 +524,13 @@ export default function AnalyticsPage() {
             >
               <Activity className="w-3.5 h-3.5" />
               Jornadas ao Vivo
+            </button>
+            <button 
+              onClick={() => setActiveTab('tracking')}
+              className={`px-4 py-2 text-xs font-bold rounded-lg transition-all duration-300 flex items-center gap-2 ${activeTab === 'tracking' ? 'bg-[#c59b5f] text-black shadow-md' : 'text-zinc-400 hover:text-white'}`}
+            >
+              <Target className="w-3.5 h-3.5" />
+              Tracking & Pixels
             </button>
           </div>
 
@@ -1058,7 +1066,7 @@ export default function AnalyticsPage() {
                 </Card>
               </div>
             </motion.div>
-          ) : (
+          ) : activeTab === 'jornadas' ? (
             <motion.div
               key="jornadas"
               initial={{ opacity: 0, y: 15 }}
@@ -1206,6 +1214,16 @@ export default function AnalyticsPage() {
                   </CardContent>
                 </Card>
               </div>
+            </motion.div>
+          ) : (
+            <motion.div
+              key="tracking"
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -15 }}
+              transition={{ duration: 0.25 }}
+            >
+              <TrackingPixelsTab />
             </motion.div>
           )}
         </AnimatePresence>

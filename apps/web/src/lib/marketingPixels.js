@@ -3,9 +3,9 @@ import pb from '@/lib/pocketbaseClient.js';
 // CONFIGURAÇÃO DIRETA DE MARKETING (Opcional - Altamente Recomendado para evitar 404 de Banco)
 // Insira seus IDs aqui diretamente para pular a consulta ao PocketBase e blindar o site contra erros.
 const CONFIG_PIXELS_LOCAIS = {
-  meta_pixel_id: '',       // Insira seu ID do Meta Pixel aqui (ex: '1234567890')
-  google_analytics_id: '', // Insira seu ID do GA4 aqui (ex: 'G-XXXXXX')
-  enable_pocketbase_sync: false, // Defina como true APENAS se você já tiver criado a coleção 'configuracoes_marketing' no PocketBase.
+  meta_pixel_id: '',
+  google_analytics_id: '',
+  enable_pocketbase_sync: true, // Habilitado para ler da integracoes_config
 };
 
 let pixelsInitialized = false;
@@ -16,16 +16,22 @@ export async function initializePixels() {
   let metaPixelId = CONFIG_PIXELS_LOCAIS.meta_pixel_id || '';
   let gaMeasurementId = CONFIG_PIXELS_LOCAIS.google_analytics_id || '';
 
-  // Só faz a chamada ao PocketBase se a sincronização estiver ativada e as chaves locais estiverem vazias
   if (CONFIG_PIXELS_LOCAIS.enable_pocketbase_sync && !metaPixelId && !gaMeasurementId) {
     try {
-      const records = await pb.collection('configuracoes_marketing').getFullList();
-      if (records.length > 0) {
-        metaPixelId = records[0].meta_pixel_id || '';
-        gaMeasurementId = records[0].google_analytics_id || '';
-      }
+      const records = await pb.collection('integracoes_config').getFullList({
+        filter: 'servico = "marketing"',
+      });
+      
+      records.forEach(record => {
+        if (record.chave_nome === 'meta_pixel_id' && record.chave_valor) {
+          metaPixelId = record.chave_valor;
+        }
+        if (record.chave_nome === 'google_analytics_id' && record.chave_valor) {
+          gaMeasurementId = record.chave_valor;
+        }
+      });
     } catch (err) {
-      console.warn('[Pixels] Coleção configuracoes_marketing não configurada ainda. Lendo localstorage...', err);
+      console.warn('[Pixels] Erro ao ler integracoes_config. Lendo localstorage...', err);
       metaPixelId = localStorage.getItem('meta_pixel_id') || '';
       gaMeasurementId = localStorage.getItem('google_analytics_id') || '';
     }

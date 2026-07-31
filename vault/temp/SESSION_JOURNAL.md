@@ -6751,3 +6751,470 @@
 ## 2026-07-31 14:10:38.578Z console.warn
 - text: Please replace pb.files.getUrl() with pb.files.getURL()
 
+## 2026-07-31 14:13:27.007Z load
+- url: http://localhost:3000/
+- title: Avante Lingerie | Oficial
+
+## 2026-07-31 14:13:28.300Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 14:13:28.306Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 14:13:28.327Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 14:13:28.327Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 14:13:28.335Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 14:13:28.335Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 14:13:28.340Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 14:13:28.340Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 14:13:37.432Z load
+- url: http://localhost:3000/
+- title: Avante Lingerie | Oficial
+
+## 2026-07-31 14:13:38.317Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 14:13:38.320Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 14:13:38.331Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 14:13:38.332Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 14:13:38.339Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 14:13:38.339Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 14:13:38.343Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 14:13:38.343Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 14:15:37.751Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-07-31 14:15:43.501Z load
+- url: http://localhost:3000/
+- title: Avante Lingerie | Oficial
+
+## 2026-07-31 14:15:44.630Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 14:15:44.634Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 14:15:44.663Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 14:15:44.664Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 14:15:44.680Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 14:15:44.681Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 14:15:44.692Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 14:15:44.693Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 14:15:49.509Z click
+- element: {"tag":"html","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"\n\t\timport { injectIntoGlobalHook } from \"/@react-refresh\";\ninjectIntoGlobalHook(window);\nwindow.$RefreshReg$ = () => {};\nwindow.$RefreshSig$ = () => (type) => type;\n\n\t\t\n\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\tAvante Lingerie | Sinta-se linda, confortável e confiante\n\t\t\n\t\t\n\t\t(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\n\t\tnew Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\n\t\tj=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n\t\t'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n\t\t})(window,document,'script','dataLayer','GTM-XXXXXXX');\n\t\t\n\t\tconst SITE_PAGES_ENDPOINT = '/__horizons/site-pages';\n\nconst OUTGOING_SITE_PAGES_MESSAGE = 'sitePages';\nconst INCOMING_REQUEST_SITE_PAGES_MESSAGE = 'request-site-pages';\n\nconst ALLOWED_PARENT_ORIGINS = [\n\t'https://horizons.hostinger.com',\n\t'https://horizons.hostinger.dev',\n\t'https://horizons-frontend-local.hostinger.dev',\n\t'http://localhost:4000',\n];\n\nfunction postSitePages(pages) {\n\tlet parentOrigin = window.location.ancestorOrigins?.[0];\n\tif (!parentOrigin && document.referrer) {\n\t\ttry {\n\t\t\tparentOrigin = new URL(document.referrer).origin;\n\t\t} catch {}\n\t}\n\tif (parentOrigin && ALLOWED_PARENT_ORIGINS.includes(parentOrigin)) {\n\t\twindow.parent.postMessage({ type: OUTGOING_SITE_PAGES_MESSAGE, payload: { pages } }, parentOrigin);\n\t}\n}\n\nasync function sendSitePagesToParent() {\n\tif (window.self === window.top) {\n\t\treturn;\n\t}\n\n\ttry {\n\t\tconst response = await fetch(SITE_PAGES_ENDPOINT);\n\t\tif (!response.ok) {\n\t\t\tthrow new Error(`HTTP ${response.status}`);\n\t\t}\n\t\tpostSitePages(await response.json());\n\t} catch (error) {\n\t\tconsole.error('[site-pages] Failed to send site pages to parent:', error);\n\t}\n}\n\nif (window.self !== window.top) {\n\twindow.addEventListener('load', sendSitePagesToParent);\n\twindow.addEventListener('message', (event) => {\n\t\tif (event.data?.type === INCOMING_REQUEST_SITE_PAGES_MESSAGE) {\n\t\t\tsendSitePagesToParent();\n\t\t}\n\t});\n}\n\n\t\t\n\t#root[data-edit-mode-enabled=\"true\"..."}
+
+## 2026-07-31 14:15:50.947Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Aceitar & Continuar"}
+
+## 2026-07-31 14:15:51.205Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 14:15:51.216Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 14:15:51.238Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 14:15:51.239Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 14:15:51.248Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 14:15:51.248Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 14:15:51.254Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 14:15:51.255Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 14:15:51.286Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 14:15:51.286Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 14:15:51.298Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 14:15:51.298Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 14:15:51.303Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 14:15:51.304Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 14:15:51.311Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 14:15:51.311Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 14:15:53.548Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-07-31 14:16:38.177Z load
+- url: http://localhost:3000/
+- title: Avante Lingerie | Oficial
+
+## 2026-07-31 14:16:39.359Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 14:16:39.361Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 14:16:39.395Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 14:16:39.395Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 14:16:39.414Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 14:16:39.414Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 14:16:39.452Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 14:16:39.452Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 14:16:43.133Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Aceitar & Continuar"}
+
+## 2026-07-31 14:17:06.993Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-07-31 14:18:12.780Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-07-31 14:18:23.952Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-07-31 14:18:34.658Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-07-31 14:18:44.961Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-07-31 14:18:56.894Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-07-31 14:19:10.317Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-07-31 14:19:15.402Z click
+- element: {"tag":"div","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-07-31 14:19:16.576Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-07-31 14:19:18.074Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-07-31 14:19:18.970Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-07-31 14:19:19.711Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-07-31 14:19:20.619Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-07-31 14:19:21.537Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-07-31 14:20:07.344Z load
+- url: http://localhost:3000/
+- title: Avante Lingerie | Oficial
+
+## 2026-07-31 14:20:08.441Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 14:20:08.443Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 14:20:08.455Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 14:20:08.455Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 14:20:08.459Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 14:20:08.459Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 14:20:08.466Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 14:20:08.466Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 14:23:51.315Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-07-31 14:31:06.809Z load
+- url: http://localhost:3000/
+- title: Avante Lingerie | Oficial
+
+## 2026-07-31 14:31:08.633Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 14:31:08.636Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 14:31:08.657Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 14:31:08.658Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 14:31:08.667Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 14:31:08.667Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 14:31:08.690Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 14:31:08.691Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 14:31:25.080Z load
+- url: http://localhost:3000/
+- title: Avante Lingerie | Oficial
+
+## 2026-07-31 14:31:25.999Z navigate
+- url: http://localhost:3000/
+- via: replaceState
+
+## 2026-07-31 14:31:26.724Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 14:31:26.726Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 14:31:26.753Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 14:31:26.754Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 14:31:26.766Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 14:31:26.766Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 14:31:26.772Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 14:31:26.773Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 14:31:30.096Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Aceitar & Continuar"}
+
+## 2026-07-31 14:31:49.624Z load
+- url: http://localhost:3000/
+- title: Avante Lingerie | Oficial
+
+## 2026-07-31 14:31:50.341Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 14:31:50.342Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 14:31:50.354Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 14:31:50.355Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 14:31:50.358Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 14:31:50.358Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 14:31:50.369Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 14:31:50.369Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 14:32:46.545Z load
+- url: http://localhost:3000/
+- title: Avante Lingerie | Oficial
+
+## 2026-07-31 14:32:47.741Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 14:32:47.742Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 14:32:47.755Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 14:32:47.756Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 14:32:47.763Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 14:32:47.763Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 14:32:47.768Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 14:32:47.768Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 16:21:48.461Z load
+- url: http://localhost:3000/
+- title: Avante Lingerie | Oficial
+
+## 2026-07-31 16:21:50.043Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 16:21:50.048Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 16:21:50.091Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 16:21:50.091Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 16:21:50.112Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 16:21:50.112Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 16:21:50.127Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 16:21:50.128Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-07-31 16:22:15.684Z load
+- url: http://localhost:3000/admin
+- title: Avante Lingerie | Oficial
+
+## 2026-07-31 16:22:17.612Z navigate
+- url: http://localhost:3000/admin
+- via: replaceState
+
+## 2026-07-31 16:22:17.718Z navigate
+- url: http://localhost:3000/admin/login
+- via: replaceState
+
+## 2026-07-31 16:22:19.435Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"email","id":null,"placeholder":"admin@avantelingerie.com.br","label":"admin@avantelingerie.com.br","value":"","valueLength":0,"text":""}
+
+## 2026-07-31 16:22:19.662Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"email","id":null,"placeholder":"admin@avantelingerie.com.br","label":"admin@avantelingerie.com.br","value":"","valueLength":0,"text":""}
+
+## 2026-07-31 16:22:32.959Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"email","id":null,"placeholder":"admin@avantelingerie.com.br","label":"admin@avantelingerie.com.br","value":"admin@avantelingerie.com.br","valueLength":27,"text":""}
+
+## 2026-07-31 16:22:32.960Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"email","id":null,"placeholder":"admin@avantelingerie.com.br","label":"admin@avantelingerie.com.br","value":"admin@avantelingerie.com.br","valueLength":27,"text":""}
+
+## 2026-07-31 16:22:32.961Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"password","id":null,"placeholder":"••••••••","label":"••••••••","value":"[redacted:length=0]","valueLength":0,"text":""}
+
+## 2026-07-31 16:22:33.176Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"password","id":null,"placeholder":"••••••••","label":"••••••••","value":"[redacted:length=0]","valueLength":0,"text":""}
+
+## 2026-07-31 16:22:38.186Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"password","id":null,"placeholder":"••••••••","label":"••••••••","value":"[redacted:length=12]","valueLength":12,"text":""}
+
+## 2026-07-31 16:22:38.186Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"password","id":null,"placeholder":"••••••••","label":"••••••••","value":"[redacted:length=12]","valueLength":12,"text":""}
+
+## 2026-07-31 16:22:38.410Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"submit","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"ACESSAR PAINEL"}
+
+## 2026-07-31 16:22:38.417Z submit
+- action: http://localhost:3000/admin/login
+- fields: [{"label":"admin@avantelingerie.com.br","type":"email","value":"admin@avantelingerie.com.br","length":27,"redacted":false},{"label":"••••••••","type":"password","value":"[redacted:length=12]","length":12,"redacted":true},{"label":"Mostrar senha","type":"button","value":"","length":0,"redacted":false},{"label":"[submit]","type":"submit","value":"","length":0,"redacted":false}]
+
+## 2026-07-31 16:22:38.597Z navigate
+- url: http://localhost:3000/admin
+- via: pushState
+
+## 2026-07-31 16:22:43.892Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Analytics"}
+
+## 2026-07-31 16:22:43.894Z navigate
+- url: http://localhost:3000/admin/analytics
+- via: pushState
+
+## 2026-07-31 16:22:48.124Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Tracking & Pixels"}
+
+## 2026-07-31 16:22:53.786Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Jornadas ao Vivo"}
+
+## 2026-07-31 16:22:56.509Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Demografia (GA4)"}
+
+## 2026-07-31 16:22:57.858Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Desempenho Geral"}
+
+## 2026-07-31 16:22:59.112Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Jornadas ao Vivo"}
+
+## 2026-07-31 16:23:37.758Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Tracking & Pixels"}
+
