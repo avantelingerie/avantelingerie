@@ -294,14 +294,17 @@ export default function AnalyticsPage() {
           }
           
           setDemographics({
-            ...mockDemographics,
-            locations: topStates
+            locations: topStates,
+            audience: { feminine: 0, masculine: 0, other: 0, feminineCount: 0, masculineCount: 0, otherCount: 0 },
+            ages: { '18-24': 0, '25-34': 0, '35-44': 0, '45-54': 0, '55+': 0 }
           });
-        setDemographics({
-          locations: [],
-          audience: { feminine: 0, masculine: 0, other: 0, feminineCount: 0, masculineCount: 0, otherCount: 0 },
-          ages: { '18-24': 0, '25-34': 0, '35-44': 0, '45-54': 0, '55+': 0 }
-        });
+        } else {
+          setDemographics({
+            locations: [],
+            audience: { feminine: 0, masculine: 0, other: 0, feminineCount: 0, masculineCount: 0, otherCount: 0 },
+            ages: { '18-24': 0, '25-34': 0, '35-44': 0, '45-54': 0, '55+': 0 }
+          });
+        }
       } else {
         setDemographics({
           locations: [],
