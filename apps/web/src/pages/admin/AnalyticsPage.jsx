@@ -240,13 +240,13 @@ export default function AnalyticsPage() {
         });
       } else {
         setStats({
-          receitaTotal: 285101.80,
-          receitaB2C: 156805.99,
-          receitaB2B: 128295.81,
-          pedidosTotal: 802,
-          ticketMedio: 355.48,
-          taxaConversao: 3.7,
-          visitasUnicas: 21670,
+          receitaTotal: 0,
+          receitaB2C: 0,
+          receitaB2B: 0,
+          pedidosTotal: 0,
+          ticketMedio: 0,
+          taxaConversao: 0,
+          visitasUnicas: 0,
         });
       }
 
@@ -297,15 +297,17 @@ export default function AnalyticsPage() {
             ...mockDemographics,
             locations: topStates
           });
-        } else {
-          setDemographics(mockDemographics);
-        }
+        setDemographics({
+          locations: [],
+          audience: { feminine: 0, masculine: 0, other: 0, feminineCount: 0, masculineCount: 0, otherCount: 0 },
+          ages: { '18-24': 0, '25-34': 0, '35-44': 0, '45-54': 0, '55+': 0 }
+        });
       } else {
-        setDemographics(mockDemographics);
-      }
-
-      } else {
-        setDemographics(mockDemographics);
+        setDemographics({
+          locations: [],
+          audience: { feminine: 0, masculine: 0, other: 0, feminineCount: 0, masculineCount: 0, otherCount: 0 },
+          ages: { '18-24': 0, '25-34': 0, '35-44': 0, '45-54': 0, '55+': 0 }
+        });
       }
 
       // Processamento de Analytics em Tempo Real
@@ -406,17 +408,22 @@ export default function AnalyticsPage() {
         setExitPages(mockExitPages); // To do: calculate real exit pages if needed
         setLiveUsersCount(realLive.length || Math.floor(Math.random() * (19 - 11 + 1) + 11));
       } else {
-        // Fallback visual se a tabela estiver vazia
-        setLiveUsersCount(Math.floor(Math.random() * (19 - 11 + 1) + 11));
-        setLiveSessions(mockLiveSessions);
-        setExitPages(mockExitPages);
-        setFunnelData(mockFunnelData);
-        setUtmPerformance(mockUtmPerformance);
+        // Sem eventos, painel zerado aguardando ações reais
+        setLiveUsersCount(0);
+        setLiveSessions([]);
+        setExitPages([]);
+        setFunnelData([
+          { stage: 'Sessões Ativas', count: 0, percentage: 0, label: 'Visitas ao site' },
+          { stage: 'Visualizações de Lingerie', count: 0, percentage: 0, label: 'Visualizaram páginas de produtos' },
+          { stage: 'Adições à Sacola', count: 0, percentage: 0, label: 'Adicionaram ao carrinho' },
+          { stage: 'Checkouts Iniciados', count: 0, percentage: 0, label: 'Preencheram endereço/dados' },
+          { stage: 'Compras Concluídas', count: 0, percentage: 0, label: 'Faturamento aprovado' }
+        ]);
+        setUtmPerformance([]);
       }
     } catch (error) {
       console.error("Erro ao processar dados de BI:", error);
-      toast.error("Exibindo dados de BI em cache.");
-      setDemographics(mockDemographics);
+      toast.error("Erro ao carregar dados analíticos.");
     } finally {
       setIsLoading(false);
     }
