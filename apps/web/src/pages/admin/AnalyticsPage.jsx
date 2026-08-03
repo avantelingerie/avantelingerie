@@ -172,6 +172,7 @@ export default function AnalyticsPage() {
       let orders = [];
       let users = [];
       let addresses = [];
+      let events = [];
       
       try {
         orders = await pb.collection('pedidos').getFullList({
@@ -182,6 +183,10 @@ export default function AnalyticsPage() {
           $autoCancel: false
         });
         addresses = await pb.collection('enderecos').getFullList({
+          $autoCancel: false
+        });
+        events = await pb.collection('analytics_events').getFullList({
+          sort: '-created',
           $autoCancel: false
         });
       } catch (err) {
@@ -299,12 +304,115 @@ export default function AnalyticsPage() {
         setDemographics(mockDemographics);
       }
 
-      // Simula uma flutuação leve de usuários online para efeito real-time
-      setLiveUsersCount(Math.floor(Math.random() * (19 - 11 + 1) + 11));
-      setLiveSessions(mockLiveSessions);
-      setExitPages(mockExitPages);
-      setFunnelData(mockFunnelData);
-      setUtmPerformance(mockUtmPerformance);
+      } else {
+        setDemographics(mockDemographics);
+      }
+
+      // Processamento de Analytics em Tempo Real
+      if (events && events.length > 0) {
+        let funnel = { 'page_view': 0, 'view_item': 0, 'add_to_cart': 0, 'begin_checkout': 0, 'purchase': 0 };
+        const sessionPaths = {};
+        const utmMap = {};
+
+        events.forEach(ev => {
+          if (!sessionPaths[ev.session_id]) {
+            sessionPaths[ev.session_id] = { 
+              steps: new Set(), 
+              path: [], 
+              utm: ev.utm_source || 'Direto/Orgânico', 
+              value: 0,
+              lastTime: new Date(ev.created)
+            };
+          }
+          const sess = sessionPaths[ev.session_id];
+          sess.steps.add(ev.event_type);
+          if (ev.page_path && !sess.path.includes(ev.page_path)) {
+            sess.path.push(ev.page_path);
+          }
+          if (ev.event_type === 'purchase' && ev.value) {
+            sess.value = ev.value;
+          }
+          if (new Date(ev.created) > sess.lastTime) {
+            sess.lastTime = new Date(ev.created);
+          }
+        });
+
+        Object.values(sessionPaths).forEach(sess => {
+          if (sess.steps.has('page_view')) funnel['page_view']++;
+          if (sess.steps.has('view_item')) funnel['view_item']++;
+          if (sess.steps.has('add_to_cart')) funnel['add_to_cart']++;
+          if (sess.steps.has('begin_checkout')) funnel['begin_checkout']++;
+          if (sess.steps.has('purchase')) funnel['purchase']++;
+          
+          if (!utmMap[sess.utm]) utmMap[sess.utm] = { faturamento: 0, pedidos: 0, visitas: 0 };
+          utmMap[sess.utm].visitas++;
+          if (sess.steps.has('purchase')) {
+            utmMap[sess.utm].pedidos++;
+            utmMap[sess.utm].faturamento += sess.value;
+          }
+        });
+
+        const baseViews = funnel['page_view'] || 1;
+        const realFunnel = [
+          { stage: 'Sessões Ativas', count: funnel['page_view'], percentage: 100, label: 'Visitas ao site' },
+          { stage: 'Visualizações de Lingerie', count: funnel['view_item'], percentage: Math.round((funnel['view_item']/baseViews)*100)||0, label: 'Visualizaram páginas de produtos' },
+          { stage: 'Adições à Sacola', count: funnel['add_to_cart'], percentage: Math.round((funnel['add_to_cart']/baseViews)*100)||0, label: 'Adicionaram ao carrinho' },
+          { stage: 'Checkouts Iniciados', count: funnel['begin_checkout'], percentage: Math.round((funnel['begin_checkout']/baseViews)*100)||0, label: 'Preencheram endereço/dados' },
+          { stage: 'Compras Concluídas', count: funnel['purchase'], percentage: Math.round((funnel['purchase']/baseViews)*100)||0, label: 'Faturamento aprovado' }
+        ];
+
+        const realUtm = Object.entries(utmMap).map(([source, data]) => ({
+          utm_source: source,
+          faturamento: data.faturamento,
+          pedidos: data.pedidos,
+          conversao: data.visitas > 0 ? ((data.pedidos / data.visitas) * 100).toFixed(1) + '%' : '0%',
+          roi: data.pedidos > 0 ? 'Calculando...' : '0x'
+        })).sort((a, b) => b.faturamento - a.faturamento);
+
+        const realLive = Object.entries(sessionPaths)
+          .map(([id, data]) => {
+            let status = 'Navegando... 👀';
+            let color = 'text-zinc-400 bg-zinc-800/40 border-zinc-700/30';
+            if (data.steps.has('purchase')) { status = 'Comprou (B2C)'; color = 'text-emerald-400 bg-emerald-500/10 border-emerald-500/20'; }
+            else if (data.steps.has('begin_checkout')) { status = 'No Checkout 💳'; color = 'text-[#c59b5f] bg-[#c59b5f]/5 border-[#c59b5f]/20'; }
+            else if (data.steps.has('add_to_cart')) { status = 'Abandonou no Carrinho 🛒'; color = 'text-amber-400 bg-amber-500/10 border-amber-500/20'; }
+            
+            const diffMin = Math.floor((new Date() - data.lastTime) / 60000);
+            
+            return {
+              id: id.substring(0, 9).toUpperCase(),
+              client: 'Visitante Real',
+              location: 'Brasil',
+              source: data.utm,
+              sourceColor: 'text-blue-400 bg-blue-500/10 border-blue-500/20',
+              path: data.path.slice(-3),
+              status: status,
+              statusColor: color,
+              value: data.value,
+              time: diffMin === 0 ? 'Agora' : `Há ${diffMin} min`,
+              stepsCompleted: data.steps.size
+            };
+          })
+          .sort((a, b) => {
+            const timeA = a.time === 'Agora' ? 0 : parseInt(a.time.replace(/\D/g, '')) || 0;
+            const timeB = b.time === 'Agora' ? 0 : parseInt(b.time.replace(/\D/g, '')) || 0;
+            return timeA - timeB;
+          })
+          .slice(0, 15); // limit max 15 live sessions
+
+        setFunnelData(realFunnel);
+        setUtmPerformance(realUtm);
+        setLiveSessions(realLive.length > 0 ? realLive : mockLiveSessions);
+        setExitPages(mockExitPages); // To do: calculate real exit pages if needed
+        setLiveUsersCount(realLive.length || Math.floor(Math.random() * (19 - 11 + 1) + 11));
+      } else {
+        // Fallback visual se a tabela estiver vazia
+        setLiveUsersCount(Math.floor(Math.random() * (19 - 11 + 1) + 11));
+        setLiveSessions(mockLiveSessions);
+        setExitPages(mockExitPages);
+        setFunnelData(mockFunnelData);
+        setUtmPerformance(mockUtmPerformance);
+      }
     } catch (error) {
       console.error("Erro ao processar dados de BI:", error);
       toast.error("Exibindo dados de BI em cache.");

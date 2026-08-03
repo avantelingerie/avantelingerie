@@ -1,4 +1,5 @@
 import pb from '@/lib/pocketbaseClient.js';
+import { trackEvent } from '@/hooks/useMarketingTracker.js';
 
 // CONFIGURAÇÃO DIRETA DE MARKETING (Opcional - Altamente Recomendado para evitar 404 de Banco)
 // Insira seus IDs aqui diretamente para pular a consulta ao PocketBase e blindar o site contra erros.
@@ -119,6 +120,8 @@ export function trackViewContent(product) {
       }]
     });
   }
+
+  trackEvent('view_item', { item_id: id, value: value });
 }
 
 export function trackAddToCart(product, quantity = 1) {
@@ -149,6 +152,8 @@ export function trackAddToCart(product, quantity = 1) {
       }]
     });
   }
+
+  trackEvent('add_to_cart', { item_id: id, value: value });
 }
 
 export function trackInitiateCheckout(cart, total) {
@@ -177,6 +182,8 @@ export function trackInitiateCheckout(cart, total) {
       }))
     });
   }
+
+  trackEvent('begin_checkout', { value: value });
 }
 
 export function trackPurchase(orderId, total, items = [], paymentMethod = '') {
@@ -216,6 +223,7 @@ export function trackPurchase(orderId, total, items = [], paymentMethod = '') {
   }
 
   sessionStorage.setItem(purchaseSentKey, 'true');
+  trackEvent('purchase', { value: value });
   console.log(`[Pixels] Evento de Compra (Purchase) do pedido ${orderId} disparado com sucesso!`);
 }
 

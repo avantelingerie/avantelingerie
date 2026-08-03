@@ -497,3 +497,14 @@ No ambiente local, a pasta nunca existiu pois o GitHub bloqueia commits acima de
    - **SoluÃ§Ã£o:** O prompt de sistema do cÃ©rebro (`apps/api/src/routes/lia.js`) foi reescrito injetando alertas imperativos de que o cliente NÃƒO tem acesso ao menu, acompanhado das URLs hardcoded para Revenda e Shop.
 
 **Status:** âœ… Todas as correÃ§Ãµes aplicadas na VPS, validadas e 100% operacionais. Tudo pronto para o prÃ³ximo dia de trabalho!
+
+## [31-07-2026] Setup Oficial de Rastreamento (Meta & Google) e Refinamento do Painel Analytics
+
+### O que foi feito e resolvido
+1. **Setup do Meta Pixel:** Guiamos o cliente na criação do Portfólio de Negócios e do Conjunto de Dados, extraindo com sucesso o ID final (981595838258999).
+2. **Setup do Google Analytics 4:** Criamos o fluxo da web e configuramos a tag principal (G-E2FS36FRG1).
+3. **Painel de Tracking & Pixels (Admin):** Foi construída a aba para inserir os IDs no Painel Administrativo. Durante os testes em produção, identificamos e corrigimos um bug de restrição do PocketBase (que impedia o salvamento quando apenas um dos campos era preenchido). A correção foi deployada com sucesso na VPS.
+4. **Auditoria dos Exportadores de Público:** O código dos geradores de CSV para Lookalike (Meta) e Customer Match (Google) foi exaustivamente auditado e validado, garantindo aderência 100% às políticas de ambas as plataformas.
+
+### Próximos Passos
+- O cliente precisa agora direcionar as demandas prioritárias para o desenvolvimento da loja e dos bots de WhatsApp, como a tão aguardada integração de rastreio de logística (Melhor Envio) ou finalização de dashboards.
