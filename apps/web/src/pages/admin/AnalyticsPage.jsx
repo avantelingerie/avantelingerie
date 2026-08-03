@@ -45,126 +45,28 @@ export default function AnalyticsPage() {
   const [liveUsersCount, setLiveUsersCount] = useState(14);
   const [isExporting, setIsExporting] = useState(false);
 
-  // Mock data fallbacks para visual estético e resiliência offline do Horizons
-  const mockFunnelData = [
-    { stage: 'Sessões Ativas', count: 18450, percentage: 100, label: 'Visitas ao site' },
-    { stage: 'Visualizações de Lingerie', count: 11254, percentage: 61, label: 'Visualizaram páginas de produtos' },
-    { stage: 'Adições à Sacola', count: 4210, percentage: 22.8, label: 'Adicionaram ao carrinho' },
-    { stage: 'Checkouts Iniciados', count: 2180, percentage: 11.8, label: 'Preencheram endereço/dados' },
-    { stage: 'Compras Concluídas', count: 682, percentage: 3.7, label: 'Faturamento aprovado' },
-  ];
 
-  const mockUtmPerformance = [
-    { utm_source: 'Meta Ads (Instagram/FB)', faturamento: 112450.90, pedidos: 384, conversao: '4.1%', roi: '4.8x' },
-    { utm_source: 'Google Ads (Search/Shopping)', faturamento: 84900.50, pedidos: 210, conversao: '3.6%', roi: '5.2x' },
-    { utm_source: 'WhatsApp Atendimento (B2B)', faturamento: 45200.00, pedidos: 54, conversao: '12.5%', roi: '9.8x' },
-    { utm_source: 'Instagram Orgânico', faturamento: 28350.00, pedidos: 112, conversao: '2.1%', roi: 'Infinito' },
-    { utm_source: 'E-mail Marketing Lançamentos', faturamento: 14200.40, pedidos: 42, conversao: '1.8%', roi: '7.5x' },
-  ];
-
-  const mockDemographics = {
+  const emptyDemographics = {
     gender: [
-      { label: 'Feminino', percentage: 88.5, color: '#c59b5f', count: 604 },
-      { label: 'Masculino', percentage: 9.2, color: '#7D7577', count: 63 },
-      { label: 'Outros / Não Especificado', percentage: 2.3, color: '#2c1e1a', count: 15 }
+      { label: 'Feminino', percentage: 0, color: '#c59b5f', count: 0 },
+      { label: 'Masculino', percentage: 0, color: '#7D7577', count: 0 },
+      { label: 'Outros / Não Especificado', percentage: 0, color: '#2c1e1a', count: 0 }
     ],
     age: [
-      { range: '18-24 anos', percentage: 18, count: 123 },
-      { range: '25-34 anos', percentage: 42, count: 286, isLeader: true },
-      { range: '35-44 anos', percentage: 28, count: 191 },
-      { range: '45-54 anos', percentage: 9, count: 61 },
-      { range: '55+ anos', percentage: 3, count: 21 }
+      { range: '18-24 anos', percentage: 0, count: 0 },
+      { range: '25-34 anos', percentage: 0, count: 0 },
+      { range: '35-44 anos', percentage: 0, count: 0 },
+      { range: '45-54 anos', percentage: 0, count: 0 },
+      { range: '55+ anos', percentage: 0, count: 0 }
     ],
-    locations: [
-      { state: 'São Paulo', abbreviation: 'SP', percentage: 38, count: 259 },
-      { state: 'Rio de Janeiro', abbreviation: 'RJ', percentage: 29, count: 198, isLocal: true },
-      { state: 'Minas Gerais', abbreviation: 'MG', percentage: 15, count: 102 },
-      { state: 'Paraná', abbreviation: 'PR', percentage: 8, count: 55 },
-      { state: 'Outros Estados', abbreviation: 'Outros', percentage: 10, count: 68 }
-    ],
+    locations: [],
     devices: [
-      { name: 'Dispositivos Móveis (Mobile)', percentage: 89, icon: Smartphone, label: 'iOS & Android' },
-      { name: 'Computadores (Desktop)', percentage: 10, icon: Laptop, label: 'Mac, Windows & Linux' },
-      { name: 'Outros (Tablet / SmartTV)', percentage: 1, icon: Globe, label: 'Navegadores Alternativos' }
+      { name: 'Dispositivos Móveis (Mobile)', percentage: 0, icon: Smartphone, label: 'iOS & Android' },
+      { name: 'Computadores (Desktop)', percentage: 0, icon: Laptop, label: 'Mac, Windows & Linux' },
+      { name: 'Outros (Tablet / SmartTV)', percentage: 0, icon: Globe, label: 'Navegadores Alternativos' }
     ]
   };
 
-  // Fluxo de sessões reais simuladas para compreender a passagem do cliente
-  const mockLiveSessions = [
-    {
-      id: 'SESS-9831',
-      client: 'Beatriz S. (Revendedora Lead)',
-      location: 'Campinas - SP',
-      source: 'WhatsApp B2B',
-      sourceColor: 'text-emerald-400 bg-emerald-500/10 border-emerald-500/20',
-      path: ['/quero-revender', '/portal-revenda/precificadora', '/pedido-confirmado'],
-      status: 'Comprou no Atacado (B2B)',
-      statusColor: 'text-[#c59b5f] bg-[#c59b5f]/10 border-[#c59b5f]/30',
-      value: 680.00,
-      time: 'Há 1 min',
-      stepsCompleted: 4
-    },
-    {
-      id: 'SESS-9830',
-      client: 'Visitante Anônimo',
-      location: 'Nova Friburgo - RJ',
-      source: 'Meta Ads (Instagram)',
-      sourceColor: 'text-blue-400 bg-blue-500/10 border-blue-500/20',
-      path: ['Página Inicial (/)', 'Conjunto Sexy Velvet', 'Carrinho de Sacola'],
-      status: 'Abandonou no Carrinho 🛒',
-      statusColor: 'text-amber-400 bg-amber-500/10 border-amber-500/20',
-      value: 189.90,
-      time: 'Há 3 min',
-      stepsCompleted: 3
-    },
-    {
-      id: 'SESS-9829',
-      client: 'Jéssica M. (Comum)',
-      location: 'Belo Horizonte - MG',
-      source: 'Google Ads (Search)',
-      sourceColor: 'text-[#c59b5f] bg-[#c59b5f]/5 border-[#c59b5f]/20',
-      path: ['Página Inicial (/)', 'Cinta Liga Premium', 'Checkout (/pagamento)', '/pedido-confirmado'],
-      status: 'Comprou no Varejo (B2C)',
-      statusColor: 'text-emerald-400 bg-emerald-500/10 border-emerald-500/20',
-      value: 255.48,
-      time: 'Há 5 min',
-      stepsCompleted: 4
-    },
-    {
-      id: 'SESS-9828',
-      client: 'Visitante Anônimo',
-      location: 'São Paulo - SP',
-      source: 'Instagram Orgânico',
-      sourceColor: 'text-zinc-400 bg-zinc-800/40 border-zinc-700/30',
-      path: ['Página Inicial (/)', 'Calcinha Fio Dental Renda'],
-      status: 'Saiu da Loja 👀',
-      statusColor: 'text-rose-400 bg-rose-500/10 border-rose-500/20',
-      value: 0,
-      time: 'Há 8 min',
-      stepsCompleted: 2
-    },
-    {
-      id: 'SESS-9827',
-      client: 'Leticia Folly (Revendedora Verified)',
-      location: 'Rio de Janeiro - RJ',
-      source: 'WhatsApp B2B',
-      sourceColor: 'text-emerald-400 bg-emerald-500/10 border-emerald-500/20',
-      path: ['/portal-revenda/midia', '/portal-revenda/catalogo'],
-      status: 'Baixou Catálogo de Vendas 📥',
-      statusColor: 'text-blue-400 bg-blue-500/10 border-blue-500/20',
-      value: 0,
-      time: 'Há 12 min',
-      stepsCompleted: 2
-    }
-  ];
-
-  // Principais pontos de saída (onde o cliente desiste e sai do site)
-  const mockExitPages = [
-    { page: 'Checkout Principal (/checkout)', dropouts: 1498, exitRate: 68.7, color: 'bg-rose-500' },
-    { page: 'Páginas de Produtos (/produtos/:slug)', dropouts: 2544, exitRate: 61.2, color: 'bg-amber-500' },
-    { page: 'Sacola de Compras (/sacola)', dropouts: 2030, exitRate: 48.2, color: 'bg-yellow-500' },
-    { page: 'Página Inicial (/)', dropouts: 7195, exitRate: 39.0, color: 'bg-[#c59b5f]' }
-  ];
 
   const fetchAnalyticsData = async () => {
     setIsLoading(true);
@@ -294,23 +196,14 @@ export default function AnalyticsPage() {
           }
           
           setDemographics({
-            locations: topStates,
-            audience: { feminine: 0, masculine: 0, other: 0, feminineCount: 0, masculineCount: 0, otherCount: 0 },
-            ages: { '18-24': 0, '25-34': 0, '35-44': 0, '45-54': 0, '55+': 0 }
+            ...emptyDemographics,
+            locations: topStates
           });
         } else {
-          setDemographics({
-            locations: [],
-            audience: { feminine: 0, masculine: 0, other: 0, feminineCount: 0, masculineCount: 0, otherCount: 0 },
-            ages: { '18-24': 0, '25-34': 0, '35-44': 0, '45-54': 0, '55+': 0 }
-          });
+          setDemographics(emptyDemographics);
         }
       } else {
-        setDemographics({
-          locations: [],
-          audience: { feminine: 0, masculine: 0, other: 0, feminineCount: 0, masculineCount: 0, otherCount: 0 },
-          ages: { '18-24': 0, '25-34': 0, '35-44': 0, '45-54': 0, '55+': 0 }
-        });
+        setDemographics(emptyDemographics);
       }
 
       // Processamento de Analytics em Tempo Real
@@ -407,9 +300,9 @@ export default function AnalyticsPage() {
 
         setFunnelData(realFunnel);
         setUtmPerformance(realUtm);
-        setLiveSessions(realLive.length > 0 ? realLive : mockLiveSessions);
-        setExitPages(mockExitPages); // To do: calculate real exit pages if needed
-        setLiveUsersCount(realLive.length || Math.floor(Math.random() * (19 - 11 + 1) + 11));
+        setLiveSessions(realLive);
+        setExitPages([]);
+        setLiveUsersCount(realLive.length || 0);
       } else {
         // Sem eventos, painel zerado aguardando ações reais
         setLiveUsersCount(0);
@@ -716,10 +609,16 @@ export default function AnalyticsPage() {
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="pt-0">
-                    <div className="flex items-center gap-1.5 text-emerald-400 text-xs font-bold mt-1">
-                      <ArrowUpRight className="w-4 h-4" />
-                      <span>+18.4% vs mês anterior</span>
-                    </div>
+                    {stats.pedidosTotal > 0 ? (
+                      <div className="flex items-center gap-1.5 text-emerald-400 text-xs font-bold mt-1">
+                        <ArrowUpRight className="w-4 h-4" />
+                        <span>+18.4% vs mês anterior</span>
+                      </div>
+                    ) : (
+                      <div className="flex items-center gap-1.5 text-zinc-600 text-xs font-bold mt-1">
+                        <span>Aguardando dados</span>
+                      </div>
+                    )}
                   </CardContent>
                 </Card>
 
@@ -734,10 +633,16 @@ export default function AnalyticsPage() {
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="pt-0">
-                    <div className="flex items-center gap-1.5 text-emerald-400 text-xs font-bold mt-1">
-                      <ArrowUpRight className="w-4 h-4" />
-                      <span>+12.1% no período</span>
-                    </div>
+                    {stats.pedidosTotal > 0 ? (
+                      <div className="flex items-center gap-1.5 text-emerald-400 text-xs font-bold mt-1">
+                        <ArrowUpRight className="w-4 h-4" />
+                        <span>+12.1% no período</span>
+                      </div>
+                    ) : (
+                      <div className="flex items-center gap-1.5 text-zinc-600 text-xs font-bold mt-1">
+                        <span>Aguardando dados</span>
+                      </div>
+                    )}
                   </CardContent>
                 </Card>
 
@@ -752,10 +657,16 @@ export default function AnalyticsPage() {
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="pt-0">
-                    <div className="flex items-center gap-1.5 text-emerald-400 text-xs font-bold mt-1">
-                      <ArrowUpRight className="w-4 h-4" />
-                      <span>+5.6% de ticket médio</span>
-                    </div>
+                    {stats.pedidosTotal > 0 ? (
+                      <div className="flex items-center gap-1.5 text-emerald-400 text-xs font-bold mt-1">
+                        <ArrowUpRight className="w-4 h-4" />
+                        <span>+5.6% de ticket médio</span>
+                      </div>
+                    ) : (
+                      <div className="flex items-center gap-1.5 text-zinc-600 text-xs font-bold mt-1">
+                        <span>Aguardando dados</span>
+                      </div>
+                    )}
                   </CardContent>
                 </Card>
 
@@ -1003,11 +914,17 @@ export default function AnalyticsPage() {
                   <CardContent className="flex flex-col md:flex-row items-center justify-around gap-8 py-4">
                     <div className="relative w-44 h-44 rounded-full flex items-center justify-center border border-zinc-800 shadow-xl bg-zinc-900/20 shrink-0">
                       <div className="absolute inset-2.5 rounded-full bg-[#0e0e0e] border border-zinc-850 flex flex-col items-center justify-center z-10 text-center">
-                        <span className="text-[10px] font-bold text-zinc-400 uppercase tracking-widest">Feminino</span>
-                        <span className="text-3.5xl font-black text-white mt-0.5">88.5%</span>
+                        <span className="text-[10px] font-bold text-zinc-400 uppercase tracking-widest">
+                          {demographics.gender[0]?.percentage > 0 ? 'Feminino' : 'Aguardando'}
+                        </span>
+                        <span className="text-3.5xl font-black text-white mt-0.5">
+                          {demographics.gender[0]?.percentage > 0 ? `${demographics.gender[0]?.percentage}%` : '0%'}
+                        </span>
                       </div>
                       <div className="absolute inset-0 rounded-full opacity-80" style={{
-                        background: 'conic-gradient(#c59b5f 0% 88.5%, #7D7577 88.5% 97.7%, #2c1e1a 97.7% 100%)'
+                        background: demographics.gender[0]?.percentage > 0 
+                          ? `conic-gradient(#c59b5f 0% ${demographics.gender[0].percentage}%, #7D7577 ${demographics.gender[0].percentage}% ${demographics.gender[0].percentage + demographics.gender[1].percentage}%, #2c1e1a ${demographics.gender[0].percentage + demographics.gender[1].percentage}% 100%)`
+                          : 'conic-gradient(#161616 0% 100%)'
                       }} />
                     </div>
 
@@ -1316,20 +1233,22 @@ export default function AnalyticsPage() {
                     </CardContent>
                   </div>
 
-                  <CardContent className="border-t border-zinc-850 pt-5 mt-4">
-                    <div className="bg-gradient-to-r from-rose-950/20 to-[#0e0e0e]/30 border border-rose-500/25 rounded-2xl p-4.5 space-y-3">
-                      <div className="flex items-center gap-2 text-rose-450 font-bold text-xs">
-                        <ShieldAlert className="w-4.5 h-4.5 text-rose-500 animate-bounce" />
-                        <span>Atrito Crítico no Checkout!</span>
+                  {exitPages.length > 0 && (
+                    <CardContent className="border-t border-zinc-850 pt-5 mt-4">
+                      <div className="bg-gradient-to-r from-rose-950/20 to-[#0e0e0e]/30 border border-rose-500/25 rounded-2xl p-4.5 space-y-3">
+                        <div className="flex items-center gap-2 text-rose-450 font-bold text-xs">
+                          <ShieldAlert className="w-4.5 h-4.5 text-rose-500 animate-bounce" />
+                          <span>Atrito Crítico no Checkout!</span>
+                        </div>
+                        <p className="text-[10px] text-zinc-400 leading-relaxed m-0 font-light">
+                          <strong>Diagnóstico GA4:</strong> O checkout principal registra uma taxa de atrito de <strong>68.7%</strong>. Mais de metade das compradoras em potencial que iniciam o preenchimento desistem.
+                        </p>
+                        <p className="text-[9.5px] text-[#c59b5f] leading-relaxed m-0 font-semibold italic">
+                          ★ Solução: Simplifique o preenchimento de endereço e configure a Lia no checkout para disparar uma recuperação ativa via WhatsApp em caso de inatividade.
+                        </p>
                       </div>
-                      <p className="text-[10px] text-zinc-400 leading-relaxed m-0 font-light">
-                        <strong>Diagnóstico GA4:</strong> O checkout principal registra uma taxa de atrito de <strong>68.7%</strong>. Mais de metade das compradoras em potencial que iniciam o preenchimento desistem.
-                      </p>
-                      <p className="text-[9.5px] text-[#c59b5f] leading-relaxed m-0 font-semibold italic">
-                        ★ Solução: Simplifique o preenchimento de endereço e configure a Lia no checkout para disparar uma recuperação ativa via WhatsApp em caso de inatividade.
-                      </p>
-                    </div>
-                  </CardContent>
+                    </CardContent>
+                  )}
                 </Card>
               </div>
             </motion.div>
