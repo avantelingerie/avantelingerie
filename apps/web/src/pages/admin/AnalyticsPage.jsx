@@ -179,7 +179,7 @@ export default function AnalyticsPage() {
           sort: '-data_pedido',
           $autoCancel: false
         });
-        users = await pb.collection('usuarios').getFullList({
+        users = await pb.collection('users').getFullList({
           $autoCancel: false
         });
         addresses = await pb.collection('enderecos').getFullList({
