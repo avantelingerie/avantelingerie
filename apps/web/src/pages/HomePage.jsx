@@ -46,19 +46,36 @@ export default function HomePage() {
     return () => clearInterval(interval);
   }, [emblaApi, isCarouselHovered]);
 
-  const categories = [
-    { id: 1, name: 'Conjuntos', image: 'https://images.unsplash.com/photo-1568441556126-f36ae0900180?w=600&q=80', link: '/categoria/conjuntos' },
-    { id: 2, name: 'Calcinhas', image: 'https://images.unsplash.com/photo-1701017718943-996aa586e955?w=600&q=80', link: '/categoria/calcinhas' },
-    { id: 3, name: 'Sutiãs', image: 'https://images.unsplash.com/photo-1700252713499-858564705cc3?w=600&q=80', link: '/categoria/sutias' },
-    { id: 4, name: 'Modeladores', image: 'https://images.unsplash.com/photo-1593105293490-5c69eb4ac229?w=600&q=80', link: '/categoria/modeladores' },
-    { id: 5, name: 'Kits', image: 'https://horizons-cdn.hostinger.com/2863a2ab-708d-40c9-b019-44d46f1b8bc1/021cb0190198eb005ad0498485c5e02a.jpg', link: '/categoria/kits' },
-    { id: 6, name: 'Sensuais', image: 'https://horizons-cdn.hostinger.com/2863a2ab-708d-40c9-b019-44d46f1b8bc1/c2d4624557c0de0eb4a45ebd8f3f9385.jpg', link: '/categoria/sensuais' },
-  ];
+  const [categories, setCategories] = useState([]);
 
   useEffect(() => {
     let isMounted = true;
     const fetchHomepageData = async () => {
       try {
+        // Busca de Categorias Dinâmicas
+        const categoriesRes = await pb.collection('categorias').getFullList({ filter: 'ativo = true', sort: 'nome', $autoCancel: false }).catch(() => []);
+        
+        // Busca 1 imagem de produto para cada categoria para usar como thumbnail
+        const dynamicCategories = await Promise.all(categoriesRes.map(async (cat) => {
+          try {
+            const prod = await pb.collection('products').getFirstListItem(`status = true && categoria_id = "${cat.id}" && imagem_produto != ""`, { sort: '-created', $autoCancel: false });
+            return {
+              id: cat.id,
+              name: cat.nome,
+              image: prod.imagem_produto,
+              link: `/categoria/${cat.slug}`
+            };
+          } catch (e) {
+            // Imagem de luxo padrão caso a categoria não tenha produtos com imagem
+            return {
+              id: cat.id,
+              name: cat.nome,
+              image: 'https://images.unsplash.com/photo-1568441556126-f36ae0900180?w=600&q=80',
+              link: `/categoria/${cat.slug}`
+            };
+          }
+        }));
+
         const [maisVendidosRes, favoritesRes, promosRes, newArrivalsRes, kitsRes, testimonialsRes] = await Promise.allSettled([
           pb.collection('products').getList(1, 4, { filter: 'status = true && is_mais_vendido = true', sort: '-created', expand: 'categoria_id', $autoCancel: false }),
           pb.collection('products').getList(1, 4, { filter: 'status = true && is_favorito = true', sort: '-created', expand: 'categoria_id', $autoCancel: false }),
@@ -82,6 +99,7 @@ export default function HomePage() {
         };
 
         if (isMounted) {
+          setCategories(dynamicCategories);
           setData({
             maisVendidos: padWithCard(getItems(maisVendidosRes), {
               id: 'mais-vendido-4',
