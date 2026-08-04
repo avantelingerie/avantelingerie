@@ -58,9 +58,12 @@ app.use((req, res) => {
 	res.status(404).json({ error: 'Route not found' });
 });
 
+import { recoveryService } from './services/recoveryService.js';
+
 const port = process.env.PORT || 3001;
 app.listen(port, () => {
 	logger.info(`🚀 API Server running on http://localhost:${port}`);
+	recoveryService.start();
 });
 
 export default app;
