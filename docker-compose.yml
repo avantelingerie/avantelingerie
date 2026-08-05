@@ -23,6 +23,7 @@ services:
     environment:
       - NODE_ENV=production
       - POCKETBASE_URL=http://pocketbase:8090
+      - RESEND_API_KEY=${RESEND_API_KEY}
       # - ANTHROPIC_API_KEY=sua_chave_aqui (configurado no painel pb)
     depends_on:
       - pocketbase
