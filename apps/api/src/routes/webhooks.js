@@ -5,6 +5,7 @@ import axios from 'axios';
 import pb from '../utils/pocketbaseClient.js';
 import logger from '../utils/logger.js';
 import { blingService } from '../services/blingService.js';
+import { notificationService } from '../services/notificationService.js';
 import { getBlingToken } from '../utils/blingTokenManager.js';
 
 const router = express.Router();
@@ -43,6 +44,9 @@ router.post('/bling', async (req, res) => {
           updateData.historico_status = novoHistorico;
         }
         await pb.collection('pedidos').update(pedido.id, updateData);
+        if (codigo_rastreio) {
+          notificationService.sendOrderStatusNotification(pedido, 'despachado', codigo_rastreio).catch(err => logger.error('Erro envio de notificacao:', err));
+        }
         logger.info(`Webhook Bling (Pedido) processado: numero_pedido=${numero_pedido}`);
         return res.json({ sucesso: true, mensagem: 'Webhook Bling de Pedido processado' });
       }
@@ -318,6 +322,8 @@ router.post('/stripe', async (req, res) => {
         }
 
         await pb.collection(collectionName).update(pedido.id, updateData, { $autoCancel: false });
+        notificationService.sendOrderStatusNotification(pedido, 'pago').catch(err => logger.error('Erro notificacao pago:', err));
+        
         logger.info(`[StripeWebhook] Status do pedido #${pedido.id} atualizado para 'confirmado' com sucesso.`);
 
         // NOVO: Baixar estoque das variações no PocketBase

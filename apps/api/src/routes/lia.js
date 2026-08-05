@@ -215,27 +215,73 @@ ${knowledgeContext}
     
     logger.info(`Lia roteando mensagem via modelo: ${modelo} (Sessão: ${session_id})`);
 
-    // 4. Chamada para a API da Anthropic
-    const anthropicResponse = await axios.post(
+    // 4. Chamada para a API da Anthropic com suporte a Tools (Function Calling)
+    let anthropicResponse;
+    let respostaLia = '';
+    
+    // Tools da Lia
+    const liaTools = [{
+      name: "get_order_tracking",
+      description: "Busca o status logístico atualizado de um pedido. Use APENAS se o cliente fornecer o Número do Pedido, Código de Rastreio, CPF cadastrado ou se estiver no WhatsApp (telefone já validado). NUNCA consulte pedidos de terceiros.",
+      input_schema: {
+        type: "object",
+        properties: {
+          identifier: { type: "string", description: "O Número do Pedido, Código de Rastreio, CPF ou Telefone do cliente." }
+        },
+        required: ["identifier"]
+      }
+    }];
+
+    const anthropicMessages = historico.map(m => ({ role: m.role, content: m.content }));
+
+    anthropicResponse = await axios.post(
       'https://api.anthropic.com/v1/messages',
       {
         model: modelo,
         max_tokens: 300,
         system: systemPrompt,
-        messages: historico.map(m => ({ role: m.role, content: m.content })),
-        temperature: 0.7
+        messages: anthropicMessages,
+        temperature: 0.7,
+        tools: liaTools
       },
-      {
-        headers: {
-          'x-api-key': apiKey,
-          'anthropic-version': '2023-06-01',
-          'content-type': 'application/json'
-        },
-        timeout: 15000
-      }
+      { headers: { 'x-api-key': apiKey, 'anthropic-version': '2023-06-01', 'content-type': 'application/json' }, timeout: 15000 }
     );
 
-    const respostaLia = anthropicResponse.data.content[0].text;
+    if (anthropicResponse.data.stop_reason === 'tool_use') {
+      const toolCall = anthropicResponse.data.content.find(c => c.type === 'tool_use');
+      logger.info(`[Lia Tools] Invocando ferramenta: ${toolCall.name} com args ${JSON.stringify(toolCall.input)}`);
+      
+      let toolResultText = "Não foi possível encontrar este pedido.";
+      
+      if (toolCall.name === 'get_order_tracking') {
+        try {
+           const trackRes = await axios.post(`http://localhost:${process.env.PORT || 3001}/shipping/track`, { code: toolCall.input.identifier });
+           if (trackRes.data && trackRes.data.sucesso) {
+             toolResultText = JSON.stringify(trackRes.data.tracking);
+           } else {
+             toolResultText = trackRes.data.erro || "Pedido não encontrado ou sem rastreio disponível.";
+           }
+        } catch(err) {
+           toolResultText = "Erro ao consultar a transportadora: " + (err.response?.data?.erro || err.message);
+        }
+      }
+
+      anthropicMessages.push({ role: 'assistant', content: anthropicResponse.data.content });
+      anthropicMessages.push({
+        role: 'user',
+        content: [{ type: "tool_result", tool_use_id: toolCall.id, content: toolResultText }]
+      });
+
+      const finalResponse = await axios.post(
+        'https://api.anthropic.com/v1/messages',
+        { model: modelo, max_tokens: 300, system: systemPrompt, messages: anthropicMessages, temperature: 0.7, tools: liaTools },
+        { headers: { 'x-api-key': apiKey, 'anthropic-version': '2023-06-01', 'content-type': 'application/json' }, timeout: 15000 }
+      );
+      
+      respostaLia = finalResponse.data.content[0].text;
+    } else {
+      respostaLia = anthropicResponse.data.content[0].text;
+    }
 
     // 5. Salvar a resposta no banco de dados
     historico.push({ role: 'assistant', content: respostaLia });

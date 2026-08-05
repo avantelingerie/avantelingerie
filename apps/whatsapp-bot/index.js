@@ -155,6 +155,23 @@ app.post('/disconnect', async (req, res) => {
     }
 });
 
+app.post('/send', async (req, res) => {
+    const { phone, message } = req.body;
+    if (!phone || !message) {
+        return res.status(400).json({ erro: 'Telefone e mensagem são obrigatórios' });
+    }
+    
+    try {
+        const chatId = `${phone.replace(/\D/g, '')}@c.us`;
+        await client.sendMessage(chatId, message);
+        console.log(`[Push] Mensagem enviada para ${phone}`);
+        res.json({ sucesso: true });
+    } catch (e) {
+        console.error(`[Push] Erro ao enviar mensagem para ${phone}:`, e);
+        res.status(500).json({ erro: 'Falha ao enviar mensagem', detalhe: e.message });
+    }
+});
+
 app.listen(3000, '0.0.0.0', () => {
     console.log('Servidor de comandos do Porteiro ouvindo na porta 3000');
 });

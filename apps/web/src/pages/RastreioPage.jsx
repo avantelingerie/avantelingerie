@@ -18,10 +18,11 @@ import {
   MapPin
 } from 'lucide-react';
 import { toast } from 'sonner';
+import { motion, AnimatePresence } from 'framer-motion';
 import pb from '@/lib/pocketbaseClient.js';
 import apiServerClient from '@/lib/apiServerClient.js';
+import { useAuth } from '@/context/AuthContext.jsx';
 import ProductCard from '@/components/ProductCard.jsx';
-import { motion, AnimatePresence } from 'framer-motion';
 
 // Fallback products in case PocketBase query yields no results
 const fallbackProducts = [
@@ -89,6 +90,8 @@ const fallbackProducts = [
 
 export default function RastreioPage() {
   const navigate = useNavigate();
+  const { currentUser } = useAuth();
+  
   const [trackingCode, setTrackingCode] = useState('');
   const [searchStatus, setSearchStatus] = useState('idle'); // idle | searching | success | error
   const [orderData, setOrderData] = useState(null);
@@ -141,6 +144,22 @@ export default function RastreioPage() {
     if (!targetCode) {
       toast.error("Por favor, digite um código de rastreamento.");
       return;
+    }
+
+    // Trava de Autenticação (Privacy Guard)
+    const isCorreiosCode = /^[A-Z]{2}\d{9}[A-Z]{2}$/i.test(targetCode);
+    const isUUID = /^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$/.test(targetCode);
+    
+    // Melhor Envio tracking sometimes is alphanumeric like "MEL12345"
+    // Let's assume order numbers are typically short numbers like "1055" or have "#" like "#1055"
+    const looksLikeOrderNumber = targetCode.length < 8 || targetCode.startsWith('#');
+
+    if (looksLikeOrderNumber && !isCorreiosCode && !isUUID) {
+      if (!currentUser) {
+        toast.error("Para buscar pelo Número do Pedido, você precisa fazer Login.");
+        navigate('/login');
+        return;
+      }
     }
 
     setSearchStatus('searching');
@@ -244,6 +263,15 @@ export default function RastreioPage() {
               Rastrear
             </button>
           </div>
+          
+          <motion.p 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.5 }}
+            className="text-center text-gray-400 text-[10px] sm:text-xs mt-3 tracking-wide"
+          >
+            * Por motivos de segurança e privacidade, rastreios usando o <span className="text-[#c59b5f]">Número do Pedido</span> exigem Login.
+          </motion.p>
         </div>
       </section>
 
