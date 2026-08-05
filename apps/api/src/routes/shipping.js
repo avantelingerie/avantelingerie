@@ -45,7 +45,7 @@ router.post('/calculate', async (req, res, next) => {
     }
 
     // 2. Fetch Origin CEP
-    let fromCep = '28610000'; // Fallback to Nova Friburgo
+    let fromCep = '28623620'; // Fallback to Nova Friburgo
     try {
       const configRecords = await pb.collection('configuracoes_estoque').getFullList({ $autoCancel: false });
       if (configRecords.length > 0 && configRecords[0].cep_origem) {
