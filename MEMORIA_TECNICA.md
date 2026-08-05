@@ -511,3 +511,11 @@ No ambiente local, a pasta nunca existiu pois o GitHub bloqueia commits acima de
 
 ### **Seção Categorias Dinâmicas (04/08/2026)**
 - **Arquivo:** pps/web/src/pages/HomePage.jsx`n- **O que foi feito:** O array estático categories foi substituído por um useState. Adicionou-se lógica para buscar todas as categorias (tivo=true) da coleção categorias. Para cada categoria encontrada, busca-se o produto mais recente que tenha uma imagem, utilizando essa imagem como thumbnail da categoria no carrossel. O link gerado para redirecionamento passou a ser dinâmico (/categoria/). Dessa forma, qualquer alteração no Painel Admin reflete imediatamente na Home.
+## [05/08/2026] Infraestrutura de E-mail (Resend) e DNS
+- **Resend na API**: A integração do envio de e-mails usando a SDK do Resend foi finalizada no backend.
+- **Docker e VPS**: Corrigido bug de compilação do 
+pm ci nos Dockerfiles para 
+pm install. A VPS foi reconstruída e a injeção da variável RESEND_API_KEY agora é forçada pelo env_file.
+- **Rastreamento Seguro**: Implementada trava de segurança na página de rastreio, exigindo login quando o cliente busca pelo Número do Pedido.
+- **DNS e Domínio**: A autoridade do DNS foi transferida da Hostinger de volta para o Registro.br. Os 5 apontamentos (A para a VPS, TXT e MX para o Resend) foram configurados.
+- **Próximos Passos (Ponto de Parada)**: Validar o domínio no painel do Resend e realizar uma compra de teste para verificar o disparo dos e-mails e WhatsApp.
