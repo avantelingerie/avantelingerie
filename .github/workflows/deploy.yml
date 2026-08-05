@@ -20,4 +20,4 @@ jobs:
           script: |
             cd /root/avantelingerie
             git pull
-            docker compose up -d --build web
+            docker compose up -d --build
