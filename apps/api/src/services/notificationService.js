@@ -1,8 +1,8 @@
 import axios from 'axios';
 import logger from '../utils/logger.js';
-// import { Resend } from 'resend'; // Descomente após rodar npm i resend
+import { Resend } from 'resend';
 
-// Opcional: const resend = new Resend(process.env.RESEND_API_KEY);
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 class NotificationService {
     async sendOrderStatusNotification(order, novoStatus, rastreio = null) {
@@ -35,8 +35,6 @@ class NotificationService {
 
         // 1. Disparo de WhatsApp
         try {
-            // Em dev: axios para localhost:3000 (whatsapp-bot)
-            // Em prod docker: http://whatsapp-bot:3000/send
             const waHost = process.env.WHATSAPP_API_URL || 'http://localhost:3000';
             await axios.post(`${waHost}/send`, {
                 phone: order.cliente_telefone,
@@ -49,7 +47,6 @@ class NotificationService {
 
         // 2. Disparo de E-mail (Se Resend configurado)
         if (process.env.RESEND_API_KEY && order.cliente_email) {
-            /* 
             try {
                 await resend.emails.send({
                     from: 'Avante Lingerie <suporte@avantelingerie.com.br>',
@@ -61,7 +58,6 @@ class NotificationService {
             } catch (err) {
                 logger.error(`[NotificationService] Falha ao enviar E-mail: ${err.message}`);
             }
-            */
         }
     }
 }
