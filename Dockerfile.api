@@ -6,7 +6,7 @@ WORKDIR /app
 COPY . .
 
 # Instala as dependências de todos os workspaces
-RUN npm ci --omit=dev
+RUN npm install --omit=dev
 
 WORKDIR /app/apps/api
 

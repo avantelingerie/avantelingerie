@@ -6,8 +6,8 @@ WORKDIR /app
 # Copia tudo (usa .dockerignore)
 COPY . .
 
-# Instala dependências (incluindo devDependencies necessárias para o Vite build)
-RUN npm ci
+# Instala as dependências (workspace root)
+RUN npm install
 
 # Roda o build do frontend (vai gerar na pasta raiz /app/dist/apps/web)
 RUN npm run build --prefix apps/web
