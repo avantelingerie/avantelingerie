@@ -6,6 +6,7 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { blingService } from '../services/blingService.js';
+import { notificationService } from '../services/notificationService.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -162,6 +163,11 @@ router.post('/create-order', async (req, res) => {
 
     logger.info(`[CreateOrder] Salvando pedido ${numero_pedido} no PocketBase como superusuário.`);
     const createdOrder = await pb.collection('pedidos').create(orderPayload, { $autoCancel: false });
+
+    // NOVO: Disparo de notificação de pedido criado (Pendente)
+    notificationService.sendOrderStatusNotification(createdOrder, 'pendente').catch(err => {
+      logger.error(`[CreateOrder] Erro ao enviar notificação de pedido criado: ${err.message}`);
+    });
 
     // NOVO: Atualizar/reduzir o estoque das variações
     try {

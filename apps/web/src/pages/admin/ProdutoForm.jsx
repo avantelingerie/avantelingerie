@@ -887,7 +887,7 @@ export default function ProdutoForm() {
           </section>
         </div>
 
-        <div className="space-y-8">
+        <div className="space-y-8 sticky top-24 self-start max-h-[calc(100vh-7rem)] overflow-y-auto pb-2 pr-1">
           <section className="bg-card p-6 rounded-xl border border-[#c59b5f]/10 shadow-sm space-y-6">
             <div className="flex items-center justify-between border-b border-[#c59b5f]/20 pb-2">
               <h2 className="text-lg font-bold text-white font-serif">Mídias e Fotos</h2>

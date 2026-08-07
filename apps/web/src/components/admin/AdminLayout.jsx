@@ -80,7 +80,7 @@ export default function AdminLayout() {
   const isDanger = inventoryStats.zerado > 0;
 
   return (
-    <div className="dark admin-panel-container flex overflow-hidden bg-[#0a0a0a] min-h-screen text-foreground font-sans">
+    <div className="dark admin-panel-container flex bg-[#0a0a0a] min-h-screen text-foreground font-sans">
       {isSidebarOpen && (
         <div className="fixed inset-0 bg-black/60 z-40 lg:hidden backdrop-blur-sm" onClick={() => setIsSidebarOpen(false)} />
       )}

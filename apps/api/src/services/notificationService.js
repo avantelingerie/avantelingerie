@@ -11,14 +11,19 @@ class NotificationService {
             return;
         }
 
-        const firstName = (order.nome_cliente || 'Cliente').split(' ')[0];
+        const firstName = (order.cliente_nome || order.nome_cliente || 'Cliente').split(' ')[0];
         const numPedido = order.numero_pedido || order.id;
         
         let messageWa = '';
         let subjectEmail = '';
         let htmlEmail = '';
 
-        if (novoStatus === 'pago') {
+        if (novoStatus === 'pendente' || novoStatus === 'criado') {
+            messageWa = `Olá, ${firstName}! 💖\n\nRecebemos o seu pedido *#${numPedido}* aqui na Avante Lingerie!\n\nEle está aguardando a confirmação do pagamento para podermos separar tudo com muito carinho para você. Assim que aprovar, eu te aviso!\n\nQualquer dúvida, é só me chamar!\n\n*Lia, Consultora Avante*`;
+            subjectEmail = `[Avante Lingerie] Recebemos seu pedido #${numPedido}`;
+            htmlEmail = `<h2>Olá, ${firstName}! 💖</h2><p>Recebemos o seu pedido <strong>#${numPedido}</strong> com sucesso!</p><p>Ele está aguardando a confirmação do pagamento. Assim que for aprovado, te avisaremos e iniciaremos a separação.</p>`;
+        }
+        else if (novoStatus === 'pago') {
             messageWa = `Olá, ${firstName}! 💖\n\nBoas notícias! O pagamento do seu pedido *#${numPedido}* foi aprovado com sucesso! 🎉\n\nEm breve ele será embalado com muito carinho e despachado. Assim que ele sair daqui, eu te aviso! 🥰\n\n*Lia, Consultora Avante*`;
             subjectEmail = `[Avante Lingerie] Pagamento Aprovado! Pedido #${numPedido}`;
             htmlEmail = `<h2>Olá, ${firstName}! 💖</h2><p>O pagamento do seu pedido <strong>#${numPedido}</strong> foi aprovado com sucesso!</p><p>Em breve ele será embalado e despachado.</p>`;
