@@ -556,4 +556,11 @@ pm install. A VPS foi reconstruída e a injeção da variável RESEND_API_KEY ag
 
 ### Próximos Passos (Ponto de Parada)
 - Toda a infraestrutura corporativa de e-mails (Zoho, Resend, React, Node) está 100% finalizada.
-- Iniciar a configuração dos Gateways de Pagamento (MercadoPago / Stripe).
+- A configuração final da Stripe e do Bling estão momentaneamente em "Hold" (Aguardando). Ver seção de Pendências Estratégicas abaixo.
+
+## 🛑 Pendências Estratégicas (Aguardando Bloqueios)
+Para não esquecermos, aqui estão os itens congelados e as datas de destrave:
+1. **Bling ERP (Aguardando 16/08/2026):** O sistema está travado aguardando o dia 16 para realizar a alteração de CPF para CNPJ da empresa. Somente após isso poderemos:
+   - Comprar e vincular o Certificado Digital A1.
+   - Configurar a impressão conjugada (DANFE Simplificada + Etiqueta de Envio) para saírem na mesma impressora térmica (formato 10 x 15 cm).
+2. **Stripe (Aguardando Cadastro de Produtos):** A mudança para as chaves de "Produção" (Live) foi pausada propositalmente. A ideia é primeiro iniciar o cadastro de produtos na loja e rodar alguns testes finais de checkout usando o modo Teste da Stripe. Apenas depois desse QA final faremos a virada de chaves. O problema do e-mail inicial (Gmail) será resolvido no momento da virada.
