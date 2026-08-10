@@ -519,3 +519,41 @@ pm install. A VPS foi reconstruída e a injeção da variável RESEND_API_KEY ag
 - **Rastreamento Seguro**: Implementada trava de segurança na página de rastreio, exigindo login quando o cliente busca pelo Número do Pedido.
 - **DNS e Domínio**: A autoridade do DNS foi transferida da Hostinger de volta para o Registro.br. Os 5 apontamentos (A para a VPS, TXT e MX para o Resend) foram configurados.
 - **Próximos Passos (Ponto de Parada)**: Validar o domínio no painel do Resend e realizar uma compra de teste para verificar o disparo dos e-mails e WhatsApp.
+
+## [07-08-2026] Teste Transacional, Bugfixes e Setup do Zoho Mail
+
+### O que foi feito e resolvido
+1. **Teste Transacional de Sucesso (Resend + Lia WhatsApp):** A integração de disparo de notificações transacionais foi homologada em produção. O sistema agora intercepta a criação do pedido (status `pendente` ou `criado`) e dispara simultaneamente um E-mail (via API do Resend) e um WhatsApp automatizado via Lia, notificando a cliente do recebimento do pedido e aguardo de pagamento.
+2. **Correção de Nome no Template:** Foi corrigido um bug onde a notificação saía como "Olá, Cliente!" devido a inversão de variáveis (`nome_cliente` para `cliente_nome`) no payload do PocketBase. A alteração foi *pushada* para o GitHub e implantada com sucesso via GitHub Actions na Hostinger.
+3. **Correção de UX (Admin):** Removido o `overflow-hidden` do painel administrativo e injetado o comportamento de `sticky top-24` no bloco de Mídias/Fotos (Página de Produto), garantindo que as imagens acompanhem a rolagem ao cadastrar as infinitas variações de cores e tamanhos.
+4. **Zoho Mail (E-mail Corporativo):** Iniciada a criação do ecossistema de caixa de entrada profissional gratuita. Criamos o Guia Mestre (`zoho_mail_setup.md`) detalhando os passos para cadastro no Forever Free Plan, configuração de registros MX/TXT/SPF/DKIM no Registro.br e criação dos alias (suporte, pedidos, etc).
+5. **Memória de Infraestrutura e Automação de Arquivamento:** O usuário acionou a Ada via comando `/learn` para injetar no `AGENTS.md` uma regra perpétua de atualização histórica (`MEMORIA_TECNICA.md`). Ademais, blindamos as regras de deploy na IA (sempre via Github Actions, nunca WinSCP) e a divisão exata de responsabilidades entre Resend (Disparos API) e Zoho (Caixa de Entrada Humana).
+
+### Próximos Passos (Ponto de Parada)
+1. Concluir a verificação do domínio via TXT Record no painel do Zoho Mail.
+2. Criar os e-mails (ex: suporte@, pedidos@) e apontar os registros MX, SPF e DKIM no Registro.br para validar o recebimento no Zoho.
+3. Iniciar próximos fluxos de configuração de loja (Meios de pagamento).
+
+## [10-08-2026] Finalização do Ecossistema Zoho Mail
+1. **Verificação de Conta e Plano:** Validado que a conta corporativa está devidamente configurada no plano "Forever Free" (sem cobranças futuras).
+2. **Criação de Aliases:** Criados 6 "apelidos" (aliases) profissionais apontando para a caixa principal do admin, visando organização e atendimento segmentado (`contato`, `pedidos`, `financeiro`, `revendas`, `privacidade`, `marketing`).
+3. **Mapeamento Estratégico:** Elaborado o documento `mapeamento_de_emails.md` detalhando exatamente em qual tela/sistema cada e-mail será utilizado.
+4. **Organização Autônoma (Filtros):** Criadas as 5 pastas de destino no webmail e configurados os "Filtros" (Regras) que movem automaticamente mensagens enviadas para os respectivos Aliases diretamente para suas pastas, criando um ambiente de trabalho limpo e escalável.
+
+### Próximos Passos (Ponto de Parada)
+1. Realizar uma "Varredura Geral" (General Store Cleanup) no site e código-fonte, atualizando rodapés, páginas institucionais e remetentes automáticos com base no `mapeamento_de_emails.md`.
+2. Avançar para a configuração dos Gateways de Pagamento (MercadoPago / Stripe).
+
+## [10-08-2026] Varredura Geral de E-mails no Código (Store Cleanup)
+1. **Novo Alias (Trocas e Devoluções):** Criado e configurado o e-mail `trocas@avantelingerie.com.br` no Zoho Mail (com pasta e filtro de roteamento) para separar a logística reversa do atendimento geral. O mapeamento foi atualizado.
+2. **Atualização Front-end (React):** A `CentralDaClientePage.jsx` foi atualizada para direcionar as intenções de devoluções e defeitos para o novo e-mail `trocas@`.
+3. **Atualização Back-end (Resend e Node):** O serviço de notificações transacionais (`notificationService.js`) foi modificado para enviar todos os e-mails automáticos de compras (Status de Pedidos) pelo remetente oficial `pedidos@avantelingerie.com.br`. As APIs do Bling e Melhor Envio (`integracoes.js` e `shipping.js`) tiveram o *User-Agent* alterado para usar o `contato@`.
+4. **Inteligência da Lia (IA):** O cérebro da inteligência artificial (`liaKnowledgeBase.js`) foi reprogramado para rotear os clientes de forma inteligente baseada em intenção:
+   - Defeitos/Garantias -> `trocas@avantelingerie.com.br`
+   - B2B/Atacado -> `revendas@avantelingerie.com.br` e URL da landing page.
+   - Envios/Rastreio -> `pedidos@avantelingerie.com.br`
+   - Suporte Geral -> `contato@avantelingerie.com.br`
+
+### Próximos Passos (Ponto de Parada)
+- Toda a infraestrutura corporativa de e-mails (Zoho, Resend, React, Node) está 100% finalizada.
+- Iniciar a configuração dos Gateways de Pagamento (MercadoPago / Stripe).

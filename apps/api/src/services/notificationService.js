@@ -54,7 +54,7 @@ class NotificationService {
         if (process.env.RESEND_API_KEY && order.cliente_email) {
             try {
                 await resend.emails.send({
-                    from: 'Avante Lingerie <suporte@avantelingerie.com.br>',
+                    from: 'Avante Lingerie <pedidos@avantelingerie.com.br>',
                     to: order.cliente_email,
                     subject: subjectEmail,
                     html: htmlEmail

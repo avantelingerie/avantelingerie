@@ -826,7 +826,7 @@ export default function CentralDaClientePage() {
             </table>
 
             <h3 id="trocas-solicitar">3.5. Como Solicitar a Troca</h3>
-            <p>Fale conosco no WhatsApp <strong>(22) 99761-8591</strong> ou e-mail <strong>contato@avantelingerie.com.br</strong> com o número do pedido e fotos. Retornamos em até <strong>2 dias úteis</strong> com as orientações de envio.</p>
+            <p>Fale conosco no WhatsApp <strong>(22) 99761-8591</strong> ou e-mail <strong>trocas@avantelingerie.com.br</strong> com o número do pedido e fotos. Retornamos em até <strong>2 dias úteis</strong> com as orientações de envio.</p>
 
             <h3 id="trocas-reembolso">3.6. Estorno e Prazos</h3>
             <p>Os reembolsos ocorrem após a recepção e perícia no CD (até 2 dias): no <strong>PIX</strong>, o estorno ocorre em <strong>7 dias úteis</strong>; no <strong>cartão de crédito (Stripe)</strong>, o estorno é processado de imediato e constará em até <strong>2 faturas subsequentes</strong> (prazo da sua operadora).</p>
@@ -847,7 +847,7 @@ export default function CentralDaClientePage() {
               <div className="contact-card">
                 <i className="fa-solid fa-envelope"></i>
                 <h5>E-mail</h5>
-                <p><strong>contato@avantelingerie.com.br</strong></p>
+                <p><strong>trocas@avantelingerie.com.br</strong></p>
                 <p>Retornos em até 24h úteis</p>
               </div>
               <div className="contact-card">

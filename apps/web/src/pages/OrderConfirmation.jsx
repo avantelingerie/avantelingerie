@@ -446,7 +446,7 @@ export default function OrderConfirmation() {
                   <Mail className="w-5 h-5 text-gray-400" />
                   <div className="flex flex-col">
                     <span className="text-sm font-bold text-white">E-mail de Suporte</span>
-                    <span className="text-xs text-gray-500 font-light">contato@avantelingerie.com.br</span>
+                    <span className="text-xs text-gray-500 font-light">pedidos@avantelingerie.com.br</span>
                   </div>
                 </div>
 

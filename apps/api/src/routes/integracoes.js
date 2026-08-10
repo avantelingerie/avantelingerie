@@ -214,7 +214,7 @@ router.post('/testar/:servico', async (req, res) => {
           headers: {
             'Authorization': `Bearer ${melhorEnvioToken}`,
             'Accept': 'application/json',
-            'User-Agent': 'Avante Lingerie Storefront (suporte@avantelingerie.com.br)'
+            'User-Agent': 'Avante Lingerie Storefront (contato@avantelingerie.com.br)'
           },
         }
       );

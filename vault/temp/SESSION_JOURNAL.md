@@ -8153,3 +8153,18 @@
 - url: http://localhost:3000/admin/lia
 - title: Avante Lingerie | Oficial
 
+## 2026-08-07 19:44:20.965Z load
+- url: http://localhost:3000/admin/lia
+- title: Avante Lingerie | Oficial
+
+## 2026-08-07 20:04:53.752Z load
+- url: http://localhost:3000/admin/lia
+- title: Avante Lingerie | Oficial
+
+## 2026-08-07 20:04:57.526Z click
+- element: {"tag":"button","role":"tab","ariaLabel":null,"name":null,"type":"button","id":"radix-:r3:-trigger-whatsapp","placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Conexão WhatsApp"}
+
+## 2026-08-07 20:10:13.803Z load
+- url: http://localhost:3000/admin/lia
+- title: Avante Lingerie | Oficial
+

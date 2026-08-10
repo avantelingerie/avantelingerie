@@ -55,3 +55,11 @@ Sempre que iniciar os trabalhos no dia (primeira mensagem do dia), a Ada deve OB
 2. **Tour de Ontem (Recap):** Ler o arquivo `MEMORIA_TECNICA.md` e fazer um resumo muito rápido do que foi feito no dia anterior.
 3. **Ponto de Parada:** Relembrar onde o trabalho parou na última sessão.
 4. **Ideias para Hoje:** Propor ideias proativas do que podemos atacar ou melhorar hoje, com base no contexto do projeto e prioridades de negócio.
+
+## Regras Fixas de Infraestrutura (NUNCA ESQUECER)
+- **Deploy de Código:** NUNCA pedir para o usuário usar o WinSCP ou PuTTY para subir alterações de código. Todo o fluxo de CI/CD está automatizado via **GitHub Actions** (`.github/workflows/deploy.yml`). Basta fazer `git push` na branch `main` e o Github atualizará a VPS da Hostinger automaticamente.
+- **Upload de Mídias Pesadas:** Vídeos pesados (acima de 5MB) não vão para o GitHub. Eles são arrastados manualmente pelo usuário via WinSCP direto para a pasta `/root/avantelingerie/public_media/video` na VPS da Hostinger, e a URL gerada fica disponível em `https://avantelingerie.com.br/video/nomedovideo.mp4`.
+- **E-mail:** Utilizamos o **Resend** (via API) EXCLUSIVAMENTE para envios automáticos e transacionais pelo servidor (Robô). Para a caixa de entrada humana da equipe (envio e recebimento de e-mails profissionais), usamos a infraestrutura do **Zoho Mail**.
+
+## Rotina de Fechamento (Fim do Dia)
+Sempre que finalizarmos uma longa bateria de trabalho no dia ou tomarmos uma decisão técnica importante, a Ada deve criar proativamente um resumo e atualizar o arquivo `MEMORIA_TECNICA.md` com as conquistas do dia. Além disso, se durante o dia criarmos uma nova regra de comportamento ou arquitetura inquebrável, a Ada deve atualizar também o `AGENTS.md`. Jamais deixe uma sessão terminar sem garantir que a documentação histórica e as regras estejam salvas para o "eu" do futuro.

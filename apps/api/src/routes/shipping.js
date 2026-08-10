@@ -143,7 +143,7 @@ router.post('/calculate', async (req, res, next) => {
         'Authorization': `Bearer ${token}`,
         'Content-Type': 'application/json',
         'Accept': 'application/json',
-        'User-Agent': 'Avante Lingerie Storefront (suporte@avantelingerie.com.br)'
+        'User-Agent': 'Avante Lingerie Storefront (contato@avantelingerie.com.br)'
       }
     });
 
