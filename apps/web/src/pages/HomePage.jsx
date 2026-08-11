@@ -29,7 +29,8 @@ export default function HomePage() {
     promos: [],
     newArrivals: [],
     kits: [],
-    testimonials: []
+    testimonials: [],
+    colecoes: []
   });
 
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: 'start' });
@@ -76,13 +77,14 @@ export default function HomePage() {
           }
         }));
 
-        const [maisVendidosRes, favoritesRes, promosRes, newArrivalsRes, kitsRes, testimonialsRes] = await Promise.allSettled([
+        const [maisVendidosRes, favoritesRes, promosRes, newArrivalsRes, kitsRes, testimonialsRes, colecoesRes] = await Promise.allSettled([
           pb.collection('products').getList(1, 4, { filter: 'status = true && is_mais_vendido = true', sort: '-created', expand: 'categoria_id', $autoCancel: false }),
           pb.collection('products').getList(1, 4, { filter: 'status = true && is_favorito = true', sort: '-created', expand: 'categoria_id', $autoCancel: false }),
           pb.collection('products').getList(1, 4, { filter: 'status = true && is_promocao = true', sort: '-created', expand: 'categoria_id', $autoCancel: false }),
           pb.collection('products').getList(1, 4, { filter: 'status = true && is_novidade = true', sort: '-created', expand: 'categoria_id', $autoCancel: false }),
           pb.collection('products').getList(1, 4, { filter: 'status = true && (categoria = "Kits" || is_combo = true)', sort: '-created', expand: 'categoria_id', $autoCancel: false }),
-          pb.collection('testimonials').getList(1, 6, { sort: '-created', $autoCancel: false })
+          pb.collection('testimonials').getList(1, 6, { sort: '-created', $autoCancel: false }),
+          pb.collection('colecoes').getList(1, 4, { filter: 'ativo = true', sort: '-created', $autoCancel: false })
         ]);
 
         const getItems = res => res.status === 'fulfilled' ? res.value.items : [];
@@ -142,7 +144,8 @@ export default function HomePage() {
               quantidade_avaliacoes: 142
             }),
             kits: getItems(kitsRes),
-            testimonials: getItems(testimonialsRes)
+            testimonials: getItems(testimonialsRes),
+            colecoes: getItems(colecoesRes)
           });
           setLoading(false);
         }
@@ -611,15 +614,28 @@ export default function HomePage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 relative z-10">
-            <div onClick={() => navigate('/categoria/premium')} className="cursor-pointer lg:col-span-2 aspect-[4/3] lg:aspect-auto">
-              <CollectionCard title="Premium" image="https://images.unsplash.com/photo-1568441556126-f36ae0900180?w=600&q=80" />
-            </div>
-            <div onClick={() => navigate('/categoria/essenciais')} className="cursor-pointer">
-              <CollectionCard title="Essenciais" image="https://images.unsplash.com/photo-1701017718943-996aa586e955?w=600&q=80" />
-            </div>
-            <div onClick={() => navigate('/categoria/sensuais')} className="cursor-pointer">
-              <CollectionCard title="Sensuais" image="https://images.unsplash.com/photo-1700252713499-858564705cc3?w=600&q=80" />
-            </div>
+            {data.colecoes && data.colecoes.length > 0 ? (
+              data.colecoes.map((col, idx) => (
+                <div key={col.id} onClick={() => navigate(`/categoria/${col.slug}`)} className={`cursor-pointer ${idx === 0 ? 'lg:col-span-2 aspect-[4/3] lg:aspect-auto' : ''}`}>
+                  <CollectionCard 
+                    title={col.nome} 
+                    image={col.imagem_capa ? pb.files.getUrl(col, col.imagem_capa) : 'https://images.unsplash.com/photo-1568441556126-f36ae0900180?w=600&q=80'} 
+                  />
+                </div>
+              ))
+            ) : (
+              <>
+                <div onClick={() => navigate('/categoria/premium')} className="cursor-pointer lg:col-span-2 aspect-[4/3] lg:aspect-auto">
+                  <CollectionCard title="Premium" image="https://images.unsplash.com/photo-1568441556126-f36ae0900180?w=600&q=80" />
+                </div>
+                <div onClick={() => navigate('/categoria/essenciais')} className="cursor-pointer">
+                  <CollectionCard title="Essenciais" image="https://images.unsplash.com/photo-1701017718943-996aa586e955?w=600&q=80" />
+                </div>
+                <div onClick={() => navigate('/categoria/sensuais')} className="cursor-pointer">
+                  <CollectionCard title="Sensuais" image="https://images.unsplash.com/photo-1700252713499-858564705cc3?w=600&q=80" />
+                </div>
+              </>
+            )}
           </div>
         </div>
       </section>

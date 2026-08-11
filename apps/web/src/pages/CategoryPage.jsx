@@ -62,19 +62,37 @@ export default function CategoryPage() {
     price: [0, 500]
   });
 
-  const formattedCategoryName = categoryName
-    ? categoryName.charAt(0).toUpperCase() + categoryName.slice(1).replace(/-/g, ' ')
-    : 'Todas as Peças';
-
   const [categoriaId, setCategoriaId] = useState(null);
+  const [colecaoId, setColecaoId] = useState(null);
+  const [entityName, setEntityName] = useState(''); // Real name from DB
 
-  // Busca o ID da categoria pelo slug assim que categoryName mudar
+  const formattedCategoryName = entityName || (categoryName
+    ? categoryName.charAt(0).toUpperCase() + categoryName.slice(1).replace(/-/g, ' ')
+    : 'Todas as Peças');
+
+  // Busca o ID da categoria ou coleção pelo slug assim que categoryName mudar
   useEffect(() => {
     setCategoriaId(null);
+    setColecaoId(null);
+    setEntityName('');
     if (!categoryName || categoryName === 'todas') return;
-    pb.collection('categorias').getFirstListItem(`slug = "${categoryName}"`, { $autoCancel: false })
-      .then(cat => setCategoriaId(cat.id))
-      .catch(() => setCategoriaId('__not_found__'));
+
+    const findEntity = async () => {
+      try {
+        const cat = await pb.collection('categorias').getFirstListItem(`slug = "${categoryName}"`, { $autoCancel: false });
+        setCategoriaId(cat.id);
+        setEntityName(cat.nome);
+      } catch (e1) {
+        try {
+          const col = await pb.collection('colecoes').getFirstListItem(`slug = "${categoryName}"`, { $autoCancel: false });
+          setColecaoId(col.id);
+          setEntityName(col.nome);
+        } catch (e2) {
+          setCategoriaId('__not_found__');
+        }
+      }
+    };
+    findEntity();
   }, [categoryName]);
 
   const buildFilterString = useCallback(() => {
@@ -83,6 +101,8 @@ export default function CategoryPage() {
     if (categoryName && categoryName !== 'todas') {
       if (categoriaId && categoriaId !== '__not_found__') {
         filterStr = `status = true && categoria_id = "${categoriaId}"`;
+      } else if (colecaoId) {
+        filterStr = `status = true && colecoes_ids ~ "${colecaoId}"`;
       } else if (categoriaId === '__not_found__') {
         filterStr = 'status = true && id = ""';
       }

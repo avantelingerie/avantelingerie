@@ -20,6 +20,7 @@ export default function ProdutoForm() {
   const [saving, setSaving] = useState(false);
   const [loading, setLoading] = useState(isEdit);
   const [categorias, setCategorias] = useState([]);
+  const [colecoes, setColecoes] = useState([]);
   const [allProducts, setAllProducts] = useState([]);
 
   const [formData, setFormData] = useState({
@@ -44,7 +45,8 @@ export default function ProdutoForm() {
     is_mais_vendido: false,
     is_favorito: false,
     video_url: '',
-    cross_sell_id: ''
+    cross_sell_id: '',
+    colecoes_ids: ''
   });
 
   const [images, setImages] = useState([]);
@@ -91,6 +93,7 @@ export default function ProdutoForm() {
 
   useEffect(() => {
     fetchCategorias();
+    fetchColecoes();
     fetchAllProducts();
     if (isEdit) {
       fetchProduto();
@@ -113,6 +116,15 @@ export default function ProdutoForm() {
     } catch (error) {
       console.error('Error fetching categories:', error);
       toast.error('Erro ao buscar categorias. Verifique a conexão com o banco.');
+    }
+  };
+
+  const fetchColecoes = async () => {
+    try {
+      const records = await pb.collection('colecoes').getFullList({ sort: 'nome', $autoCancel: false });
+      setColecoes(records);
+    } catch (error) {
+      console.error('Error fetching colecoes:', error);
     }
   };
 
@@ -141,7 +153,8 @@ export default function ProdutoForm() {
         is_mais_vendido: !!record.is_mais_vendido,
         is_favorito: !!record.is_favorito,
         video_url: record.video_url || '',
-        cross_sell_id: record.cross_sell_id || ''
+        cross_sell_id: record.cross_sell_id || '',
+        colecoes_ids: record.colecoes_ids || ''
       });
 
       const getFilenameFromUrl = (urlOrFilename) => {
@@ -445,6 +458,7 @@ export default function ProdutoForm() {
       pbFormData.append('is_favorito', formData.is_favorito);
       pbFormData.append('video_url', formData.video_url);
       pbFormData.append('cross_sell_id', formData.cross_sell_id);
+      pbFormData.append('colecoes_ids', formData.colecoes_ids);
       
       const totalStock = variacoes.reduce((acc, curr) => acc + (parseInt(curr.estoque) || 0), 0);
       pbFormData.append('stock', totalStock);
@@ -678,6 +692,35 @@ export default function ProdutoForm() {
                     </button>
                   </label>
                   <Input required value={formData.reference} onChange={(e) => handleInputChange('reference', e.target.value)} className="bg-[#121212] border-[#c59b5f]/20 text-white font-mono" />
+                </div>
+              </div>
+
+              <div>
+                <label className="text-sm font-medium mb-1.5 block text-gray-300">Coleções Especiais (Opcional)</label>
+                <div className="flex flex-wrap gap-3 p-3 bg-[#1a1a1a] border border-[#c59b5f]/25 rounded-md max-h-32 overflow-y-auto">
+                  {colecoes.map(col => {
+                    const isChecked = formData.colecoes_ids.includes(col.id);
+                    return (
+                      <label key={col.id} className="flex items-center gap-2 text-sm text-gray-300 cursor-pointer bg-[#121212] px-3 py-1.5 rounded border border-gray-800 hover:border-[#c59b5f]/50 transition-colors">
+                        <input
+                          type="checkbox"
+                          checked={isChecked}
+                          onChange={(e) => {
+                            let ids = formData.colecoes_ids ? formData.colecoes_ids.split(',').filter(Boolean) : [];
+                            if (e.target.checked) {
+                              ids.push(col.id);
+                            } else {
+                              ids = ids.filter(id => id !== col.id);
+                            }
+                            handleInputChange('colecoes_ids', ids.join(','));
+                          }}
+                          className="rounded bg-black border-gray-600 text-[#c59b5f] focus:ring-[#c59b5f]"
+                        />
+                        {col.nome}
+                      </label>
+                    );
+                  })}
+                  {colecoes.length === 0 && <span className="text-xs text-gray-500">Nenhuma coleção encontrada</span>}
                 </div>
               </div>
 

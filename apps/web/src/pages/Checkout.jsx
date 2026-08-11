@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { useNavigate, Link } from 'react-router-dom';
-import { Lock, Shield, UserCircle, Truck, CreditCard, ChevronRight, Loader2, X, Mail, Gift, Clock } from 'lucide-react';
+import { Lock, Shield, UserCircle, Truck, CreditCard, ChevronRight, Loader2, X, Mail, Gift, Clock, CheckCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button.jsx';
 import { Switch } from '@/components/ui/switch.jsx';
 import { Label } from '@/components/ui/label.jsx';
@@ -556,77 +556,96 @@ export default function Checkout() {
 
             </div>
           </div>
-
         </div>
       </div>
 
-      {/* PERSUASIVE EXIT INTENT POPUP (VIBRANT & ATTENTION GRABBING) */}
+       {/* PERSUASIVE EXIT INTENT POPUP (SHOPEE STYLE - CONVERSION ORIENTED) */}
       {showExitModal && (
-        <div className="fixed inset-0 z-[999] flex items-center justify-center p-4 bg-black/75 backdrop-blur-md animate-fade-in font-sans">
-          {/* Vibrant Luxury Amber/Rose Gradient Box */}
-          <div className="relative w-full max-w-lg overflow-hidden rounded-3xl bg-gradient-to-br from-[#d946ef] via-[#ec4899] to-[#f43f5e] p-1 shadow-[0_20px_50px_rgba(236,72,153,0.3)] animate-scale-up text-white border border-pink-300/30">
+        <div className="fixed inset-0 z-[999] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-fade-in font-sans">
+          
+          <div className="relative w-full max-w-md overflow-visible rounded-3xl bg-white p-[3px] shadow-[0_20px_50px_rgba(255,102,0,0.2)] animate-scale-up border border-[#ff6600]/20">
             {/* Close Button */}
             <button
               type="button"
               onClick={() => setShowExitModal(false)}
-              className="absolute top-4 right-4 w-9 h-9 rounded-full bg-black/20 hover:bg-black/40 flex items-center justify-center text-white transition-all duration-300"
+              className="absolute top-4 right-4 z-30 w-8 h-8 rounded-full bg-gray-100 hover:bg-gray-200 flex items-center justify-center text-gray-500 hover:text-gray-800 transition-all duration-300 shadow-sm"
             >
               <X className="w-4 h-4" />
             </button>
 
-            <div className="bg-[#121212] rounded-[22px] p-6 md:p-8 flex flex-col items-center text-center">
+            {/* Lia Image Popping Out */}
+            <div className="absolute -top-[120px] -left-8 w-44 h-44 z-20 pointer-events-none drop-shadow-xl animate-bounce-slow flex justify-center items-end hidden sm:flex">
+              <img 
+                src="/imagens/lia_avatar.png" 
+                alt="Lia Consultora" 
+                className="w-full h-full object-contain object-bottom"
+              />
+            </div>
+            {/* Mobile version of Lia */}
+            <div className="absolute -top-16 left-1/2 -translate-x-1/2 w-28 h-28 z-20 pointer-events-none drop-shadow-xl animate-bounce-slow flex justify-center items-end sm:hidden">
+              <img 
+                src="/imagens/lia_avatar.png" 
+                alt="Lia Consultora" 
+                className="w-full h-full object-contain object-bottom"
+              />
+            </div>
+
+            <div className="bg-white rounded-[22px] p-6 pt-14 md:p-8 md:pt-10 flex flex-col items-center text-center relative z-10 overflow-hidden">
+              
+              {/* Top Banner (Shopee Style) */}
+              <div className="absolute top-0 inset-x-0 h-1.5 bg-gradient-to-r from-[#ff6600] to-[#ff9900]"></div>
 
               {exitStep === 'persuasion' && (
-                <>
-                  {/* Glowing Icon */}
-                  <div className="w-16 h-16 rounded-full bg-gradient-to-tr from-yellow-400 to-amber-500 flex items-center justify-center mb-6 shadow-lg animate-bounce relative">
-                    <Gift className="w-8 h-8 text-black" strokeWidth={2} />
+                <div className="flex flex-col items-center mt-2">
+                  <div className="flex items-center gap-2 mb-3 bg-[#fff0e6] px-4 py-1.5 rounded-full border border-[#ff6600]/20">
+                    <Gift className="w-4 h-4 text-[#ff6600]" strokeWidth={2.5} />
+                    <span className="text-[#ff6600] font-black text-[11px] uppercase tracking-wider">Presente Liberado</span>
                   </div>
 
-                  <h3 className="text-xl md:text-2xl font-serif font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 via-pink-400 to-rose-400 tracking-wide mb-3 uppercase">
-                    Espere! Não vá embora!
+                  <h3 className="text-2xl md:text-3xl font-black text-gray-900 tracking-tight mb-3">
+                    ESPERE! NÃO VÁ EMBORA!
                   </h3>
 
-                  <p className="text-sm font-light text-gray-300 leading-relaxed mb-6 max-w-sm">
-                    Seus <strong className="text-yellow-300 font-bold">5% de Desconto no PIX</strong> e os descontos ativos no seu carrinho expirarão em instantes. Garantimos o melhor preço de fábrica!
+                  <p className="text-sm font-medium text-gray-600 leading-relaxed mb-6 max-w-sm">
+                    A Lia separou <strong className="text-[#ff6600] font-black text-base">5% de Desconto Adicional no PIX</strong> que expira em instantes. Garanta o melhor preço de fábrica agora!
                   </p>
 
                   <div className="flex flex-col w-full gap-3">
                     <Button
                       type="button"
                       onClick={() => setShowExitModal(false)}
-                      className="w-full bg-gradient-to-r from-yellow-400 via-amber-500 to-orange-500 hover:from-yellow-300 hover:to-orange-400 text-black font-extrabold text-xs tracking-widest uppercase py-6 rounded-2xl shadow-xl transition-all duration-300 transform hover:scale-[1.02] active:scale-[0.98]"
+                      className="w-full bg-gradient-to-r from-[#ff6600] to-[#ff8c00] hover:from-[#e65c00] hover:to-[#ff7b00] text-white font-extrabold text-xs tracking-wider uppercase py-6 rounded-2xl shadow-xl shadow-[#ff6600]/20 transition-all duration-300 transform hover:scale-[1.02] active:scale-[0.98] border-b-4 border-[#cc5200]"
                     >
-                      💥 Concluir Compra com Desconto
+                      🎁 QUERO MEU DESCONTO AGORA
                     </Button>
 
                     <button
                       type="button"
                       onClick={() => setExitStep('capture')}
-                      className="text-xs text-pink-400 hover:text-pink-300 underline font-semibold transition-colors mt-2"
+                      className="text-[11px] text-gray-400 hover:text-gray-600 underline font-semibold transition-colors mt-2"
                     >
-                      Salvar meu carrinho e desconto para depois
+                      Salvar meu carrinho para depois
                     </button>
                   </div>
-                </>
+                </div>
               )}
 
               {exitStep === 'capture' && (
-                <>
-                  <div className="w-16 h-16 rounded-full bg-pink-500/10 border border-pink-500/30 flex items-center justify-center mb-6 text-pink-500">
-                    <Mail className="w-8 h-8" />
+                <div className="flex flex-col items-center mt-2">
+                  <div className="w-14 h-14 rounded-full bg-[#fff0e6] border border-[#ff6600]/20 flex items-center justify-center mb-4 text-[#ff6600]">
+                    <Mail className="w-6 h-6" />
                   </div>
 
-                  <h3 className="text-lg md:text-xl font-bold text-white tracking-wide mb-2">
+                  <h3 className="text-xl md:text-2xl font-black text-gray-900 tracking-tight mb-2">
                     Salvar Carrinho & Cupom
                   </h3>
-                  <p className="text-xs font-light text-gray-400 leading-relaxed mb-6 max-w-xs">
+                  <p className="text-xs font-medium text-gray-500 leading-relaxed mb-6 max-w-xs">
                     Insira seu contato. Nós guardamos suas lingeries reservadas e te enviamos o link do carrinho com desconto por e-mail/WhatsApp!
                   </p>
 
-                  <form onSubmit={handleSaveLead} className="flex flex-col w-full gap-3.5">
-                    <div className="flex flex-col gap-1.5 text-left w-full">
-                      <Label htmlFor="lead-email" className="text-[10px] font-bold text-gray-400 uppercase tracking-wider">Seu E-mail principal</Label>
+                  <form onSubmit={handleSaveLead} className="flex flex-col w-full gap-3 text-left">
+                    <div className="flex flex-col gap-1.5 w-full">
+                      <Label htmlFor="lead-email" className="text-[10px] font-bold text-gray-500 uppercase tracking-wider">Seu E-mail principal</Label>
                       <input
                         id="lead-email"
                         type="email"
@@ -634,56 +653,50 @@ export default function Checkout() {
                         placeholder="exemplo@email.com"
                         value={leadEmail}
                         onChange={(e) => setLeadEmail(e.target.value)}
-                        className="bg-zinc-900 border border-zinc-800 rounded-2xl p-4 text-sm focus:outline-none focus:ring-2 focus:ring-pink-500/30 transition-all text-white placeholder-zinc-500 w-full"
+                        className="bg-gray-50 border border-gray-200 rounded-xl p-3.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#ff6600]/30 transition-all text-gray-900 placeholder-gray-400 w-full font-medium"
                       />
                     </div>
 
-                    <div className="flex flex-col gap-1.5 text-left w-full">
-                      <Label htmlFor="lead-whatsapp" className="text-[10px] font-bold text-gray-400 uppercase tracking-wider">WhatsApp / Celular (Opcional)</Label>
+                    <div className="flex flex-col gap-1.5 w-full">
+                      <Label htmlFor="lead-whatsapp" className="text-[10px] font-bold text-gray-500 uppercase tracking-wider">WhatsApp / Celular (Opcional)</Label>
                       <input
                         id="lead-whatsapp"
                         type="text"
                         placeholder="(00) 00000-0000"
                         value={leadWhatsapp}
                         onChange={(e) => setLeadWhatsapp(e.target.value)}
-                        className="bg-zinc-900 border border-zinc-800 rounded-2xl p-4 text-sm focus:outline-none focus:ring-2 focus:ring-pink-500/30 transition-all text-white placeholder-zinc-500 w-full"
+                        className="bg-gray-50 border border-gray-200 rounded-xl p-3.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#ff6600]/30 transition-all text-gray-900 placeholder-gray-400 w-full font-medium"
                       />
                     </div>
 
                     <Button
                       type="submit"
                       disabled={savingLead}
-                      className="w-full bg-gradient-to-r from-pink-500 to-rose-500 hover:from-pink-400 hover:to-rose-400 text-white font-bold text-xs tracking-widest uppercase py-6 rounded-2xl shadow-lg transition-all duration-300 disabled:opacity-50"
+                      className="w-full mt-2 bg-gradient-to-r from-[#ff6600] to-[#ff8c00] hover:from-[#e65c00] hover:to-[#ff7b00] text-white font-extrabold text-xs tracking-wider uppercase py-6 rounded-2xl shadow-xl shadow-[#ff6600]/20 transition-all duration-300 disabled:opacity-50 border-b-4 border-[#cc5200]"
                     >
                       {savingLead ? 'SALVANDO SEUS DADOS...' : '🔥 Garantir Desconto'}
                     </Button>
                   </form>
-                </>
+                </div>
               )}
 
               {exitStep === 'success' && (
-                <>
-                  <div className="w-16 h-16 rounded-full bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center mb-6 text-emerald-400">
-                    <span className="text-3xl">🎉</span>
+                <div className="flex flex-col items-center justify-center py-6">
+                  <div className="w-16 h-16 rounded-full bg-green-100 border border-green-200 flex items-center justify-center mb-6 text-green-500">
+                    <CheckCircle className="w-8 h-8" />
                   </div>
-
-                  <h3 className="text-xl font-bold text-white tracking-wide mb-2">
-                    Tudo Pronto!
-                  </h3>
-                  <p className="text-xs font-light text-gray-400 leading-relaxed mb-6 max-w-xs">
-                    Seu carrinho e descontos estão seguros. Enviamos uma mensagem para o seu e-mail com o link de recuperação. Até breve!
+                  <h3 className="text-2xl font-black text-gray-900 mb-3 tracking-tight">Tudo Certo!</h3>
+                  <p className="text-sm font-medium text-gray-600 mb-8 max-w-xs leading-relaxed">
+                    Seu carrinho e desconto estão garantidos. Te enviaremos o link em breve!
                   </p>
-
                   <Button
-                    type="button"
                     onClick={() => setShowExitModal(false)}
-                    className="w-full bg-zinc-800 hover:bg-zinc-700 text-white font-bold text-xs tracking-widest uppercase py-5 rounded-2xl transition-all duration-300"
+                    className="w-full bg-gray-900 hover:bg-black text-white font-bold text-xs tracking-wider uppercase py-6 rounded-2xl shadow-lg transition-all"
                   >
-                    Fechar
+                    Voltar para Loja
                   </Button>
-                </>
+                </div>
               )}
-
             </div>
           </div>
         </div>

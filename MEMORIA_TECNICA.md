@@ -192,13 +192,30 @@ const isReseller = currentUser?.commercial_profile === 'reseller' ||
 | 4 | `apps/web/src/components/admin/SolicitacoesRevendedorTable.jsx` | **Criado** | Componente visual para exibir a lista de leads que desejam se tornar revendedores, com botÃµes de Aprovar e Rejeitar. |
 | 5 | `apps/pocketbase/pb_migrations/1781900000_003_update_rules_and_status_for_solicitacoes_revendedor.js` | **Criado** | Migration que adiciona status `pendente/em_analise/aprovado/rejeitado` e define `updateRule` na coleÃ§Ã£o `solicitacoes_revendedor`. |
 
+### **MÃ³dulo de GestÃ£o de Clientes e B2B (08-09/07/2026) â€” 5 arquivos**
+
+| # | Arquivo | AÃ§Ã£o | DescriÃ§Ã£o |
+|---|---|---|---|
+| 1 | `apps/web/src/services/clientesService.js` | Modificado | Adicionadas funÃ§Ãµes `getSolicitacoesPendentes`, `aprovarRevendedor`, `rejeitarRevendedor`. A aprovaÃ§Ã£o altera `tipo_cliente` e `commercial_profile` do usuÃ¡rio na tabela users. |
+| 2 | `apps/web/src/pages/admin/ClientesPage.jsx` | Refatorado | Adicionado layout de Abas (Tabs). Aba 1: Tabela de Clientes. Aba 2: SolicitaÃ§Ãµes B2B pendentes. LÃ³gica de aprovaÃ§Ã£o/rejeiÃ§Ã£o implementada chamando o serviÃ§o. |
+| 3 | `apps/web/src/components/admin/ClientesTable.jsx` | Modificado | Ajustado mapeamento para refletir os nomes exatos do banco (`name`, `whatsapp`, `created`). |
+| 4 | `apps/web/src/components/admin/SolicitacoesRevendedorTable.jsx` | **Criado** | Componente visual para exibir a lista de leads que desejam se tornar revendedores, com botÃµes de Aprovar e Rejeitar. |
+| 5 | `apps/pocketbase/pb_migrations/1781900000_003_update_rules_and_status_for_solicitacoes_revendedor.js` | **Criado** | Migration que adiciona status `pendente/em_analise/aprovado/rejeitado` e define `updateRule` na coleÃ§Ã£o `solicitacoes_revendedor`. |
+
 ### **CorreÃ§Ã£o pÃ³s-revisÃ£o: schema do `solicitacoes_revendedor` (09/07/2026)**
 
 | Problema | Causa | CorreÃ§Ã£o |
 |---|---|---|
 | BotÃµes Aprovar/Rejeitar falham com erro de validaÃ§Ã£o | O campo `status` (select) sÃ³ tinha `"aprovado_automaticamente"` como valor vÃ¡lido; `updateRule` estava `null` (ninguÃ©m podia atualizar) | Criada migration `1781900000_003_update_rules_and_status_for_solicitacoes_revendedor.js` que adiciona os valores `"pendente"`, `"em_analise"`, `"aprovado"`, `"rejeitado"` e define `updateRule = "@request.auth.id != \"\""` |
 
-**âš ï¸� A migration deve ser enviada para o PocketBase do Horizons (pasta `pb_migrations`) antes de usar os botÃµes de aprovaÃ§Ã£o.**
+- **11/08/2026:**
+  - `pb_migrations/1786463400_create_colecoes.js` criado (coleção `colecoes` para a Vitrine).
+  - Bugfix: Migração `1786463500_update_rules_for_colecoes.js` adicionada para corrigir erro 403 no Admin. As regras `create`, `update` e `delete` de `colecoes` passaram de `null` (apenas superusers) para `@request.auth.id != ""`, equiparando à regra da tabela `products` para que administradores autenticados via coleção `usuarios` consigam salvar novos registros.
+  - Bugfix: Migração `1786463600_add_timestamps_to_colecoes.js` adicionada para anexar os campos de sistema `created` e `updated`. Isso resolve o erro 400 Bad Request ao usar `sort: '-created'` nas buscas do Admin e da Home.
+  - Formulário de Criação/Edição em `ColecoesManager.jsx` adicionado (antes o botão não renderizava form).
+  - Transparência do menu mobile (`Header.jsx`) aumentada (`bg-black/95` para `bg-black/75` com `backdrop-blur-md`).
+  - Bugfix: Corrigido `ReferenceError` em `CategoryPage.jsx` reordenando a declaração da variável `formattedCategoryName` para não colidir com o estado `entityName`, destravando o clique nas coleções na Home.
+  - Melhoria Arquitetural: Adicionado `<input type="file" />` para `imagem_capa` em `ColecoesManager.jsx` com suporte a `FormData` para envio direto ao PocketBase.deve ser enviada para o PocketBase do Horizons (pasta `pb_migrations`) antes de usar os botÃµes de aprovaÃ§Ã£o.**
 
 ---
 

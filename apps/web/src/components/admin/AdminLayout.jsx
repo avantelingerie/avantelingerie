@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Outlet, Link, useLocation, useNavigate } from 'react-router-dom';
-import { Package, Tags, ShoppingCart, LayoutDashboard, LogOut, Menu, X, ChevronRight, Archive, Settings, BadgePercent as TicketPercent, Users, Link2, Store, Truck, ChevronDown, BarChart3, Sparkles } from 'lucide-react';
+import { Package, Tags, ShoppingCart, LayoutDashboard, LogOut, Menu, X, ChevronRight, Archive, Settings, BadgePercent as TicketPercent, Users, Link2, Store, Truck, ChevronDown, BarChart3, Sparkles, Grid } from 'lucide-react';
 import { useAdminAuth } from '@/context/AdminAuthContext.jsx';
 import { Button } from '@/components/ui/button.jsx';
 import { Badge } from '@/components/ui/badge.jsx';
@@ -56,6 +56,7 @@ export default function AdminLayout() {
     { name: 'Dashboard', href: '/admin', icon: LayoutDashboard },
     { name: 'Produtos', href: '/admin/produtos', icon: Package },
     { name: 'Categorias', href: '/admin/categorias', icon: Tags },
+    { name: 'Coleções', href: '/admin/colecoes', icon: Grid },
     { name: 'Estoque', href: '/admin/estoque', icon: Archive, badge: true },
     { name: 'Pedidos', href: '/admin/pedidos', icon: ShoppingCart },
     { name: 'Clientes', href: '/admin/clientes', icon: Users },

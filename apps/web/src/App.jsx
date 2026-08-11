@@ -39,6 +39,7 @@ import DashboardPage from '@/pages/admin/DashboardPage.jsx';
 import ProdutosListagem from '@/pages/admin/ProdutosListagem.jsx';
 import ProdutoForm from '@/pages/admin/ProdutoForm.jsx';
 import CategoriasManager from '@/pages/admin/CategoriasManager.jsx';
+import ColecoesManager from '@/pages/admin/ColecoesManager.jsx';
 import EstoqueListagem from '@/pages/admin/EstoqueListagem.jsx';
 import ConfiguracoesEstoque from '@/pages/admin/ConfiguracoesEstoque.jsx';
 import DescontosPage from '@/pages/admin/DescontosPage.jsx';
@@ -215,6 +216,7 @@ const AppInterceptor = () => {
         <Route path="produtos/novo" element={<ErrorBoundary><ProdutoForm /></ErrorBoundary>} />
         <Route path="produtos/:id/editar" element={<ErrorBoundary><ProdutoForm /></ErrorBoundary>} />
         <Route path="categorias" element={<ErrorBoundary><CategoriasManager /></ErrorBoundary>} />
+        <Route path="colecoes" element={<ErrorBoundary><ColecoesManager /></ErrorBoundary>} />
         <Route path="estoque" element={<ErrorBoundary><EstoqueListagem /></ErrorBoundary>} />
         <Route path="descontos" element={<ErrorBoundary><DescontosPage /></ErrorBoundary>} />
         <Route path="configuracoes" element={<ErrorBoundary><ConfiguracoesEstoque /></ErrorBoundary>} />
