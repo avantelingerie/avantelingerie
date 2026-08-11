@@ -141,7 +141,7 @@ export default function ColecoesManager() {
                   value={formData.nome} 
                   onChange={(e) => handleFieldChange('nome', e.target.value)} 
                   placeholder="Ex: Lançamentos de Inverno" 
-                  className="bg-gray-900 border-gray-800 text-white"
+                  className="bg-[#121212] border border-[#c59b5f]/25 text-white focus:border-[#c59b5f] focus-visible:ring-0"
                 />
               </div>
               <div className="space-y-2">
@@ -150,12 +150,12 @@ export default function ColecoesManager() {
                   value={formData.slug} 
                   onChange={(e) => handleFieldChange('slug', e.target.value)} 
                   placeholder="ex-lancamentos-inverno" 
-                  className="bg-gray-900 border-gray-800 text-white"
+                  className="bg-[#121212] border border-[#c59b5f]/25 text-white focus:border-[#c59b5f] focus-visible:ring-0"
                 />
               </div>
             </div>
             
-            <div className="flex items-center gap-3 bg-gray-900/50 p-4 rounded-xl border border-gray-800/50">
+            <div className="flex items-center gap-3 bg-[#121212]/50 p-4 rounded-xl border border-[#c59b5f]/25">
               <Switch 
                 checked={formData.ativo} 
                 onCheckedChange={(val) => handleFieldChange('ativo', val)} 
@@ -167,7 +167,7 @@ export default function ColecoesManager() {
               </div>
             </div>
 
-            <div className="space-y-2 bg-gray-900/50 p-4 rounded-xl border border-gray-800/50">
+            <div className="space-y-2 bg-[#121212]/50 p-4 rounded-xl border border-[#c59b5f]/25">
               <label className="text-sm font-bold text-white block">Imagem de Capa (Opcional)</label>
               <span className="text-xs text-gray-500 block mb-2">Recomendado formato quadrado (ex: 800x800). Se não enviar, a vitrine exibirá uma imagem premium genérica.</span>
               <input 
@@ -211,7 +211,7 @@ export default function ColecoesManager() {
                 <div key={col.id} className="bg-[#121212] border border-gray-800 rounded-2xl p-5 hover:border-[#c59b5f]/50 transition-colors group">
                   <div className="flex justify-between items-start mb-4">
                     <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 rounded-lg bg-gray-900 flex items-center justify-center text-[#c59b5f]">
+                      <div className="w-10 h-10 rounded-lg bg-[#121212] flex items-center justify-center text-[#c59b5f]">
                         <Tag className="w-5 h-5" />
                       </div>
                       <div>
@@ -220,10 +220,10 @@ export default function ColecoesManager() {
                       </div>
                     </div>
                     <div className="flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
-                      <button onClick={() => handleEditClick(col)} className="p-2 bg-gray-900 rounded-lg text-gray-400 hover:text-[#c59b5f] hover:bg-[#c59b5f]/10 transition-colors">
+                      <button onClick={() => handleEditClick(col)} className="p-2 bg-[#121212] rounded-lg text-gray-400 hover:text-[#c59b5f] hover:bg-[#c59b5f]/10 transition-colors">
                         <Edit2 className="w-4 h-4" />
                       </button>
-                      <button onClick={() => handleDelete(col.id)} className="p-2 bg-gray-900 rounded-lg text-gray-400 hover:text-red-500 hover:bg-red-500/10 transition-colors">
+                      <button onClick={() => handleDelete(col.id)} className="p-2 bg-[#121212] rounded-lg text-gray-400 hover:text-red-500 hover:bg-red-500/10 transition-colors">
                         <Trash2 className="w-4 h-4" />
                       </button>
                     </div>

@@ -39,6 +39,7 @@ services:
     volumes:
       - ./pb_data:/pb_data
       - ./pb_public:/pb_public
+      - ./apps/pocketbase/pb_migrations:/pb_migrations
     command: ["serve", "--http=0.0.0.0:8090", "--dir=/pb_data"]
     restart: always
     networks:
