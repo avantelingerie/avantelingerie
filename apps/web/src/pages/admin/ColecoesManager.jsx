@@ -129,7 +129,7 @@ export default function ColecoesManager() {
       </div>
 
       {(isAdding || editingId) && (
-        <div className="bg-[#121212] border border-gray-800 rounded-2xl p-6 mb-6 shadow-sm">
+        <div className="bg-[#121212] border border-[#c59b5f]/25 rounded-2xl p-6 mb-6 shadow-sm">
           <h2 className="text-xl font-bold text-white mb-6">
             {isAdding ? 'Criar Nova Coleção' : 'Editar Coleção'}
           </h2>
@@ -183,7 +183,7 @@ export default function ColecoesManager() {
             </div>
 
             <div className="flex justify-end gap-3 pt-2">
-              <Button onClick={handleCancel} variant="outline" className="border-gray-800 text-gray-400 hover:bg-gray-800 hover:text-white rounded-xl">
+              <Button onClick={handleCancel} variant="outline" className="border-[#c59b5f]/25 text-gray-400 hover:bg-gray-800 hover:text-white rounded-xl">
                 Cancelar
               </Button>
               <Button onClick={handleSave} className="bg-[#c59b5f] hover:bg-[#b3864b] text-black font-bold rounded-xl">
@@ -202,13 +202,13 @@ export default function ColecoesManager() {
               <Skeleton className="h-12 w-full" />
             </div>
           ) : colecoes.length === 0 ? (
-            <div className="text-center py-12 bg-[#121212] rounded-2xl border border-gray-800 text-gray-500">
+            <div className="text-center py-12 bg-[#121212] rounded-2xl border border-[#c59b5f]/25 text-gray-500">
               Nenhuma coleção cadastrada.
             </div>
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
               {colecoes.map((col) => (
-                <div key={col.id} className="bg-[#121212] border border-gray-800 rounded-2xl p-5 hover:border-[#c59b5f]/50 transition-colors group">
+                <div key={col.id} className="bg-[#121212] border border-[#c59b5f]/25 rounded-2xl p-5 hover:border-[#c59b5f]/50 transition-colors group">
                   <div className="flex justify-between items-start mb-4">
                     <div className="flex items-center gap-3">
                       <div className="w-10 h-10 rounded-lg bg-[#121212] flex items-center justify-center text-[#c59b5f]">

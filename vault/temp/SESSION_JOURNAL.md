@@ -1,3880 +1,6 @@
 # SESSION_JOURNAL.md (rotated - earlier entries trimmed)
 
-08-03 20:47:49.818Z load
-- url: http://localhost:3002/
-- title: Avante Lingerie | Oficial
-
-## 2026-08-03 20:47:50.645Z network.error
-- method: POST
-- url: http://localhost:3002/hcgi/platform/api/collections/analytics_events/records
-- status: 404
-- statusText: Not Found
-- requestBody: {"session_id":"sess_im7cu8djl4fmsdos2x9","event_type":"page_view","page_path":"/","item_id":"","value":"0","utm_source":"","utm_medium":"","utm_campaign":""}
-- response: 
-    {"data":{},"message":"Missing or invalid collection context.","status":404}
-    
-- durationMs: 223
-
-## 2026-08-03 20:47:50.646Z console.error
-- text: 
-    Fetch error from http://localhost:3002/hcgi/platform/api/collections/analytics_events/records: {"data":{},"message":"Missing or invalid collection context.","status":404}
-    
-
-## 2026-08-03 20:47:50.650Z console.warn
-- text: Analytics Tracking Ignore: Missing or invalid collection context.
-
-## 2026-08-03 20:48:04.930Z click
-- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-08-03 20:48:05.770Z load
-- url: http://localhost:3002/admin
-- title: Avante Lingerie | Oficial
-
-## 2026-08-03 20:48:07.724Z navigate
-- url: http://localhost:3002/admin
-- via: replaceState
-
-## 2026-08-03 20:48:10.616Z network.error
-- method: POST
-- url: http://localhost:3002/hcgi/platform/api/collections/analytics_events/records
-- status: 404
-- statusText: Not Found
-- requestBody: {"session_id":"sess_im7cu8djl4fmsdos2x9","event_type":"page_view","page_path":"/admin","item_id":"","value":"0","utm_source":"","utm_medium":"","utm_campaign":""}
-- response: 
-    {"data":{},"message":"Missing or invalid collection context.","status":404}
-    
-- durationMs: 1446
-
-## 2026-08-03 20:48:10.618Z console.error
-- text: 
-    Fetch error from http://localhost:3002/hcgi/platform/api/collections/analytics_events/records: {"data":{},"message":"Missing or invalid collection context.","status":404}
-    
-
-## 2026-08-03 20:48:10.633Z console.warn
-- text: Analytics Tracking Ignore: Missing or invalid collection context.
-
-## 2026-08-03 20:48:10.637Z navigate
-- url: http://localhost:3002/admin/login
-- via: replaceState
-
-## 2026-08-03 20:48:10.734Z network.error
-- method: POST
-- url: http://localhost:3002/hcgi/platform/api/collections/analytics_events/records
-- status: 404
-- statusText: Not Found
-- requestBody: {"session_id":"sess_im7cu8djl4fmsdos2x9","event_type":"page_view","page_path":"/admin/login","item_id":"","value":"0","utm_source":"","utm_medium":"","utm_campaign":""}
-- response: 
-    {"data":{},"message":"Missing or invalid collection context.","status":404}
-    
-- durationMs: 53
-
-## 2026-08-03 20:48:10.734Z console.error
-- text: 
-    Fetch error from http://localhost:3002/hcgi/platform/api/collections/analytics_events/records: {"data":{},"message":"Missing or invalid collection context.","status":404}
-    
-
-## 2026-08-03 20:48:10.735Z console.warn
-- text: Analytics Tracking Ignore: Missing or invalid collection context.
-
-## 2026-08-03 20:48:15.431Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"email","id":null,"placeholder":"admin@avantelingerie.com.br","label":"admin@avantelingerie.com.br","value":"","valueLength":0,"text":""}
-
-## 2026-08-03 20:48:15.581Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"email","id":null,"placeholder":"admin@avantelingerie.com.br","label":"admin@avantelingerie.com.br","value":"","valueLength":0,"text":""}
-
-## 2026-08-03 20:48:27.257Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"email","id":null,"placeholder":"admin@avantelingerie.com.br","label":"admin@avantelingerie.com.br","value":"admin@avantelingerie.com.br","valueLength":27,"text":""}
-
-## 2026-08-03 20:48:27.259Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"email","id":null,"placeholder":"admin@avantelingerie.com.br","label":"admin@avantelingerie.com.br","value":"admin@avantelingerie.com.br","valueLength":27,"text":""}
-
-## 2026-08-03 20:48:27.262Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"password","id":null,"placeholder":"••••••••","label":"••••••••","value":"[redacted:length=0]","valueLength":0,"text":""}
-
-## 2026-08-03 20:48:33.065Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"password","id":null,"placeholder":"••••••••","label":"••••••••","value":"[redacted:length=12]","valueLength":12,"text":""}
-
-## 2026-08-03 20:48:33.065Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"password","id":null,"placeholder":"••••••••","label":"••••••••","value":"[redacted:length=12]","valueLength":12,"text":""}
-
-## 2026-08-03 20:48:33.280Z click
-- element: {"tag":"button","role":null,"ariaLabel":"Mostrar senha","name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-08-03 20:48:34.159Z click
-- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"submit","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"ACESSAR PAINEL"}
-
-## 2026-08-03 20:48:34.166Z submit
-- action: http://localhost:3002/admin/login
-- fields: [{"label":"admin@avantelingerie.com.br","type":"email","value":"admin@avantelingerie.com.br","length":27,"redacted":false},{"label":"••••••••","type":"text","value":"Admin@123456","length":12,"redacted":false},{"label":"Ocultar senha","type":"button","value":"","length":0,"redacted":false},{"label":"[submit]","type":"submit","value":"","length":0,"redacted":false}]
-
-## 2026-08-03 20:48:34.374Z navigate
-- url: http://localhost:3002/admin
-- via: pushState
-
-## 2026-08-03 20:48:34.481Z network.error
-- method: POST
-- url: http://localhost:3002/hcgi/platform/api/collections/analytics_events/records
-- status: 404
-- statusText: Not Found
-- requestBody: {"session_id":"sess_im7cu8djl4fmsdos2x9","event_type":"page_view","page_path":"/admin","item_id":"","value":"0","utm_source":"","utm_medium":"","utm_campaign":""}
-- response: 
-    {"data":{},"message":"Missing or invalid collection context.","status":404}
-    
-- durationMs: 65
-
-## 2026-08-03 20:48:34.481Z console.error
-- text: 
-    Fetch error from http://localhost:3002/hcgi/platform/api/collections/analytics_events/records: {"data":{},"message":"Missing or invalid collection context.","status":404}
-    
-
-## 2026-08-03 20:48:34.482Z console.warn
-- text: Analytics Tracking Ignore: Missing or invalid collection context.
-
-## 2026-08-03 20:49:01.845Z click
-- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Cérebro da Lia"}
-
-## 2026-08-03 20:49:01.848Z navigate
-- url: http://localhost:3002/admin/lia
-- via: pushState
-
-## 2026-08-03 20:49:01.935Z network.error
-- method: POST
-- url: http://localhost:3002/hcgi/platform/api/collections/analytics_events/records
-- status: 404
-- statusText: Not Found
-- requestBody: {"session_id":"sess_im7cu8djl4fmsdos2x9","event_type":"page_view","page_path":"/admin/lia","item_id":"","value":"0","utm_source":"","utm_medium":"","utm_campaign":""}
-- response: 
-    {"data":{},"message":"Missing or invalid collection context.","status":404}
-    
-- durationMs: 35
-
-## 2026-08-03 20:49:01.936Z console.error
-- text: 
-    Fetch error from http://localhost:3002/hcgi/platform/api/collections/analytics_events/records: {"data":{},"message":"Missing or invalid collection context.","status":404}
-    
-
-## 2026-08-03 20:49:01.936Z console.warn
-- text: Analytics Tracking Ignore: Missing or invalid collection context.
-
-## 2026-08-03 20:49:08.339Z click
-- element: {"tag":"button","role":"tab","ariaLabel":null,"name":null,"type":"button","id":"radix-:r3:-trigger-whatsapp","placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Conexão WhatsApp"}
-
-## 2026-08-03 20:49:10.819Z click
-- element: {"tag":"button","role":"tab","ariaLabel":null,"name":null,"type":"button","id":"radix-:r3:-trigger-chats","placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Chats Ao Vivo"}
-
-## 2026-08-03 20:49:14.086Z click
-- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Integrações"}
-
-## 2026-08-03 20:49:14.087Z navigate
-- url: http://localhost:3002/admin/integracoes
-- via: pushState
-
-## 2026-08-03 20:49:14.120Z network.error
-- method: POST
-- url: http://localhost:3002/hcgi/platform/api/collections/analytics_events/records
-- status: 404
-- statusText: Not Found
-- requestBody: {"session_id":"sess_im7cu8djl4fmsdos2x9","event_type":"page_view","page_path":"/admin/integracoes","item_id":"","value":"0","utm_source":"","utm_medium":"","utm_campaign":""}
-- response: 
-    {"data":{},"message":"Missing or invalid collection context.","status":404}
-    
-- durationMs: 17
-
-## 2026-08-03 20:49:14.121Z console.error
-- text: 
-    Fetch error from http://localhost:3002/hcgi/platform/api/collections/analytics_events/records: {"data":{},"message":"Missing or invalid collection context.","status":404}
-    
-
-## 2026-08-03 20:49:14.122Z console.warn
-- text: Analytics Tracking Ignore: Missing or invalid collection context.
-
-## 2026-08-03 20:49:16.426Z click
-- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Analytics"}
-
-## 2026-08-03 20:49:16.428Z navigate
-- url: http://localhost:3002/admin/analytics
-- via: pushState
-
-## 2026-08-03 20:49:16.468Z network.error
-- method: POST
-- url: http://localhost:3002/hcgi/platform/api/collections/analytics_events/records
-- status: 404
-- statusText: Not Found
-- requestBody: {"session_id":"sess_im7cu8djl4fmsdos2x9","event_type":"page_view","page_path":"/admin/analytics","item_id":"","value":"0","utm_source":"","utm_medium":"","utm_campaign":""}
-- response: 
-    {"data":{},"message":"Missing or invalid collection context.","status":404}
-    
-- durationMs: 19
-
-## 2026-08-03 20:49:16.469Z console.error
-- text: 
-    Fetch error from http://localhost:3002/hcgi/platform/api/collections/analytics_events/records: {"data":{},"message":"Missing or invalid collection context.","status":404}
-    
-
-## 2026-08-03 20:49:16.469Z console.warn
-- text: Analytics Tracking Ignore: Missing or invalid collection context.
-
-## 2026-08-03 20:49:16.547Z network.error
-- method: GET
-- url: http://localhost:3002/hcgi/platform/api/collections/analytics_events/records?page=1&perPage=500&skipTotal=1&sort=-created
-- status: 404
-- statusText: Not Found
-- response: 
-    {"data":{},"message":"Missing collection context.","status":404}
-    
-- durationMs: 16
-
-## 2026-08-03 20:49:16.547Z console.error
-- text: 
-    Fetch error from http://localhost:3002/hcgi/platform/api/collections/analytics_events/records?page=1&perPage=500&skipTotal=1&sort=-created: {"data":{},"message":"Missing collection context.","status":404}
-    
-
-## 2026-08-03 20:49:16.550Z console.warn
-- text: 
-    Tabelas do PocketBase não povoadas, utilizando dados locais. ClientResponseError 404: ClientResponseError
-        at http://localhost:3002/node_modules/.vite/deps/pocketbase.js?v=bd935190:948:13
-        at async fetchAnalyticsData (http://localhost:3002/src/pages/admin/AnalyticsPage.jsx?t=1785779158436:107:18)
-
-## 2026-08-03 20:50:05.561Z click
-- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Dashboard"}
-
-## 2026-08-03 20:50:05.577Z navigate
-- url: http://localhost:3002/admin
-- via: pushState
-
-## 2026-08-03 20:50:05.857Z network.error
-- method: POST
-- url: http://localhost:3002/hcgi/platform/api/collections/analytics_events/records
-- status: 404
-- statusText: Not Found
-- requestBody: {"session_id":"sess_im7cu8djl4fmsdos2x9","event_type":"page_view","page_path":"/admin","item_id":"","value":"0","utm_source":"","utm_medium":"","utm_campaign":""}
-- response: 
-    {"data":{},"message":"Missing or invalid collection context.","status":404}
-    
-- durationMs: 208
-
-## 2026-08-03 20:50:05.868Z console.error
-- text: 
-    Fetch error from http://localhost:3002/hcgi/platform/api/collections/analytics_events/records: {"data":{},"message":"Missing or invalid collection context.","status":404}
-    
-
-## 2026-08-03 20:50:05.895Z console.warn
-- text: Analytics Tracking Ignore: Missing or invalid collection context.
-
-## 2026-08-03 21:03:56.769Z click
-- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Ver Loja"}
-
-## 2026-08-03 21:03:56.809Z navigate
-- url: http://localhost:3002/
-- via: pushState
-
-## 2026-08-03 21:03:57.873Z network.error
-- method: POST
-- url: http://localhost:3002/hcgi/platform/api/collections/analytics_events/records
-- status: 404
-- statusText: Not Found
-- requestBody: {"session_id":"sess_im7cu8djl4fmsdos2x9","event_type":"page_view","page_path":"/","item_id":"","value":"0","utm_source":"","utm_medium":"","utm_campaign":""}
-- response: 
-    {"data":{},"message":"Missing or invalid collection context.","status":404}
-    
-- durationMs: 376
-
-## 2026-08-03 21:03:57.987Z console.error
-- text: 
-    Fetch error from http://localhost:3002/hcgi/platform/api/collections/analytics_events/records: {"data":{},"message":"Missing or invalid collection context.","status":404}
-    
-
-## 2026-08-03 21:03:58.013Z console.warn
-- text: Analytics Tracking Ignore: Missing or invalid collection context.
-
-## 2026-08-03 21:04:02.739Z navigate
-- url: http://localhost:3002/admin
-- via: popstate
-
-## 2026-08-03 21:04:02.858Z network.error
-- method: POST
-- url: http://localhost:3002/hcgi/platform/api/collections/analytics_events/records
-- status: 404
-- statusText: Not Found
-- requestBody: {"session_id":"sess_im7cu8djl4fmsdos2x9","event_type":"page_view","page_path":"/admin","item_id":"","value":"0","utm_source":"","utm_medium":"","utm_campaign":""}
-- response: 
-    {"data":{},"message":"Missing or invalid collection context.","status":404}
-    
-- durationMs: 57
-
-## 2026-08-03 21:04:02.858Z console.error
-- text: 
-    Fetch error from http://localhost:3002/hcgi/platform/api/collections/analytics_events/records: {"data":{},"message":"Missing or invalid collection context.","status":404}
-    
-
-## 2026-08-03 21:04:02.860Z console.warn
-- text: Analytics Tracking Ignore: Missing or invalid collection context.
-
-## 2026-08-03 21:04:05.825Z click
-- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Ver Loja"}
-
-## 2026-08-03 21:04:05.826Z navigate
-- url: http://localhost:3002/
-- via: pushState
-
-## 2026-08-03 21:04:06.095Z network.error
-- method: POST
-- url: http://localhost:3002/hcgi/platform/api/collections/analytics_events/records
-- status: 404
-- statusText: Not Found
-- requestBody: {"session_id":"sess_im7cu8djl4fmsdos2x9","event_type":"page_view","page_path":"/","item_id":"","value":"0","utm_source":"","utm_medium":"","utm_campaign":""}
-- response: 
-    {"data":{},"message":"Missing or invalid collection context.","status":404}
-    
-- durationMs: 163
-
-## 2026-08-03 21:04:06.170Z console.error
-- text: 
-    Fetch error from http://localhost:3002/hcgi/platform/api/collections/analytics_events/records: {"data":{},"message":"Missing or invalid collection context.","status":404}
-    
-
-## 2026-08-03 21:04:06.187Z console.warn
-- text: Analytics Tracking Ignore: Missing or invalid collection context.
-
-## 2026-08-03 21:04:32.715Z click
-- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-08-03 21:04:51.182Z navigate
-- url: http://localhost:3002/admin
-- via: popstate
-
-## 2026-08-03 21:04:52.265Z network.error
-- method: POST
-- url: http://localhost:3002/hcgi/platform/api/collections/analytics_events/records
-- status: 404
-- statusText: Not Found
-- requestBody: {"session_id":"sess_im7cu8djl4fmsdos2x9","event_type":"page_view","page_path":"/admin","item_id":"","value":"0","utm_source":"","utm_medium":"","utm_campaign":""}
-- response: 
-    {"data":{},"message":"Missing or invalid collection context.","status":404}
-    
-- durationMs: 715
-
-## 2026-08-03 21:04:52.266Z console.error
-- text: 
-    Fetch error from http://localhost:3002/hcgi/platform/api/collections/analytics_events/records: {"data":{},"message":"Missing or invalid collection context.","status":404}
-    
-
-## 2026-08-03 21:04:52.271Z console.warn
-- text: Analytics Tracking Ignore: Missing or invalid collection context.
-
-## 2026-08-03 21:04:54.210Z click
-- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Categorias"}
-
-## 2026-08-03 21:04:54.236Z navigate
-- url: http://localhost:3002/admin/categorias
-- via: pushState
-
-## 2026-08-03 21:04:54.304Z network.error
-- method: POST
-- url: http://localhost:3002/hcgi/platform/api/collections/analytics_events/records
-- status: 404
-- statusText: Not Found
-- requestBody: {"session_id":"sess_im7cu8djl4fmsdos2x9","event_type":"page_view","page_path":"/admin/categorias","item_id":"","value":"0","utm_source":"","utm_medium":"","utm_campaign":""}
-- response: 
-    {"data":{},"message":"Missing or invalid collection context.","status":404}
-    
-- durationMs: 39
-
-## 2026-08-03 21:04:54.304Z console.error
-- text: 
-    Fetch error from http://localhost:3002/hcgi/platform/api/collections/analytics_events/records: {"data":{},"message":"Missing or invalid collection context.","status":404}
-    
-
-## 2026-08-03 21:04:54.304Z console.warn
-- text: Analytics Tracking Ignore: Missing or invalid collection context.
-
-## 2026-08-03 21:05:01.299Z click
-- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Ver Loja"}
-
-## 2026-08-03 21:05:01.301Z navigate
-- url: http://localhost:3002/
-- via: pushState
-
-## 2026-08-03 21:05:02.139Z network.error
-- method: POST
-- url: http://localhost:3002/hcgi/platform/api/collections/analytics_events/records
-- status: 404
-- statusText: Not Found
-- requestBody: {"session_id":"sess_im7cu8djl4fmsdos2x9","event_type":"page_view","page_path":"/","item_id":"","value":"0","utm_source":"","utm_medium":"","utm_campaign":""}
-- response: 
-    {"data":{},"message":"Missing or invalid collection context.","status":404}
-    
-- durationMs: 489
-
-## 2026-08-03 21:05:02.300Z console.error
-- text: 
-    Fetch error from http://localhost:3002/hcgi/platform/api/collections/analytics_events/records: {"data":{},"message":"Missing or invalid collection context.","status":404}
-    
-
-## 2026-08-03 21:05:02.317Z console.warn
-- text: Analytics Tracking Ignore: Missing or invalid collection context.
-
-## 2026-08-03 21:08:05.051Z click
-- element: {"tag":"div","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Lia | Consultora AvanteOnline"}
-
-## 2026-08-04 12:08:45.372Z load
-- url: http://localhost:3002/
-- title: Avante Lingerie | Oficial
-
-## 2026-08-04 12:08:45.949Z navigate
-- url: http://localhost:3002/
-- via: replaceState
-
-## 2026-08-04 12:08:46.175Z network.error
-- method: POST
-- url: http://localhost:3002/hcgi/platform/api/collections/analytics_events/records
-- status: 404
-- statusText: Not Found
-- requestBody: {"session_id":"sess_015y1esp0xunkmsem74iw","event_type":"page_view","page_path":"/","item_id":"","value":"0","utm_source":"","utm_medium":"","utm_campaign":""}
-- response: 
-    {"data":{},"message":"Missing or invalid collection context.","status":404}
-    
-- durationMs: 181
-
-## 2026-08-04 12:08:46.176Z console.error
-- text: 
-    Fetch error from http://localhost:3002/hcgi/platform/api/collections/analytics_events/records: {"data":{},"message":"Missing or invalid collection context.","status":404}
-    
-
-## 2026-08-04 12:08:46.179Z console.warn
-- text: Analytics Tracking Ignore: Missing or invalid collection context.
-
-## 2026-08-04 12:08:49.366Z load
-- url: http://localhost:3002/admin
-- title: Avante Lingerie | Oficial
-
-## 2026-08-04 12:08:49.825Z navigate
-- url: http://localhost:3002/admin
-- via: replaceState
-
-## 2026-08-04 12:08:49.859Z network.error
-- method: POST
-- url: http://localhost:3002/hcgi/platform/api/collections/analytics_events/records
-- status: 404
-- statusText: Not Found
-- requestBody: {"session_id":"sess_015y1esp0xunkmsem74iw","event_type":"page_view","page_path":"/admin","item_id":"","value":"0","utm_source":"","utm_medium":"","utm_campaign":""}
-- response: 
-    {"data":{},"message":"Missing or invalid collection context.","status":404}
-    
-- durationMs: 25
-
-## 2026-08-04 12:08:49.860Z console.error
-- text: 
-    Fetch error from http://localhost:3002/hcgi/platform/api/collections/analytics_events/records: {"data":{},"message":"Missing or invalid collection context.","status":404}
-    
-
-## 2026-08-04 12:08:49.861Z console.warn
-- text: Analytics Tracking Ignore: Missing or invalid collection context.
-
-## 2026-08-04 12:08:51.672Z click
-- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Analytics"}
-
-## 2026-08-04 12:08:51.674Z navigate
-- url: http://localhost:3002/admin/analytics
-- via: pushState
-
-## 2026-08-04 12:08:51.707Z network.error
-- method: POST
-- url: http://localhost:3002/hcgi/platform/api/collections/analytics_events/records
-- status: 404
-- statusText: Not Found
-- requestBody: {"session_id":"sess_015y1esp0xunkmsem74iw","event_type":"page_view","page_path":"/admin/analytics","item_id":"","value":"0","utm_source":"","utm_medium":"","utm_campaign":""}
-- response: 
-    {"data":{},"message":"Missing or invalid collection context.","status":404}
-    
-- durationMs: 14
-
-## 2026-08-04 12:08:51.707Z console.error
-- text: 
-    Fetch error from http://localhost:3002/hcgi/platform/api/collections/analytics_events/records: {"data":{},"message":"Missing or invalid collection context.","status":404}
-    
-
-## 2026-08-04 12:08:51.708Z console.warn
-- text: Analytics Tracking Ignore: Missing or invalid collection context.
-
-## 2026-08-04 12:08:51.758Z network.error
-- method: GET
-- url: http://localhost:3002/hcgi/platform/api/collections/analytics_events/records?page=1&perPage=500&skipTotal=1&sort=-created
-- status: 404
-- statusText: Not Found
-- response: 
-    {"data":{},"message":"Missing collection context.","status":404}
-    
-- durationMs: 12
-
-## 2026-08-04 12:08:51.758Z console.error
-- text: 
-    Fetch error from http://localhost:3002/hcgi/platform/api/collections/analytics_events/records?page=1&perPage=500&skipTotal=1&sort=-created: {"data":{},"message":"Missing collection context.","status":404}
-    
-
-## 2026-08-04 12:08:51.760Z console.warn
-- text: 
-    Tabelas do PocketBase não povoadas, utilizando dados locais. ClientResponseError 404: ClientResponseError
-        at http://localhost:3002/node_modules/.vite/deps/pocketbase.js?v=bd935190:948:13
-        at async fetchAnalyticsData (http://localhost:3002/src/pages/admin/AnalyticsPage.jsx?t=1785779158436:107:18)
-
-## 2026-08-04 12:09:21.790Z click
-- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Demografia (GA4)"}
-
-## 2026-08-04 12:17:56.208Z click
-- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Desempenho Geral"}
-
-## 2026-08-04 12:23:38.484Z click
-- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Ver Loja"}
-
-## 2026-08-04 12:23:38.504Z navigate
-- url: http://localhost:3002/
-- via: pushState
-
-## 2026-08-04 12:23:39.225Z network.error
-- method: POST
-- url: http://localhost:3002/hcgi/platform/api/collections/analytics_events/records
-- status: 404
-- statusText: Not Found
-- requestBody: {"session_id":"sess_015y1esp0xunkmsem74iw","event_type":"page_view","page_path":"/","item_id":"","value":"0","utm_source":"","utm_medium":"","utm_campaign":""}
-- response: 
-    {"data":{},"message":"Missing or invalid collection context.","status":404}
-    
-- durationMs: 288
-
-## 2026-08-04 12:23:39.300Z console.error
-- text: 
-    Fetch error from http://localhost:3002/hcgi/platform/api/collections/analytics_events/records: {"data":{},"message":"Missing or invalid collection context.","status":404}
-    
-
-## 2026-08-04 12:23:39.324Z console.warn
-- text: Analytics Tracking Ignore: Missing or invalid collection context.
-
-## 2026-08-04 12:24:00.176Z click
-- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-08-04 12:25:41.081Z navigate
-- url: http://localhost:3002/admin/analytics
-- via: popstate
-
-## 2026-08-04 12:25:41.792Z network.error
-- method: POST
-- url: http://localhost:3002/hcgi/platform/api/collections/analytics_events/records
-- status: 404
-- statusText: Not Found
-- requestBody: {"session_id":"sess_015y1esp0xunkmsem74iw","event_type":"page_view","page_path":"/admin/analytics","item_id":"","value":"0","utm_source":"","utm_medium":"","utm_campaign":""}
-- response: 
-    {"data":{},"message":"Missing or invalid collection context.","status":404}
-    
-- durationMs: 360
-
-## 2026-08-04 12:25:41.795Z console.error
-- text: 
-    Fetch error from http://localhost:3002/hcgi/platform/api/collections/analytics_events/records: {"data":{},"message":"Missing or invalid collection context.","status":404}
-    
-
-## 2026-08-04 12:25:41.800Z console.warn
-- text: Analytics Tracking Ignore: Missing or invalid collection context.
-
-## 2026-08-04 12:25:41.938Z network.error
-- method: GET
-- url: http://localhost:3002/hcgi/platform/api/collections/analytics_events/records?page=1&perPage=500&skipTotal=1&sort=-created
-- status: 404
-- statusText: Not Found
-- response: 
-    {"data":{},"message":"Missing collection context.","status":404}
-    
-- durationMs: 37
-
-## 2026-08-04 12:25:41.941Z console.error
-- text: 
-    Fetch error from http://localhost:3002/hcgi/platform/api/collections/analytics_events/records?page=1&perPage=500&skipTotal=1&sort=-created: {"data":{},"message":"Missing collection context.","status":404}
-    
-
-## 2026-08-04 12:25:41.945Z console.warn
-- text: 
-    Tabelas do PocketBase não povoadas, utilizando dados locais. ClientResponseError 404: ClientResponseError
-        at http://localhost:3002/node_modules/.vite/deps/pocketbase.js?v=bd935190:948:13
-        at async fetchAnalyticsData (http://localhost:3002/src/pages/admin/AnalyticsPage.jsx?t=1785779158436:107:18)
-
-## 2026-08-04 12:25:44.775Z click
-- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Categorias"}
-
-## 2026-08-04 12:25:44.778Z navigate
-- url: http://localhost:3002/admin/categorias
-- via: pushState
-
-## 2026-08-04 12:25:44.833Z network.error
-- method: POST
-- url: http://localhost:3002/hcgi/platform/api/collections/analytics_events/records
-- status: 404
-- statusText: Not Found
-- requestBody: {"session_id":"sess_015y1esp0xunkmsem74iw","event_type":"page_view","page_path":"/admin/categorias","item_id":"","value":"0","utm_source":"","utm_medium":"","utm_campaign":""}
-- response: 
-    {"data":{},"message":"Missing or invalid collection context.","status":404}
-    
-- durationMs: 15
-
-## 2026-08-04 12:25:44.833Z console.error
-- text: 
-    Fetch error from http://localhost:3002/hcgi/platform/api/collections/analytics_events/records: {"data":{},"message":"Missing or invalid collection context.","status":404}
-    
-
-## 2026-08-04 12:25:44.834Z console.warn
-- text: Analytics Tracking Ignore: Missing or invalid collection context.
-
-## 2026-08-04 12:25:52.125Z click
-- element: {"tag":"main","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"CategoriasOrganize seus produtos por seções. Nova CategoriaNome da CategoriaURL (Slug)NCM (Fiscal)StatusAçõesCamisolacamisola6208.21.00AtivoCinta Modeladoracinta-modeladora6212.20.00AtivoCroppedcropped6109.90.00AtivoBodybody6114.30.00AtivoConjuntoconjunto6212.10.00AtivoCalcinhacalcinha6212.20.00AtivoPijamapijama6208.21.00AtivoPlus Sizeplus-size6109.90.00Ativo"}
-
-## 2026-08-04 12:30:16.957Z click
-- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Ver Loja"}
-
-## 2026-08-04 12:30:16.977Z navigate
-- url: http://localhost:3002/
-- via: pushState
-
-## 2026-08-04 12:30:17.631Z network.error
-- method: POST
-- url: http://localhost:3002/hcgi/platform/api/collections/analytics_events/records
-- status: 404
-- statusText: Not Found
-- requestBody: {"session_id":"sess_015y1esp0xunkmsem74iw","event_type":"page_view","page_path":"/","item_id":"","value":"0","utm_source":"","utm_medium":"","utm_campaign":""}
-- response: 
-    {"data":{},"message":"Missing or invalid collection context.","status":404}
-    
-- durationMs: 282
-
-## 2026-08-04 12:30:17.723Z console.error
-- text: 
-    Fetch error from http://localhost:3002/hcgi/platform/api/collections/analytics_events/records: {"data":{},"message":"Missing or invalid collection context.","status":404}
-    
-
-## 2026-08-04 12:30:17.746Z console.warn
-- text: Analytics Tracking Ignore: Missing or invalid collection context.
-
-## 2026-08-04 12:30:23.800Z click
-- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Calcinhas"}
-
-## 2026-08-04 12:30:23.800Z navigate
-- url: http://localhost:3002/categoria/calcinhas
-- via: pushState
-
-## 2026-08-04 12:30:23.914Z network.error
-- method: POST
-- url: http://localhost:3002/hcgi/platform/api/collections/analytics_events/records
-- status: 404
-- statusText: Not Found
-- requestBody: {"session_id":"sess_015y1esp0xunkmsem74iw","event_type":"page_view","page_path":"/categoria/calcinhas","item_id":"","value":"0","utm_source":"","utm_medium":"","utm_campaign":""}
-- response: 
-    {"data":{},"message":"Missing or invalid collection context.","status":404}
-    
-- durationMs: 38
-
-## 2026-08-04 12:30:23.915Z console.error
-- text: 
-    Fetch error from http://localhost:3002/hcgi/platform/api/collections/analytics_events/records: {"data":{},"message":"Missing or invalid collection context.","status":404}
-    
-
-## 2026-08-04 12:30:23.920Z console.warn
-- text: Analytics Tracking Ignore: Missing or invalid collection context.
-
-## 2026-08-04 13:04:23.293Z load
-- url: http://localhost:3002/categoria/calcinhas
-- title: Avante Lingerie | Oficial
-
-## 2026-08-04 14:54:14.588Z load
-- url: http://localhost:3000/
-- title: Avante Lingerie | Oficial
-
-## 2026-08-04 14:54:25.391Z load
-- url: http://localhost:3000/
-- title: Avante Lingerie | Oficial
-
-## 2026-08-04 14:54:26.197Z navigate
-- url: http://localhost:3000/
-- via: replaceState
-
-## 2026-08-04 14:54:28.322Z network.error
-- method: GET
-- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22hya9h8gimmcygbn%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
-- status: 400
-- statusText: Bad Request
-- response: 
-    {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-- durationMs: 887
-
-## 2026-08-04 14:54:28.322Z network.error
-- method: GET
-- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22vi937hhuvzg154r%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
-- status: 400
-- statusText: Bad Request
-- response: 
-    {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-- durationMs: 888
-
-## 2026-08-04 14:54:28.328Z console.error
-- text: 
-    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22hya9h8gimmcygbn%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-
-## 2026-08-04 14:54:28.334Z console.error
-- text: 
-    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22vi937hhuvzg154r%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-
-## 2026-08-04 14:54:28.349Z network.error
-- method: GET
-- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22sz933rrdjx4j62w%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
-- status: 400
-- statusText: Bad Request
-- response: 
-    {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-- durationMs: 914
-
-## 2026-08-04 14:54:28.349Z console.error
-- text: 
-    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22sz933rrdjx4j62w%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-
-## 2026-08-04 14:54:28.350Z network.error
-- method: GET
-- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%228nbgczjmayz4g8f%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
-- status: 400
-- statusText: Bad Request
-- response: 
-    {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-- durationMs: 915
-
-## 2026-08-04 14:54:28.350Z console.error
-- text: 
-    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%228nbgczjmayz4g8f%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-
-## 2026-08-04 14:54:28.362Z network.error
-- method: GET
-- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22okqcy3xzr7pff8b%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
-- status: 400
-- statusText: Bad Request
-- response: 
-    {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-- durationMs: 926
-
-## 2026-08-04 14:54:28.362Z console.error
-- text: 
-    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22okqcy3xzr7pff8b%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-
-## 2026-08-04 14:54:28.366Z network.error
-- method: GET
-- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%220tioxaa5mvtikb6%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
-- status: 400
-- statusText: Bad Request
-- response: 
-    {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-- durationMs: 930
-
-## 2026-08-04 14:54:28.366Z console.error
-- text: 
-    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%220tioxaa5mvtikb6%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-
-## 2026-08-04 14:54:28.376Z network.error
-- method: GET
-- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22z7i4vmn1n7io1np%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
-- status: 400
-- statusText: Bad Request
-- response: 
-    {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-- durationMs: 940
-
-## 2026-08-04 14:54:28.377Z console.error
-- text: 
-    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22z7i4vmn1n7io1np%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-
-## 2026-08-04 14:54:28.377Z network.error
-- method: GET
-- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22km2hb4iq8cyaqut%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
-- status: 400
-- statusText: Bad Request
-- response: 
-    {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-- durationMs: 940
-
-## 2026-08-04 14:54:28.378Z console.error
-- text: 
-    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22km2hb4iq8cyaqut%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-
-## 2026-08-04 14:55:05.831Z load
-- url: http://localhost:3000/
-- title: Avante Lingerie | Oficial
-
-## 2026-08-04 14:55:06.554Z navigate
-- url: http://localhost:3000/
-- via: replaceState
-
-## 2026-08-04 14:55:07.989Z network.error
-- method: GET
-- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22vi937hhuvzg154r%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
-- status: 400
-- statusText: Bad Request
-- response: 
-    {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-- durationMs: 231
-
-## 2026-08-04 14:55:07.991Z console.error
-- text: 
-    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22vi937hhuvzg154r%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-
-## 2026-08-04 14:55:07.999Z network.error
-- method: GET
-- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22hya9h8gimmcygbn%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
-- status: 400
-- statusText: Bad Request
-- response: 
-    {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-- durationMs: 242
-
-## 2026-08-04 14:55:07.999Z console.error
-- text: 
-    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22hya9h8gimmcygbn%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-
-## 2026-08-04 14:55:08.134Z network.error
-- method: GET
-- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22sz933rrdjx4j62w%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
-- status: 400
-- statusText: Bad Request
-- response: 
-    {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-- durationMs: 375
-
-## 2026-08-04 14:55:08.134Z console.error
-- text: 
-    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22sz933rrdjx4j62w%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-
-## 2026-08-04 14:55:08.144Z network.error
-- method: GET
-- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%220tioxaa5mvtikb6%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
-- status: 400
-- statusText: Bad Request
-- response: 
-    {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-- durationMs: 385
-
-## 2026-08-04 14:55:08.145Z console.error
-- text: 
-    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%220tioxaa5mvtikb6%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-
-## 2026-08-04 14:55:08.156Z network.error
-- method: GET
-- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%228nbgczjmayz4g8f%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
-- status: 400
-- statusText: Bad Request
-- response: 
-    {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-- durationMs: 398
-
-## 2026-08-04 14:55:08.156Z console.error
-- text: 
-    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%228nbgczjmayz4g8f%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-
-## 2026-08-04 14:55:08.496Z network.error
-- method: GET
-- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22km2hb4iq8cyaqut%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
-- status: 400
-- statusText: Bad Request
-- response: 
-    {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-- durationMs: 735
-
-## 2026-08-04 14:55:08.497Z console.error
-- text: 
-    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22km2hb4iq8cyaqut%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-
-## 2026-08-04 14:55:08.525Z network.error
-- method: GET
-- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22okqcy3xzr7pff8b%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
-- status: 400
-- statusText: Bad Request
-- response: 
-    {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-- durationMs: 765
-
-## 2026-08-04 14:55:08.525Z console.error
-- text: 
-    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22okqcy3xzr7pff8b%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-
-## 2026-08-04 14:55:08.557Z network.error
-- method: GET
-- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22z7i4vmn1n7io1np%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
-- status: 400
-- statusText: Bad Request
-- response: 
-    {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-- durationMs: 797
-
-## 2026-08-04 14:55:08.559Z console.error
-- text: 
-    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22z7i4vmn1n7io1np%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-
-## 2026-08-04 14:55:31.230Z load
-- url: http://localhost:3000/admin
-- title: Avante Lingerie | Oficial
-
-## 2026-08-04 14:55:32.120Z navigate
-- url: http://localhost:3000/admin
-- via: replaceState
-
-## 2026-08-04 14:55:32.897Z navigate
-- url: http://localhost:3000/admin/login
-- via: replaceState
-
-## 2026-08-04 14:55:39.017Z load
-- url: http://localhost:3000/
-- title: Avante Lingerie | Oficial
-
-## 2026-08-04 14:55:39.865Z navigate
-- url: http://localhost:3000/
-- via: replaceState
-
-## 2026-08-04 14:55:41.238Z network.error
-- method: GET
-- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22vi937hhuvzg154r%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
-- status: 400
-- statusText: Bad Request
-- response: 
-    {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-- durationMs: 43
-
-## 2026-08-04 14:55:41.240Z console.error
-- text: 
-    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22vi937hhuvzg154r%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-
-## 2026-08-04 14:55:41.247Z network.error
-- method: GET
-- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%228nbgczjmayz4g8f%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
-- status: 400
-- statusText: Bad Request
-- response: 
-    {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-- durationMs: 52
-
-## 2026-08-04 14:55:41.249Z console.error
-- text: 
-    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%228nbgczjmayz4g8f%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-
-## 2026-08-04 14:55:41.250Z network.error
-- method: GET
-- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22hya9h8gimmcygbn%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
-- status: 400
-- statusText: Bad Request
-- response: 
-    {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-- durationMs: 55
-
-## 2026-08-04 14:55:41.251Z console.error
-- text: 
-    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22hya9h8gimmcygbn%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-
-## 2026-08-04 14:55:41.258Z network.error
-- method: GET
-- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22sz933rrdjx4j62w%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
-- status: 400
-- statusText: Bad Request
-- response: 
-    {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-- durationMs: 62
-
-## 2026-08-04 14:55:41.259Z console.error
-- text: 
-    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22sz933rrdjx4j62w%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-
-## 2026-08-04 14:55:41.259Z network.error
-- method: GET
-- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22okqcy3xzr7pff8b%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
-- status: 400
-- statusText: Bad Request
-- response: 
-    {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-- durationMs: 63
-
-## 2026-08-04 14:55:41.260Z console.error
-- text: 
-    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22okqcy3xzr7pff8b%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-
-## 2026-08-04 14:55:41.266Z network.error
-- method: GET
-- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%220tioxaa5mvtikb6%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
-- status: 400
-- statusText: Bad Request
-- response: 
-    {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-- durationMs: 70
-
-## 2026-08-04 14:55:41.266Z console.error
-- text: 
-    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%220tioxaa5mvtikb6%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-
-## 2026-08-04 14:55:41.287Z network.error
-- method: GET
-- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22z7i4vmn1n7io1np%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
-- status: 400
-- statusText: Bad Request
-- response: 
-    {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-- durationMs: 91
-
-## 2026-08-04 14:55:41.288Z console.error
-- text: 
-    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22z7i4vmn1n7io1np%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-
-## 2026-08-04 14:55:41.296Z network.error
-- method: GET
-- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22km2hb4iq8cyaqut%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
-- status: 400
-- statusText: Bad Request
-- response: 
-    {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-- durationMs: 100
-
-## 2026-08-04 14:55:41.297Z console.error
-- text: 
-    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22km2hb4iq8cyaqut%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-
-## 2026-08-04 14:57:33.792Z load
-- url: http://localhost:3000/admin
-- title: Avante Lingerie | Oficial
-
-## 2026-08-04 14:57:34.783Z navigate
-- url: http://localhost:3000/admin
-- via: replaceState
-
-## 2026-08-04 14:57:35.238Z navigate
-- url: http://localhost:3000/admin/login
-- via: replaceState
-
-## 2026-08-04 14:57:36.745Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"email","id":null,"placeholder":"admin@avantelingerie.com.br","label":"admin@avantelingerie.com.br","value":"","valueLength":0,"text":""}
-
-## 2026-08-04 14:57:36.962Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"email","id":null,"placeholder":"admin@avantelingerie.com.br","label":"admin@avantelingerie.com.br","value":"","valueLength":0,"text":""}
-
-## 2026-08-04 14:57:48.025Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"email","id":null,"placeholder":"admin@avantelingerie.com.br","label":"admin@avantelingerie.com.br","value":"admin@avantelingerie.com.br","valueLength":27,"text":""}
-
-## 2026-08-04 14:57:48.026Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"email","id":null,"placeholder":"admin@avantelingerie.com.br","label":"admin@avantelingerie.com.br","value":"admin@avantelingerie.com.br","valueLength":27,"text":""}
-
-## 2026-08-04 14:57:48.028Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"password","id":null,"placeholder":"••••••••","label":"••••••••","value":"[redacted:length=0]","valueLength":0,"text":""}
-
-## 2026-08-04 14:57:48.244Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"password","id":null,"placeholder":"••••••••","label":"••••••••","value":"[redacted:length=0]","valueLength":0,"text":""}
-
-## 2026-08-04 14:57:53.827Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"password","id":null,"placeholder":"••••••••","label":"••••••••","value":"[redacted:length=12]","valueLength":12,"text":""}
-
-## 2026-08-04 14:57:53.827Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"password","id":null,"placeholder":"••••••••","label":"••••••••","value":"[redacted:length=12]","valueLength":12,"text":""}
-
-## 2026-08-04 14:57:54.062Z click
-- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"submit","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"ACESSAR PAINEL"}
-
-## 2026-08-04 14:57:54.069Z submit
-- action: http://localhost:3000/admin/login
-- fields: [{"label":"admin@avantelingerie.com.br","type":"email","value":"admin@avantelingerie.com.br","length":27,"redacted":false},{"label":"••••••••","type":"password","value":"[redacted:length=12]","length":12,"redacted":true},{"label":"Mostrar senha","type":"button","value":"","length":0,"redacted":false},{"label":"[submit]","type":"submit","value":"","length":0,"redacted":false}]
-
-## 2026-08-04 14:57:54.284Z navigate
-- url: http://localhost:3000/admin
-- via: pushState
-
-## 2026-08-04 14:57:59.011Z click
-- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Categorias"}
-
-## 2026-08-04 14:57:59.014Z navigate
-- url: http://localhost:3000/admin/categorias
-- via: pushState
-
-## 2026-08-04 14:58:08.179Z click
-- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-08-04 14:59:23.462Z click
-- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-08-04 14:59:28.683Z load
-- url: http://localhost:3000/admin/categorias
-- title: Avante Lingerie | Oficial
-
-## 2026-08-04 14:59:38.603Z load
-- url: http://localhost:3000/
-- title: Avante Lingerie | Oficial
-
-## 2026-08-04 14:59:40.398Z network.error
-- method: GET
-- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22hya9h8gimmcygbn%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
-- status: 400
-- statusText: Bad Request
-- response: 
-    {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-- durationMs: 129
-
-## 2026-08-04 14:59:40.399Z network.error
-- method: GET
-- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22sz933rrdjx4j62w%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
-- status: 400
-- statusText: Bad Request
-- response: 
-    {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-- durationMs: 128
-
-## 2026-08-04 14:59:40.410Z console.error
-- text: 
-    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22hya9h8gimmcygbn%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-
-## 2026-08-04 14:59:40.414Z console.error
-- text: 
-    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22sz933rrdjx4j62w%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-
-## 2026-08-04 14:59:40.415Z network.error
-- method: GET
-- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22vi937hhuvzg154r%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
-- status: 400
-- statusText: Bad Request
-- response: 
-    {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-- durationMs: 144
-
-## 2026-08-04 14:59:40.420Z console.error
-- text: 
-    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22vi937hhuvzg154r%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-
-## 2026-08-04 14:59:40.423Z network.error
-- method: GET
-- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22okqcy3xzr7pff8b%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
-- status: 400
-- statusText: Bad Request
-- response: 
-    {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-- durationMs: 147
-
-## 2026-08-04 14:59:40.423Z network.error
-- method: GET
-- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22z7i4vmn1n7io1np%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
-- status: 400
-- statusText: Bad Request
-- response: 
-    {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-- durationMs: 147
-
-## 2026-08-04 14:59:40.425Z console.error
-- text: 
-    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22okqcy3xzr7pff8b%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-
-## 2026-08-04 14:59:40.426Z console.error
-- text: 
-    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22z7i4vmn1n7io1np%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-
-## 2026-08-04 14:59:40.426Z network.error
-- method: GET
-- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%220tioxaa5mvtikb6%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
-- status: 400
-- statusText: Bad Request
-- response: 
-    {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-- durationMs: 153
-
-## 2026-08-04 14:59:40.427Z network.error
-- method: GET
-- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22km2hb4iq8cyaqut%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
-- status: 400
-- statusText: Bad Request
-- response: 
-    {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-- durationMs: 150
-
-## 2026-08-04 14:59:40.444Z console.error
-- text: 
-    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%220tioxaa5mvtikb6%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-
-## 2026-08-04 14:59:40.445Z console.error
-- text: 
-    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22km2hb4iq8cyaqut%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-
-## 2026-08-04 15:00:05.652Z click
-- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-08-04 15:00:29.684Z click
-- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Nova Categoria"}
-
-## 2026-08-04 15:00:30.811Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Ex: Lingerie Renda","label":"Ex: Lingerie Renda","value":"","valueLength":0,"text":""}
-
-## 2026-08-04 15:00:31.023Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Ex: Lingerie Renda","label":"Ex: Lingerie Renda","value":"","valueLength":0,"text":""}
-
-## 2026-08-04 15:00:36.345Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Ex: Lingerie Renda","label":"Ex: Lingerie Renda","value":"Camisola","valueLength":8,"text":""}
-
-## 2026-08-04 15:00:36.345Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Ex: Lingerie Renda","label":"Ex: Lingerie Renda","value":"Camisola","valueLength":8,"text":""}
-
-## 2026-08-04 15:00:36.554Z click
-- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-08-04 15:00:38.913Z click
-- element: {"tag":"main","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"CategoriasOrganize seus produtos por seções. Nova CategoriaNome da CategoriaURL (Slug)NCM (Fiscal)StatusAçõesCamisolacamisola6208.21.00AtivoCinta Modeladoracinta-modeladora6212.20.00AtivoCroppedcropped6109.90.00AtivoBodybody6114.30.00AtivoConjuntoconjunto6212.10.00AtivoCalcinhacalcinha6212.20.00AtivoPijamapijama6208.21.00AtivoPlus Sizeplus-size6109.90.00Ativo"}
-
-## 2026-08-04 15:00:40.839Z load
-- url: http://localhost:3000/admin/categorias
-- title: Avante Lingerie | Oficial
-
-## 2026-08-04 15:00:46.359Z load
-- url: http://localhost:3000/
-- title: Avante Lingerie | Oficial
-
-## 2026-08-04 15:00:47.696Z network.error
-- method: GET
-- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22219neq337ly8hpm%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
-- status: 400
-- statusText: Bad Request
-- response: 
-    {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-- durationMs: 95
-
-## 2026-08-04 15:00:47.696Z network.error
-- method: GET
-- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22hya9h8gimmcygbn%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
-- status: 400
-- statusText: Bad Request
-- response: 
-    {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-- durationMs: 97
-
-## 2026-08-04 15:00:47.715Z network.error
-- method: GET
-- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22sz933rrdjx4j62w%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
-- status: 400
-- statusText: Bad Request
-- response: 
-    {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-- durationMs: 113
-
-## 2026-08-04 15:00:47.716Z console.error
-- text: 
-    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22219neq337ly8hpm%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-
-## 2026-08-04 15:00:47.723Z console.error
-- text: 
-    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22hya9h8gimmcygbn%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-
-## 2026-08-04 15:00:47.731Z network.error
-- method: GET
-- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22vi937hhuvzg154r%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
-- status: 400
-- statusText: Bad Request
-- response: 
-    {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-- durationMs: 130
-
-## 2026-08-04 15:00:47.731Z console.error
-- text: 
-    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22sz933rrdjx4j62w%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-
-## 2026-08-04 15:00:47.747Z network.error
-- method: GET
-- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%220tioxaa5mvtikb6%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
-- status: 400
-- statusText: Bad Request
-- response: 
-    {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-- durationMs: 143
-
-## 2026-08-04 15:00:47.748Z console.error
-- text: 
-    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22vi937hhuvzg154r%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-
-## 2026-08-04 15:00:47.758Z network.error
-- method: GET
-- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22okqcy3xzr7pff8b%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
-- status: 400
-- statusText: Bad Request
-- response: 
-    {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-- durationMs: 153
-
-## 2026-08-04 15:00:47.765Z console.error
-- text: 
-    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%220tioxaa5mvtikb6%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-
-## 2026-08-04 15:00:47.765Z network.error
-- method: GET
-- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22km2hb4iq8cyaqut%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
-- status: 400
-- statusText: Bad Request
-- response: 
-    {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-- durationMs: 160
-
-## 2026-08-04 15:00:47.766Z network.error
-- method: GET
-- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22z7i4vmn1n7io1np%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
-- status: 400
-- statusText: Bad Request
-- response: 
-    {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-- durationMs: 161
-
-## 2026-08-04 15:00:47.787Z console.error
-- text: 
-    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22okqcy3xzr7pff8b%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-
-## 2026-08-04 15:00:47.797Z console.error
-- text: 
-    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22km2hb4iq8cyaqut%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-
-## 2026-08-04 15:00:47.797Z console.error
-- text: 
-    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22z7i4vmn1n7io1np%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-
-## 2026-08-07 17:33:56.059Z load
-- url: http://localhost:3000/
-- title: Avante Lingerie | Oficial
-
-## 2026-08-07 17:34:04.057Z navigate
-- url: http://localhost:3000/
-- via: replaceState
-
-## 2026-08-07 17:34:05.266Z network.error
-- method: GET
-- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22hya9h8gimmcygbn%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
-- status: 400
-- statusText: Bad Request
-- response: 
-    {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-- durationMs: 226
-
-## 2026-08-07 17:34:05.266Z network.error
-- method: GET
-- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22219neq337ly8hpm%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
-- status: 400
-- statusText: Bad Request
-- response: 
-    {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-- durationMs: 226
-
-## 2026-08-07 17:34:05.267Z console.error
-- text: 
-    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22hya9h8gimmcygbn%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-
-## 2026-08-07 17:34:05.272Z console.error
-- text: 
-    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22219neq337ly8hpm%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-
-## 2026-08-07 17:34:05.283Z network.error
-- method: GET
-- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22vi937hhuvzg154r%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
-- status: 400
-- statusText: Bad Request
-- response: 
-    {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-- durationMs: 243
-
-## 2026-08-07 17:34:05.283Z network.error
-- method: GET
-- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22sz933rrdjx4j62w%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
-- status: 400
-- statusText: Bad Request
-- response: 
-    {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-- durationMs: 243
-
-## 2026-08-07 17:34:05.284Z console.error
-- text: 
-    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22vi937hhuvzg154r%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-
-## 2026-08-07 17:34:05.285Z console.error
-- text: 
-    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22sz933rrdjx4j62w%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-
-## 2026-08-07 17:34:05.285Z network.error
-- method: GET
-- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%220tioxaa5mvtikb6%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
-- status: 400
-- statusText: Bad Request
-- response: 
-    {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-- durationMs: 244
-
-## 2026-08-07 17:34:05.285Z network.error
-- method: GET
-- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22okqcy3xzr7pff8b%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
-- status: 400
-- statusText: Bad Request
-- response: 
-    {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-- durationMs: 244
-
-## 2026-08-07 17:34:05.286Z console.error
-- text: 
-    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%220tioxaa5mvtikb6%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-
-## 2026-08-07 17:34:05.286Z network.error
-- method: GET
-- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22z7i4vmn1n7io1np%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
-- status: 400
-- statusText: Bad Request
-- response: 
-    {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-- durationMs: 244
-
-## 2026-08-07 17:34:05.286Z console.error
-- text: 
-    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22okqcy3xzr7pff8b%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-
-## 2026-08-07 17:34:05.286Z console.error
-- text: 
-    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22z7i4vmn1n7io1np%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-
-## 2026-08-07 17:34:05.297Z network.error
-- method: GET
-- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22km2hb4iq8cyaqut%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
-- status: 400
-- statusText: Bad Request
-- response: 
-    {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-- durationMs: 256
-
-## 2026-08-07 17:34:05.298Z console.error
-- text: 
-    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22km2hb4iq8cyaqut%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-
-## 2026-08-07 17:34:14.143Z load
-- url: http://localhost:3000/admin
-- title: Avante Lingerie | Oficial
-
-## 2026-08-07 17:34:14.490Z navigate
-- url: http://localhost:3000/admin
-- via: replaceState
-
-## 2026-08-07 17:34:14.595Z navigate
-- url: http://localhost:3000/admin/login
-- via: replaceState
-
-## 2026-08-07 17:34:16.137Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"email","id":null,"placeholder":"admin@avantelingerie.com.br","label":"admin@avantelingerie.com.br","value":"","valueLength":0,"text":""}
-
-## 2026-08-07 17:34:16.341Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"email","id":null,"placeholder":"admin@avantelingerie.com.br","label":"admin@avantelingerie.com.br","value":"","valueLength":0,"text":""}
-
-## 2026-08-07 17:34:26.485Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"email","id":null,"placeholder":"admin@avantelingerie.com.br","label":"admin@avantelingerie.com.br","value":"admin@avantelingerie.com.br","valueLength":27,"text":""}
-
-## 2026-08-07 17:34:26.486Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"email","id":null,"placeholder":"admin@avantelingerie.com.br","label":"admin@avantelingerie.com.br","value":"admin@avantelingerie.com.br","valueLength":27,"text":""}
-
-## 2026-08-07 17:34:26.491Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"password","id":null,"placeholder":"••••••••","label":"••••••••","value":"[redacted:length=0]","valueLength":0,"text":""}
-
-## 2026-08-07 17:34:31.742Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"password","id":null,"placeholder":"••••••••","label":"••••••••","value":"[redacted:length=12]","valueLength":12,"text":""}
-
-## 2026-08-07 17:34:31.742Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"password","id":null,"placeholder":"••••••••","label":"••••••••","value":"[redacted:length=12]","valueLength":12,"text":""}
-
-## 2026-08-07 17:34:31.969Z click
-- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"submit","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"ACESSAR PAINEL"}
-
-## 2026-08-07 17:34:31.974Z submit
-- action: http://localhost:3000/admin/login
-- fields: [{"label":"admin@avantelingerie.com.br","type":"email","value":"admin@avantelingerie.com.br","length":27,"redacted":false},{"label":"••••••••","type":"password","value":"[redacted:length=12]","length":12,"redacted":true},{"label":"Mostrar senha","type":"button","value":"","length":0,"redacted":false},{"label":"[submit]","type":"submit","value":"","length":0,"redacted":false}]
-
-## 2026-08-07 17:34:32.119Z navigate
-- url: http://localhost:3000/admin
-- via: pushState
-
-## 2026-08-07 17:34:38.620Z click
-- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Produtos"}
-
-## 2026-08-07 17:34:38.622Z navigate
-- url: http://localhost:3000/admin/produtos
-- via: pushState
-
-## 2026-08-07 17:34:40.318Z click
-- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Novo Produto"}
-
-## 2026-08-07 17:34:40.319Z navigate
-- url: http://localhost:3000/admin/produtos/novo
-- via: pushState
-
-## 2026-08-07 17:34:46.133Z click
-- element: {"tag":"label","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Adicionar Fotos/Vídeos"}
-
-## 2026-08-07 17:34:46.135Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"file","id":null,"placeholder":null,"label":"Adicionar Fotos/Vídeos","value":"","valueLength":0,"text":""}
-
-## 2026-08-07 17:34:58.264Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"","valueLength":0,"text":""}
-
-## 2026-08-07 17:34:58.468Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"","valueLength":0,"text":""}
-
-## 2026-08-07 17:35:43.409Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"Verde-Militar","valueLength":13,"text":""}
-
-## 2026-08-07 17:35:43.426Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"Verde-Militar","valueLength":13,"text":""}
-
-## 2026-08-07 17:35:43.427Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"","valueLength":0,"text":""}
-
-## 2026-08-07 17:35:43.631Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"","valueLength":0,"text":""}
-
-## 2026-08-07 17:35:47.971Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"Preta","valueLength":5,"text":""}
-
-## 2026-08-07 17:35:47.971Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"Preta","valueLength":5,"text":""}
-
-## 2026-08-07 17:35:47.975Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"","valueLength":0,"text":""}
-
-## 2026-08-07 17:35:48.182Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"","valueLength":0,"text":""}
-
-## 2026-08-07 17:35:50.684Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"Vinho","valueLength":5,"text":""}
-
-## 2026-08-07 17:35:50.685Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"Vinho","valueLength":5,"text":""}
-
-## 2026-08-07 17:35:50.685Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"","valueLength":0,"text":""}
-
-## 2026-08-07 17:35:50.900Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"","valueLength":0,"text":""}
-
-## 2026-08-07 17:35:55.719Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"Azul-Marinho","valueLength":12,"text":""}
-
-## 2026-08-07 17:35:55.719Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"Azul-Marinho","valueLength":12,"text":""}
-
-## 2026-08-07 17:35:55.720Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"","valueLength":0,"text":""}
-
-## 2026-08-07 17:35:55.931Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"","valueLength":0,"text":""}
-
-## 2026-08-07 17:35:58.138Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"Bege","valueLength":4,"text":""}
-
-## 2026-08-07 17:35:58.138Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"Bege","valueLength":4,"text":""}
-
-## 2026-08-07 17:35:58.138Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"","valueLength":0,"text":""}
-
-## 2026-08-07 17:35:58.356Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"","valueLength":0,"text":""}
-
-## 2026-08-07 17:36:03.396Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"Branca","valueLength":6,"text":""}
-
-## 2026-08-07 17:36:03.396Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"Branca","valueLength":6,"text":""}
-
-## 2026-08-07 17:36:03.397Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"","valueLength":0,"text":""}
-
-## 2026-08-07 17:36:03.613Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"","valueLength":0,"text":""}
-
-## 2026-08-07 17:36:06.339Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"Marron","valueLength":6,"text":""}
-
-## 2026-08-07 17:36:06.355Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"Marron","valueLength":6,"text":""}
-
-## 2026-08-07 17:36:06.356Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"","valueLength":0,"text":""}
-
-## 2026-08-07 17:36:06.548Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"","valueLength":0,"text":""}
-
-## 2026-08-07 17:36:15.512Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"Cinza","valueLength":5,"text":""}
-
-## 2026-08-07 17:36:15.513Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"Cinza","valueLength":5,"text":""}
-
-## 2026-08-07 17:38:55.280Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"Cinza","valueLength":5,"text":""}
-
-## 2026-08-07 17:38:58.563Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"Cinza","valueLength":5,"text":""}
-
-## 2026-08-07 17:43:11.158Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"Cinza","valueLength":5,"text":""}
-
-## 2026-08-07 17:43:20.224Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"Cinza","valueLength":5,"text":""}
-
-## 2026-08-07 17:43:23.609Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"Cinza","valueLength":5,"text":""}
-
-## 2026-08-07 17:43:25.011Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"Cinza","valueLength":5,"text":""}
-
-## 2026-08-07 17:47:25.961Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"Cinza","valueLength":5,"text":""}
-
-## 2026-08-07 17:47:27.728Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"Cinza","valueLength":5,"text":""}
-
-## 2026-08-07 17:50:22.099Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"Cinza","valueLength":5,"text":""}
-
-## 2026-08-07 17:50:23.866Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"Cinza","valueLength":5,"text":""}
-
-## 2026-08-07 17:50:31.510Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"Cinza","valueLength":5,"text":""}
-
-## 2026-08-07 17:50:33.424Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"Cinza","valueLength":5,"text":""}
-
-## 2026-08-07 17:50:33.427Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"url","id":null,"placeholder":"Ex: https://youtube.com/shorts/... ou link .mp4","label":"Ex: https://youtube.com/shorts/... ou link .mp4","value":"","valueLength":0,"text":""}
-
-## 2026-08-07 17:50:33.637Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"url","id":null,"placeholder":"Ex: https://youtube.com/shorts/... ou link .mp4","label":"Ex: https://youtube.com/shorts/... ou link .mp4","value":"","valueLength":0,"text":""}
-
-## 2026-08-07 17:50:35.471Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"url","id":null,"placeholder":"Ex: https://youtube.com/shorts/... ou link .mp4","label":"Ex: https://youtube.com/shorts/... ou link .mp4","value":"https://avantelingerie.com.br/video/cropped.mp4","valueLength":47,"text":""}
-
-## 2026-08-07 17:50:35.472Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"url","id":null,"placeholder":"Ex: https://youtube.com/shorts/... ou link .mp4","label":"Ex: https://youtube.com/shorts/... ou link .mp4","value":"https://avantelingerie.com.br/video/cropped.mp4","valueLength":47,"text":""}
-
-## 2026-08-07 17:50:35.477Z focus
-- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"last","valueLength":4,"text":"Exibir no FinalExibir como Primeira"}
-
-## 2026-08-07 17:50:35.686Z click
-- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"last","valueLength":4,"text":"Exibir no FinalExibir como Primeira"}
-
-## 2026-08-07 17:50:37.343Z change
-- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"first","valueLength":5,"text":"Exibir no FinalExibir como Primeira"}
-
-## 2026-08-07 17:50:37.351Z click
-- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"first","valueLength":5,"text":"Exibir no FinalExibir como Primeira"}
-
-## 2026-08-07 17:50:43.275Z blur
-- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"first","valueLength":5,"text":"Exibir no FinalExibir como Primeira"}
-
-## 2026-08-07 17:50:43.278Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Ex: Conjunto Rendado Paris","label":"Ex: Conjunto Rendado Paris","value":"","valueLength":0,"text":""}
-
-## 2026-08-07 17:50:43.489Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Ex: Conjunto Rendado Paris","label":"Ex: Conjunto Rendado Paris","value":"","valueLength":0,"text":""}
-
-## 2026-08-07 17:50:55.034Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Ex: Conjunto Rendado Paris","label":"Ex: Conjunto Rendado Paris","value":"Cropped Regata Gola Alta","valueLength":24,"text":""}
-
-## 2026-08-07 17:50:55.034Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Ex: Conjunto Rendado Paris","label":"Ex: Conjunto Rendado Paris","value":"Cropped Regata Gola Alta","valueLength":24,"text":""}
-
-## 2026-08-07 17:50:55.035Z focus
-- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"","valueLength":0,"text":"Selecionar Categoria...BodyCalcinhaCamisolaCinta ModeladoraConjuntoCroppedPijamaPlus Size"}
-
-## 2026-08-07 17:50:55.254Z click
-- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"","valueLength":0,"text":"Selecionar Categoria...BodyCalcinhaCamisolaCinta ModeladoraConjuntoCroppedPijamaPlus Size"}
-
-## 2026-08-07 17:50:56.752Z change
-- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"okqcy3xzr7pff8b","valueLength":15,"text":"Selecionar Categoria...BodyCalcinhaCamisolaCinta ModeladoraConjuntoCroppedPijamaPlus Size"}
-
-## 2026-08-07 17:50:56.756Z click
-- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"okqcy3xzr7pff8b","valueLength":15,"text":"Selecionar Categoria...BodyCalcinhaCamisolaCinta ModeladoraConjuntoCroppedPijamaPlus Size"}
-
-## 2026-08-07 17:50:58.016Z blur
-- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"okqcy3xzr7pff8b","valueLength":15,"text":"Selecionar Categoria...BodyCalcinhaCamisolaCinta ModeladoraConjuntoCroppedPijamaPlus Size"}
-
-## 2026-08-07 17:50:58.222Z click
-- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Gerar Automático"}
-
-## 2026-08-07 17:51:01.805Z click
-- element: {"tag":"button","role":"switch","ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-08-07 17:51:01.816Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"checkbox","id":null,"placeholder":null,"label":"[checkbox]","value":"on","valueLength":2,"text":""}
-
-## 2026-08-07 17:51:02.903Z click
-- element: {"tag":"button","role":"switch","ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-08-07 17:51:02.909Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"checkbox","id":null,"placeholder":null,"label":"[checkbox]","value":"on","valueLength":2,"text":""}
-
-## 2026-08-07 17:51:04.170Z click
-- element: {"tag":"div","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Ofertas Exclusivas"}
-
-## 2026-08-07 17:51:05.054Z click
-- element: {"tag":"button","role":"switch","ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-08-07 17:51:05.061Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"checkbox","id":null,"placeholder":null,"label":"[checkbox]","value":"on","valueLength":2,"text":""}
-
-## 2026-08-07 17:51:06.086Z click
-- element: {"tag":"button","role":"switch","ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-08-07 17:51:06.092Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"checkbox","id":null,"placeholder":null,"label":"[checkbox]","value":"on","valueLength":2,"text":""}
-
-## 2026-08-07 17:51:07.143Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":null,"label":"[number]","value":"","valueLength":0,"text":""}
-
-## 2026-08-07 17:51:07.385Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":null,"label":"[number]","value":"","valueLength":0,"text":""}
-
-## 2026-08-07 17:51:09.184Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":null,"label":"[number]","value":"29.90","valueLength":5,"text":""}
-
-## 2026-08-07 17:51:09.184Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":null,"label":"[number]","value":"29.90","valueLength":5,"text":""}
-
-## 2026-08-07 17:51:09.186Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":null,"label":"[number]","value":"","valueLength":0,"text":""}
-
-## 2026-08-07 17:51:11.333Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":null,"label":"[number]","value":"19.90","valueLength":5,"text":""}
-
-## 2026-08-07 17:51:11.333Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":null,"label":"[number]","value":"19.90","valueLength":5,"text":""}
-
-## 2026-08-07 17:51:11.360Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 150","label":"Ex: 150","value":"","valueLength":0,"text":""}
-
-## 2026-08-07 17:51:15.023Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 150","label":"Ex: 150","value":"150","valueLength":3,"text":""}
-
-## 2026-08-07 17:51:15.023Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 150","label":"Ex: 150","value":"150","valueLength":3,"text":""}
-
-## 2026-08-07 17:51:15.031Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 5","label":"Ex: 5","value":"","valueLength":0,"text":""}
-
-## 2026-08-07 17:51:18.030Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 5","label":"Ex: 5","value":"5","valueLength":1,"text":""}
-
-## 2026-08-07 17:51:18.031Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 5","label":"Ex: 5","value":"5","valueLength":1,"text":""}
-
-## 2026-08-07 17:51:18.032Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 11","label":"Ex: 11","value":"","valueLength":0,"text":""}
-
-## 2026-08-07 17:51:18.747Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 11","label":"Ex: 11","value":"11","valueLength":2,"text":""}
-
-## 2026-08-07 17:51:18.747Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 11","label":"Ex: 11","value":"11","valueLength":2,"text":""}
-
-## 2026-08-07 17:51:18.748Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 20","label":"Ex: 20","value":"","valueLength":0,"text":""}
-
-## 2026-08-07 17:51:24.099Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 20","label":"Ex: 20","value":"20","valueLength":2,"text":""}
-
-## 2026-08-07 17:51:24.099Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 20","label":"Ex: 20","value":"20","valueLength":2,"text":""}
-
-## 2026-08-07 17:51:24.101Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Digite os tamanhos separados por vírgula...","label":"Digite os tamanhos separados por vírgula...","value":"","valueLength":0,"text":""}
-
-## 2026-08-07 17:51:30.265Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Digite os tamanhos separados por vírgula...","label":"Digite os tamanhos separados por vírgula...","value":"P, M, G","valueLength":7,"text":""}
-
-## 2026-08-07 17:51:30.265Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Digite os tamanhos separados por vírgula...","label":"Digite os tamanhos separados por vírgula...","value":"P, M, G","valueLength":7,"text":""}
-
-## 2026-08-07 17:51:30.469Z click
-- element: {"tag":"main","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Novo Produto Cancelar SalvarInformações BásicasNome do Produto *Categoria *Selecionar Categoria...BodyCalcinhaCamisolaCinta ModeladoraConjuntoCroppedPijamaPlus SizeReferência / Código Interno * Gerar AutomáticoStatus de ExibiçãoDeixe inativo para esconder o produto na loja.Destaques e Vitrines na HomeLançamentos RecentesOfertas ExclusivasMais Vendidos da AvanteDestaques de OuroPreço e LogísticaPreço de Venda Varejo (R$) *Preço de Atacado B2B (R$)Peso (g)Altura (cm)Largura (cm)Profundidade (cm)Variações do ProdutoInforme os atributos e valores padrões abaixo para gerar todas as variações.Estoque Total: 0 unTamanhos (ex: P, M, G, GG)Cores (ex: Preto, Romance, Chocolate)Estoque PadrãoPreço Varejo Padrão (R$)Preço Atacado Padrão (R$)Gerar VariaçõesCorTamanhoSKUImagem / FotoEstoquePreço Varejo (R$)Preço Atacado (R$)StatusAçõesNenhuma variação adicionada ainda. Digite tamanhos e cores na linha acima para gerar a lista!Descrições Detalhadas em Abas Assistente de Descrições IAGeralTecidoModelagemCuidadosDiferenciaisCompra SeguraDescrição GeralMídias e Fotos Adicionar Fotos/VídeosCapaVersoCapaVersoCapaVersoCapaVersoCapaVersoCapaVersoCapaVersoCapaVersoVídeo Externo (YouTube/Vimeo/MP4)Para evitar lentidão e travamentos, cole o link do seu vídeo hospedado externamente.Exibir no FinalExibir como Primeira"}
-
-## 2026-08-07 17:51:33.363Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Digite as cores separadas por vírgula...","label":"Digite as cores separadas por vírgula...","value":"","valueLength":0,"text":""}
-
-## 2026-08-07 17:51:33.583Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Digite as cores separadas por vírgula...","label":"Digite as cores separadas por vírgula...","value":"","valueLength":0,"text":""}
-
-## 2026-08-07 17:51:53.375Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Digite as cores separadas por vírgula...","label":"Digite as cores separadas por vírgula...","value":"Verde-Militar,","valueLength":14,"text":""}
-
-## 2026-08-07 17:51:53.375Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Digite as cores separadas por vírgula...","label":"Digite as cores separadas por vírgula...","value":"Verde-Militar,","valueLength":14,"text":""}
-
-## 2026-08-07 17:51:59.057Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Digite as cores separadas por vírgula...","label":"Digite as cores separadas por vírgula...","value":"Verde-Militar,","valueLength":14,"text":""}
-
-## 2026-08-07 17:52:00.456Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Digite as cores separadas por vírgula...","label":"Digite as cores separadas por vírgula...","value":"Verde-Militar,","valueLength":14,"text":""}
-
-## 2026-08-07 17:52:03.881Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Digite as cores separadas por vírgula...","label":"Digite as cores separadas por vírgula...","value":"Verde-Militar,","valueLength":14,"text":""}
-
-## 2026-08-07 17:52:05.928Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Digite as cores separadas por vírgula...","label":"Digite as cores separadas por vírgula...","value":"Verde-Militar,","valueLength":14,"text":""}
-
-## 2026-08-07 17:52:06.179Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Digite as cores separadas por vírgula...","label":"Digite as cores separadas por vírgula...","value":"Verde-Militar,","valueLength":14,"text":""}
-
-## 2026-08-07 17:52:14.963Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Digite as cores separadas por vírgula...","label":"Digite as cores separadas por vírgula...","value":"Verde-Militar,","valueLength":14,"text":""}
-
-## 2026-08-07 17:52:18.569Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Digite as cores separadas por vírgula...","label":"Digite as cores separadas por vírgula...","value":"Verde-Militar,","valueLength":14,"text":""}
-
-## 2026-08-07 17:52:20.171Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Digite as cores separadas por vírgula...","label":"Digite as cores separadas por vírgula...","value":"Verde-Militar,","valueLength":14,"text":""}
-
-## 2026-08-07 17:56:50.518Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Digite as cores separadas por vírgula...","label":"Digite as cores separadas por vírgula...","value":"Verde-Militar,","valueLength":14,"text":""}
-
-## 2026-08-07 17:57:49.245Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Digite as cores separadas por vírgula...","label":"Digite as cores separadas por vírgula...","value":"Verde-Militar,","valueLength":14,"text":""}
-
-## 2026-08-07 17:58:29.828Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Digite as cores separadas por vírgula...","label":"Digite as cores separadas por vírgula...","value":"Verde-Militar,","valueLength":14,"text":""}
-
-## 2026-08-07 17:58:32.288Z load
-- url: http://localhost:3000/admin/produtos/novo
-- title: Avante Lingerie | Oficial
-
-## 2026-08-07 17:58:48.375Z load
-- url: http://localhost:3000/admin/produtos/novo
-- title: Avante Lingerie | Oficial
-
-## 2026-08-07 17:58:50.781Z click
-- element: {"tag":"label","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Adicionar Fotos/Vídeos"}
-
-## 2026-08-07 17:58:50.787Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"file","id":null,"placeholder":null,"label":"Adicionar Fotos/Vídeos","value":"","valueLength":0,"text":""}
-
-## 2026-08-07 18:02:17.348Z load
-- url: http://localhost:3000/admin/produtos/novo
-- title: Avante Lingerie | Oficial
-
-## 2026-08-07 18:02:25.321Z click
-- element: {"tag":"label","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Adicionar Fotos/Vídeos"}
-
-## 2026-08-07 18:02:25.339Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"file","id":null,"placeholder":null,"label":"Adicionar Fotos/Vídeos","value":"","valueLength":0,"text":""}
-
-## 2026-08-07 18:02:38.446Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"","valueLength":0,"text":""}
-
-## 2026-08-07 18:02:38.652Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"","valueLength":0,"text":""}
-
-## 2026-08-07 18:03:07.766Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"","valueLength":0,"text":""}
-
-## 2026-08-07 18:03:11.202Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"","valueLength":0,"text":""}
-
-## 2026-08-07 18:03:15.951Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"Verde-Militar","valueLength":13,"text":""}
-
-## 2026-08-07 18:03:15.952Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"Verde-Militar","valueLength":13,"text":""}
-
-## 2026-08-07 18:03:15.953Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"","valueLength":0,"text":""}
-
-## 2026-08-07 18:03:16.169Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"","valueLength":0,"text":""}
-
-## 2026-08-07 18:03:18.544Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"Preta","valueLength":5,"text":""}
-
-## 2026-08-07 18:03:18.544Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"Preta","valueLength":5,"text":""}
-
-## 2026-08-07 18:03:18.544Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"","valueLength":0,"text":""}
-
-## 2026-08-07 18:03:18.764Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"","valueLength":0,"text":""}
-
-## 2026-08-07 18:03:21.216Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"Vinho","valueLength":5,"text":""}
-
-## 2026-08-07 18:03:21.216Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"Vinho","valueLength":5,"text":""}
-
-## 2026-08-07 18:03:21.216Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"","valueLength":0,"text":""}
-
-## 2026-08-07 18:03:21.431Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"","valueLength":0,"text":""}
-
-## 2026-08-07 18:03:32.266Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"Azul-Marinho","valueLength":12,"text":""}
-
-## 2026-08-07 18:03:32.266Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"Azul-Marinho","valueLength":12,"text":""}
-
-## 2026-08-07 18:03:32.267Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"","valueLength":0,"text":""}
-
-## 2026-08-07 18:03:32.497Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"","valueLength":0,"text":""}
-
-## 2026-08-07 18:03:35.541Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"Bege","valueLength":4,"text":""}
-
-## 2026-08-07 18:03:35.542Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"Bege","valueLength":4,"text":""}
-
-## 2026-08-07 18:03:35.542Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"","valueLength":0,"text":""}
-
-## 2026-08-07 18:03:35.765Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"","valueLength":0,"text":""}
-
-## 2026-08-07 18:03:45.008Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"Branca","valueLength":6,"text":""}
-
-## 2026-08-07 18:03:45.009Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"Branca","valueLength":6,"text":""}
-
-## 2026-08-07 18:03:45.247Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"Branca","valueLength":6,"text":""}
-
-## 2026-08-07 18:03:49.136Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"Branca","valueLength":6,"text":""}
-
-## 2026-08-07 18:03:49.138Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"","valueLength":0,"text":""}
-
-## 2026-08-07 18:03:49.349Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"","valueLength":0,"text":""}
-
-## 2026-08-07 18:03:58.352Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"Marrom","valueLength":6,"text":""}
-
-## 2026-08-07 18:03:58.353Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"Marrom","valueLength":6,"text":""}
-
-## 2026-08-07 18:03:58.353Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"","valueLength":0,"text":""}
-
-## 2026-08-07 18:03:58.564Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"","valueLength":0,"text":""}
-
-## 2026-08-07 18:04:13.722Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"Cinza","valueLength":5,"text":""}
-
-## 2026-08-07 18:04:13.723Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"Cinza","valueLength":5,"text":""}
-
-## 2026-08-07 18:04:16.971Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"Cinza","valueLength":5,"text":""}
-
-## 2026-08-07 18:04:17.003Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"Cinza","valueLength":5,"text":""}
-
-## 2026-08-07 18:04:17.165Z click
-- element: {"tag":"div","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"CapaVersoCapaVersoCapaVersoCapaVersoCapaVersoCapaVersoCapaVersoCapaVerso"}
-
-## 2026-08-07 18:04:23.017Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"url","id":null,"placeholder":"Ex: https://youtube.com/shorts/... ou link .mp4","label":"Ex: https://youtube.com/shorts/... ou link .mp4","value":"","valueLength":0,"text":""}
-
-## 2026-08-07 18:04:23.230Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"url","id":null,"placeholder":"Ex: https://youtube.com/shorts/... ou link .mp4","label":"Ex: https://youtube.com/shorts/... ou link .mp4","value":"","valueLength":0,"text":""}
-
-## 2026-08-07 18:04:24.848Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"url","id":null,"placeholder":"Ex: https://youtube.com/shorts/... ou link .mp4","label":"Ex: https://youtube.com/shorts/... ou link .mp4","value":"https://avantelingerie.com.br/video/cropped.mp4","valueLength":47,"text":""}
-
-## 2026-08-07 18:04:24.850Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"url","id":null,"placeholder":"Ex: https://youtube.com/shorts/... ou link .mp4","label":"Ex: https://youtube.com/shorts/... ou link .mp4","value":"https://avantelingerie.com.br/video/cropped.mp4","valueLength":47,"text":""}
-
-## 2026-08-07 18:04:24.855Z focus
-- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"last","valueLength":4,"text":"Exibir no FinalExibir como Primeira"}
-
-## 2026-08-07 18:04:25.059Z click
-- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"last","valueLength":4,"text":"Exibir no FinalExibir como Primeira"}
-
-## 2026-08-07 18:04:26.766Z change
-- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"first","valueLength":5,"text":"Exibir no FinalExibir como Primeira"}
-
-## 2026-08-07 18:04:26.776Z click
-- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"first","valueLength":5,"text":"Exibir no FinalExibir como Primeira"}
-
-## 2026-08-07 18:04:29.290Z blur
-- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"first","valueLength":5,"text":"Exibir no FinalExibir como Primeira"}
-
-## 2026-08-07 18:04:29.499Z click
-- element: {"tag":"button","role":"switch","ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-08-07 18:04:29.515Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"checkbox","id":null,"placeholder":null,"label":"[checkbox]","value":"on","valueLength":2,"text":""}
-
-## 2026-08-07 18:04:30.548Z click
-- element: {"tag":"button","role":"switch","ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-08-07 18:04:30.570Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"checkbox","id":null,"placeholder":null,"label":"[checkbox]","value":"on","valueLength":2,"text":""}
-
-## 2026-08-07 18:04:31.647Z click
-- element: {"tag":"button","role":"switch","ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-08-07 18:04:31.650Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"checkbox","id":null,"placeholder":null,"label":"[checkbox]","value":"on","valueLength":2,"text":""}
-
-## 2026-08-07 18:04:32.492Z click
-- element: {"tag":"button","role":"switch","ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-08-07 18:04:32.497Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"checkbox","id":null,"placeholder":null,"label":"[checkbox]","value":"on","valueLength":2,"text":""}
-
-## 2026-08-07 18:04:34.729Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Ex: Conjunto Rendado Paris","label":"Ex: Conjunto Rendado Paris","value":"","valueLength":0,"text":""}
-
-## 2026-08-07 18:04:34.945Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Ex: Conjunto Rendado Paris","label":"Ex: Conjunto Rendado Paris","value":"","valueLength":0,"text":""}
-
-## 2026-08-07 18:04:54.613Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Ex: Conjunto Rendado Paris","label":"Ex: Conjunto Rendado Paris","value":"Cropped Regata Gola Alta","valueLength":24,"text":""}
-
-## 2026-08-07 18:04:54.613Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Ex: Conjunto Rendado Paris","label":"Ex: Conjunto Rendado Paris","value":"Cropped Regata Gola Alta","valueLength":24,"text":""}
-
-## 2026-08-07 18:04:54.614Z focus
-- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"","valueLength":0,"text":"Selecionar Categoria...BodyCalcinhaCamisolaCinta ModeladoraConjuntoCroppedPijamaPlus Size"}
-
-## 2026-08-07 18:04:54.828Z click
-- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"","valueLength":0,"text":"Selecionar Categoria...BodyCalcinhaCamisolaCinta ModeladoraConjuntoCroppedPijamaPlus Size"}
-
-## 2026-08-07 18:04:56.227Z change
-- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"okqcy3xzr7pff8b","valueLength":15,"text":"Selecionar Categoria...BodyCalcinhaCamisolaCinta ModeladoraConjuntoCroppedPijamaPlus Size"}
-
-## 2026-08-07 18:04:56.232Z click
-- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"okqcy3xzr7pff8b","valueLength":15,"text":"Selecionar Categoria...BodyCalcinhaCamisolaCinta ModeladoraConjuntoCroppedPijamaPlus Size"}
-
-## 2026-08-07 18:04:57.200Z blur
-- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"okqcy3xzr7pff8b","valueLength":15,"text":"Selecionar Categoria...BodyCalcinhaCamisolaCinta ModeladoraConjuntoCroppedPijamaPlus Size"}
-
-## 2026-08-07 18:04:57.412Z click
-- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Gerar Automático"}
-
-## 2026-08-07 18:05:02.474Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":null,"label":"[number]","value":"","valueLength":0,"text":""}
-
-## 2026-08-07 18:05:02.697Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":null,"label":"[number]","value":"","valueLength":0,"text":""}
-
-## 2026-08-07 18:05:04.314Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":null,"label":"[number]","value":"29.90","valueLength":5,"text":""}
-
-## 2026-08-07 18:05:04.315Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":null,"label":"[number]","value":"29.90","valueLength":5,"text":""}
-
-## 2026-08-07 18:05:04.317Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":null,"label":"[number]","value":"","valueLength":0,"text":""}
-
-## 2026-08-07 18:05:06.128Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":null,"label":"[number]","value":"19.90","valueLength":5,"text":""}
-
-## 2026-08-07 18:05:06.128Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":null,"label":"[number]","value":"19.90","valueLength":5,"text":""}
-
-## 2026-08-07 18:05:06.133Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 150","label":"Ex: 150","value":"","valueLength":0,"text":""}
-
-## 2026-08-07 18:05:08.600Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 150","label":"Ex: 150","value":"150","valueLength":3,"text":""}
-
-## 2026-08-07 18:05:08.601Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 150","label":"Ex: 150","value":"150","valueLength":3,"text":""}
-
-## 2026-08-07 18:05:08.612Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 5","label":"Ex: 5","value":"","valueLength":0,"text":""}
-
-## 2026-08-07 18:05:10.295Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 5","label":"Ex: 5","value":"5","valueLength":1,"text":""}
-
-## 2026-08-07 18:05:10.296Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 5","label":"Ex: 5","value":"5","valueLength":1,"text":""}
-
-## 2026-08-07 18:05:10.297Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 11","label":"Ex: 11","value":"","valueLength":0,"text":""}
-
-## 2026-08-07 18:05:11.776Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 11","label":"Ex: 11","value":"11","valueLength":2,"text":""}
-
-## 2026-08-07 18:05:11.776Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 11","label":"Ex: 11","value":"11","valueLength":2,"text":""}
-
-## 2026-08-07 18:05:11.778Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 20","label":"Ex: 20","value":"","valueLength":0,"text":""}
-
-## 2026-08-07 18:05:13.143Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 20","label":"Ex: 20","value":"20","valueLength":2,"text":""}
-
-## 2026-08-07 18:05:13.143Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 20","label":"Ex: 20","value":"20","valueLength":2,"text":""}
-
-## 2026-08-07 18:05:13.148Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Digite os tamanhos separados por vírgula...","label":"Digite os tamanhos separados por vírgula...","value":"","valueLength":0,"text":""}
-
-## 2026-08-07 18:05:36.952Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Digite os tamanhos separados por vírgula...","label":"Digite os tamanhos separados por vírgula...","value":"P, M, G","valueLength":7,"text":""}
-
-## 2026-08-07 18:05:36.952Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Digite os tamanhos separados por vírgula...","label":"Digite os tamanhos separados por vírgula...","value":"P, M, G","valueLength":7,"text":""}
-
-## 2026-08-07 18:05:36.953Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Digite as cores separadas por vírgula...","label":"Digite as cores separadas por vírgula...","value":"","valueLength":0,"text":""}
-
-## 2026-08-07 18:05:37.162Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Digite as cores separadas por vírgula...","label":"Digite as cores separadas por vírgula...","value":"","valueLength":0,"text":""}
-
-## 2026-08-07 18:06:04.251Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Digite as cores separadas por vírgula...","label":"Digite as cores separadas por vírgula...","value":"Verde-Militar, Preta, Vinho, Azul-Marinho, Bege, Branca, Marrom, Cinza","valueLength":70,"text":""}
-
-## 2026-08-07 18:06:04.251Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Digite as cores separadas por vírgula...","label":"Digite as cores separadas por vírgula...","value":"Verde-Militar, Preta, Vinho, Azul-Marinho, Bege, Branca, Marrom, Cinza","valueLength":70,"text":""}
-
-## 2026-08-07 18:06:04.261Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 25","label":"Ex: 25","value":"","valueLength":0,"text":""}
-
-## 2026-08-07 18:06:04.463Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 25","label":"Ex: 25","value":"","valueLength":0,"text":""}
-
-## 2026-08-07 18:06:05.350Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 25","label":"Ex: 25","value":"100","valueLength":3,"text":""}
-
-## 2026-08-07 18:06:05.351Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 25","label":"Ex: 25","value":"100","valueLength":3,"text":""}
-
-## 2026-08-07 18:06:05.353Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 79.90","label":"Ex: 79.90","value":"","valueLength":0,"text":""}
-
-## 2026-08-07 18:06:08.649Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 79.90","label":"Ex: 79.90","value":"29.90","valueLength":5,"text":""}
-
-## 2026-08-07 18:06:08.649Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 79.90","label":"Ex: 79.90","value":"29.90","valueLength":5,"text":""}
-
-## 2026-08-07 18:06:08.660Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 65.00","label":"Ex: 65.00","value":"","valueLength":0,"text":""}
-
-## 2026-08-07 18:06:13.547Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 65.00","label":"Ex: 65.00","value":"19.90","valueLength":5,"text":""}
-
-## 2026-08-07 18:06:13.547Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 65.00","label":"Ex: 65.00","value":"19.90","valueLength":5,"text":""}
-
-## 2026-08-07 18:06:13.758Z click
-- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Gerar Variações"}
-
-## 2026-08-07 18:06:19.709Z click
-- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Assistente de Descrições IA"}
-
-## 2026-08-07 18:06:19.775Z console.warn
-- text: Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
-
-## 2026-08-07 18:06:19.821Z focus
-- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"conforto","valueLength":8,"text":"Conforto / Dia a DiaSensual / OusadoRomântico / DelicadoLuxo / SofisticadoFitness / EsportivoPijama / LoungewearCropped / OutwearModelador / Cinta"}
-
-## 2026-08-07 18:06:23.025Z click
-- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"conforto","valueLength":8,"text":"Conforto / Dia a DiaSensual / OusadoRomântico / DelicadoLuxo / SofisticadoFitness / EsportivoPijama / LoungewearCropped / OutwearModelador / Cinta"}
-
-## 2026-08-07 18:06:32.249Z change
-- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"cropped","valueLength":7,"text":"Conforto / Dia a DiaSensual / OusadoRomântico / DelicadoLuxo / SofisticadoFitness / EsportivoPijama / LoungewearCropped / OutwearModelador / Cinta"}
-
-## 2026-08-07 18:06:32.262Z click
-- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"cropped","valueLength":7,"text":"Conforto / Dia a DiaSensual / OusadoRomântico / DelicadoLuxo / SofisticadoFitness / EsportivoPijama / LoungewearCropped / OutwearModelador / Cinta"}
-
-## 2026-08-07 18:06:33.577Z blur
-- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"cropped","valueLength":7,"text":"Conforto / Dia a DiaSensual / OusadoRomântico / DelicadoLuxo / SofisticadoFitness / EsportivoPijama / LoungewearCropped / OutwearModelador / Cinta"}
-
-## 2026-08-07 18:06:33.578Z focus
-- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"microfibra","valueLength":10,"text":"MicrofibraRendaAlgodãoTuleCetimVeludo"}
-
-## 2026-08-07 18:06:33.790Z click
-- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"microfibra","valueLength":10,"text":"MicrofibraRendaAlgodãoTuleCetimVeludo"}
-
-## 2026-08-07 18:06:34.887Z change
-- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"algodao","valueLength":7,"text":"MicrofibraRendaAlgodãoTuleCetimVeludo"}
-
-## 2026-08-07 18:06:34.903Z click
-- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"algodao","valueLength":7,"text":"MicrofibraRendaAlgodãoTuleCetimVeludo"}
-
-## 2026-08-07 18:06:36.337Z blur
-- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"algodao","valueLength":7,"text":"MicrofibraRendaAlgodãoTuleCetimVeludo"}
-
-## 2026-08-07 18:06:36.338Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"checkbox","id":null,"placeholder":null,"label":"Forro 100% Algodão Hipoalergênico","value":"on","valueLength":2,"text":""}
-
-## 2026-08-07 18:06:36.558Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"checkbox","id":null,"placeholder":null,"label":"Forro 100% Algodão Hipoalergênico","value":"on","valueLength":2,"text":""}
-
-## 2026-08-07 18:06:36.575Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"checkbox","id":null,"placeholder":null,"label":"Forro 100% Algodão Hipoalergênico","value":"on","valueLength":2,"text":""}
-
-## 2026-08-07 18:06:37.393Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"checkbox","id":null,"placeholder":null,"label":"Forro 100% Algodão Hipoalergênico","value":"on","valueLength":2,"text":""}
-
-## 2026-08-07 18:06:37.607Z click
-- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Gerar com Gemini AI"}
-
-## 2026-08-07 18:06:52.708Z click
-- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Compra Segura"}
-
-## 2026-08-07 18:06:53.691Z click
-- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Diferenciais"}
-
-## 2026-08-07 18:06:55.071Z focus
-- element: {"tag":"textarea","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[textarea]","value":"✨ Os detalhes que tornam este cropped uma peça verdadeiramente exclusiva no mercado:\n✓ Forro 100% Algodão Hipoalergênico: proteção de nível superior e suavidade extra para a sua pele.\n✓ Versatilidade Premium: transita perfeitamente entre o conforto da moda íntima e o estilo de um look casual chique.\n✓ Acabamento de Alta Costura: costuras embutidas que eliminam marcas sob a roupa e evitam atritos indesejados.","valueLength":411,"text":"✨ Os detalhes que tornam este cropped uma peça verdadeiramente exclusiva no mercado:\n✓ Forro 100% Algodão Hipoalergênico: proteção de nível superior e suavidade extra para a sua pele.\n✓ Versatilidade Premium: transita perfeitamente entre o conforto da moda íntima e o estilo de um look casual chique.\n✓ Acabamento de Alta Costura: costuras embutidas que eliminam marcas sob a roupa e evitam atritos indesejados."}
-
-## 2026-08-07 18:06:56.738Z blur
-- element: {"tag":"textarea","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[textarea]","value":"✨ Os detalhes que tornam este cropped uma peça verdadeiramente exclusiva no mercado:\n✓ Forro 100% Algodão Hipoalergênico: proteção de nível superior e suavidade extra para a sua pele.\n✓ Versatilidade Premium: transita perfeitamente entre o conforto da moda íntima e o estilo de um look casual chique.\n✓ Acabamento de Alta Costura: costuras embutidas que eliminam marcas sob a roupa e evitam atritos indesejados.","valueLength":411,"text":"✨ Os detalhes que tornam este cropped uma peça verdadeiramente exclusiva no mercado:\n✓ Forro 100% Algodão Hipoalergênico: proteção de nível superior e suavidade extra para a sua pele.\n✓ Versatilidade Premium: transita perfeitamente entre o conforto da moda íntima e o estilo de um look casual chique.\n✓ Acabamento de Alta Costura: costuras embutidas que eliminam marcas sob a roupa e evitam atritos indesejados."}
-
-## 2026-08-07 18:06:56.956Z click
-- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Cuidados"}
-
-## 2026-08-07 18:06:58.257Z click
-- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Modelagem"}
-
-## 2026-08-07 18:07:00.366Z focus
-- element: {"tag":"textarea","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[textarea]","value":"👑 Com uma modelagem anatômica impecável, o cropped abraça suas curvas com suavidade, garantindo excelente sustentação e caimento perfeito.\n📏 Sua gola alta valoriza o colo com elegância, sendo ideal para combinar com um conjunto de lingerie confortável ou usar como peça principal.\n✨ Recomendamos consultar nossa tabela de medidas para escolher o tamanho perfeito e garantir o caimento ideal.","valueLength":393,"text":"👑 Com uma modelagem anatômica impecável, o cropped abraça suas curvas com suavidade, garantindo excelente sustentação e caimento perfeito.\n📏 Sua gola alta valoriza o colo com elegância, sendo ideal para combinar com um conjunto de lingerie confortável ou usar como peça principal.\n✨ Recomendamos consultar nossa tabela de medidas para escolher o tamanho perfeito e garantir o caimento ideal."}
-
-## 2026-08-07 18:07:02.314Z blur
-- element: {"tag":"textarea","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[textarea]","value":"👑 Com uma modelagem anatômica impecável, o cropped abraça suas curvas com suavidade, garantindo excelente sustentação e caimento perfeito.\n📏 Sua gola alta valoriza o colo com elegância, sendo ideal para combinar com um conjunto de lingerie confortável ou usar como peça principal.\n✨ Recomendamos consultar nossa tabela de medidas para escolher o tamanho perfeito e garantir o caimento ideal.","valueLength":393,"text":"👑 Com uma modelagem anatômica impecável, o cropped abraça suas curvas com suavidade, garantindo excelente sustentação e caimento perfeito.\n📏 Sua gola alta valoriza o colo com elegância, sendo ideal para combinar com um conjunto de lingerie confortável ou usar como peça principal.\n✨ Recomendamos consultar nossa tabela de medidas para escolher o tamanho perfeito e garantir o caimento ideal."}
-
-## 2026-08-07 18:07:02.538Z click
-- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Geral"}
-
-## 2026-08-07 18:07:03.490Z click
-- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Tecido"}
-
-## 2026-08-07 18:07:13.272Z click
-- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"submit","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Salvar"}
-
-## 2026-08-07 18:07:13.286Z submit
-- action: http://localhost:3000/admin/produtos/novo
-- fields: [{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[submit]","type":"submit","value":"","length":0,"redacted":false},{"label":"Ex: Conjunto Rendado Paris","type":"text","value":"Cropped Regata Gola Alta","length":24,"redacted":false},{"label":"[select]","type":"select-one","value":"okqcy3xzr7pff8b","length":15,"redacted":false},{"label":"Referência / Código Interno * Gerar Automático","type":"button","value":"","length":0,"redacted":false},{"label":"[input]","type":"text","value":"AVL-CRO-1081","length":12,"redacted":false},{"label":"[button]","type":"button","value":"on","length":2,"redacted":false},{"label":"[checkbox]","type":"checkbox","value":"on","length":2,"redacted":false},{"label":"[button]","type":"button","value":"on","length":2,"redacted":false},{"label":"[checkbox]","type":"checkbox","value":"on","length":2,"redacted":false},{"label":"[button]","type":"button","value":"on","length":2,"redacted":false},{"label":"[checkbox]","type":"checkbox","value":"on","length":2,"redacted":false},{"label":"[button]","type":"button","value":"on","length":2,"redacted":false},{"label":"[checkbox]","type":"checkbox","value":"on","length":2,"redacted":false},{"label":"[button]","type":"button","value":"on","length":2,"redacted":false},{"label":"[checkbox]","type":"checkbox","value":"on","length":2,"redacted":false},{"label":"[number]","type":"number","value":"29.90","length":5,"redacted":false},{"label":"[number]","type":"number","value":"19.90","length":5,"redacted":false},{"label":"Ex: 150","type":"number","value":"150","length":3,"redacted":false},{"label":"Ex: 5","type":"number","value":"5","length":1,"redacted":false},{"label":"Ex: 11","type":"number","value":"11","length":2,"redacted":false},{"label":"Ex: 20","type":"number","value":"20","length":2,"redacted":false},{"label":"Digite os tamanhos separados por vírgula...","type":"text","value":"","length":0,"redacted":false},{"label":"Digite as cores separadas por vírgula...","type":"text","value":"","length":0,"redacted":false},{"label":"Ex: 25","type":"number","value":"","length":0,"redacted":false},{"label":"Ex: 79.90","type":"number","value":"","length":0,"redacted":false},{"label":"Ex: 65.00","type":"number","value":"","length":0,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[select]","type":"select-one","value":"new-1786125756352-0","length":19,"redacted":false},{"label":"[number]","type":"number","value":"100","length":3,"redacted":false},{"label":"Usar base","type":"number","value":"29.9","length":4,"redacted":false},{"label":"Usar base","type":"number","value":"19.9","length":4,"redacted":false},{"label":"[button]","type":"button","value":"on","length":2,"redacted":false},{"label":"[checkbox]","type":"checkbox","value":"on","length":2,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[select]","type":"select-one","value":"new-1786125756352-0","length":19,"redacted":false},{"label":"[number]","type":"number","value":"100","length":3,"redacted":false},{"label":"Usar base","type":"number","value":"29.9","length":4,"redacted":false},{"label":"Usar base","type":"number","value":"19.9","length":4,"redacted":false},{"label":"[button]","type":"button","value":"on","length":2,"redacted":false},{"label":"[checkbox]","type":"checkbox","value":"on","length":2,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[select]","type":"select-one","value":"new-1786125756352-0","length":19,"redacted":false},{"label":"[number]","type":"number","value":"100","length":3,"redacted":false},{"label":"Usar base","type":"number","value":"29.9","length":4,"redacted":false},{"label":"Usar base","type":"number","value":"19.9","length":4,"redacted":false},{"label":"[button]","type":"button","value":"on","length":2,"redacted":false},{"label":"[checkbox]","type":"checkbox","value":"on","length":2,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[select]","type":"select-one","value":"new-1786125756352-1","length":19,"redacted":false},{"label":"[number]","type":"number","value":"100","length":3,"redacted":false},{"label":"Usar base","type":"number","value":"29.9","length":4,"redacted":false},{"label":"Usar base","type":"number","value":"19.9","length":4,"redacted":false},{"label":"[button]","type":"button","value":"on","length":2,"redacted":false},{"label":"[checkbox]","type":"checkbox","value":"on","length":2,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[select]","type":"select-one","value":"new-1786125756352-1","length":19,"redacted":false},{"label":"[number]","type":"number","value":"100","length":3,"redacted":false},{"label":"Usar base","type":"number","value":"29.9","length":4,"redacted":false},{"label":"Usar base","type":"number","value":"19.9","length":4,"redacted":false},{"label":"[button]","type":"button","value":"on","length":2,"redacted":false},{"label":"[checkbox]","type":"checkbox","value":"on","length":2,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[select]","type":"select-one","value":"new-1786125756352-1","length":19,"redacted":false},{"label":"[number]","type":"number","value":"100","length":3,"redacted":false},{"label":"Usar base","type":"number","value":"29.9","length":4,"redacted":false},{"label":"Usar base","type":"number","value":"19.9","length":4,"redacted":false},{"label":"[button]","type":"button","value":"on","length":2,"redacted":false},{"label":"[checkbox]","type":"checkbox","value":"on","length":2,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[select]","type":"select-one","value":"new-1786125756353-2","length":19,"redacted":false},{"label":"[number]","type":"number","value":"100","length":3,"redacted":false},{"label":"Usar base","type":"number","value":"29.9","length":4,"redacted":false},{"label":"Usar base","type":"number","value":"19.9","length":4,"redacted":false},{"label":"[button]","type":"button","value":"on","length":2,"redacted":false},{"label":"[checkbox]","type":"checkbox","value":"on","length":2,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[select]","type":"select-one","value":"new-1786125756353-2","length":19,"redacted":false},{"label":"[number]","type":"number","value":"100","length":3,"redacted":false},{"label":"Usar base","type":"number","value":"29.9","length":4,"redacted":false},{"label":"Usar base","type":"number","value":"19.9","length":4,"redacted":false},{"label":"[button]","type":"button","value":"on","length":2,"redacted":false},{"label":"[checkbox]","type":"checkbox","value":"on","length":2,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[select]","type":"select-one","value":"new-1786125756353-2","length":19,"redacted":false},{"label":"[number]","type":"number","value":"100","length":3,"redacted":false},{"label":"Usar base","type":"number","value":"29.9","length":4,"redacted":false},{"label":"Usar base","type":"number","value":"19.9","length":4,"redacted":false},{"label":"[button]","type":"button","value":"on","length":2,"redacted":false},{"label":"[checkbox]","type":"checkbox","value":"on","length":2,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[select]","type":"select-one","value":"new-1786125756353-3","length":19,"redacted":false},{"label":"[number]","type":"number","value":"100","length":3,"redacted":false},{"label":"Usar base","type":"number","value":"29.9","length":4,"redacted":false},{"label":"Usar base","type":"number","value":"19.9","length":4,"redacted":false},{"label":"[button]","type":"button","value":"on","length":2,"redacted":false},{"label":"[checkbox]","type":"checkbox","value":"on","length":2,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[select]","type":"select-one","value":"new-1786125756353-3","length":19,"redacted":false},{"label":"[number]","type":"number","value":"100","length":3,"redacted":false},{"label":"Usar base","type":"number","value":"29.9","length":4,"redacted":false},{"label":"Usar base","type":"number","value":"19.9","length":4,"redacted":false},{"label":"[button]","type":"button","value":"on","length":2,"redacted":false},{"label":"[checkbox]","type":"checkbox","value":"on","length":2,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[select]","type":"select-one","value":"new-1786125756353-3","length":19,"redacted":false},{"label":"[number]","type":"number","value":"100","length":3,"redacted":false},{"label":"Usar base","type":"number","value":"29.9","length":4,"redacted":false},{"label":"Usar base","type":"number","value":"19.9","length":4,"redacted":false},{"label":"[button]","type":"button","value":"on","length":2,"redacted":false},{"label":"[checkbox]","type":"checkbox","value":"on","length":2,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[select]","type":"select-one","value":"new-1786125756353-4","length":19,"redacted":false},{"label":"[number]","type":"number","value":"100","length":3,"redacted":false},{"label":"Usar base","type":"number","value":"29.9","length":4,"redacted":false},{"label":"Usar base","type":"number","value":"19.9","length":4,"redacted":false},{"label":"[button]","type":"button","value":"on","length":2,"redacted":false},{"label":"[checkbox]","type":"checkbox","value":"on","length":2,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[select]","type":"select-one","value":"new-1786125756353-4","length":19,"redacted":false},{"label":"[number]","type":"number","value":"100","length":3,"redacted":false},{"label":"Usar base","type":"number","value":"29.9","length":4,"redacted":false},{"label":"Usar base","type":"number","value":"19.9","length":4,"redacted":false},{"label":"[button]","type":"button","value":"on","length":2,"redacted":false},{"label":"[checkbox]","type":"checkbox","value":"on","length":2,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[select]","type":"select-one","value":"new-1786125756353-4","length":19,"redacted":false},{"label":"[number]","type":"number","value":"100","length":3,"redacted":false},{"label":"Usar base","type":"number","value":"29.9","length":4,"redacted":false},{"label":"Usar base","type":"number","value":"19.9","length":4,"redacted":false},{"label":"[button]","type":"button","value":"on","length":2,"redacted":false},{"label":"[checkbox]","type":"checkbox","value":"on","length":2,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[select]","type":"select-one","value":"new-1786125756353-5","length":19,"redacted":false},{"label":"[number]","type":"number","value":"100","length":3,"redacted":false},{"label":"Usar base","type":"number","value":"29.9","length":4,"redacted":false},{"label":"Usar base","type":"number","value":"19.9","length":4,"redacted":false},{"label":"[button]","type":"button","value":"on","length":2,"redacted":false},{"label":"[checkbox]","type":"checkbox","value":"on","length":2,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[select]","type":"select-one","value":"new-1786125756353-5","length":19,"redacted":false},{"label":"[number]","type":"number","value":"100","length":3,"redacted":false},{"label":"Usar base","type":"number","value":"29.9","length":4,"redacted":false},{"label":"Usar base","type":"number","value":"19.9","length":4,"redacted":false},{"label":"[button]","type":"button","value":"on","length":2,"redacted":false},{"label":"[checkbox]","type":"checkbox","value":"on","length":2,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[select]","type":"select-one","value":"new-1786125756353-5","length":19,"redacted":false},{"label":"[number]","type":"number","value":"100","length":3,"redacted":false},{"label":"Usar base","type":"number","value":"29.9","length":4,"redacted":false},{"label":"Usar base","type":"number","value":"19.9","length":4,"redacted":false},{"label":"[button]","type":"button","value":"on","length":2,"redacted":false},{"label":"[checkbox]","type":"checkbox","value":"on","length":2,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[select]","type":"select-one","value":"new-1786125756353-6","length":19,"redacted":false},{"label":"[number]","type":"number","value":"100","length":3,"redacted":false},{"label":"Usar base","type":"number","value":"29.9","length":4,"redacted":false},{"label":"Usar base","type":"number","value":"19.9","length":4,"redacted":false},{"label":"[button]","type":"button","value":"on","length":2,"redacted":false},{"label":"[checkbox]","type":"checkbox","value":"on","length":2,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[select]","type":"select-one","value":"new-1786125756353-6","length":19,"redacted":false},{"label":"[number]","type":"number","value":"100","length":3,"redacted":false},{"label":"Usar base","type":"number","value":"29.9","length":4,"redacted":false},{"label":"Usar base","type":"number","value":"19.9","length":4,"redacted":false},{"label":"[button]","type":"button","value":"on","length":2,"redacted":false},{"label":"[checkbox]","type":"checkbox","value":"on","length":2,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[select]","type":"select-one","value":"new-1786125756353-6","length":19,"redacted":false},{"label":"[number]","type":"number","value":"100","length":3,"redacted":false},{"label":"Usar base","type":"number","value":"29.9","length":4,"redacted":false},{"label":"Usar base","type":"number","value":"19.9","length":4,"redacted":false},{"label":"[button]","type":"button","value":"on","length":2,"redacted":false},{"label":"[checkbox]","type":"checkbox","value":"on","length":2,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[select]","type":"select-one","value":"new-1786125756353-7","length":19,"redacted":false},{"label":"[number]","type":"number","value":"100","length":3,"redacted":false},{"label":"Usar base","type":"number","value":"29.9","length":4,"redacted":false},{"label":"Usar base","type":"number","value":"19.9","length":4,"redacted":false},{"label":"[button]","type":"button","value":"on","length":2,"redacted":false},{"label":"[checkbox]","type":"checkbox","value":"on","length":2,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[select]","type":"select-one","value":"new-1786125756353-7","length":19,"redacted":false},{"label":"[number]","type":"number","value":"100","length":3,"redacted":false},{"label":"Usar base","type":"number","value":"29.9","length":4,"redacted":false},{"label":"Usar base","type":"number","value":"19.9","length":4,"redacted":false},{"label":"[button]","type":"button","value":"on","length":2,"redacted":false},{"label":"[checkbox]","type":"checkbox","value":"on","length":2,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[select]","type":"select-one","value":"new-1786125756353-7","length":19,"redacted":false},{"label":"[number]","type":"number","value":"100","length":3,"redacted":false},{"label":"Usar base","type":"number","value":"29.9","length":4,"redacted":false},{"label":"Usar base","type":"number","value":"19.9","length":4,"redacted":false},{"label":"[button]","type":"button","value":"on","length":2,"redacted":false},{"label":"[checkbox]","type":"checkbox","value":"on","length":2,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[textarea]","type":"textarea","value":"🌿 Confeccionado em algodão premium de altíssima qualidade, oferece um toque extremamente macio e suave em contato com a pele.\n🪡 Sua fibra natural respirável garante o frescor necessário para o dia a dia, elevando o padrão de conforto da nossa linha de moda íntima premium.","length":274,"redacted":false},{"label":"Adicionar Fotos/Vídeos","type":"file","value":"C:\\fakepath\\cropped_verdemilitar(#5D6532).png","length":45,"redacted":false},{"label":"Nome / Cor da Mídia","type":"text","value":"Verde-Militar","length":13,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"Nome / Cor da Mídia","type":"text","value":"Preta","length":5,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"Nome / Cor da Mídia","type":"text","value":"Vinho","length":5,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"Nome / Cor da Mídia","type":"text","value":"Azul-Marinho","length":12,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"Nome / Cor da Mídia","type":"text","value":"Bege","length":4,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"Nome / Cor da Mídia","type":"text","value":"Branca","length":6,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"Nome / Cor da Mídia","type":"text","value":"Marrom","length":6,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"Nome / Cor da Mídia","type":"text","value":"Cinza","length":5,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"Ex: https://youtube.com/shorts/... ou link .mp4","type":"url","value":"https://avantelingerie.com.br/video/cropped.mp4","length":47,"redacted":false},{"label":"[select]","type":"select-one","value":"first","length":5,"redacted":false}]
-
-## 2026-08-07 18:07:14.256Z network.error
-- method: POST
-- url: http://localhost:3000/hcgi/api/bling/produtos/sincronizar
-- status: 400
-- statusText: Bad Request
-- requestBody: {"produto_id":"ydjigu1hmfe31nh"}
-- response: {"sucesso":false,"erro":"Erro de autenticação com o Bling: Nenhum token do Bling encontrado no banco de dados. Realize a autorização OAuth.. Recadastre suas credenciais."}
-- durationMs: 25
-
-## 2026-08-07 18:07:14.258Z console.error
-- text: Fetch error from http://localhost:3000/hcgi/api/bling/produtos/sincronizar: {"sucesso":false,"erro":"Erro de autenticação com o Bling: Nenhum token do Bling encontrado no banco de dados. Realize a autorização OAuth.. Recadastre suas credenciais."}
-
-## 2026-08-07 18:07:14.279Z navigate
-- url: http://localhost:3000/admin/produtos
-- via: pushState
-
-## 2026-08-07 18:07:14.451Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-08-07 18:07:14.453Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-08-07 18:07:41.752Z load
-- url: http://localhost:3000/
-- title: Avante Lingerie | Oficial
-
-## 2026-08-07 18:07:42.140Z navigate
-- url: http://localhost:3000/
-- via: replaceState
-
-## 2026-08-07 18:07:42.814Z network.error
-- method: GET
-- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22vi937hhuvzg154r%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
-- status: 400
-- statusText: Bad Request
-- response: 
-    {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-- durationMs: 56
-
-## 2026-08-07 18:07:42.816Z console.error
-- text: 
-    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22vi937hhuvzg154r%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-
-## 2026-08-07 18:07:42.827Z network.error
-- method: GET
-- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22219neq337ly8hpm%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
-- status: 400
-- statusText: Bad Request
-- response: 
-    {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-- durationMs: 68
-
-## 2026-08-07 18:07:42.827Z console.error
-- text: 
-    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22219neq337ly8hpm%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-
-## 2026-08-07 18:07:42.827Z network.error
-- method: GET
-- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22hya9h8gimmcygbn%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
-- status: 400
-- statusText: Bad Request
-- response: 
-    {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-- durationMs: 69
-
-## 2026-08-07 18:07:42.827Z network.error
-- method: GET
-- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22okqcy3xzr7pff8b%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
-- status: 400
-- statusText: Bad Request
-- response: 
-    {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-- durationMs: 68
-
-## 2026-08-07 18:07:42.827Z network.error
-- method: GET
-- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22sz933rrdjx4j62w%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
-- status: 400
-- statusText: Bad Request
-- response: 
-    {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-- durationMs: 69
-
-## 2026-08-07 18:07:42.827Z console.error
-- text: 
-    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22hya9h8gimmcygbn%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-
-## 2026-08-07 18:07:42.827Z console.error
-- text: 
-    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22okqcy3xzr7pff8b%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-
-## 2026-08-07 18:07:42.828Z console.error
-- text: 
-    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22sz933rrdjx4j62w%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-
-## 2026-08-07 18:07:42.854Z network.error
-- method: GET
-- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%220tioxaa5mvtikb6%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
-- status: 400
-- statusText: Bad Request
-- response: 
-    {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-- durationMs: 95
-
-## 2026-08-07 18:07:42.854Z network.error
-- method: GET
-- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22z7i4vmn1n7io1np%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
-- status: 400
-- statusText: Bad Request
-- response: 
-    {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-- durationMs: 95
-
-## 2026-08-07 18:07:42.854Z network.error
-- method: GET
-- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22km2hb4iq8cyaqut%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
-- status: 400
-- statusText: Bad Request
-- response: 
-    {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-- durationMs: 95
-
-## 2026-08-07 18:07:42.855Z console.error
-- text: 
-    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%220tioxaa5mvtikb6%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-
-## 2026-08-07 18:07:42.856Z console.error
-- text: 
-    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22z7i4vmn1n7io1np%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-
-## 2026-08-07 18:07:42.856Z console.error
-- text: 
-    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22km2hb4iq8cyaqut%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-
-## 2026-08-07 18:07:43.427Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-08-07 18:07:43.430Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-08-07 18:07:43.461Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-08-07 18:07:43.461Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-08-07 18:07:43.466Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-08-07 18:07:43.466Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-08-07 18:07:43.472Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-08-07 18:07:43.472Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-08-07 18:07:49.457Z click
-- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-08-07 18:07:49.463Z navigate
-- url: http://localhost:3000/produto/ydjigu1hmfe31nh
-- via: pushState
-
-## 2026-08-07 18:07:49.593Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-08-07 18:07:49.597Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-08-07 18:07:49.597Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-08-07 18:07:49.597Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-08-07 18:07:49.597Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-08-07 18:07:49.597Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-08-07 18:07:49.597Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-08-07 18:07:49.597Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-08-07 18:07:49.597Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-08-07 18:07:49.598Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-08-07 18:07:49.598Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-08-07 18:07:49.598Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-08-07 18:07:49.598Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-08-07 18:07:49.598Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-08-07 18:07:49.598Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-08-07 18:07:49.598Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-08-07 18:07:49.598Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-08-07 18:07:56.342Z click
-- element: {"tag":"button","role":null,"ariaLabel":"Ativar som","name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-08-07 18:07:58.554Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"","valueLength":0,"text":""}
-
-## 2026-08-07 18:07:58.765Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"","valueLength":0,"text":""}
-
-## 2026-08-07 18:08:27.011Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"Boa tarde! estou escolhendo um cropped. Mas se precisar de ajuda eu te pergunto. Obrigado!","valueLength":90,"text":""}
-
-## 2026-08-07 18:08:27.012Z click
-- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"submit","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-08-07 18:08:27.020Z submit
-- action: http://localhost:3000/produto/ydjigu1hmfe31nh
-- fields: [{"label":"Escreva sua dúvida...","type":"text","value":"Boa tarde! estou escolhendo um cropped. Mas se precisar de ajuda eu te pergunto. Obrigado!","length":90,"redacted":false},{"label":"[submit]","type":"submit","value":"","length":0,"redacted":false}]
-
-## 2026-08-07 18:08:27.027Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"Boa tarde! estou escolhendo um cropped. Mas se precisar de ajuda eu te pergunto. Obrigado!","valueLength":90,"text":""}
-
-## 2026-08-07 18:08:34.190Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"","valueLength":0,"text":""}
-
-## 2026-08-07 18:08:34.403Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"","valueLength":0,"text":""}
-
-## 2026-08-07 18:08:36.707Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"Roseli","valueLength":6,"text":""}
-
-## 2026-08-07 18:08:36.707Z click
-- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"submit","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-08-07 18:08:36.708Z submit
-- action: http://localhost:3000/produto/ydjigu1hmfe31nh
-- fields: [{"label":"Escreva sua dúvida...","type":"text","value":"Roseli","length":6,"redacted":false},{"label":"[submit]","type":"submit","value":"","length":0,"redacted":false}]
-
-## 2026-08-07 18:08:36.710Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"Roseli","valueLength":6,"text":""}
-
-## 2026-08-07 18:08:45.458Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"","valueLength":0,"text":""}
-
-## 2026-08-07 18:08:45.671Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"","valueLength":0,"text":""}
-
-## 2026-08-07 18:08:46.814Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"Ok","valueLength":2,"text":""}
-
-## 2026-08-07 18:08:46.814Z click
-- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"submit","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-08-07 18:08:46.815Z submit
-- action: http://localhost:3000/produto/ydjigu1hmfe31nh
-- fields: [{"label":"Escreva sua dúvida...","type":"text","value":"Ok","length":2,"redacted":false},{"label":"[submit]","type":"submit","value":"","length":0,"redacted":false}]
-
-## 2026-08-07 18:08:46.820Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Escreva sua dúvida...","label":"Escreva sua dúvida...","value":"Ok","valueLength":2,"text":""}
-
-## 2026-08-07 18:08:54.870Z click
-- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-08-07 18:09:00.236Z click
-- element: {"tag":"button","role":"tab","ariaLabel":null,"name":null,"type":"button","id":"radix-:ri:-trigger-guia","placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Guia de Medidas"}
-
-## 2026-08-07 18:09:01.265Z click
-- element: {"tag":"button","role":"tab","ariaLabel":null,"name":null,"type":"button","id":"radix-:ri:-trigger-compra_segura","placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Compra Segura"}
-
-## 2026-08-07 18:09:02.104Z click
-- element: {"tag":"button","role":"tab","ariaLabel":null,"name":null,"type":"button","id":"radix-:ri:-trigger-diferenciais","placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Diferenciais"}
-
-## 2026-08-07 18:09:03.208Z click
-- element: {"tag":"div","role":"tablist","ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"GeralTecidoModelagemCuidadosDiferenciaisCompra SeguraGuia de Medidas"}
-
-## 2026-08-07 18:09:03.619Z click
-- element: {"tag":"button","role":"tab","ariaLabel":null,"name":null,"type":"button","id":"radix-:ri:-trigger-modelagem","placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Modelagem"}
-
-## 2026-08-07 18:09:04.682Z click
-- element: {"tag":"div","role":"tablist","ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"GeralTecidoModelagemCuidadosDiferenciaisCompra SeguraGuia de Medidas"}
-
-## 2026-08-07 18:09:05.104Z click
-- element: {"tag":"button","role":"tab","ariaLabel":null,"name":null,"type":"button","id":"radix-:ri:-trigger-geral","placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Geral"}
-
-## 2026-08-07 18:09:26.995Z click
-- element: {"tag":"button","role":null,"ariaLabel":"Selecionar cor Verde-Militar","name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-08-07 18:09:27.970Z click
-- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"P"}
-
-## 2026-08-07 18:09:29.527Z click
-- element: {"tag":"button","role":null,"ariaLabel":"Aumentar quantidade","name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-08-07 18:09:29.689Z click
-- element: {"tag":"button","role":null,"ariaLabel":"Aumentar quantidade","name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-08-07 18:09:29.917Z click
-- element: {"tag":"button","role":null,"ariaLabel":"Aumentar quantidade","name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-08-07 18:09:31.818Z click
-- element: {"tag":"button","role":null,"ariaLabel":"Aumentar quantidade","name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-08-07 18:09:32.769Z click
-- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Adicionar"}
-
-## 2026-08-07 18:09:33.901Z click
-- element: {"tag":"button","role":null,"ariaLabel":"Selecionar cor Vinho","name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-08-07 18:09:35.414Z click
-- element: {"tag":"button","role":null,"ariaLabel":"Aumentar quantidade","name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-08-07 18:09:35.603Z click
-- element: {"tag":"button","role":null,"ariaLabel":"Aumentar quantidade","name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-08-07 18:09:35.788Z click
-- element: {"tag":"button","role":null,"ariaLabel":"Aumentar quantidade","name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-08-07 18:09:36.000Z click
-- element: {"tag":"button","role":null,"ariaLabel":"Aumentar quantidade","name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-08-07 18:09:37.052Z click
-- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Adicionar"}
-
-## 2026-08-07 18:09:39.078Z click
-- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"COMPRAR AGORA"}
-
-## 2026-08-07 18:09:39.088Z navigate
-- url: http://localhost:3000/cart
-- via: pushState
-
-## 2026-08-07 18:09:39.224Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-08-07 18:09:39.228Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-08-07 18:09:50.250Z click
-- element: {"tag":"button","role":null,"ariaLabel":"Aumentar quantidade","name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-08-07 18:09:50.261Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-08-07 18:09:50.263Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-08-07 18:09:50.309Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-08-07 18:09:50.310Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-08-07 18:09:58.448Z click
-- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Finalizar Compra"}
-
-## 2026-08-07 18:09:58.449Z navigate
-- url: http://localhost:3000/checkout
-- via: pushState
-
-## 2026-08-07 18:09:58.509Z network.error
-- method: POST
-- url: http://localhost:3000/hcgi/platform/api/collections/analytics_events/records
-- requestBody: {"session_id":"sess_nfaambtdk1fmsj9c9xy","event_type":"begin_checkout","page_path":"/checkout","item_id":"","value":"279.565","utm_source":"","utm_medium":"","utm_campaign":""}
-- message: signal is aborted without reason
-- durationMs: 8
-
-## 2026-08-07 18:09:58.510Z console.warn
-- text: Analytics Tracking Ignore: The request was autocancelled. You can find more info in https://github.com/pocketbase/js-sdk#auto-cancellation.
-
-## 2026-08-07 18:09:58.545Z network.error
-- method: POST
-- url: http://localhost:3000/hcgi/platform/api/collections/analytics_events/records
-- requestBody: {"session_id":"sess_nfaambtdk1fmsj9c9xy","event_type":"page_view","page_path":"/checkout","item_id":"","value":"0","utm_source":"","utm_medium":"","utm_campaign":""}
-- message: signal is aborted without reason
-- durationMs: 43
-
-## 2026-08-07 18:09:58.546Z console.warn
-- text: Analytics Tracking Ignore: The request was autocancelled. You can find more info in https://github.com/pocketbase/js-sdk#auto-cancellation.
-
-## 2026-08-07 18:10:02.497Z click
-- element: {"tag":"p","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Informe seus dados para prosseguir com o pagamento seguro."}
-
-## 2026-08-07 18:10:03.126Z click
-- element: {"tag":"p","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Informe seus dados para prosseguir com o pagamento seguro."}
-
-## 2026-08-07 18:10:07.749Z click
-- element: {"tag":"p","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Informe seus dados para prosseguir com o pagamento seguro."}
-
-## 2026-08-07 18:10:08.415Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":"personal-nome","placeholder":"Nome e Sobrenome","label":"Nome Completo","value":"","valueLength":0,"text":""}
-
-## 2026-08-07 18:10:08.616Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":"personal-nome","placeholder":"Nome e Sobrenome","label":"Nome Completo","value":"","valueLength":0,"text":""}
-
-## 2026-08-07 18:10:18.643Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":"personal-nome","placeholder":"Nome e Sobrenome","label":"Nome Completo","value":"Roseli Trajano de Souza Machado","valueLength":31,"text":""}
-
-## 2026-08-07 18:10:18.644Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":"personal-nome","placeholder":"Nome e Sobrenome","label":"Nome Completo","value":"Roseli Trajano de Souza Machado","valueLength":31,"text":""}
-
-## 2026-08-07 18:10:22.822Z click
-- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Cérebro da Lia"}
-
-## 2026-08-07 18:10:22.843Z navigate
-- url: http://localhost:3000/admin/lia
-- via: pushState
-
-## 2026-08-07 18:10:25.947Z click
-- element: {"tag":"button","role":"tab","ariaLabel":null,"name":null,"type":"button","id":"radix-:r8:-trigger-whatsapp","placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Conexão WhatsApp"}
-
-## 2026-08-07 18:10:55.177Z click
-- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Exibir QR Code"}
-
-## 2026-08-07 18:12:18.359Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":"personal-nome","placeholder":"Nome e Sobrenome","label":"Nome Completo","value":"Roseli Trajano de Souza Machado","valueLength":31,"text":""}
-
-## 2026-08-07 18:12:19.925Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":"personal-nome","placeholder":"Nome e Sobrenome","label":"Nome Completo","value":"Roseli Trajano de Souza Machado","valueLength":31,"text":""}
-
-## 2026-08-07 18:12:20.134Z click
-- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-08-07 18:12:21.598Z load
-- url: http://localhost:3000/checkout
-- title: Avante Lingerie | Oficial
-
-## 2026-08-07 18:12:22.369Z network.error
-- method: POST
-- url: http://localhost:3000/hcgi/platform/api/collections/analytics_events/records
-- requestBody: {"session_id":"sess_nfaambtdk1fmsj9c9xy","event_type":"page_view","page_path":"/checkout","item_id":"","value":"0","utm_source":"","utm_medium":"","utm_campaign":""}
-- message: signal is aborted without reason
-- durationMs: 162
-
-## 2026-08-07 18:12:22.370Z console.warn
-- text: Analytics Tracking Ignore: The request was autocancelled. You can find more info in https://github.com/pocketbase/js-sdk#auto-cancellation.
-
-## 2026-08-07 18:12:22.421Z network.error
-- method: POST
-- url: http://localhost:3000/hcgi/platform/api/collections/analytics_events/records
-- requestBody: {"session_id":"sess_nfaambtdk1fmsj9c9xy","event_type":"begin_checkout","page_path":"/checkout","item_id":"","value":"279.565","utm_source":"","utm_medium":"","utm_campaign":""}
-- message: signal is aborted without reason
-- durationMs: 57
-
-## 2026-08-07 18:12:22.421Z console.warn
-- text: Analytics Tracking Ignore: The request was autocancelled. You can find more info in https://github.com/pocketbase/js-sdk#auto-cancellation.
-
-## 2026-08-07 18:12:30.141Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"email","id":"personal-email","placeholder":"exemplo@email.com","label":"E-mail","value":"","valueLength":0,"text":""}
-
-## 2026-08-07 18:12:30.346Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"email","id":"personal-email","placeholder":"exemplo@email.com","label":"E-mail","value":"","valueLength":0,"text":""}
-
-## 2026-08-07 18:12:39.988Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"email","id":"personal-email","placeholder":"exemplo@email.com","label":"E-mail","value":"comercial.luizmachado@gmail.com","valueLength":31,"text":""}
-
-## 2026-08-07 18:12:41.144Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"email","id":"personal-email","placeholder":"exemplo@email.com","label":"E-mail","value":"comercial.luizmachado@gmail.com","valueLength":31,"text":""}
-
-## 2026-08-07 18:12:41.145Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":"personal-whatsapp","placeholder":"(00) 00000-0000","label":"WhatsApp / Celular","value":"","valueLength":0,"text":""}
-
-## 2026-08-07 18:12:41.358Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":"personal-whatsapp","placeholder":"(00) 00000-0000","label":"WhatsApp / Celular","value":"","valueLength":0,"text":""}
-
-## 2026-08-07 18:12:45.369Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":"personal-whatsapp","placeholder":"(00) 00000-0000","label":"WhatsApp / Celular","value":"22981125489","valueLength":11,"text":""}
-
-## 2026-08-07 18:12:45.369Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":"personal-whatsapp","placeholder":"(00) 00000-0000","label":"WhatsApp / Celular","value":"22981125489","valueLength":11,"text":""}
-
-## 2026-08-07 18:12:45.371Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":"personal-cpf","placeholder":"000.000.000-00","label":"CPF","value":"","valueLength":0,"text":""}
-
-## 2026-08-07 18:12:50.775Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":"personal-cpf","placeholder":"000.000.000-00","label":"CPF","value":"082.039.967-19","valueLength":14,"text":""}
-
-## 2026-08-07 18:12:50.776Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":"personal-cpf","placeholder":"000.000.000-00","label":"CPF","value":"082.039.967-19","valueLength":14,"text":""}
-
-## 2026-08-07 18:12:50.795Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":"cep","type":null,"id":"billing-cep","placeholder":"00000-000","label":"cep","value":"","valueLength":0,"text":""}
-
-## 2026-08-07 18:13:02.294Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":"cep","type":null,"id":"billing-cep","placeholder":"00000-000","label":"cep","value":"28623-780","valueLength":9,"text":""}
-
-## 2026-08-07 18:13:02.295Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":"cep","type":null,"id":"billing-cep","placeholder":"00000-000","label":"cep","value":"28623-780","valueLength":9,"text":""}
-
-## 2026-08-07 18:13:02.295Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":"rua","type":null,"id":"billing-rua","placeholder":"Ex: Av. Paulista","label":"rua","value":"","valueLength":0,"text":""}
-
-## 2026-08-07 18:13:02.302Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":"rua","type":null,"id":"billing-rua","placeholder":"Ex: Av. Paulista","label":"rua","value":"Rua Folly","valueLength":9,"text":""}
-
-## 2026-08-07 18:13:02.302Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":"rua","type":null,"id":"billing-rua","placeholder":"Ex: Av. Paulista","label":"rua","value":"Rua Folly","valueLength":9,"text":""}
-
-## 2026-08-07 18:13:02.303Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":"numero","type":null,"id":"billing-numero","placeholder":"Ex: 1000","label":"numero","value":"","valueLength":0,"text":""}
-
-## 2026-08-07 18:13:02.310Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":"numero","type":null,"id":"billing-numero","placeholder":"Ex: 1000","label":"numero","value":"69","valueLength":2,"text":""}
-
-## 2026-08-07 18:13:02.310Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":"numero","type":null,"id":"billing-numero","placeholder":"Ex: 1000","label":"numero","value":"69","valueLength":2,"text":""}
-
-## 2026-08-07 18:13:02.310Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":"bairro","type":null,"id":"billing-bairro","placeholder":null,"label":"bairro","value":"","valueLength":0,"text":""}
-
-## 2026-08-07 18:13:02.313Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":"bairro","type":null,"id":"billing-bairro","placeholder":null,"label":"bairro","value":"Olaria","valueLength":6,"text":""}
-
-## 2026-08-07 18:13:02.313Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":"bairro","type":null,"id":"billing-bairro","placeholder":null,"label":"bairro","value":"Olaria","valueLength":6,"text":""}
-
-## 2026-08-07 18:13:02.313Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":"cidade","type":null,"id":"billing-cidade","placeholder":null,"label":"cidade","value":"","valueLength":0,"text":""}
-
-## 2026-08-07 18:13:02.316Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":"cidade","type":null,"id":"billing-cidade","placeholder":null,"label":"cidade","value":"Nova Friburgo","valueLength":13,"text":""}
-
-## 2026-08-07 18:13:02.316Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":"cidade","type":null,"id":"billing-cidade","placeholder":null,"label":"cidade","value":"Nova Friburgo","valueLength":13,"text":""}
-
-## 2026-08-07 18:13:02.316Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":"estado","type":null,"id":"billing-estado","placeholder":"SP","label":"estado","value":"","valueLength":0,"text":""}
-
-## 2026-08-07 18:13:02.319Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":"estado","type":null,"id":"billing-estado","placeholder":"SP","label":"estado","value":"RJ","valueLength":2,"text":""}
-
-## 2026-08-07 18:13:02.319Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":"estado","type":null,"id":"billing-estado","placeholder":"SP","label":"estado","value":"RJ","valueLength":2,"text":""}
-
-## 2026-08-07 18:13:02.319Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":"cep","type":null,"id":"billing-cep","placeholder":"00000-000","label":"cep","value":"28623-780","valueLength":9,"text":""}
-
-## 2026-08-07 18:13:03.081Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":"cep","type":null,"id":"billing-cep","placeholder":"00000-000","label":"cep","value":"28623-780","valueLength":9,"text":""}
-
-## 2026-08-07 18:13:03.098Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":"rua","type":null,"id":"billing-rua","placeholder":"Ex: Av. Paulista","label":"rua","value":"Rua Folly","valueLength":9,"text":""}
-
-## 2026-08-07 18:13:04.231Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":"rua","type":null,"id":"billing-rua","placeholder":"Ex: Av. Paulista","label":"rua","value":"Rua Folly","valueLength":9,"text":""}
-
-## 2026-08-07 18:13:04.232Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":"numero","type":null,"id":"billing-numero","placeholder":"Ex: 1000","label":"numero","value":"69","valueLength":2,"text":""}
-
-## 2026-08-07 18:13:28.036Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":"numero","type":null,"id":"billing-numero","placeholder":"Ex: 1000","label":"numero","value":"69","valueLength":2,"text":""}
-
-## 2026-08-07 18:13:28.259Z click
-- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-08-07 18:13:54.369Z click
-- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"CONCLUIR COMPRA"}
-
-## 2026-08-07 18:15:41.693Z load
-- url: http://localhost:3000/order-confirmation/g14auwxsfp2cxdu?session_id=cs_test_a1bxlznvbdfDJoZX840Z1PpRtFH19RoVz3TYTXPbHN28NJdnNTgghvtzrK
-- title: Avante Lingerie | Oficial
-
-## 2026-08-07 18:15:42.357Z navigate
-- url: http://localhost:3000/order-confirmation/g14auwxsfp2cxdu?session_id=cs_test_a1bxlznvbdfDJoZX840Z1PpRtFH19RoVz3TYTXPbHN28NJdnNTgghvtzrK
-- via: replaceState
-
-## 2026-08-07 18:15:43.099Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-08-07 18:15:43.102Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-08-07 18:39:58.331Z load
-- url: http://localhost:3000/order-confirmation/g14auwxsfp2cxdu?session_id=cs_test_a1bxlznvbdfDJoZX840Z1PpRtFH19RoVz3TYTXPbHN28NJdnNTgghvtzrK
-- title: Avante Lingerie | Oficial
-
-## 2026-08-07 18:39:59.886Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-08-07 18:39:59.888Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-08-07 18:40:18.856Z load
-- url: http://localhost:3000/
-- title: Avante Lingerie | Oficial
-
-## 2026-08-07 18:40:19.325Z navigate
-- url: http://localhost:3000/
-- via: replaceState
-
-## 2026-08-07 18:40:20.261Z network.error
-- method: GET
-- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22hya9h8gimmcygbn%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
-- status: 400
-- statusText: Bad Request
-- response: 
-    {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-- durationMs: 163
-
-## 2026-08-07 18:40:20.263Z network.error
-- method: GET
-- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22vi937hhuvzg154r%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
-- status: 400
-- statusText: Bad Request
-- response: 
-    {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-- durationMs: 164
-
-## 2026-08-07 18:40:20.264Z console.error
-- text: 
-    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22hya9h8gimmcygbn%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-
-## 2026-08-07 18:40:20.268Z network.error
-- method: GET
-- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%220tioxaa5mvtikb6%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
-- status: 400
-- statusText: Bad Request
-- response: 
-    {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-- durationMs: 167
-
-## 2026-08-07 18:40:20.269Z console.error
-- text: 
-    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22vi937hhuvzg154r%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-
-## 2026-08-07 18:40:20.271Z console.error
-- text: 
-    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%220tioxaa5mvtikb6%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-
-## 2026-08-07 18:40:20.275Z network.error
-- method: GET
-- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22sz933rrdjx4j62w%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
-- status: 400
-- statusText: Bad Request
-- response: 
-    {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-- durationMs: 175
-
-## 2026-08-07 18:40:20.275Z console.error
-- text: 
-    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22sz933rrdjx4j62w%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-
-## 2026-08-07 18:40:20.295Z network.error
-- method: GET
-- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22z7i4vmn1n7io1np%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
-- status: 400
-- statusText: Bad Request
-- response: 
-    {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-- durationMs: 194
-
-## 2026-08-07 18:40:20.295Z network.error
-- method: GET
-- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22km2hb4iq8cyaqut%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
-- status: 400
-- statusText: Bad Request
-- response: 
-    {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-- durationMs: 194
-
-## 2026-08-07 18:40:20.296Z console.error
-- text: 
-    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22z7i4vmn1n7io1np%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-
-## 2026-08-07 18:40:20.297Z console.error
-- text: 
-    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22km2hb4iq8cyaqut%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-
-## 2026-08-07 18:40:21.277Z network.error
-- method: GET
-- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22219neq337ly8hpm%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
-- status: 400
-- statusText: Bad Request
-- response: 
-    {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-- durationMs: 1177
-
-## 2026-08-07 18:40:21.277Z console.error
-- text: 
-    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22219neq337ly8hpm%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-
-## 2026-08-07 18:40:21.278Z network.error
-- method: GET
-- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22okqcy3xzr7pff8b%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
-- status: 400
-- statusText: Bad Request
-- response: 
-    {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-- durationMs: 1177
-
-## 2026-08-07 18:40:21.278Z console.error
-- text: 
-    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22okqcy3xzr7pff8b%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-
-## 2026-08-07 18:40:21.350Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-08-07 18:40:21.351Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-08-07 18:40:21.378Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-08-07 18:40:21.379Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-08-07 18:40:21.384Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-08-07 18:40:21.384Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-08-07 18:40:21.390Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-08-07 18:40:21.390Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-08-07 18:40:25.420Z click
-- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-08-07 18:40:25.427Z navigate
-- url: http://localhost:3000/produto/ydjigu1hmfe31nh
-- via: pushState
-
-## 2026-08-07 18:40:25.601Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-08-07 18:40:25.604Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-08-07 18:40:25.605Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-08-07 18:40:25.605Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-08-07 18:40:25.605Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-08-07 18:40:25.605Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-08-07 18:40:25.605Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-08-07 18:40:25.605Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-08-07 18:40:25.605Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-08-07 18:40:25.606Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-08-07 18:40:25.606Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-08-07 18:40:25.606Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-08-07 18:40:25.606Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-08-07 18:40:25.607Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-08-07 18:40:25.607Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-08-07 18:40:25.607Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-08-07 18:40:25.607Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-08-07 18:40:30.648Z click
-- element: {"tag":"button","role":null,"ariaLabel":"Selecionar cor Verde-Militar","name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-08-07 18:40:31.514Z click
-- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"P"}
-
-## 2026-08-07 18:40:32.623Z click
-- element: {"tag":"button","role":null,"ariaLabel":"Aumentar quantidade","name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-08-07 18:40:32.841Z click
-- element: {"tag":"button","role":null,"ariaLabel":"Aumentar quantidade","name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-08-07 18:40:33.009Z click
-- element: {"tag":"button","role":null,"ariaLabel":"Aumentar quantidade","name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-08-07 18:40:33.233Z click
-- element: {"tag":"button","role":null,"ariaLabel":"Aumentar quantidade","name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-08-07 18:40:34.676Z click
-- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Adicionar"}
-
-## 2026-08-07 18:40:35.705Z click
-- element: {"tag":"button","role":null,"ariaLabel":"Selecionar cor Preta","name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-08-07 18:40:36.931Z click
-- element: {"tag":"button","role":null,"ariaLabel":"Aumentar quantidade","name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-08-07 18:40:37.129Z click
-- element: {"tag":"button","role":null,"ariaLabel":"Aumentar quantidade","name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-08-07 18:40:37.327Z click
-- element: {"tag":"button","role":null,"ariaLabel":"Aumentar quantidade","name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-08-07 18:40:37.543Z click
-- element: {"tag":"button","role":null,"ariaLabel":"Aumentar quantidade","name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-08-07 18:40:38.952Z click
-- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Adicionar"}
-
-## 2026-08-07 18:40:40.137Z click
-- element: {"tag":"button","role":null,"ariaLabel":"Ver imagem 4","name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-08-07 18:40:41.305Z click
-- element: {"tag":"button","role":null,"ariaLabel":"Ver imagem 2","name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-08-07 18:40:42.524Z click
-- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"COMPRAR AGORA"}
-
-## 2026-08-07 18:40:42.530Z navigate
-- url: http://localhost:3000/cart
-- via: pushState
-
-## 2026-08-07 18:40:42.748Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-08-07 18:40:42.751Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-08-07 18:40:50.866Z click
-- element: {"tag":"button","role":null,"ariaLabel":"Aumentar quantidade","name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-08-07 18:40:50.881Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-08-07 18:40:50.883Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-08-07 18:40:50.966Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-08-07 18:40:50.967Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-08-07 18:40:52.298Z click
-- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Finalizar Compra"}
-
-## 2026-08-07 18:40:52.299Z navigate
-- url: http://localhost:3000/checkout
-- via: pushState
-
-## 2026-08-07 18:40:52.372Z network.error
-- method: POST
-- url: http://localhost:3000/hcgi/platform/api/collections/analytics_events/records
-- requestBody: {"session_id":"sess_10pdr02yl01msjai84k","event_type":"begin_checkout","page_path":"/checkout","item_id":"","value":"279.565","utm_source":"","utm_medium":"","utm_campaign":""}
-- message: signal is aborted without reason
-- durationMs: 10
-
-## 2026-08-07 18:40:52.374Z console.warn
-- text: Analytics Tracking Ignore: The request was autocancelled. You can find more info in https://github.com/pocketbase/js-sdk#auto-cancellation.
-
-## 2026-08-07 18:40:52.406Z network.error
-- method: POST
-- url: http://localhost:3000/hcgi/platform/api/collections/analytics_events/records
-- requestBody: {"session_id":"sess_10pdr02yl01msjai84k","event_type":"page_view","page_path":"/checkout","item_id":"","value":"0","utm_source":"","utm_medium":"","utm_campaign":""}
-- message: signal is aborted without reason
-- durationMs: 42
-
-## 2026-08-07 18:40:52.406Z console.warn
-- text: Analytics Tracking Ignore: The request was autocancelled. You can find more info in https://github.com/pocketbase/js-sdk#auto-cancellation.
-
-## 2026-08-07 18:40:59.989Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":"cep","type":null,"id":"billing-cep","placeholder":"00000-000","label":"cep","value":"","valueLength":0,"text":""}
-
-## 2026-08-07 18:41:00.188Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":"cep","type":null,"id":"billing-cep","placeholder":"00000-000","label":"cep","value":"","valueLength":0,"text":""}
-
-## 2026-08-07 18:41:12.559Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":"cep","type":null,"id":"billing-cep","placeholder":"00000-000","label":"cep","value":"21921-100","valueLength":9,"text":""}
-
-## 2026-08-07 18:41:12.560Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":"cep","type":null,"id":"billing-cep","placeholder":"00000-000","label":"cep","value":"21921-100","valueLength":9,"text":""}
-
-## 2026-08-07 18:41:12.566Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":"rua","type":null,"id":"billing-rua","placeholder":"Ex: Av. Paulista","label":"rua","value":"","valueLength":0,"text":""}
-
-## 2026-08-07 18:41:14.767Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":"rua","type":null,"id":"billing-rua","placeholder":"Ex: Av. Paulista","label":"rua","value":"Rua Almirante Pestana","valueLength":21,"text":""}
-
-## 2026-08-07 18:41:14.767Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":"numero","type":null,"id":"billing-numero","placeholder":"Ex: 1000","label":"numero","value":"","valueLength":0,"text":""}
-
-## 2026-08-07 18:41:14.983Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":"numero","type":null,"id":"billing-numero","placeholder":"Ex: 1000","label":"numero","value":"","valueLength":0,"text":""}
-
-## 2026-08-07 18:41:17.011Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":"numero","type":null,"id":"billing-numero","placeholder":"Ex: 1000","label":"numero","value":"10","valueLength":2,"text":""}
-
-## 2026-08-07 18:41:17.011Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":"numero","type":null,"id":"billing-numero","placeholder":"Ex: 1000","label":"numero","value":"10","valueLength":2,"text":""}
-
-## 2026-08-07 18:41:17.013Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":"complemento","type":null,"id":"billing-complemento","placeholder":"Apto, Bloco, etc.","label":"complemento","value":"","valueLength":0,"text":""}
-
-## 2026-08-07 18:41:19.300Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":"complemento","type":null,"id":"billing-complemento","placeholder":"Apto, Bloco, etc.","label":"complemento","value":"Casa","valueLength":4,"text":""}
-
-## 2026-08-07 18:41:19.301Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":"complemento","type":null,"id":"billing-complemento","placeholder":"Apto, Bloco, etc.","label":"complemento","value":"Casa","valueLength":4,"text":""}
-
-## 2026-08-07 18:41:19.320Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":"bairro","type":null,"id":"billing-bairro","placeholder":null,"label":"bairro","value":"Cacuia","valueLength":6,"text":""}
-
-## 2026-08-07 18:41:26.767Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":"bairro","type":null,"id":"billing-bairro","placeholder":null,"label":"bairro","value":"Cacuia","valueLength":6,"text":""}
-
-## 2026-08-07 18:41:26.970Z click
-- element: {"tag":"span","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"R$ 20,73"}
-
-## 2026-08-07 18:41:32.390Z click
-- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"CONCLUIR COMPRA"}
-
-## 2026-08-07 18:42:02.974Z load
-- url: http://localhost:3000/order-confirmation/vddew45h8noa4qf?session_id=cs_test_a1tx1gvh452opZwpkf0JSqbv14GenWIp6XJvPYhFsipRihPxyHtZj9RqON
-- title: Avante Lingerie | Oficial
-
-## 2026-08-07 18:42:03.456Z navigate
-- url: http://localhost:3000/order-confirmation/vddew45h8noa4qf?session_id=cs_test_a1tx1gvh452opZwpkf0JSqbv14GenWIp6XJvPYhFsipRihPxyHtZj9RqON
-- via: replaceState
-
-## 2026-08-07 18:42:04.162Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-08-07 18:42:04.165Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-08-07 18:46:59.456Z click
-- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Configurações"}
-
-## 2026-08-07 18:47:03.736Z click
-- element: {"tag":"button","role":"tab","ariaLabel":null,"name":null,"type":"button","id":"radix-:r8:-trigger-chats","placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Chats Ao Vivo"}
-
-## 2026-08-07 18:47:05.502Z click
-- element: {"tag":"span","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"💻 Site (1b58)"}
-
-## 2026-08-07 18:47:10.795Z click
-- element: {"tag":"div","role":"tabpanel","ariaLabel":null,"name":null,"type":null,"id":"radix-:r8:-content-chats","placeholder":null,"label":null,"value":null,"valueLength":0,"text":"[data-radix-scroll-area-viewport]{scrollbar-width:none;-ms-overflow-style:none;-webkit-overflow-scrolling:touch;}[data-radix-scroll-area-viewport]::-webkit-scrollbar{display:none}💻 Site (1b58)HistóricoFico por aqui! Qualquer coisa, é só chamar. 😉💻 Site (f41c)HistóricoA Avante Lingerie fica em **Nova Friburgo — RJ**, a Capital Nacional da Lingerie! 🏙️\n\n📍 **Endereço da Loja Física:**\nRua Folly, 69 — Olaria\nNova Friburgo — RJ | CEP 28623-780\n\n⏰ **Horário de Atendimento:**\n- **Seg a Sex:** 08h às 18h\n- **Sáb:** 09h às 13h\n\nSe você estiver por lá, é um prazer recebê-la pessoalmente no nosso showroom! Mas se preferir comprar **online**, estamos aqui 24/7 pelo site e pelo **WhatsApp (22) 99761-8591** para qualquer dúvida. 💬\n\n**Você gostaria de conhecer nossas peças agora ou tem alguma dúvida específica?** 😊💻 Site (a5e7)HistóricoÓtimo, vou esclarecer isso para você com transparência! 💙\n\nTemos uma **política de higiene e saúde pública** (conforme regulamentação do Procon/CDC) que protege todas as nossas clientes:\n\n**Calcinhas NÃO podem ser trocadas por:**\n- Arrependimento\n- Tamanho errado\n- Qualquer motivo relacionado a preferência pessoal\n\nIsso é uma questão sanitária inegociável — é para o bem de todas nós!\n\n**MAS, se houver DEFEITO DE FÁBRICA** (costuras soltas, tecido rasgado, problema na renda, etc.), aí sim! Você tem **30 dias** para comunicar, e **a Avante arca com o frete de devolução**. 🎁\n\n---\n\n**A calcinha que você comprou tem algum defeito?** Se sim, peço para você chamar nossa equipe pelo **WhatsApp clicando no botão abaixo** — vamos resolver rapidinho!\n\nSe foi só uma questão de tamanho ou preferência, infelizmente não conseguimos fazer a troca, mas fico à disposição se precisar de ajuda para a próx💻 Site (504d)HistóricoÓtima pergunta! 📍\n\nA **Avante Lingerie** fica em **Nova Friburgo — RJ**, a capital nacional da lingerie! \n\n**Nossa Sede e Showroom:**\n🏢 Rua Folly, 69 — Olaria, Nova Friburgo — RJ  \n📮 CEP: 28623-780\n\n**Horário de Funcionamento:**\n- 📅..."}
-
-## 2026-08-07 18:47:19.404Z click
-- element: {"tag":"div","role":"tabpanel","ariaLabel":null,"name":null,"type":null,"id":"radix-:r8:-content-chats","placeholder":null,"label":null,"value":null,"valueLength":0,"text":"[data-radix-scroll-area-viewport]{scrollbar-width:none;-ms-overflow-style:none;-webkit-overflow-scrolling:touch;}[data-radix-scroll-area-viewport]::-webkit-scrollbar{display:none}💻 Site (1b58)HistóricoFico por aqui! Qualquer coisa, é só chamar. 😉💻 Site (f41c)HistóricoA Avante Lingerie fica em **Nova Friburgo — RJ**, a Capital Nacional da Lingerie! 🏙️\n\n📍 **Endereço da Loja Física:**\nRua Folly, 69 — Olaria\nNova Friburgo — RJ | CEP 28623-780\n\n⏰ **Horário de Atendimento:**\n- **Seg a Sex:** 08h às 18h\n- **Sáb:** 09h às 13h\n\nSe você estiver por lá, é um prazer recebê-la pessoalmente no nosso showroom! Mas se preferir comprar **online**, estamos aqui 24/7 pelo site e pelo **WhatsApp (22) 99761-8591** para qualquer dúvida. 💬\n\n**Você gostaria de conhecer nossas peças agora ou tem alguma dúvida específica?** 😊💻 Site (a5e7)HistóricoÓtimo, vou esclarecer isso para você com transparência! 💙\n\nTemos uma **política de higiene e saúde pública** (conforme regulamentação do Procon/CDC) que protege todas as nossas clientes:\n\n**Calcinhas NÃO podem ser trocadas por:**\n- Arrependimento\n- Tamanho errado\n- Qualquer motivo relacionado a preferência pessoal\n\nIsso é uma questão sanitária inegociável — é para o bem de todas nós!\n\n**MAS, se houver DEFEITO DE FÁBRICA** (costuras soltas, tecido rasgado, problema na renda, etc.), aí sim! Você tem **30 dias** para comunicar, e **a Avante arca com o frete de devolução**. 🎁\n\n---\n\n**A calcinha que você comprou tem algum defeito?** Se sim, peço para você chamar nossa equipe pelo **WhatsApp clicando no botão abaixo** — vamos resolver rapidinho!\n\nSe foi só uma questão de tamanho ou preferência, infelizmente não conseguimos fazer a troca, mas fico à disposição se precisar de ajuda para a próx💻 Site (504d)HistóricoÓtima pergunta! 📍\n\nA **Avante Lingerie** fica em **Nova Friburgo — RJ**, a capital nacional da lingerie! \n\n**Nossa Sede e Showroom:**\n🏢 Rua Folly, 69 — Olaria, Nova Friburgo — RJ  \n📮 CEP: 28623-780\n\n**Horário de Funcionamento:**\n- 📅..."}
-
-## 2026-08-07 18:47:27.071Z click
-- element: {"tag":"div","role":"tabpanel","ariaLabel":null,"name":null,"type":null,"id":"radix-:r8:-content-chats","placeholder":null,"label":null,"value":null,"valueLength":0,"text":"[data-radix-scroll-area-viewport]{scrollbar-width:none;-ms-overflow-style:none;-webkit-overflow-scrolling:touch;}[data-radix-scroll-area-viewport]::-webkit-scrollbar{display:none}💻 Site (1b58)HistóricoFico por aqui! Qualquer coisa, é só chamar. 😉💻 Site (f41c)HistóricoA Avante Lingerie fica em **Nova Friburgo — RJ**, a Capital Nacional da Lingerie! 🏙️\n\n📍 **Endereço da Loja Física:**\nRua Folly, 69 — Olaria\nNova Friburgo — RJ | CEP 28623-780\n\n⏰ **Horário de Atendimento:**\n- **Seg a Sex:** 08h às 18h\n- **Sáb:** 09h às 13h\n\nSe você estiver por lá, é um prazer recebê-la pessoalmente no nosso showroom! Mas se preferir comprar **online**, estamos aqui 24/7 pelo site e pelo **WhatsApp (22) 99761-8591** para qualquer dúvida. 💬\n\n**Você gostaria de conhecer nossas peças agora ou tem alguma dúvida específica?** 😊💻 Site (a5e7)HistóricoÓtimo, vou esclarecer isso para você com transparência! 💙\n\nTemos uma **política de higiene e saúde pública** (conforme regulamentação do Procon/CDC) que protege todas as nossas clientes:\n\n**Calcinhas NÃO podem ser trocadas por:**\n- Arrependimento\n- Tamanho errado\n- Qualquer motivo relacionado a preferência pessoal\n\nIsso é uma questão sanitária inegociável — é para o bem de todas nós!\n\n**MAS, se houver DEFEITO DE FÁBRICA** (costuras soltas, tecido rasgado, problema na renda, etc.), aí sim! Você tem **30 dias** para comunicar, e **a Avante arca com o frete de devolução**. 🎁\n\n---\n\n**A calcinha que você comprou tem algum defeito?** Se sim, peço para você chamar nossa equipe pelo **WhatsApp clicando no botão abaixo** — vamos resolver rapidinho!\n\nSe foi só uma questão de tamanho ou preferência, infelizmente não conseguimos fazer a troca, mas fico à disposição se precisar de ajuda para a próx💻 Site (504d)HistóricoÓtima pergunta! 📍\n\nA **Avante Lingerie** fica em **Nova Friburgo — RJ**, a capital nacional da lingerie! \n\n**Nossa Sede e Showroom:**\n🏢 Rua Folly, 69 — Olaria, Nova Friburgo — RJ  \n📮 CEP: 28623-780\n\n**Horário de Funcionamento:**\n- 📅..."}
-
-## 2026-08-07 18:47:28.272Z click
-- element: {"tag":"header","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Ver Loja"}
-
-## 2026-08-07 18:47:29.772Z click
-- element: {"tag":"header","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Ver Loja"}
-
-## 2026-08-07 18:52:23.238Z load
-- url: http://localhost:3000/admin/lia
-- title: Avante Lingerie | Oficial
-
-## 2026-08-07 18:54:23.304Z load
-- url: http://localhost:3000/admin/lia
-- title: Avante Lingerie | Oficial
-
-## 2026-08-07 18:54:38.893Z load
-- url: http://localhost:3000/
-- title: Avante Lingerie | Oficial
-
-## 2026-08-07 18:54:39.254Z navigate
-- url: http://localhost:3000/
-- via: replaceState
-
-## 2026-08-07 18:54:40.024Z network.error
-- method: GET
-- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22hya9h8gimmcygbn%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
-- status: 400
-- statusText: Bad Request
-- response: 
-    {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-- durationMs: 116
-
-## 2026-08-07 18:54:40.025Z console.error
-- text: 
-    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22hya9h8gimmcygbn%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-
-## 2026-08-07 18:54:40.061Z network.error
-- method: GET
-- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22sz933rrdjx4j62w%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
-- status: 400
-- statusText: Bad Request
-- response: 
-    {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-- durationMs: 151
-
-## 2026-08-07 18:54:40.061Z console.error
-- text: 
-    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22sz933rrdjx4j62w%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-
-## 2026-08-07 18:54:40.068Z network.error
-- method: GET
-- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22219neq337ly8hpm%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
-- status: 400
-- statusText: Bad Request
-- response: 
-    {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-- durationMs: 160
-
-## 2026-08-07 18:54:40.069Z network.error
-- method: GET
-- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22vi937hhuvzg154r%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
-- status: 400
-- statusText: Bad Request
-- response: 
-    {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-- durationMs: 160
-
-## 2026-08-07 18:54:40.069Z console.error
-- text: 
-    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22219neq337ly8hpm%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-
-## 2026-08-07 18:54:40.070Z console.error
-- text: 
-    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22vi937hhuvzg154r%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-
-## 2026-08-07 18:54:40.070Z network.error
-- method: GET
-- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%220tioxaa5mvtikb6%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
-- status: 400
-- statusText: Bad Request
-- response: 
-    {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-- durationMs: 160
-
-## 2026-08-07 18:54:40.070Z network.error
-- method: GET
-- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22okqcy3xzr7pff8b%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
-- status: 400
-- statusText: Bad Request
-- response: 
-    {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-- durationMs: 159
-
-## 2026-08-07 18:54:40.071Z console.error
-- text: 
-    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%220tioxaa5mvtikb6%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-
-## 2026-08-07 18:54:40.071Z console.error
-- text: 
-    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22okqcy3xzr7pff8b%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-
-## 2026-08-07 18:54:40.094Z network.error
-- method: GET
-- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22z7i4vmn1n7io1np%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
-- status: 400
-- statusText: Bad Request
-- response: 
-    {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-- durationMs: 183
-
-## 2026-08-07 18:54:40.095Z console.error
-- text: 
-    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22z7i4vmn1n7io1np%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-
-## 2026-08-07 18:54:40.095Z network.error
-- method: GET
-- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22km2hb4iq8cyaqut%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
-- status: 400
-- statusText: Bad Request
-- response: 
-    {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-- durationMs: 184
-
-## 2026-08-07 18:54:40.095Z console.error
-- text: 
-    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22km2hb4iq8cyaqut%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-
-## 2026-08-07 18:54:41.091Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-08-07 18:54:41.096Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-08-07 18:54:41.147Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-08-07 18:54:41.148Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-08-07 18:54:41.167Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-08-07 18:54:41.167Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-08-07 18:54:41.175Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-08-07 18:54:41.176Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-08-07 18:54:44.891Z click
-- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-08-07 18:54:44.907Z navigate
-- url: http://localhost:3000/produto/ydjigu1hmfe31nh
-- via: pushState
-
-## 2026-08-07 18:54:45.052Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-08-07 18:54:45.056Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-08-07 18:54:45.056Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-08-07 18:54:45.056Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-08-07 18:54:45.056Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-08-07 18:54:45.056Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-08-07 18:54:45.056Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-08-07 18:54:45.056Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-08-07 18:54:45.056Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-08-07 18:54:45.056Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-08-07 18:54:45.057Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-08-07 18:54:45.057Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-08-07 18:54:45.057Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-08-07 18:54:45.057Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-08-07 18:54:45.057Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-08-07 18:54:45.057Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-08-07 18:54:45.057Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-08-07 18:54:49.469Z click
-- element: {"tag":"button","role":null,"ariaLabel":"Selecionar cor Verde-Militar","name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-08-07 18:54:50.342Z click
-- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"P"}
-
-## 2026-08-07 18:54:51.473Z click
-- element: {"tag":"button","role":null,"ariaLabel":"Aumentar quantidade","name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-08-07 18:54:51.665Z click
-- element: {"tag":"button","role":null,"ariaLabel":"Aumentar quantidade","name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-08-07 18:54:51.823Z click
-- element: {"tag":"button","role":null,"ariaLabel":"Aumentar quantidade","name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-08-07 18:54:52.041Z click
-- element: {"tag":"button","role":null,"ariaLabel":"Aumentar quantidade","name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-08-07 18:54:53.379Z click
-- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Adicionar"}
-
-## 2026-08-07 18:54:54.392Z click
-- element: {"tag":"button","role":null,"ariaLabel":"Selecionar cor Vinho","name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-08-07 18:54:55.718Z click
-- element: {"tag":"button","role":null,"ariaLabel":"Aumentar quantidade","name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-08-07 18:54:55.931Z click
-- element: {"tag":"button","role":null,"ariaLabel":"Aumentar quantidade","name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-08-07 18:54:56.729Z click
-- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Adicionar"}
-
-## 2026-08-07 18:54:59.583Z click
-- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"COMPRAR AGORA"}
-
-## 2026-08-07 18:54:59.584Z navigate
-- url: http://localhost:3000/cart
-- via: pushState
-
-## 2026-08-07 18:54:59.720Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-08-07 18:54:59.721Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-08-07 18:55:03.392Z click
-- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Finalizar Compra"}
-
-## 2026-08-07 18:55:03.394Z navigate
-- url: http://localhost:3000/checkout
-- via: pushState
-
-## 2026-08-07 18:55:03.457Z network.error
-- method: POST
-- url: http://localhost:3000/hcgi/platform/api/collections/analytics_events/records
-- requestBody: {"session_id":"sess_37wgvhv7petmsjb0nn3","event_type":"begin_checkout","page_path":"/checkout","item_id":"","value":"239.2","utm_source":"","utm_medium":"","utm_campaign":""}
-- message: signal is aborted without reason
-- durationMs: 5
-
-## 2026-08-07 18:55:03.458Z console.warn
-- text: Analytics Tracking Ignore: The request was autocancelled. You can find more info in https://github.com/pocketbase/js-sdk#auto-cancellation.
-
-## 2026-08-07 18:55:03.498Z network.error
-- method: POST
-- url: http://localhost:3000/hcgi/platform/api/collections/analytics_events/records
-- requestBody: {"session_id":"sess_37wgvhv7petmsjb0nn3","event_type":"page_view","page_path":"/checkout","item_id":"","value":"0","utm_source":"","utm_medium":"","utm_campaign":""}
-- message: signal is aborted without reason
-- durationMs: 45
-
-## 2026-08-07 18:55:03.499Z console.warn
-- text: Analytics Tracking Ignore: The request was autocancelled. You can find more info in https://github.com/pocketbase/js-sdk#auto-cancellation.
-
-## 2026-08-07 18:55:08.259Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":"cep","type":null,"id":"billing-cep","placeholder":"00000-000","label":"cep","value":"","valueLength":0,"text":""}
-
-## 2026-08-07 18:55:08.473Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":"cep","type":null,"id":"billing-cep","placeholder":"00000-000","label":"cep","value":"","valueLength":0,"text":""}
-
-## 2026-08-07 18:55:10.863Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":"cep","type":null,"id":"billing-cep","placeholder":"00000-000","label":"cep","value":"28623-780","valueLength":9,"text":""}
-
-## 2026-08-07 18:55:10.864Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":"cep","type":null,"id":"billing-cep","placeholder":"00000-000","label":"cep","value":"28623-780","valueLength":9,"text":""}
-
-## 2026-08-07 18:55:10.864Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":"rua","type":null,"id":"billing-rua","placeholder":"Ex: Av. Paulista","label":"rua","value":"","valueLength":0,"text":""}
-
-## 2026-08-07 18:55:10.872Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":"rua","type":null,"id":"billing-rua","placeholder":"Ex: Av. Paulista","label":"rua","value":"Rua Folly","valueLength":9,"text":""}
-
-## 2026-08-07 18:55:10.872Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":"rua","type":null,"id":"billing-rua","placeholder":"Ex: Av. Paulista","label":"rua","value":"Rua Folly","valueLength":9,"text":""}
-
-## 2026-08-07 18:55:10.872Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":"numero","type":null,"id":"billing-numero","placeholder":"Ex: 1000","label":"numero","value":"","valueLength":0,"text":""}
-
-## 2026-08-07 18:55:10.877Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":"numero","type":null,"id":"billing-numero","placeholder":"Ex: 1000","label":"numero","value":"69","valueLength":2,"text":""}
-
-## 2026-08-07 18:55:10.877Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":"numero","type":null,"id":"billing-numero","placeholder":"Ex: 1000","label":"numero","value":"69","valueLength":2,"text":""}
-
-## 2026-08-07 18:55:10.877Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":"bairro","type":null,"id":"billing-bairro","placeholder":null,"label":"bairro","value":"","valueLength":0,"text":""}
-
-## 2026-08-07 18:55:10.883Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":"bairro","type":null,"id":"billing-bairro","placeholder":null,"label":"bairro","value":"Olaria","valueLength":6,"text":""}
-
-## 2026-08-07 18:55:10.884Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":"bairro","type":null,"id":"billing-bairro","placeholder":null,"label":"bairro","value":"Olaria","valueLength":6,"text":""}
-
-## 2026-08-07 18:55:10.884Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":"cidade","type":null,"id":"billing-cidade","placeholder":null,"label":"cidade","value":"","valueLength":0,"text":""}
-
-## 2026-08-07 18:55:10.887Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":"cidade","type":null,"id":"billing-cidade","placeholder":null,"label":"cidade","value":"Nova Friburgo","valueLength":13,"text":""}
-
-## 2026-08-07 18:55:10.887Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":"cidade","type":null,"id":"billing-cidade","placeholder":null,"label":"cidade","value":"Nova Friburgo","valueLength":13,"text":""}
-
-## 2026-08-07 18:55:10.887Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":"estado","type":null,"id":"billing-estado","placeholder":"SP","label":"estado","value":"","valueLength":0,"text":""}
-
-## 2026-08-07 18:55:10.901Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":"estado","type":null,"id":"billing-estado","placeholder":"SP","label":"estado","value":"RJ","valueLength":2,"text":""}
-
-## 2026-08-07 18:55:10.901Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":"estado","type":null,"id":"billing-estado","placeholder":"SP","label":"estado","value":"RJ","valueLength":2,"text":""}
-
-## 2026-08-07 18:55:10.901Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":"cep","type":null,"id":"billing-cep","placeholder":"00000-000","label":"cep","value":"28623-780","valueLength":9,"text":""}
-
-## 2026-08-07 18:55:17.922Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":"cep","type":null,"id":"billing-cep","placeholder":"00000-000","label":"cep","value":"28623-780","valueLength":9,"text":""}
-
-## 2026-08-07 18:55:18.150Z click
-- element: {"tag":"main","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"CarrinhoPagamento SeguroFinalização SeguraAmbiente de segurança máxima com criptografia SSL ativa. Seus dados estão 100% protegidos.Dados PessoaisInforme seus dados para prosseguir com o pagamento seguro.Já tenho cadastroNome CompletoE-mailWhatsApp / CelularCPFEndereço de FaturamentoCEP *Rua / Avenida *Número *Complemento (Opcional)Bairro *Cidade *UF *Endereço de EntregaO pedido será entregue no mesmo endereço de faturamento?Opções de FreteCalculando opções de envio via Melhor Envio...Forma de PagamentoCartão de CréditoAté 6x sem jurosPIX5% OFFBoletoVencimento em 3 diasFormulário de pagamento seguro integrado com a plataforma de pagamentos Stripe.Resumo do PedidoCropped Regata Gola AltaTam: P | Cor: Verde-MilitarQtd: 5R$ 149,50Cropped Regata Gola AltaTam: P | Cor: VinhoQtd: 3R$ 89,70SubtotalR$ 239,20FreteR$ 19,61Total a pagarR$ 258,81Finalização segura e criptografadaCONCLUIR COMPRAPagamento processado com criptografia e segurança de nível bancário pela Stripe. Seus dados de cartão estão 100% protegidos. 100% Seguro Criptografia SSL"}
-
-## 2026-08-07 18:55:24.482Z click
-- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"CONCLUIR COMPRA"}
-
-## 2026-08-07 18:55:57.133Z load
-- url: http://localhost:3000/order-confirmation/p5emlr0r02f5m4z?session_id=cs_test_a1QVk97Iy2qNMcjD4J0I2ZwwayDcj0QPZvuvcruLmdRrHGO9Bwy7GEXaz5
-- title: Avante Lingerie | Oficial
-
-## 2026-08-07 18:55:57.997Z navigate
-- url: http://localhost:3000/order-confirmation/p5emlr0r02f5m4z?session_id=cs_test_a1QVk97Iy2qNMcjD4J0I2ZwwayDcj0QPZvuvcruLmdRrHGO9Bwy7GEXaz5
-- via: replaceState
-
-## 2026-08-07 18:55:58.700Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-08-07 18:55:58.703Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-08-07 19:26:53.184Z load
-- url: http://localhost:3000/admin/lia
-- title: Avante Lingerie | Oficial
-
-## 2026-08-07 19:44:20.965Z load
-- url: http://localhost:3000/admin/lia
-- title: Avante Lingerie | Oficial
-
-## 2026-08-07 20:04:53.752Z load
-- url: http://localhost:3000/admin/lia
-- title: Avante Lingerie | Oficial
-
-## 2026-08-07 20:04:57.526Z click
-- element: {"tag":"button","role":"tab","ariaLabel":null,"name":null,"type":"button","id":"radix-:r3:-trigger-whatsapp","placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Conexão WhatsApp"}
-
-## 2026-08-07 20:10:13.803Z load
-- url: http://localhost:3000/admin/lia
-- title: Avante Lingerie | Oficial
-
-## 2026-08-11 12:06:23.790Z load
-- url: http://localhost:3000/
-- title: Avante Lingerie | Oficial
-
-## 2026-08-11 12:06:36.293Z navigate
-- url: http://localhost:3000/
-- via: replaceState
-
-## 2026-08-11 12:06:38.045Z network.error
-- method: GET
-- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22hya9h8gimmcygbn%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
-- status: 400
-- statusText: Bad Request
-- response: 
-    {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-- durationMs: 155
-
-## 2026-08-11 12:06:38.047Z console.error
-- text: 
-    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22hya9h8gimmcygbn%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-
-## 2026-08-11 12:06:38.141Z network.error
-- method: GET
-- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22vi937hhuvzg154r%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
-- status: 400
-- statusText: Bad Request
-- response: 
-    {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-- durationMs: 250
-
-## 2026-08-11 12:06:38.141Z network.error
-- method: GET
-- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22219neq337ly8hpm%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
-- status: 400
-- statusText: Bad Request
-- response: 
-    {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-- durationMs: 249
-
-## 2026-08-11 12:06:38.141Z console.error
-- text: 
-    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22vi937hhuvzg154r%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-
-## 2026-08-11 12:06:38.142Z console.error
-- text: 
-    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22219neq337ly8hpm%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-
-## 2026-08-11 12:06:38.200Z network.error
-- method: GET
-- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22sz933rrdjx4j62w%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
-- status: 400
-- statusText: Bad Request
-- response: 
-    {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-- durationMs: 308
-
-## 2026-08-11 12:06:38.201Z console.error
-- text: 
-    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22sz933rrdjx4j62w%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-
-## 2026-08-11 12:06:38.218Z network.error
-- method: GET
-- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%220tioxaa5mvtikb6%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
-- status: 400
-- statusText: Bad Request
-- response: 
-    {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-- durationMs: 326
-
-## 2026-08-11 12:06:38.219Z console.error
-- text: 
-    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%220tioxaa5mvtikb6%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-
-## 2026-08-11 12:06:38.220Z network.error
-- method: GET
-- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22z7i4vmn1n7io1np%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
-- status: 400
-- statusText: Bad Request
-- response: 
-    {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-- durationMs: 326
-
-## 2026-08-11 12:06:38.220Z console.error
-- text: 
-    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22z7i4vmn1n7io1np%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-
-## 2026-08-11 12:06:38.264Z network.error
-- method: GET
-- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22okqcy3xzr7pff8b%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
-- status: 400
-- statusText: Bad Request
-- response: 
-    {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-- durationMs: 371
-
-## 2026-08-11 12:06:38.264Z network.error
-- method: GET
-- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22km2hb4iq8cyaqut%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
-- status: 400
-- statusText: Bad Request
-- response: 
-    {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-- durationMs: 371
-
-## 2026-08-11 12:06:38.264Z console.error
-- text: 
-    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22okqcy3xzr7pff8b%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+zr7pff8b%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
     
 
 ## 2026-08-11 12:06:38.265Z console.error
@@ -5893,4 +2019,5480 @@
 
 ## 2026-08-11 16:45:36.788Z click
 - element: {"tag":"section","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Informações BásicasNome do Produto *Categoria *Selecionar Categoria...BodyCalcinhaCamisolaCinta ModeladoraConjuntoCroppedPijamaPlus SizeReferência / Código Interno * Gerar AutomáticoComplete o Look (Cross-sell)Nenhum (Venda isolada)Cropped Regata Gola Alta - AVL-CRO-6747Selecione uma peça que combina perfeitamente para incentivar a compra do conjunto (Ex: calcinha para combinar com este sutiã).Status de ExibiçãoDeixe inativo para esconder o produto na loja.Destaques e Vitrines na HomeLançamentos RecentesOfertas ExclusivasMais Vendidos da AvanteDestaques de Ouro"}
+
+## 2026-08-11 16:48:47.509Z click
+- element: {"tag":"button","role":null,"ariaLabel":"Remover produto","name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-08-11 16:48:50.600Z navigate
+- url: http://localhost:3000/
+- via: pushState
+
+## 2026-08-11 16:48:58.043Z click
+- element: {"tag":"h2","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Informações Básicas"}
+
+## 2026-08-11 16:49:01.583Z click
+- element: {"tag":"header","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Ver Loja"}
+
+## 2026-08-11 16:49:04.247Z click
+- element: {"tag":"header","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Ver Loja"}
+
+## 2026-08-11 16:49:13.172Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Ver Loja"}
+
+## 2026-08-11 16:49:13.211Z navigate
+- url: http://localhost:3000/
+- via: pushState
+
+## 2026-08-11 16:49:15.802Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22vi937hhuvzg154r%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 165
+
+## 2026-08-11 16:49:15.804Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22vi937hhuvzg154r%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 16:49:15.835Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22219neq337ly8hpm%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 198
+
+## 2026-08-11 16:49:15.836Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22219neq337ly8hpm%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 16:49:15.837Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22sz933rrdjx4j62w%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 199
+
+## 2026-08-11 16:49:15.837Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22sz933rrdjx4j62w%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 16:49:15.840Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22hya9h8gimmcygbn%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 204
+
+## 2026-08-11 16:49:15.840Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22hya9h8gimmcygbn%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 16:49:15.892Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22okqcy3xzr7pff8b%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 253
+
+## 2026-08-11 16:49:15.892Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22okqcy3xzr7pff8b%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 16:49:15.894Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22km2hb4iq8cyaqut%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 255
+
+## 2026-08-11 16:49:15.894Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22km2hb4iq8cyaqut%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 16:49:15.900Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22z7i4vmn1n7io1np%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 261
+
+## 2026-08-11 16:49:15.901Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22z7i4vmn1n7io1np%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 16:49:15.920Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%220tioxaa5mvtikb6%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 282
+
+## 2026-08-11 16:49:15.921Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%220tioxaa5mvtikb6%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 16:49:17.157Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 16:49:17.163Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 16:49:17.193Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 16:49:17.194Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 16:49:17.199Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 16:49:17.199Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 16:49:17.205Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 16:49:17.206Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 16:49:17.207Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 16:49:17.207Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 16:51:04.512Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-08-11 18:24:39.647Z load
+- url: http://localhost:3000/admin
+- title: Avante Lingerie | Oficial
+
+## 2026-08-11 18:24:41.151Z unhandledrejection
+- message: Failed to fetch dynamically imported module: http://localhost:3000/src/App.jsx?t=1786471554013
+- stack: TypeError: Failed to fetch dynamically imported module: http://localhost:3000/src/App.jsx?t=1786471554013
+
+## 2026-08-11 18:27:25.256Z load
+- url: http://localhost:3000/admin
+- title: Avante Lingerie | Oficial
+
+## 2026-08-11 18:27:26.042Z unhandledrejection
+- message: Failed to fetch dynamically imported module: http://localhost:3000/src/App.jsx?t=1786471554013
+- stack: TypeError: Failed to fetch dynamically imported module: http://localhost:3000/src/App.jsx?t=1786471554013
+
+## 2026-08-11 18:27:29.616Z load
+- url: http://localhost:3000/admin
+- title: Avante Lingerie | Oficial
+
+## 2026-08-11 18:27:29.883Z unhandledrejection
+- message: Failed to fetch dynamically imported module: http://localhost:3000/src/App.jsx?t=1786471554013
+- stack: TypeError: Failed to fetch dynamically imported module: http://localhost:3000/src/App.jsx?t=1786471554013
+
+## 2026-08-11 18:31:33.289Z load
+- url: http://localhost:3000/admin
+- title: Avante Lingerie | Oficial
+
+## 2026-08-11 18:31:35.911Z navigate
+- url: http://localhost:3000/admin
+- via: replaceState
+
+## 2026-08-11 18:35:14.516Z load
+- url: http://localhost:3000/admin
+- title: Avante Lingerie | Oficial
+
+## 2026-08-11 18:36:13.772Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Ver Loja"}
+
+## 2026-08-11 18:36:13.787Z navigate
+- url: http://localhost:3000/
+- via: pushState
+
+## 2026-08-11 18:36:14.973Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22219neq337ly8hpm%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 36
+
+## 2026-08-11 18:36:14.975Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22219neq337ly8hpm%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 18:36:14.995Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22vi937hhuvzg154r%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 59
+
+## 2026-08-11 18:36:14.995Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22hya9h8gimmcygbn%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 60
+
+## 2026-08-11 18:36:14.997Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22vi937hhuvzg154r%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 18:36:14.998Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22okqcy3xzr7pff8b%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 60
+
+## 2026-08-11 18:36:14.998Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22hya9h8gimmcygbn%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 18:36:14.999Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22okqcy3xzr7pff8b%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 18:36:15.028Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22sz933rrdjx4j62w%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 90
+
+## 2026-08-11 18:36:15.029Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22sz933rrdjx4j62w%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 18:36:15.031Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22km2hb4iq8cyaqut%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 92
+
+## 2026-08-11 18:36:15.031Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%220tioxaa5mvtikb6%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 94
+
+## 2026-08-11 18:36:15.032Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22z7i4vmn1n7io1np%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 94
+
+## 2026-08-11 18:36:15.033Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22km2hb4iq8cyaqut%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 18:36:15.035Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%220tioxaa5mvtikb6%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 18:36:15.035Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22z7i4vmn1n7io1np%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 18:36:15.116Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/colecoes/records?page=1&perPage=4&filter=ativo%20%3D%20true&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 79
+
+## 2026-08-11 18:36:15.117Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/colecoes/records?page=1&perPage=4&filter=ativo%20%3D%20true&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 18:36:15.839Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 18:36:15.842Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 18:36:15.854Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 18:36:15.855Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 18:36:15.860Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 18:36:15.861Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 18:36:15.866Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 18:36:15.866Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 18:36:15.868Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 18:36:15.868Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 18:36:21.928Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-08-11 18:36:26.329Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-08-11 18:36:26.332Z navigate
+- url: http://localhost:3000/produto/tcu4tw7wb58ogzv
+- via: pushState
+
+## 2026-08-11 18:36:26.510Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 18:36:26.517Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 18:36:26.517Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 18:36:26.517Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 18:36:26.517Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 18:36:26.517Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 18:36:26.517Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 18:36:26.621Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 18:36:26.622Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 18:36:27.466Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 18:36:27.467Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 18:36:28.193Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 18:36:28.194Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 18:36:28.208Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 18:36:28.208Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 18:36:31.927Z click
+- element: {"tag":"button","role":null,"ariaLabel":"Selecionar cor Vinho","name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-08-11 18:36:31.939Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 18:36:31.940Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 18:36:32.874Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"M"}
+
+## 2026-08-11 18:36:32.884Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 18:36:32.885Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 18:36:32.960Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 18:36:32.961Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 18:36:34.051Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Adicionar"}
+
+## 2026-08-11 18:36:34.070Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 18:36:34.070Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 18:36:35.344Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"COMPRAR AGORA"}
+
+## 2026-08-11 18:36:35.346Z navigate
+- url: http://localhost:3000/cart
+- via: pushState
+
+## 2026-08-11 18:36:35.731Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 18:36:35.732Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 18:36:35.734Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 18:36:35.734Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 18:36:50.928Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Finalizar Compra"}
+
+## 2026-08-11 18:36:50.952Z navigate
+- url: http://localhost:3000/checkout
+- via: pushState
+
+## 2026-08-11 18:36:51.058Z network.error
+- method: POST
+- url: http://localhost:3000/hcgi/platform/api/collections/analytics_events/records
+- requestBody: {"session_id":"sess_x60zjxw815msozyezw","event_type":"begin_checkout","page_path":"/checkout","item_id":"","value":"29.9","utm_source":"","utm_medium":"","utm_campaign":""}
+- message: signal is aborted without reason
+- durationMs: 9
+
+## 2026-08-11 18:36:51.060Z console.warn
+- text: Analytics Tracking Ignore: The request was autocancelled. You can find more info in https://github.com/pocketbase/js-sdk#auto-cancellation.
+
+## 2026-08-11 18:36:51.109Z network.error
+- method: POST
+- url: http://localhost:3000/hcgi/platform/api/collections/analytics_events/records
+- requestBody: {"session_id":"sess_x60zjxw815msozyezw","event_type":"page_view","page_path":"/checkout","item_id":"","value":"0","utm_source":"","utm_medium":"","utm_campaign":""}
+- message: signal is aborted without reason
+- durationMs: 56
+
+## 2026-08-11 18:36:51.110Z console.warn
+- text: Analytics Tracking Ignore: The request was autocancelled. You can find more info in https://github.com/pocketbase/js-sdk#auto-cancellation.
+
+## 2026-08-11 18:37:32.067Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"🎁 QUERO MEU DESCONTO AGORA"}
+
+## 2026-08-11 18:38:07.375Z load
+- url: http://localhost:3000/admin
+- title: Avante Lingerie | Oficial
+
+## 2026-08-11 18:38:08.012Z navigate
+- url: http://localhost:3000/admin
+- via: replaceState
+
+## 2026-08-11 18:38:11.840Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Produtos"}
+
+## 2026-08-11 18:38:11.844Z navigate
+- url: http://localhost:3000/admin/produtos
+- via: pushState
+
+## 2026-08-11 18:38:11.919Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 18:38:11.923Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 18:38:11.924Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 18:38:11.924Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 18:38:12.031Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 18:38:12.031Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 18:38:12.031Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 18:38:12.032Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 18:38:13.619Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Novo Produto"}
+
+## 2026-08-11 18:38:13.619Z navigate
+- url: http://localhost:3000/admin/produtos/novo
+- via: pushState
+
+## 2026-08-11 18:38:20.120Z click
+- element: {"tag":"div","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Nenhuma coleção encontrada"}
+
+## 2026-08-11 18:38:21.512Z click
+- element: {"tag":"span","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Nenhuma coleção encontrada"}
+
+## 2026-08-11 18:38:29.204Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Coleções"}
+
+## 2026-08-11 18:38:29.205Z navigate
+- url: http://localhost:3000/admin/colecoes
+- via: pushState
+
+## 2026-08-11 18:38:29.256Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/colecoes/records?page=1&perPage=500&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 40
+
+## 2026-08-11 18:38:29.258Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/colecoes/records?page=1&perPage=500&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 18:38:29.260Z console.error
+- text: 
+    Error fetching colecoes: ClientResponseError 400: ClientResponseError
+        at http://localhost:3000/node_modules/.vite/deps/pocketbase.js?v=9f09dcbc:948:13
+        at async fetchColecoes (http://localhost:3000/src/pages/admin/ColecoesManager.jsx:24:23)
+
+## 2026-08-11 18:38:35.183Z load
+- url: http://localhost:3000/admin/colecoes
+- title: Avante Lingerie | Oficial
+
+## 2026-08-11 18:38:36.215Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/colecoes/records?page=1&perPage=500&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 16
+
+## 2026-08-11 18:38:36.216Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/colecoes/records?page=1&perPage=500&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 18:38:36.217Z console.error
+- text: 
+    Error fetching colecoes: ClientResponseError 400: ClientResponseError
+        at http://localhost:3000/node_modules/.vite/deps/pocketbase.js?v=9f09dcbc:948:13
+        at async fetchColecoes (http://localhost:3000/src/pages/admin/ColecoesManager.jsx:24:23)
+
+## 2026-08-11 18:38:42.002Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Nova Colecao"}
+
+## 2026-08-11 18:38:50.293Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Estoque"}
+
+## 2026-08-11 18:38:50.295Z navigate
+- url: http://localhost:3000/admin/estoque
+- via: pushState
+
+## 2026-08-11 18:38:52.052Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Coleções"}
+
+## 2026-08-11 18:38:52.068Z navigate
+- url: http://localhost:3000/admin/colecoes
+- via: pushState
+
+## 2026-08-11 18:38:52.118Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/colecoes/records?page=1&perPage=500&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 30
+
+## 2026-08-11 18:38:52.118Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/colecoes/records?page=1&perPage=500&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 18:38:52.120Z console.error
+- text: 
+    Error fetching colecoes: ClientResponseError 400: ClientResponseError
+        at http://localhost:3000/node_modules/.vite/deps/pocketbase.js?v=9f09dcbc:948:13
+        at async fetchColecoes (http://localhost:3000/src/pages/admin/ColecoesManager.jsx:24:23)
+
+## 2026-08-11 18:38:54.740Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Nova Colecao"}
+
+## 2026-08-11 18:38:59.118Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Estoque"}
+
+## 2026-08-11 18:38:59.119Z navigate
+- url: http://localhost:3000/admin/estoque
+- via: pushState
+
+## 2026-08-11 18:39:00.825Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Coleções"}
+
+## 2026-08-11 18:39:00.826Z navigate
+- url: http://localhost:3000/admin/colecoes
+- via: pushState
+
+## 2026-08-11 18:39:00.853Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/colecoes/records?page=1&perPage=500&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 18
+
+## 2026-08-11 18:39:00.854Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/colecoes/records?page=1&perPage=500&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 18:39:00.854Z console.error
+- text: 
+    Error fetching colecoes: ClientResponseError 400: ClientResponseError
+        at http://localhost:3000/node_modules/.vite/deps/pocketbase.js?v=9f09dcbc:948:13
+        at async fetchColecoes (http://localhost:3000/src/pages/admin/ColecoesManager.jsx:24:23)
+
+## 2026-08-11 18:43:29.936Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Nova Colecao"}
+
+## 2026-08-11 18:43:38.980Z load
+- url: http://localhost:3000/admin/colecoes
+- title: Avante Lingerie | Oficial
+
+## 2026-08-11 18:43:40.644Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/colecoes/records?page=1&perPage=500&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 74
+
+## 2026-08-11 18:43:40.645Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/colecoes/records?page=1&perPage=500&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 18:43:40.649Z console.error
+- text: 
+    Error fetching colecoes: ClientResponseError 400: ClientResponseError
+        at http://localhost:3000/node_modules/.vite/deps/pocketbase.js?v=9f09dcbc:948:13
+        at async fetchColecoes (http://localhost:3000/src/pages/admin/ColecoesManager.jsx:24:23)
+
+## 2026-08-11 18:44:04.318Z click
+- element: {"tag":"div","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"ColeçõesGerencie as coleções de produtos que aparecem na home Nova Colecao"}
+
+## 2026-08-11 18:44:22.978Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Categorias"}
+
+## 2026-08-11 18:44:23.005Z navigate
+- url: http://localhost:3000/admin/categorias
+- via: pushState
+
+## 2026-08-11 18:44:29.660Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Coleções"}
+
+## 2026-08-11 18:44:29.662Z navigate
+- url: http://localhost:3000/admin/colecoes
+- via: pushState
+
+## 2026-08-11 18:44:29.786Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/colecoes/records?page=1&perPage=500&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 108
+
+## 2026-08-11 18:44:29.786Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/colecoes/records?page=1&perPage=500&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 18:44:29.788Z console.error
+- text: 
+    Error fetching colecoes: ClientResponseError 400: ClientResponseError
+        at http://localhost:3000/node_modules/.vite/deps/pocketbase.js?v=9f09dcbc:948:13
+        at async fetchColecoes (http://localhost:3000/src/pages/admin/ColecoesManager.jsx:24:23)
+
+## 2026-08-11 18:47:18.205Z click
+- element: {"tag":"button","role":null,"ariaLabel":"Toggle menu","name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-08-11 18:47:43.976Z click
+- element: {"tag":"button","role":null,"ariaLabel":"Toggle menu","name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-08-11 18:52:35.438Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/colecoes/records?page=1&perPage=500&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 44
+
+## 2026-08-11 18:52:35.439Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/colecoes/records?page=1&perPage=500&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 18:52:35.446Z console.error
+- text: 
+    Error fetching colecoes: ClientResponseError 400: ClientResponseError
+        at http://localhost:3000/node_modules/.vite/deps/pocketbase.js?v=9f09dcbc:948:13
+        at async fetchColecoes (http://localhost:3000/src/pages/admin/ColecoesManager.jsx?t=1786474353679:24:23)
+
+## 2026-08-11 18:58:04.179Z load
+- url: http://localhost:3000/admin/colecoes
+- title: Avante Lingerie | Oficial
+
+## 2026-08-11 18:58:05.664Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/colecoes/records?page=1&perPage=500&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 39
+
+## 2026-08-11 18:58:05.667Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/colecoes/records?page=1&perPage=500&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 18:58:05.675Z console.error
+- text: 
+    Error fetching colecoes: ClientResponseError 400: ClientResponseError
+        at http://localhost:3000/node_modules/.vite/deps/pocketbase.js?v=9f09dcbc:948:13
+        at async fetchColecoes (http://localhost:3000/src/pages/admin/ColecoesManager.jsx?t=1786474353679:24:23)
+
+## 2026-08-11 18:58:31.910Z load
+- url: http://localhost:3000/admin/colecoes
+- title: Avante Lingerie | Oficial
+
+## 2026-08-11 18:58:33.100Z navigate
+- url: http://localhost:3000/admin/login
+- via: replaceState
+
+## 2026-08-11 18:58:35.012Z load
+- url: http://localhost:3000/checkout
+- title: Avante Lingerie | Oficial
+
+## 2026-08-11 18:58:39.351Z navigate
+- url: http://localhost:3000/
+- via: pushState
+
+## 2026-08-11 18:58:40.153Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Aceitar & Continuar"}
+
+## 2026-08-11 18:58:40.842Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22hya9h8gimmcygbn%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 228
+
+## 2026-08-11 18:58:40.843Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22vi937hhuvzg154r%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 226
+
+## 2026-08-11 18:58:40.844Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22hya9h8gimmcygbn%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 18:58:40.848Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22vi937hhuvzg154r%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 18:58:40.852Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22219neq337ly8hpm%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 235
+
+## 2026-08-11 18:58:40.858Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22219neq337ly8hpm%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 18:58:40.859Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22sz933rrdjx4j62w%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 242
+
+## 2026-08-11 18:58:40.859Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22sz933rrdjx4j62w%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 18:58:40.865Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%220tioxaa5mvtikb6%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 247
+
+## 2026-08-11 18:58:40.865Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%220tioxaa5mvtikb6%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 18:58:40.876Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22okqcy3xzr7pff8b%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 258
+
+## 2026-08-11 18:58:40.876Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22okqcy3xzr7pff8b%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 18:58:40.890Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22z7i4vmn1n7io1np%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 272
+
+## 2026-08-11 18:58:40.890Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22z7i4vmn1n7io1np%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 18:58:40.895Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22km2hb4iq8cyaqut%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 277
+
+## 2026-08-11 18:58:40.895Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22km2hb4iq8cyaqut%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 18:58:41.141Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/colecoes/records?page=1&perPage=4&filter=ativo%20%3D%20true&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 242
+
+## 2026-08-11 18:58:41.141Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/colecoes/records?page=1&perPage=4&filter=ativo%20%3D%20true&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 18:58:41.153Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 18:58:41.157Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 18:58:41.186Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 18:58:41.187Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 18:58:41.204Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 18:58:41.204Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 18:58:41.220Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 18:58:41.221Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 18:58:41.226Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 18:58:41.226Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 18:58:44.358Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"email","id":null,"placeholder":"admin@avantelingerie.com.br","label":"admin@avantelingerie.com.br","value":"","valueLength":0,"text":""}
+
+## 2026-08-11 18:58:44.589Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"email","id":null,"placeholder":"admin@avantelingerie.com.br","label":"admin@avantelingerie.com.br","value":"","valueLength":0,"text":""}
+
+## 2026-08-11 18:58:59.099Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"email","id":null,"placeholder":"admin@avantelingerie.com.br","label":"admin@avantelingerie.com.br","value":"admin@avantelingerie.com.br","valueLength":27,"text":""}
+
+## 2026-08-11 18:58:59.101Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"email","id":null,"placeholder":"admin@avantelingerie.com.br","label":"admin@avantelingerie.com.br","value":"admin@avantelingerie.com.br","valueLength":27,"text":""}
+
+## 2026-08-11 18:58:59.101Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"password","id":null,"placeholder":"••••••••","label":"••••••••","value":"[redacted:length=0]","valueLength":0,"text":""}
+
+## 2026-08-11 18:59:07.827Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"password","id":null,"placeholder":"••••••••","label":"••••••••","value":"[redacted:length=12]","valueLength":12,"text":""}
+
+## 2026-08-11 18:59:07.828Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"password","id":null,"placeholder":"••••••••","label":"••••••••","value":"[redacted:length=12]","valueLength":12,"text":""}
+
+## 2026-08-11 18:59:08.049Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"submit","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"ACESSAR PAINEL"}
+
+## 2026-08-11 18:59:08.055Z submit
+- action: http://localhost:3000/admin/login
+- fields: [{"label":"admin@avantelingerie.com.br","type":"email","value":"admin@avantelingerie.com.br","length":27,"redacted":false},{"label":"••••••••","type":"password","value":"[redacted:length=12]","length":12,"redacted":true},{"label":"Mostrar senha","type":"button","value":"","length":0,"redacted":false},{"label":"[submit]","type":"submit","value":"","length":0,"redacted":false}]
+
+## 2026-08-11 18:59:08.220Z navigate
+- url: http://localhost:3000/admin
+- via: pushState
+
+## 2026-08-11 18:59:08.261Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 18:59:08.263Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 18:59:08.289Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 18:59:08.290Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 18:59:08.304Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 18:59:08.305Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 18:59:08.313Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 18:59:08.314Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 18:59:08.318Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 18:59:08.318Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 18:59:13.181Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Coleções"}
+
+## 2026-08-11 18:59:13.184Z navigate
+- url: http://localhost:3000/admin/colecoes
+- via: pushState
+
+## 2026-08-11 18:59:13.244Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/colecoes/records?page=1&perPage=500&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 39
+
+## 2026-08-11 18:59:13.245Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/colecoes/records?page=1&perPage=500&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 18:59:13.248Z console.error
+- text: 
+    Error fetching colecoes: ClientResponseError 400: ClientResponseError
+        at http://localhost:3000/node_modules/.vite/deps/pocketbase.js?v=9f09dcbc:948:13
+        at async fetchColecoes (http://localhost:3000/src/pages/admin/ColecoesManager.jsx?t=1786474353679:24:23)
+
+## 2026-08-11 18:59:15.866Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Nova Colecao"}
+
+## 2026-08-11 18:59:22.653Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Ex: Lançamentos de Inverno","label":"Ex: Lançamentos de Inverno","value":"","valueLength":0,"text":""}
+
+## 2026-08-11 18:59:22.884Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Ex: Lançamentos de Inverno","label":"Ex: Lançamentos de Inverno","value":"","valueLength":0,"text":""}
+
+## 2026-08-11 18:59:32.640Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Ex: Lançamentos de Inverno","label":"Ex: Lançamentos de Inverno","value":"Moda Noite","valueLength":10,"text":""}
+
+## 2026-08-11 18:59:32.640Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Ex: Lançamentos de Inverno","label":"Ex: Lançamentos de Inverno","value":"Moda Noite","valueLength":10,"text":""}
+
+## 2026-08-11 18:59:32.646Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"ex-lancamentos-inverno","label":"ex-lancamentos-inverno","value":"moda-noite","valueLength":10,"text":""}
+
+## 2026-08-11 18:59:48.114Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"ex-lancamentos-inverno","label":"ex-lancamentos-inverno","value":"moda-noite","valueLength":10,"text":""}
+
+## 2026-08-11 18:59:48.114Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Ex: Lançamentos de Inverno","label":"Ex: Lançamentos de Inverno","value":"Moda Noite","valueLength":10,"text":""}
+
+## 2026-08-11 18:59:48.525Z click
+- element: {"tag":"main","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"ColeçõesGerencie as coleções de produtos que aparecem na home Nova ColecaoCriar Nova ColeçãoNome da ColeçãoSlug (URL amigável)Coleção AtivaSe ativo, será exibida na vitrine principal da loja.Cancelar Salvar ColeçãoNenhuma coleção cadastrada."}
+
+## 2026-08-11 18:59:55.526Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Ex: Lançamentos de Inverno","label":"Ex: Lançamentos de Inverno","value":"Moda Sexy","valueLength":9,"text":""}
+
+## 2026-08-11 18:59:55.527Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Ex: Lançamentos de Inverno","label":"Ex: Lançamentos de Inverno","value":"Moda Sexy","valueLength":9,"text":""}
+
+## 2026-08-11 18:59:55.535Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"ex-lancamentos-inverno","label":"ex-lancamentos-inverno","value":"moda-sexy","valueLength":9,"text":""}
+
+## 2026-08-11 19:00:01.258Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"ex-lancamentos-inverno","label":"ex-lancamentos-inverno","value":"moda-sexy","valueLength":9,"text":""}
+
+## 2026-08-11 19:00:01.478Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Salvar Coleção"}
+
+## 2026-08-11 19:00:01.562Z network.error
+- method: POST
+- url: http://localhost:3000/hcgi/platform/api/collections/colecoes/records
+- status: 403
+- statusText: Forbidden
+- requestBody: {"nome":"Moda Sexy","slug":"moda-sexy","ativo":"true"}
+- response: 
+    {"data":{},"message":"Only superusers can perform this action.","status":403}
+    
+- durationMs: 75
+
+## 2026-08-11 19:00:01.562Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/colecoes/records: {"data":{},"message":"Only superusers can perform this action.","status":403}
+    
+
+## 2026-08-11 19:00:01.565Z console.error
+- text: 
+    Save error: ClientResponseError 403: ClientResponseError
+        at http://localhost:3000/node_modules/.vite/deps/pocketbase.js?v=9f09dcbc:948:13
+        at async handleSave (http://localhost:3000/src/pages/admin/ColecoesManager.jsx?t=1786474353679:69:9)
+
+## 2026-08-11 19:00:20.785Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Ex: Lançamentos de Inverno","label":"Ex: Lançamentos de Inverno","value":"Moda Sexy","valueLength":9,"text":""}
+
+## 2026-08-11 19:00:21.175Z click
+- element: {"tag":"main","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"ColeçõesGerencie as coleções de produtos que aparecem na home Nova ColecaoCriar Nova ColeçãoNome da ColeçãoSlug (URL amigável)Coleção AtivaSe ativo, será exibida na vitrine principal da loja.Cancelar Salvar ColeçãoNenhuma coleção cadastrada."}
+
+## 2026-08-11 19:00:25.903Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Ex: Lançamentos de Inverno","label":"Ex: Lançamentos de Inverno","value":"Moda Noite","valueLength":10,"text":""}
+
+## 2026-08-11 19:00:25.904Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Ex: Lançamentos de Inverno","label":"Ex: Lançamentos de Inverno","value":"Moda Noite","valueLength":10,"text":""}
+
+## 2026-08-11 19:00:26.113Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Salvar Coleção"}
+
+## 2026-08-11 19:00:26.387Z network.error
+- method: POST
+- url: http://localhost:3000/hcgi/platform/api/collections/colecoes/records
+- status: 403
+- statusText: Forbidden
+- requestBody: {"nome":"Moda Noite","slug":"moda-noite","ativo":"true"}
+- response: 
+    {"data":{},"message":"Only superusers can perform this action.","status":403}
+    
+- durationMs: 252
+
+## 2026-08-11 19:00:26.390Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/colecoes/records: {"data":{},"message":"Only superusers can perform this action.","status":403}
+    
+
+## 2026-08-11 19:00:26.400Z console.error
+- text: 
+    Save error: ClientResponseError 403: ClientResponseError
+        at http://localhost:3000/node_modules/.vite/deps/pocketbase.js?v=9f09dcbc:948:13
+        at async handleSave (http://localhost:3000/src/pages/admin/ColecoesManager.jsx?t=1786474353679:69:9)
+
+## 2026-08-11 19:04:00.649Z click
+- element: {"tag":"main","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"ColeçõesGerencie as coleções de produtos que aparecem na home Nova ColecaoCriar Nova ColeçãoNome da ColeçãoSlug (URL amigável)Coleção AtivaSe ativo, será exibida na vitrine principal da loja.Cancelar Salvar ColeçãoNenhuma coleção cadastrada."}
+
+## 2026-08-11 19:04:10.084Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Categorias"}
+
+## 2026-08-11 19:04:10.114Z navigate
+- url: http://localhost:3000/admin/categorias
+- via: pushState
+
+## 2026-08-11 19:04:13.631Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Estoque"}
+
+## 2026-08-11 19:04:13.632Z navigate
+- url: http://localhost:3000/admin/estoque
+- via: pushState
+
+## 2026-08-11 19:04:27.261Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Coleções"}
+
+## 2026-08-11 19:04:27.278Z navigate
+- url: http://localhost:3000/admin/colecoes
+- via: pushState
+
+## 2026-08-11 19:04:27.749Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/colecoes/records?page=1&perPage=500&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 402
+
+## 2026-08-11 19:04:27.752Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/colecoes/records?page=1&perPage=500&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 19:04:27.759Z console.error
+- text: 
+    Error fetching colecoes: ClientResponseError 400: ClientResponseError
+        at http://localhost:3000/node_modules/.vite/deps/pocketbase.js?v=9f09dcbc:948:13
+        at async fetchColecoes (http://localhost:3000/src/pages/admin/ColecoesManager.jsx?t=1786474353679:24:23)
+
+## 2026-08-11 19:04:34.331Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Nova Colecao"}
+
+## 2026-08-11 19:04:35.676Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Ex: Lançamentos de Inverno","label":"Ex: Lançamentos de Inverno","value":"","valueLength":0,"text":""}
+
+## 2026-08-11 19:04:35.901Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Ex: Lançamentos de Inverno","label":"Ex: Lançamentos de Inverno","value":"","valueLength":0,"text":""}
+
+## 2026-08-11 19:04:51.584Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Ex: Lançamentos de Inverno","label":"Ex: Lançamentos de Inverno","value":"","valueLength":0,"text":""}
+
+## 2026-08-11 19:04:53.614Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Ver Loja"}
+
+## 2026-08-11 19:04:53.668Z navigate
+- url: http://localhost:3000/
+- via: pushState
+
+## 2026-08-11 19:04:55.955Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22hya9h8gimmcygbn%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 204
+
+## 2026-08-11 19:04:55.956Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22hya9h8gimmcygbn%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 19:04:55.968Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22vi937hhuvzg154r%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 215
+
+## 2026-08-11 19:04:55.969Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22vi937hhuvzg154r%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 19:04:55.969Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22219neq337ly8hpm%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 216
+
+## 2026-08-11 19:04:55.969Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22sz933rrdjx4j62w%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 215
+
+## 2026-08-11 19:04:55.970Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22219neq337ly8hpm%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 19:04:55.971Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22sz933rrdjx4j62w%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 19:04:55.971Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%220tioxaa5mvtikb6%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 217
+
+## 2026-08-11 19:04:55.972Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%220tioxaa5mvtikb6%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 19:04:55.972Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22z7i4vmn1n7io1np%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 217
+
+## 2026-08-11 19:04:55.973Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22z7i4vmn1n7io1np%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 19:04:55.973Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22km2hb4iq8cyaqut%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 217
+
+## 2026-08-11 19:04:55.973Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22km2hb4iq8cyaqut%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 19:04:55.974Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22okqcy3xzr7pff8b%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 220
+
+## 2026-08-11 19:04:55.974Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22okqcy3xzr7pff8b%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 19:04:56.059Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/colecoes/records?page=1&perPage=4&filter=ativo%20%3D%20true&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 82
+
+## 2026-08-11 19:04:56.059Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/colecoes/records?page=1&perPage=4&filter=ativo%20%3D%20true&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 19:04:56.271Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:04:56.276Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:04:56.332Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:04:56.332Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:04:56.349Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:04:56.349Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:04:56.369Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:04:56.370Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:04:56.376Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:04:56.377Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:05:08.412Z click
+- element: {"tag":"button","role":null,"ariaLabel":"Toggle menu","name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-08-11 19:05:40.065Z click
+- element: {"tag":"button","role":null,"ariaLabel":"Toggle menu","name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-08-11 19:05:42.941Z click
+- element: {"tag":"button","role":null,"ariaLabel":"Toggle menu","name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-08-11 19:05:47.703Z click
+- element: {"tag":"button","role":null,"ariaLabel":"Toggle menu","name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-08-11 19:05:49.064Z click
+- element: {"tag":"button","role":null,"ariaLabel":"Toggle menu","name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-08-11 19:08:32.803Z click
+- element: {"tag":"button","role":null,"ariaLabel":"Toggle menu","name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-08-11 19:16:35.675Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:16:35.680Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:16:35.704Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:16:35.705Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:16:35.708Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:16:35.708Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:16:35.711Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:16:35.712Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:16:35.714Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:16:35.714Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:16:35.973Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:16:35.974Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:16:35.981Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:16:35.981Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:16:35.985Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:16:35.985Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:16:35.988Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:16:35.989Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:16:35.991Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:16:35.991Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:16:37.054Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-08-11 19:16:38.877Z load
+- url: http://localhost:3000/
+- title: Avante Lingerie | Oficial
+
+## 2026-08-11 19:16:40.475Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22hya9h8gimmcygbn%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 65
+
+## 2026-08-11 19:16:40.476Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22vi937hhuvzg154r%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 66
+
+## 2026-08-11 19:16:40.477Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22hya9h8gimmcygbn%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 19:16:40.484Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22vi937hhuvzg154r%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 19:16:40.514Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22219neq337ly8hpm%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 104
+
+## 2026-08-11 19:16:40.514Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22219neq337ly8hpm%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 19:16:40.521Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22sz933rrdjx4j62w%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 111
+
+## 2026-08-11 19:16:40.522Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22sz933rrdjx4j62w%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 19:16:40.545Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%220tioxaa5mvtikb6%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 134
+
+## 2026-08-11 19:16:40.545Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22okqcy3xzr7pff8b%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 134
+
+## 2026-08-11 19:16:40.546Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22z7i4vmn1n7io1np%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 134
+
+## 2026-08-11 19:16:40.546Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%220tioxaa5mvtikb6%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 19:16:40.548Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22okqcy3xzr7pff8b%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 19:16:40.548Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22z7i4vmn1n7io1np%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 19:16:40.551Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22km2hb4iq8cyaqut%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 138
+
+## 2026-08-11 19:16:40.553Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22km2hb4iq8cyaqut%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 19:16:40.788Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/colecoes/records?page=1&perPage=4&filter=ativo%20%3D%20true&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 218
+
+## 2026-08-11 19:16:40.790Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/colecoes/records?page=1&perPage=4&filter=ativo%20%3D%20true&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 19:16:40.913Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:16:40.914Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:16:40.972Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:16:40.972Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:16:40.994Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:16:40.995Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:16:41.018Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:16:41.018Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:16:41.022Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:16:41.022Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:16:51.193Z load
+- url: http://localhost:3000/admin/colecoes
+- title: Avante Lingerie | Oficial
+
+## 2026-08-11 19:16:51.937Z navigate
+- url: http://localhost:3000/admin/colecoes
+- via: replaceState
+
+## 2026-08-11 19:16:52.286Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/colecoes/records?page=1&perPage=500&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 48
+
+## 2026-08-11 19:16:52.287Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/colecoes/records?page=1&perPage=500&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 19:16:52.292Z console.error
+- text: 
+    Error fetching colecoes: ClientResponseError 400: ClientResponseError
+        at http://localhost:3000/node_modules/.vite/deps/pocketbase.js?v=9f09dcbc:948:13
+        at async fetchColecoes (http://localhost:3000/src/pages/admin/ColecoesManager.jsx?t=1786474353679:24:23)
+
+## 2026-08-11 19:16:54.934Z load
+- url: http://localhost:3000/admin/colecoes
+- title: Avante Lingerie | Oficial
+
+## 2026-08-11 19:16:55.376Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/colecoes/records?page=1&perPage=500&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 15
+
+## 2026-08-11 19:16:55.376Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/colecoes/records?page=1&perPage=500&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 19:16:55.377Z console.error
+- text: 
+    Error fetching colecoes: ClientResponseError 400: ClientResponseError
+        at http://localhost:3000/node_modules/.vite/deps/pocketbase.js?v=9f09dcbc:948:13
+        at async fetchColecoes (http://localhost:3000/src/pages/admin/ColecoesManager.jsx?t=1786474353679:24:23)
+
+## 2026-08-11 19:17:11.935Z load
+- url: http://localhost:3000/admin/colecoes
+- title: Avante Lingerie | Oficial
+
+## 2026-08-11 19:17:12.877Z navigate
+- url: http://localhost:3000/admin/login
+- via: replaceState
+
+## 2026-08-11 19:17:14.408Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"email","id":null,"placeholder":"admin@avantelingerie.com.br","label":"admin@avantelingerie.com.br","value":"","valueLength":0,"text":""}
+
+## 2026-08-11 19:17:14.632Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"email","id":null,"placeholder":"admin@avantelingerie.com.br","label":"admin@avantelingerie.com.br","value":"","valueLength":0,"text":""}
+
+## 2026-08-11 19:17:32.402Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"email","id":null,"placeholder":"admin@avantelingerie.com.br","label":"admin@avantelingerie.com.br","value":"admin@avantelingerie.com.br","valueLength":27,"text":""}
+
+## 2026-08-11 19:17:32.404Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"email","id":null,"placeholder":"admin@avantelingerie.com.br","label":"admin@avantelingerie.com.br","value":"admin@avantelingerie.com.br","valueLength":27,"text":""}
+
+## 2026-08-11 19:17:32.409Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"password","id":null,"placeholder":"••••••••","label":"••••••••","value":"[redacted:length=0]","valueLength":0,"text":""}
+
+## 2026-08-11 19:17:32.626Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"password","id":null,"placeholder":"••••••••","label":"••••••••","value":"[redacted:length=0]","valueLength":0,"text":""}
+
+## 2026-08-11 19:17:37.980Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"password","id":null,"placeholder":"••••••••","label":"••••••••","value":"[redacted:length=12]","valueLength":12,"text":""}
+
+## 2026-08-11 19:17:37.980Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"password","id":null,"placeholder":"••••••••","label":"••••••••","value":"[redacted:length=12]","valueLength":12,"text":""}
+
+## 2026-08-11 19:17:38.198Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"submit","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"ACESSAR PAINEL"}
+
+## 2026-08-11 19:17:38.208Z submit
+- action: http://localhost:3000/admin/login
+- fields: [{"label":"admin@avantelingerie.com.br","type":"email","value":"admin@avantelingerie.com.br","length":27,"redacted":false},{"label":"••••••••","type":"password","value":"[redacted:length=12]","length":12,"redacted":true},{"label":"Mostrar senha","type":"button","value":"","length":0,"redacted":false},{"label":"[submit]","type":"submit","value":"","length":0,"redacted":false}]
+
+## 2026-08-11 19:17:38.422Z navigate
+- url: http://localhost:3000/admin
+- via: pushState
+
+## 2026-08-11 19:17:38.804Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:17:38.833Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:17:38.925Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:17:38.926Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:17:38.967Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:17:38.967Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:17:38.986Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:17:38.987Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:17:38.990Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:17:38.991Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:17:41.875Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Coleções"}
+
+## 2026-08-11 19:17:41.878Z navigate
+- url: http://localhost:3000/admin/colecoes
+- via: pushState
+
+## 2026-08-11 19:17:41.926Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/colecoes/records?page=1&perPage=500&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 34
+
+## 2026-08-11 19:17:41.927Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/colecoes/records?page=1&perPage=500&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 19:17:41.947Z console.error
+- text: 
+    Error fetching colecoes: ClientResponseError 400: ClientResponseError
+        at http://localhost:3000/node_modules/.vite/deps/pocketbase.js?v=9f09dcbc:948:13
+        at async fetchColecoes (http://localhost:3000/src/pages/admin/ColecoesManager.jsx?t=1786474353679:24:23)
+
+## 2026-08-11 19:17:44.895Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Nova Colecao"}
+
+## 2026-08-11 19:17:47.194Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Ex: Lançamentos de Inverno","label":"Ex: Lançamentos de Inverno","value":"","valueLength":0,"text":""}
+
+## 2026-08-11 19:17:47.410Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Ex: Lançamentos de Inverno","label":"Ex: Lançamentos de Inverno","value":"","valueLength":0,"text":""}
+
+## 2026-08-11 19:17:51.812Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Ex: Lançamentos de Inverno","label":"Ex: Lançamentos de Inverno","value":"Moda Sexy","valueLength":9,"text":""}
+
+## 2026-08-11 19:17:51.813Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Ex: Lançamentos de Inverno","label":"Ex: Lançamentos de Inverno","value":"Moda Sexy","valueLength":9,"text":""}
+
+## 2026-08-11 19:17:51.822Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"ex-lancamentos-inverno","label":"ex-lancamentos-inverno","value":"moda-sexy","valueLength":9,"text":""}
+
+## 2026-08-11 19:17:53.698Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"ex-lancamentos-inverno","label":"ex-lancamentos-inverno","value":"moda-sexy","valueLength":9,"text":""}
+
+## 2026-08-11 19:17:53.912Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Salvar Coleção"}
+
+## 2026-08-11 19:17:53.961Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/colecoes/records?page=1&perPage=500&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 16
+
+## 2026-08-11 19:17:53.962Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/colecoes/records?page=1&perPage=500&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 19:17:53.963Z console.error
+- text: 
+    Error fetching colecoes: ClientResponseError 400: ClientResponseError
+        at http://localhost:3000/node_modules/.vite/deps/pocketbase.js?v=9f09dcbc:948:13
+        at async fetchColecoes (http://localhost:3000/src/pages/admin/ColecoesManager.jsx?t=1786474353679:24:23)
+
+## 2026-08-11 19:18:06.959Z click
+- element: {"tag":"h1","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Coleções"}
+
+## 2026-08-11 19:18:15.687Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Estoque"}
+
+## 2026-08-11 19:18:15.709Z navigate
+- url: http://localhost:3000/admin/estoque
+- via: pushState
+
+## 2026-08-11 19:18:17.427Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Categorias"}
+
+## 2026-08-11 19:18:17.429Z navigate
+- url: http://localhost:3000/admin/categorias
+- via: pushState
+
+## 2026-08-11 19:18:24.236Z load
+- url: http://localhost:3000/
+- title: Avante Lingerie | Oficial
+
+## 2026-08-11 19:18:26.218Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22vi937hhuvzg154r%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 261
+
+## 2026-08-11 19:18:26.231Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22vi937hhuvzg154r%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 19:18:26.239Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22219neq337ly8hpm%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 275
+
+## 2026-08-11 19:18:26.239Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22hya9h8gimmcygbn%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 282
+
+## 2026-08-11 19:18:26.241Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22219neq337ly8hpm%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 19:18:26.242Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22hya9h8gimmcygbn%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 19:18:26.244Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22sz933rrdjx4j62w%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 279
+
+## 2026-08-11 19:18:26.244Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22sz933rrdjx4j62w%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 19:18:26.256Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22z7i4vmn1n7io1np%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 290
+
+## 2026-08-11 19:18:26.257Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22z7i4vmn1n7io1np%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 19:18:26.290Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22km2hb4iq8cyaqut%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 322
+
+## 2026-08-11 19:18:26.290Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22km2hb4iq8cyaqut%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 19:18:26.293Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%220tioxaa5mvtikb6%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 328
+
+## 2026-08-11 19:18:26.293Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%220tioxaa5mvtikb6%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 19:18:26.305Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22okqcy3xzr7pff8b%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 339
+
+## 2026-08-11 19:18:26.305Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22okqcy3xzr7pff8b%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 19:18:26.514Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/colecoes/records?page=1&perPage=4&filter=ativo%20%3D%20true&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 204
+
+## 2026-08-11 19:18:26.514Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/colecoes/records?page=1&perPage=4&filter=ativo%20%3D%20true&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 19:18:26.526Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:18:26.529Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:18:26.561Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:18:26.561Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:18:26.573Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:18:26.573Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:18:26.587Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:18:26.587Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:18:26.592Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:18:26.592Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:18:35.120Z load
+- url: http://localhost:3000/
+- title: Avante Lingerie | Oficial
+
+## 2026-08-11 19:18:36.642Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22hya9h8gimmcygbn%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 107
+
+## 2026-08-11 19:18:36.642Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22vi937hhuvzg154r%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 107
+
+## 2026-08-11 19:18:36.643Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22219neq337ly8hpm%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 107
+
+## 2026-08-11 19:18:36.644Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22hya9h8gimmcygbn%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 19:18:36.648Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22vi937hhuvzg154r%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 19:18:36.648Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22219neq337ly8hpm%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 19:18:36.652Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22sz933rrdjx4j62w%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 116
+
+## 2026-08-11 19:18:36.653Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22sz933rrdjx4j62w%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 19:18:36.661Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%220tioxaa5mvtikb6%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 124
+
+## 2026-08-11 19:18:36.662Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%220tioxaa5mvtikb6%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 19:18:36.663Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22okqcy3xzr7pff8b%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 126
+
+## 2026-08-11 19:18:36.663Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22z7i4vmn1n7io1np%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 125
+
+## 2026-08-11 19:18:36.663Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22km2hb4iq8cyaqut%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 125
+
+## 2026-08-11 19:18:36.664Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22okqcy3xzr7pff8b%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 19:18:36.665Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22z7i4vmn1n7io1np%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 19:18:36.665Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22km2hb4iq8cyaqut%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 19:18:36.742Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/colecoes/records?page=1&perPage=4&filter=ativo%20%3D%20true&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 70
+
+## 2026-08-11 19:18:36.742Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/colecoes/records?page=1&perPage=4&filter=ativo%20%3D%20true&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 19:18:36.982Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:18:36.983Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:18:37.026Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:18:37.027Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:18:37.049Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:18:37.050Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:18:37.072Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:18:37.072Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:18:37.078Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:18:37.078Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:18:49.032Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Produtos"}
+
+## 2026-08-11 19:18:49.062Z navigate
+- url: http://localhost:3000/admin/produtos
+- via: pushState
+
+## 2026-08-11 19:18:49.377Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:18:49.389Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:18:49.398Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:18:49.399Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:18:51.271Z click
+- element: {"tag":"html","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"\n\t\timport { injectIntoGlobalHook } from \"/@react-refresh\";\ninjectIntoGlobalHook(window);\nwindow.$RefreshReg$ = () => {};\nwindow.$RefreshSig$ = () => (type) => type;\n\n\t\t\n\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\tAvante Lingerie | Oficial\n\t\t\n\t\t\n\t\t(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\n\t\tnew Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\n\t\tj=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n\t\t'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n\t\t})(window,document,'script','dataLayer','GTM-XXXXXXX');\n\t\t\n\t\tconst SITE_PAGES_ENDPOINT = '/__horizons/site-pages';\n\nconst OUTGOING_SITE_PAGES_MESSAGE = 'sitePages';\nconst INCOMING_REQUEST_SITE_PAGES_MESSAGE = 'request-site-pages';\n\nconst ALLOWED_PARENT_ORIGINS = [\n\t'https://horizons.hostinger.com',\n\t'https://horizons.hostinger.dev',\n\t'https://horizons-frontend-local.hostinger.dev',\n\t'http://localhost:4000',\n];\n\nfunction postSitePages(pages) {\n\tlet parentOrigin = window.location.ancestorOrigins?.[0];\n\tif (!parentOrigin && document.referrer) {\n\t\ttry {\n\t\t\tparentOrigin = new URL(document.referrer).origin;\n\t\t} catch {}\n\t}\n\tif (parentOrigin && ALLOWED_PARENT_ORIGINS.includes(parentOrigin)) {\n\t\twindow.parent.postMessage({ type: OUTGOING_SITE_PAGES_MESSAGE, payload: { pages } }, parentOrigin);\n\t}\n}\n\nasync function sendSitePagesToParent() {\n\tif (window.self === window.top) {\n\t\treturn;\n\t}\n\n\ttry {\n\t\tconst response = await fetch(SITE_PAGES_ENDPOINT);\n\t\tif (!response.ok) {\n\t\t\tthrow new Error(`HTTP ${response.status}`);\n\t\t}\n\t\tpostSitePages(await response.json());\n\t} catch (error) {\n\t\tconsole.error('[site-pages] Failed to send site pages to parent:', error);\n\t}\n}\n\nif (window.self !== window.top) {\n\twindow.addEventListener('load', sendSitePagesToParent);\n\twindow.addEventListener('message', (event) => {\n\t\tif (event.data?.type === INCOMING_REQUEST_SITE_PAGES_MESSAGE) {\n\t\t\tsendSitePagesToParent();\n\t\t}\n\t});\n}\n\n\t\t\n\t#root[data-edit-mode-enabled=\"true\"] {\n\t\tcursor: pointer;\n\t}\n\n\t#roo..."}
+
+## 2026-08-11 19:18:52.575Z click
+- element: {"tag":"div","role":"menuitem","ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Editar"}
+
+## 2026-08-11 19:18:52.578Z navigate
+- url: http://localhost:3000/admin/produtos/05utgzpnb5dk0go/editar
+- via: pushState
+
+## 2026-08-11 19:18:52.665Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:18:52.668Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:18:52.668Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:19:10.172Z click
+- element: {"tag":"label","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Moda Sexy"}
+
+## 2026-08-11 19:19:10.174Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"checkbox","id":null,"placeholder":null,"label":"Moda Sexy","value":"on","valueLength":2,"text":""}
+
+## 2026-08-11 19:19:10.176Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"checkbox","id":null,"placeholder":null,"label":"Moda Sexy","value":"on","valueLength":2,"text":""}
+
+## 2026-08-11 19:19:10.187Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"checkbox","id":null,"placeholder":null,"label":"Moda Sexy","value":"on","valueLength":2,"text":""}
+
+## 2026-08-11 19:19:12.065Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"checkbox","id":null,"placeholder":null,"label":"Moda Sexy","value":"on","valueLength":2,"text":""}
+
+## 2026-08-11 19:19:12.290Z click
+- element: {"tag":"div","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Ver Loja"}
+
+## 2026-08-11 19:19:15.258Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"submit","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Salvar"}
+
+## 2026-08-11 19:19:15.270Z submit
+- action: http://localhost:3000/admin/produtos/05utgzpnb5dk0go/editar
+- fields: [{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[submit]","type":"submit","value":"","length":0,"redacted":false},{"label":"Ex: Conjunto Rendado Paris","type":"text","value":"Blusa Regata","length":12,"redacted":false},{"label":"[select]","type":"select-one","value":"okqcy3xzr7pff8b","length":15,"redacted":false},{"label":"Referência / Código Interno * Gerar Automático","type":"button","value":"","length":0,"redacted":false},{"label":"[input]","type":"text","value":"AVL-BLU-3075","length":12,"redacted":false},{"label":"Moda Praia","type":"checkbox","value":"on","length":2,"redacted":false},{"label":"Moda Sexy","type":"checkbox","value":"on","length":2,"redacted":false},{"label":"[select]","type":"select-one","value":"tcu4tw7wb58ogzv","length":15,"redacted":false},{"label":"[button]","type":"button","value":"on","length":2,"redacted":false},{"label":"[checkbox]","type":"checkbox","value":"on","length":2,"redacted":false},{"label":"[button]","type":"button","value":"on","length":2,"redacted":false},{"label":"[checkbox]","type":"checkbox","value":"on","length":2,"redacted":false},{"label":"[button]","type":"button","value":"on","length":2,"redacted":false},{"label":"[checkbox]","type":"checkbox","value":"on","length":2,"redacted":false},{"label":"[button]","type":"button","value":"on","length":2,"redacted":false},{"label":"[checkbox]","type":"checkbox","value":"on","length":2,"redacted":false},{"label":"[button]","type":"button","value":"on","length":2,"redacted":false},{"label":"[checkbox]","type":"checkbox","value":"on","length":2,"redacted":false},{"label":"[number]","type":"number","value":"29.9","length":4,"redacted":false},{"label":"[number]","type":"number","value":"19.9","length":4,"redacted":false},{"label":"Ex: 150","type":"number","value":"150","length":3,"redacted":false},{"label":"Ex: 5","type":"number","value":"5","length":1,"redacted":false},{"label":"Ex: 11","type":"number","value":"11","length":2,"redacted":false},{"label":"Ex: 20","type":"number","value":"20","length":2,"redacted":false},{"label":"Digite os tamanhos separados por vírgula...","type":"text","value":"","length":0,"redacted":false},{"label":"Digite as cores separadas por vírgula...","type":"text","value":"","length":0,"redacted":false},{"label":"Ex: 25","type":"number","value":"","length":0,"redacted":false},{"label":"Ex: 79.90","type":"number","value":"","length":0,"redacted":false},{"label":"Ex: 65.00","type":"number","value":"","length":0,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[select]","type":"select-one","value":"cropped_bege_saob28wpbv.png","length":27,"redacted":false},{"label":"[number]","type":"number","value":"100","length":3,"redacted":false},{"label":"Usar base","type":"number","value":"29.9","length":4,"redacted":false},{"label":"Usar base","type":"number","value":"19.9","length":4,"redacted":false},{"label":"[button]","type":"button","value":"on","length":2,"redacted":false},{"label":"[checkbox]","type":"checkbox","value":"on","length":2,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[select]","type":"select-one","value":"cropped_bege_saob28wpbv.png","length":27,"redacted":false},{"label":"[number]","type":"number","value":"100","length":3,"redacted":false},{"label":"Usar base","type":"number","value":"29.9","length":4,"redacted":false},{"label":"Usar base","type":"number","value":"19.9","length":4,"redacted":false},{"label":"[button]","type":"button","value":"on","length":2,"redacted":false},{"label":"[checkbox]","type":"checkbox","value":"on","length":2,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[select]","type":"select-one","value":"cropped_bege_saob28wpbv.png","length":27,"redacted":false},{"label":"[number]","type":"number","value":"100","length":3,"redacted":false},{"label":"Usar base","type":"number","value":"29.9","length":4,"redacted":false},{"label":"Usar base","type":"number","value":"19.9","length":4,"redacted":false},{"label":"[button]","type":"button","value":"on","length":2,"redacted":false},{"label":"[checkbox]","type":"checkbox","value":"on","length":2,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[select]","type":"select-one","value":"cropped_branca_lgig63cwcl.png","length":29,"redacted":false},{"label":"[number]","type":"number","value":"100","length":3,"redacted":false},{"label":"Usar base","type":"number","value":"29.9","length":4,"redacted":false},{"label":"Usar base","type":"number","value":"19.9","length":4,"redacted":false},{"label":"[button]","type":"button","value":"on","length":2,"redacted":false},{"label":"[checkbox]","type":"checkbox","value":"on","length":2,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[select]","type":"select-one","value":"cropped_branca_lgig63cwcl.png","length":29,"redacted":false},{"label":"[number]","type":"number","value":"100","length":3,"redacted":false},{"label":"Usar base","type":"number","value":"29.9","length":4,"redacted":false},{"label":"Usar base","type":"number","value":"19.9","length":4,"redacted":false},{"label":"[button]","type":"button","value":"on","length":2,"redacted":false},{"label":"[checkbox]","type":"checkbox","value":"on","length":2,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[select]","type":"select-one","value":"cropped_branca_lgig63cwcl.png","length":29,"redacted":false},{"label":"[number]","type":"number","value":"100","length":3,"redacted":false},{"label":"Usar base","type":"number","value":"29.9","length":4,"redacted":false},{"label":"Usar base","type":"number","value":"19.9","length":4,"redacted":false},{"label":"[button]","type":"button","value":"on","length":2,"redacted":false},{"label":"[checkbox]","type":"checkbox","value":"on","length":2,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[select]","type":"select-one","value":"cropped_marrom_gheogzss4x.png","length":29,"redacted":false},{"label":"[number]","type":"number","value":"100","length":3,"redacted":false},{"label":"Usar base","type":"number","value":"29.9","length":4,"redacted":false},{"label":"Usar base","type":"number","value":"19.9","length":4,"redacted":false},{"label":"[button]","type":"button","value":"on","length":2,"redacted":false},{"label":"[checkbox]","type":"checkbox","value":"on","length":2,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[select]","type":"select-one","value":"cropped_marrom_gheogzss4x.png","length":29,"redacted":false},{"label":"[number]","type":"number","value":"100","length":3,"redacted":false},{"label":"Usar base","type":"number","value":"29.9","length":4,"redacted":false},{"label":"Usar base","type":"number","value":"19.9","length":4,"redacted":false},{"label":"[button]","type":"button","value":"on","length":2,"redacted":false},{"label":"[checkbox]","type":"checkbox","value":"on","length":2,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[select]","type":"select-one","value":"cropped_marrom_gheogzss4x.png","length":29,"redacted":false},{"label":"[number]","type":"number","value":"100","length":3,"redacted":false},{"label":"Usar base","type":"number","value":"29.9","length":4,"redacted":false},{"label":"Usar base","type":"number","value":"19.9","length":4,"redacted":false},{"label":"[button]","type":"button","value":"on","length":2,"redacted":false},{"label":"[checkbox]","type":"checkbox","value":"on","length":2,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[textarea]","type":"textarea","value":"✨ A Blusa Regata Cropped da Avante Lingerie redefine o conceito de moda íntima premium, sendo ideal para compor um conjunto de lingerie confortável e sofisticado.\\n💖 Combine-a com uma elegante lingerie de renda para criar um visual moderno ou use-a sob um cropped gola alta para expressar sua versatilidade e estilo.\\n👑 Sinta o poder de uma silhueta valorizada com o toque suave e o caimento perfeito que só a nossa alta costura proporciona.","length":443,"redacted":false},{"label":"Adicionar Fotos/Vídeos","type":"file","value":"","length":0,"redacted":false},{"label":"Nome / Cor da Mídia","type":"text","value":"Bege","length":4,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"Nome / Cor da Mídia","type":"text","value":"Branca","length":6,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"Nome / Cor da Mídia","type":"text","value":"Marrom","length":6,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"Ex: https://youtube.com/shorts/... ou link .mp4","type":"url","value":"https://avantelingerie.com.br/video/cropped.mp4","length":47,"redacted":false},{"label":"[select]","type":"select-one","value":"last","length":4,"redacted":false}]
+
+## 2026-08-11 19:19:15.594Z network.error
+- method: POST
+- url: http://localhost:3000/hcgi/api/bling/produtos/sincronizar
+- status: 400
+- statusText: Bad Request
+- requestBody: {"produto_id":"05utgzpnb5dk0go"}
+- response: {"sucesso":false,"erro":"Erro de autenticação com o Bling: Nenhum token do Bling encontrado no banco de dados. Realize a autorização OAuth.. Recadastre suas credenciais."}
+- durationMs: 96
+
+## 2026-08-11 19:19:15.595Z console.error
+- text: Fetch error from http://localhost:3000/hcgi/api/bling/produtos/sincronizar: {"sucesso":false,"erro":"Erro de autenticação com o Bling: Nenhum token do Bling encontrado no banco de dados. Realize a autorização OAuth.. Recadastre suas credenciais."}
+
+## 2026-08-11 19:19:15.597Z navigate
+- url: http://localhost:3000/admin/produtos
+- via: pushState
+
+## 2026-08-11 19:19:15.695Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:19:15.696Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:19:15.697Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:19:15.697Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:19:18.856Z load
+- url: http://localhost:3000/admin/produtos
+- title: Avante Lingerie | Oficial
+
+## 2026-08-11 19:19:19.689Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:19:19.691Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:19:19.692Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:19:19.693Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:19:21.823Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Ver Loja"}
+
+## 2026-08-11 19:19:21.823Z navigate
+- url: http://localhost:3000/
+- via: pushState
+
+## 2026-08-11 19:19:22.188Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22hya9h8gimmcygbn%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 35
+
+## 2026-08-11 19:19:22.189Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22hya9h8gimmcygbn%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 19:19:22.193Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22vi937hhuvzg154r%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 40
+
+## 2026-08-11 19:19:22.193Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22219neq337ly8hpm%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 40
+
+## 2026-08-11 19:19:22.193Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22sz933rrdjx4j62w%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 40
+
+## 2026-08-11 19:19:22.194Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22vi937hhuvzg154r%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 19:19:22.195Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22219neq337ly8hpm%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 19:19:22.195Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22sz933rrdjx4j62w%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 19:19:22.198Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22okqcy3xzr7pff8b%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 44
+
+## 2026-08-11 19:19:22.199Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22okqcy3xzr7pff8b%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 19:19:22.204Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%220tioxaa5mvtikb6%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 50
+
+## 2026-08-11 19:19:22.206Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%220tioxaa5mvtikb6%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 19:19:22.219Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22z7i4vmn1n7io1np%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 65
+
+## 2026-08-11 19:19:22.220Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22km2hb4iq8cyaqut%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 66
+
+## 2026-08-11 19:19:22.220Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22z7i4vmn1n7io1np%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 19:19:22.221Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22km2hb4iq8cyaqut%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 19:19:22.264Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/colecoes/records?page=1&perPage=4&filter=ativo%20%3D%20true&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 40
+
+## 2026-08-11 19:19:22.265Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/colecoes/records?page=1&perPage=4&filter=ativo%20%3D%20true&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 19:19:22.269Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:19:22.270Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:19:22.289Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:19:22.290Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:19:22.299Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:19:22.299Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:19:22.303Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:19:22.303Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:19:22.306Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:19:22.307Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:19:38.818Z navigate
+- url: http://localhost:3000/admin/produtos
+- via: popstate
+
+## 2026-08-11 19:19:39.636Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:19:39.644Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:19:39.650Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:19:39.651Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:19:42.587Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-08-11 19:19:47.661Z load
+- url: http://localhost:3000/
+- title: Avante Lingerie | Oficial
+
+## 2026-08-11 19:19:49.219Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22hya9h8gimmcygbn%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 130
+
+## 2026-08-11 19:19:49.219Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22sz933rrdjx4j62w%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 127
+
+## 2026-08-11 19:19:49.220Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%220tioxaa5mvtikb6%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 126
+
+## 2026-08-11 19:19:49.222Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22hya9h8gimmcygbn%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 19:19:49.227Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22sz933rrdjx4j62w%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 19:19:49.228Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%220tioxaa5mvtikb6%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 19:19:49.229Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22219neq337ly8hpm%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 138
+
+## 2026-08-11 19:19:49.250Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22219neq337ly8hpm%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 19:19:49.251Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22okqcy3xzr7pff8b%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 157
+
+## 2026-08-11 19:19:49.254Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22okqcy3xzr7pff8b%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 19:19:49.271Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22z7i4vmn1n7io1np%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 177
+
+## 2026-08-11 19:19:49.271Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22km2hb4iq8cyaqut%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 176
+
+## 2026-08-11 19:19:49.272Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22vi937hhuvzg154r%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 182
+
+## 2026-08-11 19:19:49.273Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22z7i4vmn1n7io1np%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 19:19:49.274Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22km2hb4iq8cyaqut%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 19:19:49.274Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22vi937hhuvzg154r%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 19:19:49.386Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/colecoes/records?page=1&perPage=4&filter=ativo%20%3D%20true&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 108
+
+## 2026-08-11 19:19:49.386Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/colecoes/records?page=1&perPage=4&filter=ativo%20%3D%20true&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 19:19:49.462Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:19:49.463Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:19:49.493Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:19:49.494Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:19:49.505Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:19:49.505Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:19:49.518Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:19:49.519Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:19:49.522Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:19:49.522Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:20:07.758Z click
+- element: {"tag":"html","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"\n\t\timport { injectIntoGlobalHook } from \"/@react-refresh\";\ninjectIntoGlobalHook(window);\nwindow.$RefreshReg$ = () => {};\nwindow.$RefreshSig$ = () => (type) => type;\n\n\t\t\n\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\tAvante Lingerie | Sinta-se linda, confortável e confiante\n\t\t\n\t\t\n\t\t(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\n\t\tnew Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\n\t\tj=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n\t\t'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n\t\t})(window,document,'script','dataLayer','GTM-XXXXXXX');\n\t\t\n\t\tconst SITE_PAGES_ENDPOINT = '/__horizons/site-pages';\n\nconst OUTGOING_SITE_PAGES_MESSAGE = 'sitePages';\nconst INCOMING_REQUEST_SITE_PAGES_MESSAGE = 'request-site-pages';\n\nconst ALLOWED_PARENT_ORIGINS = [\n\t'https://horizons.hostinger.com',\n\t'https://horizons.hostinger.dev',\n\t'https://horizons-frontend-local.hostinger.dev',\n\t'http://localhost:4000',\n];\n\nfunction postSitePages(pages) {\n\tlet parentOrigin = window.location.ancestorOrigins?.[0];\n\tif (!parentOrigin && document.referrer) {\n\t\ttry {\n\t\t\tparentOrigin = new URL(document.referrer).origin;\n\t\t} catch {}\n\t}\n\tif (parentOrigin && ALLOWED_PARENT_ORIGINS.includes(parentOrigin)) {\n\t\twindow.parent.postMessage({ type: OUTGOING_SITE_PAGES_MESSAGE, payload: { pages } }, parentOrigin);\n\t}\n}\n\nasync function sendSitePagesToParent() {\n\tif (window.self === window.top) {\n\t\treturn;\n\t}\n\n\ttry {\n\t\tconst response = await fetch(SITE_PAGES_ENDPOINT);\n\t\tif (!response.ok) {\n\t\t\tthrow new Error(`HTTP ${response.status}`);\n\t\t}\n\t\tpostSitePages(await response.json());\n\t} catch (error) {\n\t\tconsole.error('[site-pages] Failed to send site pages to parent:', error);\n\t}\n}\n\nif (window.self !== window.top) {\n\twindow.addEventListener('load', sendSitePagesToParent);\n\twindow.addEventListener('message', (event) => {\n\t\tif (event.data?.type === INCOMING_REQUEST_SITE_PAGES_MESSAGE) {\n\t\t\tsendSitePagesToParent();\n\t\t}\n\t});\n}\n\n\t\t\n\t#root[data-edit-mode-enabled=\"true\"..."}
+
+## 2026-08-11 19:20:09.170Z click
+- element: {"tag":"div","role":"menuitem","ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Excluir"}
+
+## 2026-08-11 19:20:13.229Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:20:13.233Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:20:13.704Z click
+- element: {"tag":"main","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"ProdutosGerencie o catálogo de produtos da loja. Novo ProdutoTodas CategoriasBodyCalcinhaCamisolaCinta ModeladoraConjuntoCroppedPijamaPlus SizeProdutoCategoriaPreçoEstoqueStatusAçõesCropped Regata Gola AltaAVL-CRO-6747BodyR$ 29,90R$ 19,90900 unAbrir menu"}
+
+## 2026-08-11 19:20:14.791Z click
+- element: {"tag":"html","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"\n\t\timport { injectIntoGlobalHook } from \"/@react-refresh\";\ninjectIntoGlobalHook(window);\nwindow.$RefreshReg$ = () => {};\nwindow.$RefreshSig$ = () => (type) => type;\n\n\t\t\n\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\tAvante Lingerie | Sinta-se linda, confortável e confiante\n\t\t\n\t\t\n\t\t(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\n\t\tnew Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\n\t\tj=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n\t\t'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n\t\t})(window,document,'script','dataLayer','GTM-XXXXXXX');\n\t\t\n\t\tconst SITE_PAGES_ENDPOINT = '/__horizons/site-pages';\n\nconst OUTGOING_SITE_PAGES_MESSAGE = 'sitePages';\nconst INCOMING_REQUEST_SITE_PAGES_MESSAGE = 'request-site-pages';\n\nconst ALLOWED_PARENT_ORIGINS = [\n\t'https://horizons.hostinger.com',\n\t'https://horizons.hostinger.dev',\n\t'https://horizons-frontend-local.hostinger.dev',\n\t'http://localhost:4000',\n];\n\nfunction postSitePages(pages) {\n\tlet parentOrigin = window.location.ancestorOrigins?.[0];\n\tif (!parentOrigin && document.referrer) {\n\t\ttry {\n\t\t\tparentOrigin = new URL(document.referrer).origin;\n\t\t} catch {}\n\t}\n\tif (parentOrigin && ALLOWED_PARENT_ORIGINS.includes(parentOrigin)) {\n\t\twindow.parent.postMessage({ type: OUTGOING_SITE_PAGES_MESSAGE, payload: { pages } }, parentOrigin);\n\t}\n}\n\nasync function sendSitePagesToParent() {\n\tif (window.self === window.top) {\n\t\treturn;\n\t}\n\n\ttry {\n\t\tconst response = await fetch(SITE_PAGES_ENDPOINT);\n\t\tif (!response.ok) {\n\t\t\tthrow new Error(`HTTP ${response.status}`);\n\t\t}\n\t\tpostSitePages(await response.json());\n\t} catch (error) {\n\t\tconsole.error('[site-pages] Failed to send site pages to parent:', error);\n\t}\n}\n\nif (window.self !== window.top) {\n\twindow.addEventListener('load', sendSitePagesToParent);\n\twindow.addEventListener('message', (event) => {\n\t\tif (event.data?.type === INCOMING_REQUEST_SITE_PAGES_MESSAGE) {\n\t\t\tsendSitePagesToParent();\n\t\t}\n\t});\n}\n\n\t\t\n\t#root[data-edit-mode-enabled=\"true\"..."}
+
+## 2026-08-11 19:20:15.921Z click
+- element: {"tag":"div","role":"menuitem","ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Excluir"}
+
+## 2026-08-11 19:20:21.305Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Coleções"}
+
+## 2026-08-11 19:20:21.312Z navigate
+- url: http://localhost:3000/admin/colecoes
+- via: pushState
+
+## 2026-08-11 19:20:21.364Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/colecoes/records?page=1&perPage=500&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 38
+
+## 2026-08-11 19:20:21.364Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/colecoes/records?page=1&perPage=500&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 19:20:21.366Z console.error
+- text: 
+    Error fetching colecoes: ClientResponseError 400: ClientResponseError
+        at http://localhost:3000/node_modules/.vite/deps/pocketbase.js?v=9f09dcbc:948:13
+        at async fetchColecoes (http://localhost:3000/src/pages/admin/ColecoesManager.jsx?t=1786474353679:24:23)
+
+## 2026-08-11 19:20:26.617Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Estoque"}
+
+## 2026-08-11 19:20:26.618Z navigate
+- url: http://localhost:3000/admin/estoque
+- via: pushState
+
+## 2026-08-11 19:20:28.603Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Pedidos"}
+
+## 2026-08-11 19:20:28.605Z navigate
+- url: http://localhost:3000/admin/pedidos
+- via: pushState
+
+## 2026-08-11 19:20:31.154Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Produtos"}
+
+## 2026-08-11 19:20:31.155Z navigate
+- url: http://localhost:3000/admin/produtos
+- via: pushState
+
+## 2026-08-11 19:22:38.955Z load
+- url: http://localhost:3000/admin/produtos
+- title: Avante Lingerie | Oficial
+
+## 2026-08-11 19:22:53.524Z load
+- url: http://localhost:3000/admin/produtos
+- title: Avante Lingerie | Oficial
+
+## 2026-08-11 19:22:54.104Z navigate
+- url: http://localhost:3000/admin/login
+- via: replaceState
+
+## 2026-08-11 19:22:55.612Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"email","id":null,"placeholder":"admin@avantelingerie.com.br","label":"admin@avantelingerie.com.br","value":"","valueLength":0,"text":""}
+
+## 2026-08-11 19:22:55.830Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"email","id":null,"placeholder":"admin@avantelingerie.com.br","label":"admin@avantelingerie.com.br","value":"","valueLength":0,"text":""}
+
+## 2026-08-11 19:23:05.980Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"email","id":null,"placeholder":"admin@avantelingerie.com.br","label":"admin@avantelingerie.com.br","value":"admin@avantelingerie.com.br","valueLength":27,"text":""}
+
+## 2026-08-11 19:23:05.980Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"email","id":null,"placeholder":"admin@avantelingerie.com.br","label":"admin@avantelingerie.com.br","value":"admin@avantelingerie.com.br","valueLength":27,"text":""}
+
+## 2026-08-11 19:23:05.982Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"password","id":null,"placeholder":"••••••••","label":"••••••••","value":"[redacted:length=0]","valueLength":0,"text":""}
+
+## 2026-08-11 19:23:11.323Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"password","id":null,"placeholder":"••••••••","label":"••••••••","value":"[redacted:length=12]","valueLength":12,"text":""}
+
+## 2026-08-11 19:23:11.323Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"password","id":null,"placeholder":"••••••••","label":"••••••••","value":"[redacted:length=12]","valueLength":12,"text":""}
+
+## 2026-08-11 19:23:11.547Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"submit","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"ACESSAR PAINEL"}
+
+## 2026-08-11 19:23:11.558Z submit
+- action: http://localhost:3000/admin/login
+- fields: [{"label":"admin@avantelingerie.com.br","type":"email","value":"admin@avantelingerie.com.br","length":27,"redacted":false},{"label":"••••••••","type":"password","value":"[redacted:length=12]","length":12,"redacted":true},{"label":"Mostrar senha","type":"button","value":"","length":0,"redacted":false},{"label":"[submit]","type":"submit","value":"","length":0,"redacted":false}]
+
+## 2026-08-11 19:23:11.687Z navigate
+- url: http://localhost:3000/admin
+- via: pushState
+
+## 2026-08-11 19:23:18.079Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Coleções"}
+
+## 2026-08-11 19:23:18.081Z navigate
+- url: http://localhost:3000/admin/colecoes
+- via: pushState
+
+## 2026-08-11 19:23:18.143Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/colecoes/records?page=1&perPage=500&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 37
+
+## 2026-08-11 19:23:18.145Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/colecoes/records?page=1&perPage=500&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 19:23:18.153Z console.error
+- text: 
+    Error fetching colecoes: ClientResponseError 400: ClientResponseError
+        at http://localhost:3000/node_modules/.vite/deps/pocketbase.js?v=9f09dcbc:948:13
+        at async fetchColecoes (http://localhost:3000/src/pages/admin/ColecoesManager.jsx?t=1786474353679:24:23)
+
+## 2026-08-11 19:23:28.527Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Nova Colecao"}
+
+## 2026-08-11 19:23:32.811Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Produtos"}
+
+## 2026-08-11 19:23:32.813Z navigate
+- url: http://localhost:3000/admin/produtos
+- via: pushState
+
+## 2026-08-11 19:23:34.260Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Categorias"}
+
+## 2026-08-11 19:23:34.265Z navigate
+- url: http://localhost:3000/admin/categorias
+- via: pushState
+
+## 2026-08-11 19:23:36.112Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Coleções"}
+
+## 2026-08-11 19:23:36.113Z navigate
+- url: http://localhost:3000/admin/colecoes
+- via: pushState
+
+## 2026-08-11 19:23:36.180Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/colecoes/records?page=1&perPage=500&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 49
+
+## 2026-08-11 19:23:36.180Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/colecoes/records?page=1&perPage=500&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 19:23:36.182Z console.error
+- text: 
+    Error fetching colecoes: ClientResponseError 400: ClientResponseError
+        at http://localhost:3000/node_modules/.vite/deps/pocketbase.js?v=9f09dcbc:948:13
+        at async fetchColecoes (http://localhost:3000/src/pages/admin/ColecoesManager.jsx?t=1786474353679:24:23)
+
+## 2026-08-11 19:23:54.720Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Nova Colecao"}
+
+## 2026-08-11 19:23:56.290Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Ex: Lançamentos de Inverno","label":"Ex: Lançamentos de Inverno","value":"","valueLength":0,"text":""}
+
+## 2026-08-11 19:23:56.511Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Ex: Lançamentos de Inverno","label":"Ex: Lançamentos de Inverno","value":"","valueLength":0,"text":""}
+
+## 2026-08-11 19:24:20.206Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Ex: Lançamentos de Inverno","label":"Ex: Lançamentos de Inverno","value":"Moda Praia","valueLength":10,"text":""}
+
+## 2026-08-11 19:24:20.208Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Ex: Lançamentos de Inverno","label":"Ex: Lançamentos de Inverno","value":"Moda Praia","valueLength":10,"text":""}
+
+## 2026-08-11 19:24:20.425Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Salvar Coleção"}
+
+## 2026-08-11 19:24:20.494Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/colecoes/records?page=1&perPage=500&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 29
+
+## 2026-08-11 19:24:20.495Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/colecoes/records?page=1&perPage=500&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 19:24:20.502Z console.error
+- text: 
+    Error fetching colecoes: ClientResponseError 400: ClientResponseError
+        at http://localhost:3000/node_modules/.vite/deps/pocketbase.js?v=9f09dcbc:948:13
+        at async fetchColecoes (http://localhost:3000/src/pages/admin/ColecoesManager.jsx?t=1786474353679:24:23)
+
+## 2026-08-11 19:24:41.950Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Produtos"}
+
+## 2026-08-11 19:24:41.969Z navigate
+- url: http://localhost:3000/admin/produtos
+- via: pushState
+
+## 2026-08-11 19:24:44.074Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Novo Produto"}
+
+## 2026-08-11 19:24:44.076Z navigate
+- url: http://localhost:3000/admin/produtos/novo
+- via: pushState
+
+## 2026-08-11 19:24:51.053Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Ex: Conjunto Rendado Paris","label":"Ex: Conjunto Rendado Paris","value":"","valueLength":0,"text":""}
+
+## 2026-08-11 19:24:51.274Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Ex: Conjunto Rendado Paris","label":"Ex: Conjunto Rendado Paris","value":"","valueLength":0,"text":""}
+
+## 2026-08-11 19:25:01.700Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Ex: Conjunto Rendado Paris","label":"Ex: Conjunto Rendado Paris","value":"Cropped Regata Gola Alta","valueLength":24,"text":""}
+
+## 2026-08-11 19:25:01.700Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Ex: Conjunto Rendado Paris","label":"Ex: Conjunto Rendado Paris","value":"Cropped Regata Gola Alta","valueLength":24,"text":""}
+
+## 2026-08-11 19:25:01.702Z focus
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"","valueLength":0,"text":"Selecionar Categoria...BodyCalcinhaCamisolaCinta ModeladoraConjuntoCroppedPijamaPlus Size"}
+
+## 2026-08-11 19:25:01.924Z click
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"","valueLength":0,"text":"Selecionar Categoria...BodyCalcinhaCamisolaCinta ModeladoraConjuntoCroppedPijamaPlus Size"}
+
+## 2026-08-11 19:25:04.852Z change
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"okqcy3xzr7pff8b","valueLength":15,"text":"Selecionar Categoria...BodyCalcinhaCamisolaCinta ModeladoraConjuntoCroppedPijamaPlus Size"}
+
+## 2026-08-11 19:25:04.858Z click
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"okqcy3xzr7pff8b","valueLength":15,"text":"Selecionar Categoria...BodyCalcinhaCamisolaCinta ModeladoraConjuntoCroppedPijamaPlus Size"}
+
+## 2026-08-11 19:25:05.818Z blur
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"okqcy3xzr7pff8b","valueLength":15,"text":"Selecionar Categoria...BodyCalcinhaCamisolaCinta ModeladoraConjuntoCroppedPijamaPlus Size"}
+
+## 2026-08-11 19:25:06.024Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Gerar Automático"}
+
+## 2026-08-11 19:25:07.076Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"checkbox","id":null,"placeholder":null,"label":"Moda Praia","value":"on","valueLength":2,"text":""}
+
+## 2026-08-11 19:25:07.289Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"checkbox","id":null,"placeholder":null,"label":"Moda Praia","value":"on","valueLength":2,"text":""}
+
+## 2026-08-11 19:25:07.295Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"checkbox","id":null,"placeholder":null,"label":"Moda Praia","value":"on","valueLength":2,"text":""}
+
+## 2026-08-11 19:25:09.069Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"checkbox","id":null,"placeholder":null,"label":"Moda Praia","value":"on","valueLength":2,"text":""}
+
+## 2026-08-11 19:25:09.287Z click
+- element: {"tag":"label","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Adicionar Fotos/Vídeos"}
+
+## 2026-08-11 19:25:09.289Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"file","id":null,"placeholder":null,"label":"Adicionar Fotos/Vídeos","value":"","valueLength":0,"text":""}
+
+## 2026-08-11 19:25:16.891Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"","valueLength":0,"text":""}
+
+## 2026-08-11 19:25:17.106Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"","valueLength":0,"text":""}
+
+## 2026-08-11 19:25:21.215Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"Verde-Militar","valueLength":13,"text":""}
+
+## 2026-08-11 19:25:21.215Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"Verde-Militar","valueLength":13,"text":""}
+
+## 2026-08-11 19:25:21.216Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"","valueLength":0,"text":""}
+
+## 2026-08-11 19:25:21.438Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"","valueLength":0,"text":""}
+
+## 2026-08-11 19:25:23.567Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"Preta","valueLength":5,"text":""}
+
+## 2026-08-11 19:25:23.567Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"Preta","valueLength":5,"text":""}
+
+## 2026-08-11 19:25:23.567Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"","valueLength":0,"text":""}
+
+## 2026-08-11 19:25:23.771Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"","valueLength":0,"text":""}
+
+## 2026-08-11 19:25:29.069Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"Vinho","valueLength":5,"text":""}
+
+## 2026-08-11 19:25:29.069Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"Vinho","valueLength":5,"text":""}
+
+## 2026-08-11 19:25:29.070Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"url","id":null,"placeholder":"Ex: https://youtube.com/shorts/... ou link .mp4","label":"Ex: https://youtube.com/shorts/... ou link .mp4","value":"","valueLength":0,"text":""}
+
+## 2026-08-11 19:25:29.272Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"url","id":null,"placeholder":"Ex: https://youtube.com/shorts/... ou link .mp4","label":"Ex: https://youtube.com/shorts/... ou link .mp4","value":"","valueLength":0,"text":""}
+
+## 2026-08-11 19:25:52.141Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"url","id":null,"placeholder":"Ex: https://youtube.com/shorts/... ou link .mp4","label":"Ex: https://youtube.com/shorts/... ou link .mp4","value":"https://avantelingerie.com.br/videos/cropped.mp4","valueLength":48,"text":""}
+
+## 2026-08-11 19:25:52.412Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"url","id":null,"placeholder":"Ex: https://youtube.com/shorts/... ou link .mp4","label":"Ex: https://youtube.com/shorts/... ou link .mp4","value":"https://avantelingerie.com.br/videos/cropped.mp4","valueLength":48,"text":""}
+
+## 2026-08-11 19:25:52.552Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"url","id":null,"placeholder":"Ex: https://youtube.com/shorts/... ou link .mp4","label":"Ex: https://youtube.com/shorts/... ou link .mp4","value":"https://avantelingerie.com.br/videos/cropped.mp4","valueLength":48,"text":""}
+
+## 2026-08-11 19:25:52.768Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"url","id":null,"placeholder":"Ex: https://youtube.com/shorts/... ou link .mp4","label":"Ex: https://youtube.com/shorts/... ou link .mp4","value":"https://avantelingerie.com.br/videos/cropped.mp4","valueLength":48,"text":""}
+
+## 2026-08-11 19:25:55.347Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"url","id":null,"placeholder":"Ex: https://youtube.com/shorts/... ou link .mp4","label":"Ex: https://youtube.com/shorts/... ou link .mp4","value":"https://avantelingerie.com.br/videos/cropped.mp4","valueLength":48,"text":""}
+
+## 2026-08-11 19:25:55.349Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"url","id":null,"placeholder":"Ex: https://youtube.com/shorts/... ou link .mp4","label":"Ex: https://youtube.com/shorts/... ou link .mp4","value":"https://avantelingerie.com.br/videos/cropped.mp4","valueLength":48,"text":""}
+
+## 2026-08-11 19:26:18.435Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"url","id":null,"placeholder":"Ex: https://youtube.com/shorts/... ou link .mp4","label":"Ex: https://youtube.com/shorts/... ou link .mp4","value":"https://avantelingerie.com.br/videos/cropped.mp4","valueLength":48,"text":""}
+
+## 2026-08-11 19:26:22.166Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"url","id":null,"placeholder":"Ex: https://youtube.com/shorts/... ou link .mp4","label":"Ex: https://youtube.com/shorts/... ou link .mp4","value":"https://avantelingerie.com.br/video/cropped.mp4","valueLength":47,"text":""}
+
+## 2026-08-11 19:26:22.166Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"url","id":null,"placeholder":"Ex: https://youtube.com/shorts/... ou link .mp4","label":"Ex: https://youtube.com/shorts/... ou link .mp4","value":"https://avantelingerie.com.br/video/cropped.mp4","valueLength":47,"text":""}
+
+## 2026-08-11 19:26:22.170Z focus
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"last","valueLength":4,"text":"Exibir no FinalExibir como Primeira"}
+
+## 2026-08-11 19:26:22.371Z click
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"last","valueLength":4,"text":"Exibir no FinalExibir como Primeira"}
+
+## 2026-08-11 19:26:23.486Z change
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"first","valueLength":5,"text":"Exibir no FinalExibir como Primeira"}
+
+## 2026-08-11 19:26:23.490Z click
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"first","valueLength":5,"text":"Exibir no FinalExibir como Primeira"}
+
+## 2026-08-11 19:26:28.068Z blur
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"first","valueLength":5,"text":"Exibir no FinalExibir como Primeira"}
+
+## 2026-08-11 19:26:28.069Z focus
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"","valueLength":0,"text":"Nenhum (Venda isolada)"}
+
+## 2026-08-11 19:26:28.286Z click
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"","valueLength":0,"text":"Nenhum (Venda isolada)"}
+
+## 2026-08-11 19:26:29.603Z click
+- element: {"tag":"p","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Selecione uma peça que combina perfeitamente para incentivar a compra do conjunto (Ex: calcinha para combinar com este sutiã)."}
+
+## 2026-08-11 19:26:30.820Z click
+- element: {"tag":"button","role":"switch","ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-08-11 19:26:30.833Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"checkbox","id":null,"placeholder":null,"label":"[checkbox]","value":"on","valueLength":2,"text":""}
+
+## 2026-08-11 19:26:34.685Z click
+- element: {"tag":"button","role":"switch","ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-08-11 19:26:34.692Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"checkbox","id":null,"placeholder":null,"label":"[checkbox]","value":"on","valueLength":2,"text":""}
+
+## 2026-08-11 19:26:35.860Z click
+- element: {"tag":"button","role":"switch","ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-08-11 19:26:35.865Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"checkbox","id":null,"placeholder":null,"label":"[checkbox]","value":"on","valueLength":2,"text":""}
+
+## 2026-08-11 19:26:36.844Z click
+- element: {"tag":"button","role":"switch","ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-08-11 19:26:36.847Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"checkbox","id":null,"placeholder":null,"label":"[checkbox]","value":"on","valueLength":2,"text":""}
+
+## 2026-08-11 19:26:39.889Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":null,"label":"[number]","value":"","valueLength":0,"text":""}
+
+## 2026-08-11 19:26:40.092Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":null,"label":"[number]","value":"","valueLength":0,"text":""}
+
+## 2026-08-11 19:26:41.487Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":null,"label":"[number]","value":"29.90","valueLength":5,"text":""}
+
+## 2026-08-11 19:26:41.487Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":null,"label":"[number]","value":"29.90","valueLength":5,"text":""}
+
+## 2026-08-11 19:26:41.488Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":null,"label":"[number]","value":"","valueLength":0,"text":""}
+
+## 2026-08-11 19:26:43.038Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":null,"label":"[number]","value":"19.90","valueLength":5,"text":""}
+
+## 2026-08-11 19:26:43.038Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":null,"label":"[number]","value":"19.90","valueLength":5,"text":""}
+
+## 2026-08-11 19:26:43.040Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 150","label":"Ex: 150","value":"","valueLength":0,"text":""}
+
+## 2026-08-11 19:26:45.275Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 150","label":"Ex: 150","value":"150","valueLength":3,"text":""}
+
+## 2026-08-11 19:26:45.275Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 150","label":"Ex: 150","value":"150","valueLength":3,"text":""}
+
+## 2026-08-11 19:26:45.278Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 5","label":"Ex: 5","value":"","valueLength":0,"text":""}
+
+## 2026-08-11 19:26:47.132Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 5","label":"Ex: 5","value":"5","valueLength":1,"text":""}
+
+## 2026-08-11 19:26:47.132Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 5","label":"Ex: 5","value":"5","valueLength":1,"text":""}
+
+## 2026-08-11 19:26:47.134Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 11","label":"Ex: 11","value":"","valueLength":0,"text":""}
+
+## 2026-08-11 19:26:48.111Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 11","label":"Ex: 11","value":"11","valueLength":2,"text":""}
+
+## 2026-08-11 19:26:48.112Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 11","label":"Ex: 11","value":"11","valueLength":2,"text":""}
+
+## 2026-08-11 19:26:48.113Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 20","label":"Ex: 20","value":"","valueLength":0,"text":""}
+
+## 2026-08-11 19:26:49.183Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 20","label":"Ex: 20","value":"20","valueLength":2,"text":""}
+
+## 2026-08-11 19:26:49.183Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 20","label":"Ex: 20","value":"20","valueLength":2,"text":""}
+
+## 2026-08-11 19:26:49.185Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Digite os tamanhos separados por vírgula...","label":"Digite os tamanhos separados por vírgula...","value":"","valueLength":0,"text":""}
+
+## 2026-08-11 19:26:53.336Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Digite os tamanhos separados por vírgula...","label":"Digite os tamanhos separados por vírgula...","value":"P, M, G","valueLength":7,"text":""}
+
+## 2026-08-11 19:26:53.337Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Digite os tamanhos separados por vírgula...","label":"Digite os tamanhos separados por vírgula...","value":"P, M, G","valueLength":7,"text":""}
+
+## 2026-08-11 19:26:53.341Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Digite as cores separadas por vírgula...","label":"Digite as cores separadas por vírgula...","value":"","valueLength":0,"text":""}
+
+## 2026-08-11 19:27:03.501Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Digite as cores separadas por vírgula...","label":"Digite as cores separadas por vírgula...","value":"Verde-Militar, Preta, Vinho","valueLength":27,"text":""}
+
+## 2026-08-11 19:27:03.501Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Digite as cores separadas por vírgula...","label":"Digite as cores separadas por vírgula...","value":"Verde-Militar, Preta, Vinho","valueLength":27,"text":""}
+
+## 2026-08-11 19:27:03.502Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 25","label":"Ex: 25","value":"","valueLength":0,"text":""}
+
+## 2026-08-11 19:27:05.673Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 25","label":"Ex: 25","value":"100","valueLength":3,"text":""}
+
+## 2026-08-11 19:27:05.673Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 25","label":"Ex: 25","value":"100","valueLength":3,"text":""}
+
+## 2026-08-11 19:27:05.675Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 79.90","label":"Ex: 79.90","value":"","valueLength":0,"text":""}
+
+## 2026-08-11 19:27:11.232Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 79.90","label":"Ex: 79.90","value":"29.90","valueLength":5,"text":""}
+
+## 2026-08-11 19:27:11.233Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 79.90","label":"Ex: 79.90","value":"29.90","valueLength":5,"text":""}
+
+## 2026-08-11 19:27:11.240Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 65.00","label":"Ex: 65.00","value":"","valueLength":0,"text":""}
+
+## 2026-08-11 19:27:15.632Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 65.00","label":"Ex: 65.00","value":"19.90","valueLength":5,"text":""}
+
+## 2026-08-11 19:27:15.632Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 65.00","label":"Ex: 65.00","value":"19.90","valueLength":5,"text":""}
+
+## 2026-08-11 19:27:15.837Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Gerar Variações"}
+
+## 2026-08-11 19:27:19.817Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Assistente de Descrições IA"}
+
+## 2026-08-11 19:27:19.876Z console.warn
+- text: Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+
+## 2026-08-11 19:27:19.925Z focus
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"conforto","valueLength":8,"text":"Conforto / Dia a DiaSensual / OusadoRomântico / DelicadoLuxo / SofisticadoFitness / EsportivoPijama / LoungewearCropped / OutwearModelador / Cinta"}
+
+## 2026-08-11 19:27:21.300Z click
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"conforto","valueLength":8,"text":"Conforto / Dia a DiaSensual / OusadoRomântico / DelicadoLuxo / SofisticadoFitness / EsportivoPijama / LoungewearCropped / OutwearModelador / Cinta"}
+
+## 2026-08-11 19:27:23.669Z change
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"cropped","valueLength":7,"text":"Conforto / Dia a DiaSensual / OusadoRomântico / DelicadoLuxo / SofisticadoFitness / EsportivoPijama / LoungewearCropped / OutwearModelador / Cinta"}
+
+## 2026-08-11 19:27:23.679Z click
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"cropped","valueLength":7,"text":"Conforto / Dia a DiaSensual / OusadoRomântico / DelicadoLuxo / SofisticadoFitness / EsportivoPijama / LoungewearCropped / OutwearModelador / Cinta"}
+
+## 2026-08-11 19:27:24.531Z blur
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"cropped","valueLength":7,"text":"Conforto / Dia a DiaSensual / OusadoRomântico / DelicadoLuxo / SofisticadoFitness / EsportivoPijama / LoungewearCropped / OutwearModelador / Cinta"}
+
+## 2026-08-11 19:27:24.532Z focus
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"microfibra","valueLength":10,"text":"MicrofibraRendaAlgodãoTuleCetimVeludo"}
+
+## 2026-08-11 19:27:24.749Z click
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"microfibra","valueLength":10,"text":"MicrofibraRendaAlgodãoTuleCetimVeludo"}
+
+## 2026-08-11 19:27:25.675Z change
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"algodao","valueLength":7,"text":"MicrofibraRendaAlgodãoTuleCetimVeludo"}
+
+## 2026-08-11 19:27:25.685Z click
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"algodao","valueLength":7,"text":"MicrofibraRendaAlgodãoTuleCetimVeludo"}
+
+## 2026-08-11 19:27:26.597Z blur
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"algodao","valueLength":7,"text":"MicrofibraRendaAlgodãoTuleCetimVeludo"}
+
+## 2026-08-11 19:27:26.814Z click
+- element: {"tag":"label","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Forro 100% Algodão Hipoalergênico"}
+
+## 2026-08-11 19:27:26.816Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"checkbox","id":null,"placeholder":null,"label":"Forro 100% Algodão Hipoalergênico","value":"on","valueLength":2,"text":""}
+
+## 2026-08-11 19:27:26.816Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"checkbox","id":null,"placeholder":null,"label":"Forro 100% Algodão Hipoalergênico","value":"on","valueLength":2,"text":""}
+
+## 2026-08-11 19:27:26.822Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"checkbox","id":null,"placeholder":null,"label":"Forro 100% Algodão Hipoalergênico","value":"on","valueLength":2,"text":""}
+
+## 2026-08-11 19:27:27.692Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"checkbox","id":null,"placeholder":null,"label":"Forro 100% Algodão Hipoalergênico","value":"on","valueLength":2,"text":""}
+
+## 2026-08-11 19:27:27.899Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Gerar com Gemini AI"}
+
+## 2026-08-11 19:27:46.198Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"submit","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Salvar"}
+
+## 2026-08-11 19:27:46.217Z submit
+- action: http://localhost:3000/admin/produtos/novo
+- fields: [{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[submit]","type":"submit","value":"","length":0,"redacted":false},{"label":"Ex: Conjunto Rendado Paris","type":"text","value":"Cropped Regata Gola Alta","length":24,"redacted":false},{"label":"[select]","type":"select-one","value":"okqcy3xzr7pff8b","length":15,"redacted":false},{"label":"Referência / Código Interno * Gerar Automático","type":"button","value":"","length":0,"redacted":false},{"label":"[input]","type":"text","value":"AVL-CRO-7900","length":12,"redacted":false},{"label":"Moda Praia","type":"checkbox","value":"on","length":2,"redacted":false},{"label":"[select]","type":"select-one","value":"","length":0,"redacted":false},{"label":"[button]","type":"button","value":"on","length":2,"redacted":false},{"label":"[checkbox]","type":"checkbox","value":"on","length":2,"redacted":false},{"label":"[button]","type":"button","value":"on","length":2,"redacted":false},{"label":"[checkbox]","type":"checkbox","value":"on","length":2,"redacted":false},{"label":"[button]","type":"button","value":"on","length":2,"redacted":false},{"label":"[checkbox]","type":"checkbox","value":"on","length":2,"redacted":false},{"label":"[button]","type":"button","value":"on","length":2,"redacted":false},{"label":"[checkbox]","type":"checkbox","value":"on","length":2,"redacted":false},{"label":"[button]","type":"button","value":"on","length":2,"redacted":false},{"label":"[checkbox]","type":"checkbox","value":"on","length":2,"redacted":false},{"label":"[number]","type":"number","value":"29.90","length":5,"redacted":false},{"label":"[number]","type":"number","value":"19.90","length":5,"redacted":false},{"label":"Ex: 150","type":"number","value":"150","length":3,"redacted":false},{"label":"Ex: 5","type":"number","value":"5","length":1,"redacted":false},{"label":"Ex: 11","type":"number","value":"11","length":2,"redacted":false},{"label":"Ex: 20","type":"number","value":"20","length":2,"redacted":false},{"label":"Digite os tamanhos separados por vírgula...","type":"text","value":"","length":0,"redacted":false},{"label":"Digite as cores separadas por vírgula...","type":"text","value":"","length":0,"redacted":false},{"label":"Ex: 25","type":"number","value":"","length":0,"redacted":false},{"label":"Ex: 79.90","type":"number","value":"","length":0,"redacted":false},{"label":"Ex: 65.00","type":"number","value":"","length":0,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[select]","type":"select-one","value":"new-1786476315725-0","length":19,"redacted":false},{"label":"[number]","type":"number","value":"100","length":3,"redacted":false},{"label":"Usar base","type":"number","value":"29.9","length":4,"redacted":false},{"label":"Usar base","type":"number","value":"19.9","length":4,"redacted":false},{"label":"[button]","type":"button","value":"on","length":2,"redacted":false},{"label":"[checkbox]","type":"checkbox","value":"on","length":2,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[select]","type":"select-one","value":"new-1786476315725-0","length":19,"redacted":false},{"label":"[number]","type":"number","value":"100","length":3,"redacted":false},{"label":"Usar base","type":"number","value":"29.9","length":4,"redacted":false},{"label":"Usar base","type":"number","value":"19.9","length":4,"redacted":false},{"label":"[button]","type":"button","value":"on","length":2,"redacted":false},{"label":"[checkbox]","type":"checkbox","value":"on","length":2,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[select]","type":"select-one","value":"new-1786476315725-0","length":19,"redacted":false},{"label":"[number]","type":"number","value":"100","length":3,"redacted":false},{"label":"Usar base","type":"number","value":"29.9","length":4,"redacted":false},{"label":"Usar base","type":"number","value":"19.9","length":4,"redacted":false},{"label":"[button]","type":"button","value":"on","length":2,"redacted":false},{"label":"[checkbox]","type":"checkbox","value":"on","length":2,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[select]","type":"select-one","value":"new-1786476315725-1","length":19,"redacted":false},{"label":"[number]","type":"number","value":"100","length":3,"redacted":false},{"label":"Usar base","type":"number","value":"29.9","length":4,"redacted":false},{"label":"Usar base","type":"number","value":"19.9","length":4,"redacted":false},{"label":"[button]","type":"button","value":"on","length":2,"redacted":false},{"label":"[checkbox]","type":"checkbox","value":"on","length":2,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[select]","type":"select-one","value":"new-1786476315725-1","length":19,"redacted":false},{"label":"[number]","type":"number","value":"100","length":3,"redacted":false},{"label":"Usar base","type":"number","value":"29.9","length":4,"redacted":false},{"label":"Usar base","type":"number","value":"19.9","length":4,"redacted":false},{"label":"[button]","type":"button","value":"on","length":2,"redacted":false},{"label":"[checkbox]","type":"checkbox","value":"on","length":2,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[select]","type":"select-one","value":"new-1786476315725-1","length":19,"redacted":false},{"label":"[number]","type":"number","value":"100","length":3,"redacted":false},{"label":"Usar base","type":"number","value":"29.9","length":4,"redacted":false},{"label":"Usar base","type":"number","value":"19.9","length":4,"redacted":false},{"label":"[button]","type":"button","value":"on","length":2,"redacted":false},{"label":"[checkbox]","type":"checkbox","value":"on","length":2,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[select]","type":"select-one","value":"new-1786476315725-2","length":19,"redacted":false},{"label":"[number]","type":"number","value":"100","length":3,"redacted":false},{"label":"Usar base","type":"number","value":"29.9","length":4,"redacted":false},{"label":"Usar base","type":"number","value":"19.9","length":4,"redacted":false},{"label":"[button]","type":"button","value":"on","length":2,"redacted":false},{"label":"[checkbox]","type":"checkbox","value":"on","length":2,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[select]","type":"select-one","value":"new-1786476315725-2","length":19,"redacted":false},{"label":"[number]","type":"number","value":"100","length":3,"redacted":false},{"label":"Usar base","type":"number","value":"29.9","length":4,"redacted":false},{"label":"Usar base","type":"number","value":"19.9","length":4,"redacted":false},{"label":"[button]","type":"button","value":"on","length":2,"redacted":false},{"label":"[checkbox]","type":"checkbox","value":"on","length":2,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[select]","type":"select-one","value":"new-1786476315725-2","length":19,"redacted":false},{"label":"[number]","type":"number","value":"100","length":3,"redacted":false},{"label":"Usar base","type":"number","value":"29.9","length":4,"redacted":false},{"label":"Usar base","type":"number","value":"19.9","length":4,"redacted":false},{"label":"[button]","type":"button","value":"on","length":2,"redacted":false},{"label":"[checkbox]","type":"checkbox","value":"on","length":2,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[textarea]","type":"textarea","value":"✨ Eleve seu estilo com o Cropped Regata Gola Alta da Avante Lingerie, a união perfeita entre a sofisticação da moda íntima premium e a versatilidade do casual chic.\n💖 Desenvolvido para mulheres que não abrem mão de um conjunto de lingerie confortável, ele transita facilmente entre a sensualidade sutil e o visual urbano.\n👑 Uma peça coringa e indispensável que valoriza sua beleza natural com máxima elegância.","length":412,"redacted":false},{"label":"Adicionar Fotos/Vídeos","type":"file","value":"C:\\fakepath\\cropped_verdemilitar(#5D6532).png","length":45,"redacted":false},{"label":"Nome / Cor da Mídia","type":"text","value":"Verde-Militar","length":13,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"Nome / Cor da Mídia","type":"text","value":"Preta","length":5,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"Nome / Cor da Mídia","type":"text","value":"Vinho","length":5,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"Ex: https://youtube.com/shorts/... ou link .mp4","type":"url","value":"https://avantelingerie.com.br/video/cropped.mp4","length":47,"redacted":false},{"label":"[select]","type":"select-one","value":"first","length":5,"redacted":false}]
+
+## 2026-08-11 19:27:46.788Z network.error
+- method: POST
+- url: http://localhost:3000/hcgi/api/bling/produtos/sincronizar
+- status: 400
+- statusText: Bad Request
+- requestBody: {"produto_id":"qgwevudqxue8gg7"}
+- response: {"sucesso":false,"erro":"Erro de autenticação com o Bling: Nenhum token do Bling encontrado no banco de dados. Realize a autorização OAuth.. Recadastre suas credenciais."}
+- durationMs: 44
+
+## 2026-08-11 19:27:46.789Z console.error
+- text: Fetch error from http://localhost:3000/hcgi/api/bling/produtos/sincronizar: {"sucesso":false,"erro":"Erro de autenticação com o Bling: Nenhum token do Bling encontrado no banco de dados. Realize a autorização OAuth.. Recadastre suas credenciais."}
+
+## 2026-08-11 19:27:46.802Z navigate
+- url: http://localhost:3000/admin/produtos
+- via: pushState
+
+## 2026-08-11 19:27:46.961Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:27:46.968Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:27:50.213Z click
+- element: {"tag":"main","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"ProdutosGerencie o catálogo de produtos da loja. Novo ProdutoTodas CategoriasBodyCalcinhaCamisolaCinta ModeladoraConjuntoCroppedPijamaPlus SizeProdutoCategoriaPreçoEstoqueStatusAçõesCropped Regata Gola AltaAVL-CRO-7900CroppedR$ 29,90R$ 19,90900 unAbrir menu"}
+
+## 2026-08-11 19:27:52.212Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Ver Loja"}
+
+## 2026-08-11 19:27:52.213Z navigate
+- url: http://localhost:3000/
+- via: pushState
+
+## 2026-08-11 19:28:01.412Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22219neq337ly8hpm%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 269
+
+## 2026-08-11 19:28:01.421Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22219neq337ly8hpm%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 19:28:01.507Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22hya9h8gimmcygbn%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 365
+
+## 2026-08-11 19:28:01.507Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22sz933rrdjx4j62w%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 364
+
+## 2026-08-11 19:28:01.521Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22hya9h8gimmcygbn%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 19:28:01.522Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22sz933rrdjx4j62w%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 19:28:01.522Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22vi937hhuvzg154r%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 380
+
+## 2026-08-11 19:28:01.522Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22vi937hhuvzg154r%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 19:28:01.615Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%220tioxaa5mvtikb6%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 472
+
+## 2026-08-11 19:28:01.616Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%220tioxaa5mvtikb6%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 19:28:01.616Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22okqcy3xzr7pff8b%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 473
+
+## 2026-08-11 19:28:01.616Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22z7i4vmn1n7io1np%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 473
+
+## 2026-08-11 19:28:01.617Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22okqcy3xzr7pff8b%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 19:28:01.618Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22z7i4vmn1n7io1np%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 19:28:01.664Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22km2hb4iq8cyaqut%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 521
+
+## 2026-08-11 19:28:01.664Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22km2hb4iq8cyaqut%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 19:28:01.978Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/colecoes/records?page=1&perPage=4&filter=ativo%20%3D%20true&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 310
+
+## 2026-08-11 19:28:01.978Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/colecoes/records?page=1&perPage=4&filter=ativo%20%3D%20true&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 19:28:02.598Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:28:02.604Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:28:02.627Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:28:02.627Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:28:02.655Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:28:02.656Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:28:02.669Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:28:02.669Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:28:12.200Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-08-11 19:28:51.189Z navigate
+- url: http://localhost:3000/admin/produtos
+- via: popstate
+
+## 2026-08-11 19:28:52.186Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:28:52.190Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:28:59.537Z click
+- element: {"tag":"html","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"\n\t\timport { injectIntoGlobalHook } from \"/@react-refresh\";\ninjectIntoGlobalHook(window);\nwindow.$RefreshReg$ = () => {};\nwindow.$RefreshSig$ = () => (type) => type;\n\n\t\t\n\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\tAvante Lingerie | Sinta-se linda, confortável e confiante\n\t\t\n\t\t\n\t\t(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\n\t\tnew Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\n\t\tj=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n\t\t'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n\t\t})(window,document,'script','dataLayer','GTM-XXXXXXX');\n\t\t\n\t\tconst SITE_PAGES_ENDPOINT = '/__horizons/site-pages';\n\nconst OUTGOING_SITE_PAGES_MESSAGE = 'sitePages';\nconst INCOMING_REQUEST_SITE_PAGES_MESSAGE = 'request-site-pages';\n\nconst ALLOWED_PARENT_ORIGINS = [\n\t'https://horizons.hostinger.com',\n\t'https://horizons.hostinger.dev',\n\t'https://horizons-frontend-local.hostinger.dev',\n\t'http://localhost:4000',\n];\n\nfunction postSitePages(pages) {\n\tlet parentOrigin = window.location.ancestorOrigins?.[0];\n\tif (!parentOrigin && document.referrer) {\n\t\ttry {\n\t\t\tparentOrigin = new URL(document.referrer).origin;\n\t\t} catch {}\n\t}\n\tif (parentOrigin && ALLOWED_PARENT_ORIGINS.includes(parentOrigin)) {\n\t\twindow.parent.postMessage({ type: OUTGOING_SITE_PAGES_MESSAGE, payload: { pages } }, parentOrigin);\n\t}\n}\n\nasync function sendSitePagesToParent() {\n\tif (window.self === window.top) {\n\t\treturn;\n\t}\n\n\ttry {\n\t\tconst response = await fetch(SITE_PAGES_ENDPOINT);\n\t\tif (!response.ok) {\n\t\t\tthrow new Error(`HTTP ${response.status}`);\n\t\t}\n\t\tpostSitePages(await response.json());\n\t} catch (error) {\n\t\tconsole.error('[site-pages] Failed to send site pages to parent:', error);\n\t}\n}\n\nif (window.self !== window.top) {\n\twindow.addEventListener('load', sendSitePagesToParent);\n\twindow.addEventListener('message', (event) => {\n\t\tif (event.data?.type === INCOMING_REQUEST_SITE_PAGES_MESSAGE) {\n\t\t\tsendSitePagesToParent();\n\t\t}\n\t});\n}\n\n\t\t\n\t#root[data-edit-mode-enabled=\"true\"..."}
+
+## 2026-08-11 19:29:00.886Z click
+- element: {"tag":"div","role":"menuitem","ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Editar"}
+
+## 2026-08-11 19:29:00.889Z navigate
+- url: http://localhost:3000/admin/produtos/qgwevudqxue8gg7/editar
+- via: pushState
+
+## 2026-08-11 19:29:00.990Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:29:00.991Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:29:00.991Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:33:47.191Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Ver Loja"}
+
+## 2026-08-11 19:33:47.210Z navigate
+- url: http://localhost:3000/
+- via: pushState
+
+## 2026-08-11 19:33:47.988Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22hya9h8gimmcygbn%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 29
+
+## 2026-08-11 19:33:47.988Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22hya9h8gimmcygbn%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 19:33:48.000Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22vi937hhuvzg154r%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 41
+
+## 2026-08-11 19:33:48.001Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22vi937hhuvzg154r%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 19:33:48.001Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22219neq337ly8hpm%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 41
+
+## 2026-08-11 19:33:48.002Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22219neq337ly8hpm%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 19:33:48.002Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%220tioxaa5mvtikb6%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 42
+
+## 2026-08-11 19:33:48.002Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%220tioxaa5mvtikb6%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 19:33:48.037Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22sz933rrdjx4j62w%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 77
+
+## 2026-08-11 19:33:48.037Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22sz933rrdjx4j62w%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 19:33:48.050Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22z7i4vmn1n7io1np%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 89
+
+## 2026-08-11 19:33:48.050Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22z7i4vmn1n7io1np%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 19:33:48.054Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22okqcy3xzr7pff8b%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 94
+
+## 2026-08-11 19:33:48.055Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22okqcy3xzr7pff8b%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 19:33:48.067Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22km2hb4iq8cyaqut%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 105
+
+## 2026-08-11 19:33:48.067Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22km2hb4iq8cyaqut%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 19:33:48.393Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/colecoes/records?page=1&perPage=4&filter=ativo%20%3D%20true&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 325
+
+## 2026-08-11 19:33:48.393Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/colecoes/records?page=1&perPage=4&filter=ativo%20%3D%20true&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 19:33:48.402Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:33:48.405Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:33:48.432Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:33:48.432Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:33:48.446Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:33:48.447Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:33:48.465Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:33:48.465Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:33:56.808Z click
+- element: {"tag":"h2","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Explore Nossas Coleções"}
+
+## 2026-08-11 19:34:22.098Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-08-11 19:41:25.897Z load
+- url: http://localhost:3000/
+- title: Avante Lingerie | Oficial
+
+## 2026-08-11 19:41:31.869Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22hya9h8gimmcygbn%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 309
+
+## 2026-08-11 19:41:31.870Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22vi937hhuvzg154r%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 304
+
+## 2026-08-11 19:41:31.870Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22219neq337ly8hpm%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 301
+
+## 2026-08-11 19:41:31.870Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%220tioxaa5mvtikb6%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 295
+
+## 2026-08-11 19:41:31.871Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22km2hb4iq8cyaqut%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 271
+
+## 2026-08-11 19:41:31.902Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22sz933rrdjx4j62w%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 328
+
+## 2026-08-11 19:41:31.903Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22okqcy3xzr7pff8b%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 314
+
+## 2026-08-11 19:41:31.903Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22z7i4vmn1n7io1np%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 310
+
+## 2026-08-11 19:41:31.914Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22hya9h8gimmcygbn%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 19:41:31.949Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22vi937hhuvzg154r%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 19:41:31.952Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22219neq337ly8hpm%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 19:41:31.953Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%220tioxaa5mvtikb6%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 19:41:31.972Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22km2hb4iq8cyaqut%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 19:41:31.972Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22sz933rrdjx4j62w%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 19:41:31.973Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22okqcy3xzr7pff8b%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 19:41:31.973Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22z7i4vmn1n7io1np%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 19:41:32.785Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/colecoes/records?page=1&perPage=4&filter=ativo%20%3D%20true&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 740
+
+## 2026-08-11 19:41:32.787Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/colecoes/records?page=1&perPage=4&filter=ativo%20%3D%20true&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 19:41:32.807Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:41:32.809Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:41:32.854Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:41:32.855Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:41:32.887Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:41:32.888Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:41:32.946Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:41:32.946Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:49:28.849Z load
+- url: http://localhost:3000/
+- title: Avante Lingerie | Oficial
+
+## 2026-08-11 19:49:31.081Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22vi937hhuvzg154r%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 298
+
+## 2026-08-11 19:49:31.082Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%220tioxaa5mvtikb6%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 298
+
+## 2026-08-11 19:49:31.083Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22sz933rrdjx4j62w%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 299
+
+## 2026-08-11 19:49:31.083Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22hya9h8gimmcygbn%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 300
+
+## 2026-08-11 19:49:31.083Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22219neq337ly8hpm%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 299
+
+## 2026-08-11 19:49:31.084Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22vi937hhuvzg154r%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 19:49:31.088Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%220tioxaa5mvtikb6%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 19:49:31.089Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22sz933rrdjx4j62w%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 19:49:31.089Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22hya9h8gimmcygbn%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 19:49:31.089Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22219neq337ly8hpm%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 19:49:31.095Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22z7i4vmn1n7io1np%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 304
+
+## 2026-08-11 19:49:31.095Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22z7i4vmn1n7io1np%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 19:49:31.101Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22km2hb4iq8cyaqut%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 309
+
+## 2026-08-11 19:49:31.101Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22km2hb4iq8cyaqut%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 19:49:31.102Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22okqcy3xzr7pff8b%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 311
+
+## 2026-08-11 19:49:31.102Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22okqcy3xzr7pff8b%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 19:49:31.302Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:49:31.305Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:49:31.367Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:49:31.368Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:49:31.392Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:49:31.394Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:49:31.402Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:49:31.402Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:49:45.917Z load
+- url: http://localhost:3000/
+- title: Avante Lingerie | Oficial
+
+## 2026-08-11 19:49:47.413Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22hya9h8gimmcygbn%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 93
+
+## 2026-08-11 19:49:47.414Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22hya9h8gimmcygbn%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 19:49:47.439Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22vi937hhuvzg154r%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 118
+
+## 2026-08-11 19:49:47.439Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22vi937hhuvzg154r%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 19:49:47.440Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22219neq337ly8hpm%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 118
+
+## 2026-08-11 19:49:47.440Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22219neq337ly8hpm%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 19:49:47.606Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22sz933rrdjx4j62w%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 285
+
+## 2026-08-11 19:49:47.606Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%220tioxaa5mvtikb6%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 284
+
+## 2026-08-11 19:49:47.606Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22okqcy3xzr7pff8b%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 284
+
+## 2026-08-11 19:49:47.606Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22z7i4vmn1n7io1np%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 284
+
+## 2026-08-11 19:49:47.606Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22km2hb4iq8cyaqut%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 284
+
+## 2026-08-11 19:49:47.606Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22sz933rrdjx4j62w%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 19:49:47.607Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%220tioxaa5mvtikb6%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 19:49:47.607Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22okqcy3xzr7pff8b%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 19:49:47.607Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22z7i4vmn1n7io1np%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 19:49:47.607Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22km2hb4iq8cyaqut%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 19:49:48.023Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:49:48.024Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:49:48.052Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:49:48.053Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:49:48.060Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:49:48.061Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:49:48.067Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:49:48.067Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:49:51.150Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Aceitar & Continuar"}
+
+## 2026-08-11 19:51:36.858Z load
+- url: http://localhost:3000/admin
+- title: Avante Lingerie | Oficial
+
+## 2026-08-11 19:51:37.431Z navigate
+- url: http://localhost:3000/admin
+- via: replaceState
+
+## 2026-08-11 19:51:37.790Z navigate
+- url: http://localhost:3000/admin/login
+- via: replaceState
+
+## 2026-08-11 19:51:39.180Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"email","id":null,"placeholder":"admin@avantelingerie.com.br","label":"admin@avantelingerie.com.br","value":"","valueLength":0,"text":""}
+
+## 2026-08-11 19:51:39.403Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"email","id":null,"placeholder":"admin@avantelingerie.com.br","label":"admin@avantelingerie.com.br","value":"","valueLength":0,"text":""}
+
+## 2026-08-11 19:51:52.218Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"email","id":null,"placeholder":"admin@avantelingerie.com.br","label":"admin@avantelingerie.com.br","value":"admin@avantelingerie.com.br","valueLength":27,"text":""}
+
+## 2026-08-11 19:51:52.220Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"email","id":null,"placeholder":"admin@avantelingerie.com.br","label":"admin@avantelingerie.com.br","value":"admin@avantelingerie.com.br","valueLength":27,"text":""}
+
+## 2026-08-11 19:51:52.220Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"password","id":null,"placeholder":"••••••••","label":"••••••••","value":"[redacted:length=0]","valueLength":0,"text":""}
+
+## 2026-08-11 19:51:52.450Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"password","id":null,"placeholder":"••••••••","label":"••••••••","value":"[redacted:length=0]","valueLength":0,"text":""}
+
+## 2026-08-11 19:51:57.210Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"password","id":null,"placeholder":"••••••••","label":"••••••••","value":"[redacted:length=12]","valueLength":12,"text":""}
+
+## 2026-08-11 19:51:57.210Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"password","id":null,"placeholder":"••••••••","label":"••••••••","value":"[redacted:length=12]","valueLength":12,"text":""}
+
+## 2026-08-11 19:51:57.433Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"submit","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"ACESSAR PAINEL"}
+
+## 2026-08-11 19:51:57.439Z submit
+- action: http://localhost:3000/admin/login
+- fields: [{"label":"admin@avantelingerie.com.br","type":"email","value":"admin@avantelingerie.com.br","length":27,"redacted":false},{"label":"••••••••","type":"password","value":"[redacted:length=12]","length":12,"redacted":true},{"label":"Mostrar senha","type":"button","value":"","length":0,"redacted":false},{"label":"[submit]","type":"submit","value":"","length":0,"redacted":false}]
+
+## 2026-08-11 19:51:57.634Z navigate
+- url: http://localhost:3000/admin
+- via: pushState
+
+## 2026-08-11 19:52:01.712Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Coleções"}
+
+## 2026-08-11 19:52:01.714Z navigate
+- url: http://localhost:3000/admin/colecoes
+- via: pushState
+
+## 2026-08-11 19:52:06.349Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Nova Colecao"}
+
+## 2026-08-11 19:52:09.140Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Ex: Lançamentos de Inverno","label":"Ex: Lançamentos de Inverno","value":"","valueLength":0,"text":""}
+
+## 2026-08-11 19:52:09.346Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Ex: Lançamentos de Inverno","label":"Ex: Lançamentos de Inverno","value":"","valueLength":0,"text":""}
+
+## 2026-08-11 19:52:14.351Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Ex: Lançamentos de Inverno","label":"Ex: Lançamentos de Inverno","value":"Moda Sexy","valueLength":9,"text":""}
+
+## 2026-08-11 19:52:14.352Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Ex: Lançamentos de Inverno","label":"Ex: Lançamentos de Inverno","value":"Moda Sexy","valueLength":9,"text":""}
+
+## 2026-08-11 19:52:14.356Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"ex-lancamentos-inverno","label":"ex-lancamentos-inverno","value":"moda-sexy","valueLength":9,"text":""}
+
+## 2026-08-11 19:52:19.299Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"ex-lancamentos-inverno","label":"ex-lancamentos-inverno","value":"moda-sexy","valueLength":9,"text":""}
+
+## 2026-08-11 19:52:19.513Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Salvar Coleção"}
+
+## 2026-08-11 19:52:24.680Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Nova Colecao"}
+
+## 2026-08-11 19:52:26.211Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Ex: Lançamentos de Inverno","label":"Ex: Lançamentos de Inverno","value":"","valueLength":0,"text":""}
+
+## 2026-08-11 19:52:26.431Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Ex: Lançamentos de Inverno","label":"Ex: Lançamentos de Inverno","value":"","valueLength":0,"text":""}
+
+## 2026-08-11 19:52:31.668Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Ex: Lançamentos de Inverno","label":"Ex: Lançamentos de Inverno","value":"Moda Fitness","valueLength":12,"text":""}
+
+## 2026-08-11 19:52:31.668Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Ex: Lançamentos de Inverno","label":"Ex: Lançamentos de Inverno","value":"Moda Fitness","valueLength":12,"text":""}
+
+## 2026-08-11 19:52:31.879Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Salvar Coleção"}
+
+## 2026-08-11 19:52:37.255Z load
+- url: http://localhost:3000/admin/colecoes
+- title: Avante Lingerie | Oficial
+
+## 2026-08-11 19:52:43.740Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Ver Loja"}
+
+## 2026-08-11 19:52:43.742Z navigate
+- url: http://localhost:3000/
+- via: pushState
+
+## 2026-08-11 19:52:44.390Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22okqcy3xzr7pff8b%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 83
+
+## 2026-08-11 19:52:44.392Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22okqcy3xzr7pff8b%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 19:52:44.443Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22sz933rrdjx4j62w%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 136
+
+## 2026-08-11 19:52:44.443Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%220tioxaa5mvtikb6%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 136
+
+## 2026-08-11 19:52:44.455Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22hya9h8gimmcygbn%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 149
+
+## 2026-08-11 19:52:44.456Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22sz933rrdjx4j62w%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 19:52:44.456Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%220tioxaa5mvtikb6%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 19:52:44.457Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22219neq337ly8hpm%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 150
+
+## 2026-08-11 19:52:44.457Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22hya9h8gimmcygbn%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 19:52:44.460Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22219neq337ly8hpm%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 19:52:44.461Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22km2hb4iq8cyaqut%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 154
+
+## 2026-08-11 19:52:44.462Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22vi937hhuvzg154r%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 155
+
+## 2026-08-11 19:52:44.464Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22km2hb4iq8cyaqut%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 19:52:44.464Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22vi937hhuvzg154r%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 19:52:44.465Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22z7i4vmn1n7io1np%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 157
+
+## 2026-08-11 19:52:44.469Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22z7i4vmn1n7io1np%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 19:52:44.696Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:52:44.698Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:52:44.729Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:52:44.730Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:52:44.742Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:52:44.744Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:52:44.757Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:52:44.757Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 19:55:17.974Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-08-11 19:55:25.476Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Moda FitnessVer coleção"}
+
+## 2026-08-11 19:55:25.504Z navigate
+- url: http://localhost:3000/categoria/moda-fitness
+- via: pushState
+
+## 2026-08-11 19:55:25.576Z window.error
+- message: Uncaught ReferenceError: Cannot access 'entityName' before initialization
+- source: http://localhost:3000/src/pages/CategoryPage.jsx?t=1786471554013
+- line: 62
+- col: 33
+- stack: 
+    ReferenceError: Cannot access 'entityName' before initialization
+        at CategoryPage (http://localhost:3000/src/pages/CategoryPage.jsx?t=1786471554013:62:33)
+        at renderWithHooks (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=4637f811:11596:26)
+        at mountIndeterminateComponent (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=4637f811:14974:21)
+        at beginWork (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=4637f811:15962:22)
+        at HTMLUnknownElement.callCallback2 (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=4637f811:3680:22)
+        at Object.invokeGuardedCallbackDev (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=4637f811:3705:24)
+        at invokeGuardedCallback (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=4637f811:3739:39)
+        at beginWork$1 (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=4637f811:19818:15)
+        at performUnitOfWork (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=4637f811:19251:20)
+        at workLoopSync (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=4637f811:19190:13)
+
+## 2026-08-11 19:55:25.648Z window.error
+- message: Uncaught ReferenceError: Cannot access 'entityName' before initialization
+- source: http://localhost:3000/src/pages/CategoryPage.jsx?t=1786471554013
+- line: 62
+- col: 33
+- stack: 
+    ReferenceError: Cannot access 'entityName' before initialization
+        at CategoryPage (http://localhost:3000/src/pages/CategoryPage.jsx?t=1786471554013:62:33)
+        at renderWithHooks (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=4637f811:11596:26)
+        at mountIndeterminateComponent (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=4637f811:14974:21)
+        at beginWork (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=4637f811:15962:22)
+        at HTMLUnknownElement.callCallback2 (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=4637f811:3680:22)
+        at Object.invokeGuardedCallbackDev (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=4637f811:3705:24)
+        at invokeGuardedCallback (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=4637f811:3739:39)
+        at beginWork$1 (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=4637f811:19818:15)
+        at performUnitOfWork (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=4637f811:19251:20)
+        at workLoopSync (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=4637f811:19190:13)
+
+## 2026-08-11 19:55:25.691Z console.error
+- text: 
+    The above error occurred in the <CategoryPage> component:
+    
+        at CategoryPage (http://localhost:3000/src/pages/CategoryPage.jsx?t=1786471554013:46:28)
+        at ErrorBoundary (http://localhost:3000/src/components/ErrorBoundary.jsx:7:5)
+        at RenderedRoute (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=9f09dcbc:6397:26)
+        at Routes (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=9f09dcbc:7258:3)
+        at main
+        at div
+        at StoreLayout (http://localhost:3000/src/App.jsx?t=1786474422090:151:24)
+        at ErrorBoundary (http://localhost:3000/src/components/ErrorBoundary.jsx:7:5)
+        at RenderedRoute (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=9f09dcbc:6397:26)
+        at Routes (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=9f09dcbc:7258:3)
+        at AppInterceptor (http://localhost:3000/src/App.jsx?t=1786474422090:188:20)
+        at AdminAuthProvider (http://localhost:3000/src/context/AdminAuthContext.jsx:8:37)
+        at AuthProvider (http://localhost:3000/src/context/AuthContext.jsx:7:32)
+        at Router (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=9f09dcbc:7188:13)
+        at BrowserRouter (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=9f09dcbc:10402:3)
+        at ErrorBoundary (http://localhost:3000/src/components/ErrorBoundary.jsx:7:5)
+        at App
+    
+    React will try to recreate this component tree from scratch using the error boundary you provided, ErrorBoundary.
+
+## 2026-08-11 19:55:25.695Z console.error
+- text: 
+    🔴 ErrorBoundary caught an error: ReferenceError: Cannot access 'entityName' before initialization
+        at CategoryPage (http://localhost:3000/src/pages/CategoryPage.jsx?t=1786471554013:62:33)
+        at renderWithHooks (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=4637f811:11596:26)
+        at mountIndeterminateComponent (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=4637f811:14974:21)
+        at beginWork (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=4637f811:15962:22)
+        at beginWork$1 (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=4637f811:19806:22)
+        at performUnitOfWork (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=4637f811:19251:20)
+        at workLoopSync (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=4637f811:19190:13)
+        at renderRootSync (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=4637f811:19169:15)
+        at recoverFromConcurrentError (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=4637f811:18786:28)
+        at performConcurrentWorkOnRoot (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=4637f811:18734:30)
+
+## 2026-08-11 19:55:25.696Z console.error
+- text: 🔴 Error details: {"componentStack":"\n    at CategoryPage (http://localhost:3000/src/pages/CategoryPage.jsx?t=1786471554013:46:28)\n    at ErrorBoundary (http://localhost:3000/src/components/ErrorBoundary.jsx:7:5)\n    at RenderedRoute (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=9f09dcbc:6397:26)\n    at Routes (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=9f09dcbc:7258:3)\n    at main\n    at div\n    at StoreLayout (http://localhost:3000/src/App.jsx?t=1786474422090:151:24)\n    at ErrorBoundary (http://localhost:3000/src/components/ErrorBoundary.jsx:7:5)\n    at RenderedRoute (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=9f09dcbc:6397:26)\n    at Routes (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=9f09dcbc:7258:3)\n    at AppInterceptor (http://localhost:3000/src/App.jsx?t=1786474422090:188:20)\n    at AdminAuthProvider (http://localhost:3000/src/context/AdminAuthContext.jsx:8:37)\n    at AuthProvider (http://localhost:3000/src/context/AuthContext.jsx:7:32)\n    at Router (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=9f09dcbc:7188:13)\n    at BrowserRouter (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=9f09dcbc:10402:3)\n    at ErrorBoundary (http://localhost:3000/src/components/ErrorBoundary.jsx:7:5)\n    at App"}
+
+## 2026-08-11 19:55:25.697Z console.error
+- text: 
+    🔴 Component stack: 
+        at CategoryPage (http://localhost:3000/src/pages/CategoryPage.jsx?t=1786471554013:46:28)
+        at ErrorBoundary (http://localhost:3000/src/components/ErrorBoundary.jsx:7:5)
+        at RenderedRoute (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=9f09dcbc:6397:26)
+        at Routes (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=9f09dcbc:7258:3)
+        at main
+        at div
+        at StoreLayout (http://localhost:3000/src/App.jsx?t=1786474422090:151:24)
+        at ErrorBoundary (http://localhost:3000/src/components/ErrorBoundary.jsx:7:5)
+        at RenderedRoute (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=9f09dcbc:6397:26)
+        at Routes (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=9f09dcbc:7258:3)
+        at AppInterceptor (http://localhost:3000/src/App.jsx?t=1786474422090:188:20)
+        at AdminAuthProvider (http://localhost:3000/src/context/AdminAuthContext.jsx:8:37)
+        at AuthProvider (http://localhost:3000/src/context/AuthContext.jsx:7:32)
+        at Router (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=9f09dcbc:7188:13)
+        at BrowserRouter (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=9f09dcbc:10402:3)
+        at ErrorBoundary (http://localhost:3000/src/components/ErrorBoundary.jsx:7:5)
+        at App
+
+## 2026-08-11 19:55:27.723Z load
+- url: http://localhost:3000/categoria/moda-fitness
+- title: Avante Lingerie | Oficial
+
+## 2026-08-11 19:55:30.240Z window.error
+- message: Uncaught ReferenceError: Cannot access 'entityName' before initialization
+- source: http://localhost:3000/src/pages/CategoryPage.jsx?t=1786471554013
+- line: 62
+- col: 33
+- stack: 
+    ReferenceError: Cannot access 'entityName' before initialization
+        at CategoryPage (http://localhost:3000/src/pages/CategoryPage.jsx?t=1786471554013:62:33)
+        at renderWithHooks (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=4637f811:11596:26)
+        at mountIndeterminateComponent (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=4637f811:14974:21)
+        at beginWork (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=4637f811:15962:22)
+        at HTMLUnknownElement.callCallback2 (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=4637f811:3680:22)
+        at Object.invokeGuardedCallbackDev (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=4637f811:3705:24)
+        at invokeGuardedCallback (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=4637f811:3739:39)
+        at beginWork$1 (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=4637f811:19818:15)
+        at performUnitOfWork (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=4637f811:19251:20)
+        at workLoopSync (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=4637f811:19190:13)
+
+## 2026-08-11 19:55:30.274Z window.error
+- message: Uncaught ReferenceError: Cannot access 'entityName' before initialization
+- source: http://localhost:3000/src/pages/CategoryPage.jsx?t=1786471554013
+- line: 62
+- col: 33
+- stack: 
+    ReferenceError: Cannot access 'entityName' before initialization
+        at CategoryPage (http://localhost:3000/src/pages/CategoryPage.jsx?t=1786471554013:62:33)
+        at renderWithHooks (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=4637f811:11596:26)
+        at mountIndeterminateComponent (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=4637f811:14974:21)
+        at beginWork (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=4637f811:15962:22)
+        at HTMLUnknownElement.callCallback2 (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=4637f811:3680:22)
+        at Object.invokeGuardedCallbackDev (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=4637f811:3705:24)
+        at invokeGuardedCallback (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=4637f811:3739:39)
+        at beginWork$1 (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=4637f811:19818:15)
+        at performUnitOfWork (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=4637f811:19251:20)
+        at workLoopSync (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=4637f811:19190:13)
+
+## 2026-08-11 19:55:30.288Z console.error
+- text: 
+    The above error occurred in the <CategoryPage> component:
+    
+        at CategoryPage (http://localhost:3000/src/pages/CategoryPage.jsx?t=1786471554013:46:28)
+        at ErrorBoundary (http://localhost:3000/src/components/ErrorBoundary.jsx:7:5)
+        at RenderedRoute (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=9f09dcbc:6397:26)
+        at Routes (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=9f09dcbc:7258:3)
+        at main
+        at div
+        at StoreLayout (http://localhost:3000/src/App.jsx?t=1786474422090:151:24)
+        at ErrorBoundary (http://localhost:3000/src/components/ErrorBoundary.jsx:7:5)
+        at RenderedRoute (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=9f09dcbc:6397:26)
+        at Routes (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=9f09dcbc:7258:3)
+        at AppInterceptor (http://localhost:3000/src/App.jsx?t=1786474422090:188:20)
+        at AdminAuthProvider (http://localhost:3000/src/context/AdminAuthContext.jsx:8:37)
+        at AuthProvider (http://localhost:3000/src/context/AuthContext.jsx:7:32)
+        at Router (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=9f09dcbc:7188:13)
+        at BrowserRouter (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=9f09dcbc:10402:3)
+        at ErrorBoundary (http://localhost:3000/src/components/ErrorBoundary.jsx:7:5)
+        at App
+    
+    React will try to recreate this component tree from scratch using the error boundary you provided, ErrorBoundary.
+
+## 2026-08-11 19:55:30.291Z console.error
+- text: 
+    🔴 ErrorBoundary caught an error: ReferenceError: Cannot access 'entityName' before initialization
+        at CategoryPage (http://localhost:3000/src/pages/CategoryPage.jsx?t=1786471554013:62:33)
+        at renderWithHooks (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=4637f811:11596:26)
+        at mountIndeterminateComponent (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=4637f811:14974:21)
+        at beginWork (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=4637f811:15962:22)
+        at beginWork$1 (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=4637f811:19806:22)
+        at performUnitOfWork (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=4637f811:19251:20)
+        at workLoopSync (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=4637f811:19190:13)
+        at renderRootSync (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=4637f811:19169:15)
+        at recoverFromConcurrentError (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=4637f811:18786:28)
+        at performConcurrentWorkOnRoot (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=4637f811:18734:30)
+
+## 2026-08-11 19:55:30.291Z console.error
+- text: 🔴 Error details: {"componentStack":"\n    at CategoryPage (http://localhost:3000/src/pages/CategoryPage.jsx?t=1786471554013:46:28)\n    at ErrorBoundary (http://localhost:3000/src/components/ErrorBoundary.jsx:7:5)\n    at RenderedRoute (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=9f09dcbc:6397:26)\n    at Routes (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=9f09dcbc:7258:3)\n    at main\n    at div\n    at StoreLayout (http://localhost:3000/src/App.jsx?t=1786474422090:151:24)\n    at ErrorBoundary (http://localhost:3000/src/components/ErrorBoundary.jsx:7:5)\n    at RenderedRoute (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=9f09dcbc:6397:26)\n    at Routes (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=9f09dcbc:7258:3)\n    at AppInterceptor (http://localhost:3000/src/App.jsx?t=1786474422090:188:20)\n    at AdminAuthProvider (http://localhost:3000/src/context/AdminAuthContext.jsx:8:37)\n    at AuthProvider (http://localhost:3000/src/context/AuthContext.jsx:7:32)\n    at Router (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=9f09dcbc:7188:13)\n    at BrowserRouter (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=9f09dcbc:10402:3)\n    at ErrorBoundary (http://localhost:3000/src/components/ErrorBoundary.jsx:7:5)\n    at App"}
+
+## 2026-08-11 19:55:30.292Z console.error
+- text: 
+    🔴 Component stack: 
+        at CategoryPage (http://localhost:3000/src/pages/CategoryPage.jsx?t=1786471554013:46:28)
+        at ErrorBoundary (http://localhost:3000/src/components/ErrorBoundary.jsx:7:5)
+        at RenderedRoute (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=9f09dcbc:6397:26)
+        at Routes (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=9f09dcbc:7258:3)
+        at main
+        at div
+        at StoreLayout (http://localhost:3000/src/App.jsx?t=1786474422090:151:24)
+        at ErrorBoundary (http://localhost:3000/src/components/ErrorBoundary.jsx:7:5)
+        at RenderedRoute (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=9f09dcbc:6397:26)
+        at Routes (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=9f09dcbc:7258:3)
+        at AppInterceptor (http://localhost:3000/src/App.jsx?t=1786474422090:188:20)
+        at AdminAuthProvider (http://localhost:3000/src/context/AdminAuthContext.jsx:8:37)
+        at AuthProvider (http://localhost:3000/src/context/AuthContext.jsx:7:32)
+        at Router (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=9f09dcbc:7188:13)
+        at BrowserRouter (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=9f09dcbc:10402:3)
+        at ErrorBoundary (http://localhost:3000/src/components/ErrorBoundary.jsx:7:5)
+        at App
+
+## 2026-08-11 20:04:09.184Z navigate
+- url: http://localhost:3000/
+- via: popstate
+
+## 2026-08-11 20:04:12.658Z load
+- url: http://localhost:3000/
+- title: Avante Lingerie | Oficial
+
+## 2026-08-11 20:04:14.118Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22vi937hhuvzg154r%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 190
+
+## 2026-08-11 20:04:14.119Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22vi937hhuvzg154r%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 20:04:14.125Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%220tioxaa5mvtikb6%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 196
+
+## 2026-08-11 20:04:14.126Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22hya9h8gimmcygbn%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 199
+
+## 2026-08-11 20:04:14.127Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%220tioxaa5mvtikb6%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 20:04:14.128Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22hya9h8gimmcygbn%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 20:04:14.129Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22sz933rrdjx4j62w%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 200
+
+## 2026-08-11 20:04:14.130Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22sz933rrdjx4j62w%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 20:04:14.131Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22219neq337ly8hpm%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 203
+
+## 2026-08-11 20:04:14.131Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22219neq337ly8hpm%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 20:04:14.321Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22okqcy3xzr7pff8b%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 391
+
+## 2026-08-11 20:04:14.321Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22km2hb4iq8cyaqut%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 391
+
+## 2026-08-11 20:04:14.322Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22z7i4vmn1n7io1np%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 391
+
+## 2026-08-11 20:04:14.324Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22okqcy3xzr7pff8b%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 20:04:14.325Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22km2hb4iq8cyaqut%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 20:04:14.325Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22z7i4vmn1n7io1np%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 20:04:14.865Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 20:04:14.867Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 20:04:14.888Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 20:04:14.889Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 20:04:14.905Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 20:04:14.905Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 20:04:14.919Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 20:04:14.920Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 20:04:23.713Z click
+- element: {"tag":"h2","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Explore Nossas Coleções"}
+
+## 2026-08-11 20:18:53.911Z click
+- element: {"tag":"section","role":null,"ariaLabel":null,"name":null,"type":null,"id":"colecoes","placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Conceito & EssênciaExplore Nossas ColeçõesConcebidas artesanalmente para cada instante da sua rotina ou ocasiões especiais.Moda FitnessVer coleçãoModa SexyVer coleçãoModa PraiaVer coleção"}
+
+## 2026-08-11 20:18:55.331Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-08-11 20:24:13.434Z load
+- url: http://localhost:3000/
+- title: Avante Lingerie | Oficial
+
+## 2026-08-11 20:24:16.099Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22hya9h8gimmcygbn%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 95
+
+## 2026-08-11 20:24:16.100Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22vi937hhuvzg154r%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 95
+
+## 2026-08-11 20:24:16.100Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22sz933rrdjx4j62w%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 91
+
+## 2026-08-11 20:24:16.101Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22hya9h8gimmcygbn%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 20:24:16.105Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22vi937hhuvzg154r%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 20:24:16.105Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22sz933rrdjx4j62w%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 20:24:16.113Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22okqcy3xzr7pff8b%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 103
+
+## 2026-08-11 20:24:16.128Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22okqcy3xzr7pff8b%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 20:24:16.132Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%220tioxaa5mvtikb6%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 122
+
+## 2026-08-11 20:24:16.132Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22219neq337ly8hpm%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 127
+
+## 2026-08-11 20:24:16.133Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22z7i4vmn1n7io1np%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 122
+
+## 2026-08-11 20:24:16.133Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%220tioxaa5mvtikb6%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 20:24:16.133Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22219neq337ly8hpm%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 20:24:16.134Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22z7i4vmn1n7io1np%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 20:24:16.136Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22km2hb4iq8cyaqut%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 125
+
+## 2026-08-11 20:24:16.136Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22km2hb4iq8cyaqut%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 20:24:16.436Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 20:24:16.441Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 20:24:16.472Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 20:24:16.472Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 20:24:16.491Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 20:24:16.493Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 20:24:16.503Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 20:24:16.504Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 20:24:27.865Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Moda FitnessVer coleção"}
+
+## 2026-08-11 20:24:27.878Z navigate
+- url: http://localhost:3000/categoria/moda-fitness
+- via: pushState
+
+## 2026-08-11 20:24:29.048Z load
+- url: http://localhost:3000/categoria/moda-fitness
+- title: Avante Lingerie | Oficial
+
+## 2026-08-11 20:24:35.984Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Home"}
+
+## 2026-08-11 20:24:35.996Z navigate
+- url: http://localhost:3000/
+- via: pushState
+
+## 2026-08-11 20:24:36.492Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22hya9h8gimmcygbn%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 91
+
+## 2026-08-11 20:24:36.508Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22hya9h8gimmcygbn%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 20:24:36.512Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22sz933rrdjx4j62w%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 108
+
+## 2026-08-11 20:24:36.521Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22sz933rrdjx4j62w%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 20:24:36.522Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%220tioxaa5mvtikb6%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 118
+
+## 2026-08-11 20:24:36.522Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22z7i4vmn1n7io1np%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 117
+
+## 2026-08-11 20:24:36.522Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22okqcy3xzr7pff8b%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 118
+
+## 2026-08-11 20:24:36.526Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%220tioxaa5mvtikb6%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 20:24:36.526Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22z7i4vmn1n7io1np%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 20:24:36.527Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22okqcy3xzr7pff8b%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 20:24:36.561Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22vi937hhuvzg154r%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 159
+
+## 2026-08-11 20:24:36.561Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22vi937hhuvzg154r%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 20:24:36.581Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22219neq337ly8hpm%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 178
+
+## 2026-08-11 20:24:36.582Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22km2hb4iq8cyaqut%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 177
+
+## 2026-08-11 20:24:36.582Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22219neq337ly8hpm%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 20:24:36.583Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22km2hb4iq8cyaqut%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 20:24:36.793Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 20:24:36.799Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 20:24:36.815Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 20:24:36.815Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 20:24:36.822Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 20:24:36.822Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 20:24:36.838Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 20:24:36.838Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 20:24:46.816Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Moda SexyVer coleção"}
+
+## 2026-08-11 20:24:46.831Z navigate
+- url: http://localhost:3000/categoria/moda-sexy
+- via: pushState
+
+## 2026-08-11 20:24:47.757Z load
+- url: http://localhost:3000/categoria/moda-sexy
+- title: Avante Lingerie | Oficial
+
+## 2026-08-11 20:24:53.982Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Home"}
+
+## 2026-08-11 20:24:53.984Z navigate
+- url: http://localhost:3000/
+- via: pushState
+
+## 2026-08-11 20:24:54.550Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22hya9h8gimmcygbn%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 72
+
+## 2026-08-11 20:24:54.551Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22vi937hhuvzg154r%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 72
+
+## 2026-08-11 20:24:54.551Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22219neq337ly8hpm%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 72
+
+## 2026-08-11 20:24:54.563Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22hya9h8gimmcygbn%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 20:24:54.567Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22vi937hhuvzg154r%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 20:24:54.568Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22219neq337ly8hpm%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 20:24:54.581Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22sz933rrdjx4j62w%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 102
+
+## 2026-08-11 20:24:54.581Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%220tioxaa5mvtikb6%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 102
+
+## 2026-08-11 20:24:54.581Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22z7i4vmn1n7io1np%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 101
+
+## 2026-08-11 20:24:54.581Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22okqcy3xzr7pff8b%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 101
+
+## 2026-08-11 20:24:54.582Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22km2hb4iq8cyaqut%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 101
+
+## 2026-08-11 20:24:54.582Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22sz933rrdjx4j62w%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 20:24:54.582Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%220tioxaa5mvtikb6%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 20:24:54.582Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22z7i4vmn1n7io1np%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 20:24:54.583Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22okqcy3xzr7pff8b%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 20:24:54.583Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22km2hb4iq8cyaqut%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 20:24:54.676Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 20:24:54.676Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 20:24:54.700Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 20:24:54.701Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 20:24:54.714Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 20:24:54.715Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 20:24:54.723Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 20:24:54.723Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 20:24:55.653Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-08-11 20:25:01.940Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Moda PraiaVer coleção"}
+
+## 2026-08-11 20:25:01.948Z navigate
+- url: http://localhost:3000/categoria/moda-praia
+- via: pushState
+
+## 2026-08-11 20:25:03.720Z load
+- url: http://localhost:3000/categoria/moda-praia
+- title: Avante Lingerie | Oficial
+
+## 2026-08-11 20:25:19.086Z load
+- url: http://localhost:3000/admin
+- title: Avante Lingerie | Oficial
+
+## 2026-08-11 20:25:19.447Z navigate
+- url: http://localhost:3000/admin
+- via: replaceState
+
+## 2026-08-11 20:25:21.791Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Coleções"}
+
+## 2026-08-11 20:25:21.794Z navigate
+- url: http://localhost:3000/admin/colecoes
+- via: pushState
+
+## 2026-08-11 20:25:24.614Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-08-11 20:25:30.974Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"file","id":null,"placeholder":null,"label":"[file]","value":"","valueLength":0,"text":""}
+
+## 2026-08-11 20:25:31.181Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"file","id":null,"placeholder":null,"label":"[file]","value":"","valueLength":0,"text":""}
+
+## 2026-08-11 20:25:51.510Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"file","id":null,"placeholder":null,"label":"[file]","value":"","valueLength":0,"text":""}
+
+## 2026-08-11 20:25:54.344Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"file","id":null,"placeholder":null,"label":"[file]","value":"C:\\fakepath\\img_modelo_nova_vml1.jpeg","valueLength":37,"text":""}
+
+## 2026-08-11 20:25:54.509Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Salvar Coleção"}
+
+## 2026-08-11 20:25:58.886Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-08-11 20:26:01.235Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"file","id":null,"placeholder":null,"label":"[file]","value":"","valueLength":0,"text":""}
+
+## 2026-08-11 20:26:01.455Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"file","id":null,"placeholder":null,"label":"[file]","value":"","valueLength":0,"text":""}
+
+## 2026-08-11 20:26:21.609Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"file","id":null,"placeholder":null,"label":"[file]","value":"","valueLength":0,"text":""}
+
+## 2026-08-11 20:26:24.108Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"file","id":null,"placeholder":null,"label":"[file]","value":"C:\\fakepath\\img_modelo_nova_vml1.jpeg","valueLength":37,"text":""}
+
+## 2026-08-11 20:26:24.300Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Salvar Coleção"}
+
+## 2026-08-11 20:26:26.631Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-08-11 20:26:28.063Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"file","id":null,"placeholder":null,"label":"[file]","value":"","valueLength":0,"text":""}
+
+## 2026-08-11 20:26:28.291Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"file","id":null,"placeholder":null,"label":"[file]","value":"","valueLength":0,"text":""}
+
+## 2026-08-11 20:26:34.292Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"file","id":null,"placeholder":null,"label":"[file]","value":"","valueLength":0,"text":""}
+
+## 2026-08-11 20:26:35.973Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"file","id":null,"placeholder":null,"label":"[file]","value":"C:\\fakepath\\img_modelo_nova_vml1.jpeg","valueLength":37,"text":""}
+
+## 2026-08-11 20:26:36.196Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Salvar Coleção"}
+
+## 2026-08-11 20:26:41.341Z load
+- url: http://localhost:3000/admin/colecoes
+- title: Avante Lingerie | Oficial
+
+## 2026-08-11 20:26:45.303Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Ver Loja"}
+
+## 2026-08-11 20:26:45.306Z navigate
+- url: http://localhost:3000/
+- via: pushState
+
+## 2026-08-11 20:26:45.741Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22sz933rrdjx4j62w%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 53
+
+## 2026-08-11 20:26:45.742Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22sz933rrdjx4j62w%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 20:26:45.748Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22hya9h8gimmcygbn%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 61
+
+## 2026-08-11 20:26:45.748Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22219neq337ly8hpm%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 60
+
+## 2026-08-11 20:26:45.748Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22hya9h8gimmcygbn%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 20:26:45.749Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22219neq337ly8hpm%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 20:26:45.751Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22vi937hhuvzg154r%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 64
+
+## 2026-08-11 20:26:45.751Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22vi937hhuvzg154r%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 20:26:45.796Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22okqcy3xzr7pff8b%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 107
+
+## 2026-08-11 20:26:45.796Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22okqcy3xzr7pff8b%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 20:26:45.843Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22km2hb4iq8cyaqut%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 154
+
+## 2026-08-11 20:26:45.844Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%220tioxaa5mvtikb6%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 156
+
+## 2026-08-11 20:26:45.844Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22km2hb4iq8cyaqut%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 20:26:45.844Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22z7i4vmn1n7io1np%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 156
+
+## 2026-08-11 20:26:45.845Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%220tioxaa5mvtikb6%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 20:26:45.845Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22z7i4vmn1n7io1np%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-11 20:26:45.957Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 20:26:45.963Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 20:26:45.963Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 20:26:45.972Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 20:26:45.973Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 20:26:45.997Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 20:26:45.998Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 20:26:46.004Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 20:26:46.004Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 20:26:46.011Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 20:26:46.011Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-11 20:27:07.909Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Moda PraiaVer coleção"}
+
+## 2026-08-11 20:27:07.927Z navigate
+- url: http://localhost:3000/categoria/moda-praia
+- via: pushState
+
+## 2026-08-11 20:27:09.544Z load
+- url: http://localhost:3000/categoria/moda-praia
+- title: Avante Lingerie | Oficial
 
