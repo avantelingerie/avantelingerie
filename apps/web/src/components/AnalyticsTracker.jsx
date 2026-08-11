@@ -20,7 +20,7 @@ export default function AnalyticsTracker() {
           if (record.chave_nome === 'meta_pixel_id') {
             setPixelId(record.chave_valor);
           }
-          if (record.chave_nome === 'ga4_id') {
+          if (record.chave_nome === 'google_analytics_id') {
             setGa4Id(record.chave_valor);
           }
         });
