@@ -20,6 +20,7 @@ export default function ProdutoForm() {
   const [saving, setSaving] = useState(false);
   const [loading, setLoading] = useState(isEdit);
   const [categorias, setCategorias] = useState([]);
+  const [allProducts, setAllProducts] = useState([]);
 
   const [formData, setFormData] = useState({
     name: '',
@@ -42,7 +43,8 @@ export default function ProdutoForm() {
     is_promocao: false,
     is_mais_vendido: false,
     is_favorito: false,
-    video_url: ''
+    video_url: '',
+    cross_sell_id: ''
   });
 
   const [images, setImages] = useState([]);
@@ -89,10 +91,20 @@ export default function ProdutoForm() {
 
   useEffect(() => {
     fetchCategorias();
+    fetchAllProducts();
     if (isEdit) {
       fetchProduto();
     }
   }, [id]);
+
+  const fetchAllProducts = async () => {
+    try {
+      const records = await pb.collection('products').getFullList({ sort: 'name', $autoCancel: false });
+      setAllProducts(records.filter(p => p.id !== id)); // exclude self
+    } catch (error) {
+      console.error('Error fetching all products:', error);
+    }
+  };
 
   const fetchCategorias = async () => {
     try {
@@ -128,7 +140,8 @@ export default function ProdutoForm() {
         is_promocao: !!record.is_promocao,
         is_mais_vendido: !!record.is_mais_vendido,
         is_favorito: !!record.is_favorito,
-        video_url: record.video_url || ''
+        video_url: record.video_url || '',
+        cross_sell_id: record.cross_sell_id || ''
       });
 
       const getFilenameFromUrl = (urlOrFilename) => {
@@ -431,6 +444,7 @@ export default function ProdutoForm() {
       pbFormData.append('is_mais_vendido', formData.is_mais_vendido);
       pbFormData.append('is_favorito', formData.is_favorito);
       pbFormData.append('video_url', formData.video_url);
+      pbFormData.append('cross_sell_id', formData.cross_sell_id);
       
       const totalStock = variacoes.reduce((acc, curr) => acc + (parseInt(curr.estoque) || 0), 0);
       pbFormData.append('stock', totalStock);
@@ -665,6 +679,17 @@ export default function ProdutoForm() {
                   </label>
                   <Input required value={formData.reference} onChange={(e) => handleInputChange('reference', e.target.value)} className="bg-[#121212] border-[#c59b5f]/20 text-white font-mono" />
                 </div>
+              </div>
+
+              <div>
+                <label className="text-sm font-medium mb-1.5 block text-[#c59b5f]">
+                  Complete o Look (Cross-sell)
+                </label>
+                <select className="flex h-10 w-full rounded-md border border-[#c59b5f]/40 bg-[#1a1a1a] px-3 py-2 text-sm text-white focus:outline-none" value={formData.cross_sell_id} onChange={(e) => handleInputChange('cross_sell_id', e.target.value)}>
+                  <option value="">Nenhum (Venda isolada)</option>
+                  {allProducts.map(p => <option key={p.id} value={p.id}>{p.name} - {p.reference}</option>)}
+                </select>
+                <p className="text-xs text-gray-400 mt-1">Selecione uma peça que combina perfeitamente para incentivar a compra do conjunto (Ex: calcinha para combinar com este sutiã).</p>
               </div>
 
               <div className="flex items-center justify-between p-4 bg-[#1a1a1a] rounded-xl border border-[#c59b5f]/20 shadow-sm mt-2">

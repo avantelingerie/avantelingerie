@@ -47,6 +47,7 @@ export default function ProductPage() {
 
   const [product, setProduct] = useState(null);
   const [relatedProducts, setRelatedProducts] = useState([]);
+  const [crossSellProduct, setCrossSellProduct] = useState(null);
   const [variacoesList, setVariacoesList] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -420,6 +421,19 @@ export default function ProductPage() {
         } catch (relatedErr) {
           console.error("Error fetching related products:", relatedErr);
           if (isMounted) setRelatedProducts([]);
+        }
+
+        // Fetch Cross-sell Product
+        if (fetchedProduct?.cross_sell_id) {
+          try {
+            const crossProduct = await pb.collection('products').getOne(fetchedProduct.cross_sell_id, { $autoCancel: false });
+            if (isMounted) setCrossSellProduct(crossProduct);
+          } catch (crossErr) {
+            console.error("Error fetching cross-sell product:", crossErr);
+            if (isMounted) setCrossSellProduct(null);
+          }
+        } else {
+          if (isMounted) setCrossSellProduct(null);
         }
 
       } catch (err) {
@@ -1273,6 +1287,38 @@ export default function ProductPage() {
                   {isReseller ? 'FINALIZAR LOTE AGORA' : 'COMPRAR AGORA'}
               </Button>
             </div>
+
+            {/* Complete o Look (Cross-sell) */}
+            {crossSellProduct && (
+              <div className="mt-8 mb-2">
+                <h3 className="text-sm font-bold text-[#c59b5f] uppercase tracking-widest mb-3 flex items-center gap-2 font-serif">
+                  <Sparkles className="w-4 h-4" /> Complete o Look
+                </h3>
+                <div className="flex items-center gap-4 p-3 rounded-2xl bg-gradient-to-br from-[#1a1a1a] to-[#0f0f0f] border border-[#c59b5f]/30 shadow-[0_0_20px_rgba(197,155,95,0.05)] backdrop-blur-md">
+                  <div className="w-20 h-24 rounded-xl overflow-hidden bg-white/5 shrink-0 border border-white/5">
+                    <img 
+                      src={crossSellProduct.imagem_principal ? (crossSellProduct.imagem_principal.startsWith('http') ? crossSellProduct.imagem_principal : pb.files.getUrl(crossSellProduct, crossSellProduct.imagem_principal)) : ''} 
+                      alt={crossSellProduct.name} 
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <h4 className="text-sm font-bold text-white truncate font-serif">{crossSellProduct.name}</h4>
+                    <p className="text-xs text-gray-400 mt-1 line-clamp-1">{crossSellProduct.desc_geral || 'Perfeito para combinar com esta peça.'}</p>
+                    <div className="mt-3 flex items-center justify-between">
+                      <span className="text-[#c59b5f] font-bold text-sm">R$ {crossSellProduct.price.toFixed(2).replace('.', ',')}</span>
+                      <Button 
+                        onClick={() => navigate(`/produto/${crossSellProduct.id}`)}
+                        size="sm" 
+                        className="bg-[#c59b5f]/10 text-[#c59b5f] hover:bg-[#c59b5f] hover:text-black text-xs h-8 px-4 rounded-full border border-[#c59b5f]/30 transition-all uppercase tracking-wider font-bold"
+                      >
+                        Ver Peça
+                      </Button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
 
             {/* Bloco de Benefícios Premium (Grid Estático Elegante) */}
             <div className="grid grid-cols-3 gap-3 pt-6 border-t border-gray-100 mt-6">
