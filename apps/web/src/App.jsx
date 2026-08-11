@@ -30,7 +30,7 @@ import QueroRevenderPage from '@/pages/QueroRevenderPage.jsx';
 import ProtectedRouteReseller from '@/components/ProtectedRouteReseller.jsx';
 import ResellerPortalPage from '@/pages/ResellerPortalPage.jsx';
 import useMarketingTracker from '@/hooks/useMarketingTracker.js';
-import { initializePixels } from '@/lib/marketingPixels.js';
+import AnalyticsTracker from '@/components/AnalyticsTracker.jsx';
 
 // Admin Components
 import AdminLogin from '@/pages/admin/AdminLogin.jsx';
@@ -138,11 +138,6 @@ const AppInterceptor = () => {
   
   // Track and capture UTM marketing parameters automatically
   useMarketingTracker();
-
-  // Initialize marketing tracking pixels (Meta / Google) dynamically
-  useEffect(() => {
-    initializePixels();
-  }, []);
 
   const [isComingSoonMode, setIsComingSoonMode] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
@@ -301,6 +296,7 @@ export default function App() {
       <Router>
         <AuthProvider>
           <AdminAuthProvider>
+            <AnalyticsTracker />
             <ScrollToTop />
             <AppInterceptor />
             <CookieBanner />
