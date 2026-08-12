@@ -120,7 +120,7 @@ router.post('/calculate', async (req, res, next) => {
         matches = estado.toUpperCase() === rule.estado.toUpperCase();
       } else if (rule.tipo === 'cidade' && rule.cidade && cidade) {
         matches = cidade.toLowerCase().trim() === rule.cidade.toLowerCase().trim();
-      } else if (rule.tipo === 'global') {
+      } else if (rule.tipo === 'global' || rule.tipo === 'nacional') {
         matches = true;
       }
 
