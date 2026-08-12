@@ -56,7 +56,8 @@ export default function Checkout() {
     shippingOptions,
     loadingShipping,
     selectedShippingId,
-    selectShippingOption
+    selectShippingOption,
+    localPickupConfig
   } = useCheckoutLogic();
 
   const isReseller = currentUser?.commercial_profile === 'reseller' || currentUser?.tipo_cliente === 'revendedor';
@@ -346,36 +347,38 @@ export default function Checkout() {
               isLoading={loadingCep.billing}
             />
 
-            {/* TOGGLE SAME ADDRESS SECTION */}
-            <div className="bg-white border border-[#c59b5f]/15 rounded-3xl p-6 md:p-8 shadow-premium-sm flex flex-col gap-4 transition-all duration-300 hover:shadow-[0_12px_30px_rgba(197,155,95,0.04)]">
-              <div className="flex items-center justify-between gap-4">
-                <div className="flex flex-col">
-                  <Label htmlFor="same-address-toggle" className="text-base font-serif font-bold text-gray-950 cursor-pointer">
-                    Endereço de Entrega
-                  </Label>
-                  <span className="text-xs text-gray-400 font-light mt-0.5">O pedido será entregue no mesmo endereço de faturamento?</span>
-                </div>
-                <Switch
-                  id="same-address-toggle"
-                  checked={isSameAddress}
-                  onCheckedChange={setIsSameAddress}
-                  className="data-[state=checked]:bg-[#c59b5f]"
-                />
-              </div>
-
-              {!isSameAddress && (
-                <div className="pt-6 border-t border-gray-100 mt-2">
-                  <CheckoutAddressForm
-                    type="delivery"
-                    title="Onde devemos entregar?"
-                    data={deliveryAddress}
-                    onChange={handleAddressChange}
-                    onCepBlur={handleCepBlur}
-                    isLoading={loadingCep.delivery}
+            {/* TOGGLE SAME ADDRESS SECTION (Hide if local pickup) */}
+            {selectedShippingId !== 'retirada_local' && (
+              <div className="bg-white border border-[#c59b5f]/15 rounded-3xl p-6 md:p-8 shadow-premium-sm flex flex-col gap-4 transition-all duration-300 hover:shadow-[0_12px_30px_rgba(197,155,95,0.04)]">
+                <div className="flex items-center justify-between gap-4">
+                  <div className="flex flex-col">
+                    <Label htmlFor="same-address-toggle" className="text-base font-serif font-bold text-gray-950 cursor-pointer">
+                      Endereço de Entrega
+                    </Label>
+                    <span className="text-xs text-gray-400 font-light mt-0.5">O pedido será entregue no mesmo endereço de faturamento?</span>
+                  </div>
+                  <Switch
+                    id="same-address-toggle"
+                    checked={isSameAddress}
+                    onCheckedChange={setIsSameAddress}
+                    className="data-[state=checked]:bg-[#c59b5f]"
                   />
                 </div>
-              )}
-            </div>
+
+                {!isSameAddress && (
+                  <div className="pt-6 border-t border-gray-100 mt-2">
+                    <CheckoutAddressForm
+                      type="delivery"
+                      title="Onde devemos entregar?"
+                      data={deliveryAddress}
+                      onChange={handleAddressChange}
+                      onCepBlur={handleCepBlur}
+                      isLoading={loadingCep.delivery}
+                    />
+                  </div>
+                )}
+              </div>
+            )}
 
             {/* SHIPPING OPTIONS SECTION */}
             <div className="bg-white border border-[#c59b5f]/15 rounded-3xl p-6 md:p-8 shadow-premium-sm flex flex-col gap-4 transition-all duration-300 hover:shadow-[0_12px_30px_rgba(197,155,95,0.04)]">
@@ -412,7 +415,7 @@ export default function Checkout() {
                             {option.company} - {option.name}
                           </span>
                           <span className="text-xs text-gray-400 font-light mt-0.5">
-                            Prazo estimado: {option.delivery_time || option.delivery_range} dias úteis
+                            Prazo estimado: {option.delivery_time || option.delivery_range || option.prazo} {option.id !== 'retirada_local' && 'dias úteis'}
                           </span>
                         </div>
                       </div>
@@ -431,6 +434,36 @@ export default function Checkout() {
               ) : (
                 <div className="bg-[#FFFBF8] p-6 rounded-2xl text-center text-xs text-gray-400 border border-dashed border-[#c59b5f]/25 font-light">
                   Insira o CEP de entrega acima para carregar as opções de envio disponíveis.
+                </div>
+              )}
+              
+              {/* LOCAL PICKUP INSTRUCTIONS */}
+              {selectedShippingId === 'retirada_local' && localPickupConfig && (
+                <div className="bg-[#121212] text-white border border-[#c59b5f]/30 rounded-2xl p-5 md:p-6 mt-4 flex flex-col gap-3 relative overflow-hidden shadow-lg">
+                  <div className="absolute -top-10 -right-10 w-32 h-32 bg-[#c59b5f]/10 rounded-full blur-2xl pointer-events-none"></div>
+                  <h4 className="font-serif font-bold text-[#c59b5f] text-sm flex items-center gap-2">
+                    <Clock className="w-4 h-4" /> Informações para Retirada
+                  </h4>
+                  
+                  {localPickupConfig.endereco && (
+                    <div className="flex flex-col mt-2">
+                      <span className="text-[10px] text-gray-400 uppercase tracking-wider font-bold">Endereço</span>
+                      <span className="text-sm font-light mt-0.5">{localPickupConfig.endereco}</span>
+                    </div>
+                  )}
+                  
+                  {localPickupConfig.horario && (
+                    <div className="flex flex-col mt-2">
+                      <span className="text-[10px] text-gray-400 uppercase tracking-wider font-bold">Horário de Funcionamento</span>
+                      <span className="text-sm font-light mt-0.5">{localPickupConfig.horario}</span>
+                    </div>
+                  )}
+                  
+                  {localPickupConfig.instrucoes && (
+                    <div className="mt-3 p-3 bg-white/5 rounded-xl border border-white/10 text-xs text-gray-300 font-light leading-relaxed">
+                      {localPickupConfig.instrucoes}
+                    </div>
+                  )}
                 </div>
               )}
             </div>

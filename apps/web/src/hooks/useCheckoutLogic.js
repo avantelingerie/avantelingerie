@@ -114,6 +114,28 @@ export function useCheckoutLogic() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isBoletoActive, setIsBoletoActive] = useState(true);
   const [boletoVencimentoDias, setBoletoVencimentoDias] = useState(3);
+  const [localPickupConfig, setLocalPickupConfig] = useState(null);
+
+  // Sync Loja configs for Retirada no Local
+  useEffect(() => {
+    const fetchLojaConfigs = async () => {
+      try {
+        const record = await pb.collection('configuracoes_loja').getFirstListItem('id != ""', { $autoCancel: false });
+        if (record) {
+          setLocalPickupConfig({
+            ativo: record.retirada_ativo,
+            endereco: record.retirada_endereco,
+            horario: record.retirada_horario,
+            prazo_mensagem: record.retirada_prazo_mensagem,
+            instrucoes: record.retirada_instrucoes
+          });
+        }
+      } catch (err) {
+        console.warn('[useCheckoutLogic] Erro ao carregar configurações da loja:', err);
+      }
+    };
+    fetchLojaConfigs();
+  }, []);
 
   // Sync Boleto configs from PocketBase settings
   useEffect(() => {
@@ -224,10 +246,24 @@ export function useCheckoutLogic() {
 
       const result = await response.json();
       if (result.sucesso && result.options) {
-        setShippingOptions(result.options);
-        if (result.options.length > 0) {
-          const alreadySelected = result.options.find(opt => opt.id === selectedShippingId);
-          const defaultOpt = alreadySelected || result.options.find(opt => opt.isFree) || result.options[0];
+        let finalOptions = [...result.options];
+        
+        // Injeta Retirada no Local se estiver ativo
+        if (localPickupConfig?.ativo) {
+          finalOptions.unshift({
+            id: 'retirada_local',
+            company: 'Avante Lingerie',
+            name: 'Retirada no Local',
+            price: 0,
+            isFree: true,
+            delivery_time: localPickupConfig.prazo_mensagem || '1 dia'
+          });
+        }
+
+        setShippingOptions(finalOptions);
+        if (finalOptions.length > 0) {
+          const alreadySelected = finalOptions.find(opt => opt.id === selectedShippingId);
+          const defaultOpt = alreadySelected || finalOptions.find(opt => opt.isFree) || finalOptions[0];
           setShippingOption({
             cost: defaultOpt.price,
             method: `${defaultOpt.company} ${defaultOpt.name}`,
@@ -245,7 +281,7 @@ export function useCheckoutLogic() {
     } finally {
       setLoadingShipping(false);
     }
-  }, [cart, isSameAddress, billingAddress, deliveryAddress, selectedShippingId]);
+  }, [cart, isSameAddress, billingAddress, deliveryAddress, selectedShippingId, localPickupConfig]);
 
   // Recalculate shipping options automatically when active CEP changes
   useEffect(() => {
@@ -359,7 +395,7 @@ export function useCheckoutLogic() {
       return null;
     }
 
-    if (!isSameAddress) {
+    if (!isSameAddress && selectedShippingId !== 'retirada_local') {
       const deliveryError = validateAddress(deliveryAddress);
       if (deliveryError) {
         toast.error(`Dados de Entrega: ${deliveryError}`);
@@ -514,6 +550,7 @@ export function useCheckoutLogic() {
     shippingOptions,
     loadingShipping,
     selectedShippingId,
-    selectShippingOption
+    selectShippingOption,
+    localPickupConfig
   };
 }
