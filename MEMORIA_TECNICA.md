@@ -590,3 +590,22 @@ Para não esquecermos, aqui estão os itens congelados e as datas de destrave:
 
 - **Checkout / Retirada no Local:** Implementar a op��o de Retirada no Local na tela de Checkout. O sistema precisar� ler as configura��es globais da loja (Painel Admin -> Configura��es -> Loja). Se a chave de Retirada no Local estiver ativa, oferecer essa op��o de frete gratuito, exibindo o endere�o de retirada, hor�rio, prazo e instru��es definidos no painel.
 
+
+---
+
+## 🛠️ Atualização: 12/08/2026
+
+**1. Hero Carousel Otimizado (Vídeo do Dia):**
+- **Problema resolvido:** O carregamento do vídeo gerava um 'flicker' visual na tela (flash) por ser calculado assincronamente via useEffect.
+- **Solução:** A lógica matemática foi levada para o escopo estático, alimentando o React nativamente. Agora, o vídeo correspondente ao bloco do horário atual já carrega instantaneamente.
+- **Regra:** Em vez de 24 horas, ajustamos o carrossel para rotacionar perfeitamente a cada 3 horas sem impactar a arquitetura da UI.
+
+**2. Retirada no Local Integrada:**
+- **Funcionalidade:** Adicionada a opção de Retirada Física tanto no **Carrinho** quanto no **Checkout**.
+- **Segurança:** A injeção da opção (com valor zerado) foi centralizada na **API de Shipping (Backend)** para respeitar o bloqueio de segurança do PocketBase para leitura pública das configuracoes_loja.
+- **Validação:** A opção de entrega presencial anula a obrigatoriedade de "Endereço de Entrega" no formulário final.
+
+**3. Correções no Motor de Fretes / Regras de Frete Grátis:**
+- **Nomenclatura Nacional:** Adicionado suporte nativo à regra 'nacional' gravada pelo Admin (além de 'global').
+- **Prioridade Estratégica:** Correção da ordenação da tabela regras_frete_gratis para prioridade ascendente (sort: prioridade), respeitando o fluxo humano onde "1" é a regra mais prioritária e absoluta.
+- **Integração de Estoque:** Confirmado o link 100% automático com configuracoes_estoque para extrair o CEP de origem da loja em tempo real.

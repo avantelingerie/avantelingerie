@@ -193,10 +193,10 @@ router.post('/calculate', async (req, res, next) => {
       filteredOptions[0].isFree = true;
     }
 
-    // 7.5 Check if local pickup is enabled in configuracoes_loja
+    // 7.5 Check if local pickup is enabled in configuracoes_estoque
     let localPickupConfig = null;
     try {
-      const configRecords = await pb.collection('configuracoes_loja').getFullList({ $autoCancel: false });
+      const configRecords = await pb.collection('configuracoes_estoque').getFullList({ $autoCancel: false });
       if (configRecords.length > 0 && configRecords[0].retirada_ativo) {
         localPickupConfig = {
           ativo: true,
@@ -217,7 +217,7 @@ router.post('/calculate', async (req, res, next) => {
         });
       }
     } catch (err) {
-      logger.warn('[ShippingAPI] Falha ao verificar configuracoes_loja para retirada:', err.message);
+      logger.warn('[ShippingAPI] Falha ao verificar configuracoes_estoque para retirada:', err.message);
     }
 
     res.json({
