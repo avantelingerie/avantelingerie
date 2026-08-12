@@ -19,27 +19,24 @@ import AffiliatedStoresSection from '@/components/AffiliatedStoresSection.jsx';
 import StoreSection from '@/components/StoreSection.jsx';
 import { useNavigate } from 'react-router-dom';
 
+// Helper para o vídeo do dia
+const getHeroVideoForToday = () => {
+  const now = new Date();
+  const start = new Date(now.getFullYear(), 0, 0);
+  const diff = now - start;
+  const oneDay = 1000 * 60 * 60 * 24;
+  const diaDoAno = Math.floor(diff / oneDay);
+  
+  const videos = ['hero_1.mp4', 'hero_2.mp4', 'hero_3.mp4'];
+  const videoIndex = diaDoAno % videos.length;
+  return `/video/${videos[videoIndex]}`;
+};
+
 export default function HomePage() {
   const [loading, setLoading] = useState(true);
   const [videoVersion] = useState(Date.now());
-  const [currentHeroVideo, setCurrentHeroVideo] = useState('/video/hero_1.mp4');
+  const [currentHeroVideo] = useState(getHeroVideoForToday());
   const navigate = useNavigate();
-
-  useEffect(() => {
-    const getDayOfYear = () => {
-      const now = new Date();
-      const start = new Date(now.getFullYear(), 0, 0);
-      const diff = now - start;
-      const oneDay = 1000 * 60 * 60 * 24;
-      return Math.floor(diff / oneDay);
-    };
-    
-    // Lista de vídeos sequenciais
-    const videos = ['hero_1.mp4', 'hero_2.mp4', 'hero_3.mp4'];
-    const diaDoAno = getDayOfYear();
-    const videoIndex = diaDoAno % videos.length;
-    setCurrentHeroVideo(`/video/${videos[videoIndex]}`);
-  }, []);
 
   const [data, setData] = useState({
     maisVendidos: [],
