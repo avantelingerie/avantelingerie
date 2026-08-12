@@ -102,7 +102,7 @@ router.post('/calculate', async (req, res, next) => {
     // 4. Check free shipping rules in PocketBase
     const rules = await pb.collection('regras_frete_gratis').getFullList({
       filter: 'ativo = true',
-      sort: '-prioridade',
+      sort: 'prioridade',
       $autoCancel: false
     }).catch(() => []);
 
