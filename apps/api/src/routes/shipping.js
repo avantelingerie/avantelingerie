@@ -193,12 +193,40 @@ router.post('/calculate', async (req, res, next) => {
       filteredOptions[0].isFree = true;
     }
 
+    // 7.5 Check if local pickup is enabled in configuracoes_loja
+    let localPickupConfig = null;
+    try {
+      const configRecords = await pb.collection('configuracoes_loja').getFullList({ $autoCancel: false });
+      if (configRecords.length > 0 && configRecords[0].retirada_ativo) {
+        localPickupConfig = {
+          ativo: true,
+          endereco: configRecords[0].retirada_endereco,
+          horario: configRecords[0].retirada_horario,
+          prazo_mensagem: configRecords[0].retirada_prazo_mensagem,
+          instrucoes: configRecords[0].retirada_instrucoes
+        };
+        // Inject at the beginning of options
+        filteredOptions.unshift({
+          id: 'retirada_local',
+          company: 'Avante Lingerie',
+          name: 'Retirada no Local',
+          price: 0,
+          originalPrice: 0,
+          delivery_time: localPickupConfig.prazo_mensagem || '1 dia',
+          isFree: true
+        });
+      }
+    } catch (err) {
+      logger.warn('[ShippingAPI] Falha ao verificar configuracoes_loja para retirada:', err.message);
+    }
+
     res.json({
       sucesso: true,
       options: filteredOptions,
       freeShippingApplied,
       freeShippingMin,
-      subtotal
+      subtotal,
+      localPickupConfig
     });
 
   } catch (error) {
