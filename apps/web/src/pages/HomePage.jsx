@@ -22,7 +22,25 @@ import { useNavigate } from 'react-router-dom';
 export default function HomePage() {
   const [loading, setLoading] = useState(true);
   const [videoVersion] = useState(Date.now());
+  const [currentHeroVideo, setCurrentHeroVideo] = useState('/video/hero_1.mp4');
   const navigate = useNavigate();
+
+  useEffect(() => {
+    const getDayOfYear = () => {
+      const now = new Date();
+      const start = new Date(now.getFullYear(), 0, 0);
+      const diff = now - start;
+      const oneDay = 1000 * 60 * 60 * 24;
+      return Math.floor(diff / oneDay);
+    };
+    
+    // Lista de vídeos sequenciais
+    const videos = ['hero_1.mp4', 'hero_2.mp4', 'hero_3.mp4'];
+    const diaDoAno = getDayOfYear();
+    const videoIndex = diaDoAno % videos.length;
+    setCurrentHeroVideo(`/video/${videos[videoIndex]}`);
+  }, []);
+
   const [data, setData] = useState({
     maisVendidos: [],
     favorites: [],
@@ -208,7 +226,7 @@ export default function HomePage() {
       <section id="home" className="relative min-h-[100dvh] w-full overflow-hidden bg-black flex items-center justify-center">
         <video
           key={videoVersion}
-          src="/video/video_avante.mp4"
+          src={currentHeroVideo}
           className="absolute inset-0 w-full h-full object-cover z-[1] opacity-75"
           autoPlay muted loop playsInline controls={false} preload="none"
         />

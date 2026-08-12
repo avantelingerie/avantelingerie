@@ -581,3 +581,12 @@ Para nÃ£o esquecermos, aqui estÃ£o os itens congelados e as datas de destrave:
    - Comprar e vincular o Certificado Digital A1.
    - Configurar a impressÃ£o conjugada (DANFE Simplificada + Etiqueta de Envio) para saÃ­rem na mesma impressora tÃ©rmica (formato 10 x 15 cm).
 2. **Stripe (Aguardando Cadastro de Produtos):** A mudanÃ§a para as chaves de "ProduÃ§Ã£o" (Live) foi pausada propositalmente. A ideia Ã© primeiro iniciar o cadastro de produtos na loja e rodar alguns testes finais de checkout usando o modo Teste da Stripe. Apenas depois desse QA final faremos a virada de chaves. O problema do e-mail inicial (Gmail) serÃ¡ resolvido no momento da virada.
+
+## ?? Backlog / Próximos Passos
+*Ideias mapeadas para implementações futuras a pedido do usuário.*
+
+- **Hero Carousel / Alternância de Vídeos:** Na seção principal da Home (Hero), implementar um sistema de carrossel de vídeos em background. A ideia é ter 2 ou mais vídeos (além do atual) que fiquem se alternando a cada 24 horas (Video of the Day / Vídeo da Semana), para que a loja sempre traga um ar de novidade para clientes recorrentes, sem causar distração com vídeos mudando enquanto a pessoa navega..
+
+
+- **Checkout / Retirada no Local:** Implementar a opção de Retirada no Local na tela de Checkout. O sistema precisará ler as configurações globais da loja (Painel Admin -> Configurações -> Loja). Se a chave de Retirada no Local estiver ativa, oferecer essa opção de frete gratuito, exibindo o endereço de retirada, horário, prazo e instruções definidos no painel.
+
