@@ -7496,3 +7496,393 @@ zr7pff8b%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created:
 - url: http://localhost:3000/categoria/moda-praia
 - title: Avante Lingerie | Oficial
 
+## 2026-08-12 17:12:59.422Z load
+- url: http://localhost:3000/
+- title: Avante Lingerie | Oficial
+
+## 2026-08-12 17:13:09.775Z load
+- url: http://localhost:3000/
+- title: Avante Lingerie | Oficial
+
+## 2026-08-12 17:13:10.054Z navigate
+- url: http://localhost:3000/
+- via: replaceState
+
+## 2026-08-12 17:13:10.489Z console.error
+- text: Failed to fetch coming soon config: SyntaxError: Unexpected token '<', "<!doctype "... is not valid JSON
+
+## 2026-08-12 17:13:14.018Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22hya9h8gimmcygbn%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 83
+
+## 2026-08-12 17:13:14.019Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22vi937hhuvzg154r%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 83
+
+## 2026-08-12 17:13:14.019Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22219neq337ly8hpm%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 83
+
+## 2026-08-12 17:13:14.019Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22hya9h8gimmcygbn%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-12 17:13:14.022Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22vi937hhuvzg154r%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-12 17:13:14.022Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22219neq337ly8hpm%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-12 17:13:14.030Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22sz933rrdjx4j62w%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 93
+
+## 2026-08-12 17:13:14.030Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22sz933rrdjx4j62w%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-12 17:13:14.042Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%220tioxaa5mvtikb6%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 105
+
+## 2026-08-12 17:13:14.042Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%220tioxaa5mvtikb6%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-12 17:13:14.062Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22z7i4vmn1n7io1np%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 125
+
+## 2026-08-12 17:13:14.062Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22km2hb4iq8cyaqut%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 125
+
+## 2026-08-12 17:13:14.062Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22okqcy3xzr7pff8b%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 125
+
+## 2026-08-12 17:13:14.062Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22z7i4vmn1n7io1np%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-12 17:13:14.063Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22km2hb4iq8cyaqut%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-12 17:13:14.063Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22okqcy3xzr7pff8b%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-12 17:13:14.380Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-12 17:13:14.383Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-12 17:13:14.383Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-12 17:13:14.387Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-12 17:13:14.388Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-12 17:13:14.419Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-12 17:13:14.420Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-12 17:13:14.427Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-12 17:13:14.427Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-12 17:13:14.433Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-12 17:13:14.434Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-12 17:13:53.447Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-08-12 17:21:48.721Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-12 17:21:48.746Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-12 17:21:48.747Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-12 17:21:48.777Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-12 17:21:48.780Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-12 17:21:48.950Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-12 17:21:48.952Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-12 17:21:49.145Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-12 17:21:49.156Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-12 17:21:49.275Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-12 17:21:49.275Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-12 17:21:50.134Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-12 17:21:50.135Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-12 17:21:50.136Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-12 17:21:50.146Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-12 17:21:50.147Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-12 17:21:50.189Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-12 17:21:50.190Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-12 17:21:50.216Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-12 17:21:50.217Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-12 17:21:50.237Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-12 17:21:50.239Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-12 17:21:50.399Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22hya9h8gimmcygbn%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 47
+
+## 2026-08-12 17:21:50.408Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22hya9h8gimmcygbn%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-12 17:21:50.448Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22vi937hhuvzg154r%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 94
+
+## 2026-08-12 17:21:50.449Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22219neq337ly8hpm%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 94
+
+## 2026-08-12 17:21:50.449Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22sz933rrdjx4j62w%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 94
+
+## 2026-08-12 17:21:50.450Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%220tioxaa5mvtikb6%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 88
+
+## 2026-08-12 17:21:50.450Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22vi937hhuvzg154r%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-12 17:21:50.451Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22219neq337ly8hpm%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-12 17:21:50.451Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22sz933rrdjx4j62w%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-12 17:21:50.452Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22km2hb4iq8cyaqut%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 87
+
+## 2026-08-12 17:21:50.452Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22z7i4vmn1n7io1np%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 88
+
+## 2026-08-12 17:21:50.452Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22okqcy3xzr7pff8b%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 89
+
+## 2026-08-12 17:21:50.453Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%220tioxaa5mvtikb6%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-12 17:21:50.453Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22km2hb4iq8cyaqut%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-12 17:21:50.453Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22z7i4vmn1n7io1np%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-12 17:21:50.453Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22okqcy3xzr7pff8b%22%20%26%26%20imagem_produto%20!%3D%20%22%22&skipTotal=1&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-12 17:21:50.653Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-12 17:21:50.653Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-12 17:21:50.654Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-12 17:21:50.660Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-12 17:21:50.660Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-12 17:21:50.684Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-12 17:21:50.684Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-12 17:21:50.698Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-12 17:21:50.698Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-12 17:21:50.713Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-12 17:21:50.714Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+

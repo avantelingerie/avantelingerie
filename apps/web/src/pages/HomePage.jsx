@@ -19,16 +19,14 @@ import AffiliatedStoresSection from '@/components/AffiliatedStoresSection.jsx';
 import StoreSection from '@/components/StoreSection.jsx';
 import { useNavigate } from 'react-router-dom';
 
-// Helper para o vídeo do dia
+// Helper para o vídeo rotacionando a cada 3 horas
 const getHeroVideoForToday = () => {
-  const now = new Date();
-  const start = new Date(now.getFullYear(), 0, 0);
-  const diff = now - start;
-  const oneDay = 1000 * 60 * 60 * 24;
-  const diaDoAno = Math.floor(diff / oneDay);
+  const now = Date.now();
+  const tresHoras = 1000 * 60 * 60 * 3;
+  const blocoAtual = Math.floor(now / tresHoras);
   
   const videos = ['hero_1.mp4', 'hero_2.mp4', 'hero_3.mp4'];
-  const videoIndex = diaDoAno % videos.length;
+  const videoIndex = blocoAtual % videos.length;
   return `/video/${videos[videoIndex]}`;
 };
 
