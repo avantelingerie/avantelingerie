@@ -32,7 +32,6 @@ const getHeroVideoForToday = () => {
 
 export default function HomePage() {
   const [loading, setLoading] = useState(true);
-  const [videoVersion] = useState(Date.now());
   const [currentHeroVideo] = useState(getHeroVideoForToday());
   const navigate = useNavigate();
 
@@ -220,10 +219,9 @@ export default function HomePage() {
           ========================================== */}
       <section id="home" className="relative min-h-[100dvh] w-full overflow-hidden bg-black flex items-center justify-center">
         <video
-          key={videoVersion}
           src={currentHeroVideo}
           className="absolute inset-0 w-full h-full object-cover z-[1] opacity-75"
-          autoPlay muted loop playsInline controls={false} preload="none"
+          autoPlay muted loop playsInline controls={false} preload="auto"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/35 to-black/80 z-[2]" />
         <div className="absolute inset-0 bg-[#c59b5f]/5 mix-blend-overlay z-[2]" />
