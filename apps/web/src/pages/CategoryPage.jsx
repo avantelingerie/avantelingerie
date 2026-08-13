@@ -166,10 +166,10 @@ export default function CategoryPage() {
   }, [buildFilterString, sort]);
 
   useEffect(() => {
-    if (categoryName && categoryName !== 'todas' && categoriaId === null) return;
+    if (categoryName && categoryName !== 'todas' && categoriaId === null && colecaoId === null) return;
     fetchProducts(1, false);
     window.scrollTo(0, 0);
-  }, [fetchProducts, categoryName, categoriaId]);
+  }, [fetchProducts, categoryName, categoriaId, colecaoId]);
 
   const handleLoadMore = () => {
     if (hasMore && !loadingMore) {

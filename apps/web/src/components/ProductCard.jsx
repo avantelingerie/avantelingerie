@@ -42,8 +42,18 @@ export default function ProductCard({
 
   const rating = data.nota || data.avaliacao_media || data.rating || 5.0;
   const reviewsCount = data.quantidade_avaliacoes || data.reviews_count || 128;
-  const stock = data.estoque_restante || data.stock || 5;
-  const sold = data.vendidos_semana || 42;
+  
+  // Pseudo-random baseado no ID para os números não piscarem e variarem por produto
+  const hashStr = (str) => {
+    let hash = 0;
+    for (let i = 0; i < str.length; i++) {
+      hash = str.charCodeAt(i) + ((hash << 5) - hash);
+    }
+    return Math.abs(hash);
+  };
+  const seed = hashStr(id);
+  const stock = data.estoque_restante || data.stock || ((seed % 14) + 2); // de 2 a 15
+  const sold = data.vendidos_semana || ((seed % 82) + 12); // de 12 a 93
 
   const profitPerPiece = price - wholesalePrice;
   const profitMarginPercent = wholesalePrice > 0 ? Math.round((profitPerPiece / wholesalePrice) * 100) : 0;
@@ -468,12 +478,12 @@ export default function ProductCard({
 
           <div className="flex flex-col gap-1 my-1.5 bg-gradient-to-br from-[#FFFBF8] to-[#FCF9F5] p-2.5 rounded-xl border border-[#c59b5f]/15 shadow-premium-sm">
             <div className="text-gray-800 text-[10px] sm:text-[11px] font-bold flex items-center gap-1.5">
-              <Package size={12} className="shrink-0 text-[#c59b5f]" />
-              <span>Mais de <span className="text-[#c59b5f]">{sold}</span> vendidos essa semana!</span>
+              <span className="shrink-0 text-[#c59b5f] text-sm">🏭</span>
+              <span>Direto da Fábrica: <span className="text-[#c59b5f]">{sold}</span> peças despachadas!</span>
             </div>
             <div className="text-gray-800 text-[10px] sm:text-[11px] font-bold flex items-center gap-1.5">
-              <Zap size={12} className="shrink-0 text-[#c59b5f]" />
-              <span>Restam apenas <span className="text-[#c59b5f]">{stock}</span> unidades em estoque!</span>
+              <span className="shrink-0 text-[#c59b5f] text-sm">📦</span>
+              <span>Pronta-entrega: <span className="text-[#c59b5f]">{stock}</span> un. (Aceitamos encomendas)</span>
             </div>
           </div>
 

@@ -18,6 +18,7 @@ import TestimonialsSection from '@/components/TestimonialsSection.jsx';
 import AffiliatedStoresSection from '@/components/AffiliatedStoresSection.jsx';
 import StoreSection from '@/components/StoreSection.jsx';
 import { useNavigate } from 'react-router-dom';
+import FactoryMarquee from '@/components/FactoryMarquee.jsx';
 
 // Helper para o vídeo rotacionando a cada 3 horas
 const getHeroVideoForToday = () => {
@@ -68,14 +69,13 @@ export default function HomePage() {
         // Busca de Categorias Dinâmicas
         const categoriesRes = await pb.collection('categorias').getFullList({ filter: 'ativo = true', sort: 'nome', $autoCancel: false }).catch(() => []);
         
-        // Busca 1 imagem de produto para cada categoria para usar como thumbnail
         const dynamicCategories = await Promise.all(categoriesRes.map(async (cat) => {
           try {
-            const prod = await pb.collection('products').getFirstListItem(`status = true && categoria_id = "${cat.id}" && imagem_produto != ""`, { sort: '-created', $autoCancel: false });
+            const prod = await pb.collection('products').getFirstListItem(`status = true && categoria_id = "${cat.id}" && imagem_principal != ""`, { sort: '-created', $autoCancel: false });
             return {
               id: cat.id,
               name: cat.nome,
-              image: prod.imagem_produto,
+              image: pb.files.getUrl(prod, prod.imagem_principal),
               link: `/categoria/${cat.slug}`
             };
           } catch (e) {
@@ -94,67 +94,20 @@ export default function HomePage() {
           pb.collection('products').getList(1, 4, { filter: 'status = true && is_favorito = true', sort: '-created', expand: 'categoria_id', $autoCancel: false }),
           pb.collection('products').getList(1, 4, { filter: 'status = true && is_promocao = true', sort: '-created', expand: 'categoria_id', $autoCancel: false }),
           pb.collection('products').getList(1, 4, { filter: 'status = true && is_novidade = true', sort: '-created', expand: 'categoria_id', $autoCancel: false }),
-          pb.collection('products').getList(1, 4, { filter: 'status = true && (categoria = "Kits" || is_combo = true)', sort: '-created', expand: 'categoria_id', $autoCancel: false }),
-          pb.collection('testimonials').getList(1, 6, { sort: '-created', $autoCancel: false }),
-          pb.collection('colecoes').getList(1, 4, { filter: 'ativo = true', sort: '-created', $autoCancel: false })
+          pb.collection('products').getList(1, 4, { filter: 'status = true && categoria_id.slug = "kits"', sort: '-created', expand: 'categoria_id', $autoCancel: false }),
+          pb.collection('testimonials').getList(1, 10, { filter: 'status = true', sort: '-created', $autoCancel: false }),
+          pb.collection('colecoes').getList(1, 3, { filter: 'ativo = true', sort: '-created', $autoCancel: false })
         ]);
 
         const getItems = res => res.status === 'fulfilled' ? res.value.items : [];
 
-        const padWithCard = (items, fallback, targetLength = 4) => {
-          const arr = [...items];
-          while (arr.length < targetLength) {
-            arr.push({
-              ...fallback,
-              id: `${fallback.id}-${arr.length}`
-            });
-          }
-          return arr.slice(0, targetLength);
-        };
-
         if (isMounted) {
           setCategories(dynamicCategories);
           setData({
-            maisVendidos: padWithCard(getItems(maisVendidosRes), {
-              id: 'mais-vendido-4',
-              nome_produto: 'Conjunto em Microfibra Cropped Regata Gola Alta',
-              categoria: 'CONJUNTOS',
-              imagem_produto: 'https://horizons-cdn.hostinger.com/2863a2ab-708d-40c9-b019-44d46f1b8bc1/9331fd1b840bbc52cc06e34b807d7083.jpg',
-              preco_varejo: 19.9,
-              nota: 4.8,
-              quantidade_avaliacoes: 124,
-              is_promocao: false
-            }),
-            favorites: padWithCard(getItems(favoritesRes), {
-              id: 'fav-4',
-              nome_produto: 'Conjunto Renda Branca Elegance',
-              categoria: 'CONJUNTOS',
-              imagem_produto: 'https://horizons-cdn.hostinger.com/2863a2ab-708d-40c9-b019-44d46f1b8bc1/9331fd1b840bbc52cc06e34b807d7083.jpg',
-              preco_varejo: 39.90,
-              is_promocao: true,
-              nota: 5.0,
-              quantidade_avaliacoes: 112
-            }),
-            promos: padWithCard(getItems(promosRes), {
-              id: 'promo-4',
-              nome_produto: 'Conjunto Renda Sensualité',
-              categoria: 'CONJUNTOS',
-              imagem_produto: 'https://horizons-cdn.hostinger.com/2863a2ab-708d-40c9-b019-44d46f1b8bc1/c2d4624557c0de0eb4a45ebd8f3f9385.jpg',
-              preco_varejo: 29.90,
-              is_promocao: true,
-              nota: 4.8,
-              quantidade_avaliacoes: 96
-            }),
-            newArrivals: padWithCard(getItems(newArrivalsRes), {
-              id: 'novidade-4',
-              nome_produto: 'Conjunto Renda Noturna Avante',
-              categoria: 'CONJUNTOS',
-              imagem_produto: 'https://horizons-cdn.hostinger.com/2863a2ab-708d-40c9-b019-44d46f1b8bc1/021cb0190198eb005ad0498485c5e02a.jpg',
-              preco_varejo: 34.90,
-              is_promocao: false,
-              nota: 4.9,
-              quantidade_avaliacoes: 142
-            }),
+            maisVendidos: getItems(maisVendidosRes),
+            favorites: getItems(favoritesRes),
+            promos: getItems(promosRes),
+            newArrivals: getItems(newArrivalsRes),
             kits: getItems(kitsRes),
             testimonials: getItems(testimonialsRes),
             colecoes: getItems(colecoesRes)
@@ -273,6 +226,8 @@ export default function HomePage() {
           </motion.div>
         </div>
       </section>
+
+      <FactoryMarquee />
 
       {/* ==========================================
           SECTION 2: INFINITE GLASS GUARANTEES
@@ -627,7 +582,7 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 relative z-10">
             {data.colecoes && data.colecoes.length > 0 ? (
               data.colecoes.map((col, idx) => (
-                <div key={col.id} onClick={() => navigate(`/categoria/${col.slug}`)} className={`cursor-pointer ${idx === 0 ? 'lg:col-span-2 aspect-[4/3] lg:aspect-auto' : ''}`}>
+                <div key={col.id} onClick={() => navigate(`/categoria/${col.slug}`)} className={`cursor-pointer ${idx === 0 ? 'md:col-span-2 lg:col-span-2 aspect-[4/3] lg:aspect-auto' : ''}`}>
                   <CollectionCard 
                     title={col.nome} 
                     image={col.imagem_capa ? pb.files.getUrl(col, col.imagem_capa) : 'https://images.unsplash.com/photo-1568441556126-f36ae0900180?w=600&q=80'} 
