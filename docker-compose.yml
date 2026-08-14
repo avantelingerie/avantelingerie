@@ -40,7 +40,8 @@ services:
       - ./pb_data:/pb_data
       - ./pb_public:/pb_public
       - ./apps/pocketbase/pb_migrations:/pb_migrations
-    command: ["serve", "--http=0.0.0.0:8090", "--dir=/pb_data"]
+      - ./apps/pocketbase/pb_hooks:/pb_hooks
+    command: ["serve", "--http=0.0.0.0:8090", "--dir=/pb_data", "--migrationsDir=/pb_migrations", "--hooksDir=/pb_hooks"]
     restart: always
     networks:
       - avante-network
