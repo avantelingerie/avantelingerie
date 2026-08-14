@@ -1,7 +1,7 @@
 /// <reference path="../pb_data/types.d.ts" />
 migrate((app) => {
   const collection = new Collection({
-    "createRule": "",
+    "createRule": "@request.auth.id != \\\"\\\"",
     "deleteRule": null,
     "fields": [
       {
