@@ -198,14 +198,17 @@ export default function QueroRevenderPage() {
 
       // Save lead entry as well
       try {
-        await pb.collection('leads_revenda').create({
+        await pb.collection('solicitacoes_revendedor').create({
+          user_id: updated.id,
           nome: formData.nome,
-          email: formData.email,
           whatsapp: formData.whatsapp,
+          cpf_cnpj: 'Apenas Cadastro Inicial',
+          cidade_estado: 'Apenas Cadastro Inicial',
+          ja_revende: 'sim',
           status: 'pendente'
         });
       } catch (pbError) {
-        console.warn('[QueroRevenderPage] leads_revenda collection fallback:', pbError);
+        console.warn('[QueroRevenderPage] solicitacoes_revendedor fallback:', pbError);
       }
 
       toast.success('Cadastro de revendedora criado com sucesso! Sua senha temporária é seu WhatsApp.');
@@ -261,14 +264,22 @@ export default function QueroRevenderPage() {
               <Crown className="w-3.5 h-3.5 animate-pulse" /> Clube de Parceiras Avante
             </div>
 
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-white leading-tight drop-shadow-sm">
-              Transforme sua paixão por moda em <span className="text-[#C59B5F]">independência financeira</span>.
-            </h1>
-
-            <p className="text-white/70 text-lg font-light leading-relaxed max-w-2xl">
-              Revenda lingeries premium de Nova Friburgo com lucros reais de até 150%.
-              Ganhe acesso imediato a preços de atacado direto de fábrica, kits prontos e material profissional de marketing para explodir suas vendas nas redes sociais.
-            </p>
+            <motion.h1
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="text-4xl md:text-6xl font-serif text-white font-bold tracking-tight mb-4"
+            >
+              Lucro Máximo. <span className="text-[#c59b5f] italic">Direto da Fonte.</span>
+            </motion.h1>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="text-lg md:text-xl text-gray-300 font-light max-w-2xl mx-auto"
+            >
+              Compre direto da nossa confecção independente e garanta até {getResellerMaxDiscount()} de desconto. Sem intermediários, você alcança margens de lucro de até 150%.
+            </motion.p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <button
