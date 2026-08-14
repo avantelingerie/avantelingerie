@@ -704,7 +704,10 @@ export default function ContactPage() {
                   <option value="Dúvida sobre pedido">Dúvida sobre pedido</option>
                   <option value="Prazo de entrega">Prazo de entrega</option>
                   <option value="Troca ou devolução">Troca ou devolução</option>
-                  <option value="Pagamento">Pagamento</option>
+                  <option value="Financeiro / Pagamento">Financeiro / Pagamento</option>
+                  <option value="Marketing / Parcerias">Marketing / Parcerias</option>
+                  <option value="Privacidade (LGPD)">Privacidade (LGPD)</option>
+                  <option value="Atacado / Revendas">Atacado / Revendas</option>
                   <option value="Outro assunto">Outro assunto</option>
                 </select>
                 <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-gray-500">

@@ -618,3 +618,17 @@ Para nÃƒÂ£o esquecermos, aqui estÃƒÂ£o os itens congelados e as datas de destrav
  -   * * N o s s a s   C a t e g o r i a s : * *   A   v i t r i n e   d e   c a t e g o r i a s   n ã o   u t i l i z a   i m a g e n s   m o c k a d a s   o u   e n v i o s   m a n u a i s   d e   f o t o   p a r a   a   c a t e g o r i a .   E l a   é   1 0 0 %   a u t ô n o m a :   o   s i s t e m a   c o n s u l t a   o   b a n c o   d e   d a d o s ,   b u s c a   o   p r o d u t o   * m a i s   r e c e n t e *   ( s o r t :   ' - c r e a t e d ' )   a t r e l a d o   à q u e l a   c a t e g o r i a   q u e   p o s s u a   u m a   i m a g e m _ p r i n c i p a l   c a d a s t r a d a ,   e   u t i l i z a   a   f o t o   d e s s e   p r o d u t o   c o m o   c a p a   d a   c a t e g o r i a .   S e   o   p r o d u t o   f o r   a p a g a d o ,   o   s i s t e m a   u s a   o   s e g u n d o   m a i s   r e c e n t e   a u t o m a t i c a m e n t e . 
  -   * * E x p l o r e   N o s s a s   C o l e ç õ e s   ( D e s i g n   1 + 2 ) : * *   P a r a   m a n t e r   u m   l a y o u t   b o u t i q u e   a l t a m e n t e   o r g a n i z a d o ,   o   s i s t e m a   l i m i t a   r i g i d a m e n t e   a   b u s c a   a   n o   m á x i m o   3   c o l e ç õ e s   a t i v a s   ( g e t L i s t ( 1 ,   3 ) ) .   A   g r a d e   C S S   é   r e s p o n s i v a   e   m a t e m á t i c a :   e m   t e l a s   g r a n d e s   ( D e s k t o p )   e   m é d i a s   ( T a b l e t ) ,   a   1 ª   c o l e ç ã o   m a i s   r e c e n t e   r e c e b e   d e s t a q u e   d u p l o   ( l g : c o l - s p a n - 2   m d : c o l - s p a n - 2 ) ,   e n q u a n t o   a   2 ª   e   a   3 ª   c o l e ç õ e s   o c u p a m   1   c o l u n a   c a d a .   I s s o   p r e e n c h e   a   l i n h a   p e r f e i t a m e n t e   s e m   d e i x a r   b u r a c o s   o u   d e s o r g a n i z a ç ã o   v i s u a l .  
  
+## ?? Atualização: 14/08/2026 - Hub Central de Atendimento & Roteamento Inteligente
+- **O Problema:** Os e-mails do site estavam sendo disparados "às cegas" (hardcoded) para a caixa principal (contato@), sem levar em conta o assunto ou o departamento, o que impedia a organização correta nas pastas do Zoho Mail. Além disso, os leads de Atacado (Quero Revender) não disparavam notificação por e-mail.
+- **A Solução (Frontend):** O formulário de contato (ContactPage.jsx) foi expandido e renomeado arquiteturalmente como o "Hub Central de Atendimento", contendo opções exatas para cada departamento da empresa.
+- **A Solução (Backend/PocketBase):** 
+  1. O arquivo contact-form-email.pb.js foi reescrito com um switch/if-else para rotear cada assunto do formulário dinamicamente:
+     - Dúvida sobre pedido / Prazo de entrega ? pedidos@avantelingerie.com.br
+     - Troca ou devolução ? 	rocas@avantelingerie.com.br
+     - Financeiro / Pagamento ? inanceiro@avantelingerie.com.br
+     - Marketing / Parcerias ? marketing@avantelingerie.com.br
+     - Privacidade (LGPD) ? privacidade@avantelingerie.com.br
+     - Atacado / Revendas ? evendas@avantelingerie.com.br
+     - Outro assunto ? contato@avantelingerie.com.br
+  2. Criado um novo hook leads-revenda-email.pb.js exclusivo para disparar o lead da página de Atacado direto para evendas@avantelingerie.com.br.
+- **Zoho Mail:** Aliases e filtros devidamente configurados no painel do Zoho Mail para capturar os e-mails direcionados e movê-los automaticamente para as respectivas pastas de setor.
