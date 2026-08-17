@@ -14,7 +14,8 @@ import {
   Shield,
   CheckCircle,
   Award,
-  Crown
+  Crown,
+  Youtube
 } from 'lucide-react';
 import { toast } from 'sonner';
 import pb from '@/lib/pocketbaseClient';
@@ -160,7 +161,7 @@ export default function Footer() {
                 href="https://www.instagram.com/avante.lingerie/" 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="w-10 h-10 rounded-full bg-white/5 border border-[#c59b5f]/30 flex items-center justify-center text-[#c59b5f] hover:bg-[#c59b5f] hover:text-black transition-all shadow-sm"
+                className="w-10 h-10 rounded-full bg-white/5 border border-[#E1306C]/30 flex items-center justify-center text-[#E1306C] hover:bg-[#E1306C] hover:text-white transition-all shadow-sm"
               >
                 <Instagram className="w-5 h-5" />
               </a>
@@ -168,7 +169,7 @@ export default function Footer() {
                 href="https://www.facebook.com/profile.php?id=61589229361324&locale=pt_BR" 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="w-10 h-10 rounded-full bg-white/5 border border-[#c59b5f]/30 flex items-center justify-center text-[#c59b5f] hover:bg-[#c59b5f] hover:text-black transition-all shadow-sm"
+                className="w-10 h-10 rounded-full bg-white/5 border border-[#1877F2]/30 flex items-center justify-center text-[#1877F2] hover:bg-[#1877F2] hover:text-white transition-all shadow-sm"
               >
                 <Facebook className="w-5 h-5" />
               </a>
@@ -176,9 +177,17 @@ export default function Footer() {
                 href="https://wa.me/5522997618591" 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="w-10 h-10 rounded-full bg-white/5 border border-[#c59b5f]/30 flex items-center justify-center text-[#c59b5f] hover:bg-[#c59b5f] hover:text-black transition-all shadow-sm"
+                className="w-10 h-10 rounded-full bg-white/5 border border-[#25D366]/30 flex items-center justify-center text-[#25D366] hover:bg-[#25D366] hover:text-white transition-all shadow-sm"
               >
                 <Phone className="w-5 h-5" />
+              </a>
+              <a 
+                href="https://www.youtube.com/@AvanteLingerie" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="w-10 h-10 rounded-full bg-white/5 border border-[#FF0000]/30 flex items-center justify-center text-[#FF0000] hover:bg-[#FF0000] hover:text-white transition-all shadow-sm"
+              >
+                <Youtube className="w-5 h-5" />
               </a>
             </div>
           </div>
