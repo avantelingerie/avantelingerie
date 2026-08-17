@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet';
 import { toast } from 'sonner';
 import { Button } from '@/components/ui/button.jsx';
 import { Skeleton } from '@/components/ui/skeleton.jsx';
-import { Star, Lock, ArrowLeftRight, Package, CheckCircle2, Sparkles, ChevronRight, Headphones, Shield, Heart, ShoppingBag, Percent, TrendingUp, Crown } from 'lucide-react';
+import { Star, Lock, ArrowLeftRight, Package, CheckCircle2, Sparkles, ChevronRight, Headphones, Shield, Heart, ShoppingBag, Percent, TrendingUp, Crown, Scissors } from 'lucide-react';
 import { motion } from 'framer-motion';
 import pb from '@/lib/pocketbaseClient.js';
 import useEmblaCarousel from 'embla-carousel-react';
@@ -19,6 +19,7 @@ import AffiliatedStoresSection from '@/components/AffiliatedStoresSection.jsx';
 import StoreSection from '@/components/StoreSection.jsx';
 import { useNavigate } from 'react-router-dom';
 import FactoryMarquee from '@/components/FactoryMarquee.jsx';
+import FactorySection from '@/components/FactorySection.jsx';
 
 // Helper para o vídeo rotacionando a cada 3 horas
 const getHeroVideoForToday = () => {
@@ -154,6 +155,7 @@ export default function HomePage() {
 
   const guarantees = [
     { icon: Lock, title: "Compra 100% Segura", desc: "Seus dados pessoais e de pagamento totalmente blindados." },
+    { icon: Scissors, title: "Confecção Própria", desc: "Produção 100% autoral. Qualidade premium sem custo de intermediários." },
     { icon: ArrowLeftRight, title: "Troca Simplificada", desc: "Arrependimento em 7 dias, ou defeitos de fábrica em 30 dias." },
     { icon: Package, title: "Envio Ultra Discreto", desc: "Caixa premium lacrada, perfumada e sem marcas externas." },
     { icon: Star, title: "Padrão de Qualidade", desc: "Rendas francesas e tecidos tecnológicos hipoalergênicos." },
@@ -186,7 +188,7 @@ export default function HomePage() {
             transition={{ duration: 0.6 }}
             className="inline-flex items-center gap-2 py-2 px-6 rounded-full bg-black/55 backdrop-blur-md text-xs font-extrabold mb-8 border border-[#c59b5f]/50 text-[#c59b5f] uppercase tracking-[3px] shadow-lg shadow-[#c59b5f]/10"
           >
-            <Sparkles className="w-4.5 h-4.5" /> Coleção Ouro Premium
+            <Sparkles className="w-4.5 h-4.5" /> Da nossa fábrica para o seu corpo
           </motion.span>
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -202,7 +204,7 @@ export default function HomePage() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-base md:text-lg lg:text-xl text-gray-300 max-w-2xl mx-auto mb-12 font-light leading-relaxed"
           >
-            Descubra a harmonia perfeita entre sustentação absoluta, costuras inteligentes e a elegância atemporal que você merece sentir todos os dias.
+            Lingerie premium direto de nossa confecção independente. Sustentação absoluta, costuras inteligentes e a elegância atemporal que você merece, sem intermediários.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -228,9 +230,8 @@ export default function HomePage() {
       </section>
 
       <FactoryMarquee />
-
       {/* ==========================================
-          SECTION 2: INFINITE GLASS GUARANTEES
+          SECTION 2 (Moved): INFINITE GLASS GUARANTEES
           ========================================== */}
       <section className="py-10 bg-white border-b border-[#c59b5f]/10 overflow-hidden relative z-20 shadow-sm">
         <div className="relative flex w-full flex-col justify-center">
@@ -305,6 +306,8 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      <FactorySection />
 
       {/* ==========================================
           SECTION 4: BEST SELLERS (MAIS VENDIDOS)
