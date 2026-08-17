@@ -196,7 +196,7 @@ export default function HomePage() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-4xl md:text-5.5xl lg:text-7xl font-serif text-white max-w-5xl mx-auto mb-8 drop-shadow-2xl font-bold leading-tight"
           >
-            A Joia que <span className="text-[#c59b5f] italic">Veste</span> o Seu Corpo
+            A Joia que <span className="text-[#c59b5f] italic">Abraça</span> o Seu Corpo
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
