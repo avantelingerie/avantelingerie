@@ -137,15 +137,10 @@ header.scrolled, .navbar.scrolled, .site-header.scrolled, nav.scrolled, [class*=
   box-shadow: 0 2px 16px rgba(0,0,0,0.35) !important;
 }
 
-/* Admin Sidebar Color Override to #1a1a1a */
+/* Admin Sidebar Transitions */
 .admin-panel-container aside,
-.admin-panel-container .sidebar,
-.admin-panel-container .admin-sidebar,
-.admin-panel-container nav.sidebar,
-.admin-panel-container [class*="sidebar"],
-.admin-panel-container [class*="side-nav"],
-.admin-panel-container [class*="sidenav"] {
-  background-color: #1a1a1a !important;
+.admin-panel-container .sidebar {
+  transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 /* Coming Soon Animations */
