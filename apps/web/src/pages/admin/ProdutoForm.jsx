@@ -63,6 +63,7 @@ export default function ProdutoForm() {
   const [aiDestaques, setAiDestaques] = useState([]);
 
   const estilosList = [
+    { value: 'basico', label: 'Básico / Essencial' },
     { value: 'conforto', label: 'Conforto / Dia a Dia' },
     { value: 'sensual', label: 'Sensual / Ousado' },
     { value: 'romantico', label: 'Romântico / Delicado' },
@@ -70,25 +71,43 @@ export default function ProdutoForm() {
     { value: 'fitness', label: 'Fitness / Esportivo' },
     { value: 'pijama', label: 'Pijama / Loungewear' },
     { value: 'cropped', label: 'Cropped / Outwear' },
-    { value: 'modelador', label: 'Modelador / Cinta' }
+    { value: 'modelador', label: 'Modelador / Cinta' },
+    { value: 'maternidade', label: 'Maternidade / Gestante' },
+    { value: 'plus-size', label: 'Plus Size / Curvy' },
+    { value: 'praia', label: 'Praia / Resort' }
   ];
 
   const tecidosList = [
     { value: 'microfibra', label: 'Microfibra' },
     { value: 'renda', label: 'Renda' },
     { value: 'algodao', label: 'Algodão' },
+    { value: 'suede', label: 'Suede / Suedine' },
     { value: 'tule', label: 'Tule' },
     { value: 'cetim', label: 'Cetim' },
-    { value: 'veludo', label: 'Veludo' }
+    { value: 'veludo', label: 'Veludo' },
+    { value: 'liganete', label: 'Liganete' },
+    { value: 'viscolycra', label: 'Viscolycra' },
+    { value: 'poliamida', label: 'Poliamida' },
+    { value: 'fluity', label: 'Fluity (Toque de Seda)' },
+    { value: 'modal', label: 'Modal' }
   ];
 
   const destaquesList = [
     { value: 'sem-costura', label: 'Sem costura' },
     { value: 'alcas-regulaveis', label: 'Alças reguláveis' },
     { value: 'bojo-removivel', label: 'Bojo removível' },
+    { value: 'bojo-push-up', label: 'Bojo Push-up (Bolha)' },
     { value: 'duplo-forro', label: 'Duplo forro no busto' },
     { value: 'sustentacao-reforcada', label: 'Sustentação reforçada' },
-    { value: 'hipoalergenico', label: 'Forro 100% Algodão Hipoalergênico' }
+    { value: 'compressao-abdominal', label: 'Compressão abdominal' },
+    { value: 'hipoalergenico', label: 'Forro 100% Algodão Hipoalergênico' },
+    { value: 'fecho-frontal', label: 'Fecho frontal' },
+    { value: 'toque-gelado', label: 'Toque gelado (Frescor)' },
+    { value: 'respiravel', label: 'Anti-odor / Respirável' },
+    { value: 'detalhes-guipir', label: 'Detalhes em Guipir' },
+    { value: 'costas-nadador', label: 'Costas nadador' },
+    { value: 'fio-dental-duplo', label: 'Fio dental duplo' },
+    { value: 'cos-anatomico', label: 'Cós anatômico largo' }
   ];
 
   useEffect(() => {
