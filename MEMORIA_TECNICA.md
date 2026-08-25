@@ -632,3 +632,14 @@ Para nÃ£o esquecermos, aqui estÃ£o os itens congelados e as datas de destrav
      - Outro assunto ? contato@avantelingerie.com.br
   2. Criado um novo hook leads-revenda-email.pb.js exclusivo para disparar o lead da p�gina de Atacado direto para evendas@avantelingerie.com.br.
 - **Zoho Mail:** Aliases e filtros devidamente configurados no painel do Zoho Mail para capturar os e-mails direcionados e mov�-los automaticamente para as respectivas pastas de setor.
+
+## Atualizacao em 14/08/2026
+
+### O que foi feito hoje:
+- **Resolvido bug de Roteamento Inteligente no Zoho:** O formulario da pagina de revenda agora e gravado corretamente na collection nativa solicitacoes_revendedor. A trigger de email (solicitacoes-revendedor-email.pb.js) foi ajustada para escutar a tabela correta e enviar o lead diretamente para evendas@avantelingerie.com.br, solucionando o bug de email que nao chegava.
+- **Novo Design 'Direto da Fabrica' (Em Homologacao Local):** Foi criado um redesign com foco industrial para reforcar a Avante como fabricante, incluindo componentes novos como FactorySection.jsx e ajustes na HomePage. Esses ajustes estao **100% testados e salvos localmente**, mas *ainda nao foram submetidos para a VPS*. Eles aguardam a aprovacao do socio do Luiz.
+
+### Pendencias para amanha (ou quando o usuario aprovar):
+- O usuario (Luiz) precisa dar a aprovacao final do socio. Assim que aprovado, basta executar um simples git push origin main para colocar o layout de Fabrica no ar.
+
+- **Dossie Executivo e Valuation Criados:** Foi gerado o arquivo \Dossie_Executivo_Avante.html\ contendo o relatorio executivo do ecossistema e o Valuation Tecnologico. O valor de mercado medio apurado para o projeto (comparado com o desenvolvimento customizado por Software Houses e plataformas SaaS) foi fixado em R$ 120.000, destacando a independencia da Avante de taxas sobre vendas e mensalidades abusivas.

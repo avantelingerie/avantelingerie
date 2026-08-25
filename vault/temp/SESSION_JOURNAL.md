@@ -4920,3 +4920,3317 @@ onseError 500: ClientResponseError
 ## 2026-08-13 20:28:52.093Z click
 - element: {"tag":"h2","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Explore Nossas Coleções"}
 
+## 2026-08-13 20:31:54.270Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-13 20:31:54.337Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-13 20:31:54.338Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-13 20:31:54.551Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-13 20:31:54.561Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-13 20:31:55.833Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-13 20:31:55.836Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-13 20:31:55.902Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-13 20:31:55.906Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-13 20:31:56.005Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-13 20:31:56.006Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-13 20:31:58.182Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-13 20:31:58.233Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-13 20:31:58.237Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-13 20:31:58.309Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-13 20:31:58.317Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-13 20:31:58.471Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-13 20:31:58.488Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-13 20:31:58.511Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-13 20:31:58.513Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-13 20:31:58.539Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-13 20:31:58.543Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-13 20:31:59.547Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-13 20:32:00.592Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/testimonials/records?page=1&perPage=10&filter=status%20%3D%20true&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 245
+
+## 2026-08-13 20:32:00.599Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/testimonials/records?page=1&perPage=10&filter=status%20%3D%20true&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-13 20:32:00.606Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-13 20:32:00.608Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-13 20:32:00.609Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-13 20:32:00.626Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-13 20:32:00.626Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-13 20:32:00.669Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-13 20:32:00.672Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-13 20:32:00.687Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-13 20:32:00.750Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-13 20:32:00.764Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-13 20:32:00.765Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-13 20:49:18.210Z load
+- url: http://localhost:3000/
+- title: Avante Lingerie | Oficial
+
+## 2026-08-13 20:49:18.324Z load
+- url: http://localhost:3000/admin/produtos/36n5jukwjsew8z7/editar
+- title: Avante Lingerie | Oficial
+
+## 2026-08-13 20:49:23.388Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-13 20:49:23.394Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-13 20:49:23.394Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-13 20:49:24.882Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-13 20:49:25.068Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/testimonials/records?page=1&perPage=10&filter=status%20%3D%20true&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 164
+
+## 2026-08-13 20:49:25.073Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/testimonials/records?page=1&perPage=10&filter=status%20%3D%20true&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-13 20:49:25.099Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-13 20:49:25.102Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-13 20:49:25.103Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-13 20:49:25.116Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-13 20:49:25.118Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-13 20:49:25.173Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-13 20:49:25.174Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-13 20:49:25.190Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-13 20:49:25.190Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-13 20:49:25.256Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-13 20:49:25.256Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-14 17:42:31.123Z load
+- url: http://localhost:3000/
+- title: Avante Lingerie | Oficial
+
+## 2026-08-14 17:42:42.438Z navigate
+- url: http://localhost:3000/
+- via: replaceState
+
+## 2026-08-14 17:42:44.004Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-14 17:42:44.241Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/testimonials/records?page=1&perPage=10&filter=status%20%3D%20true&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 195
+
+## 2026-08-14 17:42:44.244Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/testimonials/records?page=1&perPage=10&filter=status%20%3D%20true&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-14 17:42:44.252Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-14 17:42:44.255Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-14 17:42:44.256Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-14 17:42:44.271Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-14 17:42:44.272Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-14 17:42:44.310Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-14 17:42:44.311Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-14 17:42:44.315Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-14 17:42:44.316Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-14 17:42:44.319Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-14 17:42:44.320Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-14 17:42:48.050Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Aceitar & Continuar"}
+
+## 2026-08-14 17:43:59.488Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Seja uma Revendedora"}
+
+## 2026-08-14 17:43:59.502Z navigate
+- url: http://localhost:3000/quero-revender
+- via: pushState
+
+## 2026-08-14 17:44:13.438Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":"nome","type":"text","id":null,"placeholder":"Seu nome completo","label":"nome","value":"","valueLength":0,"text":""}
+
+## 2026-08-14 17:44:13.630Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":"nome","type":"text","id":null,"placeholder":"Seu nome completo","label":"nome","value":"","valueLength":0,"text":""}
+
+## 2026-08-14 17:44:22.161Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":"nome","type":"text","id":null,"placeholder":"Seu nome completo","label":"nome","value":"Rose ","valueLength":5,"text":""}
+
+## 2026-08-14 17:44:22.162Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":"nome","type":"text","id":null,"placeholder":"Seu nome completo","label":"nome","value":"Rose ","valueLength":5,"text":""}
+
+## 2026-08-14 17:44:22.163Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":"whatsapp","type":"tel","id":null,"placeholder":"(00) 90000-0000","label":"whatsapp","value":"","valueLength":0,"text":""}
+
+## 2026-08-14 17:44:22.363Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":"whatsapp","type":"tel","id":null,"placeholder":"(00) 90000-0000","label":"whatsapp","value":"","valueLength":0,"text":""}
+
+## 2026-08-14 17:44:24.210Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":"whatsapp","type":"tel","id":null,"placeholder":"(00) 90000-0000","label":"whatsapp","value":"(22) 98112-4281","valueLength":15,"text":""}
+
+## 2026-08-14 17:44:24.912Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":"whatsapp","type":"tel","id":null,"placeholder":"(00) 90000-0000","label":"whatsapp","value":"(22) 98112-4281","valueLength":15,"text":""}
+
+## 2026-08-14 17:44:24.913Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":"email","type":"email","id":null,"placeholder":"exemplo@gmail.com","label":"email","value":"","valueLength":0,"text":""}
+
+## 2026-08-14 17:44:25.134Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":"email","type":"email","id":null,"placeholder":"exemplo@gmail.com","label":"email","value":"","valueLength":0,"text":""}
+
+## 2026-08-14 17:44:50.117Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":"email","type":"email","id":null,"placeholder":"exemplo@gmail.com","label":"email","value":"eletricamachados@gmail.com","valueLength":26,"text":""}
+
+## 2026-08-14 17:44:50.118Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":"email","type":"email","id":null,"placeholder":"exemplo@gmail.com","label":"email","value":"eletricamachados@gmail.com","valueLength":26,"text":""}
+
+## 2026-08-14 17:44:50.337Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"submit","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Enviar Cadastro de Revendedora"}
+
+## 2026-08-14 17:44:50.344Z submit
+- action: http://localhost:3000/quero-revender
+- fields: [{"label":"nome","type":"text","value":"Rose ","length":5,"redacted":false},{"label":"whatsapp","type":"tel","value":"(22) 98112-4281","length":15,"redacted":false},{"label":"email","type":"email","value":"eletricamachados@gmail.com","length":26,"redacted":false},{"label":"[submit]","type":"submit","value":"","length":0,"redacted":false}]
+
+## 2026-08-14 17:44:51.020Z network.error
+- method: POST
+- url: http://localhost:3000/hcgi/platform/api/collections/leads_revenda/records
+- status: 400
+- statusText: Bad Request
+- requestBody: {"nome":"Rose ","email":"eletricamachados@gmail.com","whatsapp":"(22) 98112-4281","status":"pendente"}
+- response: 
+    {"data":{},"message":"Failed to create record.","status":400}
+    
+- durationMs: 57
+
+## 2026-08-14 17:44:51.020Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/leads_revenda/records: {"data":{},"message":"Failed to create record.","status":400}
+    
+
+## 2026-08-14 17:44:51.027Z console.warn
+- text: 
+    [QueroRevenderPage] leads_revenda collection fallback: ClientResponseError 400: ClientResponseError
+        at http://localhost:3000/node_modules/.vite/deps/pocketbase.js?v=92eb6b79:948:13
+        at async handleSubmit (http://localhost:3000/src/pages/QueroRevenderPage.jsx:176:9)
+
+## 2026-08-14 17:48:32.233Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Home"}
+
+## 2026-08-14 17:48:32.245Z navigate
+- url: http://localhost:3000/
+- via: pushState
+
+## 2026-08-14 17:48:33.527Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-14 17:48:33.613Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/testimonials/records?page=1&perPage=10&filter=status%20%3D%20true&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 67
+
+## 2026-08-14 17:48:33.613Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/testimonials/records?page=1&perPage=10&filter=status%20%3D%20true&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-14 17:48:33.642Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-14 17:48:33.644Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-14 17:48:33.644Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-14 17:48:33.651Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-14 17:48:33.654Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-14 17:48:33.662Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-14 17:48:33.662Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-14 17:48:33.664Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-14 17:48:33.664Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-14 17:48:33.669Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-14 17:48:33.669Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-14 17:48:34.878Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-08-14 18:20:37.717Z load
+- url: http://localhost:3000/
+- title: Avante Lingerie | Oficial
+
+## 2026-08-14 18:20:41.332Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-14 18:20:41.532Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/testimonials/records?page=1&perPage=10&filter=status%20%3D%20true&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 193
+
+## 2026-08-14 18:20:41.533Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/testimonials/records?page=1&perPage=10&filter=status%20%3D%20true&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-14 18:20:41.545Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-14 18:20:41.549Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-14 18:20:41.549Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-14 18:20:41.559Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-14 18:20:41.561Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-14 18:20:41.588Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-14 18:20:41.588Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-14 18:20:41.596Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-14 18:20:41.596Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-14 18:20:41.607Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-14 18:20:41.608Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-14 18:31:37.034Z load
+- url: http://localhost:3000/
+- title: Avante Lingerie | Oficial
+
+## 2026-08-14 18:31:38.078Z navigate
+- url: http://localhost:3000/
+- via: replaceState
+
+## 2026-08-14 18:31:40.712Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-14 18:31:40.948Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/testimonials/records?page=1&perPage=10&filter=status%20%3D%20true&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 223
+
+## 2026-08-14 18:31:40.951Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/testimonials/records?page=1&perPage=10&filter=status%20%3D%20true&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-14 18:31:41.063Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-14 18:31:41.069Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-14 18:31:41.069Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-14 18:31:41.081Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-14 18:31:41.082Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-14 18:31:41.115Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-14 18:31:41.116Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-14 18:31:41.119Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-14 18:31:41.120Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-14 18:31:41.126Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-14 18:31:41.127Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-14 18:31:43.700Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-08-14 18:33:34.106Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-08-14 21:46:28.901Z load
+- url: http://localhost:3000/
+- title: Avante Lingerie | Oficial
+
+## 2026-08-14 21:46:31.968Z navigate
+- url: http://localhost:3000/
+- via: replaceState
+
+## 2026-08-14 21:46:33.296Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-14 21:46:33.895Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/testimonials/records?page=1&perPage=10&filter=status%20%3D%20true&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 409
+
+## 2026-08-14 21:46:33.896Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/testimonials/records?page=1&perPage=10&filter=status%20%3D%20true&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-14 21:46:33.910Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-14 21:46:33.914Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-14 21:46:33.931Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-14 21:46:33.944Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-14 21:46:33.947Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-14 21:46:34.091Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-14 21:46:34.092Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-14 21:46:34.094Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-14 21:46:34.094Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-14 21:46:34.096Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-14 21:46:34.097Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-14 21:46:35.975Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Aceitar & Continuar"}
+
+## 2026-08-14 21:47:29.355Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Quero ser Revendedora"}
+
+## 2026-08-14 21:47:29.405Z navigate
+- url: http://localhost:3000/quero-revender
+- via: pushState
+
+## 2026-08-14 21:47:30.926Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-08-14 21:47:45.543Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Home"}
+
+## 2026-08-14 21:47:45.599Z navigate
+- url: http://localhost:3000/
+- via: pushState
+
+## 2026-08-14 21:47:47.757Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-14 21:47:47.829Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/testimonials/records?page=1&perPage=10&filter=status%20%3D%20true&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 58
+
+## 2026-08-14 21:47:47.836Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/testimonials/records?page=1&perPage=10&filter=status%20%3D%20true&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-14 21:47:47.859Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-14 21:47:47.861Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-14 21:47:47.861Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-14 21:47:47.866Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-14 21:47:47.867Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-14 21:47:47.886Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-14 21:47:47.887Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-14 21:47:47.891Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-14 21:47:47.891Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-14 21:47:47.896Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-14 21:47:47.896Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 12:55:06.990Z load
+- url: http://localhost:3000/
+- title: Avante Lingerie | Oficial
+
+## 2026-08-17 12:55:19.411Z navigate
+- url: http://localhost:3000/
+- via: replaceState
+
+## 2026-08-17 12:55:20.654Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 12:55:21.376Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/testimonials/records?page=1&perPage=10&filter=status%20%3D%20true&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 714
+
+## 2026-08-17 12:55:21.377Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/testimonials/records?page=1&perPage=10&filter=status%20%3D%20true&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-17 12:55:21.395Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 12:55:21.398Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 12:55:21.398Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 12:55:21.408Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 12:55:21.410Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 12:55:21.456Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 12:55:21.457Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 12:55:21.460Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 12:55:21.460Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 12:55:21.466Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 12:55:21.466Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 12:55:23.451Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Aceitar & Continuar"}
+
+## 2026-08-17 12:56:35.585Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 12:56:35.591Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 12:56:35.592Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 12:56:35.599Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 12:56:35.600Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 12:56:35.614Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 12:56:35.614Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 12:56:35.616Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 12:56:35.616Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 12:56:35.618Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 12:56:35.619Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 12:56:35.641Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 12:56:35.641Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 12:56:35.641Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 12:56:35.647Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 12:56:35.647Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 12:56:35.653Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 12:56:35.653Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 12:56:35.654Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 12:56:35.654Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 12:56:35.655Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 12:56:35.655Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 12:56:35.916Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 12:56:35.916Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 12:56:35.916Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 12:56:35.918Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 12:56:35.918Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 12:56:35.921Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 12:56:35.921Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 12:56:35.922Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 12:56:35.922Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 12:56:35.924Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 12:56:35.924Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 12:56:36.257Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 12:56:36.257Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 12:56:36.257Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 12:56:36.263Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 12:56:36.263Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 12:56:36.269Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 12:56:36.269Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 12:56:36.270Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 12:56:36.270Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 12:56:36.272Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 12:56:36.272Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 12:58:26.835Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 12:58:26.853Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 12:58:26.853Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 12:58:26.866Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 12:58:26.866Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 12:58:26.887Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 12:58:26.888Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 12:58:26.895Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 12:58:26.895Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 12:58:26.896Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 12:58:26.896Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 12:58:26.924Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 12:58:26.925Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 12:58:26.925Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 12:58:26.928Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 12:58:26.929Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 12:58:26.936Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 12:58:26.936Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 12:58:26.937Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 12:58:26.937Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 12:58:26.938Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 12:58:26.939Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 12:58:28.974Z click
+- element: {"tag":"h2","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Nossas Categorias"}
+
+## 2026-08-17 12:58:30.395Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 12:58:30.396Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 12:58:30.396Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 12:58:30.398Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 12:58:30.398Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 12:58:30.403Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 12:58:30.403Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 12:58:30.405Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 12:58:30.406Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 12:58:30.408Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 12:58:30.408Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 12:58:31.730Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 12:58:31.730Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 12:58:31.730Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 12:58:31.732Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 12:58:31.732Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 12:58:31.735Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 12:58:31.735Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 12:58:31.736Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 12:58:31.736Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 12:58:31.737Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 12:58:31.737Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:04:05.312Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:04:05.323Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:04:05.324Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:04:05.357Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:04:05.358Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:04:05.444Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:04:05.445Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:04:05.448Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:04:05.448Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:04:05.453Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:04:05.454Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:04:06.538Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:04:06.539Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:04:06.541Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:04:06.558Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:04:06.559Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:04:06.599Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:04:06.600Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:04:06.605Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:04:06.605Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:04:06.614Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:04:06.615Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:04:06.782Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:04:06.784Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:04:06.784Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:04:06.796Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:04:06.798Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:04:06.819Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:04:06.820Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:04:06.825Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:04:06.826Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:04:06.832Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:04:06.832Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:04:07.084Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:04:07.125Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/testimonials/records?page=1&perPage=10&filter=status%20%3D%20true&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 37
+
+## 2026-08-17 13:04:07.162Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/testimonials/records?page=1&perPage=10&filter=status%20%3D%20true&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-17 13:04:07.197Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:04:07.197Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:04:07.197Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:04:07.207Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:04:07.208Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:04:07.231Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:04:07.231Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:04:07.235Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:04:07.236Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:04:07.242Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:04:07.243Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:05:09.272Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:05:09.286Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:05:09.287Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:05:09.331Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:05:09.332Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:05:09.399Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:05:09.399Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:05:09.401Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:05:09.402Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:05:09.407Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:05:09.407Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:05:10.102Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:05:10.103Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:05:10.104Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:05:10.132Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:05:10.133Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:05:10.154Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:05:10.154Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:05:10.160Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:05:10.161Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:05:10.173Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:05:10.173Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:05:10.489Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:05:10.588Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/testimonials/records?page=1&perPage=10&filter=status%20%3D%20true&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 92
+
+## 2026-08-17 13:05:10.589Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/testimonials/records?page=1&perPage=10&filter=status%20%3D%20true&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-17 13:05:10.599Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:05:10.600Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:05:10.600Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:05:10.611Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:05:10.612Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:05:10.628Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:05:10.629Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:05:10.632Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:05:10.633Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:05:10.644Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:05:10.644Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:05:51.349Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-08-17 13:09:07.336Z click
+- element: {"tag":"header","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"HomeMais VendidosCategoriasBodyCalcinhaCamisolaCinta ModeladoraConjuntoCroppedPijamaPlus SizeContatoQuero ser RevendedoraEntrar BuscarHomeMais VendidosCategoriasBodyCalcinhaCamisolaCinta ModeladoraConjuntoCroppedPijamaPlus SizeContatoQuero ser Revendedora Entrar / Cadastro"}
+
+## 2026-08-17 13:09:08.148Z click
+- element: {"tag":"html","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"\n\t\timport { injectIntoGlobalHook } from \"/@react-refresh\";\ninjectIntoGlobalHook(window);\nwindow.$RefreshReg$ = () => {};\nwindow.$RefreshSig$ = () => (type) => type;\n\n\t\t\n\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\tAvante Lingerie | Sinta-se linda, confortável e confiante\n\t\t\n\t\t\n\t\t(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\n\t\tnew Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\n\t\tj=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n\t\t'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n\t\t})(window,document,'script','dataLayer','GTM-XXXXXXX');\n\t\t\n\t\tconst SITE_PAGES_ENDPOINT = '/__horizons/site-pages';\n\nconst OUTGOING_SITE_PAGES_MESSAGE = 'sitePages';\nconst INCOMING_REQUEST_SITE_PAGES_MESSAGE = 'request-site-pages';\n\nconst ALLOWED_PARENT_ORIGINS = [\n\t'https://horizons.hostinger.com',\n\t'https://horizons.hostinger.dev',\n\t'https://horizons-frontend-local.hostinger.dev',\n\t'http://localhost:4000',\n];\n\nfunction postSitePages(pages) {\n\tlet parentOrigin = window.location.ancestorOrigins?.[0];\n\tif (!parentOrigin && document.referrer) {\n\t\ttry {\n\t\t\tparentOrigin = new URL(document.referrer).origin;\n\t\t} catch {}\n\t}\n\tif (parentOrigin && ALLOWED_PARENT_ORIGINS.includes(parentOrigin)) {\n\t\twindow.parent.postMessage({ type: OUTGOING_SITE_PAGES_MESSAGE, payload: { pages } }, parentOrigin);\n\t}\n}\n\nasync function sendSitePagesToParent() {\n\tif (window.self === window.top) {\n\t\treturn;\n\t}\n\n\ttry {\n\t\tconst response = await fetch(SITE_PAGES_ENDPOINT);\n\t\tif (!response.ok) {\n\t\t\tthrow new Error(`HTTP ${response.status}`);\n\t\t}\n\t\tpostSitePages(await response.json());\n\t} catch (error) {\n\t\tconsole.error('[site-pages] Failed to send site pages to parent:', error);\n\t}\n}\n\nif (window.self !== window.top) {\n\twindow.addEventListener('load', sendSitePagesToParent);\n\twindow.addEventListener('message', (event) => {\n\t\tif (event.data?.type === INCOMING_REQUEST_SITE_PAGES_MESSAGE) {\n\t\t\tsendSitePagesToParent();\n\t\t}\n\t});\n}\n\n\t\t\n\t#root[data-edit-mode-enabled=\"true\"..."}
+
+## 2026-08-17 13:09:53.804Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:09:53.827Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:09:53.827Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:09:53.831Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:09:53.831Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:09:53.852Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:09:53.852Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:09:53.854Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:09:53.854Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:09:53.855Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:09:53.855Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:09:54.083Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:09:54.084Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:09:54.085Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:09:54.089Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:09:54.089Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:09:54.097Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:09:54.098Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:09:54.100Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:09:54.100Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:09:54.105Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:09:54.106Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:11:00.007Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:11:00.011Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:11:00.012Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:11:00.030Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:11:00.031Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:11:00.047Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:11:00.047Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:11:00.053Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:11:00.053Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:11:00.056Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:11:00.056Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:11:00.080Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:11:00.080Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:11:00.080Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:11:00.083Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:11:00.083Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:11:00.090Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:11:00.090Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:11:00.091Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:11:00.091Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:11:00.092Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:11:00.092Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:11:17.940Z click
+- element: {"tag":"div","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-08-17 13:14:10.680Z click
+- element: {"tag":"h2","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"A Verdadeira Arte da Confecção"}
+
+## 2026-08-17 13:15:27.953Z click
+- element: {"tag":"section","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Feito por mãos de ouroA Verdadeira Arte da ConfecçãoNós não revendemos, nós criamos. A Avante Lingerie nasceu de uma confecção independente, onde cada peça é desenhada e costurada com precisão e carinho.Por sermos os próprios fabricantes, conseguimos entregar qualidade de padrão internacional e rendas exclusivas a preços de fábrica, garantindo luxo acessível para você e margens imbatíveis para nossas revendedoras.Design exclusivo desenhado por especialistas no corpo da mulher brasileira.Costuras de alta durabilidade e aviamentos hipoalergênicos importados.Zero intermediários: você compra com o preço justo, direto da nossa linha de produção.Seja uma Revendedora\"Cada ponto é costurado pensando no seu conforto e poder.\"— Equipe de Confecção Avante"}
+
+## 2026-08-17 13:16:40.792Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:16:40.802Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:16:40.802Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:16:40.808Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:16:40.809Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:16:40.825Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:16:40.825Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:16:40.826Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:16:40.827Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:16:40.829Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:16:40.829Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:16:41.006Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:16:41.006Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:16:41.006Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:16:41.008Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:16:41.009Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:16:41.012Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:16:41.012Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:16:41.013Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:16:41.014Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:16:41.015Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:16:41.015Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:18:41.425Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:18:41.455Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:18:41.456Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:18:41.570Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:18:41.571Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:18:41.640Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:18:41.642Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:18:41.651Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:18:41.652Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:18:41.664Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:18:41.665Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:18:42.529Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:18:42.530Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:18:42.530Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:18:42.555Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:18:42.556Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:18:42.660Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:18:42.668Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:18:42.684Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:18:42.684Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:18:42.706Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:18:42.706Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:18:43.900Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:18:44.017Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/testimonials/records?page=1&perPage=10&filter=status%20%3D%20true&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 47
+
+## 2026-08-17 13:18:44.036Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/testimonials/records?page=1&perPage=10&filter=status%20%3D%20true&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-17 13:18:44.074Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:18:44.075Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:18:44.076Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:18:44.130Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:18:44.133Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:18:44.208Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:18:44.209Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:18:44.225Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:18:44.226Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:18:44.252Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:18:44.253Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:19:14.490Z load
+- url: http://localhost:3000/
+- title: Avante Lingerie | Oficial
+
+## 2026-08-17 13:19:16.107Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:19:16.197Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/testimonials/records?page=1&perPage=10&filter=status%20%3D%20true&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 87
+
+## 2026-08-17 13:19:16.199Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/testimonials/records?page=1&perPage=10&filter=status%20%3D%20true&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-17 13:19:16.204Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:19:16.205Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:19:16.206Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:19:16.219Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:19:16.221Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:19:16.232Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:19:16.232Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:19:16.234Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:19:16.234Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:19:16.237Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:19:16.237Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:19:51.312Z load
+- url: http://localhost:3000/
+- title: Avante Lingerie | Oficial
+
+## 2026-08-17 13:19:52.423Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:19:52.500Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/testimonials/records?page=1&perPage=10&filter=status%20%3D%20true&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 73
+
+## 2026-08-17 13:19:52.501Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/testimonials/records?page=1&perPage=10&filter=status%20%3D%20true&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-17 13:19:52.522Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:19:52.522Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:19:52.523Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:19:52.529Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:19:52.530Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:19:52.545Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:19:52.546Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:19:52.550Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:19:52.550Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:19:52.561Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:19:52.561Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:20:03.944Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-08-17 13:40:29.982Z load
+- url: http://localhost:3000/
+- title: Avante Lingerie | Oficial
+
+## 2026-08-17 13:40:31.385Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:40:31.472Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/testimonials/records?page=1&perPage=10&filter=status%20%3D%20true&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 83
+
+## 2026-08-17 13:40:31.492Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/testimonials/records?page=1&perPage=10&filter=status%20%3D%20true&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-17 13:40:31.505Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:40:31.508Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:40:31.508Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:40:31.516Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:40:31.517Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:40:31.530Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:40:31.532Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:40:31.535Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:40:31.535Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:40:31.537Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:40:31.537Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:41:11.348Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-08-17 13:42:05.382Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Quero ser Revendedora"}
+
+## 2026-08-17 13:42:05.393Z navigate
+- url: http://localhost:3000/quero-revender
+- via: pushState
+
+## 2026-08-17 13:42:30.864Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"range","id":null,"placeholder":null,"label":"[range]","value":"1000","valueLength":4,"text":""}
+
+## 2026-08-17 13:42:31.393Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"range","id":null,"placeholder":null,"label":"[range]","value":"500","valueLength":3,"text":""}
+
+## 2026-08-17 13:42:31.395Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"range","id":null,"placeholder":null,"label":"[range]","value":"500","valueLength":3,"text":""}
+
+## 2026-08-17 13:42:51.232Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"range","id":null,"placeholder":null,"label":"[range]","value":"500","valueLength":3,"text":""}
+
+## 2026-08-17 13:42:51.445Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Garantir Minha Vaga de Revenda"}
+
+## 2026-08-17 13:43:30.180Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Formulário de Cadastro"}
+
+## 2026-08-17 13:43:37.892Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Home"}
+
+## 2026-08-17 13:43:37.915Z navigate
+- url: http://localhost:3000/
+- via: pushState
+
+## 2026-08-17 13:43:38.531Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:43:38.613Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/testimonials/records?page=1&perPage=10&filter=status%20%3D%20true&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 27
+
+## 2026-08-17 13:43:38.614Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/testimonials/records?page=1&perPage=10&filter=status%20%3D%20true&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-17 13:43:38.632Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:43:38.634Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:43:38.634Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:43:38.641Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:43:38.642Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:43:38.657Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:43:38.658Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:43:38.660Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:43:38.660Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:43:38.664Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 13:43:38.664Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 14:28:46.428Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 14:28:46.452Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 14:28:46.453Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 14:28:46.538Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 14:28:46.540Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 14:28:46.630Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 14:28:46.631Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 14:28:46.666Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 14:28:46.667Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 14:28:46.672Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 14:28:46.674Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 14:28:47.770Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 14:28:47.770Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 14:28:47.771Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 14:28:47.797Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 14:28:47.797Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 14:28:47.849Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 14:28:47.863Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 14:28:47.871Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 14:28:47.872Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 14:28:47.939Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 14:28:47.956Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 14:28:48.329Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 14:28:48.553Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/testimonials/records?page=1&perPage=10&filter=status%20%3D%20true&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 53
+
+## 2026-08-17 14:28:48.555Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/testimonials/records?page=1&perPage=10&filter=status%20%3D%20true&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-17 14:28:48.564Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 14:28:48.565Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 14:28:48.565Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 14:28:48.573Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 14:28:48.577Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 14:28:48.604Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 14:28:48.604Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 14:28:48.621Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 14:28:48.622Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 14:28:48.630Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 14:28:48.630Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 14:34:30.332Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 14:34:30.357Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 14:34:30.359Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 14:34:30.755Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 14:34:30.798Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 14:34:31.022Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 14:34:31.023Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 14:34:31.046Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 14:34:31.046Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 14:34:31.077Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 14:34:31.078Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 14:34:31.993Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 14:34:31.994Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 14:34:31.994Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 14:34:32.002Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 14:34:32.003Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 14:34:32.027Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 14:34:32.029Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 14:34:32.036Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 14:34:32.038Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 14:34:32.047Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 14:34:32.049Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 14:34:32.297Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 14:34:32.354Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/testimonials/records?page=1&perPage=10&filter=status%20%3D%20true&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 42
+
+## 2026-08-17 14:34:32.356Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/testimonials/records?page=1&perPage=10&filter=status%20%3D%20true&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-17 14:34:32.361Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 14:34:32.361Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 14:34:32.362Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 14:34:32.369Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 14:34:32.369Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 14:34:32.384Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 14:34:32.384Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 14:34:32.388Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 14:34:32.388Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 14:34:32.391Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 14:34:32.392Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 14:51:27.935Z load
+- url: http://localhost:3000/
+- title: Avante Lingerie | Oficial
+
+## 2026-08-17 14:51:32.372Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 14:51:32.686Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/testimonials/records?page=1&perPage=10&filter=status%20%3D%20true&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 234
+
+## 2026-08-17 14:51:32.687Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/testimonials/records?page=1&perPage=10&filter=status%20%3D%20true&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-17 14:51:32.705Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 14:51:32.712Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 14:51:32.713Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 14:51:32.725Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 14:51:32.727Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 14:51:32.765Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 14:51:32.766Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 14:51:32.780Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 14:51:32.780Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 14:51:32.800Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 14:51:32.801Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 14:51:39.835Z load
+- url: http://localhost:3000/
+- title: Avante Lingerie | Oficial
+
+## 2026-08-17 14:51:41.207Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 14:51:41.298Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/testimonials/records?page=1&perPage=10&filter=status%20%3D%20true&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 63
+
+## 2026-08-17 14:51:41.299Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/testimonials/records?page=1&perPage=10&filter=status%20%3D%20true&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-17 14:51:41.337Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 14:51:41.339Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 14:51:41.339Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 14:51:41.345Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 14:51:41.345Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 14:51:41.357Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 14:51:41.358Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 14:51:41.367Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 14:51:41.367Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 14:51:41.371Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 14:51:41.371Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 14:51:45.666Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Aceitar & Continuar"}
+
+## 2026-08-17 14:51:54.949Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-08-17 16:32:30.226Z load
+- url: http://localhost:3000/
+- title: Avante Lingerie | Oficial
+
+## 2026-08-17 16:32:34.148Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 16:32:34.307Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/testimonials/records?page=1&perPage=10&filter=status%20%3D%20true&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 131
+
+## 2026-08-17 16:32:34.311Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/testimonials/records?page=1&perPage=10&filter=status%20%3D%20true&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-17 16:32:34.320Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 16:32:34.327Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 16:32:34.327Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 16:32:34.351Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 16:32:34.355Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 16:32:34.383Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 16:32:34.383Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 16:32:34.392Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 16:32:34.392Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 16:32:34.410Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 16:32:34.411Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 16:32:51.494Z load
+- url: http://localhost:3000/
+- title: Avante Lingerie | Oficial
+
+## 2026-08-17 16:32:56.027Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 16:32:56.189Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/testimonials/records?page=1&perPage=10&filter=status%20%3D%20true&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 153
+
+## 2026-08-17 16:32:56.196Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/testimonials/records?page=1&perPage=10&filter=status%20%3D%20true&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-17 16:32:56.240Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 16:32:56.243Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 16:32:56.244Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 16:32:56.259Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 16:32:56.261Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 16:32:56.305Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 16:32:56.306Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 16:32:56.316Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 16:32:56.317Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 16:32:56.336Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 16:32:56.336Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 16:35:37.337Z load
+- url: http://localhost:3000/
+- title: Avante Lingerie | Oficial
+
+## 2026-08-17 16:35:53.512Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 16:35:54.346Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/testimonials/records?page=1&perPage=10&filter=status%20%3D%20true&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 265
+
+## 2026-08-17 16:35:54.348Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/testimonials/records?page=1&perPage=10&filter=status%20%3D%20true&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-17 16:35:54.372Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 16:35:54.389Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 16:35:54.390Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 16:35:54.479Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 16:35:54.502Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 16:35:54.814Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 16:35:54.815Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 16:35:54.907Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 16:35:54.909Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 16:35:54.984Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 16:35:54.985Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 18:11:03.039Z load
+- url: http://localhost:3000/
+- title: Avante Lingerie | Oficial
+
+## 2026-08-17 18:11:04.748Z navigate
+- url: http://localhost:3000/
+- via: replaceState
+
+## 2026-08-17 18:11:05.564Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 18:11:05.710Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/testimonials/records?page=1&perPage=10&filter=status%20%3D%20true&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 140
+
+## 2026-08-17 18:11:05.711Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/testimonials/records?page=1&perPage=10&filter=status%20%3D%20true&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-17 18:11:05.733Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 18:11:05.736Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 18:11:05.737Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 18:11:05.743Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 18:11:05.745Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 18:11:05.788Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 18:11:05.788Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 18:11:05.790Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 18:11:05.790Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 18:11:05.792Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 18:11:05.792Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 18:11:26.637Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-08-17 18:13:29.879Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-08-17 18:30:28.816Z load
+- url: http://localhost:3000/
+- title: Avante Lingerie | Oficial
+
+## 2026-08-17 18:30:30.210Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 18:30:30.406Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/testimonials/records?page=1&perPage=10&filter=status%20%3D%20true&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 33
+
+## 2026-08-17 18:30:30.407Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/testimonials/records?page=1&perPage=10&filter=status%20%3D%20true&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-17 18:30:30.453Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 18:30:30.454Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 18:30:30.455Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 18:30:30.460Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 18:30:30.461Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 18:30:30.480Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 18:30:30.480Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 18:30:30.482Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 18:30:30.483Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 18:30:30.494Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 18:30:30.494Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 19:52:24.819Z load
+- url: http://localhost:3000/
+- title: Avante Lingerie | Oficial
+
+## 2026-08-17 19:52:35.367Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 19:52:35.610Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/testimonials/records?page=1&perPage=10&filter=status%20%3D%20true&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 161
+
+## 2026-08-17 19:52:35.621Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/testimonials/records?page=1&perPage=10&filter=status%20%3D%20true&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-17 19:52:35.628Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 19:52:35.669Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 19:52:35.677Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 19:52:35.726Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 19:52:35.730Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 19:52:35.794Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 19:52:35.795Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 19:52:35.806Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 19:52:35.806Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 19:52:35.823Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 19:52:35.823Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 20:07:38.003Z load
+- url: http://localhost:3000/
+- title: Avante Lingerie | Oficial
+
+## 2026-08-17 20:07:43.674Z navigate
+- url: http://localhost:3000/
+- via: replaceState
+
+## 2026-08-17 20:07:47.016Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 20:07:47.563Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/testimonials/records?page=1&perPage=10&filter=status%20%3D%20true&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 505
+
+## 2026-08-17 20:07:47.580Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/testimonials/records?page=1&perPage=10&filter=status%20%3D%20true&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-17 20:07:47.662Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 20:07:47.701Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 20:07:47.702Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 20:07:47.828Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 20:07:47.867Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 20:07:48.041Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 20:07:48.043Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 20:07:48.057Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 20:07:48.059Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 20:07:48.077Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-17 20:07:48.078Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-21 19:50:37.284Z load
+- url: http://localhost:3000/admin
+- title: Avante Lingerie | Oficial
+
+## 2026-08-21 19:50:49.994Z navigate
+- url: http://localhost:3000/admin
+- via: replaceState
+
+## 2026-08-21 19:50:50.370Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/integracoes_config/records?page=1&perPage=500&skipTotal=1&filter=servico%20%3D%20%22marketing%22%20%26%26%20ativo%20%3D%20true
+- status: 500
+- statusText: Internal Server Error
+- durationMs: 249
+
+## 2026-08-21 19:50:50.371Z console.error
+- text: Fetch error from http://localhost:3000/hcgi/platform/api/collections/integracoes_config/records?page=1&perPage=500&skipTotal=1&filter=servico%20%3D%20%22marketing%22%20%26%26%20ativo%20%3D%20true: 
+
+## 2026-08-21 19:50:50.376Z console.warn
+- text: 
+    AnalyticsTracker: No foi possvel carregar as configuraes de marketing. ClientResponseError 500: ClientResponseError
+        at http://localhost:3000/node_modules/.vite/deps/pocketbase.js?v=6a46656c:948:13
+        at async fetchAnalyticsConfigs (http://localhost:3000/src/components/AnalyticsTracker.jsx:14:25)
+
+## 2026-08-21 19:50:50.377Z network.error
+- method: POST
+- url: http://localhost:3000/hcgi/platform/api/collections/analytics_events/records
+- status: 500
+- statusText: Internal Server Error
+- requestBody: {"session_id":"sess_f7mz9jvfwxtmt3d6txp","event_type":"page_view","page_path":"/admin","item_id":"","value":"0","utm_source":"","utm_medium":"","utm_campaign":""}
+- durationMs: 249
+
+## 2026-08-21 19:50:50.378Z console.error
+- text: Fetch error from http://localhost:3000/hcgi/platform/api/collections/analytics_events/records: 
+
+## 2026-08-21 19:50:50.378Z console.warn
+- text: Analytics Tracking Ignore: Something went wrong while processing your request.
+
+## 2026-08-21 19:50:50.378Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/api/configuracoes/modo-em-breve
+- status: 500
+- statusText: Internal Server Error
+- durationMs: 249
+
+## 2026-08-21 19:50:50.379Z console.error
+- text: Fetch error from http://localhost:3000/hcgi/api/configuracoes/modo-em-breve: 
+
+## 2026-08-21 19:50:50.379Z console.warn
+- text: Coming Soon API returned non-OK status - defaulting to normal mode
+
+## 2026-08-21 19:50:50.390Z navigate
+- url: http://localhost:3000/admin/login
+- via: replaceState
+
+## 2026-08-21 19:50:50.479Z network.error
+- method: POST
+- url: http://localhost:3000/hcgi/platform/api/collections/analytics_events/records
+- status: 500
+- statusText: Internal Server Error
+- requestBody: {"session_id":"sess_f7mz9jvfwxtmt3d6txp","event_type":"page_view","page_path":"/admin/login","item_id":"","value":"0","utm_source":"","utm_medium":"","utm_campaign":""}
+- durationMs: 45
+
+## 2026-08-21 19:50:50.479Z console.error
+- text: Fetch error from http://localhost:3000/hcgi/platform/api/collections/analytics_events/records: 
+
+## 2026-08-21 19:50:50.479Z console.warn
+- text: Analytics Tracking Ignore: Something went wrong while processing your request.
+
+## 2026-08-21 19:50:51.732Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"email","id":null,"placeholder":"admin@avantelingerie.com.br","label":"admin@avantelingerie.com.br","value":"","valueLength":0,"text":""}
+
+## 2026-08-21 19:50:51.932Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"email","id":null,"placeholder":"admin@avantelingerie.com.br","label":"admin@avantelingerie.com.br","value":"","valueLength":0,"text":""}
+
+## 2026-08-21 19:51:03.353Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"email","id":null,"placeholder":"admin@avantelingerie.com.br","label":"admin@avantelingerie.com.br","value":"admin@avantelingerie.com.br","valueLength":27,"text":""}
+
+## 2026-08-21 19:51:03.353Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"email","id":null,"placeholder":"admin@avantelingerie.com.br","label":"admin@avantelingerie.com.br","value":"admin@avantelingerie.com.br","valueLength":27,"text":""}
+
+## 2026-08-21 19:51:03.355Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"password","id":null,"placeholder":"••••••••","label":"••••••••","value":"[redacted:length=0]","valueLength":0,"text":""}
+
+## 2026-08-21 19:51:09.059Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"password","id":null,"placeholder":"••••••••","label":"••••••••","value":"[redacted:length=13]","valueLength":13,"text":""}
+
+## 2026-08-21 19:51:09.059Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"password","id":null,"placeholder":"••••••••","label":"••••••••","value":"[redacted:length=13]","valueLength":13,"text":""}
+
+## 2026-08-21 19:51:09.281Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"submit","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"ACESSAR PAINEL"}
+
+## 2026-08-21 19:51:09.286Z submit
+- action: http://localhost:3000/admin/login
+- fields: [{"label":"admin@avantelingerie.com.br","type":"email","value":"admin@avantelingerie.com.br","length":27,"redacted":false},{"label":"••••••••","type":"password","value":"[redacted:length=13]","length":13,"redacted":true},{"label":"Mostrar senha","type":"button","value":"","length":0,"redacted":false},{"label":"[submit]","type":"submit","value":"","length":0,"redacted":false}]
+
+## 2026-08-21 19:51:09.325Z network.error
+- method: POST
+- url: http://localhost:3000/hcgi/platform/api/collections/usuarios/auth-with-password
+- status: 500
+- statusText: Internal Server Error
+- requestBody: {"identity":"admin@avantelingerie.com.br","password":"[redacted:length=13]"}
+- durationMs: 37
+
+## 2026-08-21 19:51:09.325Z console.error
+- text: Fetch error from http://localhost:3000/hcgi/platform/api/collections/usuarios/auth-with-password: 
+
+## 2026-08-21 19:51:09.326Z console.error
+- text: 
+    [AdminAuthContext] Login failed: ClientResponseError 500: ClientResponseError
+        at http://localhost:3000/node_modules/.vite/deps/pocketbase.js?v=6a46656c:948:13
+        at async RecordService.authWithPassword (http://localhost:3000/node_modules/.vite/deps/pocketbase.js?v=6a46656c:532:14)
+        at async loginAdmin (http://localhost:3000/src/context/AdminAuthContext.jsx:61:24)
+        at async handleLogin (http://localhost:3000/src/pages/admin/AdminLogin.jsx:24:24)
+
+## 2026-08-21 19:51:09.326Z console.error
+- text: 
+    [AdminLogin] Erro na autenticação: ClientResponseError 500: ClientResponseError
+        at http://localhost:3000/node_modules/.vite/deps/pocketbase.js?v=6a46656c:948:13
+        at async RecordService.authWithPassword (http://localhost:3000/node_modules/.vite/deps/pocketbase.js?v=6a46656c:532:14)
+        at async loginAdmin (http://localhost:3000/src/context/AdminAuthContext.jsx:61:24)
+        at async handleLogin (http://localhost:3000/src/pages/admin/AdminLogin.jsx:24:24)
+
+## 2026-08-21 19:51:11.448Z click
+- element: {"tag":"button","role":null,"ariaLabel":"Mostrar senha","name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-08-21 19:51:16.391Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"••••••••","label":"••••••••","value":"Adimin@123456","valueLength":13,"text":""}
+
+## 2026-08-21 19:51:16.608Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"••••••••","label":"••••••••","value":"Adimin@123456","valueLength":13,"text":""}
+
+## 2026-08-21 19:51:18.456Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"••••••••","label":"••••••••","value":"Admin@123456","valueLength":12,"text":""}
+
+## 2026-08-21 19:51:18.456Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"••••••••","label":"••••••••","value":"Admin@123456","valueLength":12,"text":""}
+
+## 2026-08-21 19:51:18.675Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"submit","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"ACESSAR PAINEL"}
+
+## 2026-08-21 19:51:18.676Z submit
+- action: http://localhost:3000/admin/login
+- fields: [{"label":"admin@avantelingerie.com.br","type":"email","value":"admin@avantelingerie.com.br","length":27,"redacted":false},{"label":"••••••••","type":"text","value":"Admin@123456","length":12,"redacted":false},{"label":"Ocultar senha","type":"button","value":"","length":0,"redacted":false},{"label":"[submit]","type":"submit","value":"","length":0,"redacted":false}]
+
+## 2026-08-21 19:51:18.692Z network.error
+- method: POST
+- url: http://localhost:3000/hcgi/platform/api/collections/usuarios/auth-with-password
+- status: 500
+- statusText: Internal Server Error
+- requestBody: {"identity":"admin@avantelingerie.com.br","password":"[redacted:length=12]"}
+- durationMs: 16
+
+## 2026-08-21 19:51:18.693Z console.error
+- text: Fetch error from http://localhost:3000/hcgi/platform/api/collections/usuarios/auth-with-password: 
+
+## 2026-08-21 19:51:18.693Z console.error
+- text: 
+    [AdminAuthContext] Login failed: ClientResponseError 500: ClientResponseError
+        at http://localhost:3000/node_modules/.vite/deps/pocketbase.js?v=6a46656c:948:13
+        at async RecordService.authWithPassword (http://localhost:3000/node_modules/.vite/deps/pocketbase.js?v=6a46656c:532:14)
+        at async loginAdmin (http://localhost:3000/src/context/AdminAuthContext.jsx:61:24)
+        at async handleLogin (http://localhost:3000/src/pages/admin/AdminLogin.jsx:24:24)
+
+## 2026-08-21 19:51:18.694Z console.error
+- text: 
+    [AdminLogin] Erro na autenticação: ClientResponseError 500: ClientResponseError
+        at http://localhost:3000/node_modules/.vite/deps/pocketbase.js?v=6a46656c:948:13
+        at async RecordService.authWithPassword (http://localhost:3000/node_modules/.vite/deps/pocketbase.js?v=6a46656c:532:14)
+        at async loginAdmin (http://localhost:3000/src/context/AdminAuthContext.jsx:61:24)
+        at async handleLogin (http://localhost:3000/src/pages/admin/AdminLogin.jsx:24:24)
+
+## 2026-08-21 19:51:33.513Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"submit","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"ACESSAR PAINEL"}
+
+## 2026-08-21 19:51:33.514Z submit
+- action: http://localhost:3000/admin/login
+- fields: [{"label":"admin@avantelingerie.com.br","type":"email","value":"admin@avantelingerie.com.br","length":27,"redacted":false},{"label":"••••••••","type":"text","value":"Admin@123456","length":12,"redacted":false},{"label":"Ocultar senha","type":"button","value":"","length":0,"redacted":false},{"label":"[submit]","type":"submit","value":"","length":0,"redacted":false}]
+
+## 2026-08-21 19:51:33.525Z network.error
+- method: POST
+- url: http://localhost:3000/hcgi/platform/api/collections/usuarios/auth-with-password
+- status: 500
+- statusText: Internal Server Error
+- requestBody: {"identity":"admin@avantelingerie.com.br","password":"[redacted:length=12]"}
+- durationMs: 10
+
+## 2026-08-21 19:51:33.525Z console.error
+- text: Fetch error from http://localhost:3000/hcgi/platform/api/collections/usuarios/auth-with-password: 
+
+## 2026-08-21 19:51:33.526Z console.error
+- text: 
+    [AdminAuthContext] Login failed: ClientResponseError 500: ClientResponseError
+        at http://localhost:3000/node_modules/.vite/deps/pocketbase.js?v=6a46656c:948:13
+        at async RecordService.authWithPassword (http://localhost:3000/node_modules/.vite/deps/pocketbase.js?v=6a46656c:532:14)
+        at async loginAdmin (http://localhost:3000/src/context/AdminAuthContext.jsx:61:24)
+        at async handleLogin (http://localhost:3000/src/pages/admin/AdminLogin.jsx:24:24)
+
+## 2026-08-21 19:51:33.526Z console.error
+- text: 
+    [AdminLogin] Erro na autenticação: ClientResponseError 500: ClientResponseError
+        at http://localhost:3000/node_modules/.vite/deps/pocketbase.js?v=6a46656c:948:13
+        at async RecordService.authWithPassword (http://localhost:3000/node_modules/.vite/deps/pocketbase.js?v=6a46656c:532:14)
+        at async loginAdmin (http://localhost:3000/src/context/AdminAuthContext.jsx:61:24)
+        at async handleLogin (http://localhost:3000/src/pages/admin/AdminLogin.jsx:24:24)
+
+## 2026-08-21 19:53:19.168Z load
+- url: http://localhost:3000/admin/login
+- title: Avante Lingerie | Oficial
+
+## 2026-08-21 19:53:20.263Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/api/configuracoes/modo-em-breve
+- status: 500
+- statusText: Internal Server Error
+- durationMs: 43
+
+## 2026-08-21 19:53:20.265Z console.error
+- text: Fetch error from http://localhost:3000/hcgi/api/configuracoes/modo-em-breve: 
+
+## 2026-08-21 19:53:20.266Z console.warn
+- text: Coming Soon API returned non-OK status - defaulting to normal mode
+
+## 2026-08-21 19:53:21.726Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"email","id":null,"placeholder":"admin@avantelingerie.com.br","label":"admin@avantelingerie.com.br","value":"","valueLength":0,"text":""}
+
+## 2026-08-21 19:53:21.945Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"email","id":null,"placeholder":"admin@avantelingerie.com.br","label":"admin@avantelingerie.com.br","value":"","valueLength":0,"text":""}
+
+## 2026-08-21 19:53:32.303Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"email","id":null,"placeholder":"admin@avantelingerie.com.br","label":"admin@avantelingerie.com.br","value":"admin@avantelingerie.com.br","valueLength":27,"text":""}
+
+## 2026-08-21 19:53:32.303Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"email","id":null,"placeholder":"admin@avantelingerie.com.br","label":"admin@avantelingerie.com.br","value":"admin@avantelingerie.com.br","valueLength":27,"text":""}
+
+## 2026-08-21 19:53:32.304Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"password","id":null,"placeholder":"••••••••","label":"••••••••","value":"[redacted:length=0]","valueLength":0,"text":""}
+
+## 2026-08-21 19:53:37.917Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"password","id":null,"placeholder":"••••••••","label":"••••••••","value":"[redacted:length=12]","valueLength":12,"text":""}
+
+## 2026-08-21 19:53:37.917Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"password","id":null,"placeholder":"••••••••","label":"••••••••","value":"[redacted:length=12]","valueLength":12,"text":""}
+
+## 2026-08-21 19:53:38.136Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"submit","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"ACESSAR PAINEL"}
+
+## 2026-08-21 19:53:38.143Z submit
+- action: http://localhost:3000/admin/login
+- fields: [{"label":"admin@avantelingerie.com.br","type":"email","value":"admin@avantelingerie.com.br","length":27,"redacted":false},{"label":"••••••••","type":"password","value":"[redacted:length=12]","length":12,"redacted":true},{"label":"Mostrar senha","type":"button","value":"","length":0,"redacted":false},{"label":"[submit]","type":"submit","value":"","length":0,"redacted":false}]
+
+## 2026-08-21 19:53:38.397Z navigate
+- url: http://localhost:3000/admin
+- via: pushState
+
+## 2026-08-21 19:53:38.686Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/api/notificacoes
+- status: 500
+- statusText: Internal Server Error
+- durationMs: 220
+
+## 2026-08-21 19:53:38.687Z console.error
+- text: Fetch error from http://localhost:3000/hcgi/api/notificacoes: 
+
+## 2026-08-21 19:53:38.689Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/api/dashboard/kpis
+- status: 500
+- statusText: Internal Server Error
+- durationMs: 219
+
+## 2026-08-21 19:53:38.689Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/api/dashboard/vendas-por-dia?dias=30
+- status: 500
+- statusText: Internal Server Error
+- durationMs: 219
+
+## 2026-08-21 19:53:38.690Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/api/dashboard/receita-por-semana?semanas=8
+- status: 500
+- statusText: Internal Server Error
+- durationMs: 218
+
+## 2026-08-21 19:53:38.693Z console.error
+- text: Fetch error from http://localhost:3000/hcgi/api/dashboard/kpis: 
+
+## 2026-08-21 19:53:38.693Z console.error
+- text: Fetch error from http://localhost:3000/hcgi/api/dashboard/vendas-por-dia?dias=30: 
+
+## 2026-08-21 19:53:38.694Z console.error
+- text: Fetch error from http://localhost:3000/hcgi/api/dashboard/receita-por-semana?semanas=8: 
+
+## 2026-08-21 19:53:38.705Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/api/dashboard/produtos-mais-vendidos?limite=5
+- status: 500
+- statusText: Internal Server Error
+- durationMs: 233
+
+## 2026-08-21 19:53:38.705Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/api/dashboard/ultimos-pedidos?limite=5
+- status: 500
+- statusText: Internal Server Error
+- durationMs: 233
+
+## 2026-08-21 19:53:38.705Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/api/dashboard/estoque-critico
+- status: 500
+- statusText: Internal Server Error
+- durationMs: 233
+
+## 2026-08-21 19:53:38.706Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/api/dashboard/pedidos-aguardando
+- status: 500
+- statusText: Internal Server Error
+- durationMs: 233
+
+## 2026-08-21 19:53:38.706Z console.error
+- text: Fetch error from http://localhost:3000/hcgi/api/dashboard/produtos-mais-vendidos?limite=5: 
+
+## 2026-08-21 19:53:38.707Z console.error
+- text: Fetch error from http://localhost:3000/hcgi/api/dashboard/ultimos-pedidos?limite=5: 
+
+## 2026-08-21 19:53:38.707Z console.error
+- text: Fetch error from http://localhost:3000/hcgi/api/dashboard/estoque-critico: 
+
+## 2026-08-21 19:53:38.708Z console.error
+- text: Fetch error from http://localhost:3000/hcgi/api/dashboard/pedidos-aguardando: 
+
+## 2026-08-21 19:53:42.372Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"☀️"}
+
+## 2026-08-21 19:53:49.820Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Produtos"}
+
+## 2026-08-21 19:53:49.822Z navigate
+- url: http://localhost:3000/admin/produtos
+- via: pushState
+
+## 2026-08-21 19:53:49.986Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-21 19:53:49.990Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-21 19:53:53.523Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Categorias"}
+
+## 2026-08-21 19:53:53.524Z navigate
+- url: http://localhost:3000/admin/categorias
+- via: pushState
+
+## 2026-08-21 19:53:54.982Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Coleções"}
+
+## 2026-08-21 19:53:54.983Z navigate
+- url: http://localhost:3000/admin/colecoes
+- via: pushState
+
+## 2026-08-21 19:53:56.815Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Estoque"}
+
+## 2026-08-21 19:53:56.816Z navigate
+- url: http://localhost:3000/admin/estoque
+- via: pushState
+
+## 2026-08-21 19:53:59.172Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Pedidos"}
+
+## 2026-08-21 19:53:59.173Z navigate
+- url: http://localhost:3000/admin/pedidos
+- via: pushState
+
+## 2026-08-21 19:54:00.482Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Clientes"}
+
+## 2026-08-21 19:54:00.482Z navigate
+- url: http://localhost:3000/admin/clientes
+- via: pushState
+
+## 2026-08-21 19:54:01.557Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Integrações"}
+
+## 2026-08-21 19:54:01.558Z navigate
+- url: http://localhost:3000/admin/integracoes
+- via: pushState
+
+## 2026-08-21 19:54:01.617Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/api/integracoes/status
+- status: 500
+- statusText: Internal Server Error
+- durationMs: 23
+
+## 2026-08-21 19:54:01.617Z console.error
+- text: Fetch error from http://localhost:3000/hcgi/api/integracoes/status: 
+
+## 2026-08-21 19:54:07.907Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Dashboard"}
+
+## 2026-08-21 19:54:07.907Z navigate
+- url: http://localhost:3000/admin
+- via: pushState
+
+## 2026-08-21 19:54:07.967Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/api/dashboard/kpis
+- status: 500
+- statusText: Internal Server Error
+- durationMs: 31
+
+## 2026-08-21 19:54:07.967Z console.error
+- text: Fetch error from http://localhost:3000/hcgi/api/dashboard/kpis: 
+
+## 2026-08-21 19:54:07.992Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/api/dashboard/produtos-mais-vendidos?limite=5
+- status: 500
+- statusText: Internal Server Error
+- durationMs: 54
+
+## 2026-08-21 19:54:07.996Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/api/dashboard/ultimos-pedidos?limite=5
+- status: 500
+- statusText: Internal Server Error
+- durationMs: 58
+
+## 2026-08-21 19:54:07.996Z console.error
+- text: Fetch error from http://localhost:3000/hcgi/api/dashboard/produtos-mais-vendidos?limite=5: 
+
+## 2026-08-21 19:54:07.997Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/api/dashboard/vendas-por-dia?dias=30
+- status: 500
+- statusText: Internal Server Error
+- durationMs: 60
+
+## 2026-08-21 19:54:07.997Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/api/dashboard/receita-por-semana?semanas=8
+- status: 500
+- statusText: Internal Server Error
+- durationMs: 60
+
+## 2026-08-21 19:54:07.997Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/api/dashboard/estoque-critico
+- status: 500
+- statusText: Internal Server Error
+- durationMs: 58
+
+## 2026-08-21 19:54:07.997Z console.error
+- text: Fetch error from http://localhost:3000/hcgi/api/dashboard/ultimos-pedidos?limite=5: 
+
+## 2026-08-21 19:54:07.998Z console.error
+- text: Fetch error from http://localhost:3000/hcgi/api/dashboard/vendas-por-dia?dias=30: 
+
+## 2026-08-21 19:54:07.998Z console.error
+- text: Fetch error from http://localhost:3000/hcgi/api/dashboard/receita-por-semana?semanas=8: 
+
+## 2026-08-21 19:54:07.998Z console.error
+- text: Fetch error from http://localhost:3000/hcgi/api/dashboard/estoque-critico: 
+
+## 2026-08-21 19:54:07.999Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/api/dashboard/pedidos-aguardando
+- status: 500
+- statusText: Internal Server Error
+- durationMs: 60
+
+## 2026-08-21 19:54:08.001Z console.error
+- text: Fetch error from http://localhost:3000/hcgi/api/dashboard/pedidos-aguardando: 
+
+## 2026-08-21 19:54:08.481Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/api/notificacoes
+- status: 500
+- statusText: Internal Server Error
+- durationMs: 8
+
+## 2026-08-21 19:54:08.481Z console.error
+- text: Fetch error from http://localhost:3000/hcgi/api/notificacoes: 
+
+## 2026-08-21 19:54:09.237Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Produtos"}
+
+## 2026-08-21 19:54:09.238Z navigate
+- url: http://localhost:3000/admin/produtos
+- via: pushState
+
+## 2026-08-21 19:54:09.283Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-21 19:54:09.283Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-21 19:54:10.597Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Categorias"}
+
+## 2026-08-21 19:54:10.598Z navigate
+- url: http://localhost:3000/admin/categorias
+- via: pushState
+
+## 2026-08-21 19:54:11.889Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Coleções"}
+
+## 2026-08-21 19:54:11.890Z navigate
+- url: http://localhost:3000/admin/colecoes
+- via: pushState
+
+## 2026-08-21 19:54:13.802Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"🌙"}
+
+## 2026-08-21 19:54:32.752Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Produtos"}
+
+## 2026-08-21 19:54:32.753Z navigate
+- url: http://localhost:3000/admin/produtos
+- via: pushState
+
+## 2026-08-21 19:54:32.810Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-21 19:54:32.810Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-21 19:54:34.237Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Pedidos"}
+
+## 2026-08-21 19:54:34.238Z navigate
+- url: http://localhost:3000/admin/pedidos
+- via: pushState
+
+## 2026-08-21 19:54:35.954Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"☀️"}
+
+## 2026-08-21 19:54:38.501Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/api/notificacoes
+- status: 500
+- statusText: Internal Server Error
+- durationMs: 20
+
+## 2026-08-21 19:54:38.501Z console.error
+- text: Fetch error from http://localhost:3000/hcgi/api/notificacoes: 
+
+## 2026-08-21 19:54:49.387Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Estoque"}
+
+## 2026-08-21 19:54:49.388Z navigate
+- url: http://localhost:3000/admin/estoque
+- via: pushState
+
+## 2026-08-21 19:54:58.516Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"🌙"}
+
+## 2026-08-21 19:55:03.131Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"☀️"}
+
+## 2026-08-21 19:55:07.136Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Ver Loja"}
+
+## 2026-08-21 19:55:07.137Z navigate
+- url: http://localhost:3000/
+- via: pushState
+
+## 2026-08-21 19:55:07.888Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-21 19:55:08.155Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/testimonials/records?page=1&perPage=10&filter=status%20%3D%20true&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 103
+
+## 2026-08-21 19:55:08.155Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/testimonials/records?page=1&perPage=10&filter=status%20%3D%20true&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-21 19:55:08.188Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-21 19:55:08.190Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-21 19:55:08.190Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-21 19:55:08.195Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-21 19:55:08.197Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-21 19:55:08.203Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-21 19:55:08.203Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-21 19:55:08.205Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-21 19:55:08.205Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-21 19:55:08.207Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-21 19:55:08.207Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-25 12:23:00.465Z load
+- url: http://localhost:3000/
+- title: Avante Lingerie | Oficial
+
+## 2026-08-25 12:23:11.539Z navigate
+- url: http://localhost:3000/
+- via: replaceState
+
+## 2026-08-25 12:23:14.163Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-25 12:23:14.575Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/testimonials/records?page=1&perPage=10&filter=status%20%3D%20true&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 403
+
+## 2026-08-25 12:23:14.578Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/testimonials/records?page=1&perPage=10&filter=status%20%3D%20true&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-25 12:23:14.586Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-25 12:23:14.588Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-25 12:23:14.588Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-25 12:23:14.656Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-25 12:23:14.657Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-25 12:23:14.711Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-25 12:23:14.712Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-25 12:23:14.720Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-25 12:23:14.720Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-25 12:23:14.723Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-25 12:23:14.723Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-25 12:23:48.046Z load
+- url: http://localhost:3000/admin
+- title: Avante Lingerie | Oficial
+
+## 2026-08-25 12:23:49.066Z navigate
+- url: http://localhost:3000/admin
+- via: replaceState
+
+## 2026-08-25 12:23:52.729Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"🌙"}
+
+## 2026-08-25 12:27:07.352Z load
+- url: http://localhost:3000/admin
+- title: Avante Lingerie | Oficial
+
+## 2026-08-25 12:27:12.414Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Produtos"}
+
+## 2026-08-25 12:27:12.426Z navigate
+- url: http://localhost:3000/admin/produtos
+- via: pushState
+
+## 2026-08-25 12:27:12.760Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-25 12:27:12.769Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-25 12:27:18.575Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Novo Produto"}
+
+## 2026-08-25 12:27:18.586Z navigate
+- url: http://localhost:3000/admin/produtos/novo
+- via: pushState
+
+## 2026-08-25 12:27:23.161Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Assistente de Descrições IA"}
+
+## 2026-08-25 12:27:23.285Z console.warn
+- text: Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+
+## 2026-08-25 12:27:23.333Z focus
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"conforto","valueLength":8,"text":"Básico / EssencialConforto / Dia a DiaSensual / OusadoRomântico / DelicadoLuxo / SofisticadoFitness / EsportivoPijama / LoungewearCropped / OutwearModelador / CintaMaternidade / GestantePlus Size / CurvyPraia / Resort"}
+
+## 2026-08-25 12:27:25.121Z click
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"conforto","valueLength":8,"text":"Básico / EssencialConforto / Dia a DiaSensual / OusadoRomântico / DelicadoLuxo / SofisticadoFitness / EsportivoPijama / LoungewearCropped / OutwearModelador / CintaMaternidade / GestantePlus Size / CurvyPraia / Resort"}
+
+## 2026-08-25 12:27:34.283Z blur
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"conforto","valueLength":8,"text":"Básico / EssencialConforto / Dia a DiaSensual / OusadoRomântico / DelicadoLuxo / SofisticadoFitness / EsportivoPijama / LoungewearCropped / OutwearModelador / CintaMaternidade / GestantePlus Size / CurvyPraia / Resort"}
+
+## 2026-08-25 12:27:34.473Z click
+- element: {"tag":"div","role":"dialog","ariaLabel":null,"name":null,"type":null,"id":"radix-:r5:","placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Assistente de Descrições IAEstilo PrincipalBásico / EssencialConforto / Dia a DiaSensual / OusadoRomântico / DelicadoLuxo / SofisticadoFitness / EsportivoPijama / LoungewearCropped / OutwearModelador / CintaMaternidade / GestantePlus Size / CurvyPraia / ResortTecido PrincipalMicrofibraRendaAlgodãoSuede / SuedineTuleCetimVeludoLiganeteViscolycraPoliamidaFluity (Toque de Seda)ModalDiferenciais e Destaques (Selecione quantos desejar)Sem costuraAlças reguláveisBojo removívelBojo Push-up (Bolha)Duplo forro no bustoSustentação reforçadaCompressão abdominalForro 100% Algodão HipoalergênicoFecho frontalToque gelado (Frescor)Anti-odor / RespirávelDetalhes em GuipirCostas nadadorFio dental duploCós anatômico largoCancelar Gerar com Gemini AIClose"}
+
+## 2026-08-25 12:27:35.539Z focus
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"microfibra","valueLength":10,"text":"MicrofibraRendaAlgodãoSuede / SuedineTuleCetimVeludoLiganeteViscolycraPoliamidaFluity (Toque de Seda)Modal"}
+
+## 2026-08-25 12:27:35.760Z click
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"microfibra","valueLength":10,"text":"MicrofibraRendaAlgodãoSuede / SuedineTuleCetimVeludoLiganeteViscolycraPoliamidaFluity (Toque de Seda)Modal"}
+
+## 2026-08-25 12:27:43.117Z blur
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"microfibra","valueLength":10,"text":"MicrofibraRendaAlgodãoSuede / SuedineTuleCetimVeludoLiganeteViscolycraPoliamidaFluity (Toque de Seda)Modal"}
+
+## 2026-08-25 12:27:43.324Z click
+- element: {"tag":"div","role":"dialog","ariaLabel":null,"name":null,"type":null,"id":"radix-:r5:","placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Assistente de Descrições IAEstilo PrincipalBásico / EssencialConforto / Dia a DiaSensual / OusadoRomântico / DelicadoLuxo / SofisticadoFitness / EsportivoPijama / LoungewearCropped / OutwearModelador / CintaMaternidade / GestantePlus Size / CurvyPraia / ResortTecido PrincipalMicrofibraRendaAlgodãoSuede / SuedineTuleCetimVeludoLiganeteViscolycraPoliamidaFluity (Toque de Seda)ModalDiferenciais e Destaques (Selecione quantos desejar)Sem costuraAlças reguláveisBojo removívelBojo Push-up (Bolha)Duplo forro no bustoSustentação reforçadaCompressão abdominalForro 100% Algodão HipoalergênicoFecho frontalToque gelado (Frescor)Anti-odor / RespirávelDetalhes em GuipirCostas nadadorFio dental duploCós anatômico largoCancelar Gerar com Gemini AIClose"}
+
+## 2026-08-25 12:27:50.689Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Close"}
+
