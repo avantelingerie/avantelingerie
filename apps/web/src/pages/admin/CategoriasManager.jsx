@@ -13,7 +13,7 @@ export default function CategoriasManager() {
 
   const [isAdding, setIsAdding] = useState(false);
   const [editingId, setEditingId] = useState(null);
-  const [formData, setFormData] = useState({ nome: '', slug: '', ativo: true, ncm: '' });
+  const [formData, setFormData] = useState({ nome: '', slug: '', ativo: true, ncm: '', video_capa: '' });
 
   useEffect(() => {
     fetchCategorias();
@@ -65,7 +65,7 @@ export default function CategoriasManager() {
 
   const handleAddClick = () => {
     setIsAdding(true);
-    setFormData({ nome: '', slug: '', ativo: true, ncm: '' });
+    setFormData({ nome: '', slug: '', ativo: true, ncm: '', video_capa: '' });
     setEditingId(null);
   };
 
@@ -144,11 +144,12 @@ export default function CategoriasManager() {
           <table className="w-full text-sm text-left">
             <thead className="bg-muted/50 border-b text-muted-foreground">
               <tr>
-                <th className="px-6 py-4 font-medium w-1/4">Nome da Categoria</th>
-                <th className="px-6 py-4 font-medium w-1/4">URL (Slug)</th>
-                <th className="px-6 py-4 font-medium w-1/6">NCM (Fiscal)</th>
-                <th className="px-6 py-4 font-medium w-1/6">Status</th>
-                <th className="px-6 py-4 font-medium text-right w-1/6">Ações</th>
+                <th className="px-6 py-4 font-medium w-1/5">Nome da Categoria</th>
+                <th className="px-6 py-4 font-medium w-1/5">URL (Slug)</th>
+                <th className="px-6 py-4 font-medium w-1/5">URL do Vídeo</th>
+                <th className="px-6 py-4 font-medium w-32">NCM (Fiscal)</th>
+                <th className="px-6 py-4 font-medium w-24">Status</th>
+                <th className="px-6 py-4 font-medium text-right w-24">Ações</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-border">
@@ -157,6 +158,7 @@ export default function CategoriasManager() {
                   <tr key={i}>
                     <td className="px-6 py-4"><Skeleton className="h-5 w-40" /></td>
                     <td className="px-6 py-4"><Skeleton className="h-4 w-32" /></td>
+                    <td className="px-6 py-4"><Skeleton className="h-4 w-32" /></td>
                     <td className="px-6 py-4"><Skeleton className="h-4 w-24" /></td>
                     <td className="px-6 py-4"><Skeleton className="h-5 w-12 rounded-full" /></td>
                     <td className="px-6 py-4 text-right"><Skeleton className="h-8 w-16 ml-auto" /></td>
@@ -164,7 +166,7 @@ export default function CategoriasManager() {
                 ))
               ) : categorias.length === 0 && !isAdding ? (
                 <tr>
-                  <td colSpan="5" className="px-6 py-12 text-center text-muted-foreground">
+                  <td colSpan="6" className="px-6 py-12 text-center text-muted-foreground">
                     <Tag className="w-12 h-12 mx-auto text-muted-foreground/30 mb-3" />
                     <p>Nenhuma categoria cadastrada.</p>
                   </td>
@@ -173,11 +175,12 @@ export default function CategoriasManager() {
 
               {isAdding && (
                 <tr className="bg-primary/5">
-                  <td className="px-6 py-3"><Input value={formData.nome} onChange={(e) => handleFieldChange('nome', e.target.value)} placeholder="Ex: Lingerie Renda" className="h-9" /></td>
-                  <td className="px-6 py-3"><Input value={formData.slug} onChange={(e) => handleFieldChange('slug', e.target.value)} placeholder="lingerie-renda" className="h-9" /></td>
-                  <td className="px-6 py-3"><Input value={formData.ncm} onChange={(e) => handleFieldChange('ncm', e.target.value)} placeholder="Auto" className="h-9 font-mono" /></td>
-                  <td className="px-6 py-3"><Switch checked={formData.ativo} onCheckedChange={(c) => handleFieldChange('ativo', c)} /></td>
-                  <td className="px-6 py-3 text-right">
+                  <td className="px-4 py-3"><Input value={formData.nome} onChange={(e) => handleFieldChange('nome', e.target.value)} placeholder="Ex: Lingerie Renda" className="h-9" /></td>
+                  <td className="px-4 py-3"><Input value={formData.slug} onChange={(e) => handleFieldChange('slug', e.target.value)} placeholder="lingerie-renda" className="h-9" /></td>
+                  <td className="px-4 py-3"><Input value={formData.video_capa} onChange={(e) => handleFieldChange('video_capa', e.target.value)} placeholder="URL do MP4" className="h-9" /></td>
+                  <td className="px-4 py-3"><Input value={formData.ncm} onChange={(e) => handleFieldChange('ncm', e.target.value)} placeholder="Auto" className="h-9 font-mono" /></td>
+                  <td className="px-4 py-3"><Switch checked={formData.ativo} onCheckedChange={(c) => handleFieldChange('ativo', c)} /></td>
+                  <td className="px-4 py-3 text-right">
                     <div className="flex items-center justify-end gap-2">
                       <Button size="icon" variant="ghost" onClick={handleSave} className="text-green-600 h-8 w-8"><Check className="w-4 h-4" /></Button>
                       <Button size="icon" variant="ghost" onClick={handleCancel} className="text-red-600 h-8 w-8"><X className="w-4 h-4" /></Button>
@@ -189,11 +192,12 @@ export default function CategoriasManager() {
               {categorias.map(cat => (
                 editingId === cat.id ? (
                   <tr key={cat.id} className="bg-muted/30">
-                    <td className="px-6 py-3"><Input value={formData.nome} onChange={(e) => handleFieldChange('nome', e.target.value)} className="h-9" /></td>
-                    <td className="px-6 py-3"><Input value={formData.slug} onChange={(e) => handleFieldChange('slug', e.target.value)} className="h-9" /></td>
-                    <td className="px-6 py-3"><Input value={formData.ncm} onChange={(e) => handleFieldChange('ncm', e.target.value)} className="h-9 font-mono" /></td>
-                    <td className="px-6 py-3"><Switch checked={formData.ativo} onCheckedChange={(c) => handleFieldChange('ativo', c)} /></td>
-                    <td className="px-6 py-3 text-right">
+                    <td className="px-4 py-3"><Input value={formData.nome} onChange={(e) => handleFieldChange('nome', e.target.value)} className="h-9" /></td>
+                    <td className="px-4 py-3"><Input value={formData.slug} onChange={(e) => handleFieldChange('slug', e.target.value)} className="h-9" /></td>
+                    <td className="px-4 py-3"><Input value={formData.video_capa || ''} onChange={(e) => handleFieldChange('video_capa', e.target.value)} placeholder="URL do MP4" className="h-9" /></td>
+                    <td className="px-4 py-3"><Input value={formData.ncm} onChange={(e) => handleFieldChange('ncm', e.target.value)} className="h-9 font-mono" /></td>
+                    <td className="px-4 py-3"><Switch checked={formData.ativo} onCheckedChange={(c) => handleFieldChange('ativo', c)} /></td>
+                    <td className="px-4 py-3 text-right">
                       <div className="flex items-center justify-end gap-2">
                         <Button size="icon" variant="ghost" onClick={handleSave} className="text-green-600 h-8 w-8"><Check className="w-4 h-4" /></Button>
                         <Button size="icon" variant="ghost" onClick={handleCancel} className="text-red-600 h-8 w-8"><X className="w-4 h-4" /></Button>
@@ -202,15 +206,16 @@ export default function CategoriasManager() {
                   </tr>
                 ) : (
                   <tr key={cat.id} className="hover:bg-muted/30 transition-colors">
-                    <td className="px-6 py-4 font-medium">{cat.nome}</td>
-                    <td className="px-6 py-4 font-mono text-sm text-muted-foreground">{cat.slug}</td>
-                    <td className="px-6 py-4 font-mono text-xs text-muted-foreground">{cat.ncm || <span className="text-orange-400">Pendente</span>}</td>
-                    <td className="px-6 py-4">
+                    <td className="px-4 py-4 font-medium">{cat.nome}</td>
+                    <td className="px-4 py-4 font-mono text-sm text-muted-foreground">{cat.slug}</td>
+                    <td className="px-4 py-4 font-mono text-xs text-muted-foreground overflow-hidden max-w-[150px] truncate" title={cat.video_capa}>{cat.video_capa ? 'Tem vídeo' : '-'}</td>
+                    <td className="px-4 py-4 font-mono text-xs text-muted-foreground">{cat.ncm || <span className="text-orange-400">Pendente</span>}</td>
+                    <td className="px-4 py-4">
                       <span className={`inline-flex items-center px-2 py-0.5 rounded text-xs font-medium ${cat.ativo ? 'bg-green-100 text-green-800' : 'bg-muted text-muted-foreground'}`}>
                         {cat.ativo ? 'Ativo' : 'Inativo'}
                       </span>
                     </td>
-                    <td className="px-6 py-4 text-right">
+                    <td className="px-4 py-4 text-right">
                       <div className="flex items-center justify-end gap-1">
                         <Button size="icon" variant="ghost" onClick={() => handleEditClick(cat)} disabled={isAdding || editingId} className="h-8 w-8 text-muted-foreground hover:text-foreground">
                           <Edit2 className="w-4 h-4" />

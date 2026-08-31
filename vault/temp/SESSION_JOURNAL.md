@@ -6694,3 +6694,184 @@
 ## 2026-08-31 12:13:47.087Z console.warn
 - text: Please replace pb.files.getUrl() with pb.files.getURL()
 
+## 2026-08-31 13:47:55.473Z load
+- url: http://localhost:3000/admin
+- title: Avante Lingerie | Oficial
+
+## 2026-08-31 13:47:57.372Z navigate
+- url: http://localhost:3000/admin
+- via: replaceState
+
+## 2026-08-31 13:47:57.673Z navigate
+- url: http://localhost:3000/admin/login
+- via: replaceState
+
+## 2026-08-31 13:47:58.844Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"email","id":null,"placeholder":"admin@avantelingerie.com.br","label":"admin@avantelingerie.com.br","value":"","valueLength":0,"text":""}
+
+## 2026-08-31 13:47:59.051Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"email","id":null,"placeholder":"admin@avantelingerie.com.br","label":"admin@avantelingerie.com.br","value":"","valueLength":0,"text":""}
+
+## 2026-08-31 13:48:14.349Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"email","id":null,"placeholder":"admin@avantelingerie.com.br","label":"admin@avantelingerie.com.br","value":"admin@avantelingerie.com.br","valueLength":27,"text":""}
+
+## 2026-08-31 13:48:14.350Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"email","id":null,"placeholder":"admin@avantelingerie.com.br","label":"admin@avantelingerie.com.br","value":"admin@avantelingerie.com.br","valueLength":27,"text":""}
+
+## 2026-08-31 13:48:14.352Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"password","id":null,"placeholder":"••••••••","label":"••••••••","value":"[redacted:length=0]","valueLength":0,"text":""}
+
+## 2026-08-31 13:48:14.565Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"password","id":null,"placeholder":"••••••••","label":"••••••••","value":"[redacted:length=0]","valueLength":0,"text":""}
+
+## 2026-08-31 13:48:19.701Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"password","id":null,"placeholder":"••••••••","label":"••••••••","value":"[redacted:length=12]","valueLength":12,"text":""}
+
+## 2026-08-31 13:48:19.701Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"password","id":null,"placeholder":"••••••••","label":"••••••••","value":"[redacted:length=12]","valueLength":12,"text":""}
+
+## 2026-08-31 13:48:19.931Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"submit","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"ACESSAR PAINEL"}
+
+## 2026-08-31 13:48:19.940Z submit
+- action: http://localhost:3000/admin/login
+- fields: [{"label":"admin@avantelingerie.com.br","type":"email","value":"admin@avantelingerie.com.br","length":27,"redacted":false},{"label":"••••••••","type":"password","value":"[redacted:length=12]","length":12,"redacted":true},{"label":"Mostrar senha","type":"button","value":"","length":0,"redacted":false},{"label":"[submit]","type":"submit","value":"","length":0,"redacted":false}]
+
+## 2026-08-31 13:48:20.068Z navigate
+- url: http://localhost:3000/admin
+- via: pushState
+
+## 2026-08-31 13:48:26.431Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Coleções"}
+
+## 2026-08-31 13:48:26.432Z navigate
+- url: http://localhost:3000/admin/colecoes
+- via: pushState
+
+## 2026-08-31 13:48:28.847Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Categorias"}
+
+## 2026-08-31 13:48:28.848Z navigate
+- url: http://localhost:3000/admin/categorias
+- via: pushState
+
+## 2026-08-31 13:48:34.580Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-08-31 13:48:36.177Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"URL do MP4","label":"URL do MP4","value":"","valueLength":0,"text":""}
+
+## 2026-08-31 13:48:36.395Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"URL do MP4","label":"URL do MP4","value":"","valueLength":0,"text":""}
+
+## 2026-08-31 13:48:39.248Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"URL do MP4","label":"URL do MP4","value":"https://avantelingerie.com.br/video/cropped_Fundo_branco.mp4","valueLength":60,"text":""}
+
+## 2026-08-31 13:48:39.249Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"URL do MP4","label":"URL do MP4","value":"https://avantelingerie.com.br/video/cropped_Fundo_branco.mp4","valueLength":60,"text":""}
+
+## 2026-08-31 13:48:39.465Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-08-31 13:48:43.946Z load
+- url: http://localhost:3000/admin/categorias
+- title: Avante Lingerie | Oficial
+
+## 2026-08-31 13:48:50.479Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-08-31 13:48:55.101Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"URL do MP4","label":"URL do MP4","value":"","valueLength":0,"text":""}
+
+## 2026-08-31 13:48:55.311Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"URL do MP4","label":"URL do MP4","value":"","valueLength":0,"text":""}
+
+## 2026-08-31 13:49:02.025Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"URL do MP4","label":"URL do MP4","value":"https://avantelingerie.com.br/video/cropped_Fundo_branco.mp4","valueLength":60,"text":""}
+
+## 2026-08-31 13:49:02.026Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"URL do MP4","label":"URL do MP4","value":"https://avantelingerie.com.br/video/cropped_Fundo_branco.mp4","valueLength":60,"text":""}
+
+## 2026-08-31 13:49:05.794Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"URL do MP4","label":"URL do MP4","value":"https://avantelingerie.com.br/video/cropped_Fundo_branco.mp4","valueLength":60,"text":""}
+
+## 2026-08-31 13:49:07.030Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"URL do MP4","label":"URL do MP4","value":"https://avantelingerie.com.br/video/cropped_Fundo_branco.mp4","valueLength":60,"text":""}
+
+## 2026-08-31 13:49:10.858Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"URL do MP4","label":"URL do MP4","value":"https://avantelingerie.com.br/video/cropped_Fundo_branco.mp4","valueLength":60,"text":""}
+
+## 2026-08-31 13:49:12.030Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"URL do MP4","label":"URL do MP4","value":"https://avantelingerie.com.br/video/cropped_Fundo_branco.mp4","valueLength":60,"text":""}
+
+## 2026-08-31 13:49:12.273Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"URL do MP4","label":"URL do MP4","value":"https://avantelingerie.com.br/video/cropped_Fundo_branco.mp4","valueLength":60,"text":""}
+
+## 2026-08-31 13:49:17.110Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"URL do MP4","label":"URL do MP4","value":"https://avantelingerie.com.br/video/cropped_Fundo_branco.mp4","valueLength":60,"text":""}
+
+## 2026-08-31 13:49:17.313Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-08-31 13:49:51.851Z load
+- url: http://localhost:3000/
+- title: Avante Lingerie | Oficial
+
+## 2026-08-31 13:49:52.355Z navigate
+- url: http://localhost:3000/
+- via: replaceState
+
+## 2026-08-31 13:49:53.408Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-31 13:49:53.436Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-31 13:49:53.556Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/testimonials/records?page=1&perPage=10&filter=status%20%3D%20true&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 114
+
+## 2026-08-31 13:49:53.557Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/testimonials/records?page=1&perPage=10&filter=status%20%3D%20true&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-31 13:49:53.569Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-31 13:49:53.574Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-31 13:49:53.574Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-31 13:49:53.588Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-31 13:49:53.590Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-31 13:49:53.658Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-31 13:49:53.658Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-31 13:49:53.680Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-31 13:49:53.680Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-31 13:49:53.683Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-31 13:49:53.684Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
