@@ -643,3 +643,11 @@ Para nÃƒÂ£o esquecermos, aqui estÃƒÂ£o os itens congelados e as datas de destrav
 - O usuario (Luiz) precisa dar a aprovacao final do socio. Assim que aprovado, basta executar um simples git push origin main para colocar o layout de Fabrica no ar.
 
 - **Dossie Executivo e Valuation Criados:** Foi gerado o arquivo \Dossie_Executivo_Avante.html\ contendo o relatorio executivo do ecossistema e o Valuation Tecnologico. O valor de mercado medio apurado para o projeto (comparado com o desenvolvimento customizado por Software Houses e plataformas SaaS) foi fixado em R$ 120.000, destacando a independencia da Avante de taxas sobre vendas e mensalidades abusivas.
+
+## Atualização: 25/08/2026 - Otimização de SEO e UX no Painel Admin
+- **O que foi feito:** O Painel Admin (ProdutoForm.jsx) foi reestruturado para receber um bloco dedicado a 'Google SEO & IA' no topo da aba de Informações Básicas. A rota da API do Gemini (integracoes.js) foi atualizada com a 'Regra de Ouro' para gerar seo_title (foco no varejo) e seo_meta_description (foco no gatilho de atacado) e a página do produto (ProductPage.jsx) agora usa essas novas tags como H1 e subtítulo da página de vendas.
+- **Infraestrutura:** Criado script Atualizar_VPS_Avante.bat para facilitar o git push no Windows com GUI do Credential Manager. Banco de dados do PocketBase atualizado com os campos de SEO (via auto-migrations).
+
+## Atualização: 26/08/2026 - Evolução UI/UX Premium e Categorias em Vídeo
+- **O que foi feito (Frontend):** Implementado o conceito de 'Fundo Infinito' alterando a paleta da página inicial e do visualizador de produtos de creme (#FFFBF8) para branco puro (#FFFFFF). Os cartões de produtos (ProductCard) perderam as bordas e sombras, dando o aspecto de as modelos estarem flutuando de forma minimalista no site (estilo Zara). A propriedade CSS das imagens foi alterada para object-contain para evitar cortes (como cabeças decepadas em imagens verticais).
+- **O que foi feito (Backend):** Adicionado o campo ideo_capa na coleção categorias no PocketBase. A renderização do frontend foi reescrita para consumir esse campo: se a categoria possuir um link de vídeo MP4 (hospedado na VPS via WinSCP), ele rodará em loop sem interface de player; senão, fará o fallback automático para a imagem do produto mais recente. O texto recebeu um degradê branco dinâmico para garantir contraste.

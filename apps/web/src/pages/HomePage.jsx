@@ -76,6 +76,7 @@ export default function HomePage() {
             return {
               id: cat.id,
               name: cat.nome,
+              video_capa: cat.video_capa || null,
               image: pb.files.getUrl(prod, prod.imagem_principal),
               link: `/categoria/${cat.slug}`
             };
@@ -84,6 +85,7 @@ export default function HomePage() {
             return {
               id: cat.id,
               name: cat.nome,
+              video_capa: cat.video_capa || null,
               image: 'https://images.unsplash.com/photo-1568441556126-f36ae0900180?w=600&q=80',
               link: `/categoria/${cat.slug}`
             };
@@ -284,18 +286,29 @@ export default function HomePage() {
               {categories.map((cat) => (
                 <div key={cat.id} className="min-w-0 flex-[0_0_80%] sm:flex-[0_0_45%] md:flex-[0_0_33.3%] lg:flex-[0_0_25%] pl-4">
                   <a href={cat.link} onClick={(e) => { e.preventDefault(); navigate(cat.link); }} className="block h-full outline-none">
-                    <div className="relative overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-md transition-all duration-500 group/card h-full flex flex-col hover:shadow-xl hover:border-[#c59b5f]/30">
-                      <div className="relative aspect-[3/4] overflow-hidden bg-gray-50">
-                        <img
-                          src={cat.image}
-                          alt={cat.name}
-                          className="w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover/card:scale-105"
-                          loading="lazy"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/15 to-transparent opacity-85" />
-                        <div className="absolute bottom-0 left-0 right-0 p-6 text-center transform transition-all duration-500 group-hover/card:-translate-y-1.5">
-                          <h3 className="text-white font-serif text-2xl font-semibold tracking-wider drop-shadow-md">{cat.name}</h3>
-                          <div className="w-8 h-0.5 bg-[#c59b5f] mx-auto mt-3 rounded-full opacity-0 group-hover/card:opacity-100 transition-opacity duration-500 shadow-md"></div>
+                    <div className="relative transition-all duration-500 group/card h-full flex flex-col hover:-translate-y-2 bg-white">
+                      <div className="relative aspect-[3/4] bg-white overflow-hidden">
+                        {cat.video_capa ? (
+                          <video
+                            src={cat.video_capa}
+                            className="w-full h-full object-contain transition-transform duration-700 ease-in-out group-hover/card:scale-105"
+                            autoPlay
+                            loop
+                            muted
+                            playsInline
+                          />
+                        ) : (
+                          <img
+                            src={cat.image}
+                            alt={cat.name}
+                            className="w-full h-full object-contain transition-transform duration-700 ease-in-out group-hover/card:scale-105"
+                            loading="lazy"
+                          />
+                        )}
+                        <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-white via-white/90 to-transparent pointer-events-none" />
+                        <div className="absolute bottom-0 left-0 right-0 p-6 text-center transform transition-all duration-500">
+                          <h3 className="text-gray-900 font-serif text-2xl font-semibold tracking-wider">{cat.name}</h3>
+                          <div className="w-8 h-0.5 bg-[#c59b5f] mx-auto mt-3 rounded-full opacity-0 group-hover/card:opacity-100 transition-opacity duration-500 shadow-sm"></div>
                         </div>
                       </div>
                     </div>
@@ -312,7 +325,7 @@ export default function HomePage() {
       {/* ==========================================
           SECTION 4: BEST SELLERS (MAIS VENDIDOS)
           ========================================== */}
-      <section id="mais-vendidos" className="py-24 bg-[#FFFBF8] relative overflow-hidden border-t border-gray-100">
+      <section id="mais-vendidos" className="py-24 bg-white relative overflow-hidden border-t border-gray-100">
         <div className="absolute top-0 right-0 w-[450px] h-[450px] bg-[#c59b5f]/5 rounded-full blur-[100px] pointer-events-none" />
 
         <div className="container-custom">
@@ -513,7 +526,7 @@ export default function HomePage() {
       {/* ==========================================
           SECTION 7: FAVORITES DYNAMIC
           ========================================== */}
-      <section id="favoritos" className="py-24 bg-[#FFFBF8] relative overflow-hidden">
+      <section id="favoritos" className="py-24 bg-white relative overflow-hidden">
         <div className="container-custom">
           <div className="text-center mb-16">
             <span className="text-[10px] md:text-xs font-bold uppercase tracking-[3px] text-[#c59b5f]">
@@ -612,7 +625,7 @@ export default function HomePage() {
       {/* ==========================================
           SECTION 10: NEW ARRIVALS (LANCAMENTOS DYNAMIC)
           ========================================== */}
-      <section id="lancamentos" className="py-24 bg-[#FFFBF8] border-t border-gray-100">
+      <section id="lancamentos" className="py-24 bg-white border-t border-gray-100">
         <div className="container-custom">
           <div className="text-center mb-16">
             <span className="text-[10px] md:text-xs font-bold uppercase tracking-[3px] text-[#c59b5f]">
@@ -690,7 +703,7 @@ export default function HomePage() {
       {/* ==========================================
           SECTION 13: FAQ ACCORDION (COMPRA CONFIÁVEL)
           ========================================== */}
-      <section id="faq" className="py-24 bg-[#FFFBF8] relative overflow-hidden">
+      <section id="faq" className="py-24 bg-white relative overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-[400px] bg-gradient-to-b from-[#c59b5f]/5 to-transparent pointer-events-none" />
         <div className="container-custom relative z-10">
           <div className="text-center mb-16">

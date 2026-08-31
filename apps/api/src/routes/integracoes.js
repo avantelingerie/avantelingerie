@@ -330,30 +330,38 @@ router.post('/gemini/gerar-descricao', async (req, res) => {
 
     const apiKey = configs[0].chave_valor;
 
-    const prompt = `Gere descrições ricas, profissionais, altamente persuasivas e otimizadas para mecanismos de busca (SEO) para a marca de lingerie premium 'Avante Lingerie'. Use as palavras-chave mais buscadas na internet, tais como: lingerie de renda, conjunto de lingerie confortável, cropped gola alta, lingerie sensual, calcinha sem costura, sutiã reforçado, moda íntima premium, revenda de lingerie, etc.
+    const prompt = `Atue como um especialista em SEO e copywriter para e-commerce. A marca é 'Avante Lingerie', uma confecção própria de Nova Friburgo/RJ que vende tanto no varejo quanto no atacado através de um sistema de descontos progressivos automáticos no carrinho.
 
 Dados do Produto:
-- Nome do Produto: "${name}"
+- Nome Base: "${name}"
 - Categoria: "${categoryName || 'Lingerie'}"
 - Estilo: "${estilo || ''}"
 - Tecido principal: "${tecido || ''}"
 - Diferenciais/Destaques: [${(destaques || []).join(', ')}]
 
-Diretrizes de Formatação e Estilo (MUITO IMPORTANTE):
-1. Emojis Inteligentes: Insira emojis delicados, inteligentes e elegantes no início de parágrafos ou listas de cada aba (ex: ✨, 💖, 🪡, 🧼, 📏, 🔒, 🌸, 👑, 📦, etc.).
-2. Organização e Estrutura: Use quebras de linha (\\n) para separar parágrafos e tópicos. Evite blocos de texto contínuos. Use listas com marcadores elegantes (ex: usando '-' ou '✓').
-3. Tom Premium: Mantenha um tom sofisticado, profissional, comercialmente irresistível e altamente otimizado para vendas.
+Você deve gerar as descrições em abas E as novas Meta Tags de SEO, seguindo REGRAS ESTRITAS de formatação e tamanho.
 
-Instruções específicas para cada aba (máximo 2 a 4 frases curtas e elegantes por aba):
-1. Geral: Breve texto de introdução comercial envolvente, focado no produto e com forte apelo de moda íntima e autoestima.
-2. Tecido: Descrição direta da composição premium (ex: 90% poliamida, 10% elastano) ressaltando o toque suave e sensação na pele.
-3. Modelagem: Como veste no corpo (sustentação, caimento, valorização das curvas) e lembrete sobre a importância de consultar a tabela de medidas.
-4. Cuidados: Regras práticas de lavagem e conservação em tópicos.
-5. Diferenciais: Principais pontos fortes e benefícios do produto em tópicos curtos.
-6. Compra Segura: Detalhes de entrega expressa e discreta, garantia de troca fácil e segurança absoluta no pagamento.
+Regras de SEO (OBRIGATÓRIO):
+1. seo_title: Máximo 60 caracteres. Siga exatamente a fórmula: [Nome Base ou otimizado] + [Estilo/Público] + [Tecido principal] + [Tipo de Peça] - Avante Lingerie.
+2. seo_meta_description: Máximo 160 caracteres. Siga exatamente a fórmula: [Benefício Emocional do Produto] + direto de Nova Friburgo. Economize no varejo ou ganhe descontos progressivos automáticos de atacado. Compre direto da fábrica!
 
-IMPORTANTE: Retorne ESTRITAMENTE em formato JSON. Sem explicações ou markdown, apenas o objeto JSON puro:
+Diretrizes de Formatação para Abas:
+1. Emojis Inteligentes: Insira emojis delicados no início de parágrafos/listas (ex: ✨, 🌸, 💎).
+2. Organização: Use quebras de linha (\\n) para tópicos.
+3. Tom Premium: Sofisticado, focado em vendas e autoestima.
+
+Instruções para Abas:
+1. Geral: Breve texto de introdução comercial.
+2. Tecido: Descrição da composição premium e sensação na pele.
+3. Modelagem: Como veste no corpo (sustentação, caimento).
+4. Cuidados: Regras de lavagem.
+5. Diferenciais: Principais pontos fortes.
+6. Compra Segura: Detalhes de entrega expressa, troca e pagamento.
+
+IMPORTANTE: Retorne ESTRITAMENTE em formato JSON puro, sem crases de markdown (\`\`\`json). O objeto DEVE conter as seguintes chaves:
 {
+  "seo_title": "...",
+  "seo_meta_description": "...",
   "desc_geral": "...",
   "desc_tecido": "...",
   "desc_modelagem": "...",

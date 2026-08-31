@@ -796,8 +796,9 @@ export default function ProductPage() {
     );
   }
 
-  const productName = product?.name || fallbackProduct?.name || 'Produto';
+  const productName = product?.seo_title || product?.name || fallbackProduct?.name || 'Produto';
   const productDescription = product?.desc_geral || product?.description || fallbackProduct?.description || '';
+  const productMetaDesc = product?.seo_meta_description || 'Tecido inteligente que não marca e não enrola. A modelagem perfeita que valoriza suas curvas com conforto absoluto.';
   const productReferencia = product?.reference || product?.referencia || product?.id || fallbackProduct?.referencia || 'REF-001';
   const productAvaliacao = product?.avaliacao_media ?? fallbackProduct?.avaliacao_media ?? 5.0;
   const productReviewsCount = product?.reviews_count ?? fallbackProduct?.reviews_count ?? 124;
@@ -835,7 +836,7 @@ export default function ProductPage() {
   const relatedProductsList = relatedProducts.length > 0 ? relatedProducts.slice(0, 4) : [];
 
   return (
-    <article className="w-full bg-[#FFFBF8] min-h-screen pb-24 md:pb-0 font-sans text-gray-800">
+    <article className="w-full bg-white min-h-screen pb-24 md:pb-0 font-sans text-gray-800">
       <Helmet>
         <title>{`${productName} | Conforto e Qualidade Avante`}</title>
         <meta name="description" content={`Descubra o ${productName}. Aproveite 5% OFF no PIX, compra 100% segura, troca facilitada e envio rápido para todo o Brasil.`} />
@@ -866,7 +867,7 @@ export default function ProductPage() {
                     animate={{ opacity: 1, scale: isZoomed ? 2 : 1 }}
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.3 }}
-                    className="w-full h-full bg-[#121212] overflow-hidden flex items-center justify-center relative group"
+                    className="w-full h-full bg-white overflow-hidden flex items-center justify-center relative group"
                   >
                     {resolvedImages[selectedImageIdx].includes('vimeo') ? (
                        <iframe src={`https://player.vimeo.com/video/${resolvedImages[selectedImageIdx].split('vimeo.com/')[1].split('?')[0]}?autoplay=1&loop=1&muted=0&background=0`} className="absolute w-full h-full object-cover" allow="autoplay; fullscreen" />
@@ -883,7 +884,7 @@ export default function ProductPage() {
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.3 }}
                     style={{ transformOrigin: zoomOrigin }}
-                    className="w-full h-full object-cover cursor-zoom-in"
+                    className="w-full h-full object-contain cursor-zoom-in"
                     autoPlay
                     loop
                     muted={isVideoMuted}
@@ -899,7 +900,7 @@ export default function ProductPage() {
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.3 }}
                     style={{ transformOrigin: zoomOrigin }}
-                    className="w-full h-full object-cover cursor-zoom-in"
+                    className="w-full h-full object-contain cursor-zoom-in"
                     loading={selectedImageIdx === 0 ? "eager" : "lazy"}
                     decoding="async"
                   />
@@ -991,7 +992,7 @@ export default function ProductPage() {
               </h1>
 
               <p className="text-sm md:text-base text-gray-600 font-light mt-3 mb-1 leading-relaxed">
-                Tecido inteligente que não marca e não enrola. A modelagem perfeita que valoriza suas curvas com conforto absoluto.
+                {productMetaDesc}
               </p>
 
               {isReseller ? (
@@ -1122,7 +1123,7 @@ export default function ProductPage() {
                         Guia de Medidas
                       </button>
                     </DialogTrigger>
-                    <DialogContent className="max-w-3xl rounded-3xl p-0 overflow-hidden bg-[#FFFBF8]">
+                    <DialogContent className="max-w-3xl rounded-3xl p-0 overflow-hidden bg-white">
                       <div className="bg-[#c59b5f] p-6 text-white relative overflow-hidden">
                         <div className="absolute -right-10 -top-10 opacity-10">
                           <Ruler className="w-40 h-40" />
@@ -1150,7 +1151,7 @@ export default function ProductPage() {
                             </thead>
                             <tbody>
                               {tableData.rows.map((row, i) => (
-                                <tr key={i} className="border-b border-gray-50 hover:bg-[#FFFBF8] transition-colors">
+                                <tr key={i} className="border-b border-gray-50 hover:bg-white transition-colors">
                                   {row.map((cell, j) => (
                                     <td key={j} className={`px-6 py-4 ${j === 0 ? 'font-bold text-gray-900 bg-gray-50/50' : 'text-gray-600'}`}>
                                       {cell}
@@ -1358,7 +1359,7 @@ export default function ProductPage() {
         </div>
       </div>
 
-      <div className="bg-[#FFFBF8] border-y border-gray-100">
+      <div className="bg-white border-y border-gray-100">
         <div className="container-custom py-12">
           <Tabs defaultValue="geral" className="w-full">
             <TabsList className="w-full justify-start border-b border-gray-200 rounded-none bg-transparent h-auto p-0 mb-6 gap-6 overflow-x-auto scrollbar-hide flex">

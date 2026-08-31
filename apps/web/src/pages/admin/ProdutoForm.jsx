@@ -33,6 +33,8 @@ export default function ProdutoForm() {
     altura_cm: '',
     largura_cm: '',
     comprimento_cm: '',
+    seo_title: '',
+    seo_meta_description: '',
     desc_geral: '',
     desc_tecido: '',
     desc_modelagem: '',
@@ -160,6 +162,8 @@ export default function ProdutoForm() {
         altura_cm: record.altura_cm || '',
         largura_cm: record.largura_cm || '',
         comprimento_cm: record.comprimento_cm || '',
+        seo_title: record.seo_title || '',
+        seo_meta_description: record.seo_meta_description || '',
         desc_geral: record.desc_geral || '',
         desc_tecido: record.desc_tecido || '',
         desc_modelagem: record.desc_modelagem || '',
@@ -292,6 +296,8 @@ export default function ProdutoForm() {
 
       setFormData(prev => ({
         ...prev,
+        seo_title: parsedData.seo_title || '',
+        seo_meta_description: parsedData.seo_meta_description || '',
         desc_geral: parsedData.desc_geral || '',
         desc_tecido: parsedData.desc_tecido || '',
         desc_modelagem: parsedData.desc_modelagem || '',
@@ -463,6 +469,8 @@ export default function ProdutoForm() {
       if (formData.largura_cm) pbFormData.append('largura_cm', parseFloat(formData.largura_cm));
       if (formData.comprimento_cm) pbFormData.append('comprimento_cm', parseFloat(formData.comprimento_cm));
       
+      pbFormData.append('seo_title', formData.seo_title);
+      pbFormData.append('seo_meta_description', formData.seo_meta_description);
       pbFormData.append('desc_geral', formData.desc_geral);
       pbFormData.append('desc_tecido', formData.desc_tecido);
       pbFormData.append('desc_modelagem', formData.desc_modelagem);
@@ -687,12 +695,99 @@ export default function ProdutoForm() {
             <h2 className="text-lg font-bold border-b border-[#c59b5f]/20 pb-2 text-white font-serif">Informações Básicas</h2>
             
             <div className="space-y-4">
-              <div>
-                <label className="text-sm font-medium mb-1.5 block text-gray-300">
-                  Nome do Produto *
-                </label>
-                <Input required value={formData.name} onChange={(e) => handleInputChange('name', e.target.value)} placeholder="Ex: Conjunto Rendado Paris" className="bg-[#121212] border-[#c59b5f]/20 text-white" />
-              </div>
+              <div className="space-y-1.5">
+                  <label className="text-sm font-medium block text-gray-300">
+                    Nome do Produto * <span className="text-xs text-gray-500 font-normal ml-1">(Título exibido na loja)</span>
+                  </label>
+                  <Input required value={formData.name} onChange={(e) => handleInputChange('name', e.target.value)} placeholder="Ex: Conjunto Rendado Paris" className="bg-[#121212] border-[#c59b5f]/20 text-white font-medium" />
+                </div>
+
+                {/* BLOCO SEO + IA */}
+                <div className="bg-[#1a1a1a] p-4 rounded-lg border border-[#c59b5f]/30 mt-2 space-y-4 relative">
+                  <div className="absolute -top-3 left-3 bg-card px-2 text-xs font-bold text-[#c59b5f] flex items-center gap-1.5">
+                    <Sparkles className="w-3.5 h-3.5" /> Google SEO & IA
+                  </div>
+                  
+                  <div className="pt-2 grid grid-cols-1 gap-4">
+                    <div>
+                      <label className="text-xs font-bold mb-1.5 text-[#c59b5f] flex justify-between">
+                        Título SEO
+                        <span className="text-gray-500 font-normal">Máx 60 caracteres</span>
+                      </label>
+                      <Input type="text" value={formData.seo_title} onChange={(e) => handleInputChange('seo_title', e.target.value)} placeholder="Gerado automaticamente pela IA..." className="bg-[#121212] border-[#c59b5f]/20 text-white text-sm" />
+                    </div>
+                    <div>
+                      <label className="text-xs font-bold mb-1.5 text-[#c59b5f] flex justify-between">
+                        Meta Description
+                        <span className="text-gray-500 font-normal">Máx 160 caracteres</span>
+                      </label>
+                      <Textarea value={formData.seo_meta_description} onChange={(e) => handleInputChange('seo_meta_description', e.target.value)} placeholder="Gerado automaticamente pela IA com funil de Varejo/Atacado..." className="bg-[#121212] border-[#c59b5f]/20 text-white text-sm min-h-[60px]" />
+                    </div>
+                    
+                    <div className="pt-2">
+                      <Dialog open={showAIAssistant} onOpenChange={setShowAIAssistant}>
+                        <DialogTrigger asChild>
+                          <Button type="button" className="w-full bg-gradient-to-r from-[#c59b5f] to-[#a07b46] text-black hover:brightness-110 font-bold gap-2 shadow-lg shadow-[#c59b5f]/20 h-10">
+                            <Sparkles className="w-4 h-4" /> Gerar Textos e SEO Automaticamente com IA
+                          </Button>
+                        </DialogTrigger>
+                        <DialogContent className="sm:max-w-xl rounded-2xl bg-[#1a1a1a] border border-[#c59b5f]/30 text-white shadow-2xl p-6">
+                          <DialogHeader className="mb-4 text-left">
+                            <DialogTitle className="text-xl font-serif font-bold text-[#c59b5f] flex items-center gap-2">
+                              <Sparkles className="w-5 h-5" /> Assistente de Descrições IA
+                            </DialogTitle>
+                            <DialogDescription className="text-gray-400">
+                              O Gemini vai criar todas as descrições das abas e as tags de SEO otimizadas para Google.
+                            </DialogDescription>
+                          </DialogHeader>
+
+                          <div className="space-y-4 py-2 text-left text-gray-300">
+                            <div className="space-y-1.5">
+                              <label className="text-sm font-medium">Estilo Principal</label>
+                              <select className="flex h-10 w-full rounded-md border border-[#c59b5f]/25 bg-[#121212] px-3 py-2 text-sm text-white" value={aiEstilo} onChange={e => setAiEstilo(e.target.value)}>
+                                {estilosList.map(e => <option key={e.value} value={e.value}>{e.label}</option>)}
+                              </select>
+                            </div>
+                            <div className="space-y-1.5">
+                              <label className="text-sm font-medium">Tecido Principal</label>
+                              <select className="flex h-10 w-full rounded-md border border-[#c59b5f]/25 bg-[#121212] px-3 py-2 text-sm text-white" value={aiTecido} onChange={e => setAiTecido(e.target.value)}>
+                                {tecidosList.map(t => <option key={t.value} value={t.value}>{t.label}</option>)}
+                              </select>
+                            </div>
+                            <div className="space-y-1.5">
+                              <label className="text-sm font-medium block">Diferenciais e Destaques (Selecione quantos desejar)</label>
+                              <div className="grid grid-cols-2 gap-2 mt-2">
+                                {destaquesList.map(destaque => (
+                                  <label key={destaque.value} className="flex items-center space-x-2 cursor-pointer bg-[#121212] p-2 rounded border border-[#c59b5f]/10 hover:border-[#c59b5f]/40 transition-colors">
+                                    <input 
+                                      type="checkbox" 
+                                      className="rounded border-gray-600 bg-gray-700 text-[#c59b5f] focus:ring-[#c59b5f]"
+                                      checked={aiDestaques.includes(destaque.value)}
+                                      onChange={(e) => {
+                                        if (e.target.checked) setAiDestaques(prev => [...prev, destaque.value]);
+                                        else setAiDestaques(prev => prev.filter(v => v !== destaque.value));
+                                      }}
+                                    />
+                                    <span className="text-xs">{destaque.label}</span>
+                                  </label>
+                                ))}
+                              </div>
+                            </div>
+                          </div>
+                          
+                          <div className="mt-6 flex justify-end gap-3 border-t border-[#c59b5f]/20 pt-4">
+                            <DialogClose asChild>
+                              <Button type="button" variant="outline" className="border-[#c59b5f]/20 text-gray-300 hover:text-white">Cancelar</Button>
+                            </DialogClose>
+                            <Button type="button" onClick={handleGenerateAI} disabled={aiLoading} className="bg-[#c59b5f] text-black font-bold flex items-center gap-1.5">
+                              {aiLoading ? <Loader2 className="w-4 h-4 animate-spin" /> : <Sparkles className="w-4 h-4" />} Gerar com Gemini AI
+                            </Button>
+                          </div>
+                        </DialogContent>
+                      </Dialog>
+                    </div>
+                  </div>
+                </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
@@ -842,71 +937,7 @@ export default function ProdutoForm() {
           <section className="bg-card p-6 rounded-xl border border-[#c59b5f]/10 shadow-sm space-y-6">
             <div className="flex items-center justify-between border-b border-[#c59b5f]/20 pb-2 font-sans">
               <h2 className="text-lg font-bold text-white font-serif">Descrições Detalhadas em Abas</h2>
-              <Dialog open={showAIAssistant} onOpenChange={setShowAIAssistant}>
-                <DialogTrigger asChild>
-                  <Button type="button" variant="outline" className="h-8 border-[#c59b5f]/40 hover:bg-[#c59b5f]/10 text-[#c59b5f] text-xs font-bold gap-1.5 rounded-lg px-3">
-                    <Sparkles className="w-3.5 h-3.5" /> Assistente de Descrições IA
-                  </Button>
-                </DialogTrigger>
-                <DialogContent className="sm:max-w-xl rounded-2xl bg-[#1a1a1a] border border-[#c59b5f]/30 text-white shadow-2xl p-6">
-                  <DialogHeader className="mb-4 text-left">
-                    <DialogTitle className="text-xl font-serif font-bold text-[#c59b5f] flex items-center gap-2">
-                       <Sparkles className="w-5 h-5" /> Assistente de Descrições IA
-                    </DialogTitle>
-                  </DialogHeader>
-
-                  <div className="space-y-4 py-2 text-left text-gray-300">
-                    <div className="space-y-1.5">
-                      <label className="text-xs font-medium text-gray-300">Estilo Principal</label>
-                      <select className="flex h-10 w-full rounded-md border border-[#c59b5f]/25 bg-[#121212] px-3 py-2 text-sm text-white focus:outline-none" value={aiEstilo} onChange={e => setAiEstilo(e.target.value)}>
-                        {estilosList.map(e => <option key={e.value} value={e.value}>{e.label}</option>)}
-                      </select>
-                    </div>
-
-                    <div className="space-y-1.5">
-                      <label className="text-xs font-medium text-gray-300">Tecido Principal</label>
-                      <select className="flex h-10 w-full rounded-md border border-[#c59b5f]/25 bg-[#121212] px-3 py-2 text-sm text-white focus:outline-none" value={aiTecido} onChange={e => setAiTecido(e.target.value)}>
-                        {tecidosList.map(t => <option key={t.value} value={t.value}>{t.label}</option>)}
-                      </select>
-                    </div>
-
-                    <div className="space-y-2">
-                      <label className="text-xs font-medium text-gray-300">Diferenciais e Destaques (Selecione quantos desejar)</label>
-                      <div className="grid grid-cols-2 gap-2 bg-[#121212] p-3 rounded-lg border border-[#c59b5f]/15 max-h-36 overflow-y-auto">
-                        {destaquesList.map(d => {
-                          const isChecked = aiDestaques.includes(d.value);
-                          return (
-                            <label key={d.value} className="flex items-center gap-2 text-xs text-gray-300 cursor-pointer">
-                              <input 
-                                type="checkbox" 
-                                checked={isChecked}
-                                onChange={() => {
-                                  if (isChecked) {
-                                    setAiDestaques(aiDestaques.filter(v => v !== d.value));
-                                  } else {
-                                    setAiDestaques([...aiDestaques, d.value]);
-                                  }
-                                }}
-                                className="accent-[#c59b5f] rounded"
-                              />
-                              {d.label}
-                            </label>
-                          );
-                        })}
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="flex justify-end gap-3 mt-6 border-t border-[#c59b5f]/25 pt-4">
-                    <DialogClose asChild>
-                      <Button type="button" variant="outline" className="bg-[#121212] border-gray-800 text-white">Cancelar</Button>
-                    </DialogClose>
-                    <Button type="button" onClick={handleGenerateAI} disabled={aiLoading} className="bg-[#c59b5f] text-black font-bold flex items-center gap-1.5">
-                      {aiLoading ? <Loader2 className="w-4 h-4 animate-spin" /> : <Sparkles className="w-4 h-4" />} Gerar com Gemini AI
-                    </Button>
-                  </div>
-                </DialogContent>
-              </Dialog>
+              <span className="text-xs text-gray-400">Preenchidas via IA na seção Informações Básicas acima</span>
             </div>
             
             <div className="flex border-b border-[#c59b5f]/20 overflow-x-auto scrollbar-hide">

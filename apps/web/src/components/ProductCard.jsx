@@ -302,22 +302,22 @@ export default function ProductCard({
   };
 
   return (
-    <div className="group flex flex-col bg-white rounded-3xl border border-[#c59b5f]/15 overflow-hidden shadow-premium-sm hover:-translate-y-2 hover:shadow-premium hover:border-[#c59b5f]/40 transition-all duration-500 h-full w-full max-w-sm mx-auto relative">
+    <div className="group flex flex-col bg-white hover:-translate-y-2 transition-all duration-500 h-full w-full max-w-sm mx-auto relative">
 
       {/* 1. Image Section */}
-      <div className="relative aspect-[3/4] w-full overflow-hidden bg-[#FFFBF8] shrink-0">
+      <div className="relative aspect-[3/4] w-full overflow-hidden bg-white shrink-0">
         <Link to={`/produto/${id}`} className="block w-full h-full">
           <img
             src={mainImage}
             alt={name}
-            className="absolute inset-0 w-full h-full object-cover transition-all duration-700 ease-in-out group-hover:scale-105 group-hover:opacity-0"
+            className="absolute inset-0 w-full h-full object-contain transition-all duration-700 ease-in-out group-hover:scale-105 group-hover:opacity-0"
             loading="lazy"
             onError={(e) => { e.currentTarget.src = 'https://placehold.co/400x533/1a1a1a/c59b5f?text=Avante'; e.currentTarget.onerror = null; }}
           />
           <img
             src={hoverImage}
             alt={`${name} - detalhe`}
-            className="absolute inset-0 w-full h-full object-cover transition-all duration-700 ease-in-out opacity-0 group-hover:opacity-100 group-hover:scale-105"
+            className="absolute inset-0 w-full h-full object-contain transition-all duration-700 ease-in-out opacity-0 group-hover:opacity-100 group-hover:scale-105"
             loading="lazy"
             onError={(e) => { e.currentTarget.src = 'https://placehold.co/400x533/1a1a1a/c59b5f?text=Avante'; e.currentTarget.onerror = null; }}
           />
@@ -400,7 +400,7 @@ export default function ProductCard({
             ))}
             {colors.length > 4 && (
               <button
-                className="w-[18px] h-[18px] rounded-full border border-gray-200 flex items-center justify-center text-[8px] font-bold text-gray-400 hover:border-[#c59b5f] hover:text-[#c59b5f] transition-all bg-[#FFFBF8]"
+                className="w-[18px] h-[18px] rounded-full border border-gray-200 flex items-center justify-center text-[8px] font-bold text-gray-400 hover:border-[#c59b5f] hover:text-[#c59b5f] transition-all bg-white"
                 onClick={(e) => { e.preventDefault(); navigate(`/produto/${id}`); }}
               >
                 +{colors.length - 4}
