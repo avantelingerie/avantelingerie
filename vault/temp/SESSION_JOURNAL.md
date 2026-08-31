@@ -6875,3 +6875,122 @@
 ## 2026-08-31 13:49:53.684Z console.warn
 - text: Please replace pb.files.getUrl() with pb.files.getURL()
 
+## 2026-08-31 14:34:40.562Z load
+- url: http://localhost:3000/
+- title: Avante Lingerie | Oficial
+
+## 2026-08-31 14:34:42.736Z navigate
+- url: http://localhost:3000/
+- via: replaceState
+
+## 2026-08-31 14:34:44.588Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-31 14:34:44.592Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-31 14:34:44.745Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/testimonials/records?page=1&perPage=10&filter=status%20%3D%20true&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 152
+
+## 2026-08-31 14:34:44.746Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/testimonials/records?page=1&perPage=10&filter=status%20%3D%20true&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-08-31 14:34:44.769Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-31 14:34:44.772Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-31 14:34:44.772Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-31 14:34:44.782Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-31 14:34:44.785Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-31 14:34:44.816Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-31 14:34:44.816Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-31 14:34:44.823Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-31 14:34:44.823Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-31 14:34:44.826Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-31 14:34:44.826Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-08-31 14:34:49.686Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-08-31 14:35:18.151Z load
+- url: http://localhost:3000/admin
+- title: Avante Lingerie | Oficial
+
+## 2026-08-31 14:35:19.369Z navigate
+- url: http://localhost:3000/admin
+- via: replaceState
+
+## 2026-08-31 14:35:19.951Z navigate
+- url: http://localhost:3000/admin/login
+- via: replaceState
+
+## 2026-08-31 14:35:21.328Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"email","id":null,"placeholder":"admin@avantelingerie.com.br","label":"admin@avantelingerie.com.br","value":"","valueLength":0,"text":""}
+
+## 2026-08-31 14:35:21.478Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"email","id":null,"placeholder":"admin@avantelingerie.com.br","label":"admin@avantelingerie.com.br","value":"","valueLength":0,"text":""}
+
+## 2026-08-31 14:35:34.211Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"email","id":null,"placeholder":"admin@avantelingerie.com.br","label":"admin@avantelingerie.com.br","value":"admin@avantelingerie.com.br","valueLength":27,"text":""}
+
+## 2026-08-31 14:35:34.212Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"email","id":null,"placeholder":"admin@avantelingerie.com.br","label":"admin@avantelingerie.com.br","value":"admin@avantelingerie.com.br","valueLength":27,"text":""}
+
+## 2026-08-31 14:35:34.213Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"password","id":null,"placeholder":"••••••••","label":"••••••••","value":"[redacted:length=0]","valueLength":0,"text":""}
+
+## 2026-08-31 14:35:34.425Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"password","id":null,"placeholder":"••••••••","label":"••••••••","value":"[redacted:length=0]","valueLength":0,"text":""}
+
+## 2026-08-31 14:35:39.295Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"password","id":null,"placeholder":"••••••••","label":"••••••••","value":"[redacted:length=12]","valueLength":12,"text":""}
+
+## 2026-08-31 14:35:39.295Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"password","id":null,"placeholder":"••••••••","label":"••••••••","value":"[redacted:length=12]","valueLength":12,"text":""}
+
+## 2026-08-31 14:35:39.509Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"submit","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"ACESSAR PAINEL"}
+
+## 2026-08-31 14:35:39.512Z submit
+- action: http://localhost:3000/admin/login
+- fields: [{"label":"admin@avantelingerie.com.br","type":"email","value":"admin@avantelingerie.com.br","length":27,"redacted":false},{"label":"••••••••","type":"password","value":"[redacted:length=12]","length":12,"redacted":true},{"label":"Mostrar senha","type":"button","value":"","length":0,"redacted":false},{"label":"[submit]","type":"submit","value":"","length":0,"redacted":false}]
+
+## 2026-08-31 14:35:39.664Z navigate
+- url: http://localhost:3000/admin
+- via: pushState
+
+## 2026-08-31 14:35:43.162Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Categorias"}
+
+## 2026-08-31 14:35:43.164Z navigate
+- url: http://localhost:3000/admin/categorias
+- via: pushState
+

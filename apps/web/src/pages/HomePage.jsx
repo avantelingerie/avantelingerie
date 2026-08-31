@@ -291,7 +291,7 @@ export default function HomePage() {
                         {cat.video_capa ? (
                           <video
                             src={cat.video_capa}
-                            className="w-full h-full object-contain transition-transform duration-700 ease-in-out group-hover/card:scale-105"
+                            className="w-full h-full object-contain transition-transform duration-700 ease-in-out group-hover/card:scale-105 brightness-[1.03] contrast-[1.03] md:brightness-105 md:contrast-105"
                             autoPlay
                             loop
                             muted
@@ -301,7 +301,7 @@ export default function HomePage() {
                           <img
                             src={cat.image}
                             alt={cat.name}
-                            className="w-full h-full object-contain transition-transform duration-700 ease-in-out group-hover/card:scale-105"
+                            className="w-full h-full object-contain transition-transform duration-700 ease-in-out group-hover/card:scale-105 brightness-[1.03] contrast-[1.03] md:brightness-105 md:contrast-105"
                             loading="lazy"
                           />
                         )}
