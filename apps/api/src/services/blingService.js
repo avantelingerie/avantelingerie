@@ -58,6 +58,16 @@ const formatPedidoForBling = (pedido, userCpf = '') => {
 
   const cep = (pedido.cep || '').replace(/\D/g, '');
 
+  let calcPeso = 0;
+  if (pedido.itens && Array.isArray(pedido.itens)) {
+    calcPeso = pedido.itens.reduce((sum, item) => {
+      const w = parseFloat(item.peso_g || item.weight) || 100;
+      return sum + ((w / 1000) * (item.quantidade || item.quantity || 1));
+    }, 0);
+  }
+  const finalPeso = calcPeso > 0 ? calcPeso : 0.3;
+  const transportName = pedido.metodo_envio || pedido.forma_envio || 'Envios por Melhor Envio';
+
   return {
     numeroLoja: pedido.numero_pedido,
     data: new Date(pedido.created).toISOString().split('T')[0],
@@ -90,6 +100,15 @@ const formatPedidoForBling = (pedido, userCpf = '') => {
     transporte: {
       fretePorConta: 0,
       frete: freteVal,
+      volumes: [
+        {
+          servico: transportName,
+          peso: {
+            bruto: Number(finalPeso.toFixed(3)),
+            liquido: Number(finalPeso.toFixed(3))
+          }
+        }
+      ],
       enderecoEntrega: {
         nome: pedido.cliente_nome || 'Cliente Consumidor',
         endereco: rua.substring(0, 120),
