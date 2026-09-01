@@ -305,7 +305,7 @@ export default function HomePage() {
                             loading="lazy"
                           />
                         )}
-                        <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-white via-white/90 to-transparent pointer-events-none" />
+                        {/* Removido o gradiente branco para evitar a "sombra" ou névoa sobre os vídeos */}
                         <div className="absolute bottom-0 left-0 right-0 p-6 text-center transform transition-all duration-500">
                           <h3 className="text-gray-900 font-serif text-2xl font-semibold tracking-wider">{cat.name}</h3>
                           <div className="w-8 h-0.5 bg-[#c59b5f] mx-auto mt-3 rounded-full opacity-0 group-hover/card:opacity-100 transition-opacity duration-500 shadow-sm"></div>
