@@ -1068,52 +1068,50 @@ export default function ProductPage() {
                     <span className="text-sm">Tabela de Medidas</span>
                   </button>
                 </DialogTrigger>
-                <DialogContent className="max-w-2xl bg-[#fbfbfb]">
-                  <DialogHeader>
-                    <DialogTitle className="text-2xl font-serif text-[#c59b5f] flex items-center gap-2">
-                      <Ruler className="w-6 h-6" /> Guia de Medidas Oficial
-                    </DialogTitle>
-                    <DialogDescription>
-                      Compare suas medidas com nossa tabela padrão Avante Lingerie.
+                <DialogContent className="max-w-3xl rounded-3xl p-0 overflow-hidden bg-white">
+                  <div className="bg-[#c59b5f] p-6 text-white relative overflow-hidden">
+                    <div className="absolute -right-10 -top-10 opacity-10">
+                      <Ruler className="w-40 h-40" />
+                    </div>
+                    <DialogTitle className="text-2xl font-bold tracking-tight mb-2 relative z-10">{tableData.title}</DialogTitle>
+                    <DialogDescription className="text-white/90 text-sm relative z-10 font-medium">
+                      {tableData.intro}
                     </DialogDescription>
-                  </DialogHeader>
-                  <div className="mt-4 overflow-x-auto">
-                    <table className="w-full text-sm text-left text-gray-500 rounded-xl overflow-hidden shadow-sm border border-gray-200">
-                      <thead className="text-xs text-gray-700 uppercase bg-gray-100">
-                        <tr>
-                          <th className="px-6 py-3">Tamanho</th>
-                          <th className="px-6 py-3">Busto (cm)</th>
-                          <th className="px-6 py-3">Cintura (cm)</th>
-                          <th className="px-6 py-3">Quadril (cm)</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr className="bg-white border-b">
-                          <td className="px-6 py-4 font-bold text-gray-900">P (40)</td>
-                          <td className="px-6 py-4">84 - 88</td>
-                          <td className="px-6 py-4">64 - 68</td>
-                          <td className="px-6 py-4">90 - 94</td>
-                        </tr>
-                        <tr className="bg-gray-50 border-b">
-                          <td className="px-6 py-4 font-bold text-gray-900">M (42)</td>
-                          <td className="px-6 py-4">89 - 93</td>
-                          <td className="px-6 py-4">69 - 73</td>
-                          <td className="px-6 py-4">95 - 99</td>
-                        </tr>
-                        <tr className="bg-white border-b">
-                          <td className="px-6 py-4 font-bold text-gray-900">G (44)</td>
-                          <td className="px-6 py-4">94 - 98</td>
-                          <td className="px-6 py-4">74 - 78</td>
-                          <td className="px-6 py-4">100 - 104</td>
-                        </tr>
-                        <tr className="bg-gray-50">
-                          <td className="px-6 py-4 font-bold text-gray-900">GG (46)</td>
-                          <td className="px-6 py-4">99 - 103</td>
-                          <td className="px-6 py-4">79 - 83</td>
-                          <td className="px-6 py-4">105 - 109</td>
-                        </tr>
-                      </tbody>
-                    </table>
+                  </div>
+                  <div className="p-6">
+                    {tableData.alert && (
+                      <div className="bg-amber-50 border border-amber-200 text-amber-800 text-sm p-4 rounded-2xl flex items-start gap-3 mb-6">
+                        <Sparkles className="w-5 h-5 mt-0.5 shrink-0" />
+                        <p className="font-medium leading-relaxed">{tableData.alert}</p>
+                      </div>
+                    )}
+                    <div className="overflow-x-auto bg-white rounded-2xl border border-gray-100 shadow-sm">
+                      <table className="w-full text-sm text-left">
+                        <thead className="text-xs text-gray-500 uppercase bg-gray-50 border-b border-gray-100">
+                          <tr>
+                            {tableData.headers.map((h, i) => (
+                              <th key={i} className="px-6 py-4 font-bold tracking-wider">{h}</th>
+                            ))}
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {tableData.rows.map((row, i) => (
+                            <tr key={i} className="border-b border-gray-50 hover:bg-white transition-colors">
+                              {row.map((cell, j) => (
+                                <td key={j} className={`px-6 py-4 ${j === 0 ? 'font-bold text-gray-900 bg-gray-50/50' : 'text-gray-600'}`}>
+                                  {cell}
+                                </td>
+                              ))}
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
+                    <div className="mt-6 flex justify-end">
+                      <DialogClose asChild>
+                        <Button className="rounded-full font-bold px-8 bg-gray-100 hover:bg-gray-200 text-gray-900 border-0" variant="outline">Entendi</Button>
+                      </DialogClose>
+                    </div>
                   </div>
                 </DialogContent>
               </Dialog>
@@ -1202,60 +1200,7 @@ export default function ProductPage() {
                     </span>
                   </span>
 
-                  <Dialog>
-                    <DialogTrigger asChild>
-                      <button className="text-xs font-bold text-[#c59b5f] hover:text-[#a37c46] transition-colors flex items-center gap-1.5 bg-[#c59b5f]/5 hover:bg-[#c59b5f]/10 px-3 py-1.5 rounded-full border border-[#c59b5f]/20">
-                        <Ruler className="w-3.5 h-3.5" />
-                        Guia de Medidas
-                      </button>
-                    </DialogTrigger>
-                    <DialogContent className="max-w-3xl rounded-3xl p-0 overflow-hidden bg-white">
-                      <div className="bg-[#c59b5f] p-6 text-white relative overflow-hidden">
-                        <div className="absolute -right-10 -top-10 opacity-10">
-                          <Ruler className="w-40 h-40" />
-                        </div>
-                        <DialogTitle className="text-2xl font-bold tracking-tight mb-2 relative z-10">{tableData.title}</DialogTitle>
-                        <DialogDescription className="text-white/90 text-sm relative z-10 font-medium">
-                          {tableData.intro}
-                        </DialogDescription>
-                      </div>
-                      <div className="p-6">
-                        {tableData.alert && (
-                          <div className="bg-amber-50 border border-amber-200 text-amber-800 text-sm p-4 rounded-2xl flex items-start gap-3 mb-6">
-                            <Sparkles className="w-5 h-5 mt-0.5 shrink-0" />
-                            <p className="font-medium leading-relaxed">{tableData.alert}</p>
-                          </div>
-                        )}
-                        <div className="overflow-x-auto bg-white rounded-2xl border border-gray-100 shadow-sm">
-                          <table className="w-full text-sm text-left">
-                            <thead className="text-xs text-gray-500 uppercase bg-gray-50 border-b border-gray-100">
-                              <tr>
-                                {tableData.headers.map((h, i) => (
-                                  <th key={i} className="px-6 py-4 font-bold tracking-wider">{h}</th>
-                                ))}
-                              </tr>
-                            </thead>
-                            <tbody>
-                              {tableData.rows.map((row, i) => (
-                                <tr key={i} className="border-b border-gray-50 hover:bg-white transition-colors">
-                                  {row.map((cell, j) => (
-                                    <td key={j} className={`px-6 py-4 ${j === 0 ? 'font-bold text-gray-900 bg-gray-50/50' : 'text-gray-600'}`}>
-                                      {cell}
-                                    </td>
-                                  ))}
-                                </tr>
-                              ))}
-                            </tbody>
-                          </table>
-                        </div>
-                        <div className="mt-6 flex justify-end">
-                          <DialogClose asChild>
-                            <Button className="rounded-full font-bold px-8" variant="outline">Entendi</Button>
-                          </DialogClose>
-                        </div>
-                      </div>
-                    </DialogContent>
-                  </Dialog>
+
                 </div>
 
                 <div className="grid grid-cols-4 sm:grid-cols-6 gap-3">
