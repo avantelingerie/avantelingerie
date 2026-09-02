@@ -851,10 +851,10 @@ export default function ProductPage() {
           <span className="text-[#c59b5f] font-bold truncate max-w-[200px]">{productName}</span>
         </nav>
 
-        <section className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
-          <div className="flex flex-col md:flex-row-reverse gap-4 lg:sticky lg:top-24 h-fit">
+        <section className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
+          <div className="lg:col-span-5 flex flex-col md:flex-row-reverse gap-4 lg:sticky lg:top-24 h-fit">
             <div
-              className="relative w-full aspect-[3/4] bg-white rounded-3xl overflow-hidden shadow-premium-sm border border-[#c59b5f]/15"
+              className="relative w-full aspect-[9/16] bg-white rounded-3xl overflow-hidden shadow-premium-sm border border-[#c59b5f]/15"
               onMouseEnter={() => setIsZoomed(true)}
               onMouseLeave={() => { setIsZoomed(false); setZoomOrigin('50% 50%'); }}
               onMouseMove={handleMouseMove}
@@ -939,7 +939,7 @@ export default function ProductPage() {
                 <button
                   key={idx}
                   onClick={() => setSelectedImageIdx(idx)}
-                  className={`relative w-20 aspect-[3/4] shrink-0 rounded-2xl overflow-hidden transition-all duration-300 ${selectedImageIdx === idx
+                  className={`relative w-20 aspect-[9/16] shrink-0 rounded-2xl overflow-hidden transition-all duration-300 ${selectedImageIdx === idx
                     ? 'ring-2 ring-[#c59b5f] ring-offset-2 scale-[1.02] shadow-md'
                     : 'opacity-60 hover:opacity-100 hover:scale-[1.02] bg-white border border-[#c59b5f]/10'
                     }`}
@@ -971,7 +971,7 @@ export default function ProductPage() {
           </div>
 
           {/* Direita - Informações */}
-          <div className="flex flex-col space-y-8">
+          <div className="lg:col-span-7 flex flex-col space-y-8">
             <div className="space-y-4">
               <div className="flex items-center gap-3">
                 <span className="text-xs font-bold tracking-widest uppercase text-[#c59b5f] bg-[#c59b5f]/10 px-3 py-1 rounded-full border border-[#c59b5f]/20">
@@ -1072,6 +1072,16 @@ export default function ProductPage() {
                   {dynamicColors.map((color, idx) => {
                     const isSelected = selectedColor === idx;
                     const colorHex = getColorHex(color);
+                    
+                    // Busca se existe uma imagem real da variação para essa cor (ideal para estampas)
+                    let variationImageUrl = null;
+                    if (product?.expand?.variacoes_via_produto) {
+                      const varForColor = product.expand.variacoes_via_produto.find(v => v.status !== false && v.cor?.trim().toLowerCase() === color.trim().toLowerCase() && v.imagem_url);
+                      if (varForColor) {
+                        variationImageUrl = pb.files.getUrl(varForColor, varForColor.imagem_url);
+                      }
+                    }
+
                     return (
                       <button
                         key={idx}
@@ -1087,10 +1097,10 @@ export default function ProductPage() {
                         title={color}
                       >
                         <span
-                          className="w-10 h-10 rounded-full shadow-inner block"
+                          className="w-10 h-10 rounded-full shadow-inner block bg-center bg-cover bg-no-repeat"
                           style={{
-                            background: colorHex.includes('hsl') || colorHex.includes('#') ? colorHex : 'linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)',
-                            border: colorHex === '#FFFFFF' ? '1px solid #e5e7eb' : 'none'
+                            background: variationImageUrl ? `url('${variationImageUrl}') center/cover` : (colorHex.includes('hsl') || colorHex.includes('#') ? colorHex : 'linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)'),
+                            border: colorHex === '#FFFFFF' && !variationImageUrl ? '1px solid #e5e7eb' : 'none'
                           }}
                         />
                         {isSelected && (
