@@ -817,18 +817,18 @@ export default function ProductPage() {
 
       if (isNovaFriburgo) {
         setShippingResult([
-          { nome: 'Motoboy Local (Nova Friburgo)', prazo: 'Entrega Hoje', valor: 'Grátis' },
-          { nome: 'Retirada na Fábrica', prazo: 'Disponível em 2 horas', valor: 'Grátis' }
+          { nome: 'Retirada na Fábrica (Avante)', prazo: 'Pronto em 2 horas úteis', valor: 'Grátis' },
+          { nome: 'Motoboy Local / Sedex', prazo: '1 dia útil', valor: 'R$ 8,90' }
         ]);
       } else if (isRJ) {
         setShippingResult([
           { nome: 'Sedex (Melhor Envio)', prazo: '1 a 2 dias úteis', valor: 'R$ 14,90' },
-          { nome: 'PAC (Melhor Envio)', prazo: '3 a 5 dias úteis', valor: 'Grátis' }
+          { nome: 'PAC (Melhor Envio)', prazo: '3 a 5 dias úteis', valor: 'R$ 9,90' }
         ]);
       } else if (isSudeste) {
         setShippingResult([
           { nome: 'Sedex (Melhor Envio)', prazo: '2 a 4 dias úteis', valor: 'R$ 18,90' },
-          { nome: 'PAC (Melhor Envio)', prazo: '5 a 8 dias úteis', valor: 'R$ 9,90' }
+          { nome: 'PAC (Melhor Envio)', prazo: '5 a 8 dias úteis', valor: 'R$ 13,90' }
         ]);
       } else {
         setShippingResult([
