@@ -131,12 +131,35 @@ export default function ProvadorVirtual({ isOpen, onClose, productName, category
             className="absolute inset-0 bg-gradient-to-t from-[#c59b5f]/40 to-transparent z-10 mix-blend-multiply transition-opacity duration-1000"
           />
 
-          {/* Imagem da Modelo (Lia) */}
-          {/* Usaremos a imagem enviada por você. Nome sugerido: lia-provador.jpg na pasta public */}
-          <div className="absolute inset-0 bg-[url('/lia-provador.jpg')] bg-cover bg-center transition-all duration-1000">
-            {/* Fallback de cor caso a imagem não exista ainda */}
-            <div className="absolute inset-0 bg-[#f4ece1]/30 mix-blend-overlay"></div>
-          </div>
+          {/* Imagem da Modelo (Lia) - Lógica de Metamorfose Dinâmica */}
+          <AnimatePresence mode="popLayout">
+            <motion.div
+              key={
+                formData.formatoCorpo === 'pera' ? '/lia-pera.jpg' :
+                formData.formatoCorpo === 'triangulo_invertido' ? '/lia-triangulo.jpg' :
+                formData.formatoCorpo === 'reto' ? '/lia-reta.jpg' :
+                (parseInt(formData.sutia || '0') >= 46 || parseInt(formData.jeans || '0') >= 44) ? '/lia-plus.jpg' :
+                '/lia-padrao.jpg'
+              }
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 1.2, ease: "easeInOut" }}
+              className="absolute inset-0 bg-cover bg-center"
+              style={{
+                backgroundImage: `url('${
+                  formData.formatoCorpo === 'pera' ? '/lia-pera.jpg' :
+                  formData.formatoCorpo === 'triangulo_invertido' ? '/lia-triangulo.jpg' :
+                  formData.formatoCorpo === 'reto' ? '/lia-reta.jpg' :
+                  (parseInt(formData.sutia || '0') >= 46 || parseInt(formData.jeans || '0') >= 44) ? '/lia-plus.jpg' :
+                  '/lia-padrao.jpg'
+                }')`
+              }}
+            >
+              {/* Fallback de cor e overlays originais */}
+              <div className="absolute inset-0 bg-[#f4ece1]/10 mix-blend-overlay"></div>
+            </motion.div>
+          </AnimatePresence>
 
           {/* Elementos Interativos (Linhas de Medida) */}
           {/* Apenas renderiza a linha dinâmica (sem números ou fundos) e com uma cor de contraste vibrante (Rubi/Rosa) */}

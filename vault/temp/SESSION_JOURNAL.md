@@ -6734,3 +6734,838 @@
 ## 2026-09-02 18:16:53.928Z click
 - element: {"tag":"span","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"G (42-44)"}
 
+## 2026-09-02 18:19:13.807Z load
+- url: http://localhost:3000/produto/k53nt9vabcgojf8
+- title: Avante Lingerie | Oficial
+
+## 2026-09-02 18:19:16.213Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:19:16.217Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:19:16.217Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:19:16.217Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:19:16.218Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:19:16.218Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:19:16.218Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:19:16.219Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:19:16.219Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:19:16.219Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:19:16.220Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:19:16.220Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:19:16.220Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:19:16.220Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:19:16.220Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:19:16.220Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:19:16.220Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:19:16.220Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:19:16.220Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:19:16.283Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:19:16.284Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:19:23.501Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Provador Virtual"}
+
+## 2026-09-02 18:19:23.524Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:19:23.525Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:19:26.064Z focus
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"","valueLength":0,"text":"Selecione a numeração...38 (PP)40 (P)42 (M)44 (G)46 (GG)48 (XG)50+"}
+
+## 2026-09-02 18:19:26.284Z click
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"","valueLength":0,"text":"Selecione a numeração...38 (PP)40 (P)42 (M)44 (G)46 (GG)48 (XG)50+"}
+
+## 2026-09-02 18:19:28.192Z change
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"44","valueLength":2,"text":"Selecione a numeração...38 (PP)40 (P)42 (M)44 (G)46 (GG)48 (XG)50+"}
+
+## 2026-09-02 18:19:28.209Z click
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"44","valueLength":2,"text":"Selecione a numeração...38 (PP)40 (P)42 (M)44 (G)46 (GG)48 (XG)50+"}
+
+## 2026-09-02 18:19:29.989Z blur
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"44","valueLength":2,"text":"Selecione a numeração...38 (PP)40 (P)42 (M)44 (G)46 (GG)48 (XG)50+"}
+
+## 2026-09-02 18:19:29.990Z focus
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"","valueLength":0,"text":"Selecione a numeração...34/36384042444648+"}
+
+## 2026-09-02 18:19:30.222Z click
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"","valueLength":0,"text":"Selecione a numeração...34/36384042444648+"}
+
+## 2026-09-02 18:19:31.741Z change
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"44","valueLength":2,"text":"Selecione a numeração...34/36384042444648+"}
+
+## 2026-09-02 18:19:31.752Z click
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"44","valueLength":2,"text":"Selecione a numeração...34/36384042444648+"}
+
+## 2026-09-02 18:19:34.272Z blur
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"44","valueLength":2,"text":"Selecione a numeração...34/36384042444648+"}
+
+## 2026-09-02 18:19:34.489Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Próximo Passo"}
+
+## 2026-09-02 18:19:37.130Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-09-02 18:19:37.148Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:19:37.148Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:20:02.987Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-09-02 18:20:06.040Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Provador Virtual"}
+
+## 2026-09-02 18:20:06.063Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:20:06.064Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:20:09.238Z focus
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"","valueLength":0,"text":"Selecione a numeração...38 (PP)40 (P)42 (M)44 (G)46 (GG)48 (XG)50+"}
+
+## 2026-09-02 18:20:09.455Z click
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"","valueLength":0,"text":"Selecione a numeração...38 (PP)40 (P)42 (M)44 (G)46 (GG)48 (XG)50+"}
+
+## 2026-09-02 18:20:11.036Z change
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"44","valueLength":2,"text":"Selecione a numeração...38 (PP)40 (P)42 (M)44 (G)46 (GG)48 (XG)50+"}
+
+## 2026-09-02 18:20:11.043Z click
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"44","valueLength":2,"text":"Selecione a numeração...38 (PP)40 (P)42 (M)44 (G)46 (GG)48 (XG)50+"}
+
+## 2026-09-02 18:20:12.735Z blur
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"44","valueLength":2,"text":"Selecione a numeração...38 (PP)40 (P)42 (M)44 (G)46 (GG)48 (XG)50+"}
+
+## 2026-09-02 18:20:12.738Z focus
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"","valueLength":0,"text":"Selecione a numeração...34/36384042444648+"}
+
+## 2026-09-02 18:20:12.955Z click
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"","valueLength":0,"text":"Selecione a numeração...34/36384042444648+"}
+
+## 2026-09-02 18:20:17.202Z change
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"44","valueLength":2,"text":"Selecione a numeração...34/36384042444648+"}
+
+## 2026-09-02 18:20:17.212Z click
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"44","valueLength":2,"text":"Selecione a numeração...34/36384042444648+"}
+
+## 2026-09-02 18:20:18.815Z blur
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"44","valueLength":2,"text":"Selecione a numeração...34/36384042444648+"}
+
+## 2026-09-02 18:20:19.031Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Próximo Passo"}
+
+## 2026-09-02 18:20:21.195Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 65","label":"Ex: 65","value":"","valueLength":0,"text":""}
+
+## 2026-09-02 18:20:21.424Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 65","label":"Ex: 65","value":"","valueLength":0,"text":""}
+
+## 2026-09-02 18:20:23.732Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 65","label":"Ex: 65","value":"78","valueLength":2,"text":""}
+
+## 2026-09-02 18:20:23.732Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 65","label":"Ex: 65","value":"78","valueLength":2,"text":""}
+
+## 2026-09-02 18:20:23.734Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 165","label":"Ex: 165","value":"","valueLength":0,"text":""}
+
+## 2026-09-02 18:20:26.447Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 165","label":"Ex: 165","value":"170","valueLength":3,"text":""}
+
+## 2026-09-02 18:20:26.448Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 165","label":"Ex: 165","value":"170","valueLength":3,"text":""}
+
+## 2026-09-02 18:20:31.596Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Mais no Quadril"}
+
+## 2026-09-02 18:20:35.280Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Próximo Passo"}
+
+## 2026-09-02 18:20:50.135Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Descobrir Tamanho"}
+
+## 2026-09-02 18:21:02.033Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Continuar Comprando"}
+
+## 2026-09-02 18:21:02.067Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:21:02.067Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:28:21.844Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Provador Virtual"}
+
+## 2026-09-02 18:28:21.983Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:28:21.995Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:28:23.744Z focus
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"","valueLength":0,"text":"Selecione a numeração...38 (PP)40 (P)42 (M)44 (G)46 (GG)48 (XG)50+"}
+
+## 2026-09-02 18:28:23.986Z click
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"","valueLength":0,"text":"Selecione a numeração...38 (PP)40 (P)42 (M)44 (G)46 (GG)48 (XG)50+"}
+
+## 2026-09-02 18:28:25.652Z change
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"44","valueLength":2,"text":"Selecione a numeração...38 (PP)40 (P)42 (M)44 (G)46 (GG)48 (XG)50+"}
+
+## 2026-09-02 18:28:25.663Z click
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"44","valueLength":2,"text":"Selecione a numeração...38 (PP)40 (P)42 (M)44 (G)46 (GG)48 (XG)50+"}
+
+## 2026-09-02 18:28:27.906Z blur
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"44","valueLength":2,"text":"Selecione a numeração...38 (PP)40 (P)42 (M)44 (G)46 (GG)48 (XG)50+"}
+
+## 2026-09-02 18:28:27.909Z focus
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"","valueLength":0,"text":"Selecione a numeração...34/36384042444648+"}
+
+## 2026-09-02 18:28:28.128Z click
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"","valueLength":0,"text":"Selecione a numeração...34/36384042444648+"}
+
+## 2026-09-02 18:28:29.349Z change
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"44","valueLength":2,"text":"Selecione a numeração...34/36384042444648+"}
+
+## 2026-09-02 18:28:29.361Z click
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"44","valueLength":2,"text":"Selecione a numeração...34/36384042444648+"}
+
+## 2026-09-02 18:28:34.688Z blur
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"44","valueLength":2,"text":"Selecione a numeração...34/36384042444648+"}
+
+## 2026-09-02 18:28:34.911Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Próximo Passo"}
+
+## 2026-09-02 18:28:36.811Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 65","label":"Ex: 65","value":"","valueLength":0,"text":""}
+
+## 2026-09-02 18:28:37.020Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 65","label":"Ex: 65","value":"","valueLength":0,"text":""}
+
+## 2026-09-02 18:28:39.315Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-09-02 18:28:39.330Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:28:39.331Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:28:40.470Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Provador Virtual"}
+
+## 2026-09-02 18:28:40.479Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:28:40.480Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:28:42.157Z focus
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"","valueLength":0,"text":"Selecione a numeração...38 (PP)40 (P)42 (M)44 (G)46 (GG)48 (XG)50+"}
+
+## 2026-09-02 18:28:42.374Z click
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"","valueLength":0,"text":"Selecione a numeração...38 (PP)40 (P)42 (M)44 (G)46 (GG)48 (XG)50+"}
+
+## 2026-09-02 18:28:52.396Z change
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"40","valueLength":2,"text":"Selecione a numeração...38 (PP)40 (P)42 (M)44 (G)46 (GG)48 (XG)50+"}
+
+## 2026-09-02 18:28:52.404Z click
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"40","valueLength":2,"text":"Selecione a numeração...38 (PP)40 (P)42 (M)44 (G)46 (GG)48 (XG)50+"}
+
+## 2026-09-02 18:28:53.331Z blur
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"40","valueLength":2,"text":"Selecione a numeração...38 (PP)40 (P)42 (M)44 (G)46 (GG)48 (XG)50+"}
+
+## 2026-09-02 18:28:53.334Z focus
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"","valueLength":0,"text":"Selecione a numeração...34/36384042444648+"}
+
+## 2026-09-02 18:28:53.556Z click
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"","valueLength":0,"text":"Selecione a numeração...34/36384042444648+"}
+
+## 2026-09-02 18:29:00.670Z change
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"38","valueLength":2,"text":"Selecione a numeração...34/36384042444648+"}
+
+## 2026-09-02 18:29:00.686Z click
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"38","valueLength":2,"text":"Selecione a numeração...34/36384042444648+"}
+
+## 2026-09-02 18:29:01.694Z blur
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"38","valueLength":2,"text":"Selecione a numeração...34/36384042444648+"}
+
+## 2026-09-02 18:29:01.924Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Próximo Passo"}
+
+## 2026-09-02 18:29:03.674Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 65","label":"Ex: 65","value":"","valueLength":0,"text":""}
+
+## 2026-09-02 18:29:03.910Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 65","label":"Ex: 65","value":"","valueLength":0,"text":""}
+
+## 2026-09-02 18:29:06.987Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 65","label":"Ex: 65","value":"57","valueLength":2,"text":""}
+
+## 2026-09-02 18:29:06.989Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 65","label":"Ex: 65","value":"57","valueLength":2,"text":""}
+
+## 2026-09-02 18:29:06.994Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 165","label":"Ex: 165","value":"","valueLength":0,"text":""}
+
+## 2026-09-02 18:29:18.314Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 165","label":"Ex: 165","value":"154","valueLength":3,"text":""}
+
+## 2026-09-02 18:29:18.314Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 165","label":"Ex: 165","value":"154","valueLength":3,"text":""}
+
+## 2026-09-02 18:29:18.529Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Corpo Reto"}
+
+## 2026-09-02 18:29:19.719Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Próximo Passo"}
+
+## 2026-09-02 18:29:40.122Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Descobrir Tamanho"}
+
+## 2026-09-02 18:29:56.656Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-09-02 18:29:56.678Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:29:56.681Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:29:57.083Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:29:57.083Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:29:57.098Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:29:57.100Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:29:57.116Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:29:57.117Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:29:57.127Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:29:57.127Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:29:57.142Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:29:57.142Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:29:57.159Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:29:57.159Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:29:57.174Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:29:57.175Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:29:57.192Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:29:57.192Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:29:57.209Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:29:57.209Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:29:57.224Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:29:57.224Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:29:57.239Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:29:57.240Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:29:57.256Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:29:57.256Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:29:57.273Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:29:57.274Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:29:57.290Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:29:57.290Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:29:58.494Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:29:58.495Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:29:58.508Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:29:58.509Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:29:58.523Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:29:58.523Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:29:58.539Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:29:58.539Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:29:58.560Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:29:58.561Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:29:58.575Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:29:58.576Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:29:58.590Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:29:58.590Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:29:58.607Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:29:58.607Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:29:58.624Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:29:58.625Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:29:58.640Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:29:58.640Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:29:58.658Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:29:58.658Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:29:58.673Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:29:58.674Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:29:58.690Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:29:58.691Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:29:58.707Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:29:58.707Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:29:58.725Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:29:58.725Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:29:58.741Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:29:58.741Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:29:58.756Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:29:58.756Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:29:58.773Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:29:58.773Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:29:58.790Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:29:58.791Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:29:58.806Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:29:58.806Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:29:58.823Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:29:58.824Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:29:58.839Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:29:58.839Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:29:58.858Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:29:58.858Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:29:58.872Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:29:58.873Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:29:58.889Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:29:58.889Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:29:58.906Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:29:58.907Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:29:58.937Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:29:58.937Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:29:58.986Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:29:58.986Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:29:59.006Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:29:59.006Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:29:59.040Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:29:59.040Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:29:59.054Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:29:59.054Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:29:59.075Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:29:59.075Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:29:59.091Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:29:59.091Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:29:59.105Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:29:59.105Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:29:59.122Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:29:59.122Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:29:59.139Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:29:59.139Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:29:59.156Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:29:59.156Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:29:59.173Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:29:59.173Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:29:59.189Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:29:59.189Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:29:59.257Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:29:59.257Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:30:00.410Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:30:00.410Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:30:00.428Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:30:00.429Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:30:00.445Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:30:00.445Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:30:00.460Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:30:00.460Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:34:16.785Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Provador Virtual"}
+
+## 2026-09-02 18:34:16.853Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:34:16.860Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:34:20.905Z focus
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"","valueLength":0,"text":"Selecione a numeração...38 (PP)40 (P)42 (M)44 (G)46 (GG)48 (XG)50+"}
+
+## 2026-09-02 18:34:21.133Z click
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"","valueLength":0,"text":"Selecione a numeração...38 (PP)40 (P)42 (M)44 (G)46 (GG)48 (XG)50+"}
+
+## 2026-09-02 18:34:22.463Z change
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"40","valueLength":2,"text":"Selecione a numeração...38 (PP)40 (P)42 (M)44 (G)46 (GG)48 (XG)50+"}
+
+## 2026-09-02 18:34:22.477Z click
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"40","valueLength":2,"text":"Selecione a numeração...38 (PP)40 (P)42 (M)44 (G)46 (GG)48 (XG)50+"}
+
+## 2026-09-02 18:34:25.178Z blur
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"40","valueLength":2,"text":"Selecione a numeração...38 (PP)40 (P)42 (M)44 (G)46 (GG)48 (XG)50+"}
+
+## 2026-09-02 18:34:25.396Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-09-02 18:34:25.405Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:34:25.406Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:34:28.401Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Provador Virtual"}
+
+## 2026-09-02 18:34:28.410Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:34:28.410Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:34:29.397Z focus
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"","valueLength":0,"text":"Selecione a numeração...38 (PP)40 (P)42 (M)44 (G)46 (GG)48 (XG)50+"}
+
+## 2026-09-02 18:34:29.627Z click
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"","valueLength":0,"text":"Selecione a numeração...38 (PP)40 (P)42 (M)44 (G)46 (GG)48 (XG)50+"}
+
+## 2026-09-02 18:34:30.768Z change
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"38","valueLength":2,"text":"Selecione a numeração...38 (PP)40 (P)42 (M)44 (G)46 (GG)48 (XG)50+"}
+
+## 2026-09-02 18:34:30.775Z click
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"38","valueLength":2,"text":"Selecione a numeração...38 (PP)40 (P)42 (M)44 (G)46 (GG)48 (XG)50+"}
+
+## 2026-09-02 18:34:37.078Z blur
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"38","valueLength":2,"text":"Selecione a numeração...38 (PP)40 (P)42 (M)44 (G)46 (GG)48 (XG)50+"}
+
+## 2026-09-02 18:34:37.079Z focus
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"","valueLength":0,"text":"Selecione a numeração...34/36384042444648+"}
+
+## 2026-09-02 18:34:37.294Z click
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"","valueLength":0,"text":"Selecione a numeração...34/36384042444648+"}
+
+## 2026-09-02 18:34:38.698Z change
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"40","valueLength":2,"text":"Selecione a numeração...34/36384042444648+"}
+
+## 2026-09-02 18:34:38.708Z click
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"40","valueLength":2,"text":"Selecione a numeração...34/36384042444648+"}
+
+## 2026-09-02 18:34:51.428Z blur
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"40","valueLength":2,"text":"Selecione a numeração...34/36384042444648+"}
+
+## 2026-09-02 18:34:51.643Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-09-02 18:34:51.659Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:34:51.660Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:39:59.463Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Tabela de Medidas"}
+
+## 2026-09-02 18:40:01.993Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Close"}
+
+## 2026-09-02 18:40:03.120Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Provador Virtual"}
+
+## 2026-09-02 18:40:03.187Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:40:03.192Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 18:40:06.679Z focus
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"","valueLength":0,"text":"Selecione a numeração...38 (PP)40 (P)42 (M)44 (G)46 (GG)48 (XG)50+"}
+
+## 2026-09-02 18:40:06.911Z click
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"","valueLength":0,"text":"Selecione a numeração...38 (PP)40 (P)42 (M)44 (G)46 (GG)48 (XG)50+"}
+
+## 2026-09-02 18:40:07.632Z click
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"","valueLength":0,"text":"Selecione a numeração...38 (PP)40 (P)42 (M)44 (G)46 (GG)48 (XG)50+"}
+
+## 2026-09-02 18:40:08.547Z focus
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"","valueLength":0,"text":"Selecione a numeração...34/36384042444648+"}
+
+## 2026-09-02 18:40:08.777Z click
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"","valueLength":0,"text":"Selecione a numeração...34/36384042444648+"}
+
+## 2026-09-02 18:40:09.604Z click
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"","valueLength":0,"text":"Selecione a numeração...34/36384042444648+"}
+
+## 2026-09-02 18:40:11.619Z click
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"","valueLength":0,"text":"Selecione a numeração...34/36384042444648+"}
+
+## 2026-09-02 18:40:12.673Z change
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"34","valueLength":2,"text":"Selecione a numeração...34/36384042444648+"}
+
+## 2026-09-02 18:40:12.689Z click
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"34","valueLength":2,"text":"Selecione a numeração...34/36384042444648+"}
+
+## 2026-09-02 18:40:13.353Z blur
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"34","valueLength":2,"text":"Selecione a numeração...34/36384042444648+"}
+
+## 2026-09-02 18:40:13.357Z focus
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"","valueLength":0,"text":"Selecione a numeração...38 (PP)40 (P)42 (M)44 (G)46 (GG)48 (XG)50+"}
+
+## 2026-09-02 18:40:13.577Z click
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"","valueLength":0,"text":"Selecione a numeração...38 (PP)40 (P)42 (M)44 (G)46 (GG)48 (XG)50+"}
+
+## 2026-09-02 18:40:14.529Z change
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"40","valueLength":2,"text":"Selecione a numeração...38 (PP)40 (P)42 (M)44 (G)46 (GG)48 (XG)50+"}
+
+## 2026-09-02 18:40:14.542Z click
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"40","valueLength":2,"text":"Selecione a numeração...38 (PP)40 (P)42 (M)44 (G)46 (GG)48 (XG)50+"}
+
+## 2026-09-02 18:40:15.377Z blur
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"40","valueLength":2,"text":"Selecione a numeração...38 (PP)40 (P)42 (M)44 (G)46 (GG)48 (XG)50+"}
+
+## 2026-09-02 18:40:15.603Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Próximo Passo"}
+
+## 2026-09-02 18:40:30.979Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
