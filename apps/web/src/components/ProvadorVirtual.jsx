@@ -6,26 +6,24 @@ export default function ProvadorVirtual({ isOpen, onClose, productName, category
   const [step, setStep] = useState(1);
   const [isCalculating, setIsCalculating] = useState(false);
   
-  // Form Data
   const [formData, setFormData] = useState({
     sutia: '',
     jeans: '',
     altura: '',
     peso: '',
-    formatoCorpo: '',
+    formatoCorpo: 'proporcional',
     caimento: 'normal'
   });
 
   const [resultado, setResultado] = useState(null);
 
-  // Reseta ao abrir/fechar
   useEffect(() => {
     if (isOpen) {
       setStep(1);
       setResultado(null);
       setIsCalculating(false);
       setFormData({
-        sutia: '', jeans: '', altura: '', peso: '', formatoCorpo: '', caimento: 'normal'
+        sutia: '', jeans: '', altura: '', peso: '', formatoCorpo: 'proporcional', caimento: 'normal'
       });
     }
   }, [isOpen]);
@@ -33,15 +31,12 @@ export default function ProvadorVirtual({ isOpen, onClose, productName, category
   const handleNext = () => setStep(prev => prev + 1);
   const handlePrev = () => setStep(prev => prev - 1);
 
-  // Lógica de Cálculo Híbrida (Tamanhos de marca + IMC simplificado)
   const calculateSize = () => {
     setIsCalculating(true);
-    setStep(4); // Tela de loading
+    setStep(4);
 
     setTimeout(() => {
-      let score = 0; // P=1, M=2, G=3, GG=4
-      
-      // Peso do Sutiã (Top)
+      let score = 0;
       const s = parseInt(formData.sutia);
       if (s <= 40) score += 1;
       else if (s <= 42) score += 2;
@@ -50,36 +45,28 @@ export default function ProvadorVirtual({ isOpen, onClose, productName, category
       else if (s <= 48) score += 3.5;
       else score += 4;
 
-      // Peso do Jeans (Bottom)
       const j = parseInt(formData.jeans);
       if (j <= 36) score += 1;
       else if (j <= 40) score += 2;
       else if (j <= 44) score += 3;
       else score += 4;
 
-      // Média base
       let finalScore = score / 2;
 
-      // Ajuste por IMC (se preenchido)
       if (formData.peso && formData.altura) {
         const peso = parseFloat(formData.peso);
-        const altura = parseFloat(formData.altura) / 100; // cm para m
+        const altura = parseFloat(formData.altura) / 100;
         const imc = peso / (altura * altura);
-        
         if (imc < 18.5) finalScore -= 0.5;
         else if (imc > 25 && imc < 30) finalScore += 0.5;
         else if (imc >= 30) finalScore += 1;
       }
 
-      // Ajuste por formato de corpo (Heurística focada em Lingerie)
-      if (formData.formatoCorpo === 'pera') finalScore += 0.2; // Geralmente quadril maior exige tamanho ligeiramente maior
+      if (formData.formatoCorpo === 'pera') finalScore += 0.2;
       if (formData.formatoCorpo === 'triangulo_invertido') finalScore -= 0.1; 
-
-      // Ajuste de caimento
       if (formData.caimento === 'solto') finalScore += 0.4;
       if (formData.caimento === 'justo') finalScore -= 0.3;
 
-      // Arredondamento e mapeamento
       let sizeStr = 'M';
       let descricao = 'Este tamanho vai vestir perfeitamente, proporcionando sustentação e conforto sem apertar.';
       
@@ -99,304 +86,305 @@ export default function ProvadorVirtual({ isOpen, onClose, productName, category
 
       setResultado({ tamanho: sizeStr, descricao });
       setIsCalculating(false);
-      setStep(5); // Tela de resultado
-    }, 2000); // 2 segundos de loading para sensação de processamento
+      setStep(5);
+    }, 2500);
   };
+
+  // Cálculos dinâmicos para a largura das linhas guia da modelo
+  const bustWidth = formData.sutia ? 30 + ((parseInt(formData.sutia) - 38) * 3) : 35; // base 35%, cresce com numeração
+  const hipWidth = formData.jeans ? 35 + ((parseInt(formData.jeans) - 34) * 3.5) : 40; // base 40%, cresce com numeração
+
+  // Cálculo de opacidade/destaque dependendo do passo atual
+  const isBustActive = step === 1 && formData.sutia !== '';
+  const isHipActive = step === 1 && formData.jeans !== '';
 
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
-      {/* Backdrop overlay */}
+    <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         onClick={onClose}
-        className="absolute inset-0 bg-black/60 backdrop-blur-sm"
+        className="absolute inset-0 bg-black/70 backdrop-blur-sm"
       />
 
-      {/* Modal Container */}
       <motion.div
         initial={{ opacity: 0, scale: 0.95, y: 20 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
         exit={{ opacity: 0, scale: 0.95, y: 20 }}
-        className="relative w-full max-w-lg bg-white rounded-[2rem] shadow-2xl overflow-hidden flex flex-col"
+        className="relative w-full max-w-5xl bg-white rounded-[2rem] shadow-2xl overflow-hidden flex flex-col md:flex-row min-h-[600px] max-h-[90vh]"
       >
-        {/* Header */}
-        <div className="flex items-center justify-between p-6 border-b border-gray-100">
-          <div className="flex items-center gap-2 text-[#c59b5f]">
-            <Ruler className="w-5 h-5" />
-            <h2 className="text-xl font-serif font-bold text-gray-900">Provador Virtual</h2>
+        <button
+          onClick={onClose}
+          className="absolute top-4 right-4 z-10 p-2 text-gray-400 hover:text-gray-900 bg-white/80 backdrop-blur-md hover:bg-white rounded-full transition-colors shadow-sm"
+        >
+          <X className="w-5 h-5" />
+        </button>
+
+        {/* Lado Esquerdo: Modelo e Transformação Visual */}
+        <div className="hidden md:block w-[45%] relative bg-[#f4ece1] overflow-hidden border-r border-[#c59b5f]/20">
+          {/* Fundo dinâmico simulando a IA processando */}
+          <motion.div 
+            animate={{ opacity: step === 4 ? 0.8 : 0 }}
+            className="absolute inset-0 bg-gradient-to-t from-[#c59b5f]/40 to-transparent z-10 mix-blend-multiply transition-opacity duration-1000"
+          />
+
+          {/* Imagem da Modelo (Lia) */}
+          {/* Usaremos a imagem enviada por você. Nome sugerido: lia-provador.jpg na pasta public */}
+          <div className="absolute inset-0 bg-[url('/lia-provador.jpg')] bg-cover bg-center transition-all duration-1000">
+            {/* Fallback de cor caso a imagem não exista ainda */}
+            <div className="absolute inset-0 bg-[#f4ece1]/30 mix-blend-overlay"></div>
           </div>
-          <button
-            onClick={onClose}
-            className="p-2 text-gray-400 hover:text-gray-600 hover:bg-gray-100 rounded-full transition-colors"
-          >
-            <X className="w-5 h-5" />
-          </button>
+
+          {/* Elementos Interativos (Linhas de Medida como no seu print) */}
+          <div className="absolute inset-0 z-20 pointer-events-none">
+            
+            {/* Linha Busto */}
+            <div className="absolute top-[38%] left-1/2 -translate-x-1/2 flex items-center justify-center w-full transition-all duration-500">
+              <motion.div 
+                animate={{ width: `${bustWidth}%` }}
+                transition={{ type: "spring", stiffness: 100, damping: 15 }}
+                className={`relative border-t-2 border-dashed ${isBustActive || step === 4 ? 'border-[#c59b5f] shadow-[0_0_10px_rgba(197,155,95,0.5)]' : 'border-white/50'}`}
+              >
+                <div className={`absolute -left-8 -top-3 w-6 h-6 rounded-full flex items-center justify-center text-[10px] font-bold ${isBustActive || step === 4 ? 'bg-[#c59b5f] text-white shadow-lg' : 'bg-white/80 text-gray-500'}`}>1</div>
+                <div className={`absolute -right-2 -top-1 w-2 h-2 rounded-full ${isBustActive || step === 4 ? 'bg-[#c59b5f]' : 'bg-white/50'}`}></div>
+                <div className={`absolute -left-2 -top-1 w-2 h-2 rounded-full ${isBustActive || step === 4 ? 'bg-[#c59b5f]' : 'bg-white/50'}`}></div>
+              </motion.div>
+            </div>
+
+            {/* Linha Cintura */}
+            <div className="absolute top-[55%] left-1/2 -translate-x-1/2 flex items-center justify-center w-full transition-all duration-500">
+              <motion.div 
+                animate={{ width: `${Math.max(25, hipWidth - 15)}%` }} // Cintura acompanha o quadril de forma menor
+                transition={{ type: "spring", stiffness: 100, damping: 15 }}
+                className={`relative border-t-2 border-dashed ${isHipActive || step === 4 ? 'border-[#c59b5f] shadow-[0_0_10px_rgba(197,155,95,0.5)]' : 'border-white/50'}`}
+              >
+                <div className={`absolute -left-8 -top-3 w-6 h-6 rounded-full flex items-center justify-center text-[10px] font-bold ${isHipActive || step === 4 ? 'bg-[#c59b5f] text-white shadow-lg' : 'bg-white/80 text-gray-500'}`}>2</div>
+                <div className={`absolute -right-2 -top-1 w-2 h-2 rounded-full ${isHipActive || step === 4 ? 'bg-[#c59b5f]' : 'bg-white/50'}`}></div>
+                <div className={`absolute -left-2 -top-1 w-2 h-2 rounded-full ${isHipActive || step === 4 ? 'bg-[#c59b5f]' : 'bg-white/50'}`}></div>
+              </motion.div>
+            </div>
+
+            {/* Linha Quadril */}
+            <div className="absolute top-[72%] left-1/2 -translate-x-1/2 flex items-center justify-center w-full transition-all duration-500">
+              <motion.div 
+                animate={{ width: `${hipWidth}%` }}
+                transition={{ type: "spring", stiffness: 100, damping: 15 }}
+                className={`relative border-t-2 border-dashed ${isHipActive || step === 4 ? 'border-[#c59b5f] shadow-[0_0_10px_rgba(197,155,95,0.5)]' : 'border-white/50'}`}
+              >
+                <div className={`absolute -left-8 -top-3 w-6 h-6 rounded-full flex items-center justify-center text-[10px] font-bold ${isHipActive || step === 4 ? 'bg-[#c59b5f] text-white shadow-lg' : 'bg-white/80 text-gray-500'}`}>3</div>
+                <div className={`absolute -right-2 -top-1 w-2 h-2 rounded-full ${isHipActive || step === 4 ? 'bg-[#c59b5f]' : 'bg-white/50'}`}></div>
+                <div className={`absolute -left-2 -top-1 w-2 h-2 rounded-full ${isHipActive || step === 4 ? 'bg-[#c59b5f]' : 'bg-white/50'}`}></div>
+              </motion.div>
+            </div>
+
+            {/* Scanning Laser (Aparece no processamento) */}
+            <AnimatePresence>
+              {step === 4 && (
+                <motion.div
+                  initial={{ top: '20%', opacity: 0 }}
+                  animate={{ top: ['20%', '80%', '20%'], opacity: [0, 1, 1, 0] }}
+                  transition={{ duration: 2.5, ease: "linear" }}
+                  className="absolute left-0 w-full h-[2px] bg-[#c59b5f] shadow-[0_0_15px_#c59b5f]"
+                />
+              )}
+            </AnimatePresence>
+          </div>
         </div>
 
-        {/* Content Area */}
-        <div className="p-6 sm:p-8 min-h-[360px] flex flex-col justify-center">
-          <AnimatePresence mode="wait">
-            
-            {/* STEP 1: Medidas Conhecidas (Sutiã e Jeans) */}
-            {step === 1 && (
-              <motion.div
-                key="step1"
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -20 }}
-                className="space-y-6"
-              >
-                <div className="text-center mb-6">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">O que você já usa?</h3>
-                  <p className="text-gray-500 text-sm">Essa é a forma mais precisa de encontrarmos o seu caimento perfeito na Avante.</p>
-                </div>
+        {/* Lado Direito: Formulário */}
+        <div className="w-full md:w-[55%] flex flex-col justify-between p-6 sm:p-10 md:p-12 overflow-y-auto relative bg-white">
+          
+          <div className="mb-8">
+            <h2 className="text-2xl md:text-3xl font-serif font-bold text-gray-900 mb-2">Descubra seu tamanho</h2>
+            <p className="text-gray-500 text-sm">Personalizado por Inteligência Artificial</p>
+          </div>
 
-                <div className="space-y-4">
-                  <div>
-                    <label className="block text-sm font-bold text-gray-700 mb-2">Tamanho de Sutiã (Numeração)</label>
-                    <select
-                      className="w-full bg-gray-50 border border-gray-200 text-gray-900 text-base rounded-xl focus:ring-[#c59b5f] focus:border-[#c59b5f] block p-3.5 transition-colors"
-                      value={formData.sutia}
-                      onChange={(e) => setFormData({ ...formData, sutia: e.target.value })}
-                    >
-                      <option value="">Selecione...</option>
-                      <option value="38">38 (PP)</option>
-                      <option value="40">40 (P)</option>
-                      <option value="42">42 (M)</option>
-                      <option value="44">44 (G)</option>
-                      <option value="46">46 (GG)</option>
-                      <option value="48">48 (XG)</option>
-                      <option value="50">50+</option>
-                    </select>
+          <div className="flex-1">
+            <AnimatePresence mode="wait">
+              
+              {/* STEP 1: Sutiã e Jeans */}
+              {step === 1 && (
+                <motion.div key="step1" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} className="space-y-6">
+                  <div className="space-y-5">
+                    <div>
+                      <label className="block text-sm font-bold text-gray-700 mb-2">Tamanho de Sutiã</label>
+                      <select
+                        className="w-full bg-gray-50 border border-gray-200 text-gray-900 text-base rounded-xl focus:ring-[#c59b5f] focus:border-[#c59b5f] block p-4 transition-colors shadow-sm"
+                        value={formData.sutia}
+                        onChange={(e) => setFormData({ ...formData, sutia: e.target.value })}
+                      >
+                        <option value="">Selecione a numeração...</option>
+                        <option value="38">38 (PP)</option>
+                        <option value="40">40 (P)</option>
+                        <option value="42">42 (M)</option>
+                        <option value="44">44 (G)</option>
+                        <option value="46">46 (GG)</option>
+                        <option value="48">48 (XG)</option>
+                        <option value="50">50+</option>
+                      </select>
+                    </div>
+                    <div>
+                      <label className="block text-sm font-bold text-gray-700 mb-2">Tamanho de Calça Jeans</label>
+                      <select
+                        className="w-full bg-gray-50 border border-gray-200 text-gray-900 text-base rounded-xl focus:ring-[#c59b5f] focus:border-[#c59b5f] block p-4 transition-colors shadow-sm"
+                        value={formData.jeans}
+                        onChange={(e) => setFormData({ ...formData, jeans: e.target.value })}
+                      >
+                        <option value="">Selecione a numeração...</option>
+                        <option value="34">34/36</option>
+                        <option value="38">38</option>
+                        <option value="40">40</option>
+                        <option value="42">42</option>
+                        <option value="44">44</option>
+                        <option value="46">46</option>
+                        <option value="48">48+</option>
+                      </select>
+                    </div>
                   </div>
-                  <div>
-                    <label className="block text-sm font-bold text-gray-700 mb-2">Tamanho de Calça Jeans</label>
-                    <select
-                      className="w-full bg-gray-50 border border-gray-200 text-gray-900 text-base rounded-xl focus:ring-[#c59b5f] focus:border-[#c59b5f] block p-3.5 transition-colors"
-                      value={formData.jeans}
-                      onChange={(e) => setFormData({ ...formData, jeans: e.target.value })}
-                    >
-                      <option value="">Selecione...</option>
-                      <option value="34">34/36</option>
-                      <option value="38">38</option>
-                      <option value="40">40</option>
-                      <option value="42">42</option>
-                      <option value="44">44</option>
-                      <option value="46">46</option>
-                      <option value="48">48+</option>
-                    </select>
+
+                  <button
+                    onClick={handleNext}
+                    disabled={!formData.sutia || !formData.jeans}
+                    className="w-full bg-[#111] hover:bg-[#c59b5f] text-white font-bold py-4 rounded-xl transition-all duration-300 shadow-md mt-6 disabled:opacity-50 disabled:cursor-not-allowed"
+                  >
+                    Próximo Passo
+                  </button>
+                </motion.div>
+              )}
+
+              {/* STEP 2: Biotipo */}
+              {step === 2 && (
+                <motion.div key="step2" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} className="space-y-6">
+                  <div className="grid grid-cols-2 gap-4">
+                    <div>
+                      <label className="block text-sm font-bold text-gray-700 mb-2">Peso (kg)</label>
+                      <input type="number" placeholder="Ex: 65" className="w-full bg-gray-50 border border-gray-200 p-4 rounded-xl focus:ring-[#c59b5f] focus:border-[#c59b5f] shadow-sm" value={formData.peso} onChange={(e) => setFormData({ ...formData, peso: e.target.value })} />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-bold text-gray-700 mb-2">Altura (cm)</label>
+                      <input type="number" placeholder="Ex: 165" className="w-full bg-gray-50 border border-gray-200 p-4 rounded-xl focus:ring-[#c59b5f] focus:border-[#c59b5f] shadow-sm" value={formData.altura} onChange={(e) => setFormData({ ...formData, altura: e.target.value })} />
+                    </div>
                   </div>
-                </div>
 
-                <button
-                  onClick={handleNext}
-                  disabled={!formData.sutia || !formData.jeans}
-                  className="w-full bg-[#111] hover:bg-[#c59b5f] text-white font-bold py-4 rounded-xl transition-colors duration-300 flex items-center justify-center gap-2 mt-4 disabled:opacity-50 disabled:cursor-not-allowed"
-                >
-                  Próximo <ArrowRight className="w-4 h-4" />
-                </button>
-              </motion.div>
-            )}
-
-            {/* STEP 2: Biotipo (Peso/Altura e Formato) */}
-            {step === 2 && (
-              <motion.div
-                key="step2"
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -20 }}
-                className="space-y-6"
-              >
-                <div className="text-center mb-6">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">Ajuste de Biotipo</h3>
-                  <p className="text-gray-500 text-sm">Para refinar ainda mais a recomendação (Opcional).</p>
-                </div>
-
-                <div className="grid grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-sm font-bold text-gray-700 mb-2">Peso (kg)</label>
-                    <input
-                      type="number"
-                      placeholder="Ex: 65"
-                      className="w-full bg-gray-50 border border-gray-200 text-gray-900 text-base rounded-xl focus:ring-[#c59b5f] focus:border-[#c59b5f] block p-3.5 transition-colors"
-                      value={formData.peso}
-                      onChange={(e) => setFormData({ ...formData, peso: e.target.value })}
-                    />
+                    <label className="block text-sm font-bold text-gray-700 mb-3">Distribuição do Corpo (Opcional)</label>
+                    <div className="grid grid-cols-2 gap-3">
+                      {[
+                        { id: 'proporcional', label: 'Proporcional' }, 
+                        { id: 'pera', label: 'Mais no Quadril' }, 
+                        { id: 'triangulo_invertido', label: 'Mais no Busto' }, 
+                        { id: 'reto', label: 'Corpo Reto' }
+                      ].map((tipo) => (
+                        <button
+                          key={tipo.id}
+                          onClick={() => setFormData({ ...formData, formatoCorpo: tipo.id })}
+                          className={`p-3 rounded-xl border text-sm font-medium transition-all ${
+                            formData.formatoCorpo === tipo.id 
+                            ? 'border-[#c59b5f] bg-[#c59b5f]/10 text-[#c59b5f] shadow-inner' 
+                            : 'border-gray-200 hover:border-gray-300 text-gray-600 shadow-sm'
+                          }`}
+                        >
+                          {tipo.label}
+                        </button>
+                      ))}
+                    </div>
                   </div>
-                  <div>
-                    <label className="block text-sm font-bold text-gray-700 mb-2">Altura (cm)</label>
-                    <input
-                      type="number"
-                      placeholder="Ex: 165"
-                      className="w-full bg-gray-50 border border-gray-200 text-gray-900 text-base rounded-xl focus:ring-[#c59b5f] focus:border-[#c59b5f] block p-3.5 transition-colors"
-                      value={formData.altura}
-                      onChange={(e) => setFormData({ ...formData, altura: e.target.value })}
-                    />
-                  </div>
-                </div>
 
-                <div>
-                  <label className="block text-sm font-bold text-gray-700 mb-3">Como seu peso se distribui?</label>
-                  <div className="grid grid-cols-2 gap-3">
-                    {['Proporcional', 'Mais no Quadril (Pêra)', 'Mais no Busto', 'Corpo Reto'].map((tipo) => (
+                  <div className="flex gap-3 pt-4">
+                    <button onClick={handlePrev} className="px-6 py-4 rounded-xl border border-gray-200 font-bold text-gray-600 hover:bg-gray-50 shadow-sm"><ChevronLeft className="w-5 h-5" /></button>
+                    <button onClick={handleNext} className="flex-1 bg-[#111] hover:bg-[#c59b5f] text-white font-bold py-4 rounded-xl transition-all shadow-md">Próximo Passo</button>
+                  </div>
+                </motion.div>
+              )}
+
+              {/* STEP 3: Caimento */}
+              {step === 3 && (
+                <motion.div key="step3" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} className="space-y-6">
+                  <label className="block text-sm font-bold text-gray-700 mb-2">Como você prefere o caimento?</label>
+                  <div className="space-y-3">
+                    {[
+                      { id: 'justo', label: 'Mais Justinho', desc: 'Firme no corpo, modelagem abraçada' },
+                      { id: 'normal', label: 'Caimento Ideal', desc: 'Confortável, sem apertar e sem sobrar' },
+                      { id: 'solto', label: 'Mais Soltinho', desc: 'Prioridade para mobilidade e fluidez' }
+                    ].map((opcao) => (
                       <button
-                        key={tipo}
-                        onClick={() => setFormData({ ...formData, formatoCorpo: tipo })}
-                        className={`p-3 rounded-xl border text-sm font-medium transition-all ${
-                          formData.formatoCorpo === tipo 
-                          ? 'border-[#c59b5f] bg-[#c59b5f]/10 text-[#c59b5f]' 
-                          : 'border-gray-200 hover:border-gray-300 text-gray-600'
+                        key={opcao.id}
+                        onClick={() => setFormData({ ...formData, caimento: opcao.id })}
+                        className={`w-full text-left p-4 rounded-xl border-2 transition-all flex items-center justify-between shadow-sm ${
+                          formData.caimento === opcao.id ? 'border-[#c59b5f] bg-[#c59b5f]/5' : 'border-transparent bg-gray-50 hover:bg-gray-100'
                         }`}
                       >
-                        {tipo}
+                        <div>
+                          <div className={`font-bold ${formData.caimento === opcao.id ? 'text-[#c59b5f]' : 'text-gray-900'}`}>{opcao.label}</div>
+                          <div className="text-xs text-gray-500 mt-1">{opcao.desc}</div>
+                        </div>
+                        {formData.caimento === opcao.id && <CheckCircle2 className="w-5 h-5 text-[#c59b5f]" />}
                       </button>
                     ))}
                   </div>
-                </div>
 
-                <div className="flex gap-3 pt-2">
-                  <button onClick={handlePrev} className="px-6 py-4 rounded-xl border border-gray-200 font-bold text-gray-600 hover:bg-gray-50 transition-colors">
-                    <ChevronLeft className="w-5 h-5" />
-                  </button>
-                  <button
-                    onClick={handleNext}
-                    className="flex-1 bg-[#111] hover:bg-[#c59b5f] text-white font-bold py-4 rounded-xl transition-colors duration-300 flex items-center justify-center gap-2"
-                  >
-                    Próximo <ArrowRight className="w-4 h-4" />
-                  </button>
-                </div>
-              </motion.div>
-            )}
-
-            {/* STEP 3: Preferência de Caimento */}
-            {step === 3 && (
-              <motion.div
-                key="step3"
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -20 }}
-                className="space-y-6"
-              >
-                <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">Como você prefere?</h3>
-                  <p className="text-gray-500 text-sm">O ajuste final para o caimento do seu gosto.</p>
-                </div>
-
-                <div className="space-y-3">
-                  {[
-                    { id: 'justo', label: 'Mais Justinho', desc: 'Firme no corpo, modelagem abraçada' },
-                    { id: 'normal', label: 'Caimento Ideal', desc: 'Confortável, sem apertar e sem sobrar' },
-                    { id: 'solto', label: 'Mais Soltinho', desc: 'Prioridade total para mobilidade e conforto' }
-                  ].map((opcao) => (
-                    <button
-                      key={opcao.id}
-                      onClick={() => setFormData({ ...formData, caimento: opcao.id })}
-                      className={`w-full text-left p-4 rounded-xl border-2 transition-all flex items-center justify-between ${
-                        formData.caimento === opcao.id 
-                        ? 'border-[#c59b5f] bg-[#c59b5f]/5' 
-                        : 'border-transparent bg-gray-50 hover:bg-gray-100'
-                      }`}
-                    >
-                      <div>
-                        <div className={`font-bold ${formData.caimento === opcao.id ? 'text-[#c59b5f]' : 'text-gray-900'}`}>{opcao.label}</div>
-                        <div className="text-xs text-gray-500 mt-0.5">{opcao.desc}</div>
-                      </div>
-                      {formData.caimento === opcao.id && <CheckCircle2 className="w-5 h-5 text-[#c59b5f]" />}
+                  <div className="flex gap-3 pt-6">
+                    <button onClick={handlePrev} className="px-6 py-4 rounded-xl border border-gray-200 font-bold text-gray-600 hover:bg-gray-50 shadow-sm"><ChevronLeft className="w-5 h-5" /></button>
+                    <button onClick={calculateSize} className="flex-1 bg-gradient-to-r from-[#c59b5f] to-[#e5c595] hover:opacity-90 text-black font-bold py-4 rounded-xl shadow-lg shadow-[#c59b5f]/20">
+                      Descobrir Tamanho
                     </button>
-                  ))}
-                </div>
-
-                <div className="flex gap-3 pt-6">
-                  <button onClick={handlePrev} className="px-6 py-4 rounded-xl border border-gray-200 font-bold text-gray-600 hover:bg-gray-50 transition-colors">
-                    <ChevronLeft className="w-5 h-5" />
-                  </button>
-                  <button
-                    onClick={calculateSize}
-                    className="flex-1 bg-gradient-to-r from-[#c59b5f] to-[#e5c595] hover:opacity-90 text-black font-bold py-4 rounded-xl transition-opacity shadow-lg shadow-[#c59b5f]/20 flex items-center justify-center gap-2"
-                  >
-                    Descobrir Meu Tamanho
-                  </button>
-                </div>
-              </motion.div>
-            )}
-
-            {/* STEP 4: Calculando (Loading Inteligente) */}
-            {step === 4 && (
-              <motion.div
-                key="step4"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                className="flex flex-col items-center justify-center py-12 space-y-6"
-              >
-                <div className="relative">
-                  <div className="w-20 h-20 border-4 border-gray-100 rounded-full"></div>
-                  <div className="w-20 h-20 border-4 border-[#c59b5f] rounded-full border-t-transparent animate-spin absolute top-0 left-0"></div>
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <Activity className="w-8 h-8 text-[#c59b5f] animate-pulse" />
                   </div>
-                </div>
-                <div className="text-center">
-                  <h3 className="text-xl font-bold text-gray-900 mb-1">Processando medidas...</h3>
-                  <p className="text-sm text-gray-500">Cruzando seus dados com a modelagem Avante</p>
-                </div>
-              </motion.div>
-            )}
+                </motion.div>
+              )}
 
-            {/* STEP 5: Resultado */}
-            {step === 5 && resultado && (
-              <motion.div
-                key="step5"
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                className="flex flex-col items-center text-center space-y-6 py-4"
-              >
-                <div className="w-24 h-24 bg-gradient-to-br from-[#c59b5f] to-[#e5c595] rounded-full flex items-center justify-center shadow-xl shadow-[#c59b5f]/30 mb-2 relative">
-                  <div className="absolute inset-2 border-2 border-white/30 rounded-full border-dashed animate-spin-slow"></div>
-                  <span className="text-4xl font-black text-black tracking-tighter">{resultado.tamanho}</span>
-                </div>
-                
-                <div>
-                  <h3 className="text-3xl font-serif font-bold text-gray-900 mb-3">Tamanho Ideal: {resultado.tamanho}</h3>
-                  <p className="text-base text-gray-600 leading-relaxed max-w-sm mx-auto">
-                    {resultado.descricao}
-                  </p>
-                </div>
+              {/* STEP 4: Calculando */}
+              {step === 4 && (
+                <motion.div key="step4" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="flex flex-col items-center justify-center py-12 space-y-6">
+                  <div className="relative">
+                    <div className="w-24 h-24 border-4 border-gray-100 rounded-full"></div>
+                    <div className="w-24 h-24 border-4 border-[#c59b5f] rounded-full border-t-transparent animate-spin absolute top-0 left-0"></div>
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <Activity className="w-10 h-10 text-[#c59b5f] animate-pulse" />
+                    </div>
+                  </div>
+                  <div className="text-center">
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">Mapeando biotipo...</h3>
+                    <p className="text-sm text-gray-500">Cruzando suas medidas com a modelagem de alta costura da Avante.</p>
+                  </div>
+                </motion.div>
+              )}
 
-                <div className="bg-gray-50 border border-gray-100 rounded-2xl p-4 w-full mt-4 flex items-start gap-3 text-left">
-                  <Shirt className="w-5 h-5 text-[#c59b5f] shrink-0 mt-0.5" />
-                  <p className="text-xs text-gray-500">
-                    Nossa IA combinou o seu manequim de <strong>Sutiã ({formData.sutia})</strong> e <strong>Jeans ({formData.jeans})</strong> com as diretrizes exclusivas de alta costura desta peça.
-                  </p>
-                </div>
+              {/* STEP 5: Resultado */}
+              {step === 5 && resultado && (
+                <motion.div key="step5" initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} className="flex flex-col items-center text-center space-y-6 py-4">
+                  <div className="w-28 h-28 bg-gradient-to-br from-[#c59b5f] to-[#e5c595] rounded-full flex items-center justify-center shadow-xl shadow-[#c59b5f]/30 mb-2 relative">
+                    <div className="absolute inset-2 border-2 border-white/30 rounded-full border-dashed animate-spin-slow"></div>
+                    <span className="text-5xl font-black text-black tracking-tighter">{resultado.tamanho}</span>
+                  </div>
+                  
+                  <div>
+                    <h3 className="text-3xl font-serif font-bold text-gray-900 mb-3">Tamanho: {resultado.tamanho}</h3>
+                    <p className="text-base text-gray-600 leading-relaxed max-w-sm mx-auto">
+                      {resultado.descricao}
+                    </p>
+                  </div>
 
-                <button
-                  onClick={onClose}
-                  className="w-full bg-[#111] hover:bg-black text-white font-bold py-4 rounded-xl transition-all shadow-md mt-4"
-                >
-                  Continuar Comprando
-                </button>
-              </motion.div>
-            )}
+                  <button onClick={onClose} className="w-full bg-[#111] hover:bg-black text-white font-bold py-4 rounded-xl transition-all shadow-md mt-4">
+                    Continuar Comprando
+                  </button>
+                </motion.div>
+              )}
 
-          </AnimatePresence>
-        </div>
-
-        {/* Indicador de Progresso (Somente nos passos 1-3) */}
-        {step <= 3 && (
-          <div className="bg-gray-50 p-4 flex justify-center gap-2">
-            {[1, 2, 3].map((i) => (
-              <div 
-                key={i} 
-                className={`h-1.5 rounded-full transition-all duration-300 ${step === i ? 'w-8 bg-[#c59b5f]' : 'w-2 bg-gray-200'}`}
-              />
-            ))}
+            </AnimatePresence>
           </div>
-        )}
+
+          {/* Indicador de Progresso */}
+          {step <= 3 && (
+            <div className="mt-8 flex justify-center gap-2">
+              {[1, 2, 3].map((i) => (
+                <div key={i} className={`h-1.5 rounded-full transition-all duration-300 ${step === i ? 'w-8 bg-[#c59b5f]' : 'w-2 bg-gray-200'}`} />
+              ))}
+            </div>
+          )}
+        </div>
       </motion.div>
     </div>
   );

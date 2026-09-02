@@ -8774,3 +8774,187 @@
 ## 2026-09-02 15:56:02.245Z console.warn
 - text: Please replace pb.files.getUrl() with pb.files.getURL()
 
+## 2026-09-02 15:57:15.407Z load
+- url: http://localhost:3000/produto/40bnrds09kg7dio
+- title: Avante Lingerie | Oficial
+
+## 2026-09-02 15:57:18.538Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 15:57:18.543Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 15:57:18.544Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 15:57:18.544Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 15:57:18.545Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 15:57:18.545Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 15:57:18.546Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 15:57:18.546Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 15:57:18.547Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 15:57:18.547Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 15:57:18.548Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 15:57:18.548Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 15:57:18.548Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 15:57:18.548Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 15:57:18.548Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 15:57:18.549Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 15:57:18.549Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 15:57:18.549Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 15:57:18.549Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 15:57:18.652Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 15:57:18.653Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 15:57:42.063Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Provador Virtual"}
+
+## 2026-09-02 15:57:42.099Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 15:57:42.102Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 15:57:44.246Z focus
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"","valueLength":0,"text":"Selecione...38 (PP)40 (P)42 (M)44 (G)46 (GG)48 (XG)50+"}
+
+## 2026-09-02 15:57:44.455Z click
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"","valueLength":0,"text":"Selecione...38 (PP)40 (P)42 (M)44 (G)46 (GG)48 (XG)50+"}
+
+## 2026-09-02 15:57:51.077Z click
+- element: {"tag":"div","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"O que você já usa?Essa é a forma mais precisa de encontrarmos o seu caimento perfeito na Avante.Tamanho de Sutiã (Numeração)Selecione...38 (PP)40 (P)42 (M)44 (G)46 (GG)48 (XG)50+Tamanho de Calça JeansSelecione...34/36384042444648+Próximo "}
+
+## 2026-09-02 15:57:56.050Z focus
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"","valueLength":0,"text":"Selecione...38 (PP)40 (P)42 (M)44 (G)46 (GG)48 (XG)50+"}
+
+## 2026-09-02 15:57:56.280Z click
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"","valueLength":0,"text":"Selecione...38 (PP)40 (P)42 (M)44 (G)46 (GG)48 (XG)50+"}
+
+## 2026-09-02 15:57:59.341Z change
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"44","valueLength":2,"text":"Selecione...38 (PP)40 (P)42 (M)44 (G)46 (GG)48 (XG)50+"}
+
+## 2026-09-02 15:57:59.358Z click
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"44","valueLength":2,"text":"Selecione...38 (PP)40 (P)42 (M)44 (G)46 (GG)48 (XG)50+"}
+
+## 2026-09-02 15:58:03.495Z click
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"44","valueLength":2,"text":"Selecione...38 (PP)40 (P)42 (M)44 (G)46 (GG)48 (XG)50+"}
+
+## 2026-09-02 15:58:04.411Z click
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"44","valueLength":2,"text":"Selecione...38 (PP)40 (P)42 (M)44 (G)46 (GG)48 (XG)50+"}
+
+## 2026-09-02 15:58:05.355Z blur
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"44","valueLength":2,"text":"Selecione...38 (PP)40 (P)42 (M)44 (G)46 (GG)48 (XG)50+"}
+
+## 2026-09-02 15:58:05.355Z focus
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"","valueLength":0,"text":"Selecione...34/36384042444648+"}
+
+## 2026-09-02 15:58:05.579Z click
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"","valueLength":0,"text":"Selecione...34/36384042444648+"}
+
+## 2026-09-02 15:58:07.050Z click
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"","valueLength":0,"text":"Selecione...34/36384042444648+"}
+
+## 2026-09-02 15:58:08.589Z click
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"","valueLength":0,"text":"Selecione...34/36384042444648+"}
+
+## 2026-09-02 15:58:10.835Z click
+- element: {"tag":"div","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Provador Virtual"}
+
+## 2026-09-02 15:58:12.154Z focus
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"","valueLength":0,"text":"Selecione...34/36384042444648+"}
+
+## 2026-09-02 15:58:12.380Z click
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"","valueLength":0,"text":"Selecione...34/36384042444648+"}
+
+## 2026-09-02 15:58:13.635Z change
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"44","valueLength":2,"text":"Selecione...34/36384042444648+"}
+
+## 2026-09-02 15:58:13.654Z click
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"44","valueLength":2,"text":"Selecione...34/36384042444648+"}
+
+## 2026-09-02 15:58:17.604Z blur
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"44","valueLength":2,"text":"Selecione...34/36384042444648+"}
+
+## 2026-09-02 15:58:17.824Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Próximo "}
+
+## 2026-09-02 15:58:23.631Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 65","label":"Ex: 65","value":"","valueLength":0,"text":""}
+
+## 2026-09-02 15:58:23.833Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 65","label":"Ex: 65","value":"","valueLength":0,"text":""}
+
+## 2026-09-02 15:58:26.330Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 65","label":"Ex: 65","value":"78","valueLength":2,"text":""}
+
+## 2026-09-02 15:58:26.331Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 65","label":"Ex: 65","value":"78","valueLength":2,"text":""}
+
+## 2026-09-02 15:58:26.334Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 165","label":"Ex: 165","value":"","valueLength":0,"text":""}
+
+## 2026-09-02 15:58:26.546Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 165","label":"Ex: 165","value":"","valueLength":0,"text":""}
+
+## 2026-09-02 15:58:41.356Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 165","label":"Ex: 165","value":"164","valueLength":3,"text":""}
+
+## 2026-09-02 15:58:41.357Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 165","label":"Ex: 165","value":"164","valueLength":3,"text":""}
+
+## 2026-09-02 15:58:41.581Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Proporcional"}
+
+## 2026-09-02 15:58:45.513Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Próximo "}
+
+## 2026-09-02 15:58:52.977Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Mais SoltinhoPrioridade total para mobilidade e conforto"}
+
+## 2026-09-02 15:58:54.931Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Descobrir Meu Tamanho"}
+
+## 2026-09-02 15:59:07.082Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-09-02 15:59:07.138Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 15:59:07.147Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
