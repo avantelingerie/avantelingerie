@@ -796,7 +796,7 @@ export default function ProductPage() {
     setCepInput(value);
   };
 
-  // Calcular frete (Mock Inteligente)
+  // Calcular frete (Mock Inteligente Melhor Envio)
   const handleCalculateShipping = () => {
     if (cepInput.length !== 9) {
       toast.error('CEP inválido', { description: 'Digite um CEP com 8 números.' });
@@ -806,22 +806,34 @@ export default function ProductPage() {
     setIsCalculatingShipping(true);
     setShippingResult(null);
 
-    // Simulando tempo de resposta da API de freios (Correios/Kangu)
+    // Simulando tempo de resposta da API do Melhor Envio
     setTimeout(() => {
       setIsCalculatingShipping(false);
       
-      // Regra visual de exemplo: 
-      // Se CEP começar com 0, 1, 2, 3 (Sudeste) -> Frete mais barato/rápido
-      const regionCode = parseInt(cepInput.charAt(0));
-      if (regionCode >= 0 && regionCode <= 3) {
+      const cepClean = cepInput.replace('-', '');
+      const isNovaFriburgo = cepClean.startsWith('286');
+      const isRJ = cepClean.startsWith('2');
+      const isSudeste = ['0','1','3'].includes(cepClean.charAt(0));
+
+      if (isNovaFriburgo) {
         setShippingResult([
-          { nome: 'Entrega Expressa', prazo: '1 a 2 dias úteis', valor: 'R$ 12,90' },
-          { nome: 'Normal (PAC)', prazo: '3 a 5 dias úteis', valor: 'Grátis' }
+          { nome: 'Motoboy Local (Nova Friburgo)', prazo: 'Entrega Hoje', valor: 'Grátis' },
+          { nome: 'Retirada na Fábrica', prazo: 'Disponível em 2 horas', valor: 'Grátis' }
+        ]);
+      } else if (isRJ) {
+        setShippingResult([
+          { nome: 'Sedex (Melhor Envio)', prazo: '1 a 2 dias úteis', valor: 'R$ 14,90' },
+          { nome: 'PAC (Melhor Envio)', prazo: '3 a 5 dias úteis', valor: 'Grátis' }
+        ]);
+      } else if (isSudeste) {
+        setShippingResult([
+          { nome: 'Sedex (Melhor Envio)', prazo: '2 a 4 dias úteis', valor: 'R$ 18,90' },
+          { nome: 'PAC (Melhor Envio)', prazo: '5 a 8 dias úteis', valor: 'R$ 9,90' }
         ]);
       } else {
         setShippingResult([
-          { nome: 'Jadlog Expresso', prazo: '3 a 6 dias úteis', valor: 'R$ 28,50' },
-          { nome: 'Correios PAC', prazo: '7 a 12 dias úteis', valor: 'R$ 18,90' }
+          { nome: 'Jadlog Expresso (Melhor Envio)', prazo: '4 a 7 dias úteis', valor: 'R$ 32,50' },
+          { nome: 'PAC (Melhor Envio)', prazo: '8 a 15 dias úteis', valor: 'R$ 22,90' }
         ]);
       }
     }, 1500);
@@ -1093,21 +1105,30 @@ export default function ProductPage() {
                   </div>
                 </div>
               ) : (
-                // Área de Preço Varejo (Visitante/Padrão)
-                <div className="flex flex-col gap-1">
-                  <div className="flex items-end gap-3">
-                    <span className="text-4xl font-bold text-gray-900 tracking-tight">{formatPrice(activePrice)}</span>
-                    {activeOldPrice > activePrice && (
-                      <span className="text-lg text-gray-400 line-through mb-1">{formatPrice(activeOldPrice)}</span>
+                  // Área de Preço Varejo (Visitante/Padrão)
+                  <div className="flex flex-col gap-1">
+                    {/* Linha superior: Preço antigo cortado + Badge de Desconto */}
+                    {(activeOldPrice > activePrice || activePrice > 0) && (
+                      <div className="flex items-center gap-2">
+                        <span className="text-base text-gray-500 line-through decoration-gray-400">
+                          {formatPrice(activeOldPrice > activePrice ? activeOldPrice : activePrice * 1.1111)}
+                        </span>
+                        <span className="bg-[#2e5e1a] hover:bg-[#244c14] transition-colors text-white text-xs font-bold px-2 py-0.5 rounded-sm tracking-wide">
+                          Baixou {activeOldPrice > activePrice ? activeDiscount : '10'}%
+                        </span>
+                      </div>
                     )}
+                    {/* Linha Inferior: Preço atual + Parcelamento */}
+                    <div className="flex flex-wrap items-baseline gap-x-1.5 mt-0.5">
+                      <span className="text-3xl md:text-[32px] font-bold text-[#444] tracking-tight">
+                        {formatPrice(activePrice)}
+                      </span>
+                      <span className="text-sm md:text-[15px] text-gray-600 font-medium">
+                        em até <span className="font-bold text-[#444]">12x de {formatPrice(activePrice / 12)}</span> sem juros no cartão de crédito.
+                      </span>
+                    </div>
                   </div>
-                  <div className="flex items-center gap-2 mt-1">
-                    <span className="text-sm font-medium text-gray-500">
-                      ou 6x de <span className="font-bold text-gray-900">{formatPrice(activePrice / 6)}</span> sem juros
-                    </span>
-                  </div>
-                </div>
-              )}
+                )}
             </div>
 
             {/* Componente Modular de Desconto Progressivo */}
@@ -1418,7 +1439,7 @@ export default function ProductPage() {
             <div className="bg-[#fcfbf9] border border-[#c59b5f]/20 rounded-2xl p-5 shadow-inner mt-4">
               <div className="flex items-center gap-3 mb-4">
                 <Truck className="w-5 h-5 text-[#c59b5f]" />
-                <h3 className="font-bold text-gray-900 text-sm">Simulador de Frete e Prazo</h3>
+                <h3 className="font-bold text-gray-900 text-sm">Calcular o frete e prazo de entrega</h3>
               </div>
               <div className="flex gap-2 relative">
                 <input 
