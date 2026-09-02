@@ -1068,48 +1068,75 @@ export default function ProductPage() {
                     <span className="text-sm">Tabela de Medidas</span>
                   </button>
                 </DialogTrigger>
-                <DialogContent className="max-w-3xl rounded-3xl p-0 overflow-hidden bg-white">
-                  <div className="bg-[#c59b5f] p-6 text-white relative overflow-hidden">
-                    <div className="absolute -right-10 -top-10 opacity-10">
-                      <Ruler className="w-40 h-40" />
+                <DialogContent className="max-w-5xl rounded-[2rem] p-0 overflow-hidden bg-white border-0 shadow-2xl flex flex-col md:flex-row h-auto max-h-[90vh]">
+                  {/* Lado Esquerdo: Imagem da Lia */}
+                  <div className="relative w-full md:w-[40%] min-h-[250px] md:min-h-[500px] bg-[#f4ece1] shrink-0">
+                    {/* Imagem de Fundo (Lia) */}
+                    <div className="absolute inset-0 bg-[url('/lia-provador.jpg')] bg-cover bg-center opacity-90 transition-all duration-1000">
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent"></div>
+                      <div className="absolute inset-0 bg-[#c59b5f]/20 mix-blend-color"></div>
                     </div>
-                    <DialogTitle className="text-2xl font-bold tracking-tight mb-2 relative z-10">{tableData.title}</DialogTitle>
-                    <DialogDescription className="text-white/90 text-sm relative z-10 font-medium">
-                      {tableData.intro}
-                    </DialogDescription>
+                    {/* Conteúdo sobre a Imagem */}
+                    <div className="absolute bottom-0 left-0 w-full p-8 md:p-10 z-10 text-white">
+                      <div className="w-12 h-12 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center mb-6 border border-white/20">
+                        <Ruler className="w-6 h-6 text-[#c59b5f]" />
+                      </div>
+                      <DialogTitle className="text-3xl md:text-4xl font-serif font-bold tracking-tight mb-3 leading-tight drop-shadow-md">
+                        {tableData.title}
+                      </DialogTitle>
+                      <DialogDescription className="text-white/80 text-sm md:text-base font-medium leading-relaxed drop-shadow-sm max-w-sm">
+                        {tableData.intro}
+                      </DialogDescription>
+                    </div>
                   </div>
-                  <div className="p-6">
+
+                  {/* Lado Direito: A Tabela Premium */}
+                  <div className="w-full md:w-[60%] flex flex-col p-6 md:p-10 overflow-y-auto">
                     {tableData.alert && (
-                      <div className="bg-amber-50 border border-amber-200 text-amber-800 text-sm p-4 rounded-2xl flex items-start gap-3 mb-6">
-                        <Sparkles className="w-5 h-5 mt-0.5 shrink-0" />
-                        <p className="font-medium leading-relaxed">{tableData.alert}</p>
+                      <div className="bg-amber-50/50 border border-amber-200/50 text-amber-800 text-sm p-5 rounded-2xl flex items-start gap-4 mb-8">
+                        <div className="p-2 bg-amber-100/50 rounded-full shrink-0">
+                          <Sparkles className="w-5 h-5 text-amber-600" />
+                        </div>
+                        <p className="font-medium leading-relaxed mt-0.5">{tableData.alert}</p>
                       </div>
                     )}
-                    <div className="overflow-x-auto bg-white rounded-2xl border border-gray-100 shadow-sm">
-                      <table className="w-full text-sm text-left">
-                        <thead className="text-xs text-gray-500 uppercase bg-gray-50 border-b border-gray-100">
-                          <tr>
-                            {tableData.headers.map((h, i) => (
-                              <th key={i} className="px-6 py-4 font-bold tracking-wider">{h}</th>
-                            ))}
-                          </tr>
-                        </thead>
-                        <tbody>
-                          {tableData.rows.map((row, i) => (
-                            <tr key={i} className="border-b border-gray-50 hover:bg-white transition-colors">
-                              {row.map((cell, j) => (
-                                <td key={j} className={`px-6 py-4 ${j === 0 ? 'font-bold text-gray-900 bg-gray-50/50' : 'text-gray-600'}`}>
-                                  {cell}
-                                </td>
+                    
+                    <div className="flex-1">
+                      <div className="overflow-x-auto">
+                        <table className="w-full text-left border-collapse">
+                          <thead>
+                            <tr>
+                              {tableData.headers.map((h, i) => (
+                                <th key={i} className="px-6 py-4 text-[11px] font-bold text-gray-400 uppercase tracking-widest border-b border-gray-100">
+                                  {h}
+                                </th>
                               ))}
                             </tr>
-                          ))}
-                        </tbody>
-                      </table>
+                          </thead>
+                          <tbody>
+                            {tableData.rows.map((row, i) => (
+                              <tr key={i} className="border-b border-gray-50 hover:bg-[#fcfbf9] transition-colors group">
+                                {row.map((cell, j) => (
+                                  <td key={j} className={`px-6 py-5 ${
+                                    j === 0 
+                                    ? 'font-serif text-2xl font-bold text-[#c59b5f] bg-[#fcfbf9] group-hover:bg-[#f8f5f0] transition-colors rounded-l-xl w-24 text-center' 
+                                    : 'text-gray-600 text-sm font-medium'
+                                  }`}>
+                                    {cell}
+                                  </td>
+                                ))}
+                              </tr>
+                            ))}
+                          </tbody>
+                        </table>
+                      </div>
                     </div>
-                    <div className="mt-6 flex justify-end">
+
+                    <div className="mt-10 flex justify-end">
                       <DialogClose asChild>
-                        <Button className="rounded-full font-bold px-8 bg-gray-100 hover:bg-gray-200 text-gray-900 border-0" variant="outline">Entendi</Button>
+                        <button className="bg-[#111] hover:bg-black text-white px-10 py-4 rounded-xl font-bold transition-all shadow-md hover:shadow-lg flex items-center gap-2">
+                          Entendi <CheckCircle2 className="w-4 h-4" />
+                        </button>
                       </DialogClose>
                     </div>
                   </div>
