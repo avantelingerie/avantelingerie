@@ -57,8 +57,37 @@ export default function ProductPage() {
   const [selectedSize, setSelectedSize] = useState(null);
   const [quantity, setQuantity] = useState(1);
   const [isFavorite, setIsFavorite] = useState(false);
+
+  // Inicializa o state de favorito baseado no localStorage
+  useEffect(() => {
+    if (id) {
+      const favs = JSON.parse(localStorage.getItem('avante_favorites') || '[]');
+      setIsFavorite(favs.includes(id));
+    }
+  }, [id]);
+
+  const handleToggleFavorite = () => {
+    if (!id) return;
+    const favs = JSON.parse(localStorage.getItem('avante_favorites') || '[]');
+    let newFavs;
+    if (isFavorite) {
+      newFavs = favs.filter(favId => favId !== id);
+      toast('Removido dos favoritos', { icon: '💔' });
+    } else {
+      newFavs = [...favs, id];
+      toast.success('Adicionado aos favoritos', { icon: '❤️' });
+    }
+    localStorage.setItem('avante_favorites', JSON.stringify(newFavs));
+    setIsFavorite(!isFavorite);
+  };
+
   const [showMobileCTA, setShowMobileCTA] = useState(true);
   const [isProvadorOpen, setIsProvadorOpen] = useState(false);
+  
+  // Estados do Frete
+  const [cepInput, setCepInput] = useState('');
+  const [isCalculatingShipping, setIsCalculatingShipping] = useState(false);
+  const [shippingResult, setShippingResult] = useState(null);
 
   const [isZoomed, setIsZoomed] = useState(false);
   const [zoomOrigin, setZoomOrigin] = useState('50% 50%');
@@ -760,6 +789,44 @@ export default function ProductPage() {
     setQuantity(1);
   };
 
+  // Formatar CEP dinamicamente
+  const handleCepChange = (e) => {
+    let value = e.target.value.replace(/\D/g, '');
+    if (value.length > 5) value = value.replace(/^(\d{5})(\d)/, '$1-$2');
+    setCepInput(value);
+  };
+
+  // Calcular frete (Mock Inteligente)
+  const handleCalculateShipping = () => {
+    if (cepInput.length !== 9) {
+      toast.error('CEP inválido', { description: 'Digite um CEP com 8 números.' });
+      return;
+    }
+    
+    setIsCalculatingShipping(true);
+    setShippingResult(null);
+
+    // Simulando tempo de resposta da API de freios (Correios/Kangu)
+    setTimeout(() => {
+      setIsCalculatingShipping(false);
+      
+      // Regra visual de exemplo: 
+      // Se CEP começar com 0, 1, 2, 3 (Sudeste) -> Frete mais barato/rápido
+      const regionCode = parseInt(cepInput.charAt(0));
+      if (regionCode >= 0 && regionCode <= 3) {
+        setShippingResult([
+          { nome: 'Entrega Expressa', prazo: '1 a 2 dias úteis', valor: 'R$ 12,90' },
+          { nome: 'Normal (PAC)', prazo: '3 a 5 dias úteis', valor: 'Grátis' }
+        ]);
+      } else {
+        setShippingResult([
+          { nome: 'Jadlog Expresso', prazo: '3 a 6 dias úteis', valor: 'R$ 28,50' },
+          { nome: 'Correios PAC', prazo: '7 a 12 dias úteis', valor: 'R$ 18,90' }
+        ]);
+      }
+    }, 1500);
+  };
+
   const handleBuy = (itemFromCard = null) => {
     const isEvent = itemFromCard && itemFromCard.nativeEvent;
     const item = isEvent ? null : itemFromCard;
@@ -1322,7 +1389,7 @@ export default function ProductPage() {
                 </Button>
 
                 <button
-                  onClick={() => setIsFavorite(!isFavorite)}
+                  onClick={handleToggleFavorite}
                   className={`h-[52px] w-[52px] shrink-0 rounded-2xl flex items-center justify-center transition-all duration-300 shadow-sm border ${isFavorite
                     ? 'bg-red-50 text-red-500 border-red-200'
                     : 'bg-white text-gray-400 border-gray-200 hover:border-red-200 hover:text-red-500 hover:bg-red-50'
@@ -1353,21 +1420,50 @@ export default function ProductPage() {
                 <Truck className="w-5 h-5 text-[#c59b5f]" />
                 <h3 className="font-bold text-gray-900 text-sm">Simulador de Frete e Prazo</h3>
               </div>
-              <div className="flex gap-2">
+              <div className="flex gap-2 relative">
                 <input 
                   type="text" 
-                  placeholder="Seu CEP" 
+                  placeholder="Seu CEP (00000-000)" 
+                  value={cepInput}
+                  onChange={handleCepChange}
                   className="flex-1 bg-white border border-gray-200 text-sm rounded-xl px-4 py-3 focus:outline-none focus:ring-1 focus:ring-[#c59b5f] transition-all"
                   maxLength={9}
                 />
-                <button className="bg-[#111] hover:bg-black text-white px-5 py-3 rounded-xl text-sm font-bold transition-all">
-                  Calcular
+                <button 
+                  onClick={handleCalculateShipping}
+                  disabled={isCalculatingShipping || cepInput.length < 9}
+                  className="bg-[#111] hover:bg-black text-white px-5 py-3 rounded-xl text-sm font-bold transition-all disabled:opacity-50 min-w-[100px] flex items-center justify-center"
+                >
+                  {isCalculatingShipping ? (
+                    <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
+                  ) : (
+                    'Calcular'
+                  )}
                 </button>
               </div>
-              <p className="text-xs text-gray-400 mt-3 flex items-center gap-1.5">
-                <Sparkles className="w-3 h-3 text-[#c59b5f]" />
-                Comprando agora, o envio é realizado em até 24 horas úteis.
-              </p>
+
+              {shippingResult && !isCalculatingShipping && (
+                <div className="mt-4 space-y-2 border-t border-gray-200 pt-4">
+                  {shippingResult.map((frete, idx) => (
+                    <div key={idx} className="flex items-center justify-between bg-white p-3 rounded-lg border border-gray-100 shadow-sm text-sm">
+                      <div>
+                        <div className="font-bold text-gray-900">{frete.nome}</div>
+                        <div className="text-xs text-gray-500">{frete.prazo}</div>
+                      </div>
+                      <div className={`font-bold ${frete.valor === 'Grátis' ? 'text-green-600' : 'text-[#c59b5f]'}`}>
+                        {frete.valor}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
+
+              {!shippingResult && (
+                <p className="text-xs text-gray-400 mt-3 flex items-center gap-1.5">
+                  <Sparkles className="w-3 h-3 text-[#c59b5f]" />
+                  Comprando agora, o envio é realizado em até 24 horas úteis.
+                </p>
+              )}
             </div>
 
             {/* Complete o Look (Cross-sell) */}

@@ -9757,3 +9757,478 @@
 ## 2026-09-02 17:22:37.962Z click
 - element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Tabela de Medidas"}
 
+## 2026-09-02 17:22:55.065Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Close"}
+
+## 2026-09-02 17:23:17.111Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Seu CEP","label":"Seu CEP","value":"","valueLength":0,"text":""}
+
+## 2026-09-02 17:23:17.311Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Seu CEP","label":"Seu CEP","value":"","valueLength":0,"text":""}
+
+## 2026-09-02 17:23:24.302Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Seu CEP","label":"Seu CEP","value":"21921930","valueLength":8,"text":""}
+
+## 2026-09-02 17:23:24.303Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Seu CEP","label":"Seu CEP","value":"21921930","valueLength":8,"text":""}
+
+## 2026-09-02 17:23:24.520Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Calcular"}
+
+## 2026-09-02 17:23:27.637Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Calcular"}
+
+## 2026-09-02 17:23:37.432Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Calcular"}
+
+## 2026-09-02 17:24:20.589Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Calcular"}
+
+## 2026-09-02 17:24:29.252Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:24:29.279Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:24:29.376Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:24:29.377Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:25:24.929Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:25:24.944Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:25:27.866Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Calcular"}
+
+## 2026-09-02 17:28:52.677Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:28:52.697Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:28:52.790Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:28:52.791Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:28:52.827Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:28:52.828Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:28:52.887Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:28:52.887Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:28:52.954Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:28:52.954Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:28:52.981Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:28:52.982Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:28:53.023Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:28:53.024Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:28:53.061Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:28:53.061Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:28:53.080Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:28:53.080Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:28:53.119Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:28:53.119Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:28:53.130Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:28:53.132Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:28:53.154Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:28:53.154Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:28:53.167Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:28:53.167Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:28:53.351Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:28:53.351Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:30:29.458Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:30:29.466Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:30:29.467Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:30:29.467Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:30:29.467Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:30:29.467Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:30:29.468Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:30:29.468Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:30:29.468Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:30:29.468Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:30:29.468Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:30:29.469Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:30:29.469Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:30:29.469Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:30:29.470Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:30:29.470Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:30:29.470Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:30:29.471Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:30:29.471Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:30:30.000Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:30:30.033Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:33:26.006Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:33:26.018Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:33:26.018Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:33:26.018Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:33:26.019Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:33:26.019Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:33:26.019Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:33:26.019Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:33:26.019Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:33:26.019Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:33:26.020Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:33:26.020Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:33:26.021Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:33:26.021Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:33:26.021Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:33:26.021Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:33:26.021Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:33:26.021Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:33:26.022Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:33:26.072Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:33:26.074Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:33:26.782Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:33:26.782Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:33:26.783Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:33:26.783Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:33:26.783Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:33:26.783Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:33:26.783Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:33:26.783Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:33:26.784Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:33:26.784Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:33:26.784Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:33:26.785Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:33:26.785Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:33:26.785Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:33:26.785Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:33:26.785Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:33:26.785Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:33:26.786Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:33:26.786Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:33:27.262Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:33:27.262Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:33:52.289Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:33:52.303Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:33:52.303Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:33:52.304Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:33:52.304Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:33:52.305Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:33:52.305Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:33:52.305Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:33:52.306Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:33:52.306Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:33:52.307Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:33:52.307Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:33:52.308Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:33:52.310Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:33:52.310Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:33:52.311Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:33:52.311Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:33:52.312Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:33:52.312Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:33:52.729Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:33:52.731Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:33:52.966Z console.error
+- text: 
+    Warning: A component is changing an uncontrolled input to be controlled. This is likely caused by the value changing from undefined to a defined value, which should not happen. Decide between using a controlled or uncontrolled input element for the lifetime of the component. More info: https://reactjs.org/link/controlled-components%s 
+        at input
+        at div
+        at div
+        at div
+        at section
+        at div
+        at article
+        at ProductPage (http://localhost:3000/src/pages/ProductPage.jsx?t=1788370426277:62:18)
+        at ErrorBoundary (http://localhost:3000/src/components/ErrorBoundary.jsx:7:5)
+        at RenderedRoute (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=6a46656c:6397:26)
+        at Routes (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=6a46656c:7258:3)
+        at main
+        at div
+        at StoreLayout (http://localhost:3000/src/App.jsx?t=1788369349279:151:24)
+        at ErrorBoundary (http://localhost:3000/src/components/ErrorBoundary.jsx:7:5)
+        at RenderedRoute (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=6a46656c:6397:26)
+        at Routes (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=6a46656c:7258:3)
+        at AppInterceptor (http://localhost:3000/src/App.jsx?t=1788369349279:188:20)
+        at AdminAuthProvider (http://localhost:3000/src/context/AdminAuthContext.jsx:8:37)
+        at AuthProvider (http://localhost:3000/src/context/AuthContext.jsx:7:32)
+        at Router (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=6a46656c:7188:13)
+        at BrowserRouter (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=6a46656c:10402:3)
+        at ErrorBoundary (http://localhost:3000/src/components/ErrorBoundary.jsx:7:5)
+        at App
+
+## 2026-09-02 17:33:53.869Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:33:53.869Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:33:53.870Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:33:53.870Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:33:53.871Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:33:53.871Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:33:53.871Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:33:53.871Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:33:53.872Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:33:53.872Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:33:53.872Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:33:53.873Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:33:53.873Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:33:53.873Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:33:53.873Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:33:53.873Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:33:53.873Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:33:53.874Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:33:53.874Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:33:53.943Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-02 17:33:53.944Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
