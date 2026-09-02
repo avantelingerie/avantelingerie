@@ -138,7 +138,8 @@ export default function ProvadorVirtual({ isOpen, onClose, productName, category
             <div className="absolute inset-0 bg-[#f4ece1]/30 mix-blend-overlay"></div>
           </div>
 
-          {/* Elementos Interativos (Linhas de Medida como no seu print) */}
+          {/* Elementos Interativos (Linhas de Medida) */}
+          {/* Apenas renderiza a linha dinâmica (sem números ou fundos) e com uma cor de contraste vibrante (Rubi/Rosa) */}
           <div className="absolute inset-0 z-20 pointer-events-none">
             
             {/* Linha Busto */}
@@ -146,11 +147,10 @@ export default function ProvadorVirtual({ isOpen, onClose, productName, category
               <motion.div 
                 animate={{ width: `${bustWidth}%` }}
                 transition={{ type: "spring", stiffness: 100, damping: 15 }}
-                className={`relative border-t-2 border-dashed ${isBustActive || step === 4 ? 'border-[#c59b5f] shadow-[0_0_10px_rgba(197,155,95,0.5)]' : 'border-white/50'}`}
+                className={`relative border-t-2 border-dashed transition-opacity duration-300 ${isBustActive || step === 4 ? 'border-[#e11d48] shadow-[0_0_12px_rgba(225,29,72,0.6)] opacity-100' : 'border-transparent opacity-0'}`}
               >
-                <div className={`absolute -left-8 -top-3 w-6 h-6 rounded-full flex items-center justify-center text-[10px] font-bold ${isBustActive || step === 4 ? 'bg-[#c59b5f] text-white shadow-lg' : 'bg-white/80 text-gray-500'}`}>1</div>
-                <div className={`absolute -right-2 -top-1 w-2 h-2 rounded-full ${isBustActive || step === 4 ? 'bg-[#c59b5f]' : 'bg-white/50'}`}></div>
-                <div className={`absolute -left-2 -top-1 w-2 h-2 rounded-full ${isBustActive || step === 4 ? 'bg-[#c59b5f]' : 'bg-white/50'}`}></div>
+                <div className={`absolute -right-2 -top-1 w-2 h-2 rounded-full ${isBustActive || step === 4 ? 'bg-[#e11d48] shadow-[0_0_8px_rgba(225,29,72,0.8)]' : 'bg-transparent'}`}></div>
+                <div className={`absolute -left-2 -top-1 w-2 h-2 rounded-full ${isBustActive || step === 4 ? 'bg-[#e11d48] shadow-[0_0_8px_rgba(225,29,72,0.8)]' : 'bg-transparent'}`}></div>
               </motion.div>
             </div>
 
@@ -159,11 +159,10 @@ export default function ProvadorVirtual({ isOpen, onClose, productName, category
               <motion.div 
                 animate={{ width: `${Math.max(25, hipWidth - 15)}%` }} // Cintura acompanha o quadril de forma menor
                 transition={{ type: "spring", stiffness: 100, damping: 15 }}
-                className={`relative border-t-2 border-dashed ${isHipActive || step === 4 ? 'border-[#c59b5f] shadow-[0_0_10px_rgba(197,155,95,0.5)]' : 'border-white/50'}`}
+                className={`relative border-t-2 border-dashed transition-opacity duration-300 ${isHipActive || step === 4 ? 'border-[#e11d48] shadow-[0_0_12px_rgba(225,29,72,0.6)] opacity-100' : 'border-transparent opacity-0'}`}
               >
-                <div className={`absolute -left-8 -top-3 w-6 h-6 rounded-full flex items-center justify-center text-[10px] font-bold ${isHipActive || step === 4 ? 'bg-[#c59b5f] text-white shadow-lg' : 'bg-white/80 text-gray-500'}`}>2</div>
-                <div className={`absolute -right-2 -top-1 w-2 h-2 rounded-full ${isHipActive || step === 4 ? 'bg-[#c59b5f]' : 'bg-white/50'}`}></div>
-                <div className={`absolute -left-2 -top-1 w-2 h-2 rounded-full ${isHipActive || step === 4 ? 'bg-[#c59b5f]' : 'bg-white/50'}`}></div>
+                <div className={`absolute -right-2 -top-1 w-2 h-2 rounded-full ${isHipActive || step === 4 ? 'bg-[#e11d48] shadow-[0_0_8px_rgba(225,29,72,0.8)]' : 'bg-transparent'}`}></div>
+                <div className={`absolute -left-2 -top-1 w-2 h-2 rounded-full ${isHipActive || step === 4 ? 'bg-[#e11d48] shadow-[0_0_8px_rgba(225,29,72,0.8)]' : 'bg-transparent'}`}></div>
               </motion.div>
             </div>
 
@@ -172,11 +171,10 @@ export default function ProvadorVirtual({ isOpen, onClose, productName, category
               <motion.div 
                 animate={{ width: `${hipWidth}%` }}
                 transition={{ type: "spring", stiffness: 100, damping: 15 }}
-                className={`relative border-t-2 border-dashed ${isHipActive || step === 4 ? 'border-[#c59b5f] shadow-[0_0_10px_rgba(197,155,95,0.5)]' : 'border-white/50'}`}
+                className={`relative border-t-2 border-dashed transition-opacity duration-300 ${isHipActive || step === 4 ? 'border-[#e11d48] shadow-[0_0_12px_rgba(225,29,72,0.6)] opacity-100' : 'border-transparent opacity-0'}`}
               >
-                <div className={`absolute -left-8 -top-3 w-6 h-6 rounded-full flex items-center justify-center text-[10px] font-bold ${isHipActive || step === 4 ? 'bg-[#c59b5f] text-white shadow-lg' : 'bg-white/80 text-gray-500'}`}>3</div>
-                <div className={`absolute -right-2 -top-1 w-2 h-2 rounded-full ${isHipActive || step === 4 ? 'bg-[#c59b5f]' : 'bg-white/50'}`}></div>
-                <div className={`absolute -left-2 -top-1 w-2 h-2 rounded-full ${isHipActive || step === 4 ? 'bg-[#c59b5f]' : 'bg-white/50'}`}></div>
+                <div className={`absolute -right-2 -top-1 w-2 h-2 rounded-full ${isHipActive || step === 4 ? 'bg-[#e11d48] shadow-[0_0_8px_rgba(225,29,72,0.8)]' : 'bg-transparent'}`}></div>
+                <div className={`absolute -left-2 -top-1 w-2 h-2 rounded-full ${isHipActive || step === 4 ? 'bg-[#e11d48] shadow-[0_0_8px_rgba(225,29,72,0.8)]' : 'bg-transparent'}`}></div>
               </motion.div>
             </div>
 
@@ -187,7 +185,7 @@ export default function ProvadorVirtual({ isOpen, onClose, productName, category
                   initial={{ top: '20%', opacity: 0 }}
                   animate={{ top: ['20%', '80%', '20%'], opacity: [0, 1, 1, 0] }}
                   transition={{ duration: 2.5, ease: "linear" }}
-                  className="absolute left-0 w-full h-[2px] bg-[#c59b5f] shadow-[0_0_15px_#c59b5f]"
+                  className="absolute left-0 w-full h-[2px] bg-[#e11d48] shadow-[0_0_20px_#e11d48]"
                 />
               )}
             </AnimatePresence>
