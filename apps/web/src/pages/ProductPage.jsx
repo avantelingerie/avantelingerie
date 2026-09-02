@@ -36,6 +36,7 @@ import PixInfoBlock from '@/components/PixInfoBlock.jsx';
 import SocialProofStats from '@/components/SocialProofStats.jsx';
 import TrustSection from '@/components/TrustSection.jsx';
 import QuantitySelector from '@/components/QuantitySelector.jsx';
+import ProvadorVirtual from '@/components/ProvadorVirtual.jsx';
 import { useCart } from '@/hooks/useCart.js';
 import { useAuth } from '@/context/AuthContext.jsx';
 
@@ -57,6 +58,7 @@ export default function ProductPage() {
   const [quantity, setQuantity] = useState(1);
   const [isFavorite, setIsFavorite] = useState(false);
   const [showMobileCTA, setShowMobileCTA] = useState(true);
+  const [isProvadorOpen, setIsProvadorOpen] = useState(false);
 
   const [isZoomed, setIsZoomed] = useState(false);
   const [zoomOrigin, setZoomOrigin] = useState('50% 50%');
@@ -1057,6 +1059,80 @@ export default function ProductPage() {
               <PixInfoBlock eligible={isPixEligible} />
             </div>
 
+            {/* Ferramentas de Medida (Tabela & Provador) */}
+            <div className="grid grid-cols-2 gap-3 pt-2">
+              <Dialog>
+                <DialogTrigger asChild>
+                  <button className="flex items-center justify-center gap-2 bg-[#f8f5f0] hover:bg-[#f0ece1] text-[#7a5c34] border border-[#c59b5f]/30 font-bold py-3 px-4 rounded-xl transition-colors">
+                    <Ruler className="w-4 h-4" />
+                    <span className="text-sm">Tabela de Medidas</span>
+                  </button>
+                </DialogTrigger>
+                <DialogContent className="max-w-2xl bg-[#fbfbfb]">
+                  <DialogHeader>
+                    <DialogTitle className="text-2xl font-serif text-[#c59b5f] flex items-center gap-2">
+                      <Ruler className="w-6 h-6" /> Guia de Medidas Oficial
+                    </DialogTitle>
+                    <DialogDescription>
+                      Compare suas medidas com nossa tabela padrão Avante Lingerie.
+                    </DialogDescription>
+                  </DialogHeader>
+                  <div className="mt-4 overflow-x-auto">
+                    <table className="w-full text-sm text-left text-gray-500 rounded-xl overflow-hidden shadow-sm border border-gray-200">
+                      <thead className="text-xs text-gray-700 uppercase bg-gray-100">
+                        <tr>
+                          <th className="px-6 py-3">Tamanho</th>
+                          <th className="px-6 py-3">Busto (cm)</th>
+                          <th className="px-6 py-3">Cintura (cm)</th>
+                          <th className="px-6 py-3">Quadril (cm)</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr className="bg-white border-b">
+                          <td className="px-6 py-4 font-bold text-gray-900">P (40)</td>
+                          <td className="px-6 py-4">84 - 88</td>
+                          <td className="px-6 py-4">64 - 68</td>
+                          <td className="px-6 py-4">90 - 94</td>
+                        </tr>
+                        <tr className="bg-gray-50 border-b">
+                          <td className="px-6 py-4 font-bold text-gray-900">M (42)</td>
+                          <td className="px-6 py-4">89 - 93</td>
+                          <td className="px-6 py-4">69 - 73</td>
+                          <td className="px-6 py-4">95 - 99</td>
+                        </tr>
+                        <tr className="bg-white border-b">
+                          <td className="px-6 py-4 font-bold text-gray-900">G (44)</td>
+                          <td className="px-6 py-4">94 - 98</td>
+                          <td className="px-6 py-4">74 - 78</td>
+                          <td className="px-6 py-4">100 - 104</td>
+                        </tr>
+                        <tr className="bg-gray-50">
+                          <td className="px-6 py-4 font-bold text-gray-900">GG (46)</td>
+                          <td className="px-6 py-4">99 - 103</td>
+                          <td className="px-6 py-4">79 - 83</td>
+                          <td className="px-6 py-4">105 - 109</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </DialogContent>
+              </Dialog>
+
+              <button 
+                onClick={() => setIsProvadorOpen(true)}
+                className="flex items-center justify-center gap-2 bg-gradient-to-r from-[#111] to-[#222] hover:from-black hover:to-black text-white font-bold py-3 px-4 rounded-xl transition-all shadow-md hover:shadow-lg"
+              >
+                <Sparkles className="w-4 h-4 text-[#c59b5f]" />
+                <span className="text-sm">Provador Virtual</span>
+              </button>
+            </div>
+
+            <ProvadorVirtual 
+              isOpen={isProvadorOpen} 
+              onClose={() => setIsProvadorOpen(false)} 
+              productName={productName}
+            />
+
             {/* Seleção de Cor */}
             {!semVariacoes && dynamicColors.length > 0 && (
               <div className="space-y-4">
@@ -1297,6 +1373,29 @@ export default function ProductPage() {
                   <Zap className="w-4 h-4 mr-2" />
                   {isReseller ? 'FINALIZAR LOTE AGORA' : 'COMPRAR AGORA'}
               </Button>
+            </div>
+
+            {/* Simulador de Frete Inteligente */}
+            <div className="bg-[#fcfbf9] border border-[#c59b5f]/20 rounded-2xl p-5 shadow-inner mt-4">
+              <div className="flex items-center gap-3 mb-4">
+                <Truck className="w-5 h-5 text-[#c59b5f]" />
+                <h3 className="font-bold text-gray-900 text-sm">Simulador de Frete e Prazo</h3>
+              </div>
+              <div className="flex gap-2">
+                <input 
+                  type="text" 
+                  placeholder="Seu CEP" 
+                  className="flex-1 bg-white border border-gray-200 text-sm rounded-xl px-4 py-3 focus:outline-none focus:ring-1 focus:ring-[#c59b5f] transition-all"
+                  maxLength={9}
+                />
+                <button className="bg-[#111] hover:bg-black text-white px-5 py-3 rounded-xl text-sm font-bold transition-all">
+                  Calcular
+                </button>
+              </div>
+              <p className="text-xs text-gray-400 mt-3 flex items-center gap-1.5">
+                <Sparkles className="w-3 h-3 text-[#c59b5f]" />
+                Comprando agora, o envio é realizado em até 24 horas úteis.
+              </p>
             </div>
 
             {/* Complete o Look (Cross-sell) */}
