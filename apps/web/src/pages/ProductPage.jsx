@@ -935,7 +935,7 @@ export default function ProductPage() {
         <section className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
           <div className="lg:col-span-5 flex flex-col md:flex-row-reverse gap-4 lg:sticky lg:top-24 h-fit">
             <div
-              className="relative w-full aspect-[9/16] bg-white rounded-3xl overflow-hidden shadow-premium-sm border border-[#c59b5f]/15"
+              className="relative w-full aspect-[3/4] bg-white rounded-3xl overflow-hidden shadow-premium-sm border border-[#c59b5f]/15"
               onMouseEnter={() => setIsZoomed(true)}
               onMouseLeave={() => { setIsZoomed(false); setZoomOrigin('50% 50%'); }}
               onMouseMove={handleMouseMove}
@@ -1020,7 +1020,7 @@ export default function ProductPage() {
                 <button
                   key={idx}
                   onClick={() => setSelectedImageIdx(idx)}
-                  className={`relative w-20 aspect-[9/16] shrink-0 rounded-2xl overflow-hidden transition-all duration-300 ${selectedImageIdx === idx
+                  className={`relative w-20 aspect-[3/4] shrink-0 rounded-2xl overflow-hidden transition-all duration-300 ${selectedImageIdx === idx
                     ? 'ring-2 ring-[#c59b5f] ring-offset-2 scale-[1.02] shadow-md'
                     : 'opacity-60 hover:opacity-100 hover:scale-[1.02] bg-white border border-[#c59b5f]/10'
                     }`}
