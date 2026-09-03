@@ -1267,7 +1267,7 @@ export default function ProductPage() {
                     if (product?.expand?.variacoes_via_produto) {
                       const varForColor = product.expand.variacoes_via_produto.find(v => v.status !== false && v.cor?.trim().toLowerCase() === color.trim().toLowerCase() && v.imagem_url);
                       if (varForColor) {
-                        variationImageUrl = pb.files.getUrl(varForColor, varForColor.imagem_url);
+                        variationImageUrl = pb.files.getUrl(product, varForColor.imagem_url);
                       }
                     }
 
@@ -1288,7 +1288,10 @@ export default function ProductPage() {
                         <span
                           className="w-10 h-10 rounded-full shadow-inner block bg-center bg-cover bg-no-repeat"
                           style={{
-                            background: variationImageUrl ? `url('${variationImageUrl}') center/cover` : (colorHex.includes('hsl') || colorHex.includes('#') ? colorHex : 'linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)'),
+                            backgroundImage: variationImageUrl ? `url('${variationImageUrl}')` : 'none',
+                            backgroundColor: !variationImageUrl ? (colorHex.includes('hsl') || colorHex.includes('#') ? colorHex : 'transparent') : 'transparent',
+                            backgroundSize: 'cover',
+                            backgroundPosition: 'center',
                             border: colorHex === '#FFFFFF' && !variationImageUrl ? '1px solid #e5e7eb' : 'none'
                           }}
                         />
