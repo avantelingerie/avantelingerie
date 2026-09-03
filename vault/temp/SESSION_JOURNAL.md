@@ -11622,3 +11622,73 @@ e replace pb.files.getUrl() with pb.files.getURL()
 ## 2026-09-03 18:44:28.220Z console.warn
 - text: Please replace pb.files.getUrl() with pb.files.getURL()
 
+## 2026-09-03 19:05:31.311Z load
+- url: http://localhost:3000/
+- title: Avante Lingerie | Oficial
+
+## 2026-09-03 19:05:36.610Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-03 19:05:36.617Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-03 19:05:36.920Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/testimonials/records?page=1&perPage=10&filter=status%20%3D%20true&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 294
+
+## 2026-09-03 19:05:36.931Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/testimonials/records?page=1&perPage=10&filter=status%20%3D%20true&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-09-03 19:05:37.224Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-03 19:05:37.227Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-03 19:05:37.229Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-03 19:05:37.263Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-03 19:05:37.264Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-03 19:05:37.305Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-03 19:05:37.305Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-03 19:05:37.334Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-03 19:05:37.336Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-03 19:05:37.349Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-03 19:05:37.350Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-03 19:05:37.366Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-03 19:05:37.367Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-03 19:05:37.386Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-03 19:05:37.387Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
