@@ -1264,8 +1264,8 @@ export default function ProductPage() {
                     
                     // Busca se existe uma imagem real da variação para essa cor (ideal para estampas)
                     let variationImageUrl = null;
-                    if (product?.expand?.variacoes_via_produto) {
-                      const varForColor = product.expand.variacoes_via_produto.find(v => v.status !== false && v.cor?.trim().toLowerCase() === color.trim().toLowerCase() && v.imagem_url);
+                    if (variacoesList && variacoesList.length > 0) {
+                      const varForColor = variacoesList.find(v => v.status !== false && v.cor?.trim().toLowerCase() === color.trim().toLowerCase() && v.imagem_url);
                       if (varForColor) {
                         variationImageUrl = pb.files.getUrl(product, varForColor.imagem_url);
                       }
