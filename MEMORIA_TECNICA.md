@@ -664,3 +664,12 @@ Para nÃ£o esquecermos, aqui estÃ£o os itens congelados e as datas de destrav
 - **Erro de PLP Emitida (Falso-Positivo):** Acontece quando a API recusa a emissão (ex: CEP origem == CEP destino). O Bling trava, marca como 'emitido' no banco local e gera loop infinito.
 - **Duplicidade SEFAZ 539:** Contador dessincronizado. Solução: apagar o campo 'Número' na NF-e e salvar para forçar auto-incremento.
 - **Impressão Térmica:** O padrão legal aceito sem regimes especiais é gerar 2 etiquetas 10x15cm (DANFE Simplificada + Etiqueta de Transporte).
+
+## Atualização: 03/09/2026 - Provador Virtual IA, Pricing Premium, Fixes de UI e Mobile
+- **Provador Virtual IA (Morphing):** Criado o guia guia_geracao_modelos_lia.md e implementado sistema de crossfade no ProvadorVirtual.jsx (ramer-motion) alternando o background (Padrão, Pera, Reta, Triângulo Invertido, Plus Size) com base nas medidas (Busto, Cintura, Quadril). Linhas-guia agora em #e11d48 (efeito Neon) só aparecem quando o respectivo campo ganha foco, evitando sujeira visual.
+- **Bloco de Preço Varejo (ML Style):** Refatorado no ProductPage.jsx exibindo Preço De riscado, Preço Por destacado e Badge Verde (ex: "Baixou 10%") para forçar ancoragem visual Premium.
+- **Bug Fix das Estampas (Bolinhas de Cor):** Corrigido falha onde bolinhas não renderizavam as estampas (como "Preto Mini Flores") pois buscavam de product.expand. Alterado para ler corretamente do estado ariacoesList.
+- **Reversão de Proporção (3:4):** As fotos principais do ProductPage.jsx haviam sido testadas em 9:16 (Stories) mas esmagavam o conteúdo. Voltamos ao "Padrão Ouro Fashion" 3:4 (grid 50/50) (medida recomendada de geração: 1080x1440px). Os ProductCard.jsx na listagem sempre se mantiveram 3:4.
+- **Responsividade (Mobile) do Maps e Vídeo:** No StoreSection.jsx e ResellersSection.jsx, vídeos e iframes sofriam achatamento no celular por herdarem spect-video (16:9). Foi aplicado spect-square (1:1) para telas mobile, garantindo maior altura e tocabilidade.
+- **Simulador de Frete (Mockup Regional):** Inseridas regras de frete no ProductPage.jsx para simular CEPs. CEPs locais (Nova Friburgo) exibem "Retirada na Fábrica" gratuita, enquanto Sul/Sudeste calculam "Melhor Envio".
+
