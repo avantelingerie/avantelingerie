@@ -48,7 +48,7 @@ export default function ResellersSection({ className }) {
             transition={{ duration: 0.8, ease: [0.21, 0.47, 0.32, 0.98] }}
             className="lg:col-span-6 relative w-full order-1"
           >
-            <div className="relative rounded-[2rem] overflow-hidden shadow-xl border border-[#c59b5f]/20 bg-gray-50 aspect-video lg:aspect-[4/5] group">
+            <div className="relative rounded-[2rem] overflow-hidden shadow-xl border border-[#c59b5f]/20 bg-gray-50 aspect-square md:aspect-video lg:aspect-[4/5] group">
               <video
                 src="/video/video_revenda_avante.mp4"
                 className="w-full h-full object-cover"
