@@ -932,8 +932,8 @@ export default function ProductPage() {
           <span className="text-[#c59b5f] font-bold truncate max-w-[200px]">{productName}</span>
         </nav>
 
-        <section className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
-          <div className="lg:col-span-5 flex flex-col md:flex-row-reverse gap-4 lg:sticky lg:top-24 h-fit">
+        <section className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+          <div className="flex flex-col md:flex-row-reverse gap-4 lg:sticky lg:top-24 h-fit">
             <div
               className="relative w-full aspect-[3/4] bg-white rounded-3xl overflow-hidden shadow-premium-sm border border-[#c59b5f]/15"
               onMouseEnter={() => setIsZoomed(true)}
@@ -1052,7 +1052,7 @@ export default function ProductPage() {
           </div>
 
           {/* Direita - Informações */}
-          <div className="lg:col-span-7 flex flex-col space-y-8">
+          <div className="flex flex-col space-y-8">
             <div className="space-y-4">
               <div className="flex items-center gap-3">
                 <span className="text-xs font-bold tracking-widest uppercase text-[#c59b5f] bg-[#c59b5f]/10 px-3 py-1 rounded-full border border-[#c59b5f]/20">
