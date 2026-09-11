@@ -673,3 +673,11 @@ Para nÃƒÂ£o esquecermos, aqui estÃƒÂ£o os itens congelados e as datas de destrav
 - **Responsividade (Mobile) do Maps e VÃ­deo:** No StoreSection.jsx e ResellersSection.jsx, vÃ­deos e iframes sofriam achatamento no celular por herdarem spect-video (16:9). Foi aplicado spect-square (1:1) para telas mobile, garantindo maior altura e tocabilidade.
 - **Simulador de Frete (Mockup Regional):** Inseridas regras de frete no ProductPage.jsx para simular CEPs. CEPs locais (Nova Friburgo) exibem "Retirada na FÃ¡brica" gratuita, enquanto Sul/Sudeste calculam "Melhor Envio".
 
+
+## Sessão ERP - 05/09/2026 (Noite)
+- **Implementação da Nova Metodologia**: Adoção do modelo 'Software House' com Agentes Especializados (Tech Lead, UX Designer, Front-end, etc) sob supervisão de Auditor Final.
+- **App Shell Redesign**: Refatoração pesada no 'Sidebar' e 'Header'. Fundo escuro premium na lateral e Header em vidro fosco (backdrop-blur) seguindo a diretriz visual SaaS (White-label Premium).
+- **Refatoração Interna**: O Agente Front-end adaptou 'Dashboard.jsx', 'Financeiro.jsx' e 'Engenharia.jsx' para usar bordas arredondadas (rounded-3xl), sombras difusas, tabelas clean e componentes minimalistas.
+- **Sistema de Cores (ThemeContext)**: Correção técnica em andamento no Tailwind e ThemeContext para a substituição dinâmica da marca (bug residual da conversão HEX/RGB a ser finalizado na próxima sessão).
+- **Próximos Passos**: Finalizar verificação visual do ThemeContext e dar a largada oficial na Etapa 4 (Lançamento de Corte e Criação de Lotes).
+

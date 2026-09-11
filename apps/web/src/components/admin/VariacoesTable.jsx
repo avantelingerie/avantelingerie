@@ -43,10 +43,15 @@ export default function VariacoesTable({ variacoes = [], onChange, productName =
 
   const generateSKU = (cor, tamanho) => {
     if (!productName || !cor || !tamanho) return '';
-    const baseSlug = productName.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '').substring(0, 10);
-    const corSlug = cor.toLowerCase().replace(/[^a-z0-9]+/g, '-');
-    const tamSlug = tamanho.toUpperCase().replace(/[^A-Z0-9]+/g, '');
-    return `${baseSlug}-${corSlug}-${tamSlug}`.toUpperCase();
+    // Improve baseSlug to avoid easy collisions. E.g. get first 3 words, or just a longer substring.
+    const words = productName.split(' ').filter(w => w.length > 0);
+    let baseSlug = words.slice(0, 3).map(w => w.replace(/[^a-zA-Z0-9]/g, '')).join('-').toLowerCase();
+    if (baseSlug.length > 20) baseSlug = baseSlug.substring(0, 20);
+    if (!baseSlug) baseSlug = 'PROD';
+    
+    const corSlug = cor.toLowerCase().replace(/[^a-z0-9]+/g, '-').substring(0, 15);
+    const tamSlug = tamanho.toUpperCase().replace(/[^A-Z0-9]+/g, '').substring(0, 5);
+    return `${baseSlug}-${corSlug}-${tamSlug}`.toUpperCase().replace(/-+$/, '');
   };
 
   const handleGenerateCombinations = () => {
@@ -261,7 +266,14 @@ export default function VariacoesTable({ variacoes = [], onChange, productName =
                   <tr key={variacao.id} className="hover:bg-[#121212]/30 transition-colors">
                     <td className="px-4 py-3 font-bold uppercase text-[#c59b5f]">{variacao.cor}</td>
                     <td className="px-4 py-3 font-bold text-white">{variacao.tamanho}</td>
-                    <td className="px-4 py-3 font-mono text-gray-400 select-all">{variacao.sku}</td>
+                    <td className="px-4 py-2">
+                      <Input
+                        type="text"
+                        value={variacao.sku || ''}
+                        onChange={(e) => handleInlineChange(variacao.id, 'sku', e.target.value)}
+                        className="h-8 text-xs font-mono bg-[#121212] border-[#c59b5f]/20 text-white focus:border-[#c59b5f] focus-visible:ring-0 focus-visible:ring-offset-0 focus-visible:border-[#c59b5f] focus:outline-none w-32"
+                      />
+                    </td>
 
                     {/* Imagem / Foto selector inline */}
                     <td className="px-4 py-2">
