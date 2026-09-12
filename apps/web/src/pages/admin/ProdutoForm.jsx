@@ -930,7 +930,8 @@ export default function ProdutoForm() {
               variacoes={variacoes} 
               onChange={setVariacoes} 
               productName={formData.name} 
-              productImages={images}
+              productReference={formData.reference}
+              productImages={midias}
             />
           </section>
 

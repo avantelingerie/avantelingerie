@@ -476,10 +476,19 @@ const sincronizarProdutoCompleto = async (req, res) => {
     });
   } catch (error) {
     const errMsg = getBlingErrorMessage(error);
+    const rawError = error.response ? JSON.stringify(error.response.data) : error.message;
     logger.error(`Erro ao cadastrar produto completo no Bling: ${errMsg}`);
+    
+    try {
+      const fs = require('fs');
+      const path = require('path');
+      const logPath = path.join(process.cwd(), 'bling_validation_error.log');
+      fs.writeFileSync(logPath, `[${new Date().toISOString()}] Payload: ${JSON.stringify(parentPayload || {})} \nErro Raw: ${rawError}\n`);
+    } catch(e) { }
+
     return res.status(500).json({
       sucesso: false,
-      erro: `Erro no servidor ao sincronizar com Bling: ${errMsg}`,
+      erro: `Erro no servidor ao sincronizar com Bling: ${errMsg}. DETALHE TÉCNICO OCULTO: ${rawError}`,
     });
   }
 };

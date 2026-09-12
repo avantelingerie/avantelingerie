@@ -5,7 +5,7 @@ import { Input } from '@/components/ui/input.jsx';
 import { Switch } from '@/components/ui/switch.jsx';
 import { toast } from 'sonner';
 
-export default function VariacoesTable({ variacoes = [], onChange, productName = "", productImages = [] }) {
+export default function VariacoesTable({ variacoes = [], onChange, productName = "", productReference = "", productImages = [] }) {
   const getVariationImagePreview = (imgUrlOrId) => {
     if (!imgUrlOrId) return '';
     const imgObj = productImages.find(img =>
@@ -43,15 +43,21 @@ export default function VariacoesTable({ variacoes = [], onChange, productName =
 
   const generateSKU = (cor, tamanho) => {
     if (!productName || !cor || !tamanho) return '';
-    // Improve baseSlug to avoid easy collisions. E.g. get first 3 words, or just a longer substring.
-    const words = productName.split(' ').filter(w => w.length > 0);
-    let baseSlug = words.slice(0, 3).map(w => w.replace(/[^a-zA-Z0-9]/g, '')).join('-').toLowerCase();
-    if (baseSlug.length > 20) baseSlug = baseSlug.substring(0, 20);
-    if (!baseSlug) baseSlug = 'PROD';
     
-    const corSlug = cor.toLowerCase().replace(/[^a-z0-9]+/g, '-').substring(0, 15);
+    // Se o produto tiver uma Referência informada (ex: AVL-CAL-8588), usa ela como base absoluta
+    let baseSlug = '';
+    if (productReference) {
+      baseSlug = productReference.toUpperCase().replace(/[^A-Z0-9-]/g, '');
+    } else {
+      const words = productName.split(' ').filter(w => w.length > 0);
+      baseSlug = words.slice(0, 3).map(w => w.replace(/[^a-zA-Z0-9]/g, '')).join('-').toUpperCase();
+      if (baseSlug.length > 20) baseSlug = baseSlug.substring(0, 20);
+      if (!baseSlug) baseSlug = 'PROD';
+    }
+    
+    const corSlug = cor.toUpperCase().replace(/[^A-Z0-9]+/g, '-').substring(0, 15);
     const tamSlug = tamanho.toUpperCase().replace(/[^A-Z0-9]+/g, '').substring(0, 5);
-    return `${baseSlug}-${corSlug}-${tamSlug}`.toUpperCase().replace(/-+$/, '');
+    return `${baseSlug}-${corSlug}-${tamSlug}`.replace(/-+$/, '');
   };
 
   const handleGenerateCombinations = () => {

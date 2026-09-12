@@ -11,6 +11,12 @@ Antes de iniciar qualquer codificaÃƒÂ§ÃƒÂ£o profunda, **consulte as regr
 
 ---
 
+## 0. Ecossistema de Agentes (Ada + Sentinel)
+O projeto utiliza um ecossistema profissional de agentes definido no AGENTS.md:
+- Ada (Lider Tecnica) coordena: Atlas, Forge, Lumi e Vertice.
+- Sentinel (Auditor Independente) atua como portao de qualidade.
+- O fluxo oficial possui 6 fases: Inspecao, Diagnostico, Execucao, Validacao, Auditoria e Entrega. Nenhuma alteracao e declarada como concluida sem aprovacao do Sentinel baseada em evidencia.
+
 ## 1. Arquitetura do Projeto
 
 ```
