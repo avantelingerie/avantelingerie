@@ -12100,3 +12100,49 @@ e replace pb.files.getUrl() with pb.files.getURL()
 ## 2026-09-23 16:43:04.349Z click
 - element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Gerar Automático"}
 
+## 2026-09-23 16:45:21.742Z load
+- url: http://localhost:3000/admin/produtos/novo
+- title: Avante Lingerie | Oficial
+
+## 2026-09-23 16:50:34.004Z load
+- url: http://localhost:3000/admin/produtos/novo
+- title: Avante Lingerie | Oficial
+
+## 2026-09-23 16:50:41.208Z load
+- url: http://localhost:3000/admin/produtos/novo
+- title: Avante Lingerie | Oficial
+
+## 2026-09-23 16:50:47.866Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Gerado automaticamente pela IA...","label":"Gerado automaticamente pela IA...","value":"","valueLength":0,"text":""}
+
+## 2026-09-23 16:50:48.078Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Gerado automaticamente pela IA...","label":"Gerado automaticamente pela IA...","value":"","valueLength":0,"text":""}
+
+## 2026-09-23 16:51:02.360Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Gerado automaticamente pela IA...","label":"Gerado automaticamente pela IA...","value":"Pijama Short Doll Sueder","valueLength":24,"text":""}
+
+## 2026-09-23 16:51:02.360Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Gerado automaticamente pela IA...","label":"Gerado automaticamente pela IA...","value":"Pijama Short Doll Sueder","valueLength":24,"text":""}
+
+## 2026-09-23 16:51:02.362Z focus
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"","valueLength":0,"text":"Selecionar Categoria...BodyCalcinhaCamisolaCinta ModeladoraConjuntoCroppedPijamaPlus Size"}
+
+## 2026-09-23 16:51:02.575Z click
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"","valueLength":0,"text":"Selecionar Categoria...BodyCalcinhaCamisolaCinta ModeladoraConjuntoCroppedPijamaPlus Size"}
+
+## 2026-09-23 16:51:08.328Z change
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"z7i4vmn1n7io1np","valueLength":15,"text":"Selecionar Categoria...BodyCalcinhaCamisolaCinta ModeladoraConjuntoCroppedPijamaPlus Size"}
+
+## 2026-09-23 16:51:08.333Z click
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"z7i4vmn1n7io1np","valueLength":15,"text":"Selecionar Categoria...BodyCalcinhaCamisolaCinta ModeladoraConjuntoCroppedPijamaPlus Size"}
+
+## 2026-09-23 16:51:11.839Z blur
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"z7i4vmn1n7io1np","valueLength":15,"text":"Selecionar Categoria...BodyCalcinhaCamisolaCinta ModeladoraConjuntoCroppedPijamaPlus Size"}
+
+## 2026-09-23 16:51:12.069Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Gerar Automático"}
+
+## 2026-09-23 16:51:23.228Z load
+- url: http://localhost:3000/admin/produtos/novo
+- title: Avante Lingerie | Oficial
+
