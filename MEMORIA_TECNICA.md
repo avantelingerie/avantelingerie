@@ -693,3 +693,7 @@ Para nÃ£o esquecermos, aqui estÃ£o os itens congelados e as datas de destrav
 - **Sistema de Cores (ThemeContext)**: Corre��o t�cnica em andamento no Tailwind e ThemeContext para a substitui��o din�mica da marca (bug residual da convers�o HEX/RGB a ser finalizado na pr�xima sess�o).
 - **Pr�ximos Passos**: Finalizar verifica��o visual do ThemeContext e dar a largada oficial na Etapa 4 (Lan�amento de Corte e Cria��o de Lotes).
 
+
+### Entrega da Ada (23/09/2026): NCM e Vitrine de Home
+- **NCM Inteligente:** Removida a obrigatoriedade do NCM por categoria no admin. Agora, no cadastro do produto (ProdutoForm.jsx), o campo NCM e preenchido automaticamente (React OnChange) analisando o tecido no titulo (ex: Suede/Sintetico -> 6108.32.00, Algodao -> 6208.21.00).
+- **Carrossel da Home:** A propriedade video_capa agora suporta multiplas URLs separadas por virgula. Adicionado o componente CategoryMedia em HomePage.jsx para processar a transicao de opacidade a cada 7 segundos, criando uma vitrine rotativa.
