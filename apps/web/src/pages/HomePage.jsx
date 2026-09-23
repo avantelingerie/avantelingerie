@@ -40,7 +40,7 @@ const CategoryMedia = ({ video_capa, image, name }) => {
     if (videos.length <= 1) return;
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % videos.length);
-    }, 4000); // 4 segundos
+    }, 7000); // 7 segundos
     return () => clearInterval(interval);
   }, [videos.length]);
 
