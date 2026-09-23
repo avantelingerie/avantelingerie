@@ -32,6 +32,46 @@ const getHeroVideoForToday = () => {
   return `/video/${videos[videoIndex]}`;
 };
 
+const CategoryMedia = ({ video_capa, image, name }) => {
+  const videos = video_capa ? video_capa.split(',').map(v => v.trim()).filter(Boolean) : [];
+  const [currentIndex, setCurrentIndex] = React.useState(0);
+
+  React.useEffect(() => {
+    if (videos.length <= 1) return;
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % videos.length);
+    }, 4000); // 4 segundos
+    return () => clearInterval(interval);
+  }, [videos.length]);
+
+  if (videos.length === 0) {
+    return (
+      <img
+        src={image}
+        alt={name}
+        className="w-full h-full object-contain transition-transform duration-700 ease-in-out group-hover/card:scale-105 brightness-[1.05] contrast-[1.05] md:brightness-110 md:contrast-110"
+        loading="lazy"
+      />
+    );
+  }
+
+  return (
+    <div className="relative w-full h-full bg-white">
+      {videos.map((vid, idx) => (
+        <video
+          key={idx}
+          src={vid}
+          className={`absolute inset-0 w-full h-full object-contain transition-opacity duration-1000 ease-in-out group-hover/card:scale-105 brightness-[1.05] contrast-[1.05] md:brightness-110 md:contrast-110 ${idx === currentIndex ? 'opacity-100 z-10' : 'opacity-0 z-0'}`}
+          autoPlay
+          loop
+          muted
+          playsInline
+        />
+      ))}
+    </div>
+  );
+};
+
 export default function HomePage() {
   const [loading, setLoading] = useState(true);
   const [currentHeroVideo] = useState(getHeroVideoForToday());
@@ -288,23 +328,7 @@ export default function HomePage() {
                   <a href={cat.link} onClick={(e) => { e.preventDefault(); navigate(cat.link); }} className="block h-full outline-none">
                     <div className="relative transition-all duration-500 group/card h-full flex flex-col hover:-translate-y-2 bg-white">
                       <div className="relative aspect-[3/4] bg-white overflow-hidden">
-                        {cat.video_capa ? (
-                          <video
-                            src={cat.video_capa}
-                            className="w-full h-full object-contain transition-transform duration-700 ease-in-out group-hover/card:scale-105 brightness-[1.05] contrast-[1.05] md:brightness-110 md:contrast-110"
-                            autoPlay
-                            loop
-                            muted
-                            playsInline
-                          />
-                        ) : (
-                          <img
-                            src={cat.image}
-                            alt={cat.name}
-                            className="w-full h-full object-contain transition-transform duration-700 ease-in-out group-hover/card:scale-105 brightness-[1.05] contrast-[1.05] md:brightness-110 md:contrast-110"
-                            loading="lazy"
-                          />
-                        )}
+                        <CategoryMedia video_capa={cat.video_capa} image={cat.image} name={cat.name} />
                         {/* Removido o gradiente branco para evitar a "sombra" ou névoa sobre os vídeos */}
                         <div className="absolute bottom-0 left-0 right-0 p-6 text-center transform transition-all duration-500">
                           <h3 className="text-gray-900 font-serif text-2xl font-semibold tracking-wider">{cat.name}</h3>

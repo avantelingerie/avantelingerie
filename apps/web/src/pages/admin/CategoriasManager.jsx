@@ -167,7 +167,7 @@ export default function CategoriasManager() {
                 <tr className="bg-primary/5">
                   <td className="px-4 py-3"><Input value={formData.nome} onChange={(e) => handleFieldChange('nome', e.target.value)} placeholder="Ex: Lingerie Renda" className="h-9" /></td>
                   <td className="px-4 py-3"><Input value={formData.slug} onChange={(e) => handleFieldChange('slug', e.target.value)} placeholder="lingerie-renda" className="h-9" /></td>
-                  <td className="px-4 py-3"><Input value={formData.video_capa} onChange={(e) => handleFieldChange('video_capa', e.target.value)} placeholder="URL do MP4" className="h-9" /></td>
+                  <td className="px-4 py-3"><Input value={formData.video_capa} onChange={(e) => handleFieldChange('video_capa', e.target.value)} placeholder="URLs dos vídeos (separe por vírgula)" className="h-9" /></td>
                   
                   <td className="px-4 py-3"><Switch checked={formData.ativo} onCheckedChange={(c) => handleFieldChange('ativo', c)} /></td>
                   <td className="px-4 py-3 text-right">
@@ -184,7 +184,7 @@ export default function CategoriasManager() {
                   <tr key={cat.id} className="bg-muted/30">
                     <td className="px-4 py-3"><Input value={formData.nome} onChange={(e) => handleFieldChange('nome', e.target.value)} className="h-9" /></td>
                     <td className="px-4 py-3"><Input value={formData.slug} onChange={(e) => handleFieldChange('slug', e.target.value)} className="h-9" /></td>
-                    <td className="px-4 py-3"><Input value={formData.video_capa || ''} onChange={(e) => handleFieldChange('video_capa', e.target.value)} placeholder="URL do MP4" className="h-9" /></td>
+                    <td className="px-4 py-3"><Input value={formData.video_capa || ''} onChange={(e) => handleFieldChange('video_capa', e.target.value)} placeholder="URLs dos vídeos (separe por vírgula)" className="h-9" /></td>
                     
                     <td className="px-4 py-3"><Switch checked={formData.ativo} onCheckedChange={(c) => handleFieldChange('ativo', c)} /></td>
                     <td className="px-4 py-3 text-right">
