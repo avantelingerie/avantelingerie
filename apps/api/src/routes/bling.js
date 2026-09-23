@@ -275,17 +275,7 @@ const sincronizarProdutoCompleto = async (req, res) => {
     const product = await pb.collection('products').getOne(produto_id);
 
     // Buscar a categoria para obter o NCM inteligente
-    let categoryNcm = '';
-    if (product.categoria_id) {
-      try {
-        const category = await pb.collection('categorias').getOne(product.categoria_id);
-        if (category.ncm) {
-          categoryNcm = category.ncm.replace(/\D/g, ''); // Bling prefere apenas números
-        }
-      } catch (err) {
-        logger.warn(`Aviso: não foi possível obter o NCM da categoria: ${err.message}`);
-      }
-    }
+    const produtoNcm = product.ncm ? product.ncm.replace(/\\D/g, '') : '';
 
     // 2. Fetch variations from PocketBase
     const variations = await pb.collection('variacoes').getFullList({
@@ -325,7 +315,7 @@ const sincronizarProdutoCompleto = async (req, res) => {
           profundidade: parseFloat(product.comprimento_cm) || 15,
           unidadeMedida: 1 // 1 = Centímetros
         },
-        tributacao: categoryNcm ? { ncm: categoryNcm } : undefined,
+        tributacao: produtoNcm ? { ncm: produtoNcm } : undefined,
         estoque: {
           quantidade: variation.estoque || 0
         },
@@ -374,7 +364,7 @@ const sincronizarProdutoCompleto = async (req, res) => {
           profundidade: parseFloat(product.comprimento_cm) || 15,
           unidadeMedida: 1 // 1 = Centímetros
         },
-        tributacao: categoryNcm ? { ncm: categoryNcm } : undefined,
+        tributacao: produtoNcm ? { ncm: produtoNcm } : undefined,
         descricaoCurta: product.description || '',
         variacoes: blingVariacoes
       };

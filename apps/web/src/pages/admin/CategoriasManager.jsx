@@ -13,7 +13,7 @@ export default function CategoriasManager() {
 
   const [isAdding, setIsAdding] = useState(false);
   const [editingId, setEditingId] = useState(null);
-  const [formData, setFormData] = useState({ nome: '', slug: '', ativo: true, ncm: '', video_capa: '' });
+  const [formData, setFormData] = useState({ nome: '', slug: '', ativo: true, video_capa: '' });
 
   useEffect(() => {
     fetchCategorias();
@@ -44,28 +44,20 @@ export default function CategoriasManager() {
       .replace(/(^-|-$)+/g, '');
   };
 
-  const guessNcm = (nome) => {
-    const text = nome.toLowerCase();
-    if (text.includes('suti') || text.includes('conjunt') || text.includes('corpet')) return '6212.10.00';
-    if (text.includes('calcinha') || text.includes('cinta') || text.includes('fio')) return '6212.20.00';
-    if (text.includes('pijama') || text.includes('camisola') || text.includes('baby') || text.includes('robe') || text.includes('short doll')) return '6208.21.00';
-    if (text.includes('praia') || text.includes('biquini') || text.includes('maiô') || text.includes('maio')) return '6112.41.00';
-    if (text.includes('body')) return '6114.30.00';
-    return '6109.90.00'; // Default vestuário íntimo/genérico
-  };
+  
 
   const handleFieldChange = (field, value) => {
     const updated = { ...formData, [field]: value };
     if (field === 'nome' && isAdding) {
       updated.slug = generateSlug(value);
-      updated.ncm = guessNcm(value);
+      
     }
     setFormData(updated);
   };
 
   const handleAddClick = () => {
     setIsAdding(true);
-    setFormData({ nome: '', slug: '', ativo: true, ncm: '', video_capa: '' });
+    setFormData({ nome: '', slug: '', ativo: true, video_capa: '' });
     setEditingId(null);
   };
 
@@ -75,7 +67,7 @@ export default function CategoriasManager() {
       nome: cat.nome,
       slug: cat.slug,
       ativo: cat.ativo,
-      ncm: cat.ncm || guessNcm(cat.nome)
+      
     });
     setIsAdding(false);
   };
@@ -92,9 +84,7 @@ export default function CategoriasManager() {
     }
 
     const payload = { ...formData };
-    if (!payload.ncm) {
-      payload.ncm = guessNcm(payload.nome);
-    }
+    
 
     try {
       if (isAdding) {
@@ -147,7 +137,7 @@ export default function CategoriasManager() {
                 <th className="px-6 py-4 font-medium w-1/5">Nome da Categoria</th>
                 <th className="px-6 py-4 font-medium w-1/5">URL (Slug)</th>
                 <th className="px-6 py-4 font-medium w-1/5">URL do Vídeo</th>
-                <th className="px-6 py-4 font-medium w-32">NCM (Fiscal)</th>
+                
                 <th className="px-6 py-4 font-medium w-24">Status</th>
                 <th className="px-6 py-4 font-medium text-right w-24">Ações</th>
               </tr>
@@ -178,7 +168,7 @@ export default function CategoriasManager() {
                   <td className="px-4 py-3"><Input value={formData.nome} onChange={(e) => handleFieldChange('nome', e.target.value)} placeholder="Ex: Lingerie Renda" className="h-9" /></td>
                   <td className="px-4 py-3"><Input value={formData.slug} onChange={(e) => handleFieldChange('slug', e.target.value)} placeholder="lingerie-renda" className="h-9" /></td>
                   <td className="px-4 py-3"><Input value={formData.video_capa} onChange={(e) => handleFieldChange('video_capa', e.target.value)} placeholder="URL do MP4" className="h-9" /></td>
-                  <td className="px-4 py-3"><Input value={formData.ncm} onChange={(e) => handleFieldChange('ncm', e.target.value)} placeholder="Auto" className="h-9 font-mono" /></td>
+                  
                   <td className="px-4 py-3"><Switch checked={formData.ativo} onCheckedChange={(c) => handleFieldChange('ativo', c)} /></td>
                   <td className="px-4 py-3 text-right">
                     <div className="flex items-center justify-end gap-2">
@@ -195,7 +185,7 @@ export default function CategoriasManager() {
                     <td className="px-4 py-3"><Input value={formData.nome} onChange={(e) => handleFieldChange('nome', e.target.value)} className="h-9" /></td>
                     <td className="px-4 py-3"><Input value={formData.slug} onChange={(e) => handleFieldChange('slug', e.target.value)} className="h-9" /></td>
                     <td className="px-4 py-3"><Input value={formData.video_capa || ''} onChange={(e) => handleFieldChange('video_capa', e.target.value)} placeholder="URL do MP4" className="h-9" /></td>
-                    <td className="px-4 py-3"><Input value={formData.ncm} onChange={(e) => handleFieldChange('ncm', e.target.value)} className="h-9 font-mono" /></td>
+                    
                     <td className="px-4 py-3"><Switch checked={formData.ativo} onCheckedChange={(c) => handleFieldChange('ativo', c)} /></td>
                     <td className="px-4 py-3 text-right">
                       <div className="flex items-center justify-end gap-2">
@@ -209,7 +199,7 @@ export default function CategoriasManager() {
                     <td className="px-4 py-4 font-medium">{cat.nome}</td>
                     <td className="px-4 py-4 font-mono text-sm text-muted-foreground">{cat.slug}</td>
                     <td className="px-4 py-4 font-mono text-xs text-muted-foreground overflow-hidden max-w-[150px] truncate" title={cat.video_capa}>{cat.video_capa ? 'Tem vídeo' : '-'}</td>
-                    <td className="px-4 py-4 font-mono text-xs text-muted-foreground">{cat.ncm || <span className="text-orange-400">Pendente</span>}</td>
+                    
                     <td className="px-4 py-4">
                       <span className={`inline-flex items-center px-2 py-0.5 rounded text-xs font-medium ${cat.ativo ? 'bg-green-100 text-green-800' : 'bg-muted text-muted-foreground'}`}>
                         {cat.ativo ? 'Ativo' : 'Inativo'}

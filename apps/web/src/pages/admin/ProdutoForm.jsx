@@ -26,6 +26,7 @@ export default function ProdutoForm() {
   const [formData, setFormData] = useState({
     name: '',
     categoria_id: '',
+    ncm: "",
     status: true,
     price: '',
     price_wholesale: '',
@@ -154,7 +155,8 @@ export default function ProdutoForm() {
       const record = await pb.collection('products').getOne(id, { $autoCancel: false });
       setFormData({
         name: record.name || '',
-        categoria_id: record.categoria_id || '',
+        categoria_id: record.categoria_id || "",
+          ncm: record.ncm || "",
         status: record.status !== false,
         price: record.price || '',
         price_wholesale: record.price_wholesale || '',
@@ -218,6 +220,19 @@ export default function ProdutoForm() {
     }
   };
 
+  
+  const guessNcm = (nome) => {
+    const text = nome.toLowerCase();
+    if (text.includes('suede') || text.includes('renda') || text.includes('sintético')) {
+      if (text.includes('pijama') || text.includes('baby') || text.includes('camisola') || text.includes('robe') || text.includes('short doll')) return '6108.32.00';
+    }
+    if (text.includes('pijama') || text.includes('baby') || text.includes('camisola') || text.includes('robe') || text.includes('short doll')) return '6208.21.00';
+    if (text.includes('suti') || text.includes('conjunt') || text.includes('corpet')) return '6212.10.00';
+    if (text.includes('calcinha') || text.includes('cinta') || text.includes('fio')) return '6212.20.00';
+    if (text.includes('praia') || text.includes('biquini') || text.includes('mai')) return '6112.41.00';
+    if (text.includes('body')) return '6114.30.00';
+    return '6109.90.00';
+  };
   const handleInputChange = (field, value) => {
     setFormData(prev => {
       const updated = { ...prev, [field]: value };
