@@ -55,13 +55,26 @@ const CategoryMedia = ({ video_capa, image, name }) => {
     );
   }
 
+  if (videos.length === 1) {
+    return (
+      <video
+        src={videos[0]}
+        className="w-full h-full object-contain transition-transform duration-700 ease-in-out group-hover/card:scale-105 brightness-[1.05] contrast-[1.05] md:brightness-110 md:contrast-110"
+        autoPlay
+        loop
+        muted
+        playsInline
+      />
+    );
+  }
+
   return (
     <div className="relative w-full h-full bg-white">
       {videos.map((vid, idx) => (
         <video
           key={idx}
           src={vid}
-          className={`absolute inset-0 w-full h-full object-contain transition-opacity duration-1000 ease-in-out group-hover/card:scale-105 brightness-[1.05] contrast-[1.05] md:brightness-110 md:contrast-110 ${idx === currentIndex ? 'opacity-100 z-10' : 'opacity-0 z-0'}`}
+          className={`absolute inset-0 w-full h-full object-contain transition-opacity duration-1000 ease-in-out group-hover/card:scale-105 brightness-[1.05] contrast-[1.05] md:brightness-110 md:contrast-110 ${idx === currentIndex ? 'opacity-100' : 'opacity-0'}`}
           autoPlay
           loop
           muted
