@@ -330,7 +330,7 @@ export default function HomePage() {
                       <div className="relative aspect-[3/4] bg-white overflow-hidden">
                         <CategoryMedia video_capa={cat.video_capa} image={cat.image} name={cat.name} />
                         {/* Removido o gradiente branco para evitar a "sombra" ou névoa sobre os vídeos */}
-                        <div className="absolute bottom-0 left-0 right-0 p-6 text-center transform transition-all duration-500">
+                        <div className="absolute bottom-0 left-0 right-0 p-6 text-center transform transition-all duration-500 z-20 pointer-events-none">
                           <h3 className="text-gray-900 font-serif text-2xl font-semibold tracking-wider">{cat.name}</h3>
                           <div className="w-8 h-0.5 bg-[#c59b5f] mx-auto mt-3 rounded-full opacity-0 group-hover/card:opacity-100 transition-opacity duration-500 shadow-sm"></div>
                         </div>
