@@ -705,3 +705,6 @@ Para nÃ£o esquecermos, aqui estÃ£o os itens congelados e as datas de destrav
 ## Atualização [24/09/2026] - RAG da Lia e Limites da Home
 - **Fix (Lia RAG):** O bot da Lia estava tentando ler a tabela produtos (que não existia) para seu contexto RAG. Corrigido para products e adicionada a leitura da tabela categorias. Agora a Lia consegue gerar os links absolutos corretos (/produto/slug e /categoria/slug) baseada no estoque real da loja.
 - **Fix (Home Page):** Atualizado o limite da vitrine de produtos na Home de 4 para 8 itens (criando duas linhas responsivas). Além de alterar a API getList(1, 8), foi necessário remover os limitadores visuais .slice(0, 4) que estavam fixos no Frontend HomePage.jsx.
+
+## Atualização [24/09/2026] - IA da Lia: Provador Virtual (Ferramenta)
+- **Feat (Lia):** Adicionada a capacidade de Function Calling para cálculo matemático de tamanho (Provador Virtual). A Lia agora possui uma ferramenta calcular_tamanho_ideal que roda a exata mesma fórmula biométrica do frontend (Sutiã, Jeans, Peso, Altura -> IMC + Score) e retorna a medida precisa (P, M, G, GG). Isso previne a IA de inventar lógicas soltas de tamanho e aumenta a confiança na recomendação.
