@@ -370,13 +370,13 @@ IMPORTANTE: Retorne ESTRITAMENTE em formato JSON puro, sem crases de markdown (\
   "desc_compra_segura": "..."
 }`;
 
-    const trials = [
-      { version: 'v1', model: 'gemini-2.5-flash' },
-      { version: 'v1beta', model: 'gemini-2.5-flash' },
-      { version: 'v1', model: 'gemini-3.5-flash' },
-      { version: 'v1beta', model: 'gemini-3.5-flash' },
-      { version: 'v1', model: 'gemini-2.5-flash-lite' },
-      { version: 'v1', model: 'gemini-3.1-flash-lite' }
+     const trials = [
+      { version: 'v1', model: 'gemini-3.6-flash' },
+      { version: 'v1beta', model: 'gemini-3.6-flash' },
+      { version: 'v1', model: 'gemini-3.7-flash' },
+      { version: 'v1beta', model: 'gemini-3.7-flash' },
+      { version: 'v1', model: 'gemini-3.8-flash' },
+      { version: 'v1beta', model: 'gemini-2.5-pro' }
     ];
     const errors = {};
     let response = null;
