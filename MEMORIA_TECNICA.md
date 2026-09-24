@@ -708,3 +708,5 @@ Para nÃ£o esquecermos, aqui estÃ£o os itens congelados e as datas de destrav
 
 ## Atualização [24/09/2026] - IA da Lia: Provador Virtual (Ferramenta)
 - **Feat (Lia):** Adicionada a capacidade de Function Calling para cálculo matemático de tamanho (Provador Virtual). A Lia agora possui uma ferramenta calcular_tamanho_ideal que roda a exata mesma fórmula biométrica do frontend (Sutiã, Jeans, Peso, Altura -> IMC + Score) e retorna a medida precisa (P, M, G, GG). Isso previne a IA de inventar lógicas soltas de tamanho e aumenta a confiança na recomendação.
+
+- **Feat (Lia):** Adicionada ferramenta `salvar_lead_contato` (CRM VIP). A Lia agora pode captar ativamente o WhatsApp de clientes que desejam falar com humanos, revendedoras ou que buscam peças fora de estoque. O sistema tenta salvar em uma tabela `leads_atendimento` no PocketBase ou registra no log interno da API, e a Lia informa que o gerente entrará em contato em breve.
