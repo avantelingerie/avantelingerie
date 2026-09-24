@@ -146,11 +146,11 @@ export default function HomePage() {
         }));
 
         const [maisVendidosRes, favoritesRes, promosRes, newArrivalsRes, kitsRes, testimonialsRes, colecoesRes] = await Promise.allSettled([
-          pb.collection('products').getList(1, 4, { filter: 'status = true && is_mais_vendido = true', sort: '-created', expand: 'categoria_id', $autoCancel: false }),
-          pb.collection('products').getList(1, 4, { filter: 'status = true && is_favorito = true', sort: '-created', expand: 'categoria_id', $autoCancel: false }),
-          pb.collection('products').getList(1, 4, { filter: 'status = true && is_promocao = true', sort: '-created', expand: 'categoria_id', $autoCancel: false }),
-          pb.collection('products').getList(1, 4, { filter: 'status = true && is_novidade = true', sort: '-created', expand: 'categoria_id', $autoCancel: false }),
-          pb.collection('products').getList(1, 4, { filter: 'status = true && categoria_id.slug = "kits"', sort: '-created', expand: 'categoria_id', $autoCancel: false }),
+          pb.collection('products').getList(1, 8, { filter: 'status = true && is_mais_vendido = true', sort: '-created', expand: 'categoria_id', $autoCancel: false }),
+          pb.collection('products').getList(1, 8, { filter: 'status = true && is_favorito = true', sort: '-created', expand: 'categoria_id', $autoCancel: false }),
+          pb.collection('products').getList(1, 8, { filter: 'status = true && is_promocao = true', sort: '-created', expand: 'categoria_id', $autoCancel: false }),
+          pb.collection('products').getList(1, 8, { filter: 'status = true && is_novidade = true', sort: '-created', expand: 'categoria_id', $autoCancel: false }),
+          pb.collection('products').getList(1, 8, { filter: 'status = true && categoria_id.slug = "kits"', sort: '-created', expand: 'categoria_id', $autoCancel: false }),
           pb.collection('testimonials').getList(1, 10, { filter: 'status = true', sort: '-created', $autoCancel: false }),
           pb.collection('colecoes').getList(1, 3, { filter: 'ativo = true', sort: '-created', $autoCancel: false })
         ]);
