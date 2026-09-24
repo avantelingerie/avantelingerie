@@ -7,3 +7,8 @@ apps/pocketbase-app/node_modules
 .env
 .DS_Store
 dist
+
+public_media
+pb_data
+pb_public
+apps/pocketbase/pb_data
