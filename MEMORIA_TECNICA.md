@@ -698,3 +698,6 @@ Para nÃ£o esquecermos, aqui estÃ£o os itens congelados e as datas de destrav
 - **NCM Inteligente:** Removida a obrigatoriedade do NCM por categoria no admin. Agora, no cadastro do produto (ProdutoForm.jsx), o campo NCM e preenchido automaticamente (React OnChange) analisando o tecido no titulo (ex: Suede/Sintetico -> 6108.32.00, Algodao -> 6208.21.00).
 - **Hotfix (UI):** Correção do empilhamento (z-index) no card da categoria. O Componente CategoryMedia foi ajustado para manter o vídeo no fluxo normal caso haja apenas 1 vídeo, evitando que a tag absolute ocultasse os títulos (nomes das categorias) da vitrine.
 - **Carrossel da Home:** A propriedade video_capa agora suporta multiplas URLs separadas por virgula. Adicionado o componente CategoryMedia em HomePage.jsx para processar a transicao de opacidade a cada 7 segundos, criando uma vitrine rotativa.
+
+## Atualização [24/09/2026] - Manutenção de Integrações
+- **Hotfix (Backend):** Atualização dos modelos da API do Gemini. O Google descontinuou o modelo gemini-2.5-flash para novas contas. O array de fallback em integracoes.js foi atualizado para apontar para as versões 3.6-flash, 3.7-flash, etc. Deploy realizado na VPS via GitHub Actions com sucesso.
