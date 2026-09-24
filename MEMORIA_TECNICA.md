@@ -701,3 +701,7 @@ Para nÃ£o esquecermos, aqui estÃ£o os itens congelados e as datas de destrav
 
 ## Atualização [24/09/2026] - Manutenção de Integrações
 - **Hotfix (Backend):** Atualização dos modelos da API do Gemini. O Google descontinuou o modelo gemini-2.5-flash para novas contas. O array de fallback em integracoes.js foi atualizado para apontar para as versões 3.6-flash, 3.7-flash, etc. Deploy realizado na VPS via GitHub Actions com sucesso.
+
+## Atualização [24/09/2026] - RAG da Lia e Limites da Home
+- **Fix (Lia RAG):** O bot da Lia estava tentando ler a tabela produtos (que não existia) para seu contexto RAG. Corrigido para products e adicionada a leitura da tabela categorias. Agora a Lia consegue gerar os links absolutos corretos (/produto/slug e /categoria/slug) baseada no estoque real da loja.
+- **Fix (Home Page):** Atualizado o limite da vitrine de produtos na Home de 4 para 8 itens (criando duas linhas responsivas). Além de alterar a API getList(1, 8), foi necessário remover os limitadores visuais .slice(0, 4) que estavam fixos no Frontend HomePage.jsx.
