@@ -60,22 +60,19 @@ async function getLiaKnowledge() {
 // Helper para buscar o catálogo de produtos e injetar como contexto
 async function getLiaProducts() {
   try {
-    const products = await pb.collection('produtos').getFullList({
-      filter: 'ativo = true'
-    });
-    
-    if (products.length === 0) return '';
-
-    let catalogText = 'CATÁLOGO DE PRODUTOS DISPONÍVEIS (Use esses dados para recomendar e tirar dúvidas sobre preço/tecido):\n';
-    products.forEach(p => {
-      catalogText += `- Produto: ${p.nome} | Preço: R$ ${Number(p.preco).toFixed(2)} | Tecido: ${p.tecido || 'Não especificado'} | URL: /produto/${p.slug}\n`;
-    });
-    
+    let catalogText = 'CATÁLOGO DA LOJA (USE PARA GERAR LINKS EXATOS NO MARKDOWN):\n\n';
+    try {
+      const cats = await pb.collection('categorias').getFullList({ filter: 'ativo = true' });
+      catalogText += 'CATEGORIAS:\n';
+      cats.forEach(c => { catalogText += '- ' + c.nome + ' | URL: /categoria/' + c.slug + '\n'; });
+    } catch(e) {}
+    try {
+      const prods = await pb.collection('products').getFullList({ filter: 'status = true' });
+      catalogText += '\nPRODUTOS:\n';
+      prods.forEach(p => { catalogText += '- ' + (p.name || p.nome) + ' | URL: /produto/' + p.slug + '\n'; });
+    } catch(e) {}
     return catalogText;
-  } catch (err) {
-    logger.error(`Aviso RAG de Produtos: ${err.message}`);
-    return ''; // Falha silenciosamente se a tabela não existir no lab local
-  }
+  } catch (err) { return ''; }
 }
 
 // Helper para buscar as configurações globais de descontos e atacado
