@@ -383,7 +383,7 @@ export default function HomePage() {
             <ProductGridSkeleton count={4} />
           ) : (
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 relative z-10">
-              {data.maisVendidos.slice(0, 4).map(p => (
+              {data.maisVendidos.slice(0, 8).map(p => (
                 <ProductCard key={p.id} produto={p} onComprarAgora={handleComprarAgora} onFavorite={handleFavoriteToggle} />
               ))}
             </div>
@@ -581,7 +581,7 @@ export default function HomePage() {
             <ProductGridSkeleton count={4} />
           ) : (
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-              {data.favorites.slice(0, 4).map(p => (
+              {data.favorites.slice(0, 8).map(p => (
                 <ProductCard key={p.id} produto={p} onComprarAgora={handleComprarAgora} onFavorite={handleFavoriteToggle} />
               ))}
             </div>
@@ -605,7 +605,7 @@ export default function HomePage() {
               <div className="w-16 h-0.5 bg-[#c59b5f] mx-auto mt-4 rounded-full"></div>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-              {data.promos.slice(0, 4).map(p => (
+              {data.promos.slice(0, 8).map(p => (
                 <ProductCard key={p.id} produto={p} onComprarAgora={handleComprarAgora} onFavorite={handleFavoriteToggle} />
               ))}
             </div>
@@ -680,7 +680,7 @@ export default function HomePage() {
             <ProductGridSkeleton count={4} />
           ) : (
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-              {data.newArrivals.slice(0, 4).map(p => (
+              {data.newArrivals.slice(0, 8).map(p => (
                 <ProductCard key={p.id} produto={p} onComprarAgora={handleComprarAgora} onFavorite={handleFavoriteToggle} />
               ))}
             </div>
