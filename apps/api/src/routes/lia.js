@@ -69,7 +69,7 @@ async function getLiaProducts() {
     try {
       const prods = await pb.collection('products').getFullList({ filter: 'status = true' });
       catalogText += '\nPRODUTOS:\n';
-      prods.forEach(p => { catalogText += '- ' + (p.name || p.nome) + ' | URL: /produto/' + p.slug + '\n'; });
+      prods.forEach(p => { catalogText += '- ' + (p.name || p.nome) + ' | URL: /produto/' + p.id + '\n'; });
     } catch(e) {}
     return catalogText;
   } catch (err) { return ''; }
@@ -456,7 +456,7 @@ LINKS OBRIGATÓRIOS (CRÍTICO):
 Sempre que falar sobre revenda, produtos ou o catálogo, VOCÊ DEVE enviar o link completo na resposta. Nunca mande o cliente "clicar no menu".
 - Link para Revenda: https://avantelingerie.com.br/revenda
 - Link para o Catálogo Geral: https://avantelingerie.com.br/shop
-- Para um produto específico: https://avantelingerie.com.br/produto/slug (substitua 'slug' pela URL do catálogo abaixo).
+- Para um produto específico: https://avantelingerie.com.br/produto/ID_DO_PRODUTO (CRÍTICO: Copie o ID EXATAMENTE como está no catálogo, não misture os links!).
 
 ${catalogContext}
 
@@ -510,3 +510,4 @@ ${knowledgeContext}
 });
 
 export default router;
+
