@@ -21,6 +21,7 @@ import OrderConfirmation from '@/pages/OrderConfirmation.jsx';
 import CategoryPage from '@/pages/CategoryPage.jsx';
 import ComingSoonPage from '@/pages/ComingSoonPage.jsx';
 import CookieBanner from '@/components/CookieBanner.jsx';
+import WelcomeModal from '@/components/WelcomeModal.jsx';
 import CentralDaClientePage from '@/pages/CentralDaClientePage.jsx';
 import ContactPage from '@/pages/ContactPage.jsx';
 import RastreioPage from '@/pages/RastreioPage.jsx';
@@ -302,6 +303,7 @@ export default function App() {
             <ScrollToTop />
             <AppInterceptor />
             <CookieBanner />
+            <WelcomeModal />
             <Toaster position="bottom-right" richColors />
           </AdminAuthProvider>
         </AuthProvider>
