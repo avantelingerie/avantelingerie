@@ -713,3 +713,8 @@ Para nÃ£o esquecermos, aqui estÃ£o os itens congelados e as datas de destrav
 
 - **Bugfix (Lia):** Corrigida a alucinação de links do catálogo (ex: trocar link de Body por Pijama). O sistema estava gerando URLs baseadas em `slug`, mas o React Router (`App.jsx`) esperava o `id` da PocketBase. O prompt foi reforçado com a flag CRÍTICA para a IA copiar o ID de forma exata e não embaralhar os dados.
 - **Infraestrutura:** Resolvido o erro `no space left on device` na VPS (Hostinger). A pasta `public_media` (vídeos) foi adicionada ao `.dockerignore` para não inflar a imagem, e o pipeline de deploy (`deploy.yml`) agora roda `docker system prune -f` a cada atualização, mantendo o SSD sempre limpo.
+
+### 28/09/2026 - Conquistas de Marketing
+- **Estratégia B2C/B2B Definida:** Registramos no documento de tráfego a abordagem focada em revenda (margem de lucro) vs varejo (luxo acessível).
+- **Google Merchant Center:** Configuramos 100% da conta (URLs, frete taxa fixa para contornar limitações do robô, política de devolução do CDC de 7 dias, etc). O Feed XML dinâmico já está plugado aguardando a aprovação de 3 dias do Google.
+- **Modal de Boas-Vindas (Exit Intent):** Implementamos o popup WelcomeModal.jsx no App.jsx com a arte premium de revenda. Adicionamos a lógica de localStorage para disparar apenas na primeira visita (delay de 1.5s). O fundo transparente (PNG) já está no código, aguardando o próximo push do Bot do Git para ir ao ar.
