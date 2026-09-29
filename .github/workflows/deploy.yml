@@ -20,6 +20,6 @@ jobs:
           script: |
             cd /root/avantelingerie
             git pull
-            docker system prune -f
+            docker system prune -a -f
             docker compose up -d --build
 
