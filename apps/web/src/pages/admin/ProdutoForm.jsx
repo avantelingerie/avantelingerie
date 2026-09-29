@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { ArrowLeft, Save, X, Plus, Trash2, Loader2, Image as ImageIcon, Sparkles, RefreshCw } from 'lucide-react';
+import { ArrowLeft, Save, X, Plus, Trash2, Loader2, Image as ImageIcon, Sparkles, RefreshCw, Calculator } from 'lucide-react';
 import { Button } from '@/components/ui/button.jsx';
 import { Input } from '@/components/ui/input.jsx';
 import { Textarea } from '@/components/ui/textarea.jsx';
@@ -11,6 +11,7 @@ import { toast } from 'sonner';
 import pb from '@/lib/pocketbaseClient.js';
 import apiServerClient from '@/lib/apiServerClient.js';
 import VariacoesTable from '@/components/admin/VariacoesTable.jsx';
+import CalculadoraPrecoModal from '@/components/admin/CalculadoraPrecoModal.jsx';
 
 export default function ProdutoForm() {
   const { id } = useParams();
@@ -60,6 +61,7 @@ export default function ProdutoForm() {
   const [originalVariacoes, setOriginalVariacoes] = useState([]);
 
   const [showAIAssistant, setShowAIAssistant] = useState(false);
+  const [isCalculadoraOpen, setIsCalculadoraOpen] = useState(false);
   const [aiLoading, setAiLoading] = useState(false);
   const [aiEstilo, setAiEstilo] = useState('conforto');
   const [aiTecido, setAiTecido] = useState('microfibra');
@@ -920,8 +922,21 @@ export default function ProdutoForm() {
             </div>
           </section>
 
-          <section className="bg-card p-6 rounded-xl border border-[#c59b5f]/10 shadow-sm space-y-6">
-            <h2 className="text-lg font-bold border-b border-[#c59b5f]/20 pb-2 text-white font-serif">Preço e Logística</h2>
+          <section className="bg-card p-6 rounded-xl border border-[#c59b5f]/10 shadow-sm space-y-6 relative">
+            <div className="flex justify-between items-center border-b border-[#c59b5f]/20 pb-2">
+              <h2 className="text-lg font-bold text-white font-serif">Preço e Logística</h2>
+              <Button 
+                type="button" 
+                variant="outline" 
+                size="sm"
+                onClick={() => setIsCalculadoraOpen(true)}
+                className="bg-[#121212] border-[#c59b5f]/50 text-[#c59b5f] hover:bg-[#c59b5f]/10 hover:text-white"
+              >
+                <Calculator className="w-4 h-4 mr-2" />
+                Calculadora Tributária
+              </Button>
+            </div>
+            
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
                 <label className="text-sm font-medium mb-1.5 block text-gray-300">Preço de Venda Varejo (R$) *</label>
@@ -932,6 +947,18 @@ export default function ProdutoForm() {
                 <Input type="number" step="0.01" value={formData.price_wholesale} onChange={(e) => handleInputChange('price_wholesale', e.target.value)} className="bg-[#121212] border-[#c59b5f]/20 text-white" />
               </div>
             </div>
+            
+            <CalculadoraPrecoModal 
+              isOpen={isCalculadoraOpen} 
+              onClose={() => setIsCalculadoraOpen(false)} 
+              onApply={(valores) => {
+                setFormData(prev => ({
+                  ...prev,
+                  price_wholesale: valores.preco_atacado,
+                  price: valores.preco_varejo
+                }));
+              }}
+            />
             
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pt-2">
               <div>

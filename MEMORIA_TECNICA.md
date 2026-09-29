@@ -718,3 +718,7 @@ Para nÃ£o esquecermos, aqui estÃ£o os itens congelados e as datas de destrav
 - **Estratégia B2C/B2B Definida:** Registramos no documento de tráfego a abordagem focada em revenda (margem de lucro) vs varejo (luxo acessível).
 - **Google Merchant Center:** Configuramos 100% da conta (URLs, frete taxa fixa para contornar limitações do robô, política de devolução do CDC de 7 dias, etc). O Feed XML dinâmico já está plugado aguardando a aprovação de 3 dias do Google.
 - **Modal de Boas-Vindas (Exit Intent):** Implementamos o popup WelcomeModal.jsx no App.jsx com a arte premium de revenda. Adicionamos a lógica de localStorage para disparar apenas na primeira visita (delay de 1.5s). O fundo transparente (PNG) já está no código, aguardando o próximo push do Bot do Git para ir ao ar.
+
+ # # #   2 9 / 0 9 / 2 0 2 6   -   N o v o   P a i n e l   A d m i n 
+ -   * * C a l c u l a d o r a   T r i b u t � r i a   ( R e f o r m a   C B S / I B S ) : * *   C r i a d o   o   M o d a l   d e   P r e c i f i c a � � o   i n t e l i g e n t e   ( M a r k u p   p o r   D e n t r o )   d e n t r o   d o   C a d a s t r o   d e   P r o d u t o .   E l e   i d e n t i f i c a   o   a n o   c o r r e n t e ,   b u s c a   a   t a x a   d o   i m p o s t o   r e s p e c t i v a   e   a p l i c a   o s   d i v i s o r e s   d e   M a r g e m   +   I m p o s t o   p a r a   c a l c u l a r   o   P r e � o   A t a c a d o   e   V a r e j o   g a r a n t i n d o   q u e   o   l u c r o   f i n a l   n � o   s e j a   c o r r o � d o   p e l o   l e � o .  
+ 

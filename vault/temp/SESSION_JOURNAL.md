@@ -5880,3 +5880,1849 @@
 ## 2026-09-23 18:39:21.493Z console.warn
 - text: Please replace pb.files.getUrl() with pb.files.getURL()
 
+## 2026-09-29 11:29:08.770Z load
+- url: http://localhost:3000/
+- title: Avante Lingerie | Oficial
+
+## 2026-09-29 11:29:18.520Z navigate
+- url: http://localhost:3000/
+- via: replaceState
+
+## 2026-09-29 11:29:20.298Z console.error
+- text: 
+    `DialogContent` requires a `DialogTitle` for the component to be accessible for screen reader users.
+    
+    If you want to hide the `DialogTitle`, you can wrap it with our VisuallyHidden component.
+    
+    For more information, see https://radix-ui.com/primitives/docs/components/dialog
+
+## 2026-09-29 11:29:20.303Z console.warn
+- text: Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+
+## 2026-09-29 11:29:21.259Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 11:29:21.268Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 11:29:21.844Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/testimonials/records?page=1&perPage=10&filter=status%20%3D%20true&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 270
+
+## 2026-09-29 11:29:21.845Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/testimonials/records?page=1&perPage=10&filter=status%20%3D%20true&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-09-29 11:29:21.849Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 11:29:21.853Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 11:29:21.853Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 11:29:21.870Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 11:29:21.877Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 11:29:21.933Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 11:29:21.933Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 11:29:21.939Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 11:29:21.939Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 11:29:21.957Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 11:29:21.958Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 11:29:21.964Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 11:29:21.965Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 11:29:21.976Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 11:29:21.976Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 11:29:21.983Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 11:29:21.984Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 11:29:21.991Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 11:29:21.991Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 11:29:21.999Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 11:29:22.000Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 11:29:22.009Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 11:29:22.010Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 11:30:24.925Z click
+- element: {"tag":"div","role":"dialog","ariaLabel":null,"name":null,"type":null,"id":"radix-:r0:","placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Close"}
+
+## 2026-09-29 11:30:24.943Z navigate
+- url: http://localhost:3000/quero-revender
+- via: pushState
+
+## 2026-09-29 11:53:49.190Z load
+- url: http://localhost:3000/
+- title: Avante Lingerie | Oficial
+
+## 2026-09-29 11:53:52.210Z navigate
+- url: http://localhost:3000/
+- via: replaceState
+
+## 2026-09-29 11:53:54.084Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 11:53:54.098Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 11:53:54.611Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/testimonials/records?page=1&perPage=10&filter=status%20%3D%20true&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 511
+
+## 2026-09-29 11:53:54.613Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/testimonials/records?page=1&perPage=10&filter=status%20%3D%20true&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-09-29 11:53:54.627Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 11:53:54.629Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 11:53:54.630Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 11:53:54.643Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 11:53:54.644Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 11:53:54.697Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 11:53:54.697Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 11:53:54.702Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 11:53:54.703Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 11:53:54.708Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 11:53:54.708Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 11:53:54.710Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 11:53:54.710Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 11:53:54.712Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 11:53:54.712Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 11:53:54.714Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 11:53:54.714Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 11:53:54.720Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 11:53:54.721Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 11:53:54.724Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 11:53:54.724Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 11:53:54.725Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 11:53:54.725Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 11:54:00.159Z load
+- url: http://localhost:3000/admin
+- title: Avante Lingerie | Oficial
+
+## 2026-09-29 11:54:01.281Z navigate
+- url: http://localhost:3000/admin
+- via: replaceState
+
+## 2026-09-29 11:54:01.553Z navigate
+- url: http://localhost:3000/admin/login
+- via: replaceState
+
+## 2026-09-29 11:54:03.570Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"email","id":null,"placeholder":"admin@avantelingerie.com.br","label":"admin@avantelingerie.com.br","value":"","valueLength":0,"text":""}
+
+## 2026-09-29 11:54:03.787Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"email","id":null,"placeholder":"admin@avantelingerie.com.br","label":"admin@avantelingerie.com.br","value":"","valueLength":0,"text":""}
+
+## 2026-09-29 11:54:09.549Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"email","id":null,"placeholder":"admin@avantelingerie.com.br","label":"admin@avantelingerie.com.br","value":"","valueLength":0,"text":""}
+
+## 2026-09-29 11:54:10.102Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"email","id":null,"placeholder":"admin@avantelingerie.com.br","label":"admin@avantelingerie.com.br","value":"admin@avantelingerie.com.br","valueLength":27,"text":""}
+
+## 2026-09-29 11:54:10.107Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"password","id":null,"placeholder":"••••••••","label":"••••••••","value":"[redacted:length=0]","valueLength":0,"text":""}
+
+## 2026-09-29 11:54:10.108Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"password","id":null,"placeholder":"••••••••","label":"••••••••","value":"[redacted:length=12]","valueLength":12,"text":""}
+
+## 2026-09-29 11:54:10.108Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"password","id":null,"placeholder":"••••••••","label":"••••••••","value":"[redacted:length=12]","valueLength":12,"text":""}
+
+## 2026-09-29 11:54:10.933Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"email","id":null,"placeholder":"admin@avantelingerie.com.br","label":"admin@avantelingerie.com.br","value":"admin@avantelingerie.com.br","valueLength":27,"text":""}
+
+## 2026-09-29 11:54:11.158Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"submit","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"ACESSAR PAINEL"}
+
+## 2026-09-29 11:54:11.167Z submit
+- action: http://localhost:3000/admin/login
+- fields: [{"label":"admin@avantelingerie.com.br","type":"email","value":"admin@avantelingerie.com.br","length":27,"redacted":false},{"label":"••••••••","type":"password","value":"[redacted:length=12]","length":12,"redacted":true},{"label":"Mostrar senha","type":"button","value":"","length":0,"redacted":false},{"label":"[submit]","type":"submit","value":"","length":0,"redacted":false}]
+
+## 2026-09-29 11:54:11.328Z navigate
+- url: http://localhost:3000/admin
+- via: pushState
+
+## 2026-09-29 11:54:15.887Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Produtos"}
+
+## 2026-09-29 11:54:15.889Z navigate
+- url: http://localhost:3000/admin/produtos
+- via: pushState
+
+## 2026-09-29 11:54:15.979Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 11:54:16.003Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 11:54:16.004Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 11:54:16.004Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 11:54:16.004Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 11:54:16.004Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 11:54:18.648Z click
+- element: {"tag":"html","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"body {transition: opacity ease-in 0.2s; } \nbody[unresolved] {opacity: 0; display: block; overflow: hidden; position: relative; } \n\n\t\timport { injectIntoGlobalHook } from \"/@react-refresh\";\ninjectIntoGlobalHook(window);\nwindow.$RefreshReg$ = () => {};\nwindow.$RefreshSig$ = () => (type) => type;\n\n\t\t\n\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\tAvante Lingerie | Oficial\n\t\t\n\t\t\n\t\t(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\n\t\tnew Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\n\t\tj=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n\t\t'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n\t\t})(window,document,'script','dataLayer','GTM-XXXXXXX');\n\t\t\n\t\tconst SITE_PAGES_ENDPOINT = '/__horizons/site-pages';\n\nconst OUTGOING_SITE_PAGES_MESSAGE = 'sitePages';\nconst INCOMING_REQUEST_SITE_PAGES_MESSAGE = 'request-site-pages';\n\nconst ALLOWED_PARENT_ORIGINS = [\n\t'https://horizons.hostinger.com',\n\t'https://horizons.hostinger.dev',\n\t'https://horizons-frontend-local.hostinger.dev',\n\t'http://localhost:4000',\n];\n\nfunction postSitePages(pages) {\n\tlet parentOrigin = window.location.ancestorOrigins?.[0];\n\tif (!parentOrigin && document.referrer) {\n\t\ttry {\n\t\t\tparentOrigin = new URL(document.referrer).origin;\n\t\t} catch {}\n\t}\n\tif (parentOrigin && ALLOWED_PARENT_ORIGINS.includes(parentOrigin)) {\n\t\twindow.parent.postMessage({ type: OUTGOING_SITE_PAGES_MESSAGE, payload: { pages } }, parentOrigin);\n\t}\n}\n\nasync function sendSitePagesToParent() {\n\tif (window.self === window.top) {\n\t\treturn;\n\t}\n\n\ttry {\n\t\tconst response = await fetch(SITE_PAGES_ENDPOINT);\n\t\tif (!response.ok) {\n\t\t\tthrow new Error(`HTTP ${response.status}`);\n\t\t}\n\t\tpostSitePages(await response.json());\n\t} catch (error) {\n\t\tconsole.error('[site-pages] Failed to send site pages to parent:', error);\n\t}\n}\n\nif (window.self !== window.top) {\n\twindow.addEventListener('load', sendSitePagesToParent);\n\twindow.addEventListener('message', (event) => {\n\t\tif (event.data?.type === INCOMING_REQUEST_SIT..."}
+
+## 2026-09-29 11:54:19.828Z click
+- element: {"tag":"div","role":"menuitem","ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Editar"}
+
+## 2026-09-29 11:54:19.829Z navigate
+- url: http://localhost:3000/admin/produtos/yh5di7bkb7nc3tt/editar
+- via: pushState
+
+## 2026-09-29 11:54:19.909Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 11:54:19.909Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 11:54:19.910Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 11:54:19.910Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 11:54:19.910Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 11:54:19.910Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 11:54:25.995Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Calculadora Tributária"}
+
+## 2026-09-29 11:54:26.054Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 50.00","label":"Ex: 50.00","value":"","valueLength":0,"text":""}
+
+## 2026-09-29 11:54:33.926Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 50.00","label":"Ex: 50.00","value":"9","valueLength":1,"text":""}
+
+## 2026-09-29 11:54:33.927Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 50.00","label":"Ex: 50.00","value":"9","valueLength":1,"text":""}
+
+## 2026-09-29 11:54:33.929Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 50","label":"Ex: 50","value":"","valueLength":0,"text":""}
+
+## 2026-09-29 11:54:40.379Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 50","label":"Ex: 50","value":"1","valueLength":1,"text":""}
+
+## 2026-09-29 11:54:40.380Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 50","label":"Ex: 50","value":"1","valueLength":1,"text":""}
+
+## 2026-09-29 11:54:40.955Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 50","label":"Ex: 50","value":"2","valueLength":1,"text":""}
+
+## 2026-09-29 11:54:40.955Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 50","label":"Ex: 50","value":"2","valueLength":1,"text":""}
+
+## 2026-09-29 11:54:41.628Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 50","label":"Ex: 50","value":"3","valueLength":1,"text":""}
+
+## 2026-09-29 11:54:41.629Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 50","label":"Ex: 50","value":"3","valueLength":1,"text":""}
+
+## 2026-09-29 11:54:53.476Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 50","label":"Ex: 50","value":"3","valueLength":1,"text":""}
+
+## 2026-09-29 11:54:53.702Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Close"}
+
+## 2026-09-29 11:54:55.195Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Calculadora Tributária"}
+
+## 2026-09-29 11:54:55.318Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 50.00","label":"Ex: 50.00","value":"9","valueLength":1,"text":""}
+
+## 2026-09-29 11:55:34.859Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 50.00","label":"Ex: 50.00","value":"10","valueLength":2,"text":""}
+
+## 2026-09-29 11:55:34.859Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 50.00","label":"Ex: 50.00","value":"10","valueLength":2,"text":""}
+
+## 2026-09-29 11:55:34.861Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 50","label":"Ex: 50","value":"3","valueLength":1,"text":""}
+
+## 2026-09-29 11:55:35.179Z click
+- element: {"tag":"div","role":"dialog","ariaLabel":null,"name":null,"type":null,"id":"radix-:ri:","placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Calculadora TributáriaReforma 2026: Imposto CBS/IBS de 1% aplicado ao custo.Custo de Produção (R$)Margem Atacado (%)Margem Varejo (%)Custo Real (+ Imposto 1%):R$ 10,10Preço Calculado (Atacado):R$ 10,40Preço Calculado (Varejo):R$ 10,40CancelarAplicar PreçosClose"}
+
+## 2026-09-29 11:55:36.940Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 50","label":"Ex: 50","value":"","valueLength":0,"text":""}
+
+## 2026-09-29 11:55:36.942Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 50.00","label":"Ex: 50.00","value":"10","valueLength":2,"text":""}
+
+## 2026-09-29 11:55:37.162Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 50.00","label":"Ex: 50.00","value":"10","valueLength":2,"text":""}
+
+## 2026-09-29 11:55:44.057Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 50.00","label":"Ex: 50.00","value":"9","valueLength":1,"text":""}
+
+## 2026-09-29 11:55:44.058Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 50.00","label":"Ex: 50.00","value":"9","valueLength":1,"text":""}
+
+## 2026-09-29 11:55:44.063Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 50","label":"Ex: 50","value":"","valueLength":0,"text":""}
+
+## 2026-09-29 11:55:54.574Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 50","label":"Ex: 50","value":"1","valueLength":1,"text":""}
+
+## 2026-09-29 11:55:54.574Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 50","label":"Ex: 50","value":"1","valueLength":1,"text":""}
+
+## 2026-09-29 11:55:55.165Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 50","label":"Ex: 50","value":"2","valueLength":1,"text":""}
+
+## 2026-09-29 11:55:55.165Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 50","label":"Ex: 50","value":"2","valueLength":1,"text":""}
+
+## 2026-09-29 11:55:55.553Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 50","label":"Ex: 50","value":"3","valueLength":1,"text":""}
+
+## 2026-09-29 11:55:55.553Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 50","label":"Ex: 50","value":"3","valueLength":1,"text":""}
+
+## 2026-09-29 11:55:56.021Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 50","label":"Ex: 50","value":"4","valueLength":1,"text":""}
+
+## 2026-09-29 11:55:56.021Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 50","label":"Ex: 50","value":"4","valueLength":1,"text":""}
+
+## 2026-09-29 11:55:56.580Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 50","label":"Ex: 50","value":"5","valueLength":1,"text":""}
+
+## 2026-09-29 11:55:56.580Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 50","label":"Ex: 50","value":"5","valueLength":1,"text":""}
+
+## 2026-09-29 11:55:56.897Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 50","label":"Ex: 50","value":"6","valueLength":1,"text":""}
+
+## 2026-09-29 11:55:56.897Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 50","label":"Ex: 50","value":"6","valueLength":1,"text":""}
+
+## 2026-09-29 11:55:57.149Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 50","label":"Ex: 50","value":"7","valueLength":1,"text":""}
+
+## 2026-09-29 11:55:57.149Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 50","label":"Ex: 50","value":"7","valueLength":1,"text":""}
+
+## 2026-09-29 11:55:57.377Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 50","label":"Ex: 50","value":"8","valueLength":1,"text":""}
+
+## 2026-09-29 11:55:57.378Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 50","label":"Ex: 50","value":"8","valueLength":1,"text":""}
+
+## 2026-09-29 11:55:58.069Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 50","label":"Ex: 50","value":"9","valueLength":1,"text":""}
+
+## 2026-09-29 11:55:58.069Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 50","label":"Ex: 50","value":"9","valueLength":1,"text":""}
+
+## 2026-09-29 11:55:58.867Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 50","label":"Ex: 50","value":"10","valueLength":2,"text":""}
+
+## 2026-09-29 11:55:58.867Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 50","label":"Ex: 50","value":"10","valueLength":2,"text":""}
+
+## 2026-09-29 11:56:21.997Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 50","label":"Ex: 50","value":"10","valueLength":2,"text":""}
+
+## 2026-09-29 11:56:22.045Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 100","label":"Ex: 100","value":"","valueLength":0,"text":""}
+
+## 2026-09-29 12:01:44.334Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 100","label":"Ex: 100","value":"10","valueLength":2,"text":""}
+
+## 2026-09-29 12:01:44.359Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 100","label":"Ex: 100","value":"10","valueLength":2,"text":""}
+
+## 2026-09-29 12:03:38.348Z load
+- url: http://localhost:3000/admin/produtos/yh5di7bkb7nc3tt/editar
+- title: Avante Lingerie | Oficial
+
+## 2026-09-29 12:03:41.443Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 12:03:41.446Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 12:03:41.446Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 12:03:41.447Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 12:03:41.447Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 12:03:41.447Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 12:03:48.324Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Calculadora Tributária"}
+
+## 2026-09-29 12:03:48.730Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 50.00","label":"Ex: 50.00","value":"","valueLength":0,"text":""}
+
+## 2026-09-29 12:04:21.174Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 50.00","label":"Ex: 50.00","value":"","valueLength":0,"text":""}
+
+## 2026-09-29 12:04:39.777Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 50.00","label":"Ex: 50.00","value":"","valueLength":0,"text":""}
+
+## 2026-09-29 12:04:43.297Z click
+- element: {"tag":"div","role":"dialog","ariaLabel":null,"name":null,"type":null,"id":"radix-:r9:","placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Calculadora TributáriaReforma 2026: Imposto CBS/IBS de 1% aplicado ao custo.Custo de Produção (R$)Margem Atacado (%)Margem Varejo (%)Custo Real (+ Imposto 1%):R$ 0,00Preço Calculado (Atacado):R$ 0,00Preço Calculado (Varejo):R$ 0,00CancelarAplicar PreçosClose"}
+
+## 2026-09-29 12:19:46.737Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Close"}
+
+## 2026-09-29 12:19:50.847Z click
+- element: {"tag":"section","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Preço e LogísticaCalculadora TributáriaPreço de Venda Varejo (R$) *Preço de Atacado B2B (R$)Peso (g)Altura (cm)Largura (cm)Profundidade (cm)"}
+
+## 2026-09-29 12:20:55.329Z click
+- element: {"tag":"label","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Preço de Atacado B2B (R$)"}
+
+## 2026-09-29 12:24:33.604Z load
+- url: http://localhost:3000/admin/produtos/yh5di7bkb7nc3tt/editar
+- title: Avante Lingerie | Oficial
+
+## 2026-09-29 12:24:34.826Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 12:24:34.830Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 12:24:34.830Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 12:24:34.830Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 12:24:34.830Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 12:24:34.830Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 12:24:39.585Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Calculadora Tributária"}
+
+## 2026-09-29 12:24:39.648Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 10.00","label":"Ex: 10.00","value":"","valueLength":0,"text":""}
+
+## 2026-09-29 12:24:49.102Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 10.00","label":"Ex: 10.00","value":"10","valueLength":2,"text":""}
+
+## 2026-09-29 12:24:49.103Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 10.00","label":"Ex: 10.00","value":"10","valueLength":2,"text":""}
+
+## 2026-09-29 12:24:49.106Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 10","label":"Ex: 10","value":"","valueLength":0,"text":""}
+
+## 2026-09-29 12:25:08.415Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 10","label":"Ex: 10","value":"10","valueLength":2,"text":""}
+
+## 2026-09-29 12:25:08.415Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 10","label":"Ex: 10","value":"10","valueLength":2,"text":""}
+
+## 2026-09-29 12:25:08.416Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 20","label":"Ex: 20","value":"","valueLength":0,"text":""}
+
+## 2026-09-29 12:25:17.601Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 10","label":"Ex: 10","value":"10","valueLength":2,"text":""}
+
+## 2026-09-29 12:25:17.823Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 10","label":"Ex: 10","value":"10","valueLength":2,"text":""}
+
+## 2026-09-29 12:25:58.952Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 10","label":"Ex: 10","value":"","valueLength":0,"text":""}
+
+## 2026-09-29 12:28:50.881Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 10","label":"Ex: 10","value":"","valueLength":0,"text":""}
+
+## 2026-09-29 12:28:52.518Z click
+- element: {"tag":"div","role":"dialog","ariaLabel":null,"name":null,"type":null,"id":"radix-:r9:","placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Calculadora TributáriaReforma 2026: Imposto CBS/IBS de 1% deduzido do custo.Custo de Produção / Aquisição (R$)Margem Atacado (%)Margem Varejo (%)Valor Líquido (- Imposto 1%):R$ 9,90Valor Atacado Calculado:R$ 9,90Valor Varejo Calculado:R$ 9,90CancelarAplicar PreçosClose"}
+
+## 2026-09-29 12:50:05.273Z window.error
+- message: Uncaught ReferenceError: parsedAtacado is not defined
+- source: http://localhost:3000/src/components/admin/CalculadoraPrecoModal.jsx?t=1790686201306
+- line: 28
+- col: 26
+- stack: 
+    ReferenceError: parsedAtacado is not defined
+        at CalculadoraPrecoModal (http://localhost:3000/src/components/admin/CalculadoraPrecoModal.jsx?t=1790686201306:28:26)
+        at renderWithHooks (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=6a46656c:11596:26)
+        at updateFunctionComponent (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=6a46656c:14630:28)
+        at beginWork (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=6a46656c:15972:22)
+        at HTMLUnknownElement.callCallback2 (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=6a46656c:3680:22)
+        at Object.invokeGuardedCallbackDev (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=6a46656c:3705:24)
+        at invokeGuardedCallback (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=6a46656c:3739:39)
+        at beginWork$1 (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=6a46656c:19818:15)
+        at performUnitOfWork (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=6a46656c:19251:20)
+        at workLoopSync (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=6a46656c:19190:13)
+
+## 2026-09-29 12:50:05.392Z window.error
+- message: Uncaught ReferenceError: parsedAtacado is not defined
+- source: http://localhost:3000/src/components/admin/CalculadoraPrecoModal.jsx?t=1790686201306
+- line: 28
+- col: 26
+- stack: 
+    ReferenceError: parsedAtacado is not defined
+        at CalculadoraPrecoModal (http://localhost:3000/src/components/admin/CalculadoraPrecoModal.jsx?t=1790686201306:28:26)
+        at renderWithHooks (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=6a46656c:11596:26)
+        at updateFunctionComponent (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=6a46656c:14630:28)
+        at beginWork (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=6a46656c:15972:22)
+        at HTMLUnknownElement.callCallback2 (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=6a46656c:3680:22)
+        at Object.invokeGuardedCallbackDev (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=6a46656c:3705:24)
+        at invokeGuardedCallback (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=6a46656c:3739:39)
+        at beginWork$1 (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=6a46656c:19818:15)
+        at performUnitOfWork (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=6a46656c:19251:20)
+        at workLoopSync (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=6a46656c:19190:13)
+
+## 2026-09-29 12:50:05.956Z console.error
+- text: 
+    The above error occurred in the <CalculadoraPrecoModal> component:
+    
+        at CalculadoraPrecoModal (http://localhost:3000/src/components/admin/CalculadoraPrecoModal.jsx?t=1790686201306:9:49)
+        at section
+        at div
+        at div
+        at form
+        at ProdutoForm (http://localhost:3000/src/pages/admin/ProdutoForm.jsx?t=1790684602520:19:18)
+        at ErrorBoundary (http://localhost:3000/src/components/ErrorBoundary.jsx:7:5)
+        at RenderedRoute (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=6a46656c:6397:26)
+        at Outlet (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=6a46656c:7179:26)
+        at main
+        at div
+        at div
+        at AdminLayout (http://localhost:3000/src/components/admin/AdminLayout.jsx:13:41)
+        at ProtectedRoute (http://localhost:3000/src/components/ProtectedRoute.jsx:8:42)
+        at ErrorBoundary (http://localhost:3000/src/components/ErrorBoundary.jsx:7:5)
+        at RenderedRoute (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=6a46656c:6397:26)
+        at Routes (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=6a46656c:7258:3)
+        at AppInterceptor (http://localhost:3000/src/App.jsx?t=1790684602520:189:20)
+        at AdminAuthProvider (http://localhost:3000/src/context/AdminAuthContext.jsx:8:37)
+        at AuthProvider (http://localhost:3000/src/context/AuthContext.jsx:7:32)
+        at Router (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=6a46656c:7188:13)
+        at BrowserRouter (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=6a46656c:10402:3)
+        at ErrorBoundary (http://localhost:3000/src/components/ErrorBoundary.jsx:7:5)
+        at App
+    
+    React will try to recreate this component tree from scratch using the error boundary you provided, ErrorBoundary.
+
+## 2026-09-29 12:50:05.960Z console.error
+- text: 
+    🔴 ErrorBoundary caught an error: ReferenceError: parsedAtacado is not defined
+        at CalculadoraPrecoModal (http://localhost:3000/src/components/admin/CalculadoraPrecoModal.jsx?t=1790686201306:28:26)
+        at renderWithHooks (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=6a46656c:11596:26)
+        at updateFunctionComponent (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=6a46656c:14630:28)
+        at beginWork (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=6a46656c:15972:22)
+        at beginWork$1 (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=6a46656c:19806:22)
+        at performUnitOfWork (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=6a46656c:19251:20)
+        at workLoopSync (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=6a46656c:19190:13)
+        at renderRootSync (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=6a46656c:19169:15)
+        at recoverFromConcurrentError (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=6a46656c:18786:28)
+        at performSyncWorkOnRoot (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=6a46656c:18932:28)
+
+## 2026-09-29 12:50:05.961Z console.error
+- text: 🔴 Error details: {"componentStack":"\n    at CalculadoraPrecoModal (http://localhost:3000/src/components/admin/CalculadoraPrecoModal.jsx?t=1790686201306:9:49)\n    at section\n    at div\n    at div\n    at form\n    at ProdutoForm (http://localhost:3000/src/pages/admin/ProdutoForm.jsx?t=1790684602520:19:18)\n    at ErrorBoundary (http://localhost:3000/src/components/ErrorBoundary.jsx:7:5)\n    at RenderedRoute (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=6a46656c:6397:26)\n    at Outlet (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=6a46656c:7179:26)\n    at main\n    at div\n    at div\n    at AdminLayout (http://localhost:3000/src/components/admin/AdminLayout.jsx:13:41)\n    at ProtectedRoute (http://localhost:3000/src/components/ProtectedRoute.jsx:8:42)\n    at ErrorBoundary (http://localhost:3000/src/components/ErrorBoundary.jsx:7:5)\n    at RenderedRoute (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=6a46656c:6397:26)\n    at Routes (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=6a46656c:7258:3)\n    at AppInterceptor (http://localhost:3000/src/App.jsx?t=1790684602520:189:20)\n    at AdminAuthProvider (http://localhost:3000/src/context/AdminAuthContext.jsx:8:37)\n    at AuthProvider (http://localhost:3000/src/context/AuthContext.jsx:7:32)\n    at Router (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=6a46656c:7188:13)\n    at BrowserRouter (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=6a46656c:10402:3)\n    at ErrorBoundary (http://localhost:3000/src/components/ErrorBoundary.jsx:7:5)\n    at App"}
+
+## 2026-09-29 12:50:05.962Z console.error
+- text: 
+    🔴 Component stack: 
+        at CalculadoraPrecoModal (http://localhost:3000/src/components/admin/CalculadoraPrecoModal.jsx?t=1790686201306:9:49)
+        at section
+        at div
+        at div
+        at form
+        at ProdutoForm (http://localhost:3000/src/pages/admin/ProdutoForm.jsx?t=1790684602520:19:18)
+        at ErrorBoundary (http://localhost:3000/src/components/ErrorBoundary.jsx:7:5)
+        at RenderedRoute (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=6a46656c:6397:26)
+        at Outlet (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=6a46656c:7179:26)
+        at main
+        at div
+        at div
+        at AdminLayout (http://localhost:3000/src/components/admin/AdminLayout.jsx:13:41)
+        at ProtectedRoute (http://localhost:3000/src/components/ProtectedRoute.jsx:8:42)
+        at ErrorBoundary (http://localhost:3000/src/components/ErrorBoundary.jsx:7:5)
+        at RenderedRoute (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=6a46656c:6397:26)
+        at Routes (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=6a46656c:7258:3)
+        at AppInterceptor (http://localhost:3000/src/App.jsx?t=1790684602520:189:20)
+        at AdminAuthProvider (http://localhost:3000/src/context/AdminAuthContext.jsx:8:37)
+        at AuthProvider (http://localhost:3000/src/context/AuthContext.jsx:7:32)
+        at Router (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=6a46656c:7188:13)
+        at BrowserRouter (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=6a46656c:10402:3)
+        at ErrorBoundary (http://localhost:3000/src/components/ErrorBoundary.jsx:7:5)
+        at App
+
+## 2026-09-29 12:52:37.756Z load
+- url: http://localhost:3000/admin/produtos/yh5di7bkb7nc3tt/editar
+- title: Avante Lingerie | Oficial
+
+## 2026-09-29 12:52:39.376Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 12:52:39.381Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 12:52:39.381Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 12:52:39.381Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 12:52:39.381Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 12:52:39.381Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 12:52:39.431Z window.error
+- message: Uncaught ReferenceError: parsedAtacado is not defined
+- source: http://localhost:3000/src/components/admin/CalculadoraPrecoModal.jsx?t=1790686201306
+- line: 28
+- col: 26
+- stack: 
+    ReferenceError: parsedAtacado is not defined
+        at CalculadoraPrecoModal (http://localhost:3000/src/components/admin/CalculadoraPrecoModal.jsx?t=1790686201306:28:26)
+        at renderWithHooks (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=6a46656c:11596:26)
+        at mountIndeterminateComponent (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=6a46656c:14974:21)
+        at beginWork (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=6a46656c:15962:22)
+        at HTMLUnknownElement.callCallback2 (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=6a46656c:3680:22)
+        at Object.invokeGuardedCallbackDev (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=6a46656c:3705:24)
+        at invokeGuardedCallback (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=6a46656c:3739:39)
+        at beginWork$1 (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=6a46656c:19818:15)
+        at performUnitOfWork (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=6a46656c:19251:20)
+        at workLoopSync (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=6a46656c:19190:13)
+
+## 2026-09-29 12:52:39.476Z window.error
+- message: Uncaught ReferenceError: parsedAtacado is not defined
+- source: http://localhost:3000/src/components/admin/CalculadoraPrecoModal.jsx?t=1790686201306
+- line: 28
+- col: 26
+- stack: 
+    ReferenceError: parsedAtacado is not defined
+        at CalculadoraPrecoModal (http://localhost:3000/src/components/admin/CalculadoraPrecoModal.jsx?t=1790686201306:28:26)
+        at renderWithHooks (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=6a46656c:11596:26)
+        at mountIndeterminateComponent (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=6a46656c:14974:21)
+        at beginWork (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=6a46656c:15962:22)
+        at HTMLUnknownElement.callCallback2 (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=6a46656c:3680:22)
+        at Object.invokeGuardedCallbackDev (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=6a46656c:3705:24)
+        at invokeGuardedCallback (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=6a46656c:3739:39)
+        at beginWork$1 (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=6a46656c:19818:15)
+        at performUnitOfWork (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=6a46656c:19251:20)
+        at workLoopSync (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=6a46656c:19190:13)
+
+## 2026-09-29 12:52:39.502Z console.error
+- text: 
+    The above error occurred in the <CalculadoraPrecoModal> component:
+    
+        at CalculadoraPrecoModal (http://localhost:3000/src/components/admin/CalculadoraPrecoModal.jsx?t=1790686201306:9:49)
+        at section
+        at div
+        at div
+        at form
+        at ProdutoForm (http://localhost:3000/src/pages/admin/ProdutoForm.jsx?t=1790686201306:19:18)
+        at ErrorBoundary (http://localhost:3000/src/components/ErrorBoundary.jsx:7:5)
+        at RenderedRoute (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=6a46656c:6397:26)
+        at Outlet (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=6a46656c:7179:26)
+        at main
+        at div
+        at div
+        at AdminLayout (http://localhost:3000/src/components/admin/AdminLayout.jsx:13:41)
+        at ProtectedRoute (http://localhost:3000/src/components/ProtectedRoute.jsx:8:42)
+        at ErrorBoundary (http://localhost:3000/src/components/ErrorBoundary.jsx:7:5)
+        at RenderedRoute (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=6a46656c:6397:26)
+        at Routes (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=6a46656c:7258:3)
+        at AppInterceptor (http://localhost:3000/src/App.jsx?t=1790686201306:189:20)
+        at AdminAuthProvider (http://localhost:3000/src/context/AdminAuthContext.jsx:8:37)
+        at AuthProvider (http://localhost:3000/src/context/AuthContext.jsx:7:32)
+        at Router (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=6a46656c:7188:13)
+        at BrowserRouter (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=6a46656c:10402:3)
+        at ErrorBoundary (http://localhost:3000/src/components/ErrorBoundary.jsx:7:5)
+        at App
+    
+    React will try to recreate this component tree from scratch using the error boundary you provided, ErrorBoundary.
+
+## 2026-09-29 12:52:39.502Z console.error
+- text: 
+    🔴 ErrorBoundary caught an error: ReferenceError: parsedAtacado is not defined
+        at CalculadoraPrecoModal (http://localhost:3000/src/components/admin/CalculadoraPrecoModal.jsx?t=1790686201306:28:26)
+        at renderWithHooks (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=6a46656c:11596:26)
+        at mountIndeterminateComponent (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=6a46656c:14974:21)
+        at beginWork (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=6a46656c:15962:22)
+        at beginWork$1 (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=6a46656c:19806:22)
+        at performUnitOfWork (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=6a46656c:19251:20)
+        at workLoopSync (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=6a46656c:19190:13)
+        at renderRootSync (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=6a46656c:19169:15)
+        at recoverFromConcurrentError (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=6a46656c:18786:28)
+        at performConcurrentWorkOnRoot (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=6a46656c:18734:30)
+
+## 2026-09-29 12:52:39.502Z console.error
+- text: 🔴 Error details: {"componentStack":"\n    at CalculadoraPrecoModal (http://localhost:3000/src/components/admin/CalculadoraPrecoModal.jsx?t=1790686201306:9:49)\n    at section\n    at div\n    at div\n    at form\n    at ProdutoForm (http://localhost:3000/src/pages/admin/ProdutoForm.jsx?t=1790686201306:19:18)\n    at ErrorBoundary (http://localhost:3000/src/components/ErrorBoundary.jsx:7:5)\n    at RenderedRoute (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=6a46656c:6397:26)\n    at Outlet (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=6a46656c:7179:26)\n    at main\n    at div\n    at div\n    at AdminLayout (http://localhost:3000/src/components/admin/AdminLayout.jsx:13:41)\n    at ProtectedRoute (http://localhost:3000/src/components/ProtectedRoute.jsx:8:42)\n    at ErrorBoundary (http://localhost:3000/src/components/ErrorBoundary.jsx:7:5)\n    at RenderedRoute (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=6a46656c:6397:26)\n    at Routes (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=6a46656c:7258:3)\n    at AppInterceptor (http://localhost:3000/src/App.jsx?t=1790686201306:189:20)\n    at AdminAuthProvider (http://localhost:3000/src/context/AdminAuthContext.jsx:8:37)\n    at AuthProvider (http://localhost:3000/src/context/AuthContext.jsx:7:32)\n    at Router (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=6a46656c:7188:13)\n    at BrowserRouter (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=6a46656c:10402:3)\n    at ErrorBoundary (http://localhost:3000/src/components/ErrorBoundary.jsx:7:5)\n    at App"}
+
+## 2026-09-29 12:52:39.503Z console.error
+- text: 
+    🔴 Component stack: 
+        at CalculadoraPrecoModal (http://localhost:3000/src/components/admin/CalculadoraPrecoModal.jsx?t=1790686201306:9:49)
+        at section
+        at div
+        at div
+        at form
+        at ProdutoForm (http://localhost:3000/src/pages/admin/ProdutoForm.jsx?t=1790686201306:19:18)
+        at ErrorBoundary (http://localhost:3000/src/components/ErrorBoundary.jsx:7:5)
+        at RenderedRoute (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=6a46656c:6397:26)
+        at Outlet (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=6a46656c:7179:26)
+        at main
+        at div
+        at div
+        at AdminLayout (http://localhost:3000/src/components/admin/AdminLayout.jsx:13:41)
+        at ProtectedRoute (http://localhost:3000/src/components/ProtectedRoute.jsx:8:42)
+        at ErrorBoundary (http://localhost:3000/src/components/ErrorBoundary.jsx:7:5)
+        at RenderedRoute (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=6a46656c:6397:26)
+        at Routes (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=6a46656c:7258:3)
+        at AppInterceptor (http://localhost:3000/src/App.jsx?t=1790686201306:189:20)
+        at AdminAuthProvider (http://localhost:3000/src/context/AdminAuthContext.jsx:8:37)
+        at AuthProvider (http://localhost:3000/src/context/AuthContext.jsx:7:32)
+        at Router (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=6a46656c:7188:13)
+        at BrowserRouter (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=6a46656c:10402:3)
+        at ErrorBoundary (http://localhost:3000/src/components/ErrorBoundary.jsx:7:5)
+        at App
+
+## 2026-09-29 12:53:04.517Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Dashboard"}
+
+## 2026-09-29 12:53:04.530Z navigate
+- url: http://localhost:3000/admin
+- via: pushState
+
+## 2026-09-29 12:53:07.243Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Categorias"}
+
+## 2026-09-29 12:53:07.244Z navigate
+- url: http://localhost:3000/admin/categorias
+- via: pushState
+
+## 2026-09-29 12:53:13.281Z load
+- url: http://localhost:3000/admin
+- title: Avante Lingerie | Oficial
+
+## 2026-09-29 12:53:13.948Z navigate
+- url: http://localhost:3000/admin
+- via: replaceState
+
+## 2026-09-29 12:53:16.894Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Produtos"}
+
+## 2026-09-29 12:53:16.896Z navigate
+- url: http://localhost:3000/admin/produtos
+- via: pushState
+
+## 2026-09-29 12:53:16.971Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 12:53:16.975Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 12:53:16.976Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 12:53:16.976Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 12:53:16.976Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 12:53:16.976Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 12:53:19.079Z click
+- element: {"tag":"html","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"body {transition: opacity ease-in 0.2s; } \nbody[unresolved] {opacity: 0; display: block; overflow: hidden; position: relative; } \n\n\t\timport { injectIntoGlobalHook } from \"/@react-refresh\";\ninjectIntoGlobalHook(window);\nwindow.$RefreshReg$ = () => {};\nwindow.$RefreshSig$ = () => (type) => type;\n\n\t\t\n\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\tAvante Lingerie | Oficial\n\t\t\n\t\t\n\t\t(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\n\t\tnew Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\n\t\tj=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n\t\t'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n\t\t})(window,document,'script','dataLayer','GTM-XXXXXXX');\n\t\t\n\t\tconst SITE_PAGES_ENDPOINT = '/__horizons/site-pages';\n\nconst OUTGOING_SITE_PAGES_MESSAGE = 'sitePages';\nconst INCOMING_REQUEST_SITE_PAGES_MESSAGE = 'request-site-pages';\n\nconst ALLOWED_PARENT_ORIGINS = [\n\t'https://horizons.hostinger.com',\n\t'https://horizons.hostinger.dev',\n\t'https://horizons-frontend-local.hostinger.dev',\n\t'http://localhost:4000',\n];\n\nfunction postSitePages(pages) {\n\tlet parentOrigin = window.location.ancestorOrigins?.[0];\n\tif (!parentOrigin && document.referrer) {\n\t\ttry {\n\t\t\tparentOrigin = new URL(document.referrer).origin;\n\t\t} catch {}\n\t}\n\tif (parentOrigin && ALLOWED_PARENT_ORIGINS.includes(parentOrigin)) {\n\t\twindow.parent.postMessage({ type: OUTGOING_SITE_PAGES_MESSAGE, payload: { pages } }, parentOrigin);\n\t}\n}\n\nasync function sendSitePagesToParent() {\n\tif (window.self === window.top) {\n\t\treturn;\n\t}\n\n\ttry {\n\t\tconst response = await fetch(SITE_PAGES_ENDPOINT);\n\t\tif (!response.ok) {\n\t\t\tthrow new Error(`HTTP ${response.status}`);\n\t\t}\n\t\tpostSitePages(await response.json());\n\t} catch (error) {\n\t\tconsole.error('[site-pages] Failed to send site pages to parent:', error);\n\t}\n}\n\nif (window.self !== window.top) {\n\twindow.addEventListener('load', sendSitePagesToParent);\n\twindow.addEventListener('message', (event) => {\n\t\tif (event.data?.type === INCOMING_REQUEST_SIT..."}
+
+## 2026-09-29 12:53:20.320Z click
+- element: {"tag":"div","role":"menuitem","ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Editar"}
+
+## 2026-09-29 12:53:20.321Z navigate
+- url: http://localhost:3000/admin/produtos/yh5di7bkb7nc3tt/editar
+- via: pushState
+
+## 2026-09-29 12:53:20.397Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 12:53:20.398Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 12:53:20.398Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 12:53:20.398Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 12:53:20.398Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 12:53:20.398Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 12:53:20.422Z window.error
+- message: Uncaught ReferenceError: parsedAtacado is not defined
+- source: http://localhost:3000/src/components/admin/CalculadoraPrecoModal.jsx?t=1790686201306
+- line: 28
+- col: 26
+- stack: 
+    ReferenceError: parsedAtacado is not defined
+        at CalculadoraPrecoModal (http://localhost:3000/src/components/admin/CalculadoraPrecoModal.jsx?t=1790686201306:28:26)
+        at renderWithHooks (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=6a46656c:11596:26)
+        at mountIndeterminateComponent (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=6a46656c:14974:21)
+        at beginWork (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=6a46656c:15962:22)
+        at HTMLUnknownElement.callCallback2 (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=6a46656c:3680:22)
+        at Object.invokeGuardedCallbackDev (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=6a46656c:3705:24)
+        at invokeGuardedCallback (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=6a46656c:3739:39)
+        at beginWork$1 (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=6a46656c:19818:15)
+        at performUnitOfWork (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=6a46656c:19251:20)
+        at workLoopSync (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=6a46656c:19190:13)
+
+## 2026-09-29 12:53:20.468Z window.error
+- message: Uncaught ReferenceError: parsedAtacado is not defined
+- source: http://localhost:3000/src/components/admin/CalculadoraPrecoModal.jsx?t=1790686201306
+- line: 28
+- col: 26
+- stack: 
+    ReferenceError: parsedAtacado is not defined
+        at CalculadoraPrecoModal (http://localhost:3000/src/components/admin/CalculadoraPrecoModal.jsx?t=1790686201306:28:26)
+        at renderWithHooks (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=6a46656c:11596:26)
+        at mountIndeterminateComponent (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=6a46656c:14974:21)
+        at beginWork (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=6a46656c:15962:22)
+        at HTMLUnknownElement.callCallback2 (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=6a46656c:3680:22)
+        at Object.invokeGuardedCallbackDev (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=6a46656c:3705:24)
+        at invokeGuardedCallback (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=6a46656c:3739:39)
+        at beginWork$1 (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=6a46656c:19818:15)
+        at performUnitOfWork (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=6a46656c:19251:20)
+        at workLoopSync (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=6a46656c:19190:13)
+
+## 2026-09-29 12:53:20.490Z console.error
+- text: 
+    The above error occurred in the <CalculadoraPrecoModal> component:
+    
+        at CalculadoraPrecoModal (http://localhost:3000/src/components/admin/CalculadoraPrecoModal.jsx?t=1790686201306:9:49)
+        at section
+        at div
+        at div
+        at form
+        at ProdutoForm (http://localhost:3000/src/pages/admin/ProdutoForm.jsx?t=1790686201306:19:18)
+        at ErrorBoundary (http://localhost:3000/src/components/ErrorBoundary.jsx:7:5)
+        at RenderedRoute (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=6a46656c:6397:26)
+        at Outlet (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=6a46656c:7179:26)
+        at main
+        at div
+        at div
+        at AdminLayout (http://localhost:3000/src/components/admin/AdminLayout.jsx:13:41)
+        at ProtectedRoute (http://localhost:3000/src/components/ProtectedRoute.jsx:8:42)
+        at ErrorBoundary (http://localhost:3000/src/components/ErrorBoundary.jsx:7:5)
+        at RenderedRoute (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=6a46656c:6397:26)
+        at Routes (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=6a46656c:7258:3)
+        at AppInterceptor (http://localhost:3000/src/App.jsx?t=1790686201306:189:20)
+        at AdminAuthProvider (http://localhost:3000/src/context/AdminAuthContext.jsx:8:37)
+        at AuthProvider (http://localhost:3000/src/context/AuthContext.jsx:7:32)
+        at Router (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=6a46656c:7188:13)
+        at BrowserRouter (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=6a46656c:10402:3)
+        at ErrorBoundary (http://localhost:3000/src/components/ErrorBoundary.jsx:7:5)
+        at App
+    
+    React will try to recreate this component tree from scratch using the error boundary you provided, ErrorBoundary.
+
+## 2026-09-29 12:53:20.490Z console.error
+- text: 
+    🔴 ErrorBoundary caught an error: ReferenceError: parsedAtacado is not defined
+        at CalculadoraPrecoModal (http://localhost:3000/src/components/admin/CalculadoraPrecoModal.jsx?t=1790686201306:28:26)
+        at renderWithHooks (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=6a46656c:11596:26)
+        at mountIndeterminateComponent (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=6a46656c:14974:21)
+        at beginWork (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=6a46656c:15962:22)
+        at beginWork$1 (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=6a46656c:19806:22)
+        at performUnitOfWork (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=6a46656c:19251:20)
+        at workLoopSync (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=6a46656c:19190:13)
+        at renderRootSync (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=6a46656c:19169:15)
+        at recoverFromConcurrentError (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=6a46656c:18786:28)
+        at performConcurrentWorkOnRoot (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=6a46656c:18734:30)
+
+## 2026-09-29 12:53:20.491Z console.error
+- text: 🔴 Error details: {"componentStack":"\n    at CalculadoraPrecoModal (http://localhost:3000/src/components/admin/CalculadoraPrecoModal.jsx?t=1790686201306:9:49)\n    at section\n    at div\n    at div\n    at form\n    at ProdutoForm (http://localhost:3000/src/pages/admin/ProdutoForm.jsx?t=1790686201306:19:18)\n    at ErrorBoundary (http://localhost:3000/src/components/ErrorBoundary.jsx:7:5)\n    at RenderedRoute (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=6a46656c:6397:26)\n    at Outlet (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=6a46656c:7179:26)\n    at main\n    at div\n    at div\n    at AdminLayout (http://localhost:3000/src/components/admin/AdminLayout.jsx:13:41)\n    at ProtectedRoute (http://localhost:3000/src/components/ProtectedRoute.jsx:8:42)\n    at ErrorBoundary (http://localhost:3000/src/components/ErrorBoundary.jsx:7:5)\n    at RenderedRoute (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=6a46656c:6397:26)\n    at Routes (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=6a46656c:7258:3)\n    at AppInterceptor (http://localhost:3000/src/App.jsx?t=1790686201306:189:20)\n    at AdminAuthProvider (http://localhost:3000/src/context/AdminAuthContext.jsx:8:37)\n    at AuthProvider (http://localhost:3000/src/context/AuthContext.jsx:7:32)\n    at Router (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=6a46656c:7188:13)\n    at BrowserRouter (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=6a46656c:10402:3)\n    at ErrorBoundary (http://localhost:3000/src/components/ErrorBoundary.jsx:7:5)\n    at App"}
+
+## 2026-09-29 12:53:20.491Z console.error
+- text: 
+    🔴 Component stack: 
+        at CalculadoraPrecoModal (http://localhost:3000/src/components/admin/CalculadoraPrecoModal.jsx?t=1790686201306:9:49)
+        at section
+        at div
+        at div
+        at form
+        at ProdutoForm (http://localhost:3000/src/pages/admin/ProdutoForm.jsx?t=1790686201306:19:18)
+        at ErrorBoundary (http://localhost:3000/src/components/ErrorBoundary.jsx:7:5)
+        at RenderedRoute (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=6a46656c:6397:26)
+        at Outlet (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=6a46656c:7179:26)
+        at main
+        at div
+        at div
+        at AdminLayout (http://localhost:3000/src/components/admin/AdminLayout.jsx:13:41)
+        at ProtectedRoute (http://localhost:3000/src/components/ProtectedRoute.jsx:8:42)
+        at ErrorBoundary (http://localhost:3000/src/components/ErrorBoundary.jsx:7:5)
+        at RenderedRoute (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=6a46656c:6397:26)
+        at Routes (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=6a46656c:7258:3)
+        at AppInterceptor (http://localhost:3000/src/App.jsx?t=1790686201306:189:20)
+        at AdminAuthProvider (http://localhost:3000/src/context/AdminAuthContext.jsx:8:37)
+        at AuthProvider (http://localhost:3000/src/context/AuthContext.jsx:7:32)
+        at Router (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=6a46656c:7188:13)
+        at BrowserRouter (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=6a46656c:10402:3)
+        at ErrorBoundary (http://localhost:3000/src/components/ErrorBoundary.jsx:7:5)
+        at App
+
+## 2026-09-29 12:54:20.384Z load
+- url: http://localhost:3000/admin/produtos/yh5di7bkb7nc3tt/editar
+- title: Avante Lingerie | Oficial
+
+## 2026-09-29 12:54:23.222Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 12:54:23.224Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 12:54:23.224Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 12:54:23.224Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 12:54:23.224Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 12:54:23.224Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 12:54:29.090Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Calculadora Tributária"}
+
+## 2026-09-29 12:54:29.168Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 100.00","label":"Ex: 100.00","value":"","valueLength":0,"text":""}
+
+## 2026-09-29 12:54:56.583Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 100.00","label":"Ex: 100.00","value":"9","valueLength":1,"text":""}
+
+## 2026-09-29 12:54:56.584Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 100.00","label":"Ex: 100.00","value":"9","valueLength":1,"text":""}
+
+## 2026-09-29 12:54:56.585Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 40","label":"Ex: 40","value":"","valueLength":0,"text":""}
+
+## 2026-09-29 12:54:56.809Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 40","label":"Ex: 40","value":"","valueLength":0,"text":""}
+
+## 2026-09-29 12:55:56.596Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 40","label":"Ex: 40","value":"10","valueLength":2,"text":""}
+
+## 2026-09-29 12:55:56.597Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 40","label":"Ex: 40","value":"10","valueLength":2,"text":""}
+
+## 2026-09-29 12:55:58.538Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 40","label":"Ex: 40","value":"10","valueLength":2,"text":""}
+
+## 2026-09-29 12:55:59.849Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 40","label":"Ex: 40","value":"10","valueLength":2,"text":""}
+
+## 2026-09-29 12:56:19.720Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 40","label":"Ex: 40","value":"10","valueLength":2,"text":""}
+
+## 2026-09-29 12:57:03.868Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 40","label":"Ex: 40","value":"10","valueLength":2,"text":""}
+
+## 2026-09-29 12:57:36.244Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 40","label":"Ex: 40","value":"10","valueLength":2,"text":""}
+
+## 2026-09-29 12:57:48.000Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 40","label":"Ex: 40","value":"10","valueLength":2,"text":""}
+
+## 2026-09-29 12:58:30.167Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 40","label":"Ex: 40","value":"10","valueLength":2,"text":""}
+
+## 2026-09-29 12:58:53.640Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 40","label":"Ex: 40","value":"10","valueLength":2,"text":""}
+
+## 2026-09-29 13:00:09.704Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 40","label":"Ex: 40","value":"10","valueLength":2,"text":""}
+
+## 2026-09-29 13:00:14.366Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 40","label":"Ex: 40","value":"10","valueLength":2,"text":""}
+
+## 2026-09-29 13:00:30.964Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 40","label":"Ex: 40","value":"10","valueLength":2,"text":""}
+
+## 2026-09-29 13:00:33.714Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 40","label":"Ex: 40","value":"10","valueLength":2,"text":""}
+
+## 2026-09-29 13:00:56.777Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 40","label":"Ex: 40","value":"10","valueLength":2,"text":""}
+
+## 2026-09-29 13:01:05.210Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 40","label":"Ex: 40","value":"10","valueLength":2,"text":""}
+
+## 2026-09-29 13:01:05.216Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 60","label":"Ex: 60","value":"","valueLength":0,"text":""}
+
+## 2026-09-29 13:01:07.661Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 60","label":"Ex: 60","value":"10","valueLength":2,"text":""}
+
+## 2026-09-29 13:01:07.661Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 60","label":"Ex: 60","value":"10","valueLength":2,"text":""}
+
+## 2026-09-29 13:01:15.741Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Aplicar Preços"}
+
+## 2026-09-29 13:01:18.750Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Calculadora Tributária"}
+
+## 2026-09-29 13:01:18.824Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 100.00","label":"Ex: 100.00","value":"9","valueLength":1,"text":""}
+
+## 2026-09-29 13:02:24.233Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 100.00","label":"Ex: 100.00","value":"10","valueLength":2,"text":""}
+
+## 2026-09-29 13:02:24.234Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 100.00","label":"Ex: 100.00","value":"10","valueLength":2,"text":""}
+
+## 2026-09-29 13:02:54.390Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 100.00","label":"Ex: 100.00","value":"10","valueLength":2,"text":""}
+
+## 2026-09-29 13:04:17.549Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 100.00","label":"Ex: 100.00","value":"10","valueLength":2,"text":""}
+
+## 2026-09-29 13:04:48.877Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 100.00","label":"Ex: 100.00","value":"10","valueLength":2,"text":""}
+
+## 2026-09-29 13:04:51.864Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 100.00","label":"Ex: 100.00","value":"10","valueLength":2,"text":""}
+
+## 2026-09-29 13:05:16.091Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 100.00","label":"Ex: 100.00","value":"10","valueLength":2,"text":""}
+
+## 2026-09-29 13:05:22.042Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 100.00","label":"Ex: 100.00","value":"10","valueLength":2,"text":""}
+
+## 2026-09-29 13:14:48.895Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 100.00","label":"Ex: 100.00","value":"10","valueLength":2,"text":""}
+
+## 2026-09-29 13:14:50.006Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 100.00","label":"Ex: 100.00","value":"10","valueLength":2,"text":""}
+
+## 2026-09-29 13:50:49.299Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 100.00","label":"Ex: 100.00","value":"10","valueLength":2,"text":""}
+
+## 2026-09-29 13:50:52.720Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 100.00","label":"Ex: 100.00","value":"10","valueLength":2,"text":""}
+
+## 2026-09-29 13:50:54.007Z click
+- element: {"tag":"div","role":"dialog","ariaLabel":null,"name":null,"type":null,"id":"radix-:r9:","placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Calculadora TributáriaReforma 2026: Imposto CBS/IBS de 1% (Markup por Dentro).Custo do Produto (R$)Margem Atacado (%)Margem Varejo (%)Preço Atacado Final:R$ 11,24Lucro Limpo: R$ 1,12Preço Varejo Final:R$ 11,24Lucro Limpo: R$ 1,12CancelarAplicar PreçosClose"}
+
+## 2026-09-29 13:50:57.071Z click
+- element: {"tag":"div","role":"dialog","ariaLabel":null,"name":null,"type":null,"id":"radix-:r9:","placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Calculadora TributáriaReforma 2026: Imposto CBS/IBS de 1% (Markup por Dentro).Custo do Produto (R$)Margem Atacado (%)Margem Varejo (%)Preço Atacado Final:R$ 11,24Lucro Limpo: R$ 1,12Preço Varejo Final:R$ 11,24Lucro Limpo: R$ 1,12CancelarAplicar PreçosClose"}
+
+## 2026-09-29 13:55:45.230Z click
+- element: {"tag":"div","role":"dialog","ariaLabel":null,"name":null,"type":null,"id":"radix-:r9:","placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Calculadora TributáriaReforma 2026: Imposto CBS/IBS de 1% (Markup por Dentro).Custo do Produto (R$)Margem Atacado (%)Margem Varejo (%)Preço Atacado Final:R$ 11,24Lucro Limpo: R$ 1,12Preço Varejo Final:R$ 11,24Lucro Limpo: R$ 1,12CancelarAplicar PreçosClose"}
+
+## 2026-09-29 13:55:49.475Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Close"}
+
+## 2026-09-29 13:55:55.976Z click
+- element: {"tag":"div","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Preço de Atacado B2B (R$)"}
+
+## 2026-09-29 13:56:24.556Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Calculadora Tributária"}
+
+## 2026-09-29 13:56:25.197Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 100.00","label":"Ex: 100.00","value":"10","valueLength":2,"text":""}
+
+## 2026-09-29 13:56:27.369Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 100.00","label":"Ex: 100.00","value":"10","valueLength":2,"text":""}
+
+## 2026-09-29 13:56:28.634Z click
+- element: {"tag":"div","role":"dialog","ariaLabel":null,"name":null,"type":null,"id":"radix-:r9:","placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Calculadora TributáriaReforma 2026: Imposto CBS/IBS de 1% (Markup por Dentro).Custo do Produto (R$)Margem Atacado (%)Margem Varejo (%)Preço Atacado Final:R$ 11,24Lucro Limpo: R$ 1,12Preço Varejo Final:R$ 11,24Lucro Limpo: R$ 1,12CancelarAplicar PreçosClose"}
+
+## 2026-09-29 14:02:24.583Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Close"}
+
+## 2026-09-29 14:02:28.451Z click
+- element: {"tag":"section","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Preço e LogísticaCalculadora TributáriaPreço de Venda Varejo (R$) *Preço de Atacado B2B (R$)Peso (g)Altura (cm)Largura (cm)Profundidade (cm)"}
+
+## 2026-09-29 14:10:32.344Z window.error
+- message: Uncaught ReferenceError: divisorAtacado is not defined
+- source: http://localhost:3000/src/components/admin/CalculadoraPrecoModal.jsx?t=1790691027322
+- line: 251
+- col: 8
+- stack: 
+    ReferenceError: divisorAtacado is not defined
+        at CalculadoraPrecoModal (http://localhost:3000/src/components/admin/CalculadoraPrecoModal.jsx?t=1790691027322:251:8)
+        at renderWithHooks (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=6a46656c:11596:26)
+        at updateFunctionComponent (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=6a46656c:14630:28)
+        at beginWork (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=6a46656c:15972:22)
+        at HTMLUnknownElement.callCallback2 (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=6a46656c:3680:22)
+        at Object.invokeGuardedCallbackDev (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=6a46656c:3705:24)
+        at invokeGuardedCallback (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=6a46656c:3739:39)
+        at beginWork$1 (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=6a46656c:19818:15)
+        at performUnitOfWork (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=6a46656c:19251:20)
+        at workLoopSync (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=6a46656c:19190:13)
+
+## 2026-09-29 14:10:32.491Z window.error
+- message: Uncaught ReferenceError: divisorAtacado is not defined
+- source: http://localhost:3000/src/components/admin/CalculadoraPrecoModal.jsx?t=1790691027322
+- line: 251
+- col: 8
+- stack: 
+    ReferenceError: divisorAtacado is not defined
+        at CalculadoraPrecoModal (http://localhost:3000/src/components/admin/CalculadoraPrecoModal.jsx?t=1790691027322:251:8)
+        at renderWithHooks (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=6a46656c:11596:26)
+        at updateFunctionComponent (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=6a46656c:14630:28)
+        at beginWork (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=6a46656c:15972:22)
+        at HTMLUnknownElement.callCallback2 (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=6a46656c:3680:22)
+        at Object.invokeGuardedCallbackDev (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=6a46656c:3705:24)
+        at invokeGuardedCallback (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=6a46656c:3739:39)
+        at beginWork$1 (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=6a46656c:19818:15)
+        at performUnitOfWork (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=6a46656c:19251:20)
+        at workLoopSync (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=6a46656c:19190:13)
+
+## 2026-09-29 14:10:32.640Z console.error
+- text: 
+    The above error occurred in the <CalculadoraPrecoModal> component:
+    
+        at CalculadoraPrecoModal (http://localhost:3000/src/components/admin/CalculadoraPrecoModal.jsx?t=1790691027322:9:49)
+        at section
+        at div
+        at div
+        at form
+        at ProdutoForm (http://localhost:3000/src/pages/admin/ProdutoForm.jsx?t=1790686427874:19:18)
+        at ErrorBoundary (http://localhost:3000/src/components/ErrorBoundary.jsx:7:5)
+        at RenderedRoute (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=6a46656c:6397:26)
+        at Outlet (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=6a46656c:7179:26)
+        at main
+        at div
+        at div
+        at AdminLayout (http://localhost:3000/src/components/admin/AdminLayout.jsx:13:41)
+        at ProtectedRoute (http://localhost:3000/src/components/ProtectedRoute.jsx:8:42)
+        at ErrorBoundary (http://localhost:3000/src/components/ErrorBoundary.jsx:7:5)
+        at RenderedRoute (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=6a46656c:6397:26)
+        at Routes (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=6a46656c:7258:3)
+        at AppInterceptor (http://localhost:3000/src/App.jsx?t=1790686427874:189:20)
+        at AdminAuthProvider (http://localhost:3000/src/context/AdminAuthContext.jsx:8:37)
+        at AuthProvider (http://localhost:3000/src/context/AuthContext.jsx:7:32)
+        at Router (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=6a46656c:7188:13)
+        at BrowserRouter (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=6a46656c:10402:3)
+        at ErrorBoundary (http://localhost:3000/src/components/ErrorBoundary.jsx:7:5)
+        at App
+    
+    React will try to recreate this component tree from scratch using the error boundary you provided, ErrorBoundary.
+
+## 2026-09-29 14:10:32.645Z console.error
+- text: 
+    🔴 ErrorBoundary caught an error: ReferenceError: divisorAtacado is not defined
+        at CalculadoraPrecoModal (http://localhost:3000/src/components/admin/CalculadoraPrecoModal.jsx?t=1790691027322:251:8)
+        at renderWithHooks (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=6a46656c:11596:26)
+        at updateFunctionComponent (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=6a46656c:14630:28)
+        at beginWork (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=6a46656c:15972:22)
+        at beginWork$1 (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=6a46656c:19806:22)
+        at performUnitOfWork (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=6a46656c:19251:20)
+        at workLoopSync (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=6a46656c:19190:13)
+        at renderRootSync (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=6a46656c:19169:15)
+        at recoverFromConcurrentError (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=6a46656c:18786:28)
+        at performSyncWorkOnRoot (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=6a46656c:18932:28)
+
+## 2026-09-29 14:10:32.647Z console.error
+- text: 🔴 Error details: {"componentStack":"\n    at CalculadoraPrecoModal (http://localhost:3000/src/components/admin/CalculadoraPrecoModal.jsx?t=1790691027322:9:49)\n    at section\n    at div\n    at div\n    at form\n    at ProdutoForm (http://localhost:3000/src/pages/admin/ProdutoForm.jsx?t=1790686427874:19:18)\n    at ErrorBoundary (http://localhost:3000/src/components/ErrorBoundary.jsx:7:5)\n    at RenderedRoute (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=6a46656c:6397:26)\n    at Outlet (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=6a46656c:7179:26)\n    at main\n    at div\n    at div\n    at AdminLayout (http://localhost:3000/src/components/admin/AdminLayout.jsx:13:41)\n    at ProtectedRoute (http://localhost:3000/src/components/ProtectedRoute.jsx:8:42)\n    at ErrorBoundary (http://localhost:3000/src/components/ErrorBoundary.jsx:7:5)\n    at RenderedRoute (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=6a46656c:6397:26)\n    at Routes (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=6a46656c:7258:3)\n    at AppInterceptor (http://localhost:3000/src/App.jsx?t=1790686427874:189:20)\n    at AdminAuthProvider (http://localhost:3000/src/context/AdminAuthContext.jsx:8:37)\n    at AuthProvider (http://localhost:3000/src/context/AuthContext.jsx:7:32)\n    at Router (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=6a46656c:7188:13)\n    at BrowserRouter (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=6a46656c:10402:3)\n    at ErrorBoundary (http://localhost:3000/src/components/ErrorBoundary.jsx:7:5)\n    at App"}
+
+## 2026-09-29 14:10:32.649Z console.error
+- text: 
+    🔴 Component stack: 
+        at CalculadoraPrecoModal (http://localhost:3000/src/components/admin/CalculadoraPrecoModal.jsx?t=1790691027322:9:49)
+        at section
+        at div
+        at div
+        at form
+        at ProdutoForm (http://localhost:3000/src/pages/admin/ProdutoForm.jsx?t=1790686427874:19:18)
+        at ErrorBoundary (http://localhost:3000/src/components/ErrorBoundary.jsx:7:5)
+        at RenderedRoute (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=6a46656c:6397:26)
+        at Outlet (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=6a46656c:7179:26)
+        at main
+        at div
+        at div
+        at AdminLayout (http://localhost:3000/src/components/admin/AdminLayout.jsx:13:41)
+        at ProtectedRoute (http://localhost:3000/src/components/ProtectedRoute.jsx:8:42)
+        at ErrorBoundary (http://localhost:3000/src/components/ErrorBoundary.jsx:7:5)
+        at RenderedRoute (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=6a46656c:6397:26)
+        at Routes (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=6a46656c:7258:3)
+        at AppInterceptor (http://localhost:3000/src/App.jsx?t=1790686427874:189:20)
+        at AdminAuthProvider (http://localhost:3000/src/context/AdminAuthContext.jsx:8:37)
+        at AuthProvider (http://localhost:3000/src/context/AuthContext.jsx:7:32)
+        at Router (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=6a46656c:7188:13)
+        at BrowserRouter (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=6a46656c:10402:3)
+        at ErrorBoundary (http://localhost:3000/src/components/ErrorBoundary.jsx:7:5)
+        at App
+
+## 2026-09-29 14:10:40.415Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 14:10:40.418Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 14:10:40.418Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 14:10:40.419Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 14:10:40.419Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 14:10:40.419Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 14:15:28.150Z load
+- url: http://localhost:3000/admin/produtos/yh5di7bkb7nc3tt/editar
+- title: Avante Lingerie | Oficial
+
+## 2026-09-29 14:15:33.581Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/api/configuracoes/modo-em-breve
+- status: 500
+- statusText: Internal Server Error
+- durationMs: 956
+
+## 2026-09-29 14:15:33.582Z console.error
+- text: Fetch error from http://localhost:3000/hcgi/api/configuracoes/modo-em-breve: 
+
+## 2026-09-29 14:15:33.587Z console.warn
+- text: Coming Soon API returned non-OK status - defaulting to normal mode
+
+## 2026-09-29 14:15:33.769Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/api/notificacoes
+- status: 500
+- statusText: Internal Server Error
+- durationMs: 56
+
+## 2026-09-29 14:15:33.771Z console.error
+- text: Fetch error from http://localhost:3000/hcgi/api/notificacoes: 
+
+## 2026-09-29 14:15:33.813Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 14:15:33.814Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 14:15:33.815Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 14:15:33.816Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 14:15:33.816Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 14:15:33.816Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 14:18:51.796Z load
+- url: http://localhost:3000/admin/produtos/yh5di7bkb7nc3tt/editar
+- title: Avante Lingerie | Oficial
+
+## 2026-09-29 14:18:53.096Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 14:18:53.098Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 14:18:53.099Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 14:18:53.099Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 14:18:53.099Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 14:18:53.099Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 14:18:58.870Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Calculadora Tributária"}
+
+## 2026-09-29 14:18:58.946Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 100.00","label":"Ex: 100.00","value":"","valueLength":0,"text":""}
+
+## 2026-09-29 14:19:20.704Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 100.00","label":"Ex: 100.00","value":"20","valueLength":2,"text":""}
+
+## 2026-09-29 14:19:20.705Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 100.00","label":"Ex: 100.00","value":"20","valueLength":2,"text":""}
+
+## 2026-09-29 14:19:20.706Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 40","label":"Ex: 40","value":"","valueLength":0,"text":""}
+
+## 2026-09-29 14:19:20.928Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 40","label":"Ex: 40","value":"","valueLength":0,"text":""}
+
+## 2026-09-29 14:20:53.950Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 40","label":"Ex: 40","value":"10","valueLength":2,"text":""}
+
+## 2026-09-29 14:20:53.952Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 40","label":"Ex: 40","value":"10","valueLength":2,"text":""}
+
+## 2026-09-29 14:20:54.138Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Close"}
+
+## 2026-09-29 14:21:48.159Z load
+- url: http://localhost:3000/
+- title: Avante Lingerie | Oficial
+
+## 2026-09-29 14:21:49.021Z navigate
+- url: http://localhost:3000/
+- via: replaceState
+
+## 2026-09-29 14:21:50.178Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 14:21:50.183Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 14:21:50.401Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/testimonials/records?page=1&perPage=10&filter=status%20%3D%20true&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 213
+
+## 2026-09-29 14:21:50.401Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/testimonials/records?page=1&perPage=10&filter=status%20%3D%20true&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-09-29 14:21:50.407Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 14:21:50.409Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 14:21:50.409Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 14:21:50.415Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 14:21:50.416Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 14:21:50.494Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 14:21:50.494Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 14:21:50.497Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 14:21:50.497Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 14:21:50.500Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 14:21:50.501Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 14:21:50.502Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 14:21:50.502Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 14:21:50.504Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 14:21:50.505Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 14:21:50.507Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 14:21:50.507Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 14:21:50.508Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 14:21:50.508Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 14:21:50.512Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 14:21:50.512Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 14:21:50.513Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 14:21:50.513Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 14:21:50.789Z console.error
+- text: 
+    `DialogContent` requires a `DialogTitle` for the component to be accessible for screen reader users.
+    
+    If you want to hide the `DialogTitle`, you can wrap it with our VisuallyHidden component.
+    
+    For more information, see https://radix-ui.com/primitives/docs/components/dialog
+
+## 2026-09-29 14:21:50.790Z console.warn
+- text: Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+
+## 2026-09-29 14:21:59.670Z load
+- url: http://localhost:3000/admin
+- title: Avante Lingerie | Oficial
+
+## 2026-09-29 14:22:00.145Z navigate
+- url: http://localhost:3000/admin
+- via: replaceState
+
+## 2026-09-29 14:22:00.336Z navigate
+- url: http://localhost:3000/admin/login
+- via: replaceState
+
+## 2026-09-29 14:22:01.690Z console.error
+- text: 
+    `DialogContent` requires a `DialogTitle` for the component to be accessible for screen reader users.
+    
+    If you want to hide the `DialogTitle`, you can wrap it with our VisuallyHidden component.
+    
+    For more information, see https://radix-ui.com/primitives/docs/components/dialog
+
+## 2026-09-29 14:22:01.696Z console.warn
+- text: Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+
+## 2026-09-29 14:22:02.167Z click
+- element: {"tag":"div","role":"dialog","ariaLabel":null,"name":null,"type":null,"id":"radix-:r0:","placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Close"}
+
+## 2026-09-29 14:22:02.171Z navigate
+- url: http://localhost:3000/quero-revender
+- via: pushState
+
+## 2026-09-29 14:22:11.467Z load
+- url: http://localhost:3000/admin
+- title: Avante Lingerie | Oficial
+
+## 2026-09-29 14:22:11.707Z navigate
+- url: http://localhost:3000/admin
+- via: replaceState
+
+## 2026-09-29 14:22:11.752Z navigate
+- url: http://localhost:3000/admin/login
+- via: replaceState
+
+## 2026-09-29 14:22:13.349Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"email","id":null,"placeholder":"admin@avantelingerie.com.br","label":"admin@avantelingerie.com.br","value":"","valueLength":0,"text":""}
+
+## 2026-09-29 14:22:13.573Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"email","id":null,"placeholder":"admin@avantelingerie.com.br","label":"admin@avantelingerie.com.br","value":"","valueLength":0,"text":""}
+
+## 2026-09-29 14:22:18.748Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"email","id":null,"placeholder":"admin@avantelingerie.com.br","label":"admin@avantelingerie.com.br","value":"","valueLength":0,"text":""}
+
+## 2026-09-29 14:22:19.130Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"email","id":null,"placeholder":"admin@avantelingerie.com.br","label":"admin@avantelingerie.com.br","value":"admin@avantelingerie.com.br","valueLength":27,"text":""}
+
+## 2026-09-29 14:22:19.133Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"password","id":null,"placeholder":"••••••••","label":"••••••••","value":"[redacted:length=0]","valueLength":0,"text":""}
+
+## 2026-09-29 14:22:19.135Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"password","id":null,"placeholder":"••••••••","label":"••••••••","value":"[redacted:length=12]","valueLength":12,"text":""}
+
+## 2026-09-29 14:22:19.135Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"password","id":null,"placeholder":"••••••••","label":"••••••••","value":"[redacted:length=12]","valueLength":12,"text":""}
+
+## 2026-09-29 14:22:20.078Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"email","id":null,"placeholder":"admin@avantelingerie.com.br","label":"admin@avantelingerie.com.br","value":"admin@avantelingerie.com.br","valueLength":27,"text":""}
+
+## 2026-09-29 14:22:20.302Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"submit","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"ACESSAR PAINEL"}
+
+## 2026-09-29 14:22:20.309Z submit
+- action: http://localhost:3000/admin/login
+- fields: [{"label":"admin@avantelingerie.com.br","type":"email","value":"admin@avantelingerie.com.br","length":27,"redacted":false},{"label":"••••••••","type":"password","value":"[redacted:length=12]","length":12,"redacted":true},{"label":"Mostrar senha","type":"button","value":"","length":0,"redacted":false},{"label":"[submit]","type":"submit","value":"","length":0,"redacted":false}]
+
+## 2026-09-29 14:22:20.505Z navigate
+- url: http://localhost:3000/admin
+- via: pushState
+
+## 2026-09-29 14:22:24.063Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Produtos"}
+
+## 2026-09-29 14:22:24.066Z navigate
+- url: http://localhost:3000/admin/produtos
+- via: pushState
+
+## 2026-09-29 14:22:24.127Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 14:22:24.129Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 14:22:24.130Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 14:22:24.130Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 14:22:24.130Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 14:22:24.130Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 14:22:25.691Z click
+- element: {"tag":"html","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"body {transition: opacity ease-in 0.2s; } \nbody[unresolved] {opacity: 0; display: block; overflow: hidden; position: relative; } \n\n\t\timport { injectIntoGlobalHook } from \"/@react-refresh\";\ninjectIntoGlobalHook(window);\nwindow.$RefreshReg$ = () => {};\nwindow.$RefreshSig$ = () => (type) => type;\n\n\t\t\n\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\tAvante Lingerie | Oficial\n\t\t\n\t\t\n\t\t(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\n\t\tnew Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\n\t\tj=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n\t\t'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n\t\t})(window,document,'script','dataLayer','GTM-XXXXXXX');\n\t\t\n\t\tconst SITE_PAGES_ENDPOINT = '/__horizons/site-pages';\n\nconst OUTGOING_SITE_PAGES_MESSAGE = 'sitePages';\nconst INCOMING_REQUEST_SITE_PAGES_MESSAGE = 'request-site-pages';\n\nconst ALLOWED_PARENT_ORIGINS = [\n\t'https://horizons.hostinger.com',\n\t'https://horizons.hostinger.dev',\n\t'https://horizons-frontend-local.hostinger.dev',\n\t'http://localhost:4000',\n];\n\nfunction postSitePages(pages) {\n\tlet parentOrigin = window.location.ancestorOrigins?.[0];\n\tif (!parentOrigin && document.referrer) {\n\t\ttry {\n\t\t\tparentOrigin = new URL(document.referrer).origin;\n\t\t} catch {}\n\t}\n\tif (parentOrigin && ALLOWED_PARENT_ORIGINS.includes(parentOrigin)) {\n\t\twindow.parent.postMessage({ type: OUTGOING_SITE_PAGES_MESSAGE, payload: { pages } }, parentOrigin);\n\t}\n}\n\nasync function sendSitePagesToParent() {\n\tif (window.self === window.top) {\n\t\treturn;\n\t}\n\n\ttry {\n\t\tconst response = await fetch(SITE_PAGES_ENDPOINT);\n\t\tif (!response.ok) {\n\t\t\tthrow new Error(`HTTP ${response.status}`);\n\t\t}\n\t\tpostSitePages(await response.json());\n\t} catch (error) {\n\t\tconsole.error('[site-pages] Failed to send site pages to parent:', error);\n\t}\n}\n\nif (window.self !== window.top) {\n\twindow.addEventListener('load', sendSitePagesToParent);\n\twindow.addEventListener('message', (event) => {\n\t\tif (event.data?.type === INCOMING_REQUEST_SIT..."}
+
+## 2026-09-29 14:22:26.776Z click
+- element: {"tag":"div","role":"menuitem","ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Editar"}
+
+## 2026-09-29 14:22:26.777Z navigate
+- url: http://localhost:3000/admin/produtos/yh5di7bkb7nc3tt/editar
+- via: pushState
+
+## 2026-09-29 14:22:26.835Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 14:22:26.836Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 14:22:26.836Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 14:22:26.836Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 14:22:26.836Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 14:22:26.836Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 14:22:30.967Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Calculadora Tributária"}
+
+## 2026-09-29 14:22:31.020Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 100.00","label":"Ex: 100.00","value":"","valueLength":0,"text":""}
+
+## 2026-09-29 14:22:48.616Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 100.00","label":"Ex: 100.00","value":"10","valueLength":2,"text":""}
+
+## 2026-09-29 14:22:48.617Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 100.00","label":"Ex: 100.00","value":"10","valueLength":2,"text":""}
+
+## 2026-09-29 14:22:48.618Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 40","label":"Ex: 40","value":"","valueLength":0,"text":""}
+
+## 2026-09-29 14:22:48.839Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 40","label":"Ex: 40","value":"","valueLength":0,"text":""}
+
+## 2026-09-29 14:23:27.367Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 40","label":"Ex: 40","value":"10","valueLength":2,"text":""}
+
+## 2026-09-29 14:23:27.367Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 40","label":"Ex: 40","value":"10","valueLength":2,"text":""}
+
+## 2026-09-29 14:23:27.368Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 60","label":"Ex: 60","value":"","valueLength":0,"text":""}
+
+## 2026-09-29 14:23:27.591Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 60","label":"Ex: 60","value":"","valueLength":0,"text":""}
+
+## 2026-09-29 14:23:49.101Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 60","label":"Ex: 60","value":"20","valueLength":2,"text":""}
+
+## 2026-09-29 14:23:49.101Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 60","label":"Ex: 60","value":"20","valueLength":2,"text":""}
+
+## 2026-09-29 14:23:49.315Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Aplicar Preços"}
+
+## 2026-09-29 14:23:59.685Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Calculadora Tributária"}
+
+## 2026-09-29 14:23:59.796Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 100.00","label":"Ex: 100.00","value":"10","valueLength":2,"text":""}
+
+## 2026-09-29 14:24:07.007Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 100.00","label":"Ex: 100.00","value":"10","valueLength":2,"text":""}
+
+## 2026-09-29 14:24:07.008Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 40","label":"Ex: 40","value":"10","valueLength":2,"text":""}
+
+## 2026-09-29 14:24:07.591Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 40","label":"Ex: 40","value":"10","valueLength":2,"text":""}
+
+## 2026-09-29 14:24:38.558Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 40","label":"Ex: 40","value":"20","valueLength":2,"text":""}
+
+## 2026-09-29 14:24:38.559Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 40","label":"Ex: 40","value":"20","valueLength":2,"text":""}
+
+## 2026-09-29 14:24:38.560Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 60","label":"Ex: 60","value":"20","valueLength":2,"text":""}
+
+## 2026-09-29 14:24:38.953Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 60","label":"Ex: 60","value":"20","valueLength":2,"text":""}
+
+## 2026-09-29 14:24:46.248Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 60","label":"Ex: 60","value":"30","valueLength":2,"text":""}
+
+## 2026-09-29 14:24:46.248Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 60","label":"Ex: 60","value":"30","valueLength":2,"text":""}
+
+## 2026-09-29 14:24:46.471Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Aplicar Preços"}
+
+## 2026-09-29 14:24:56.289Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"submit","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Salvar"}
+
+## 2026-09-29 14:24:56.311Z submit
+- action: http://localhost:3000/admin/produtos/yh5di7bkb7nc3tt/editar
+- fields: [{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[submit]","type":"submit","value":"","length":0,"redacted":false},{"label":"Ex: Conjunto Rendado Paris","type":"text","value":"Pijama Feminino Short Doll Suede Confortável Tecido Leve e Macio Fresquinho","length":75,"redacted":false},{"label":"Gerado automaticamente pela IA...","type":"text","value":"Pijama Short Doll Suede Confortável Feminino - Avante Lingerie","length":62,"redacted":false},{"label":"Gerado automaticamente pela IA com funil de Varejo/Atacado...","type":"textarea","value":"Noites revigorantes com o toque aveludado direto de Nova Friburgo. Economize no varejo ou ganhe descontos progressivos automáticos de atacado. Compre direto da fábrica!","length":168,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[select]","type":"select-one","value":"z7i4vmn1n7io1np","length":15,"redacted":false},{"label":"Ex: 6208.21.00","type":"text","value":"","length":0,"redacted":false},{"label":"Referência / Código Interno * Gerar Automático","type":"button","value":"","length":0,"redacted":false},{"label":"[input]","type":"text","value":"AVL-PIJ-2485","length":12,"redacted":false},{"label":"Dia do Namorado","type":"checkbox","value":"on","length":2,"redacted":false},{"label":"Moda Fitness","type":"checkbox","value":"on","length":2,"redacted":false},{"label":"Moda Sexy","type":"checkbox","value":"on","length":2,"redacted":false},{"label":"[select]","type":"select-one","value":"40bnrds09kg7dio","length":15,"redacted":false},{"label":"[button]","type":"button","value":"on","length":2,"redacted":false},{"label":"[checkbox]","type":"checkbox","value":"on","length":2,"redacted":false},{"label":"[button]","type":"button","value":"on","length":2,"redacted":false},{"label":"[checkbox]","type":"checkbox","value":"on","length":2,"redacted":false},{"label":"[button]","type":"button","value":"on","length":2,"redacted":false},{"label":"[checkbox]","type":"checkbox","value":"on","length":2,"redacted":false},{"label":"[button]","type":"button","value":"on","length":2,"redacted":false},{"label":"[checkbox]","type":"checkbox","value":"on","length":2,"redacted":false},{"label":"[button]","type":"button","value":"on","length":2,"redacted":false},{"label":"[checkbox]","type":"checkbox","value":"on","length":2,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[number]","type":"number","value":"15.92","length":5,"redacted":false},{"label":"[number]","type":"number","value":"12.12","length":5,"redacted":false},{"label":"Ex: 150","type":"number","value":"200","length":3,"redacted":false},{"label":"Ex: 5","type":"number","value":"5","length":1,"redacted":false},{"label":"Ex: 11","type":"number","value":"15","length":2,"redacted":false},{"label":"Ex: 20","type":"number","value":"25","length":2,"redacted":false},{"label":"Digite os tamanhos separados por vírgula...","type":"text","value":"","length":0,"redacted":false},{"label":"Digite as cores separadas por vírgula...","type":"text","value":"","length":0,"redacted":false},{"label":"Ex: 25","type":"number","value":"","length":0,"redacted":false},{"label":"Ex: 79.90","type":"number","value":"","length":0,"redacted":false},{"label":"Ex: 65.00","type":"number","value":"","length":0,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[text]","type":"text","value":"AVL-PIJ-2485-AZUL-MARINHO-LA-P","length":30,"redacted":false},{"label":"[select]","type":"select-one","value":"azul_marinho_lacinho_e_cora_o_vsxm2f7la3.jpeg","length":45,"redacted":false},{"label":"[number]","type":"number","value":"100","length":3,"redacted":false},{"label":"Usar base","type":"number","value":"39.9","length":4,"redacted":false},{"label":"Usar base","type":"number","value":"27.9","length":4,"redacted":false},{"label":"[button]","type":"button","value":"on","length":2,"redacted":false},{"label":"[checkbox]","type":"checkbox","value":"on","length":2,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[text]","type":"text","value":"AVL-PIJ-2485-AZUL-MARINHO-LA-M","length":30,"redacted":false},{"label":"[select]","type":"select-one","value":"azul_marinho_lacinho_e_cora_o_vsxm2f7la3.jpeg","length":45,"redacted":false},{"label":"[number]","type":"number","value":"100","length":3,"redacted":false},{"label":"Usar base","type":"number","value":"39.9","length":4,"redacted":false},{"label":"Usar base","type":"number","value":"27.9","length":4,"redacted":false},{"label":"[button]","type":"button","value":"on","length":2,"redacted":false},{"label":"[checkbox]","type":"checkbox","value":"on","length":2,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[text]","type":"text","value":"AVL-PIJ-2485-AZUL-MARINHO-LA-G","length":30,"redacted":false},{"label":"[select]","type":"select-one","value":"azul_marinho_lacinho_e_cora_o_vsxm2f7la3.jpeg","length":45,"redacted":false},{"label":"[number]","type":"number","value":"100","length":3,"redacted":false},{"label":"Usar base","type":"number","value":"39.9","length":4,"redacted":false},{"label":"Usar base","type":"number","value":"27.9","length":4,"redacted":false},{"label":"[button]","type":"button","value":"on","length":2,"redacted":false},{"label":"[checkbox]","type":"checkbox","value":"on","length":2,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[text]","type":"text","value":"AVL-PIJ-2485-AZUL-MARINHO-LA-GG","length":31,"redacted":false},{"label":"[select]","type":"select-one","value":"azul_marinho_lacinho_e_cora_o_vsxm2f7la3.jpeg","length":45,"redacted":false},{"label":"[number]","type":"number","value":"100","length":3,"redacted":false},{"label":"Usar base","type":"number","value":"39.9","length":4,"redacted":false},{"label":"Usar base","type":"number","value":"27.9","length":4,"redacted":false},{"label":"[button]","type":"button","value":"on","length":2,"redacted":false},{"label":"[checkbox]","type":"checkbox","value":"on","length":2,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[text]","type":"text","value":"AVL-PIJ-2485-ROSA-CLARO-CERE-P","length":30,"redacted":false},{"label":"[select]","type":"select-one","value":"rosa_claro_cerejinha_e_borboleta_u8fntugv2s.jpeg","length":48,"redacted":false},{"label":"[number]","type":"number","value":"100","length":3,"redacted":false},{"label":"Usar base","type":"number","value":"39.9","length":4,"redacted":false},{"label":"Usar base","type":"number","value":"27.9","length":4,"redacted":false},{"label":"[button]","type":"button","value":"on","length":2,"redacted":false},{"label":"[checkbox]","type":"checkbox","value":"on","length":2,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[text]","type":"text","value":"AVL-PIJ-2485-ROSA-CLARO-CERE-M","length":30,"redacted":false},{"label":"[select]","type":"select-one","value":"rosa_claro_cerejinha_e_borboleta_u8fntugv2s.jpeg","length":48,"redacted":false},{"label":"[number]","type":"number","value":"100","length":3,"redacted":false},{"label":"Usar base","type":"number","value":"39.9","length":4,"redacted":false},{"label":"Usar base","type":"number","value":"27.9","length":4,"redacted":false},{"label":"[button]","type":"button","value":"on","length":2,"redacted":false},{"label":"[checkbox]","type":"checkbox","value":"on","length":2,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[text]","type":"text","value":"AVL-PIJ-2485-ROSA-CLARO-CERE-G","length":30,"redacted":false},{"label":"[select]","type":"select-one","value":"rosa_claro_cerejinha_e_borboleta_u8fntugv2s.jpeg","length":48,"redacted":false},{"label":"[number]","type":"number","value":"100","length":3,"redacted":false},{"label":"Usar base","type":"number","value":"39.9","length":4,"redacted":false},{"label":"Usar base","type":"number","value":"27.9","length":4,"redacted":false},{"label":"[button]","type":"button","value":"on","length":2,"redacted":false},{"label":"[checkbox]","type":"checkbox","value":"on","length":2,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[text]","type":"text","value":"AVL-PIJ-2485-ROSA-CLARO-CERE-GG","length":31,"redacted":false},{"label":"[select]","type":"select-one","value":"rosa_claro_cerejinha_e_borboleta_u8fntugv2s.jpeg","length":48,"redacted":false},{"label":"[number]","type":"number","value":"100","length":3,"redacted":false},{"label":"Usar base","type":"number","value":"39.9","length":4,"redacted":false},{"label":"Usar base","type":"number","value":"27.9","length":4,"redacted":false},{"label":"[button]","type":"button","value":"on","length":2,"redacted":false},{"label":"[checkbox]","type":"checkbox","value":"on","length":2,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[text]","type":"text","value":"AVL-PIJ-2485-AMARELO-MANTEIG-P","length":30,"redacted":false},{"label":"[select]","type":"select-one","value":"amarelo_manteiga_cerejinha_e_flor_u18lshserz.jpeg","length":49,"redacted":false},{"label":"[number]","type":"number","value":"100","length":3,"redacted":false},{"label":"Usar base","type":"number","value":"39.9","length":4,"redacted":false},{"label":"Usar base","type":"number","value":"27.9","length":4,"redacted":false},{"label":"[button]","type":"button","value":"on","length":2,"redacted":false},{"label":"[checkbox]","type":"checkbox","value":"on","length":2,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[text]","type":"text","value":"AVL-PIJ-2485-AMARELO-MANTEIG-M","length":30,"redacted":false},{"label":"[select]","type":"select-one","value":"amarelo_manteiga_cerejinha_e_flor_u18lshserz.jpeg","length":49,"redacted":false},{"label":"[number]","type":"number","value":"100","length":3,"redacted":false},{"label":"Usar base","type":"number","value":"39.9","length":4,"redacted":false},{"label":"Usar base","type":"number","value":"27.9","length":4,"redacted":false},{"label":"[button]","type":"button","value":"on","length":2,"redacted":false},{"label":"[checkbox]","type":"checkbox","value":"on","length":2,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[text]","type":"text","value":"AVL-PIJ-2485-AMARELO-MANTEIG-G","length":30,"redacted":false},{"label":"[select]","type":"select-one","value":"amarelo_manteiga_cerejinha_e_flor_u18lshserz.jpeg","length":49,"redacted":false},{"label":"[number]","type":"number","value":"100","length":3,"redacted":false},{"label":"Usar base","type":"number","value":"39.9","length":4,"redacted":false},{"label":"Usar base","type":"number","value":"27.9","length":4,"redacted":false},{"label":"[button]","type":"button","value":"on","length":2,"redacted":false},{"label":"[checkbox]","type":"checkbox","value":"on","length":2,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[text]","type":"text","value":"AVL-PIJ-2485-AMARELO-MANTEIG-GG","length":31,"redacted":false},{"label":"[select]","type":"select-one","value":"amarelo_manteiga_cerejinha_e_flor_u18lshserz.jpeg","length":49,"redacted":false},{"label":"[number]","type":"number","value":"100","length":3,"redacted":false},{"label":"Usar base","type":"number","value":"39.9","length":4,"redacted":false},{"label":"Usar base","type":"number","value":"27.9","length":4,"redacted":false},{"label":"[button]","type":"button","value":"on","length":2,"redacted":false},{"label":"[checkbox]","type":"checkbox","value":"on","length":2,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[text]","type":"text","value":"AVL-PIJ-2485-ROSA-CHICLETE-L-P","length":30,"redacted":false},{"label":"[select]","type":"select-one","value":"rosa_chiclete_lacinho_e_cora_o_fiktvpv3mb.jpeg","length":46,"redacted":false},{"label":"[number]","type":"number","value":"100","length":3,"redacted":false},{"label":"Usar base","type":"number","value":"39.9","length":4,"redacted":false},{"label":"Usar base","type":"number","value":"27.9","length":4,"redacted":false},{"label":"[button]","type":"button","value":"on","length":2,"redacted":false},{"label":"[checkbox]","type":"checkbox","value":"on","length":2,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[text]","type":"text","value":"AVL-PIJ-2485-ROSA-CHICLETE-L-M","length":30,"redacted":false},{"label":"[select]","type":"select-one","value":"rosa_chiclete_lacinho_e_cora_o_fiktvpv3mb.jpeg","length":46,"redacted":false},{"label":"[number]","type":"number","value":"100","length":3,"redacted":false},{"label":"Usar base","type":"number","value":"39.9","length":4,"redacted":false},{"label":"Usar base","type":"number","value":"27.9","length":4,"redacted":false},{"label":"[button]","type":"button","value":"on","length":2,"redacted":false},{"label":"[checkbox]","type":"checkbox","value":"on","length":2,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[text]","type":"text","value":"AVL-PIJ-2485-ROSA-CHICLETE-L-G","length":30,"redacted":false},{"label":"[select]","type":"select-one","value":"rosa_chiclete_lacinho_e_cora_o_fiktvpv3mb.jpeg","length":46,"redacted":false},{"label":"[number]","type":"number","value":"100","length":3,"redacted":false},{"label":"Usar base","type":"number","value":"39.9","length":4,"redacted":false},{"label":"Usar base","type":"number","value":"27.9","length":4,"redacted":false},{"label":"[button]","type":"button","value":"on","length":2,"redacted":false},{"label":"[checkbox]","type":"checkbox","value":"on","length":2,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[text]","type":"text","value":"AVL-PIJ-2485-ROSA-CHICLETE-L-GG","length":31,"redacted":false},{"label":"[select]","type":"select-one","value":"rosa_chiclete_lacinho_e_cora_o_fiktvpv3mb.jpeg","length":46,"redacted":false},{"label":"[number]","type":"number","value":"100","length":3,"redacted":false},{"label":"Usar base","type":"number","value":"39.9","length":4,"redacted":false},{"label":"Usar base","type":"number","value":"27.9","length":4,"redacted":false},{"label":"[button]","type":"button","value":"on","length":2,"redacted":false},{"label":"[checkbox]","type":"checkbox","value":"on","length":2,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[text]","type":"text","value":"AVL-PIJ-2485-AZUL-SERENITY-A-P","length":30,"redacted":false},{"label":"[select]","type":"select-one","value":"azul_serenity_arco_iris_uno2etm3cb.jpeg","length":39,"redacted":false},{"label":"[number]","type":"number","value":"100","length":3,"redacted":false},{"label":"Usar base","type":"number","value":"39.9","length":4,"redacted":false},{"label":"Usar base","type":"number","value":"27.9","length":4,"redacted":false},{"label":"[button]","type":"button","value":"on","length":2,"redacted":false},{"label":"[checkbox]","type":"checkbox","value":"on","length":2,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[text]","type":"text","value":"AVL-PIJ-2485-AZUL-SERENITY-A-M","length":30,"redacted":false},{"label":"[select]","type":"select-one","value":"azul_serenity_arco_iris_uno2etm3cb.jpeg","length":39,"redacted":false},{"label":"[number]","type":"number","value":"100","length":3,"redacted":false},{"label":"Usar base","type":"number","value":"39.9","length":4,"redacted":false},{"label":"Usar base","type":"number","value":"27.9","length":4,"redacted":false},{"label":"[button]","type":"button","value":"on","length":2,"redacted":false},{"label":"[checkbox]","type":"checkbox","value":"on","length":2,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[text]","type":"text","value":"AVL-PIJ-2485-AZUL-SERENITY-A-G","length":30,"redacted":false},{"label":"[select]","type":"select-one","value":"azul_serenity_arco_iris_uno2etm3cb.jpeg","length":39,"redacted":false},{"label":"[number]","type":"number","value":"100","length":3,"redacted":false},{"label":"Usar base","type":"number","value":"39.9","length":4,"redacted":false},{"label":"Usar base","type":"number","value":"27.9","length":4,"redacted":false},{"label":"[button]","type":"button","value":"on","length":2,"redacted":false},{"label":"[checkbox]","type":"checkbox","value":"on","length":2,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[text]","type":"text","value":"AVL-PIJ-2485-AZUL-SERENITY-A-GG","length":31,"redacted":false},{"label":"[select]","type":"select-one","value":"azul_serenity_arco_iris_uno2etm3cb.jpeg","length":39,"redacted":false},{"label":"[number]","type":"number","value":"100","length":3,"redacted":false},{"label":"Usar base","type":"number","value":"39.9","length":4,"redacted":false},{"label":"Usar base","type":"number","value":"27.9","length":4,"redacted":false},{"label":"[button]","type":"button","value":"on","length":2,"redacted":false},{"label":"[checkbox]","type":"checkbox","value":"on","length":2,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[textarea]","type":"textarea","value":"✨ Sinta o carinho de um pijama feito para elevar seu bem-estar. O Short Doll Suede da Avante Lingerie une o frescor necessário para noites tranquilas com o charme que você merece ao descansar.\n🌸 Confeccionado em nossa fábrica própria em Nova Friburgo, garantimos uma peça com acabamento impecável e pronta para transformar seus momentos de autocuidado.","length":353,"redacted":false},{"label":"Adicionar Fotos/Vídeos","type":"file","value":"","length":0,"redacted":false},{"label":"Nome / Cor da Mídia","type":"text","value":"Azul Marinho Lacinho e Coração","length":30,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"Nome / Cor da Mídia","type":"text","value":"Azul Marinho Lacinho e Coração","length":30,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"Nome / Cor da Mídia","type":"text","value":"Rosa Claro Cerejinha e Borboleta","length":32,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"Nome / Cor da Mídia","type":"text","value":"Amarelo Manteiga  Cerejinha e Flor","length":34,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"Nome / Cor da Mídia","type":"text","value":"Rosa Chiclete Lacinho e Coração","length":31,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"Nome / Cor da Mídia","type":"text","value":"Azul Serenity Arco-iris","length":23,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"Ex: https://youtube.com/shorts/... ou link .mp4","type":"url","value":"https://avantelingerie.com.br/video/Short_doll.mp4","length":50,"redacted":false},{"label":"[select]","type":"select-one","value":"first","length":5,"redacted":false}]
+
+## 2026-09-29 14:24:57.366Z network.error
+- method: POST
+- url: http://localhost:3000/hcgi/api/bling/produtos/sincronizar
+- status: 500
+- statusText: Internal Server Error
+- requestBody: {"produto_id":"yh5di7bkb7nc3tt"}
+- durationMs: 757
+
+## 2026-09-29 14:24:57.374Z console.error
+- text: Fetch error from http://localhost:3000/hcgi/api/bling/produtos/sincronizar: 
+
+## 2026-09-29 14:24:57.381Z console.error
+- text: 
+    Erro ao sincronizar produto com Bling: SyntaxError: Unexpected end of JSON input
+        at handleSubmit (http://localhost:3000/src/pages/admin/ProdutoForm.jsx?t=1790691039025:563:47)
+
+## 2026-09-29 14:24:57.386Z navigate
+- url: http://localhost:3000/admin/produtos
+- via: pushState
+
+## 2026-09-29 14:24:57.666Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 14:24:57.670Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 14:24:57.672Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 14:24:57.672Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 14:24:57.673Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 14:24:57.673Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 14:25:13.177Z click
+- element: {"tag":"html","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"body {transition: opacity ease-in 0.2s; } \nbody[unresolved] {opacity: 0; display: block; overflow: hidden; position: relative; } \n\n\t\timport { injectIntoGlobalHook } from \"/@react-refresh\";\ninjectIntoGlobalHook(window);\nwindow.$RefreshReg$ = () => {};\nwindow.$RefreshSig$ = () => (type) => type;\n\n\t\t\n\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\tAvante Lingerie | Oficial\n\t\t\n\t\t\n\t\t(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\n\t\tnew Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\n\t\tj=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n\t\t'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n\t\t})(window,document,'script','dataLayer','GTM-XXXXXXX');\n\t\t\n\t\tconst SITE_PAGES_ENDPOINT = '/__horizons/site-pages';\n\nconst OUTGOING_SITE_PAGES_MESSAGE = 'sitePages';\nconst INCOMING_REQUEST_SITE_PAGES_MESSAGE = 'request-site-pages';\n\nconst ALLOWED_PARENT_ORIGINS = [\n\t'https://horizons.hostinger.com',\n\t'https://horizons.hostinger.dev',\n\t'https://horizons-frontend-local.hostinger.dev',\n\t'http://localhost:4000',\n];\n\nfunction postSitePages(pages) {\n\tlet parentOrigin = window.location.ancestorOrigins?.[0];\n\tif (!parentOrigin && document.referrer) {\n\t\ttry {\n\t\t\tparentOrigin = new URL(document.referrer).origin;\n\t\t} catch {}\n\t}\n\tif (parentOrigin && ALLOWED_PARENT_ORIGINS.includes(parentOrigin)) {\n\t\twindow.parent.postMessage({ type: OUTGOING_SITE_PAGES_MESSAGE, payload: { pages } }, parentOrigin);\n\t}\n}\n\nasync function sendSitePagesToParent() {\n\tif (window.self === window.top) {\n\t\treturn;\n\t}\n\n\ttry {\n\t\tconst response = await fetch(SITE_PAGES_ENDPOINT);\n\t\tif (!response.ok) {\n\t\t\tthrow new Error(`HTTP ${response.status}`);\n\t\t}\n\t\tpostSitePages(await response.json());\n\t} catch (error) {\n\t\tconsole.error('[site-pages] Failed to send site pages to parent:', error);\n\t}\n}\n\nif (window.self !== window.top) {\n\twindow.addEventListener('load', sendSitePagesToParent);\n\twindow.addEventListener('message', (event) => {\n\t\tif (event.data?.type === INCOMING_REQUEST_SIT..."}
+
+## 2026-09-29 14:25:14.170Z click
+- element: {"tag":"div","role":"menuitem","ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Editar"}
+
+## 2026-09-29 14:25:14.179Z navigate
+- url: http://localhost:3000/admin/produtos/yh5di7bkb7nc3tt/editar
+- via: pushState
+
+## 2026-09-29 14:25:14.263Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 14:25:14.264Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 14:25:14.264Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 14:25:14.265Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 14:25:14.265Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 14:25:14.265Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 14:25:19.325Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Calculadora Tributária"}
+
+## 2026-09-29 14:25:19.388Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 100.00","label":"Ex: 100.00","value":"","valueLength":0,"text":""}
+
+## 2026-09-29 14:25:49.624Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Close"}
+
+## 2026-09-29 14:25:53.333Z click
+- element: {"tag":"header","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"☀️Ver Loja"}
+
+## 2026-09-29 14:25:57.132Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-09-29 14:25:57.134Z navigate
+- url: http://localhost:3000/admin/produtos
+- via: pushState
+
+## 2026-09-29 14:25:57.230Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 14:25:57.230Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 14:25:57.231Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 14:25:57.232Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 14:25:57.233Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 14:25:57.233Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 14:47:42.277Z load
+- url: http://localhost:3000/admin/produtos
+- title: Avante Lingerie | Oficial
+
+## 2026-09-29 14:47:48.659Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 14:47:48.664Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 14:47:48.671Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 14:47:48.671Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 14:47:48.672Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-09-29 14:47:48.673Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+

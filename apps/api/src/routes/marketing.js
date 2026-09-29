@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import pb from '../pocketbase.js'; // Ajustar import do PB
+import pb from '../utils/pocketbaseClient.js';
 
 const router = Router();
 
