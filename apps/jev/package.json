@@ -1,10 +1,11 @@
 {
-  "name": "laya-ai",
+  "name": "jev-ai",
   "version": "1.0.0",
-  "description": "",
+  "description": "Cérebro Central Jev",
   "main": "index.js",
   "type": "module",
   "scripts": {
+    "start": "node index.js",
     "dev": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

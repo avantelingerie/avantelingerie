@@ -1,0 +1,15 @@
+FROM node:20-alpine
+
+WORKDIR /app
+
+# Copia tudo, exceto o que está no .dockerignore
+COPY . .
+
+# Instala as dependências de todos os workspaces
+RUN npm install --omit=dev
+
+WORKDIR /app/apps/jev
+
+EXPOSE 4000
+
+CMD ["npm", "start"]

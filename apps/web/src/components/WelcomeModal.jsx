@@ -50,7 +50,7 @@ export default function WelcomeModal() {
           </button>
           
           <img 
-            src="/popup-revenda.png" 
+            src="/popup-revenda.jpg" 
             alt="Compre Direto da Fábrica - Avante Lingerie" 
             className="w-full h-auto rounded-lg object-contain transition-transform duration-500 group-hover:scale-[1.02]"
           />

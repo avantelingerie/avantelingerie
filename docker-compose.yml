@@ -32,6 +32,20 @@ services:
     networks:
       - avante-network
 
+  jev:
+    build:
+      context: .
+      dockerfile: Dockerfile.jev
+    ports:
+      - "4000:4000"
+    env_file:
+      - ./apps/jev/.env
+    environment:
+      - NODE_ENV=production
+    restart: always
+    networks:
+      - avante-network
+
   pocketbase:
     image: ghcr.io/muchobien/pocketbase:0.38.0
     ports:
