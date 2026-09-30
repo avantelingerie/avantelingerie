@@ -42,8 +42,34 @@ export default function VariacoesTable({ variacoes = [], onChange, productName =
   const [defaultPrecoAtacado, setDefaultPrecoAtacado] = useState('');
 
   useEffect(() => {
-    if (globalPrice) setDefaultPreco(globalPrice.toString());
-    if (globalPriceWholesale) setDefaultPrecoAtacado(globalPriceWholesale.toString());
+    let updated = false;
+    let novasVariacoes = [...variacoes];
+
+    if (globalPrice) {
+      setDefaultPreco(globalPrice.toString());
+      novasVariacoes = novasVariacoes.map(v => {
+        if (v.preco !== globalPrice) {
+          updated = true;
+          return { ...v, preco: globalPrice };
+        }
+        return v;
+      });
+    }
+    
+    if (globalPriceWholesale) {
+      setDefaultPrecoAtacado(globalPriceWholesale.toString());
+      novasVariacoes = novasVariacoes.map(v => {
+        if (v.preco_atacado !== globalPriceWholesale) {
+          updated = true;
+          return { ...v, preco_atacado: globalPriceWholesale };
+        }
+        return v;
+      });
+    }
+
+    if (updated) {
+      onChange(novasVariacoes);
+    }
   }, [globalPrice, globalPriceWholesale]);
 
   const generateSKU = (cor, tamanho) => {
