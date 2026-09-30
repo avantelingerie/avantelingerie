@@ -987,6 +987,8 @@ export default function ProdutoForm() {
               productName={formData.name} 
               productReference={formData.reference}
               productImages={images}
+              globalPrice={formData.price}
+              globalPriceWholesale={formData.price_wholesale}
             />
           </section>
 

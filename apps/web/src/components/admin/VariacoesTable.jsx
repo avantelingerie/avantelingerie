@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Trash2, Sparkles } from 'lucide-react';
 import { Button } from '@/components/ui/button.jsx';
 import { Input } from '@/components/ui/input.jsx';
 import { Switch } from '@/components/ui/switch.jsx';
 import { toast } from 'sonner';
 
-export default function VariacoesTable({ variacoes = [], onChange, productName = "", productReference = "", productImages = [] }) {
+export default function VariacoesTable({ variacoes = [], onChange, productName = "", productReference = "", productImages = [], globalPrice = "", globalPriceWholesale = "" }) {
   const getVariationImagePreview = (imgUrlOrId) => {
     if (!imgUrlOrId) return '';
     const imgObj = productImages.find(img =>
@@ -40,6 +40,11 @@ export default function VariacoesTable({ variacoes = [], onChange, productName =
   const [defaultEstoque, setDefaultEstoque] = useState('');
   const [defaultPreco, setDefaultPreco] = useState('');
   const [defaultPrecoAtacado, setDefaultPrecoAtacado] = useState('');
+
+  useEffect(() => {
+    if (globalPrice) setDefaultPreco(globalPrice.toString());
+    if (globalPriceWholesale) setDefaultPrecoAtacado(globalPriceWholesale.toString());
+  }, [globalPrice, globalPriceWholesale]);
 
   const generateSKU = (cor, tamanho) => {
     if (!productName || !cor || !tamanho) return '';
