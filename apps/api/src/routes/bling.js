@@ -364,8 +364,33 @@ const sincronizarProdutoCompleto = async (req, res) => {
       blingParentId = checkParentResponse.data.data[0].id;
       logger.info('Produto pai ja existe no Bling com ID: ' + blingParentId + '. Atualizando via PUT...');
       
+      let existingVariacoes = [];
+      try {
+        const fullProductRes = await axios.get('https://api.bling.com.br/Api/v3/produtos/' + blingParentId, {
+          headers: { 'Authorization': 'Bearer ' + blingApiToken, 'Accept': 'application/json' }
+        });
+        if (fullProductRes.data?.data?.variacoes) {
+           existingVariacoes = fullProductRes.data.data.variacoes;
+        }
+      } catch (err) {
+        logger.warn('Nao foi possivel buscar o produto completo no Bling: ' + err.message);
+      }
+
       const putPayload = { ...parentPayload };
-        delete putPayload.variacoes;
+      if (existingVariacoes.length > 0) {
+         // Merge as variacoes geradas (com precos novos) com os IDs do Bling para permitir o PUT
+         putPayload.variacoes = blingVariacoes.map(newVar => {
+            const existing = existingVariacoes.find(ev => ev.codigo === newVar.codigo);
+            if (existing && existing.id) {
+               return { ...newVar, id: existing.id };
+            }
+            return newVar;
+         });
+      } else {
+         delete putPayload.variacoes;
+         delete putPayload.formato;
+      }
+
         
         await axios.put(
           'https://api.bling.com.br/Api/v3/produtos/' + blingParentId,
