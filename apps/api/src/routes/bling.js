@@ -271,6 +271,7 @@ const sincronizarProdutoCompleto = async (req, res) => {
   }
 
   try {
+    let parentPayload = {};
     // 1. Fetch parent product from PocketBase
     const product = await pb.collection('products').getOne(produto_id);
 
@@ -340,7 +341,7 @@ const sincronizarProdutoCompleto = async (req, res) => {
       }
     );
 
-        const parentPayload = {
+        parentPayload = {
       nome: product.name,
       codigo: parentSku,
       formato: 'V',
@@ -363,9 +364,12 @@ const sincronizarProdutoCompleto = async (req, res) => {
       blingParentId = checkParentResponse.data.data[0].id;
       logger.info('Produto pai ja existe no Bling com ID: ' + blingParentId + '. Atualizando via PUT...');
       
-      await axios.put(
-        'https://api.bling.com.br/Api/v3/produtos/' + blingParentId,
-        parentPayload,
+      const putPayload = { ...parentPayload };
+        delete putPayload.variacoes;
+        
+        await axios.put(
+          'https://api.bling.com.br/Api/v3/produtos/' + blingParentId,
+          putPayload,
         {
           headers: {
             'Authorization': 'Bearer ' + blingApiToken,
@@ -417,55 +421,63 @@ const sincronizarProdutoCompleto = async (req, res) => {
       }
 
       for (const variation of variations) {
-        if (variation.estoque > 0) {
           try {
             // Buscar o ID do produto filho pelo SKU
             const childRes = await axios.get(
               `https://api.bling.com.br/Api/v3/produtos?codigo=${encodeURIComponent(variation.sku)}`,
               { headers: { 'Authorization': `Bearer ${blingApiToken}`, 'Accept': 'application/json' } }
             );
+            
             if (childRes.data?.data?.length > 0) {
               const childId = childRes.data.data[0].id;
               
-              const payloadEstoque = { 
-                produto: { id: childId },
-                operacao: 'B', // B = Balanço (sobrepõe quantidade existente)
-                quantidade: variation.estoque,
-                preco: variation.preco || product.price || 0,
-                custo: 0,
-                observacoes: "Sincronizado automaticamente da Loja"
+              // Atualizar preco do filho via PUT
+              const childPutPayload = {
+                 nome: variation.sku, // Nome base
+                 codigo: variation.sku,
+                 preco: variation.preco || product.price || 0,
+                 tipo: 'P',
+                 formato: 'S'
               };
               
-              if (depositoId) {
-                payloadEstoque.deposito = { id: depositoId };
+              try {
+                await axios.put(
+                  `https://api.bling.com.br/Api/v3/produtos/${childId}`,
+                  childPutPayload,
+                  { headers: { 'Authorization': `Bearer ${blingApiToken}`, 'Content-Type': 'application/json' } }
+                );
+                logger.info(`Preco da variacao ${variation.sku} atualizado no Bling para ${childPutPayload.preco}`);
+              } catch (putErr) {
+                logger.warn(`Erro ao atualizar preco da variacao ${variation.sku}: ${putErr.message}`);
               }
+              
+              if (variation.estoque > 0) {
+                const payloadEstoque = { 
+                  produto: { id: childId },
+                  operacao: 'B',
+                  quantidade: variation.estoque,
+                  preco: variation.preco || product.price || 0,
+                  custo: 0,
+                  observacoes: "Sincronizado automaticamente da Loja"
+                };
+                // depositoId exists outside loop
+                if (typeof depositoId !== 'undefined' && depositoId) payloadEstoque.deposito = { id: depositoId };
 
-              // Lançar Balanço (B) de Estoque via endpoint oficial /estoques
-              await axios.post(
-                `https://api.bling.com.br/Api/v3/estoques`,
-                payloadEstoque,
-                { headers: { 'Authorization': `Bearer ${blingApiToken}`, 'Content-Type': 'application/json' } }
-              );
-              logger.info(`Balanço de Estoque lançado no Bling para SKU ${variation.sku}: ${variation.estoque}`);
+                await axios.post(
+                  'https://api.bling.com.br/Api/v3/estoques',
+                  payloadEstoque,
+                  { headers: { 'Authorization': `Bearer ${blingApiToken}`, 'Content-Type': 'application/json' } }
+                );
+                logger.info(`Estoque lancado no Bling para SKU ${variation.sku}: ${variation.estoque}`);
+              }
             }
           } catch (estoqueErr) {
-            const errorMsg = estoqueErr.response?.data?.error?.message || estoqueErr.message;
-            const fullError = estoqueErr.response?.data ? JSON.stringify(estoqueErr.response.data) : estoqueErr.message;
-            logger.warn(`Erro não impeditivo ao lançar estoque da variação ${variation.sku}: ${errorMsg}`);
-            
-            // Gravar o erro exato do Bling em um arquivo de log para depuração
-            try {
-              const fs = require('fs');
-              const path = require('path');
-              const logPath = path.join(process.cwd(), 'bling_estoque_error.log');
-              fs.appendFileSync(logPath, `[${new Date().toISOString()}] SKU ${variation.sku} - Payload: ${JSON.stringify(payloadEstoque || {})} - Erro: ${fullError}\n`);
-            } catch(e) {}
+              logger.warn(`Erro na variacao ${variation.sku}: ${estoqueErr.message}`);
           }
         }
       }
-    }
 
-    return res.status(200).json({
+      return res.status(200).json({
       sucesso: true,
       mensagem: `Sincronização de produto com variações concluída.`,
       bling_parent_id: blingParentId,
