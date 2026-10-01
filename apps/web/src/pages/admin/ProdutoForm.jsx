@@ -486,6 +486,7 @@ export default function ProdutoForm() {
       pbFormData.append('status', formData.status);
       pbFormData.append('price', parseFloat(formData.price));
       
+      if (formData.ncm) pbFormData.append('ncm', formData.ncm);
       if (formData.price_wholesale) pbFormData.append('price_wholesale', parseFloat(formData.price_wholesale));
       if (formData.peso_g) pbFormData.append('peso_g', parseFloat(formData.peso_g));
       if (formData.altura_cm) pbFormData.append('altura_cm', parseFloat(formData.altura_cm));
