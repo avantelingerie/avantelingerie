@@ -475,7 +475,6 @@ const sincronizarProdutoCompleto = async (req, res) => {
               logger.warn(`Erro na variacao ${variation.sku}: ${estoqueErr.message}`);
           }
         }
-      }
 
       return res.status(200).json({
       sucesso: true,
