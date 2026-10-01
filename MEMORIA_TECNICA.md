@@ -726,3 +726,12 @@ Para nÃƒÂ£o esquecermos, aqui estÃƒÂ£o os itens congelados e as datas de destrav
  -   * * I m p l e m e n t a ç ã o   d o   M o d e l o   L a y a   ( I A   S y s t e m   1 ) : * *   D i s c u t i m o s   s o b r e   a d o t a r   o   m o d e l o   O p e n - S o u r c e   L a y a   p a r a   t o m a d a   d e   d e c i s õ e s   u l t r a - r á p i d a s   n o   E - c o m m e r c e   e   n o   E R P   T ê x t i l . 
  -   * * D e c i s ã o   P e n d e n t e : * *   E s c o l h e r   e n t r e   a   A r q u i t e t u r a   I s o l a d a   ( U m   L a y a   r o d a n d o   d e n t r o   d a   V P S   d e   c a d a   c l i e n t e )   o u   a   A r q u i t e t u r a   d e   C é r e b r o   C e n t r a l   ( U m   L a y a   c e n t r a l i z a d o   n a   a g ê n c i a   L M   D e s i g n e r W e b   s e r v i n d o   a   t o d o s   o s   E R P s   v i a   A P I   p a r a   r e d u z i r   c u s t o s ) .   A   A d a   d e v e   r e t o m a r   e s s e   a s s u n t o   n a   p r i m e i r a   m e n s a g e m   d o   d i a .  
  
+### Sessão - 30/09/2026
+- **Mudança de Nome e SDK:** A arquitetura do Sistema 1 (Porteiro/Triador) foi definida. Laya foi descontinuado/renomeado para Jev. O SDK TypeSafe foi instalado no projeto (\@typesafe-ai/sdk\) e o modelo rodará através da API deles devido à latência (33ms) e baixo custo.
+- **Integração Jev no Docker:** O Jev ganhou um \Dockerfile.jev\ e foi oficialmente ativado no \docker-compose.yml\ (Porta 4000). A VPS agora hospeda o motor de System 1.
+- **Correção Modal Boas Vindas:** Imagem trocada para PNG com transparência. Funcionalidade de clique direcionando para revenda validada.
+- **Bugfix (Bling - Sincronização de Preço):**
+  1. No Frontend: \VariacoesTable.jsx\ agora aplica automaticamente o preço gerado pela Calculadora Tributária a *todas* as variações já existentes na tabela antes do envio.
+  2. No Backend: \outes/bling.js\ corrigido para executar método \PUT\ (Atualização) caso o produto já exista no Bling, resolvendo a trava que impedia a atualização de preços.
+- **Próximos Passos (Amanhã):** Testar a sincronização final no Bling e definir a estratégia inicial de Tráfego Pago (Atacado no Google vs Varejo no Instagram).
+
