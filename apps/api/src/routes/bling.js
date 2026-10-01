@@ -495,7 +495,7 @@ const sincronizarProdutoCompleto = async (req, res) => {
       fs.writeFileSync(logPath, `[${new Date().toISOString()}] Payload: ${JSON.stringify(parentPayload || {})} \nErro Raw: ${rawError}\n`);
     } catch(e) { }
 
-    return res.status(500).json({
+    return res.status(400).json({
       sucesso: false,
       erro: `Erro no servidor ao sincronizar com Bling: ${errMsg}. DETALHE TÉCNICO OCULTO: ${rawError}`,
     });
