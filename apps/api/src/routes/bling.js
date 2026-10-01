@@ -458,11 +458,12 @@ const sincronizarProdutoCompleto = async (req, res) => {
               
               // Atualizar preco do filho via PUT
               const childPutPayload = {
-                 nome: variation.sku, // Nome base
+                 nome: `${product.name} - ${variation.cor || ''} ${variation.tamanho || ''}`.trim(),
                  codigo: variation.sku,
                  preco: variation.preco || product.price || 0,
                  tipo: 'P',
-                 formato: 'S'
+                 formato: 'S',
+                 tributacao: produtoNcm ? { ncm: produtoNcm } : undefined
               };
               
               try {
