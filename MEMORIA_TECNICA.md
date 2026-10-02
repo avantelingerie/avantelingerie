@@ -720,18 +720,28 @@ Para nÃƒÂ£o esquecermos, aqui estÃƒÂ£o os itens congelados e as datas de destrav
 - **Modal de Boas-Vindas (Exit Intent):** Implementamos o popup WelcomeModal.jsx no App.jsx com a arte premium de revenda. Adicionamos a lÃ³gica de localStorage para disparar apenas na primeira visita (delay de 1.5s). O fundo transparente (PNG) jÃ¡ estÃ¡ no cÃ³digo, aguardando o prÃ³ximo push do Bot do Git para ir ao ar.
 
  # # #   2 9 / 0 9 / 2 0 2 6   -   N o v o   P a i n e l   A d m i n 
- -   * * C a l c u l a d o r a   T r i b u t á r i a   ( R e f o r m a   C B S / I B S ) : * *   C r i a d o   o   M o d a l   d e   P r e c i f i c a ç ã o   i n t e l i g e n t e   ( M a r k u p   p o r   D e n t r o )   d e n t r o   d o   C a d a s t r o   d e   P r o d u t o .   E l e   i d e n t i f i c a   o   a n o   c o r r e n t e ,   b u s c a   a   t a x a   d o   i m p o s t o   r e s p e c t i v a   e   a p l i c a   o s   d i v i s o r e s   d e   M a r g e m   +   I m p o s t o   p a r a   c a l c u l a r   o   P r e ç o   A t a c a d o   e   V a r e j o   g a r a n t i n d o   q u e   o   l u c r o   f i n a l   n ã o   s e j a   c o r r o í d o   p e l o   l e ã o .  
+ -   * * C a l c u l a d o r a   T r i b u t ï¿½ r i a   ( R e f o r m a   C B S / I B S ) : * *   C r i a d o   o   M o d a l   d e   P r e c i f i c a ï¿½ ï¿½ o   i n t e l i g e n t e   ( M a r k u p   p o r   D e n t r o )   d e n t r o   d o   C a d a s t r o   d e   P r o d u t o .   E l e   i d e n t i f i c a   o   a n o   c o r r e n t e ,   b u s c a   a   t a x a   d o   i m p o s t o   r e s p e c t i v a   e   a p l i c a   o s   d i v i s o r e s   d e   M a r g e m   +   I m p o s t o   p a r a   c a l c u l a r   o   P r e ï¿½ o   A t a c a d o   e   V a r e j o   g a r a n t i n d o   q u e   o   l u c r o   f i n a l   n ï¿½ o   s e j a   c o r r o ï¿½ d o   p e l o   l e ï¿½ o .  
  
- # # #   D i s c u s s ã o   e m   A b e r t o   ( P a r a   D e c i s ã o   A m a n h ã   -   3 0 / 0 9 / 2 0 2 6 ) 
- -   * * I m p l e m e n t a ç ã o   d o   M o d e l o   L a y a   ( I A   S y s t e m   1 ) : * *   D i s c u t i m o s   s o b r e   a d o t a r   o   m o d e l o   O p e n - S o u r c e   L a y a   p a r a   t o m a d a   d e   d e c i s õ e s   u l t r a - r á p i d a s   n o   E - c o m m e r c e   e   n o   E R P   T ê x t i l . 
- -   * * D e c i s ã o   P e n d e n t e : * *   E s c o l h e r   e n t r e   a   A r q u i t e t u r a   I s o l a d a   ( U m   L a y a   r o d a n d o   d e n t r o   d a   V P S   d e   c a d a   c l i e n t e )   o u   a   A r q u i t e t u r a   d e   C é r e b r o   C e n t r a l   ( U m   L a y a   c e n t r a l i z a d o   n a   a g ê n c i a   L M   D e s i g n e r W e b   s e r v i n d o   a   t o d o s   o s   E R P s   v i a   A P I   p a r a   r e d u z i r   c u s t o s ) .   A   A d a   d e v e   r e t o m a r   e s s e   a s s u n t o   n a   p r i m e i r a   m e n s a g e m   d o   d i a .  
+ # # #   D i s c u s s ï¿½ o   e m   A b e r t o   ( P a r a   D e c i s ï¿½ o   A m a n h ï¿½   -   3 0 / 0 9 / 2 0 2 6 ) 
+ -   * * I m p l e m e n t a ï¿½ ï¿½ o   d o   M o d e l o   L a y a   ( I A   S y s t e m   1 ) : * *   D i s c u t i m o s   s o b r e   a d o t a r   o   m o d e l o   O p e n - S o u r c e   L a y a   p a r a   t o m a d a   d e   d e c i s ï¿½ e s   u l t r a - r ï¿½ p i d a s   n o   E - c o m m e r c e   e   n o   E R P   T ï¿½ x t i l . 
+ -   * * D e c i s ï¿½ o   P e n d e n t e : * *   E s c o l h e r   e n t r e   a   A r q u i t e t u r a   I s o l a d a   ( U m   L a y a   r o d a n d o   d e n t r o   d a   V P S   d e   c a d a   c l i e n t e )   o u   a   A r q u i t e t u r a   d e   C ï¿½ r e b r o   C e n t r a l   ( U m   L a y a   c e n t r a l i z a d o   n a   a g ï¿½ n c i a   L M   D e s i g n e r W e b   s e r v i n d o   a   t o d o s   o s   E R P s   v i a   A P I   p a r a   r e d u z i r   c u s t o s ) .   A   A d a   d e v e   r e t o m a r   e s s e   a s s u n t o   n a   p r i m e i r a   m e n s a g e m   d o   d i a .  
  
-### Sessão - 30/09/2026
-- **Mudança de Nome e SDK:** A arquitetura do Sistema 1 (Porteiro/Triador) foi definida. Laya foi descontinuado/renomeado para Jev. O SDK TypeSafe foi instalado no projeto (\@typesafe-ai/sdk\) e o modelo rodará através da API deles devido à latência (33ms) e baixo custo.
-- **Integração Jev no Docker:** O Jev ganhou um \Dockerfile.jev\ e foi oficialmente ativado no \docker-compose.yml\ (Porta 4000). A VPS agora hospeda o motor de System 1.
-- **Correção Modal Boas Vindas:** Imagem trocada para PNG com transparência. Funcionalidade de clique direcionando para revenda validada.
-- **Bugfix (Bling - Sincronização de Preço):**
-  1. No Frontend: \VariacoesTable.jsx\ agora aplica automaticamente o preço gerado pela Calculadora Tributária a *todas* as variações já existentes na tabela antes do envio.
-  2. No Backend: \outes/bling.js\ corrigido para executar método \PUT\ (Atualização) caso o produto já exista no Bling, resolvendo a trava que impedia a atualização de preços.
-- **Próximos Passos (Amanhã):** Testar a sincronização final no Bling e definir a estratégia inicial de Tráfego Pago (Atacado no Google vs Varejo no Instagram).
+### Sessï¿½o - 30/09/2026
+- **Mudanï¿½a de Nome e SDK:** A arquitetura do Sistema 1 (Porteiro/Triador) foi definida. Laya foi descontinuado/renomeado para Jev. O SDK TypeSafe foi instalado no projeto (\@typesafe-ai/sdk\) e o modelo rodarï¿½ atravï¿½s da API deles devido ï¿½ latï¿½ncia (33ms) e baixo custo.
+- **Integraï¿½ï¿½o Jev no Docker:** O Jev ganhou um \Dockerfile.jev\ e foi oficialmente ativado no \docker-compose.yml\ (Porta 4000). A VPS agora hospeda o motor de System 1.
+- **Correï¿½ï¿½o Modal Boas Vindas:** Imagem trocada para PNG com transparï¿½ncia. Funcionalidade de clique direcionando para revenda validada.
+- **Bugfix (Bling - Sincronizaï¿½ï¿½o de Preï¿½o):**
+  1. No Frontend: \VariacoesTable.jsx\ agora aplica automaticamente o preï¿½o gerado pela Calculadora Tributï¿½ria a *todas* as variaï¿½ï¿½es jï¿½ existentes na tabela antes do envio.
+  2. No Backend: \outes/bling.js\ corrigido para executar mï¿½todo \PUT\ (Atualizaï¿½ï¿½o) caso o produto jï¿½ exista no Bling, resolvendo a trava que impedia a atualizaï¿½ï¿½o de preï¿½os.
+- **Prï¿½ximos Passos (Amanhï¿½):** Testar a sincronizaï¿½ï¿½o final no Bling e definir a estratï¿½gia inicial de Trï¿½fego Pago (Atacado no Google vs Varejo no Instagram).
 
+
+
+### Sessao - 01/10/2026
+- **Bugfix (Bling - Validacao V3):** O Bling V3 bloqueava atualizacoes de produtos ormato: V sem o array de ariacoes. Resolvido: o backend agora faz um GET no Bling antes do PUT, resgata os IDs das variacoes originais, injeta os IDs nas variacoes novas e envia o payload completo.
+- **Bugfix (Bling - NCM e Nome de Variacao):** O update de variaÃ§Ãµes filhas (PUT /produtos/{childId}) estava apagando o NCM e sobrescrevendo o nome pelo SKU. Corrigido para herdar 	ributacao.ncm e montar o nome legivel no padrao correto.
+- **Bugfix (DB/UI - NCM Nao Salvava):** O front-end calculava o NCM mas nao enviava (pbFormData.append). AlÃ©m disso, o PocketBase droppava o campo pois ele nÃ£o existia no schema oficial. Resolvido: Frontend corrigido para enviar, e rotina de start no main.js blindada para criar a coluna NCM automaticamente.
+- **Feat (Popup Black Friday):** Modal de boas vindas atualizado para PNG recortado da Black Friday e bloqueado para renderizar **apenas** na home page (/), impedindo que interfira no admin ou paginas internas.
+
+**PrÃ³ximo Passo (AmanhÃ£ - 02/10):**
+Investigar urgente porque o **Google Merchant Center nÃ£o estÃ¡ puxando o Feed XML de produtos** (mostrando 0 resultados) mesmo apÃ³s a configuraÃ§Ã£o e atualizaÃ§Ã£o programada para a meia-noite.
