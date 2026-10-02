@@ -27,9 +27,9 @@ router.get('/feed.xml', async (req, res) => {
       const link = `https://avantelingerie.com.br/produto/${id}`;
       
       let imageUrl = 'https://avantelingerie.com.br/placeholder.png';
-      const images = p.images || p.imagens;
+      const images = p.image || p.images || p.imagens; // Correção: o campo no PocketBase se chama 'image'
       if (images && images.length > 0) {
-         imageUrl = `https://api.avantelingerie.com.br/api/files/products/${id}/${images[0]}`;
+         imageUrl = `https://avantelingerie.com.br/hcgi/platform/api/files/products/${id}/${images[0]}`;
       }
 
       const condition = 'new';
@@ -47,6 +47,9 @@ router.get('/feed.xml', async (req, res) => {
       <g:price>${price} BRL</g:price>
       <g:brand>Avante Lingerie</g:brand>
       <g:google_product_category>166</g:google_product_category>
+      <g:age_group>adult</g:age_group>
+      <g:gender>female</g:gender>
+      <g:identifier_exists>no</g:identifier_exists>
     </item>`;
     });
 
