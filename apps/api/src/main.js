@@ -77,6 +77,20 @@ setTimeout(async () => {
         await pb.collection('_superusers').authWithPassword(email, password, { $autoCancel: false });
         
         await pb.collections.update('solicitacoes_revendedor', { updateRule: '@request.auth.collectionName = "usuarios"' });
+        
+        // Assegurar que a tabela products tem o campo NCM
+        try {
+            const productsCol = await pb.collections.getOne('products');
+            const hasNcm = productsCol.fields.find(f => f.name === 'ncm');
+            if (!hasNcm) {
+                productsCol.fields.push({ name: 'ncm', type: 'text', required: false, options: { min: null, max: null, pattern: "" } });
+                await pb.collections.update('products', productsCol);
+                console.log("Campo NCM adicionado a colecao products com sucesso!");
+            }
+        } catch (e) {
+            console.log("Erro ao checar/adicionar campo NCM:", e.message);
+        }
+        
         console.log("SUCESSO: Banco destravado e BLINDADO!");
     } catch (e) {
         console.log("Erro na destrava:", e.message);
