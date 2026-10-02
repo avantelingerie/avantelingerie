@@ -49,6 +49,8 @@ router.get('/feed.xml', async (req, res) => {
       <g:google_product_category>166</g:google_product_category>
       <g:age_group>adult</g:age_group>
       <g:gender>female</g:gender>
+      <g:color>Multicolorido</g:color>
+      <g:size>Múltiplos Tamanhos</g:size>
       <g:identifier_exists>no</g:identifier_exists>
     </item>`;
     });
