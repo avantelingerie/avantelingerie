@@ -743,5 +743,12 @@ Para nÃ£o esquecermos, aqui estÃ£o os itens congelados e as datas de destrav
 - **Bugfix (DB/UI - NCM Nao Salvava):** O front-end calculava o NCM mas nao enviava (pbFormData.append). Além disso, o PocketBase droppava o campo pois ele não existia no schema oficial. Resolvido: Frontend corrigido para enviar, e rotina de start no main.js blindada para criar a coluna NCM automaticamente.
 - **Feat (Popup Black Friday):** Modal de boas vindas atualizado para PNG recortado da Black Friday e bloqueado para renderizar **apenas** na home page (/), impedindo que interfira no admin ou paginas internas.
 
-**Próximo Passo (Amanhã - 02/10):**
-Investigar urgente porque o **Google Merchant Center não está puxando o Feed XML de produtos** (mostrando 0 resultados) mesmo após a configuração e atualização programada para a meia-noite.
+
+### Sessao - 02/10/2026 (Vitória do Feed Google!)
+- **Diagnóstico GMC (0 Produtos):** Investigado o motivo pelo qual o Google Merchant Center não estava puxando os produtos da loja.
+  1. **URL de Busca (Proxy Reverso):** O GMC estava configurado com o domínio pi.avantelingerie..., mas com a reestruturação do Caddy, a API passou a responder em vantelingerie.com.br/hcgi/api/. URL atualizada com sucesso no Merchant Center.
+  2. **Regras Rígidas de Vestuário (Apparel):** O Feed estava falhando silenciosamente por ausência de atributos obrigatórios do nicho. O backend (marketing.js) foi atualizado para forçar dinamicamente as tags obrigatórias: <g:age_group>adult</g:age_group>, <g:gender>female</g:gender> e <g:identifier_exists>no</g:identifier_exists> (evitando bloqueios por falta de EAN).
+  3. **Correção de Cache de Imagens:** O link das imagens estava quebrado e referenciando o banco errado (p.images). O código foi corrigido para extrair o array de imagens de p.image e montar a URL via Caddy Proxy /hcgi/platform/api/files/....
+  **Resultado Final:** 100% dos produtos foram puxados imediatamente pelo Google e já constam com o status de (Em análise). As miniaturas das imagens entraram na fila de cache do robô.
+
+**Status Atual do E-commerce:** Integrações com Bling (Preços e Variações), Gateway de Pagamento, Rastreio, Front-end UI e Google Feed estão **estáveis e funcionais**.
