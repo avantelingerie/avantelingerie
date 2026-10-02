@@ -384,7 +384,8 @@ export default function ProdutoForm() {
               resolve(file);
               return;
             }
-            const newFile = new File([blob], file.name, {
+            const originalNameWithoutExt = file.name.substring(0, file.name.lastIndexOf('.')) || file.name;
+            const newFile = new File([blob], `${originalNameWithoutExt}.jpg`, {
               type: 'image/jpeg',
               lastModified: Date.now(),
             });
