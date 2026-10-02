@@ -1,13 +1,20 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { X } from 'lucide-react';
 import { Dialog, DialogContent } from '@/components/ui/dialog.jsx';
 
 export default function WelcomeModal() {
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
+    // Só mostramos o popup se estiver estritamente na Home page
+    if (location.pathname !== '/') {
+      setIsOpen(false);
+      return;
+    }
+
     // Check if the user has already seen the modal
     const hasSeenModal = localStorage.getItem('avante_welcome_seen');
     
@@ -50,7 +57,7 @@ export default function WelcomeModal() {
           </button>
           
           <img 
-            src="/popup-revenda.png" 
+            src="/popup-black-friday.jpg" 
             alt="Compre Direto da Fábrica - Avante Lingerie" 
             className="w-full h-auto rounded-lg object-contain transition-transform duration-500 group-hover:scale-[1.02]"
           />
