@@ -1247,7 +1247,7 @@ export default function MedidasPage() {
           </p>
 
           <a 
-            href="https://wa.me/5522997618591?text=Ol%C3%A1%2C+gostaria+de+ajuda+para+saber+meu+tamanho+ideal+na+Avante+Lingerie%21" 
+            href="https://wa.me/5522981225010?text=Ol%C3%A1%2C+gostaria+de+ajuda+para+saber+meu+tamanho+ideal+na+Avante+Lingerie%21" 
             target="_blank" 
             rel="noopener noreferrer" 
             className="whatsapp-btn-luxury"

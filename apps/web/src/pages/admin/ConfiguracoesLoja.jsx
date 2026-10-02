@@ -216,7 +216,7 @@ export default function ConfiguracoesLoja() {
                     type="url"
                     value={config.whatsapp_url || ''} 
                     onChange={e => handleChange('whatsapp_url', e.target.value)} 
-                    placeholder="https://wa.me/5511999999999"
+                    placeholder="https://wa.me/5522981225010"
                   />
                 </div>
                 <div className="space-y-2">

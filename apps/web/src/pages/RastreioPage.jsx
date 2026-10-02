@@ -99,7 +99,7 @@ export default function RastreioPage() {
   const [loadingProducts, setLoadingProducts] = useState(true);
   const [errorMsg, setErrorMsg] = useState('');
 
-  const whatsappNumber = "5522997618591"; // Official support WhatsApp number
+  const whatsappNumber = "5522981225010"; // Official support WhatsApp number
 
   // 1. Fetch newest products from PocketBase (Dynamic Showcase)
   useEffect(() => {

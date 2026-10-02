@@ -71,7 +71,7 @@ export default function StoreSection() {
             </div>
             
             <a 
-              href="https://wa.me/5522997618591" 
+              href="https://wa.me/5522981225010" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="flex items-start gap-3 hover:text-[#c59b5f] transition-all group p-3 bg-white border border-gray-100 rounded-xl shadow-sm"
@@ -79,7 +79,7 @@ export default function StoreSection() {
               <Phone className="w-5 h-5 text-[#c59b5f] shrink-0 mt-0.5 group-hover:scale-105 transition-transform" />
               <div>
                 <p className="font-bold text-gray-900 mb-0.5">WhatsApp Premium</p>
-                <p className="font-light hover:underline">(22) 99761-8591</p>
+                <p className="font-light hover:underline">(22) 98122-5010</p>
               </div>
             </a>
             

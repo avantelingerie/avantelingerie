@@ -478,7 +478,7 @@ export default function MinhaContaPage() {
                       <div className="space-y-1">
                         <h4 className="font-serif font-bold text-gray-900 text-sm">Suporte Exclusivo</h4>
                         <p className="text-xs text-gray-500 font-light leading-relaxed">
-                          Fale diretamente com nossa gerente do Ateliê pelo WhatsApp: <strong className="text-gray-800 font-bold block mt-0.5">(22) 99761-8591</strong>
+                          Fale diretamente com nossa gerente do Ateliê pelo WhatsApp: <strong className="text-gray-800 font-bold block mt-0.5">(22) 98122-5010</strong>
                         </p>
                       </div>
                     </div>

@@ -711,7 +711,7 @@ export default function CentralDaClientePage() {
             </p>
             <ul className="list-disc list-inside text-gray-600 mb-6 leading-relaxed pl-4">
               <li className="mb-2"><strong>E-mail:</strong> privacidade@avantelingerie.com.br</li>
-              <li className="mb-2"><strong>WhatsApp:</strong> (22) 99761-8591</li>
+              <li className="mb-2"><strong>WhatsApp:</strong> (22) 98122-5010</li>
               <li><strong>Endereço Postal:</strong> Rua Odenir Pinheiro, nº 20 - 3º Andar, Loteamento Nosso Sonho - Olaria, Nova Friburgo, RJ, CEP: 28623-620</li>
             </ul>
           </section>
@@ -779,7 +779,7 @@ export default function CentralDaClientePage() {
 
             <h3 id="termos-conflitos">2.6. Resolução de Conflitos</h3>
             <p>
-              Buscamos sempre solucionar qualquer divergência ou insatisfação de nossas clientes de forma rápida e amigável através do nosso suporte direto no WhatsApp (22) 99761-8591 ou e-mail contato@avantelingerie.com.br.
+              Buscamos sempre solucionar qualquer divergência ou insatisfação de nossas clientes de forma rápida e amigável através do nosso suporte direto no WhatsApp (22) 98122-5010 ou e-mail contato@avantelingerie.com.br.
             </p>
             <ul className="list-disc list-inside text-gray-600 mb-6 leading-relaxed pl-4">
               <li className="mb-2">Caso não seja possível resolver a demanda diretamente, o consumidor poderá registrar sua reclamação na plataforma oficial de conciliação do Governo Federal: <strong>consumidor.gov.br</strong>.</li>
@@ -826,7 +826,7 @@ export default function CentralDaClientePage() {
             </table>
 
             <h3 id="trocas-solicitar">3.5. Como Solicitar a Troca</h3>
-            <p>Fale conosco no WhatsApp <strong>(22) 99761-8591</strong> ou e-mail <strong>trocas@avantelingerie.com.br</strong> com o número do pedido e fotos. Retornamos em até <strong>2 dias úteis</strong> com as orientações de envio.</p>
+            <p>Fale conosco no WhatsApp <strong>(22) 98122-5010</strong> ou e-mail <strong>trocas@avantelingerie.com.br</strong> com o número do pedido e fotos. Retornamos em até <strong>2 dias úteis</strong> com as orientações de envio.</p>
 
             <h3 id="trocas-reembolso">3.6. Estorno e Prazos</h3>
             <p>Os reembolsos ocorrem após a recepção e perícia no CD (até 2 dias): no <strong>PIX</strong>, o estorno ocorre em <strong>7 dias úteis</strong>; no <strong>cartão de crédito (Stripe)</strong>, o estorno é processado de imediato e constará em até <strong>2 faturas subsequentes</strong> (prazo da sua operadora).</p>
@@ -841,7 +841,7 @@ export default function CentralDaClientePage() {
               <div className="contact-card">
                 <i className="fa-brands fa-whatsapp"></i>
                 <h5>WhatsApp</h5>
-                <p><strong>(22) 99761-8591</strong></p>
+                <p><strong>(22) 98122-5010</strong></p>
                 <p>Seg a Qui 8h às 17h, Sex 8h às 13h</p>
               </div>
               <div className="contact-card">

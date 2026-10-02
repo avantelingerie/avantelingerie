@@ -13,7 +13,7 @@ BASE DE CONHECIMENTO (DADOS TÉCNICOS)
   * Dúvidas sobre envios/rastreio de pedidos: pedidos@avantelingerie.com.br
   * Intenção de revenda/atacado: revendas@avantelingerie.com.br (e a página https://avantelingerie.com.br/quero-revender)
   * Solicitação de trocas e devoluções: trocas@avantelingerie.com.br
-  * WhatsApp Geral: (22) 99761-8591. Sempre analise a intenção do cliente e forneça o e-mail ou URL correta baseada nessas regras.
+  * WhatsApp Geral: (22) 98122-5010. Sempre analise a intenção do cliente e forneça o e-mail ou URL correta baseada nessas regras.
 - Marcas Parceiras: Bella Íntima, Versatil, Jeito Feminino, Immo Lingerie.
 
 2. PÚBLICO

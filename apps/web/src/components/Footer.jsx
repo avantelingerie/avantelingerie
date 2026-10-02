@@ -174,7 +174,7 @@ export default function Footer() {
                 <Facebook className="w-5 h-5" />
               </a>
               <a 
-                href="https://wa.me/5522997618591" 
+                href="https://wa.me/5522981225010" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="w-10 h-10 rounded-full bg-white/5 border border-[#25D366]/30 flex items-center justify-center text-[#25D366] hover:bg-[#25D366] hover:text-white transition-all shadow-sm"

@@ -670,7 +670,7 @@ export default function ResellerPortalPage() {
                   </div>
 
                   <a
-                    href="https://wa.me/5522999999999"
+                    href="https://wa.me/5522981225010"
                     target="_blank"
                     rel="noreferrer"
                     className="mt-6 px-6 py-3.5 bg-[#C59B5F] hover:bg-[#b0874e] text-black font-bold text-xs uppercase tracking-wider rounded-xl text-center shadow-lg transition-colors flex items-center justify-center gap-2"

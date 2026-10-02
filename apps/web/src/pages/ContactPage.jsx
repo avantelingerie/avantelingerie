@@ -603,7 +603,7 @@ export default function ContactPage() {
         <div className="info-grid">
           {[
             { icon: Mail, title: 'E-mail', text: 'contato@avantelingerie.com.br' },
-            { icon: MessageCircle, title: 'WhatsApp', text: '(22) 99761-8591' },
+            { icon: MessageCircle, title: 'WhatsApp', text: '(22) 98122-5010' },
             { icon: Clock, title: 'Horário', text: 'Seg–Qui: 8h às 17h | Sex: 8h às 13h' },
             { icon: CheckCircle2, title: 'Resposta média', text: 'Até 24 horas úteis' }
           ].map((item, idx) => (
@@ -764,7 +764,7 @@ export default function ContactPage() {
             <p>Resposta rápida nos horários de atendimento para solucionar suas dúvidas.</p>
             
             <a 
-              href="https://wa.me/5522997618591" 
+              href="https://wa.me/5522981225010" 
               target="_blank" 
               rel="noopener noreferrer"
               className="btn-whatsapp"

@@ -124,7 +124,7 @@ export default function OrderConfirmation() {
 
   const handleSupportClick = () => {
     const message = encodeURIComponent(`Olá! Gostaria de falar sobre o meu pedido ${order?.numero_pedido || order?.id}`);
-    window.open(`https://wa.me/5522997618591?text=${message}`, '_blank');
+    window.open(`https://wa.me/5522981225010?text=${message}`, '_blank');
   };
 
   if (loading) {

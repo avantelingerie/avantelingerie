@@ -248,7 +248,7 @@ export default function LiaWidget() {
                   {/* Renderiza o botão do WhatsApp se a Lia mencionar a palavra chave */}
                   {msg.content.includes('botão abaixo') && msg.content.includes('WhatsApp') && (
                     <a 
-                      href="https://wa.me/5511999999999?text=Oi!%20Estava%20falando%20com%20a%20Lia%20no%20site%20e%20preciso%20de%20ajuda%20humana." 
+                      href="https://wa.me/5522981225010?text=Oi!%20Estava%20falando%20com%20a%20Lia%20no%20site%20e%20preciso%20de%20ajuda%20humana." 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="mt-3 flex items-center justify-center gap-2 bg-[#25D366] text-white px-4 py-2 rounded-full font-medium text-xs hover:bg-[#20b858] transition-colors"
