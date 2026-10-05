@@ -374,22 +374,24 @@ export default defineConfig({
 		cors: true,
 		proxy: {
 			'/hcgi/platform': {
-				target: 'http://127.0.0.1:8090',
+				target: 'https://avantelingerie.com.br',
 				changeOrigin: true,
-				rewrite: (path) => path.replace(/^\/hcgi\/platform/, '')
+				secure: true
 			},
 			'/hcgi/api': {
-				target: 'http://127.0.0.1:3001',
+				target: 'https://avantelingerie.com.br',
 				changeOrigin: true,
-				rewrite: (path) => path.replace(/^\/hcgi\/api/, '')
+				secure: true
 			},
 			'/video': {
 				target: 'https://avantelingerie.com.br',
-				changeOrigin: true
+				changeOrigin: true,
+				secure: true
 			},
 			'/imagens': {
 				target: 'https://avantelingerie.com.br',
-				changeOrigin: true
+				changeOrigin: true,
+				secure: true
 			}
 		},
 		headers: {
@@ -406,6 +408,32 @@ export default defineConfig({
 				path.join(path.resolve(__dirname, '../..'), 'node_modules'),
 			],
 		},
+	},
+	preview: {
+		port: 3000,
+		cors: true,
+		proxy: {
+			'/hcgi/platform': {
+				target: 'https://avantelingerie.com.br',
+				changeOrigin: true,
+				secure: true
+			},
+			'/hcgi/api': {
+				target: 'https://avantelingerie.com.br',
+				changeOrigin: true,
+				secure: true
+			},
+			'/video': {
+				target: 'https://avantelingerie.com.br',
+				changeOrigin: true,
+				secure: true
+			},
+			'/imagens': {
+				target: 'https://avantelingerie.com.br',
+				changeOrigin: true,
+				secure: true
+			}
+		}
 	},
 	resolve: {
 		extensions: ['.jsx', '.js', '.json'],

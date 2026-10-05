@@ -779,5 +779,18 @@ Para nÃ£o esquecermos, aqui estÃ£o os itens congelados e as datas de destrav
 - **Estabilidade da IA (Gemini):** Corrigido erro 503 (High Demand) priorizando os modelos `gemini-3.5-flash-lite` e `gemini-3.1-flash-lite` em `apps/api/src/routes/integracoes.js` (resposta em <1s com disponibilidade contínua).
 - **Ativação dos Campos SEO no PocketBase:** Diagnóstico e resolução do motivo pelo qual os campos `seo_title` e `seo_meta_description` não persistiam na VPS após salvar no Admin. As colunas foram oficialmente registradas na coleção `products` do PocketBase da VPS via Admin API. O produto Calcinha Cinta Modeladora (`99k9uikfczop1zd`) já foi sincronizado com seu título SEO e breve descrição de alta conversão, e os novos salvamentos agora persistem normalmente.
 
+### Sessão - 05/10/2026 (Parte 4: Ambiente Local Zero-Config e Experimentos de CRO)
+- **Ambiente de Desenvolvimento Local com Terminal Único:**
+  - Configurado o bloco `preview` no `apps/web/vite.config.js` com proxy reverso apontando `/hcgi/platform`, `/hcgi/api`, `/video` e `/imagens` diretamente para a VPS de produção (`https://avantelingerie.com.br`).
+  - O lojista agora consegue rodar a loja local completa em `http://localhost:3000` com apenas UM comando no PowerShell (`npm run start --prefix apps/web`), consumindo produtos, estoques, mídias e banco de dados diretamente da VPS online em tempo real, sem necessidade de banco local.
+  - Corrigido o script `build` em `apps/web/package.json` ajustando a concatenação de comandos para compatibilidade nativa com o Windows.
+- **Experimentos de Gatilho Mental na Página de Produto (Decisão de Design):**
+  - Foram prototipadas e validadas variações de gatilho mental para preço de fábrica e marketplaces ("PREÇO DE FÁBRICA MAIS BARATO QUE NA SHOPEE" e "COMECE A VENDER NOS MARKETPLACES COM ESSES PREÇOS DE FÁBRICA!").
+  - Após testes visuais em `localhost:3000`, o lojista (Luiz) optou por **remover o elemento da página de produto**, preservando o layout minimalista, limpo e de alta sofisticação entre o bloco de preço e a Boutique de Descontos Progressivos.
+  - O arquivo `ProductPage.jsx` foi restaurado 100% ao estado original íntegro.
+- **Ponto de Parada (Para Amanhã):**
+  - Retomar o aprimoramento da seção de Marketplaces na Home (`AffiliatedStoresSection.jsx`), aplicando as propostas de copywriting ("Ecossistema Avante / Lojas Oficiais na Shopee") para reforçar a autoridade de fabricante e a oportunidade de revenda.
+
+
 
 
