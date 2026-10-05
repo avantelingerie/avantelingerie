@@ -39,6 +39,7 @@ import QuantitySelector from '@/components/QuantitySelector.jsx';
 import ProvadorVirtual from '@/components/ProvadorVirtual.jsx';
 import { useCart } from '@/hooks/useCart.js';
 import { useAuth } from '@/context/AuthContext.jsx';
+import { generateProductJsonLd } from '../utils/schemaProduct.js';
 
 export default function ProductPage() {
   const { id } = useParams();
@@ -919,8 +920,22 @@ export default function ProductPage() {
   return (
     <article className="w-full bg-white min-h-screen pb-24 md:pb-0 font-sans text-gray-800">
       <Helmet>
-        <title>{`${productName} | Conforto e Qualidade Avante`}</title>
-        <meta name="description" content={`Descubra o ${productName}. Aproveite 5% OFF no PIX, compra 100% segura, troca facilitada e envio rápido para todo o Brasil.`} />
+        <title>{`${productName} | Avante Lingerie Oficial`}</title>
+        <meta name="description" content={productMetaDesc} />
+        <script type="application/ld+json">
+          {JSON.stringify(generateProductJsonLd({
+            productName,
+            productMetaDesc,
+            productReferencia,
+            basePrice,
+            resolvedImages,
+            activeVariation,
+            semVariacoes,
+            productAvaliacao,
+            productReviewsCount,
+            productId: product?.id || id
+          }))}
+        </script>
       </Helmet>
 
       <div className="container-custom py-8 md:py-12">

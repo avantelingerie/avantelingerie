@@ -330,35 +330,51 @@ router.post('/gemini/gerar-descricao', async (req, res) => {
 
     const apiKey = configs[0].chave_valor;
 
-    const prompt = `Atue como um especialista em SEO e copywriter para e-commerce. A marca é 'Avante Lingerie', uma confecção própria de Nova Friburgo/RJ que vende tanto no varejo quanto no atacado através de um sistema de descontos progressivos automáticos no carrinho.
+    const prompt = `Você é o Especialista Chefe em SEO para Google Shopping, Copywriting de Moda Íntima e Dados Estruturados da marca 'Avante Lingerie' (confecção própria premium em Nova Friburgo/RJ, polo da moda íntima).
+Seu objetivo é redigir o título, a meta descrição e as abas deste produto para posicioná-lo no TOP 1 das buscas do Google e gerar máxima taxa de conversão em vendas.
 
-Dados do Produto:
+DADOS DE ENTRADA DO PRODUTO:
 - Nome Base: "${name}"
 - Categoria: "${categoryName || 'Lingerie'}"
-- Estilo: "${estilo || ''}"
-- Tecido principal: "${tecido || ''}"
-- Diferenciais/Destaques: [${(destaques || []).join(', ')}]
+- Estilo: "${estilo || 'Conforto & Elegância'}"
+- Tecido Principal: "${tecido || ''}"
+- Destaques Selecionados: [${(destaques || []).join(', ')}]
 
-Você deve gerar as descrições em abas E as novas Meta Tags de SEO, seguindo REGRAS ESTRITAS de formatação e tamanho.
+REGRAS ESTRITAS DE SEO E COPYWRITING:
 
-Regras de SEO (OBRIGATÓRIO):
-1. seo_title: Máximo 60 caracteres. Siga exatamente a fórmula: [Nome Base ou otimizado] + [Estilo/Público] + [Tecido principal] + [Tipo de Peça] - Avante Lingerie.
-2. seo_meta_description: Máximo 160 caracteres. Siga exatamente a fórmula: [Benefício Emocional do Produto] + direto de Nova Friburgo. Economize no varejo ou ganhe descontos progressivos automáticos de atacado. Compre direto da fábrica!
+1. "seo_title" (Título Principal do Produto para H1 e Google Shopping):
+- O algoritmo do Google lê da ESQUERDA PARA A DIREITA. As palavras mais pesquisadas devem vir no início.
+- FÓRMULA: [Tipo de Peça] + [Gênero Feminino] + [Modelo Específico] + [Tecido/Material] + [Atributos Principais de Conforto/Caimento].
+- Exemplo: "Pijama Feminino Short Doll Suede Confortável Tecido Leve e Macio Fresquinho" ou "Conjunto Feminino com Renda Luxo Alças Confortáveis Bojo Macio".
+- Tamanho: Entre 65 e 95 caracteres (máximo 120 caracteres, com as palavras mais buscadas nos primeiros 70 caracteres para visualização perfeita no celular).
+- NUNCA use termos genéricos como "Lindo", "Promoção" ou "Compre já" no título.
+- Certifique-se de incluir o tipo de tecido/material claramente (ex: Suede, Renda, Algodão, Microfibra) para alimentar o NCM fiscal e o filtro de materiais do Google.
 
-Diretrizes de Formatação para Abas:
-1. Emojis Inteligentes: Insira emojis delicados no início de parágrafos/listas (ex: ✨, 🌸, 💎).
-2. Organização: Use quebras de linha (\\n) para tópicos.
-3. Tom Premium: Sofisticado, focado em vendas e autoestima.
+2. "seo_meta_description" (Breve Descrição para o topo da página e Meta Description do Google):
+- FÓRMULA: [Benefício Emocional e Sensorial de Uso] + [Características Reais do Toque no Corpo] + [Chamada para Ação no Imperativo (Garanta, Sinta, Aproveite, Descubra)].
+- LIMITE ESTRITO: Entre 120 e 155 caracteres (NÃO ultrapasse 155 para não ser cortado com reticências '...' nos resultados de busca do Google).
+- Exemplo: "Sinta o conforto absoluto com o nosso Short Doll Feminino em Suede. Toque macio, leve e aveludado para noites perfeitas. Garanta o seu direto da fábrica!"
 
-Instruções para Abas:
-1. Geral: Breve texto de introdução comercial.
-2. Tecido: Descrição da composição premium e sensação na pele.
-3. Modelagem: Como veste no corpo (sustentação, caimento).
-4. Cuidados: Regras de lavagem.
-5. Diferenciais: Principais pontos fortes.
-6. Compra Segura: Detalhes de entrega expressa, troca e pagamento.
+3. "desc_geral" (Aba 1 - Geral: Storytelling de Desejo):
+- 2 a 3 frases envolventes focadas no bem-estar, autoestima e experiência sensorial de vestir a peça. Use emojis discretos e refinados (✨, 🌸, 💎).
 
-IMPORTANTE: Retorne ESTRITAMENTE em formato JSON puro, sem crases de markdown (\`\`\`json). O objeto DEVE conter as seguintes chaves:
+4. "desc_tecido" (Aba 2 - Tecido & Composição):
+- Em tópicos (bullet points): Composição têxtil técnica estimada (ex: 96% Poliéster, 4% Elastano / Suede Premium Aveludado), sensação térmica, respirabilidade e resistência a bolinhas.
+
+5. "desc_modelagem" (Aba 3 - Modelagem & Caimento):
+- Como veste no corpo: Caimento anatômico, valorização das curvas sem apertar, elástico suave, alças confortáveis e liberdade de movimento.
+
+6. "desc_cuidados" (Aba 4 - Guia de Lavagem e Conservação):
+- Instruções práticas: Lavagem manual ou em saquinho para delicados, sabão neutro, não usar alvejante com cloro, secar à sombra e dispensar ferro quente.
+
+7. "desc_diferenciais" (Aba 5 - Por que Avante Lingerie):
+- Fabricação 100% própria em Nova Friburgo/RJ (Polo da Moda Íntima), costuras reforçadas de alta costura, envio rápido e preço justo direto da confecção.
+
+8. "desc_compra_segura" (Aba 6 - Confiança & Garantia):
+- 5% OFF no PIX, até 12x no cartão, garantia e troca facilitada em 7 dias (CDC) e embalagem discreta e perfumada.
+
+FORMATO DE RETORNO OBRIGATÓRIO:
+Retorne ESTRITAMENTE em formato JSON puro válido (sem crases de markdown \`\`\`json). O objeto DEVE conter exatamente as seguintes chaves:
 {
   "seo_title": "...",
   "seo_meta_description": "...",

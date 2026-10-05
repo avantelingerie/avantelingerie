@@ -12,6 +12,7 @@ import pb from '@/lib/pocketbaseClient.js';
 import apiServerClient from '@/lib/apiServerClient.js';
 import VariacoesTable from '@/components/admin/VariacoesTable.jsx';
 import CalculadoraPrecoModal from '@/components/admin/CalculadoraPrecoModal.jsx';
+import { guessNcm } from '../../utils/guessNcm.js';
 
 export default function ProdutoForm() {
   const { id } = useParams();
@@ -58,6 +59,7 @@ export default function ProdutoForm() {
   const [imagemVerso, setImagemVerso] = useState('');
   const [activeDescTab, setActiveDescTab] = useState('desc_geral');
   const [variacoes, setVariacoes] = useState([]);
+  const [ncmTouchedManually, setNcmTouchedManually] = useState(false);
   const [originalVariacoes, setOriginalVariacoes] = useState([]);
 
   const [showAIAssistant, setShowAIAssistant] = useState(false);
@@ -222,26 +224,16 @@ export default function ProdutoForm() {
     }
   };
 
-  
-  const guessNcm = (nome) => {
-    const text = nome.toLowerCase();
-    if (text.includes('suede') || text.includes('renda') || text.includes('sintético')) {
-      if (text.includes('pijama') || text.includes('baby') || text.includes('camisola') || text.includes('robe') || text.includes('short doll')) return '6108.32.00';
-    }
-    if (text.includes('pijama') || text.includes('baby') || text.includes('camisola') || text.includes('robe') || text.includes('short doll')) return '6208.21.00';
-    if (text.includes('suti') || text.includes('conjunt') || text.includes('corpet')) return '6212.10.00';
-    if (text.includes('calcinha') || text.includes('cinta') || text.includes('fio')) return '6212.20.00';
-    if (text.includes('praia') || text.includes('biquini') || text.includes('mai')) return '6112.41.00';
-    if (text.includes('body')) return '6114.30.00';
-    return '6109.90.00';
-  };
   const handleInputChange = (field, value) => {
     setFormData(prev => {
       const updated = { ...prev, [field]: value };
       
-      // Quando o nome (título) do produto é digitado, o cérebro calcula o NCM
+      // Sugere o NCM apenas se o lojista ainda não mexeu manualmente, ou se estiver vazio
       if (field === 'name') {
-        updated.ncm = guessNcm(value);
+        if (!ncmTouchedManually || !prev.ncm) {
+          const suggested = guessNcm(value);
+          if (suggested) updated.ncm = suggested;
+        }
       }
 
       if (field === 'name' && !isEdit && !prev.reference) {
@@ -249,6 +241,11 @@ export default function ProdutoForm() {
       }
       return updated;
     });
+  };
+
+  const handleNcmChange = (e) => {
+    setNcmTouchedManually(true);
+    handleInputChange('ncm', e.target.value);
   };
 
   const generateReference = (name) => {
@@ -827,7 +824,7 @@ export default function ProdutoForm() {
                     <span>NCM (Fiscal)</span>
                     <span className="text-[10px] text-[#c59b5f]" title="Suede/Renda = 6108.32.00 | Algodão = 6208.21.00">❓ Automático</span>
                   </label>
-                  <input type="text" placeholder="Ex: 6208.21.00" className="flex h-10 w-full rounded-md border border-[#c59b5f]/25 bg-[#121212] px-3 py-2 text-sm text-white focus:outline-none" value={formData.ncm || ''} onChange={(e) => handleInputChange('ncm', e.target.value)} />
+                  <input type="text" placeholder="Ex: 6208.21.00" className="flex h-10 w-full rounded-md border border-[#c59b5f]/25 bg-[#121212] px-3 py-2 text-sm text-white focus:outline-none" value={formData.ncm || ''} onChange={handleNcmChange} />
                 </div>
                 
                 <div>

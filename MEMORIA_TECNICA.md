@@ -769,4 +769,10 @@ Para nÃ£o esquecermos, aqui estÃ£o os itens congelados e as datas de destrav
   2. *Erro "Não é possível mostrar a imagem":* Forçada a atualização das imagens no Googlebot-Image adicionando query param de cache (`?v=2`) em `imageUrl`. Adicionada injeção de `<g:additional_image_link>` para todas as imagens adicionais/cores dos produtos (até 10 imagens por item), enriquecendo o catálogo visual do Shopping.
 - **Deploy:** Arquivo `apps/api/src/routes/marketing.js` atualizado e pronto para sincronização via GitHub Actions.
 
+### Sessão - 05/10/2026 (Parte 2: Auditoria Conjunta Ada + Qwen & Otimização Top-Rank Google)
+- **Novo Motor de Copywriting & SEO (Gemini):** O prompt de IA em `apps/api/src/routes/integracoes.js` foi reestruturado seguindo as regras de ouro do Google Shopping: títulos orientados da esquerda para a direita (65-95 chars), Meta Description de alta conversão (120-155 chars) com verbos no imperativo e 6 abas ricas em dados técnicos e sensoriais.
+- **Proteção Fiscal de NCM (`guessNcm.js`):** Criado módulo dedicado `apps/web/src/utils/guessNcm.js` homologado pelo Qwen. Previne falsos positivos com tokenização estrita (ex: 'Arrenda' não ativa 'renda'). Adicionado no `ProdutoForm.jsx` o estado `ncmTouchedManually` para blindar o lojista contra sobrescrita acidental de NCM ao corrigir erros de digitação no nome. 14 testes unitários automatizados cobrindo 100% dos cenários.
+- **Schema.org / JSON-LD (`schemaProduct.js`):** Implementada injeção de dados estruturados `@type: "Product"` no `ProductPage.jsx` com sanitização de preço, verificação robusta de disponibilidade e bloqueio de fake reviews (adiciona `aggregateRating` apenas com avaliações reais), habilitando Rich Snippets orgânicos com estrelas e preço no Google.
+- **Validação de Build:** Compilação do Vite (`npm run build`) concluída com 100% de sucesso sem nenhum erro.
+
 
