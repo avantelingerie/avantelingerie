@@ -28,20 +28,30 @@ router.get('/feed.xml', async (req, res) => {
       
       let imageUrl = 'https://avantelingerie.com.br/placeholder.png';
       const images = p.image || p.images || p.imagens; // Correção: o campo no PocketBase se chama 'image'
+      let additionalImages = [];
       if (images && images.length > 0) {
-         imageUrl = `https://avantelingerie.com.br/hcgi/platform/api/files/products/${id}/${images[0]}`;
+         imageUrl = `https://avantelingerie.com.br/hcgi/platform/api/files/products/${id}/${images[0]}?v=2`;
+         if (images.length > 1) {
+           additionalImages = images.slice(1, 10).map(img => 
+             `https://avantelingerie.com.br/hcgi/platform/api/files/products/${id}/${img}?v=2`
+           );
+         }
       }
 
       const condition = 'new';
       const availability = (p.estoque > 0 || p.estoque_total > 0 || p.estoque === undefined) ? 'in stock' : 'out of stock';
       
+      const additionalImagesXml = additionalImages.length > 0
+        ? additionalImages.map(img => `\n      <g:additional_image_link>${img}</g:additional_image_link>`).join('')
+        : '';
+
       xml += `
     <item>
       <g:id>${id}</g:id>
       <g:title><![CDATA[${name}]]></g:title>
       <g:description><![CDATA[${description}]]></g:description>
       <g:link>${link}</g:link>
-      <g:image_link>${imageUrl}</g:image_link>
+      <g:image_link>${imageUrl}</g:image_link>${additionalImagesXml}
       <g:condition>${condition}</g:condition>
       <g:availability>${availability}</g:availability>
       <g:price>${price} BRL</g:price>
@@ -52,6 +62,8 @@ router.get('/feed.xml', async (req, res) => {
       <g:color>Multicolorido</g:color>
       <g:size>Múltiplos Tamanhos</g:size>
       <g:identifier_exists>no</g:identifier_exists>
+      <g:excluded_destination>free_local_listings</g:excluded_destination>
+      <g:excluded_destination>local_inventory_ads</g:excluded_destination>
     </item>`;
     });
 

@@ -752,3 +752,21 @@ Para nÃ£o esquecermos, aqui estÃ£o os itens congelados e as datas de destrav
   **Resultado Final:** 100% dos produtos foram puxados imediatamente pelo Google e já constam com o status de (Em análise). As miniaturas das imagens entraram na fila de cache do robô.
 
 **Status Atual do E-commerce:** Integrações com Bling (Preços e Variações), Gateway de Pagamento, Rastreio, Front-end UI e Google Feed estão **estáveis e funcionais**.
+
+### Sessão Noturna - 02/10/2026 (Migração para Antigravity IDE & Setup Híbrido)
+- **Migração Concluída:** Transição do Antigravity 2.0 para o **Antigravity IDE** oficial finalizada com sucesso. Workspace ativo configurado em `avante-lingerie-novo`.
+- **Arquitetura de Desenvolvimento Híbrida (Luiz + Qwen + Ada):**
+  - Configurada a extensão Continue (`~/.continue/config.yaml`) com modelos gratuitos via OpenRouter (`Qwen 3.8 27B`, `Nvidia Nemotron 550B`, `Google Gemma 31B`).
+  - Divisão de trabalho consolidada: Qwen atua no trabalho braçal (autocompletar e geração de código repetitivo de graça), preservando as cotas da Ada para decisões arquiteturais, regras de negócio da Avante, integrações de banco e deploys.
+- **Manutenção e Otimização do Sistema:**
+  - Limpeza de arquivos temporários do sistema (`%TEMP%`).
+  - Organização completa da pasta de Downloads (`C:\Users\comer\Downloads`) em subpastas categorizadas (`Documentos`, `proposta Jocitex`, `Imagens`, `Videos`, `Programas`), preservando 100% dos arquivos importantes (códigos Stripe, propostas comerciais, mídias).
+  - Orientação de fechamento e desinstalação do Antigravity 2.0 antigo para economia de memória RAM (4GB no notebook).
+
+### Sessão - 05/10/2026 (Saneamento Google Merchant Center)
+- **Diagnóstico de Reprovação e Limitação:**
+  1. *Dados de Inventário Local Ausentes:* Identificado que os complementos "Anúncios de inventário local" e "Listagens locais gratuitas" haviam sido ativados no Merchant Center, exigindo dados de loja física de balcão. O lojista removeu ambos os complementos no painel e foram adicionadas as tags `<g:excluded_destination>free_local_listings</g:excluded_destination>` e `<g:excluded_destination>local_inventory_ads</g:excluded_destination>` no feed XML da API.
+  2. *Erro "Não é possível mostrar a imagem":* Forçada a atualização das imagens no Googlebot-Image adicionando query param de cache (`?v=2`) em `imageUrl`. Adicionada injeção de `<g:additional_image_link>` para todas as imagens adicionais/cores dos produtos (até 10 imagens por item), enriquecendo o catálogo visual do Shopping.
+- **Deploy:** Arquivo `apps/api/src/routes/marketing.js` atualizado e pronto para sincronização via GitHub Actions.
+
+
