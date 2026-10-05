@@ -790,6 +790,7 @@ Para nÃ£o esquecermos, aqui estÃ£o os itens congelados e as datas de destrav
   - O arquivo `ProductPage.jsx` foi restaurado 100% ao estado original íntegro.
 - **Ponto de Parada (Para Amanhã):**
   - Retomar o aprimoramento da seção de Marketplaces na Home (`AffiliatedStoresSection.jsx`), aplicando as propostas de copywriting ("Ecossistema Avante / Lojas Oficiais na Shopee") para reforçar a autoridade de fabricante e a oportunidade de revenda.
+  - Definir modelo de IA para o terminal CLI (`qwen.mjs`) e Continue: OpenRouter encerrou o `qwen/qwen3.8-27b:free` (404); decidir entre apontar para o modelo gratuito `nvidia/nemotron-3-ultra-550b-a55b:free` ou recarregar créditos no OpenRouter para usar a rota paga do Qwen.
 
 
 
