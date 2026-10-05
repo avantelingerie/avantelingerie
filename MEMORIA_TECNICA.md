@@ -775,4 +775,9 @@ Para nÃ£o esquecermos, aqui estÃ£o os itens congelados e as datas de destrav
 - **Schema.org / JSON-LD (`schemaProduct.js`):** Implementada injeção de dados estruturados `@type: "Product"` no `ProductPage.jsx` com sanitização de preço, verificação robusta de disponibilidade e bloqueio de fake reviews (adiciona `aggregateRating` apenas com avaliações reais), habilitando Rich Snippets orgânicos com estrelas e preço no Google.
 - **Validação de Build:** Compilação do Vite (`npm run build`) concluída com 100% de sucesso sem nenhum erro.
 
+### Sessão - 05/10/2026 (Parte 3: Ativação dos Campos SEO no PocketBase da VPS & Estabilidade Gemini)
+- **Estabilidade da IA (Gemini):** Corrigido erro 503 (High Demand) priorizando os modelos `gemini-3.5-flash-lite` e `gemini-3.1-flash-lite` em `apps/api/src/routes/integracoes.js` (resposta em <1s com disponibilidade contínua).
+- **Ativação dos Campos SEO no PocketBase:** Diagnóstico e resolução do motivo pelo qual os campos `seo_title` e `seo_meta_description` não persistiam na VPS após salvar no Admin. As colunas foram oficialmente registradas na coleção `products` do PocketBase da VPS via Admin API. O produto Calcinha Cinta Modeladora (`99k9uikfczop1zd`) já foi sincronizado com seu título SEO e breve descrição de alta conversão, e os novos salvamentos agora persistem normalmente.
+
+
 
