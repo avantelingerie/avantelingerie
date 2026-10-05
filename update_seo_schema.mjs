@@ -1,5 +1,6 @@
-﻿import PocketBase from 'pocketbase';
-const pb = new PocketBase('http://127.0.0.1:8090');
+import PocketBase from 'pocketbase';
+const pbUrl = process.env.POCKETBASE_URL || 'https://avantelingerie.com.br/hcgi/platform';
+const pb = new PocketBase(pbUrl);
 
 async function updateSchema() {
   try {
