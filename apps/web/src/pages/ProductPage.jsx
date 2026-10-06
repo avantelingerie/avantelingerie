@@ -730,7 +730,7 @@ export default function ProductPage() {
     const currentCartTotal = getTotalPrice();
     const newTotal = currentCartTotal + (mainItemPrice * quantity);
 
-    let cartImage = resolvedImages?.[0] || fallbackProduct.image;
+    let cartImage = resolvedImages?.find(img => !isDirectVideo(img) && !isExternalVideo(img)) || (product?.image ? getProductImageUrl(product, Array.isArray(product.image) ? product.image[0] : product.image) : fallbackProduct.image);
     if (activeVariation?.imagem_url && resolvedImages?.length) {
       const varImgRef = activeVariation.imagem_url;
       const foundImg = resolvedImages.find(imgUrl => {
@@ -738,7 +738,7 @@ export default function ProductPage() {
         const urlFilename = imgUrl.split('/').pop()?.split('?')[0];
         return urlFilename === varImgRef || imgUrl.includes(varImgRef);
       });
-      if (foundImg) cartImage = foundImg;
+      if (foundImg && !isDirectVideo(foundImg) && !isExternalVideo(foundImg)) cartImage = foundImg;
     }
 
     addToCart({
@@ -975,6 +975,7 @@ export default function ProductPage() {
                   <motion.video
                     key={selectedImageIdx}
                     src={resolvedImages[selectedImageIdx]}
+                    preload="metadata"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1, scale: isZoomed ? 2 : 1 }}
                     exit={{ opacity: 0 }}
@@ -1049,10 +1050,17 @@ export default function ProductPage() {
                       </div>
                     </div>
                   ) : isDirectVideo(img) ? (
-                    <div className="w-full h-full relative">
-                      <video src={img} className="w-full h-full object-cover" muted playsInline />
-                      <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
-                        <Play className="w-6 h-6 text-white opacity-80" />
+                    <div className="w-full h-full relative bg-[#1a1a1a]">
+                      <img 
+                        src={product?.image ? getProductImageUrl(product, Array.isArray(product.image) ? product.image[0] : product.image) : fallbackProduct.image} 
+                        alt="Vídeo do Produto" 
+                        className="w-full h-full object-cover opacity-80" 
+                        loading="lazy" 
+                      />
+                      <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+                        <div className="w-7 h-7 rounded-full bg-[#c59b5f] flex items-center justify-center shadow-md">
+                          <Play className="w-3.5 h-3.5 text-black fill-black ml-0.5" />
+                        </div>
                       </div>
                     </div>
                   ) : (
@@ -1726,7 +1734,16 @@ export default function ProductPage() {
                         </div>
                       </div>
                     ) : isDirectVideo(resolvedImages[selectedImageIdx]) ? (
-                      <video src={resolvedImages[selectedImageIdx]} className="w-full h-full object-cover" autoPlay loop muted playsInline />
+                      <div className="w-full h-full relative bg-[#1a1a1a]">
+                        <img 
+                          src={product?.image ? getProductImageUrl(product, Array.isArray(product.image) ? product.image[0] : product.image) : fallbackProduct.image} 
+                          alt="Vídeo" 
+                          className="w-full h-full object-cover opacity-80" 
+                        />
+                        <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+                          <Play className="w-3.5 h-3.5 text-white fill-white ml-0.5" />
+                        </div>
+                      </div>
                     ) : (
                       <img src={resolvedImages[selectedImageIdx]} alt="" className="w-full h-full object-cover" />
                     )}

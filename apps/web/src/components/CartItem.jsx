@@ -1,5 +1,5 @@
 import React from 'react';
-import { Minus, Plus, Trash2 } from 'lucide-react';
+import { Minus, Plus, Trash2, Play } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { isExternalVideo, getYoutubeThumbnail, isDirectVideo } from '@/lib/utils.js';
 
@@ -22,7 +22,11 @@ export default function CartItem({ item, getItemPrice, onUpdateQuantity, onRemov
       <div className="w-20 h-28 md:w-24 md:h-32 shrink-0 rounded-xl overflow-hidden bg-muted border border-primary/10 relative">
         {item.image ? (
           isDirectVideo(item.image) ? (
-            <video src={item.image} className="w-full h-full object-cover" autoPlay loop muted playsInline />
+            <div className="w-full h-full relative bg-[#1a1a1a] flex items-center justify-center">
+              <div className="w-8 h-8 rounded-full bg-[#c59b5f] flex items-center justify-center shadow-md">
+                <Play className="w-4 h-4 text-black fill-black ml-0.5" />
+              </div>
+            </div>
           ) : isExternalVideo(item.image) ? (
             <img src={getYoutubeThumbnail(item.image)} alt={item.name} className="w-full h-full object-cover" />
           ) : (

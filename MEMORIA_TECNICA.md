@@ -819,4 +819,11 @@ Para nÃ£o esquecermos, aqui estÃ£o os itens congelados e as datas de destrav
   - **Solução de Alta Performance:** O modelo primário foi reconfigurado para `nvidia/nemotron-3-super-120b-a12b:free`. Em testes reais de benchmark, o tempo de resposta caiu de ~45s para **523 milissegundos** (meio segundo), com 100% de disponibilidade.
   - **Cadeia Tripla de Resiliência:** Super 120B (0.5s) ➔ Fallback Lightning 3.5 ➔ Fallback Ultra 550B.
   - **Integração do Ecossistema:** Injetado conhecimento formal sobre a **Lia** (consultora comercial da Avante) no system prompt do Nemotron para sinergia completa entre atendimento e PCP.
+- **Diagnóstico e Resolução de Estouro de Memória no Navegador (Out of Memory - 06/10):**
+  - **Causa Raiz:** O vídeo `calcinha_pala_dupla.mp4` possuía **77.07 MB** (quase 30x maior que os outros vídeos de 2.7 MB a 5 MB) e estava configurado com `#first`, iniciando em autoplay imediato na página do produto `d2c4teo5mkcd258`. Além disso, componentes de miniaturas de galeria, barra fixa inferior mobile, drawer de carrinho (`CartItem.jsx`), resumo de checkout (`CheckoutOrderSummary.jsx`) e tela de sucesso (`OrderConfirmation.jsx`) instanciavam decodificadores de `<video>` ativos simultaneamente para esse arquivo de 77 MB, esgotando a memória RAM livre do sistema (máquinas com ~4 GB de RAM) e travando a aba no Chrome.
+  - **Soluções de Código Implementadas:**
+    1. Substituição de tags `<video>` secundárias em miniaturas, barra mobile e carrinhos por pôsteres estáticos leves com badge Play.
+    2. Adicionado `preload="metadata"` no reprodutor principal de `ProductPage.jsx`.
+    3. Blindagem de `cartImage` para que itens adicionados à sacola sempre recebam URLs de fotos estáticas.
+    4. Correção de conformidade com as regras do React Hooks no `NemotronAdminHUD.jsx` (todos os hooks posicionados no topo, antes de verificações condicionais de retorno).
 

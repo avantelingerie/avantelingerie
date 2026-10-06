@@ -14,18 +14,6 @@ export default function NemotronAdminHUD() {
 
   const hasAdmin = isAdminAuthenticated || !!currentAdmin || !!adminPb?.authStore?.isValid;
 
-  // Escuta evento customizado disparado pelo menu do Admin ou atalhos
-  useEffect(() => {
-    const handleOpen = () => setIsOpen(true);
-    window.addEventListener('open-nemotron-hud', handleOpen);
-    return () => window.removeEventListener('open-nemotron-hud', handleOpen);
-  }, []);
-
-  // Se não for o administrador autenticado, o componente simplesmente não existe no DOM
-  if (!hasAdmin) {
-    return null;
-  }
-
   const [isOpen, setIsOpen] = useState(false);
   const [activeTab, setActiveTab] = useState('chat'); // 'chat' | 'estoque' | 'auditor'
   const [messages, setMessages] = useState([
@@ -43,12 +31,24 @@ export default function NemotronAdminHUD() {
 
   const messagesEndRef = useRef(null);
 
+  // Escuta evento customizado disparado pelo menu do Admin ou atalhos
+  useEffect(() => {
+    const handleOpen = () => setIsOpen(true);
+    window.addEventListener('open-nemotron-hud', handleOpen);
+    return () => window.removeEventListener('open-nemotron-hud', handleOpen);
+  }, []);
+
   // Auto scroll no chat
   useEffect(() => {
     if (isOpen && messagesEndRef.current) {
       messagesEndRef.current.scrollIntoView({ behavior: 'smooth' });
     }
   }, [messages, isOpen, isLoading]);
+
+  // Se não for o administrador autenticado, o componente simplesmente não existe no DOM
+  if (!hasAdmin) {
+    return null;
+  }
 
   // Envio de prompt para o backend
   const handleSendMessage = async (customPrompt = null, customFilePath = null) => {

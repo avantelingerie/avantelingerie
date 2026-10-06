@@ -16,7 +16,8 @@ import {
   ShieldCheck,
   RefreshCcw,
   HeartHandshake,
-  ChevronRight
+  ChevronRight,
+  Play
 } from 'lucide-react';
 import { Button } from '@/components/ui/button.jsx';
 import { Card, CardContent } from '@/components/ui/card.jsx';
@@ -267,7 +268,11 @@ export default function OrderConfirmation() {
                         <div className="w-20 h-24 rounded-2xl bg-gray-50 border border-gray-200 overflow-hidden shrink-0">
                           {imageUrl ? (
                             isVideo ? (
-                              <video src={imageUrl} className="w-full h-full object-cover" autoPlay muted loop playsInline />
+                              <div className="w-full h-full relative bg-[#1a1a1a] flex items-center justify-center">
+                                <div className="w-7 h-7 rounded-full bg-[#c59b5f] flex items-center justify-center shadow-md">
+                                  <Play className="w-3.5 h-3.5 text-black fill-black ml-0.5" />
+                                </div>
+                              </div>
                             ) : (
                               <img src={imageUrl} alt={name} className="w-full h-full object-cover" />
                             )

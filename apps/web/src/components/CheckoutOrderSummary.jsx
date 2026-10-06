@@ -1,5 +1,5 @@
 import React from 'react';
-import { ShoppingBag, Tag, ShieldCheck, Trash2 } from 'lucide-react';
+import { ShoppingBag, Tag, ShieldCheck, Trash2, Play } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card.jsx';
 import { isExternalVideo, getYoutubeThumbnail, isDirectVideo } from '@/lib/utils.js';
 
@@ -34,7 +34,11 @@ export default function CheckoutOrderSummary({
               <div key={item.cartItemId} className="flex items-start gap-4 group">
                 <div className="w-16 h-16 rounded-lg bg-muted border border-primary/10 overflow-hidden shrink-0">
                   {isDirectVideo(item.image) ? (
-                    <video src={item.image} className="w-full h-full object-cover" autoPlay loop muted playsInline />
+                    <div className="w-full h-full relative bg-[#1a1a1a] flex items-center justify-center">
+                      <div className="w-6 h-6 rounded-full bg-[#c59b5f] flex items-center justify-center shadow-md">
+                        <Play className="w-3 h-3 text-black fill-black ml-0.5" />
+                      </div>
+                    </div>
                   ) : isExternalVideo(item.image) ? (
                     <img src={getYoutubeThumbnail(item.image)} alt={item.name} className="w-full h-full object-cover" />
                   ) : (
