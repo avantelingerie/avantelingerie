@@ -827,3 +827,17 @@ Para nÃ£o esquecermos, aqui estÃ£o os itens congelados e as datas de destrav
     3. Blindagem de `cartImage` para que itens adicionados à sacola sempre recebam URLs de fotos estáticas.
     4. Correção de conformidade com as regras do React Hooks no `NemotronAdminHUD.jsx` (todos os hooks posicionados no topo, antes de verificações condicionais de retorno).
 
+### Sessão - 06/10/2026 (Parte 2: Desativação e Limpeza do HUD Nemotron Web — Decisão Arquitetural de Negócio)
+- **Decisão Estratégica & Arquitetural com o Lojista (Luiz):**
+  - **Avaliação de Valor:** Foi diagnosticado que a presença de uma Central de IA conversacional interna no navegador web trazia complexidade excessiva, dependência de APIs externas públicas/gratuitas sujeitas a filas intermitentes da Nvidia e redundância (já que o lojista não aplica código no browser, e o PCP/estoque deve ser consultado em dashboards e tabelas determinísticas de milissegundos).
+  - **Foco no Core Business:** O investimento e foco de inteligência artificial de valor financeiro real do negócio permanece 100% concentrado na **Lia** (atendimento de ponta aos clientes na vitrine e no WhatsApp). As auditorias de código e inteligência técnica permanecem diretamente com a **Ada** e o **Nemotron** na IDE/Terminal.
+- **Limpeza do Sistema Realizada:**
+  - `apps/web/src/App.jsx`: Removidos a importação e o componente `<NemotronAdminHUD />`.
+  - `apps/web/src/components/admin/AdminLayout.jsx`: Removido o botão de atalho "Pergunte ao Cérebro" da barra lateral do Admin, restaurando o layout limpo e minimalista.
+  - `apps/web/src/components/admin/NemotronAdminHUD.jsx`: Arquivo removido do repositório.
+  - `apps/web/vite.config.js`: Removidas as regras de proxy reverso `/hcgi/api/nemotron` em ambiente de dev e preview.
+  - `apps/api/src/routes/index.js` & `apps/api/src/routes/nemotron.js`: Rota removida da API do backend.
+- **Validação:**
+  - Build do frontend (`npm run build --prefix apps/web`) compilado com 100% de sucesso, reduzindo o tamanho final do bundle JS da aplicação (`App-D6nGHTDu.js`).
+  - Sintaxe dos arquivos do backend validada com Node.js sem erros.
+

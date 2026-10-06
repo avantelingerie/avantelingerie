@@ -378,12 +378,6 @@ export default defineConfig({
 				changeOrigin: true,
 				secure: true
 			},
-			'/hcgi/api/nemotron': {
-				target: 'http://localhost:3001',
-				rewrite: (path) => path.replace(/^\/hcgi\/api/, ''),
-				changeOrigin: true,
-				secure: false
-			},
 			'/hcgi/api': {
 				target: 'https://avantelingerie.com.br',
 				changeOrigin: true,
@@ -423,12 +417,6 @@ export default defineConfig({
 				target: 'https://avantelingerie.com.br',
 				changeOrigin: true,
 				secure: true
-			},
-			'/hcgi/api/nemotron': {
-				target: 'http://localhost:3001',
-				rewrite: (path) => path.replace(/^\/hcgi\/api/, ''),
-				changeOrigin: true,
-				secure: false
 			},
 			'/hcgi/api': {
 				target: 'https://avantelingerie.com.br',

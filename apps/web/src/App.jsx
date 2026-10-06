@@ -54,7 +54,7 @@ import ConfiguracoesLoja from '@/pages/admin/ConfiguracoesLoja.jsx';
 import ConfiguracoesFrete from '@/pages/admin/ConfiguracoesFrete.jsx';
 import AnalyticsPage from '@/pages/admin/AnalyticsPage.jsx';
 import LiaAdminPage from '@/pages/admin/LiaAdminPage.jsx';
-import NemotronAdminHUD from '@/components/admin/NemotronAdminHUD.jsx';
+
 
 // Catch-all 404 Component
 const NotFound = () => (
@@ -306,7 +306,6 @@ export default function App() {
             <CookieBanner />
             <WelcomeModal />
             <Toaster position="bottom-right" richColors />
-            <NemotronAdminHUD />
           </AdminAuthProvider>
         </AuthProvider>
       </Router>

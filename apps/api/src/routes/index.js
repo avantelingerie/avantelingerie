@@ -13,7 +13,6 @@ import setupRouter from './setup.js';
 import liaRouter from './lia.js';
 import whatsappRouter from './whatsapp.js';
 import marketingRouter from './marketing.js';
-import nemotronRouter from './nemotron.js';
 
 const router = Router();
 
@@ -32,7 +31,6 @@ export default () => {
     router.use('/lia', liaRouter);
     router.use('/whatsapp', whatsappRouter);
     router.use('/marketing', marketingRouter);
-    router.use('/nemotron', nemotronRouter);
 
     return router;
 };

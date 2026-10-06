@@ -119,24 +119,6 @@ export default function AdminLayout() {
             );
           })}
 
-          {/* Atalho Especial: Pergunte ao Cérebro (Nemotron 550B) */}
-          <button
-            type="button"
-            onClick={() => {
-              setIsSidebarOpen(false);
-              window.dispatchEvent(new CustomEvent('open-nemotron-hud'));
-            }}
-            className="w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl transition-all duration-200 bg-gradient-to-r from-[#c59b5f]/15 to-transparent hover:from-[#c59b5f]/25 border border-[#c59b5f]/40 text-[#c59b5f] hover:text-[#e4c088] font-semibold text-left group shadow-sm"
-          >
-            <div className="w-6 h-6 rounded-lg overflow-hidden border border-[#c59b5f]/50 flex items-center justify-center flex-shrink-0 bg-black group-hover:scale-105 transition-transform">
-              <img src="/pergunte-ao-cerebro.jpg" alt="Cérebro" className="w-full h-full object-cover" />
-            </div>
-            <span className="text-xs font-bold tracking-wide">Pergunte ao Cérebro</span>
-            <span className="ml-auto text-[9px] font-bold bg-[#c59b5f]/25 text-[#c59b5f] border border-[#c59b5f]/40 px-1.5 py-0.5 rounded font-mono">
-              IA 550B
-            </span>
-          </button>
-
           <div className="pt-2">
             <button onClick={() => setIsConfigOpen(!isConfigOpen)} className={`w-full flex items-center gap-3 px-4 py-3 rounded-lg transition-colors text-left group ${location.pathname.startsWith('/admin/configuracoes') || location.pathname === '/admin/descontos' ? 'text-zinc-900 dark:text-white font-medium bg-zinc-100 dark:bg-white/5' : 'text-zinc-600 dark:text-zinc-400 hover:bg-zinc-100 dark:hover:bg-white/5 hover:text-zinc-900 dark:hover:text-white'}`}>
               <Settings className="w-5 h-5 text-zinc-500 group-hover:rotate-45 transition-transform duration-300" />
