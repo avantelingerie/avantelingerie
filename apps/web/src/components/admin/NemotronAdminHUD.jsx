@@ -82,7 +82,7 @@ export default function NemotronAdminHUD() {
 
       if (!response.ok) {
         const errorData = await response.json().catch(() => ({}));
-        throw new Error(errorData.error || `Erro HTTP ${response.status}`);
+        throw new Error(errorData.details || errorData.error || `Erro HTTP ${response.status}`);
       }
 
       const data = await response.json();

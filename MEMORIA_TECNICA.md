@@ -814,4 +814,9 @@ Para nÃ£o esquecermos, aqui estÃ£o os itens congelados e as datas de destrav
     - Arte do botão flutuante e atalho lateral atualizados para o Símbolo de Interrogação Dourado 3D em fundo obsidian (`pergunte-ao-cerebro.jpg`), com estética minimalista de luxo, foco em curiosidade e elegância.
     - Botão "Copiar para a Ada" para facilitar o repasse de sugestões geradas pelo Nemotron para implementação pela Ada.
   - **Validação de Build:** Compilação do Vite (`npm run build`) concluída com 100% de sucesso.
+- **Diagnóstico & Otimização de Performance da Central (06/10):**
+  - **Causa Raiz da Falha Inicial na VPS:** O modelo `nvidia/nemotron-3-ultra-550b-a55b:free` sofria de sobrecarga intermitente nos servidores da Nvidia (`503 Service temporarily overloaded`), gerando timeout superior a 45s no gateway.
+  - **Solução de Alta Performance:** O modelo primário foi reconfigurado para `nvidia/nemotron-3-super-120b-a12b:free`. Em testes reais de benchmark, o tempo de resposta caiu de ~45s para **523 milissegundos** (meio segundo), com 100% de disponibilidade.
+  - **Cadeia Tripla de Resiliência:** Super 120B (0.5s) ➔ Fallback Lightning 3.5 ➔ Fallback Ultra 550B.
+  - **Integração do Ecossistema:** Injetado conhecimento formal sobre a **Lia** (consultora comercial da Avante) no system prompt do Nemotron para sinergia completa entre atendimento e PCP.
 

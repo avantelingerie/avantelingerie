@@ -8,8 +8,9 @@ import path from 'node:path';
 const router = express.Router();
 
 const POCKETBASE_HOST = process.env.POCKETBASE_URL || (process.env.NODE_ENV === 'production' ? 'http://localhost:8090' : 'https://avantelingerie.com.br/hcgi/platform');
-const PRIMARY_MODEL = 'nvidia/nemotron-3-ultra-550b-a55b:free';
+const PRIMARY_MODEL = 'nvidia/nemotron-3-super-120b-a12b:free';
 const FALLBACK_MODEL = 'nvidia/nemotron-3.5-lightning:free';
+const TERTIARY_MODEL = 'nvidia/nemotron-3-ultra-550b-a55b:free';
 
 // Middleware: Autenticação isolada por requisição (previne poluição do singleton pb global)
 const requireAdmin = async (req, res, next) => {
@@ -91,7 +92,7 @@ const coletarContextoLoja = async () => {
 };
 
 // Chamador seguro do OpenRouter com fallback
-async function chamarOpenRouter(model, messages, timeoutMs = 45000) {
+async function chamarOpenRouter(model, messages, timeoutMs = 25000) {
   const apiKey = process.env.OPENROUTER_API_KEY;
   if (!apiKey) {
     throw new Error('Chave OPENROUTER_API_KEY não configurada no servidor.');
@@ -166,14 +167,20 @@ router.post('/analisar', requireAdmin, async (req, res) => {
       }
     }
 
-    const systemPrompt = `Você é o Nemotron 550B, Copiloto Estratégico, Auditor de Código e Diretor de PCP da Avante Lingerie.
+    const systemPrompt = `Você é o Nemotron, Copiloto Estratégico, Auditor de Código e Diretor de PCP da Avante Lingerie.
 Você está conversando diretamente com o Administrador (Luiz) no Painel Executivo Flutuante da loja.
+
+Conhecimento do Ecossistema Avante:
+- A Lia é a Consultora de Vendas oficial e Inteligência Artificial de atendimento da Avante Lingerie (opera no WhatsApp e no chat de vitrine da loja).
+- Você (Nemotron) e a Lia trabalham juntos no ecossistema: a Lia cuida do atendimento aos clientes, recomendação de peças e conversão, enquanto você é o braço direito do Luiz na gestão interna, estratégias, PCP fabril, estoque e auditoria técnica.
+- A Ada é a Arquiteta de Software Líder do projeto (responsável por codificar e implementar todas as decisões nos arquivos do sistema).
+
 Contexto atual da navegação do Admin: ${JSON.stringify(pageContext || {})}
 Métricas da Loja em tempo real (Zero PII): ${JSON.stringify(dadosBanco)}
 ${arquivoSnippet}
 
 Diretrizes Obrigatórias:
-1. Seja altamente analítico, direto, técnico e estratégico. Responda em Português do Brasil com formatação Markdown limpa.
+1. Seja altamente analítico, direto, técnico, cortês e estratégico. Responda em Português do Brasil com formatação Markdown limpa.
 2. Ao diagnosticar bugs ou sugerir melhorias de código, entregue o trecho exato de código limpo e pronto para a Ada implementar no projeto.
 3. Para estoque e vendas, sugira prioridades de corte e reposição para a fábrica e facções.`;
 
@@ -186,8 +193,13 @@ Diretrizes Obrigatórias:
     try {
       result = await chamarOpenRouter(PRIMARY_MODEL, messages);
     } catch (primaryErr) {
-      logger.warn('Nemotron 550B indisponível, acionando fallback Nemotron Lightning:', primaryErr.message);
-      result = await chamarOpenRouter(FALLBACK_MODEL, messages);
+      logger.warn('Nemotron Super indisponível, acionando fallback Lightning:', primaryErr.message);
+      try {
+        result = await chamarOpenRouter(FALLBACK_MODEL, messages);
+      } catch (fallbackErr) {
+        logger.warn('Nemotron Lightning indisponível, acionando fallback Ultra 550B:', fallbackErr.message);
+        result = await chamarOpenRouter(TERTIARY_MODEL, messages);
+      }
     }
 
     return res.json({
