@@ -788,10 +788,30 @@ Para nÃ£o esquecermos, aqui estÃ£o os itens congelados e as datas de destrav
   - Foram prototipadas e validadas variações de gatilho mental para preço de fábrica e marketplaces ("PREÇO DE FÁBRICA MAIS BARATO QUE NA SHOPEE" e "COMECE A VENDER NOS MARKETPLACES COM ESSES PREÇOS DE FÁBRICA!").
   - Após testes visuais em `localhost:3000`, o lojista (Luiz) optou por **remover o elemento da página de produto**, preservando o layout minimalista, limpo e de alta sofisticação entre o bloco de preço e a Boutique de Descontos Progressivos.
   - O arquivo `ProductPage.jsx` foi restaurado 100% ao estado original íntegro.
-- **Ponto de Parada (Para Amanhã):**
-  - Retomar o aprimoramento da seção de Marketplaces na Home (`AffiliatedStoresSection.jsx`), aplicando as propostas de copywriting ("Ecossistema Avante / Lojas Oficiais na Shopee") para reforçar a autoridade de fabricante e a oportunidade de revenda.
-  - Definir modelo de IA para o terminal CLI (`qwen.mjs`) e Continue: OpenRouter encerrou o `qwen/qwen3.8-27b:free` (404); decidir entre apontar para o modelo gratuito `nvidia/nemotron-3-ultra-550b-a55b:free` ou recarregar créditos no OpenRouter para usar a rota paga do Qwen.
-
-
-
+### Sessão - 06/10/2026 (Ativação Nemotron 550B, Governança & Central Executiva HUD)
+- **Google Merchant Center:** Confirmado 100% ativo e operando sem erros pelo lojista (Luiz). Feed e imagens em cache validados no Google Shopping.
+- **Ativação do Nvidia Nemotron 550B Ultra (Nuvem Gratuita):**
+  - Substituição da rota depreciada do Qwen pelo `nvidia/nemotron-3-ultra-550b-a55b:free` (modelo gigante de 550B com 1M de janela de contexto e raciocínio profundo de alta complexidade para e-commerce e ERP têxtil).
+  - Configuração de fallback automático e transparente para `nvidia/nemotron-3.5-lightning:free` caso os servidores da Nvidia atinjam picos de demanda.
+  - Comandos dedicados criados e homologados no terminal PowerShell/CMD: tanto `nemotron` quanto `qwen` funcionam de forma intercambiável para perguntas pontuais ou chat contínuo.
+- **Nova Regra de Ouro Arquitetural (Acordo e Governança Nível 1):**
+  - **Portão Nemotron Obrigatório:** Todo código novo, função ou refatoração complexa DEVE passar primeiro pelo crivo, desafio lógico e validação do Nemotron no terminal.
+  - **Implementação Exclusiva da Ada:** O Nemotron opera apenas como consultor analítico no terminal. SOMENTE a Ada tem autorização para editar, implementar e persistir os arquivos no código-fonte do projeto.
+  - Regra formalmente registrada no `AGENTS.md` (Seção 1.8 e Fase 3 do Fluxo Obrigatório).
+- **Central Executiva Nemotron HUD 24/7 (Implementada e Validada):**
+  - **Posicionamento:** Flutuante fixado na borda lateral esquerda a meia-altura (`left-0 top-1/2 -translate-y-1/2`), sem colidir com a Lia (canto inferior direito) e acessível a qualquer momento.
+  - **Segurança e Restrição de Acesso:** Renderização restrita estritamente a administradores autenticados (`isAdminAuthenticated && currentAdmin`). Clientes comuns e visitantes anônimos não carregam nem visualizam o componente. O HUD acompanha o administrador tanto no Painel Admin quanto navegando pela loja vitrine ("Ver Loja").
+  - **Backend Seguro (`/hcgi/api/nemotron`):**
+    - Autenticação por token Bearer com instância isolada do PocketBase por requisição (evita poluição da `authStore` singleton).
+    - Proteção LGPD / Zero PII: dados de pedidos são sanitizados antes de entrar no contexto da IA (somente SKU, quantidades, totais e status; sem nomes, CPFs ou endereços).
+    - Leitura segura de arquivos protegida contra Directory Traversal.
+    - Diagnóstico de estoque crítico em tempo real (alerta de peças com <= 3 unidades).
+  - **Painel Frontend (`NemotronAdminHUD.jsx`):**
+    - 3 abas operacionais organizadas na ordem executiva oficial:
+      1. *Copiloto Executivo* (Diretor Comercial e Estratégico)
+      2. *Auditor de Código* (Arquiteto de Software e Validador Técnico)
+      3. *Radar Estoque & PCP* (Diretor Industrial e de Fábrica — reservado para ERP Têxtil)
+    - Arte do botão flutuante e atalho lateral atualizados para o Símbolo de Interrogação Dourado 3D em fundo obsidian (`pergunte-ao-cerebro.jpg`), com estética minimalista de luxo, foco em curiosidade e elegância.
+    - Botão "Copiar para a Ada" para facilitar o repasse de sugestões geradas pelo Nemotron para implementação pela Ada.
+  - **Validação de Build:** Compilação do Vite (`npm run build`) concluída com 100% de sucesso.
 

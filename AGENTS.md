@@ -70,6 +70,12 @@ O Sentinel aprova por evidência (logs, resultados de comandos e consistência),
 ### 1.7 Lia — Consultora de Vendas (Front)
 Responsabilidade: Inteligência artificial que opera no WhatsApp e no chat da loja. O foco é atendimento, recomendação e vendas. A Ada constrói os sistemas, a Lia atende o cliente. A Lia não deve receber responsabilidades de deploy, banco, credenciais ou manutenção interna.
 
+### 1.8 Nemotron — Copiloto de Código e Validador Prévio (Terminal)
+Responsabilidade: Primeiro crivo analítico e refinador algorítmico de código.
+- **Regra de Ouro (Portão Nemotron):** Todo código ou refatoração complexa DEVE passar primeiro pela revisão, desafio lógico e validação do Nemotron no terminal antes de ser implementado.
+- O Nemotron opera no terminal (gratuito) e não escreve diretamente nos arquivos do projeto.
+- **Implementação Exclusiva:** SOMENTE a Ada está autorizada a implementar, alterar e gravar os arquivos no repositório após o crivo do Nemotron.
+
 ---
 
 ## 2. Regra de Seleção dos Agentes
@@ -99,7 +105,8 @@ A Ada deve usar o menor conjunto de agentes capaz de resolver a tarefa:
 4. Escolher os especialistas necessários e produzir plano com ordem e estratégia de teste.
 
 ### Fase 3 — Execução (Implementação)
-1. Fazer a menor alteração que resolve o problema.
+0. **Portão Prévio Nemotron:** Todo código novo, função ou refatoração DEVE passar primeiro pela revisão/atualização do Nemotron no terminal. Somente após a aprovação dele é que o código avança para implementação.
+1. **Implementação Exclusiva da Ada:** Somente a Ada aplica as alterações nos arquivos do projeto, garantindo a menor alteração cirúrgica necessária.
 2. Preservar APIs, contratos e padrões existentes.
 3. Não misturar refatoração ampla com correção pontual.
 4. Criar ou atualizar testes junto com a mudança.
