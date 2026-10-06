@@ -840,4 +840,7 @@ Para nÃ£o esquecermos, aqui estÃ£o os itens congelados e as datas de destrav
 - **Validação:**
   - Build do frontend (`npm run build --prefix apps/web`) compilado com 100% de sucesso, reduzindo o tamanho final do bundle JS da aplicação (`App-D6nGHTDu.js`).
   - Sintaxe dos arquivos do backend validada com Node.js sem erros.
+- **Ponto de Parada / Próxima Sessão Prioritária (07/10):**
+  - Construção do plano executivo e arquitetura completa de campanhas de tráfego pago (Google Ads PMax/Search + Meta Ads Advantage+/Catálogo).
+  - Foco em escala para a reta final do ano (Q4): captação massiva de Revendedoras (Atacado B2B) e vendas de alto volume para Consumidor Final (Varejo B2C com peças campeãs como a Cinta Modeladora).
 
