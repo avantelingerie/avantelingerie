@@ -844,3 +844,24 @@ Para nÃ£o esquecermos, aqui estÃ£o os itens congelados e as datas de destrav
   - Construção do plano executivo e arquitetura completa de campanhas de tráfego pago (Google Ads PMax/Search + Meta Ads Advantage+/Catálogo).
   - Foco em escala para a reta final do ano (Q4): captação massiva de Revendedoras (Atacado B2B) e vendas de alto volume para Consumidor Final (Varejo B2C com peças campeãs como a Cinta Modeladora).
 
+### Sessão - 07/10/2026 (Expansão de Tracking: Google Ads Direto & Meta Conversions API / CAPI)
+- **Crivo Analítico com Nemotron (Terminal):**
+  - Validação da arquitetura de mensuração e mitigação de riscos:
+    - Prevenção de duplicidade entre eventos do navegador (Pixel) e do servidor (CAPI) utilizando `event_id` único baseado em `purch_${orderId}`.
+    - Proteção LGPD / Zero PII: dados sensíveis de contato do cliente (e-mail e telefone) submetidos à CAPI são criptografados com hash SHA-256 no backend antes do envio para a Graph API da Meta.
+    - Suporte a `test_event_code` para validação em tempo real na ferramenta "Testar Eventos" do Gerenciador de Eventos da Meta.
+- **Implementação do Painel Admin (`TrackingPixelsTab.jsx`):**
+  - Adicionado card para **Meta Conversions API (CAPI)** com campo de Token de Acesso permanente (Graph API) com máscara de visualização (Eye/EyeOff) e Código de Teste de Evento.
+  - Adicionado card para **Google Ads** com campos de ID da Tag (`google_ads_tag_id`, ex: `AW-1234567890`) e Rótulo de Conversão de Compra (`google_ads_conversion_label`).
+  - Layout reorganizado em grade harmônica 2x2 (Meta Navegador + Meta Servidor / Google GA4 + Google Ads).
+- **Storefront & Mensuração (`AnalyticsTracker.jsx` & `marketingPixels.js`):**
+  - Injeção e configuração dinâmica da tag `google_ads_tag_id` via `gtag('config', googleAdsTagId)`.
+  - Disparo direto do evento de conversão de compra (`gtag('event', 'conversion', { send_to: 'AW-.../Label', ... })`) na conclusão de pedidos.
+  - Dispatch assíncrono e resiliente para a rota de CAPI (`/hcgi/api/marketing/capi`).
+- **Backend (`apps/api/src/routes/marketing.js`):**
+  - Criado endpoint `POST /capi` que recupera as credenciais de `integracoes_config` (servico="marketing"), formata os eventos conforme a Graph API v19.0 da Meta com hashing SHA-256 e repassa os dados diretamente para os servidores da Meta.
+- **Validação:**
+  - Build do frontend (`npm run build --prefix apps/web`) compilado com 100% de sucesso sem erros.
+  - Sintaxe do backend validada com Node.js (`node -c`).
+
+

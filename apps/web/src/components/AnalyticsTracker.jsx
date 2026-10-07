@@ -6,9 +6,10 @@ export default function AnalyticsTracker() {
   const location = useLocation();
   const [pixelId, setPixelId] = useState(null);
   const [ga4Id, setGa4Id] = useState(null);
+  const [googleAdsId, setGoogleAdsId] = useState(null);
   const [isInitialized, setIsInitialized] = useState(false);
 
-  // 1. Buscar configuraes do banco de dados (PocketBase)
+  // 1. Buscar configurações do banco de dados (PocketBase)
   useEffect(() => {
     const fetchAnalyticsConfigs = async () => {
       try {
@@ -23,16 +24,19 @@ export default function AnalyticsTracker() {
           if (record.chave_nome === 'google_analytics_id') {
             setGa4Id(record.chave_valor);
           }
+          if (record.chave_nome === 'google_ads_tag_id') {
+            setGoogleAdsId(record.chave_valor);
+          }
         });
       } catch (err) {
-        console.warn('AnalyticsTracker: No foi possvel carregar as configuraes de marketing.', err);
+        console.warn('AnalyticsTracker: Não foi possível carregar as configurações de marketing.', err);
       }
     };
 
     fetchAnalyticsConfigs();
   }, []);
 
-  // 2. Inicializar Scripts assim que os IDs so carregados
+  // 2. Inicializar Scripts assim que os IDs são carregados
   useEffect(() => {
     if (isInitialized) return;
 
@@ -51,26 +55,37 @@ export default function AnalyticsTracker() {
       console.log(`[Analytics] Meta Pixel (${pixelId}) inicializado.`);
     }
 
-    // --- GOOGLE ANALYTICS (GA4) ---
-    if (ga4Id) {
-      const script = document.createElement('script');
-      script.async = true;
-      script.src = `https://www.googletagmanager.com/gtag/js?id=${ga4Id}`;
-      document.head.appendChild(script);
+    // --- GOOGLE TAG (GA4 & GOOGLE ADS) ---
+    const primaryGoogleId = ga4Id || googleAdsId;
+    if (primaryGoogleId) {
+      if (!window.gtag) {
+        const script = document.createElement('script');
+        script.async = true;
+        script.src = `https://www.googletagmanager.com/gtag/js?id=${primaryGoogleId}`;
+        document.head.appendChild(script);
 
-      window.dataLayer = window.dataLayer || [];
-      window.gtag = function gtag() { window.dataLayer.push(arguments); };
-      window.gtag('js', new Date());
-      window.gtag('config', ga4Id);
-      console.log(`[Analytics] Google Analytics 4 (${ga4Id}) inicializado.`);
+        window.dataLayer = window.dataLayer || [];
+        window.gtag = function gtag() { window.dataLayer.push(arguments); };
+        window.gtag('js', new Date());
+      }
+
+      if (ga4Id) {
+        window.gtag('config', ga4Id);
+        console.log(`[Analytics] Google Analytics 4 (${ga4Id}) inicializado.`);
+      }
+
+      if (googleAdsId) {
+        window.gtag('config', googleAdsId);
+        console.log(`[Analytics] Google Ads Tag (${googleAdsId}) configurada.`);
+      }
     }
 
-    if (pixelId || ga4Id) {
+    if (pixelId || ga4Id || googleAdsId) {
       setIsInitialized(true);
     }
-  }, [pixelId, ga4Id, isInitialized]);
+  }, [pixelId, ga4Id, googleAdsId, isInitialized]);
 
-  // 3. Monitorar navegao (PageView) e disparar eventos
+  // 3. Monitorar navegação (PageView) e disparar eventos
   useEffect(() => {
     if (!isInitialized) return;
 
@@ -88,5 +103,5 @@ export default function AnalyticsTracker() {
 
   }, [location, isInitialized, pixelId, ga4Id]);
 
-  return null; // Este componente  invisvel
+  return null; // Este componente é invisível
 }

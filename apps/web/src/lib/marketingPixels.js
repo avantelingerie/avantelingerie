@@ -6,21 +6,47 @@ import { trackEvent } from '@/hooks/useMarketingTracker.js';
 const CONFIG_PIXELS_LOCAIS = {
   meta_pixel_id: '',
   google_analytics_id: '',
+  google_ads_tag_id: '',
+  google_ads_conversion_label: '',
   enable_pocketbase_sync: true, // Habilitado para ler da integracoes_config
 };
 
 let pixelsInitialized = false;
+let googleAdsTagId = '';
+let googleAdsConversionLabel = '';
+
+// Helper para disparo seguro da Meta Conversions API (CAPI)
+export async function sendCapiEvent(eventName, customData = {}, userData = {}, eventId = null) {
+  try {
+    const eid = eventId || `evt_${Date.now()}_${Math.random().toString(36).substring(2, 9)}`;
+    await fetch('/hcgi/api/marketing/capi', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        event_name: eventName,
+        event_id: eid,
+        event_source_url: window.location.href,
+        custom_data: customData,
+        user_data: userData,
+      }),
+    }).catch(() => {});
+  } catch (err) {
+    // Silencioso para não afetar UX
+  }
+}
 
 export async function initializePixels() {
   if (pixelsInitialized) return;
 
   let metaPixelId = CONFIG_PIXELS_LOCAIS.meta_pixel_id || '';
   let gaMeasurementId = CONFIG_PIXELS_LOCAIS.google_analytics_id || '';
+  googleAdsTagId = CONFIG_PIXELS_LOCAIS.google_ads_tag_id || '';
+  googleAdsConversionLabel = CONFIG_PIXELS_LOCAIS.google_ads_conversion_label || '';
 
-  if (CONFIG_PIXELS_LOCAIS.enable_pocketbase_sync && !metaPixelId && !gaMeasurementId) {
+  if (CONFIG_PIXELS_LOCAIS.enable_pocketbase_sync && (!metaPixelId || !gaMeasurementId || !googleAdsTagId)) {
     try {
       const records = await pb.collection('integracoes_config').getFullList({
-        filter: 'servico = "marketing"',
+        filter: 'servico = "marketing" && ativo = true',
       });
       
       records.forEach(record => {
@@ -30,11 +56,19 @@ export async function initializePixels() {
         if (record.chave_nome === 'google_analytics_id' && record.chave_valor) {
           gaMeasurementId = record.chave_valor;
         }
+        if (record.chave_nome === 'google_ads_tag_id' && record.chave_valor) {
+          googleAdsTagId = record.chave_valor;
+        }
+        if (record.chave_nome === 'google_ads_conversion_label' && record.chave_valor) {
+          googleAdsConversionLabel = record.chave_valor;
+        }
       });
     } catch (err) {
       console.warn('[Pixels] Erro ao ler integracoes_config. Lendo localstorage...', err);
-      metaPixelId = localStorage.getItem('meta_pixel_id') || '';
-      gaMeasurementId = localStorage.getItem('google_analytics_id') || '';
+      metaPixelId = localStorage.getItem('meta_pixel_id') || metaPixelId;
+      gaMeasurementId = localStorage.getItem('google_analytics_id') || gaMeasurementId;
+      googleAdsTagId = localStorage.getItem('google_ads_tag_id') || googleAdsTagId;
+      googleAdsConversionLabel = localStorage.getItem('google_ads_conversion_label') || googleAdsConversionLabel;
     }
   }
 
@@ -186,7 +220,7 @@ export function trackInitiateCheckout(cart, total) {
   trackEvent('begin_checkout', { value: value });
 }
 
-export function trackPurchase(orderId, total, items = [], paymentMethod = '') {
+export function trackPurchase(orderId, total, items = [], paymentMethod = '', customerData = {}) {
   const value = total || 0;
   
   // Evita disparar pixels duplicados se o usuário recarregar a tela de confirmação
@@ -196,6 +230,9 @@ export function trackPurchase(orderId, total, items = [], paymentMethod = '') {
     return;
   }
 
+  const eventId = `purch_${orderId}`;
+
+  // 1. Meta Pixel (Navegador com eventID para deduplicação com CAPI)
   if (window.fbq) {
     window.fbq('track', 'Purchase', {
       content_ids: items.map(item => item.id || ''),
@@ -204,9 +241,10 @@ export function trackPurchase(orderId, total, items = [], paymentMethod = '') {
       currency: 'BRL',
       order_id: orderId,
       payment_method: paymentMethod
-    });
+    }, { eventID: eventId });
   }
 
+  // 2. Google Analytics 4 (Enhanced Ecommerce Purchase)
   if (window.gtag) {
     window.gtag('event', 'purchase', {
       transaction_id: orderId,
@@ -220,7 +258,28 @@ export function trackPurchase(orderId, total, items = [], paymentMethod = '') {
         quantity: item.quantity || 1
       }))
     });
+
+    // 3. Google Ads Direct Conversion Tag
+    if (googleAdsTagId && googleAdsConversionLabel) {
+      window.gtag('event', 'conversion', {
+        send_to: `${googleAdsTagId}/${googleAdsConversionLabel}`,
+        value: value,
+        currency: 'BRL',
+        transaction_id: orderId
+      });
+      console.log(`[Pixels] Conversão direta do Google Ads (${googleAdsTagId}/${googleAdsConversionLabel}) enviada!`);
+    }
   }
+
+  // 4. Meta Conversions API (CAPI - Servidor)
+  sendCapiEvent('Purchase', {
+    value: value,
+    currency: 'BRL',
+    order_id: orderId,
+    content_type: 'product',
+    content_ids: items.map(item => item.id || ''),
+    num_items: items.length
+  }, customerData, eventId);
 
   sessionStorage.setItem(purchaseSentKey, 'true');
   trackEvent('purchase', { value: value });
