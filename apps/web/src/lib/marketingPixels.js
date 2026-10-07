@@ -4,8 +4,8 @@ import { trackEvent } from '@/hooks/useMarketingTracker.js';
 // CONFIGURAÇÃO DIRETA DE MARKETING (Opcional - Altamente Recomendado para evitar 404 de Banco)
 // Insira seus IDs aqui diretamente para pular a consulta ao PocketBase e blindar o site contra erros.
 const CONFIG_PIXELS_LOCAIS = {
-  meta_pixel_id: '',
-  google_analytics_id: '',
+  meta_pixel_id: '981595838258999',
+  google_analytics_id: 'G-E2FS36FRG1',
   google_ads_tag_id: '',
   google_ads_conversion_label: '',
   enable_pocketbase_sync: true, // Habilitado para ler da integracoes_config

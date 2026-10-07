@@ -863,5 +863,11 @@ Para nÃ£o esquecermos, aqui estÃ£o os itens congelados e as datas de destrav
 - **Validação:**
   - Build do frontend (`npm run build --prefix apps/web`) compilado com 100% de sucesso sem erros.
   - Sintaxe do backend validada com Node.js (`node -c`).
+- **Ativação Oficial Meta CAPI (07/10 - Tarde):**
+  - Gerado e configurado o token oficial permanente via Dataset Quality API da Meta Graph API v19.0.
+  - Persistidos no banco PocketBase da VPS (`integracoes_config`): `meta_pixel_id` (`981595838258999`) e `meta_capi_token` (`EAAZA4XZB7ot...`).
+  - Efetuado disparo de teste real validado na Graph API com resposta 200 OK (`events_received: 1`, `fbtrace_id: A6uZ1-VdM6Psti_kUdcyMkq`).
+  - Disparado evento de teste com o código `TEST31137` na ferramenta de Eventos de Teste do Gerenciador de Eventos da Meta com 100% de sucesso.
+
 
 
