@@ -867,7 +867,16 @@ Para nÃ£o esquecermos, aqui estÃ£o os itens congelados e as datas de destrav
   - Gerado e configurado o token oficial permanente via Dataset Quality API da Meta Graph API v19.0.
   - Persistidos no banco PocketBase da VPS (`integracoes_config`): `meta_pixel_id` (`981595838258999`) e `meta_capi_token` (`EAAZA4XZB7ot...`).
   - Efetuado disparo de teste real validado na Graph API com resposta 200 OK (`events_received: 1`, `fbtrace_id: A6uZ1-VdM6Psti_kUdcyMkq`).
-  - Disparado evento de teste com o código `TEST31137` na ferramenta de Eventos de Teste do Gerenciador de Eventos da Meta com 100% de sucesso.
+  - Disparado evento de teste com o código `TEST31137` na ferramenta de Eventos de Teste do Gerenciador de Eventos da Meta com 100% de sucesso (Evento `Comprar` processado com origem `Servidor`).
+  - Deploy da vitrine com fallback local direto de alta performance concluído na VPS da Hostinger via GitHub Actions (`#102`).
+- **Decisão Operacional sobre Gestão de Anúncios:**
+  - Descartada a dependência burocrática de MCP da Meta. A inteligência de tráfego, copywriting, estruturação de campanhas e auditoria de ROAS/CPA será conduzida diretamente pela Ada em co-pilotagem estratégica com o lojista no chat.
+- **Ponto de Partida para Amanhã (08/10):**
+  - 1. Configurar a Tag de Conversão Direta do **Google Ads** (`google_ads_tag_id` + `google_ads_conversion_label`) no painel Admin de Tracking.
+  - 2. Estruturar a primeira bateria de campanhas oficiais:
+       - Meta Ads: Campanha de Catálogo Advantage+ para Varejo B2C (Cinta Modeladora e conjuntos de alta conversão) + Campanha de Atacado B2B para captação de novas revendedoras.
+       - Google Ads: Campanha Performance Max / Google Shopping integrada ao feed XML oficial da fábrica.
+
 
 
 
