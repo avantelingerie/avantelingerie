@@ -867,15 +867,61 @@ Para nÃ£o esquecermos, aqui estÃ£o os itens congelados e as datas de destrav
   - Gerado e configurado o token oficial permanente via Dataset Quality API da Meta Graph API v19.0.
   - Persistidos no banco PocketBase da VPS (`integracoes_config`): `meta_pixel_id` (`981595838258999`) e `meta_capi_token` (`EAAZA4XZB7ot...`).
   - Efetuado disparo de teste real validado na Graph API com resposta 200 OK (`events_received: 1`, `fbtrace_id: A6uZ1-VdM6Psti_kUdcyMkq`).
-  - Disparado evento de teste com o código `TEST31137` na ferramenta de Eventos de Teste do Gerenciador de Eventos da Meta com 100% de sucesso (Evento `Comprar` processado com origem `Servidor`).
-  - Deploy da vitrine com fallback local direto de alta performance concluído na VPS da Hostinger via GitHub Actions (`#102`).
-- **Decisão Operacional sobre Gestão de Anúncios:**
-  - Descartada a dependência burocrática de MCP da Meta. A inteligência de tráfego, copywriting, estruturação de campanhas e auditoria de ROAS/CPA será conduzida diretamente pela Ada em co-pilotagem estratégica com o lojista no chat.
-- **Ponto de Partida para Amanhã (08/10):**
-  - 1. Configurar a Tag de Conversão Direta do **Google Ads** (`google_ads_tag_id` + `google_ads_conversion_label`) no painel Admin de Tracking.
-  - 2. Estruturar a primeira bateria de campanhas oficiais:
-       - Meta Ads: Campanha de Catálogo Advantage+ para Varejo B2C (Cinta Modeladora e conjuntos de alta conversão) + Campanha de Atacado B2B para captação de novas revendedoras.
-       - Google Ads: Campanha Performance Max / Google Shopping integrada ao feed XML oficial da fábrica.
+
+### Sessão - 07/10/2026 (Noite: Desbloqueio de Sistema & Estruturação do Servidor MCP Meta Ads)
+- **Desbloqueio de Sistema Operacional (Chrome e OneDrive):**
+  - **Google Chrome:** Identificados e encerrados 13 processos zumbis do Chrome em segundo plano iniciados às 15:29 (PID mestre 23152 acumulando 24 minutos de CPU sem janela gráfica devido a um watchdog timeout de driver gráfico às 19:49). Removido o lock residual de porta `DevToolsActivePort`. O Chrome foi completamente destravado e normalizado para o usuário.
+  - **OneDrive:** Resetado processo com vazamento de memória reportado pelo Windows (`RADAR_PRE_LEAK_64`), limpos caches inconsistentes do WebView2/DawnGraphite e reinicializado o serviço preservando 100% dos ~10 GB de dados da Área de Trabalho/Documentos intactos.
+- **Estruturação do Servidor MCP Meta Ads (Custo Zero / Local):**
+  - Instalado o pacote `@channel47/meta-ads-mcp` e construído o wrapper local `C:\Users\comer\.gemini\config\mcp\meta-ads\server.js`.
+  - Servidor `meta-ads` registrado no arquivo mestre `C:\Users\comer\.gemini\config\mcp_config.json` e integrado com variáveis de ambiente locais em `.env`.
+  - **Conta Oficial Adicionada ao Portfólio:** A conta de anúncios oficial da empresa (`841441889539975` - Machado Machado) foi adicionada com sucesso ao portfólio de negócios da empresa (`Avante Lingerie | Confecção de Moda Íntima`, Business ID `1434883355105952`).
+  - O ID `act_841441889539975` já está salvo no `.env` do MCP.
+  - Preservação comprovada: Os testes de compra realizados hoje continuam 100% gravados e seguros no Pixel oficial `981595838258999` da Avante Lingerie.
+### Sessão - 08/10/2026 (Definição Oficial de Contas Meta Ads, Limpeza de MCP & Abertura Google Ads)
+- **Limpeza do Ambiente Antigravity IDE:**
+  - Removida a entrada do servidor `meta-ads` em `C:\Users\comer\.gemini\config\mcp_config.json`.
+  - Alerta de erro ("servidor caiu") completamente eliminado, restaurando o IDE para estado 100% limpo, estável e sem avisos de console.
+- **Definição e Blindagem da Conta Oficial Meta Ads (Decisão Arquitetural & Comercial):**
+  - **Conta Oficial da Empresa:** `841441889539975` (Machado Machado / Avante Lingerie), vinculada ao Portfólio Empresarial *Avante Lingerie | Confecção de Moda Íntima* (Business ID `1434883355105952`).
+  - **Acesso Operacional:** Operada diretamente pelo perfil comercial `@avante.lingerie` no Gerenciador de Anúncios (`adsmanager.facebook.com`), com permissões de **Controle Total / Já atribuído**.
+  - **Conta Pessoal Descartada:** A conta pessoal `1430331978925690` (Luiz Machado) foi formalmente isolada para não misturar finanças pessoais com o e-commerce.
+  - **Ativos Sincronizados:** O Pixel oficial `981595838258999`, a Meta Conversions API (CAPI via VPS com resposta 200 OK) e o Feed XML dinâmico de catálogo de produtos pertencem exclusivamente a essa conta oficial.
+- **Decisão Estratégica sobre MCPs vs. Faturamento Real:**
+  - Diagnóstico confirmado com o lojista: servidores MCP para Ads são ferramentas secundárias de consulta analítica por IA e não são pré-requisito para tráfego e vendas.
+  - A operação de criação e escala de campanhas de alta conversão ocorrerá diretamente nas interfaces nativas da Meta e do Google, poupando a equipe da burocracia de Developer Tokens e SMS.
+- **Início da Estruturação do Google Ads:**
+  - Conta iniciada no Modo Especialista no `ads.google.com` sob a conta Google da fábrica (`avantelingerie@gmail.com`).
+  - Elegibilidade confirmada e aplicada para a promoção oficial: **Gaste R$ 1.200,00 e ganhe R$ 1.200,00 em créditos de anúncios**.
+  - Atingida a tela final de confirmação de faturamento (dados de endereço e método de pagamento).
+- **Ponto de Parada da Sessão Anterior (08/10/2026):**
+  - 1. Finalizar o preenchimento do faturamento do **Google Ads** com os dados e cartão corporativo do sócio.
+  - 2. Obter o ID de 10 dígitos do Google Ads e vincular ao **Google Merchant Center** (aprovando o feed de produtos da fábrica para Google Shopping/PMax).
+  - 3. Configurar e finalizar o setup do **Stripe** no backend/admin da loja (com os dados do sócio) para liquidação de pagamentos.
+  - 4. Estruturar a estratégia das campanhas pioneiras de Q4 (varejo e revendedoras de atacado).
+  - 5. **Pauta Comercial & UX com o Sócio:** Decisão final sobre o **Duplo Preço Elegante** nos cards (`ProductCard.jsx`).
+
+### Sessão - 09/10/2026 (Vitória Histórica: Unificação Meta, Resgate de Fanpage & Ativação Total do Meta Ads MCP)
+- **Descoberta & Resgate da Fanpage Oficial da Avante Lingerie:**
+  - Localizada a Página oficial da loja (`1051489401388433`), contendo identidade visual completa de Nova Friburgo, Reels das modelos, fotos e WhatsApp oficial.
+  - Desatada a vinculação antiga do Instagram `@avante.lingerie` de uma página fantasma sem foto e associado oficialmente à Fanpage verdadeira com a logomarca da marca.
+- **Unificação do Portfólio Empresarial & Permissões (Meta Business Suite):**
+  - O Portfólio Empresarial oficial (*Avante Lingerie | Confecção de Moda Íntima*) consolidou o Instagram `@avante.lingerie`, a Fanpage resgatada, o Pixel e a Conta de Anúncios oficial (`841441889539975`).
+  - Concedido **Controle Total (Acesso Total: Tudo)** para a conta corporativa `avantelingerie@gmail.com`.
+- **Criação do App e Ativação do Meta Ads MCP (Custo Zero / Local):**
+  - Criado o App oficial `Avante Ads Hub` (ID: `1987006575274084`) sem qualquer bloqueio ou requisito burocrático na Meta Developers, focado nos 5 casos de uso de Marketing, Catálogo e **Ads MCP Server nativo**.
+  - Criado o Usuário do Sistema `Ada Copiloto` (`61594952503893`) com acesso total a todos os ativos da fábrica (Páginas, Contas de anúncios, Catálogo, Pixels/Datasets e App).
+  - Gerado com 100% de sucesso o Token Permanente de Acesso (`EAAcPLAU...`) com as 11 permissões máximas de publicidade (`ads_management`, `ads_mcp_management`, `ads_read`, `business_management`, `catalog_management`, `leads_retrieval`, etc.).
+  - Servidor local `@channel47/meta-ads-mcp` integrado e registrado no `mcp_config.json`.
+  - **Teste de Conectividade:** Executado teste direto na Meta Graph API v22.0 via Node.js: conta `act_841441889539975` retornou `account_status: 1` (Ativo), moeda `BRL` e conexão 100% operacional.
+- **Próximos Passos (Retomada da Pauta Comercial):**
+  - 1. Finalizar faturamento do Google Ads (dados/cartão corporativo) para ativação do cupom de R$ 1.200.
+  - 2. Vincular Google Ads ao Google Merchant Center (GMC).
+  - 3. Virada de chaves da Stripe em Produção no painel da loja.
+  - 4. Pauta UX com o Sócio: Duplo Preço Elegante nos cards de produtos (`ProductCard.jsx`).
+  - 5. Início do planejamento das primeiras campanhas oficiais de Q4.
+
+
 
 
 
