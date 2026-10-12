@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { Heart, Star, Link as LinkIcon, ShoppingCart, QrCode, Package, Zap, Crown, PiggyBank, DollarSign } from 'lucide-react';
+import { Heart, Star, Link as LinkIcon, ShoppingCart, QrCode, Package, Zap, Crown, PiggyBank, DollarSign, Sparkles } from 'lucide-react';
 import { toast } from 'sonner';
 import pb from '@/lib/pocketbaseClient.js';
 import { useAuth } from '@/context/AuthContext.jsx';
+import { useCart } from '@/hooks/useCart.js';
+import { descontosService } from '@/services/descontosService.js';
 
 export default function ProductCard({
   produto,
@@ -53,10 +55,35 @@ export default function ProductCard({
   };
   const seed = hashStr(id);
   const stock = data.estoque_restante || data.stock || ((seed % 14) + 2); // de 2 a 15
-  const sold = data.vendidos_semana || ((seed % 82) + 12); // de 12 a 93
+  // Quantidade de peças despachadas acima de 1.000 com variação natural e determinística por produto
+  const soldCount = data.vendidos_semana || (1150 + ((seed * 37) % 1850)); // de 1.150 a 2.999
+  const soldFormatted = Number(soldCount).toLocaleString('pt-BR');
 
   const profitPerPiece = price - wholesalePrice;
   const profitMarginPercent = wholesalePrice > 0 ? Math.round((profitPerPiece / wholesalePrice) * 100) : 0;
+  const wholesaleSavingsPercent = price > 0 ? Math.round((1 - (wholesalePrice / price)) * 100) : 45;
+
+  const { configuracoes } = useCart();
+
+  // 1. Limite dinâmico do gatilho configurado no painel admin (Configurações > Descontos > Gatilhos & Regras)
+  const limiteUpgrade = configuracoes?.limite_upgrade_revenda != null 
+    ? parseFloat(configuracoes.limite_upgrade_revenda) 
+    : 200;
+
+  // 2. Maior porcentagem configurada no painel admin (Configurações > Descontos > Varejo ou Atacado)
+  const faixasProgressivas = isReseller
+    ? (configuracoes?.desconto_progressivo_faixas_revenda || [])
+    : (configuracoes?.desconto_progressivo_faixas || []);
+
+  const maxProgressivePct = faixasProgressivas.length > 0
+    ? Math.max(...faixasProgressivas.map(f => Number(f.percentual) || 0))
+    : (isReseller ? 15 : 10);
+
+  const installmentText = activePrice >= 60
+    ? `em até 12x de ${new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(activePrice / 12)}`
+    : (activePrice >= 30
+      ? `em até 6x de ${new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(activePrice / 6)}`
+      : `em até 3x de ${new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(activePrice / 3)}`);
 
   // Helper mapper to convert color names into beautiful solid hex circles
   const getColorHex = (colorName) => {
@@ -301,8 +328,14 @@ export default function ProductCard({
     }
   };
 
+  const handleEncomendaClick = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    navigate(`/contato?assunto=Encomendas%20Especiais%20%2F%20Produção&produto=${encodeURIComponent(name)}&ref=${encodeURIComponent(reference)}`);
+  };
+
   return (
-    <div className="group flex flex-col bg-white hover:-translate-y-2 transition-all duration-500 h-full w-full max-w-sm mx-auto relative">
+    <div className="group flex flex-col bg-white rounded-2xl border border-gray-100/90 hover:border-[#c59b5f]/40 hover:shadow-[0_12px_30px_rgba(197,155,95,0.12)] hover:-translate-y-1.5 transition-all duration-400 h-full w-full max-w-sm mx-auto relative overflow-hidden">
 
       {/* 1. Image Section */}
       <div className="relative aspect-[3/4] w-full overflow-hidden bg-white shrink-0">
@@ -409,95 +442,124 @@ export default function ProductCard({
           </div>
         )}
 
-        {/* 6. Price Section */}
-        <div className="flex flex-row justify-between items-end w-full mb-3 min-h-[42px] border-b border-[#c59b5f]/5 pb-2.5">
-          <div className="flex flex-col">
-            {isReseller ? (
-              <>
-                <span className="text-[9px] uppercase tracking-wider text-gray-400 font-bold mb-0.5">Sugerido Venda:</span>
-                <span className="text-xs text-gray-500 font-medium leading-none">
-                  {formatPrice(price)}
-                </span>
-              </>
-            ) : (
-              activeOldPrice > activePrice && (
-                <span className="text-xs text-gray-400 line-through font-medium">
-                  {formatPrice(activeOldPrice)}
-                </span>
-              )
-            )}
-          </div>
-          <div className="flex flex-col items-end">
-            {isReseller && (
-              <span className="text-[9px] uppercase tracking-widest text-[#c59b5f] font-bold mb-0.5 flex items-center gap-0.5">
-                <Crown className="w-2.5 h-2.5" /> Seu Custo:
+        {/* 6. Price & Dual-Price Wholesale Section */}
+        {isReseller ? (
+          /* MODO REVENDEDORA OFICIAL LOGADA */
+          <div className="mb-3 bg-gradient-to-br from-[#121212] via-[#1a1714] to-[#121212] text-white p-3.5 rounded-xl border border-[#c59b5f]/40 shadow-sm">
+            <div className="flex items-center justify-between mb-1">
+              <span className="text-[9px] uppercase tracking-widest text-[#c59b5f] font-bold flex items-center gap-1">
+                <Crown className="w-3 h-3 text-[#c59b5f]" /> Seu Custo de Fábrica
               </span>
-            )}
-            <span className={`font-bold leading-none tracking-tight ${isReseller ? 'text-lg md:text-xl text-gray-900' : 'text-xl sm:text-2.5xl text-gray-900'}`}>
-              {formatPrice(activePrice)}
-            </span>
+              <span className="text-[10px] text-gray-400 line-through">
+                Sugerido: {formatPrice(price)}
+              </span>
+            </div>
+            <div className="flex items-baseline justify-between">
+              <span className="text-2xl font-bold text-white tracking-tight">
+                {formatPrice(wholesalePrice)}
+              </span>
+              <span className="text-[10px] font-bold text-emerald-400 bg-emerald-950/80 border border-emerald-500/30 px-2 py-0.5 rounded-md">
+                +{profitMarginPercent}% Margem
+              </span>
+            </div>
+            <div className="mt-2 pt-2 border-t border-white/10 flex items-center justify-between text-[11px] text-gray-300">
+              <span>Seu lucro líquido por peça:</span>
+              <span className="font-bold text-emerald-400">{formatPrice(profitPerPiece)}</span>
+            </div>
           </div>
-        </div>
-
-        {/* Profit Simulation for Resellers */}
-        {isReseller && (
-          <div className="mb-4 bg-gradient-to-br from-[#FFFBF8] to-[#FCF9F5] border border-[#c59b5f]/20 rounded-2xl p-3 flex items-center justify-between shadow-premium-sm text-left animate-in fade-in slide-in-from-bottom-2 duration-300">
-            <div className="flex items-center gap-2">
-              <div className="w-8 h-8 rounded-full bg-[#c59b5f]/10 text-[#c59b5f] flex items-center justify-center shrink-0">
-                <PiggyBank className="w-4.5 h-4.5 text-[#c59b5f]" />
-              </div>
+        ) : (
+          /* MODO VAREJO ELEGANTE COM GANCHO DE ATACADO DIRETO DA FÁBRICA */
+          <div className="mb-3 flex flex-col gap-2">
+            {/* Linha de Preço Varejo Principal */}
+            <div className="flex items-baseline justify-between">
               <div className="flex flex-col">
-                <span className="text-[9px] uppercase font-bold tracking-wider text-gray-400">Você Lucra por Peça:</span>
-                <span className="text-sm font-bold text-gray-800 tracking-tight leading-tight">
-                  {formatPrice(profitPerPiece)}
+                {activeOldPrice > activePrice && (
+                  <span className="text-xs text-gray-400 line-through font-medium">
+                    {formatPrice(activeOldPrice)}
+                  </span>
+                )}
+                <span className="text-2xl sm:text-[26px] font-bold text-gray-900 tracking-tight leading-none">
+                  {formatPrice(activePrice)}
+                </span>
+              </div>
+              <span className="text-[10px] sm:text-[11px] text-gray-500 font-medium text-right">
+                {installmentText}
+              </span>
+            </div>
+
+            {/* O Selo / Gancho Elegante de Atacado da Fábrica */}
+            <div className="bg-gradient-to-r from-[#FFFBF5] via-[#FCF9F2] to-[#FAF5EC] border border-[#C59B5F]/35 rounded-xl p-2.5 flex items-center justify-between shadow-[0_2px_8px_rgba(197,155,95,0.06)]">
+              <div className="flex flex-col pr-1">
+                <span className="text-[9px] uppercase tracking-wider font-bold text-[#8C6D3B] flex items-center gap-1">
+                  <Sparkles className="w-2.5 h-2.5 text-[#C59B5F]" /> No Atacado de Fábrica
+                </span>
+                <span 
+                  className="text-[10px] text-gray-500 font-normal leading-tight mt-0.5" 
+                  title="Valor mínimo somado de itens na sacola para liberar preço de custo"
+                >
+                  Pedido mín. {formatPrice(limiteUpgrade)} na sacola
+                </span>
+              </div>
+              <div className="flex flex-col items-end shrink-0">
+                <span className="text-sm sm:text-base font-extrabold text-[#9A7432] leading-none">
+                  {formatPrice(wholesalePrice)}
+                  <span className="text-[10px] font-normal text-gray-500">/un</span>
+                </span>
+                <span className="text-[9px] font-semibold text-emerald-700 bg-emerald-50/80 px-1.5 py-0.5 rounded-full border border-emerald-200/50 mt-0.5">
+                  Economize {wholesaleSavingsPercent}%
                 </span>
               </div>
             </div>
-            <span className="text-[10px] font-bold text-white bg-gradient-to-r from-emerald-600 to-teal-600 border border-emerald-500/20 px-2 py-0.5 rounded-full shadow-[0_2px_6px_rgba(5,150,105,0.2)]">
-              +{profitMarginPercent}% Margem
-            </span>
           </div>
         )}
 
-        {/* Action Buttons */}
-        <div className="mt-auto flex flex-col gap-2">
-
-          <button
-            className="w-full bg-[#121212] hover:bg-black text-[#c59b5f] border border-[#c59b5f]/30 flex justify-center items-center gap-1.5 py-2 rounded-xl text-[10px] font-bold uppercase tracking-wider transition-colors duration-300 shadow-sm cursor-pointer"
-            onClick={handleBuyClick}
+        {/* 7. Micro-pills de Benefícios (Discretos e Leves, sem botões falsos) */}
+        <div className="grid grid-cols-2 gap-1.5 mb-2.5">
+          <div 
+            className="bg-emerald-50/80 border border-emerald-200/60 rounded-lg py-1 px-2 flex items-center justify-center gap-1.5 text-[10px] font-bold text-emerald-800 cursor-default"
+            title="5% de desconto automático finalizando o pedido via PIX"
           >
-            <QrCode size={13} /> {isReseller ? 'PAGUE NO PIX +5% OFF EXTRA' : 'PAGUE NO PIX 5% OFF'}
-          </button>
-
-          <button
-            className="w-full bg-[#1a1a1a] hover:bg-[#121212] text-[#c59b5f] border border-[#c59b5f]/20 py-2 rounded-xl text-[10px] font-bold uppercase tracking-wider transition-colors duration-300 shadow-sm cursor-pointer"
-            onClick={handleBuyClick}
-          >
-            {isReseller ? 'ATÉ 15% EXTRA PROGRESSIVO ATACADO' : 'ATÉ 20% OFF PROGRESSIVO'}
-          </button>
-
-          <div className="flex flex-col gap-1 my-1.5 bg-gradient-to-br from-[#FFFBF8] to-[#FCF9F5] p-2.5 rounded-xl border border-[#c59b5f]/15 shadow-premium-sm">
-            <div className="text-gray-800 text-[10px] sm:text-[11px] font-bold flex items-center gap-1.5">
-              <span className="shrink-0 text-[#c59b5f] text-sm">🏭</span>
-              <span>Direto da Fábrica: <span className="text-[#c59b5f]">{sold}</span> peças despachadas!</span>
-            </div>
-            <div className="text-gray-800 text-[10px] sm:text-[11px] font-bold flex items-center gap-1.5">
-              <span className="shrink-0 text-[#c59b5f] text-sm">📦</span>
-              <span>Pronta-entrega: <span className="text-[#c59b5f]">{stock}</span> un. (Aceitamos encomendas)</span>
-            </div>
+            <QrCode size={11} className="text-emerald-700 shrink-0" />
+            <span className="truncate">{isReseller ? 'PIX +5% EXTRA' : 'PIX 5% OFF'}</span>
           </div>
+          <div 
+            className="bg-[#FAF7F2] border border-[#C59B5F]/25 rounded-lg py-1 px-2 flex items-center justify-center gap-1.5 text-[10px] font-bold text-[#8C6D3B] cursor-default"
+            title="Desconto progressivo automático por volume de compra configurado no painel admin"
+          >
+            <Zap size={11} className="text-[#C59B5F] shrink-0" />
+            <span className="truncate">ATÉ {maxProgressivePct}% PROGRESSIVO</span>
+          </div>
+        </div>
 
+        {/* 8. Informações de Fábrica & Encomendas */}
+        <div className="flex items-center justify-between text-[10px] text-gray-500 py-1.5 px-0.5 border-t border-gray-100 mb-2.5">
+          <span className="flex items-center gap-1">
+            <span className="text-xs">🏭</span> Fábrica: <strong className="text-gray-700 font-semibold">{soldFormatted}</strong> despachadas
+          </span>
+          <button
+            type="button"
+            onClick={handleEncomendaClick}
+            className="flex items-center gap-1 text-gray-600 hover:text-[#9A7432] transition-colors duration-200 group text-left cursor-pointer"
+            title="Clique para solicitar lotes, cores exclusivas ou encomendas sob medida diretamente com a fábrica"
+          >
+            <span className="text-xs group-hover:scale-110 transition-transform">📦</span>
+            <span className="underline decoration-dotted underline-offset-2 font-medium hover:font-semibold">Aceitamos encomendas</span>
+          </button>
+        </div>
+
+        {/* 9. Botão Único Principal de Ação (Retangular reto, sem cantos arredondados) */}
+        <div className="mt-auto">
           <button
             onClick={handleBuyClick}
-            className={`w-full h-[52px] rounded-xl font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 transition-all duration-300 shadow-premium-sm active:scale-[0.98] cursor-pointer ${isReseller
-                ? 'bg-gradient-to-r from-[#121212] to-[#251f15] text-white hover:from-[#c59b5f] hover:to-[#e5c595] hover:text-black border border-[#c59b5f]/30'
-                : 'bg-[#121212] text-white hover:bg-[#c59b5f] hover:text-black'
-              }`}
+            className={`w-full h-11 sm:h-12 rounded-none font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 transition-all duration-300 shadow-sm active:scale-[0.98] cursor-pointer ${
+              isReseller
+                ? 'bg-gradient-to-r from-[#121212] via-[#241F18] to-[#121212] text-white hover:from-[#C59B5F] hover:to-[#DFC193] hover:text-black border border-[#C59B5F]/35'
+                : 'bg-[#121212] text-white hover:bg-[#C59B5F] hover:text-black hover:shadow-[0_4px_16px_rgba(197,155,95,0.25)]'
+            }`}
           >
             <ShoppingCart size={15} />
-            {isReseller ? 'ADICIONAR AO LOTE' : 'ADICIONAR À SACOLA'}
+            {isReseller ? 'ADICIONAR AO PEDIDO' : 'ADICIONAR À SACOLA'}
           </button>
-
         </div>
       </div>
     </div>

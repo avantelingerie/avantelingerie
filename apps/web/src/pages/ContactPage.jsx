@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useSearchParams } from 'react-router-dom';
 import { 
   Mail, 
   MessageCircle, 
@@ -20,19 +20,37 @@ import { motion } from 'framer-motion';
 
 export default function ContactPage() {
   const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
   const [isOpenNow, setIsOpenNow] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const paramSubject = searchParams.get('assunto') || '';
+  const paramProduto = searchParams.get('produto') || '';
+  const paramRef = searchParams.get('ref') || '';
   
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     phone: '',
     order_number: '',
-    subject: '',
-    message: ''
+    subject: paramSubject || (paramProduto ? 'Encomendas Especiais / Produção' : ''),
+    message: paramProduto 
+      ? `Olá equipe Avante Lingerie! Gostaria de consultar grade, cores e condições para encomenda do produto: ${paramProduto}${paramRef ? ` (Referência: ${paramRef})` : ''}.`
+      : ''
   });
 
   const [errors, setErrors] = useState({});
+
+  useEffect(() => {
+    if (paramProduto || paramSubject) {
+      setTimeout(() => {
+        const formEl = document.getElementById('form-contato');
+        if (formEl) {
+          formEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 300);
+    }
+  }, [paramProduto, paramSubject]);
 
   useEffect(() => {
     const checkOperatingHours = () => {
@@ -627,8 +645,20 @@ export default function ContactPage() {
       {/* MAIN CONTENT GRID */}
       <section className="main-grid">
         {/* FORM COLUMN */}
-        <div className="form-card">
+        <div className="form-card" id="form-contato">
           <h2>Envie uma mensagem</h2>
+          {paramProduto && (
+            <div className="mb-4 p-3 bg-[#FAF7F2] border border-[#C59B5F]/35 rounded-xl text-xs text-[#8C6D3B] flex items-center justify-between">
+              <span>🧵 Encomenda especial selecionada: <strong>{paramProduto}</strong></span>
+              <button 
+                type="button" 
+                onClick={() => setFormData(prev => ({ ...prev, subject: '', message: '' }))}
+                className="text-gray-400 hover:text-gray-600 text-[11px] underline cursor-pointer"
+              >
+                Limpar
+              </button>
+            </div>
+          )}
           <p className="subtitle">Preencha o formulário abaixo e retornaremos o mais breve possível.</p>
 
           <form onSubmit={handleSubmit} className="space-y-6">
@@ -701,6 +731,7 @@ export default function ContactPage() {
                   className={errors.subject ? 'border-red-500 focus:ring-red-500' : ''}
                 >
                   <option value="" disabled>Selecione um assunto</option>
+                  <option value="Encomendas Especiais / Produção">Encomendas Especiais / Produção</option>
                   <option value="Dúvida sobre pedido">Dúvida sobre pedido</option>
                   <option value="Prazo de entrega">Prazo de entrega</option>
                   <option value="Troca ou devolução">Troca ou devolução</option>

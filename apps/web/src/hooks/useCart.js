@@ -90,6 +90,18 @@ export function useCart() {
     });
   }, []);
 
+  // Listen to live updates from Admin Descontos
+  useEffect(() => {
+    const handleConfigUpdate = (e) => {
+      if (e.detail) {
+        cachedConfig = e.detail;
+        setConfiguracoes(e.detail);
+      }
+    };
+    window.addEventListener('configuracoes_updated', handleConfigUpdate);
+    return () => window.removeEventListener('configuracoes_updated', handleConfigUpdate);
+  }, []);
+
   // High #9: Enforce rigorous stock checks and alert user with warnings
   const addToCart = (product) => {
     const cartItemId = `${product.id}-${product.selectedSize || ''}-${product.selectedColor || ''}`;
@@ -357,6 +369,7 @@ export function useCart() {
     getTotalPrice, // backwards compatibility
     getActiveDiscount,
     getNextTierInfo,
-    getPixBenefitEligibility
+    getPixBenefitEligibility,
+    configuracoes
   };
 }

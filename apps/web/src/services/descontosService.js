@@ -1,17 +1,26 @@
 import pb from '@/lib/pocketbaseClient.js';
 
+let cachedConfig = null;
+let configPromise = null;
+
 export const descontosService = {
-  // Busca as configurações de faixas e estoques do banco de dados
+  // Busca as configurações de faixas e estoques do banco de dados (memoizado)
   async getConfiguracoes() {
+    if (cachedConfig) return cachedConfig;
+    if (configPromise) return configPromise;
     try {
-      const records = await pb.collection('configuracoes_estoque').getFullList({ $autoCancel: false });
-      if (records.length > 0) {
-        return records[0];
-      }
-      return null;
+      configPromise = pb.collection('configuracoes_estoque').getFullList({ $autoCancel: false })
+        .then(records => {
+          cachedConfig = records.length > 0 ? records[0] : null;
+          return cachedConfig;
+        })
+        .finally(() => {
+          configPromise = null;
+        });
+      return await configPromise;
     } catch (e) {
       console.error('[descontosService] Erro ao buscar configurações de descontos', e);
-      throw e;
+      return null;
     }
   },
 
@@ -19,8 +28,9 @@ export const descontosService = {
   async updateConfiguracoes(data) {
     try {
       const records = await pb.collection('configuracoes_estoque').getFullList({ $autoCancel: false });
+      let updated;
       if (records.length > 0) {
-        return await pb.collection('configuracoes_estoque').update(records[0].id, data, { $autoCancel: false });
+        updated = await pb.collection('configuracoes_estoque').update(records[0].id, data, { $autoCancel: false });
       } else {
         const createData = {
           limite_alerta_global: 10, // Default value for required database field
@@ -29,8 +39,13 @@ export const descontosService = {
           desconto_pix_valor_minimo: 0,
           ...data
         };
-        return await pb.collection('configuracoes_estoque').create(createData, { $autoCancel: false });
+        updated = await pb.collection('configuracoes_estoque').create(createData, { $autoCancel: false });
       }
+      cachedConfig = updated;
+      if (typeof window !== 'undefined') {
+        window.dispatchEvent(new CustomEvent('configuracoes_updated', { detail: updated }));
+      }
+      return updated;
     } catch (e) {
       console.error('[descontosService] Erro ao atualizar configurações de descontos', e);
       throw e;

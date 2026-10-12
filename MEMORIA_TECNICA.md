@@ -914,12 +914,61 @@ Para nÃ£o esquecermos, aqui estÃ£o os itens congelados e as datas de destrav
   - Gerado com 100% de sucesso o Token Permanente de Acesso (`EAAcPLAU...`) com as 11 permissões máximas de publicidade (`ads_management`, `ads_mcp_management`, `ads_read`, `business_management`, `catalog_management`, `leads_retrieval`, etc.).
   - Servidor local `@channel47/meta-ads-mcp` integrado e registrado no `mcp_config.json`.
   - **Teste de Conectividade:** Executado teste direto na Meta Graph API v22.0 via Node.js: conta `act_841441889539975` retornou `account_status: 1` (Ativo), moeda `BRL` e conexão 100% operacional.
-- **Próximos Passos (Retomada da Pauta Comercial):**
-  - 1. Finalizar faturamento do Google Ads (dados/cartão corporativo) para ativação do cupom de R$ 1.200.
-  - 2. Vincular Google Ads ao Google Merchant Center (GMC).
-  - 3. Virada de chaves da Stripe em Produção no painel da loja.
-  - 4. Pauta UX com o Sócio: Duplo Preço Elegante nos cards de produtos (`ProductCard.jsx`).
-  - 5. Início do planejamento das primeiras campanhas oficiais de Q4.
+- **Status Final dos Servidores MCP (Meta & Google):**
+  - **Meta Ads MCP:** **100% Operacional e Aprovado em Produção.** Testado via chamadas diretas na Graph API v22.0. Capacidade total de auditoria de métricas (ROAS, CTR, CPC, conversões), criação de anúncios e otimização automatizada pela Ada.
+  - **Google Ads MCP:** Credenciais OAuth 2.0 (Client ID, Client Secret, Refresh Token permanente) e Developer Token (`ECA-9PHQb3zx12wBUL4A8g`) gerados e testados com sucesso na API v25. Contas `1394292049` e `6377720433` localizadas. Formulário de Acesso Básico (Basic Access) submetido na Central de APIs do Google Ads (prazo padrão de análise de 3 a 5 dias para liberação de mutações em contas de produção).
+- **Estabilidade do Ambiente Antigravity IDE & Resolução de OOM:**
+  - Diagnosticada e tratada a queda da janela (`reason: 'oom', code: '-536870904'`), decorrente do acúmulo de 161 passos na sessão em máquina de 4 GB RAM.
+  - Processos zumbis secundários eliminados, memória RAM livre recuperada de ~320 MB para >500 MB.
+  - Arquivo `mcp_config.json` saneado com o servidor `meta-ads` ativo e estável.
+- **Pauta Prioritária para a Próxima Sessão (10/10/2026 — Alinhamento com o Sócio):**
+  - 1. **Cadastrar Cartão Corporativo nos Dois Gerenciadores:**
+    - Google Ads (`ads.google.com`): ativação do faturamento e garantia da recompensa de **R$ 1.200 em créditos de anúncios**.
+    - Meta Ads (`adsmanager.facebook.com`): ativação do pagamento da conta corporativa `841441889539975`.
+  - 2. **Vincular Google Ads ao Google Merchant Center (GMC):** Aprovação mútua em 2 cliques para disponibilizar os produtos da loja para as campanhas de Shopping/PMax.
+  - 3. **Decisão Comercial & UX com o Sócio (O Duplo Preço Elegante):**
+    - Bater o martelo na implementação do Duplo Preço nos cards de produtos (`ProductCard.jsx`):
+      `R$ 29,90 (Varejo) | ✨ No Atacado: R$ 14,90 /un (a partir de R$ 250 ou 10 peças)`.
+    - Solução perfeita para atrair a revendedora com a margem de 100-150% sem espantar a consumidora final de varejo e sem usar textos apelativos que degradem a percepção de luxo da marca.
+  - 4. **Criação das Primeiras Campanhas Segmentadas:**
+    - Campanha Varejo B2C: PMax / Shopping / Reels focando sensualidade, caimento perfeito e modelagem da cintura.
+    - Campanha Atacado B2B: Pesquisa / Meta focando compra direto da confecção em Nova Friburgo para revendedoras com alta margem de lucro.
+
+### Sessão - 12/10/2026 (Redesign Elegante de Cards de Produtos, Sincronização Dinâmica com Admin & Funil de Encomendas de Fábrica)
+- **Crivo Analítico & Parceria com o Nemotron (Terminal):**
+  - Validação da arquitetura de UX, equilíbrio de persuasão entre varejo e atacado sem poluição visual, e preservação da estabilidade da máquina local (4 GB RAM).
+- **Redesign dos Cards de Produtos (`ProductCard.jsx`):**
+  - **Gatilho de Atacado Dinâmico:** Sincronizado dinamicamente com o painel admin (`configuracoes_estoque.limite_upgrade_revenda`). O texto *"Pedido mín. R$ X na sacola"* reflete automaticamente as alterações feitas pelo lojista no admin, sem necessidade de tocar em código.
+  - **Porcentagem Máxima do Desconto Progressivo Dinâmica:** O micro-pill ao lado do PIX calcula e exibe em tempo real o maior percentual cadastrado no admin (`desconto_progressivo_faixas` para varejo e `desconto_progressivo_faixas_revenda` para atacado), exibindo *"ATÉ X% PROGRESSIVO"*.
+  - **Botão Retangular Reto de Ação:** O botão principal *"ADICIONAR À SACOLA"* / *"ADICIONAR AO PEDIDO"* teve cantos arredondados removidos (`rounded-none`), conferindo estética retangular pura, firme e de alta sofisticação.
+  - **Pills de Benefícios Leves:** Substituídos botões falsos e modais escuros pesados por micro-pills elegantes lado a lado (`PIX 5% OFF` e `ATÉ X% PROGRESSIVO`) com fundo suave e bordas sutis.
+  - **Prova Social Fabril Acima de 1.000:** A métrica *"Fábrica: X despachadas"* foi ajustada para o patamar de 1.150 a 2.990 peças, variando de forma determinística e estável por produto via seed do ID, transmitindo grande escala de confecção de Nova Friburgo.
+  - **Gatilho Clicável de Encomendas de Fábrica:** A indicação estática de pronta-entrega foi refinada para o botão interativo *"📦 Aceitamos encomendas"*, permitindo que compradoras de grandes lotes ou revendedoras cliquem e sejam direcionadas para o fluxo de encomenda personalizada.
+- **Funil Integrado de Encomendas (`ContactPage.jsx`):**
+  - Integrado suporte a query parameters (`useSearchParams`): ao clicar no card, a página `/contato` recebe o nome do produto, referência e assunto.
+  - Adicionada opção oficial *"Encomendas Especiais / Produção"* no seletor de assunto.
+  - Auto-scroll automático e suave direto para o formulário de mensagem (`#form-contato`).
+  - Badge visual destacando a peça selecionada e mensagem pré-redigida pronta para consulta de grade, cores e atacado.
+- **Sincronização Total da Home com o Painel Admin (`HomeBeneficiosSection.jsx` & `HomePage.jsx`):**
+  - **Tour e Diagnóstico da Home:** Identificada a Seção 6 (*"Luxo que se Sente, Economia que se Vive!"*) que continha valores estáticos obsoletos (como R$ 500 no atacado e percentuais fixos).
+  - **Arquitetura 100% Dinâmica:** Criado o componente modular `HomeBeneficiosSection.jsx` totalmente conectado ao `descontosService` e `useCart`, com listener em tempo real para o evento `configuracoes_updated`.
+  - **Réguas Visuais de Desconto Progressivo:**
+    - *Card Varejo:* Badge dinâmico com o teto de desconto real (`Até X% OFF`), PIX dinâmico com o percentual real cadastrado no admin (`+X% OFF Extra`), e **régua visual dos degraus reais de varejo** com marcos iluminados em ouro e barra de progresso.
+    - *Card Atacado:* Pedido mínimo de atacado sincronizado com `limite_upgrade_revenda` do admin (substituindo o antigo R$ 500 hardcoded pelo valor real configurado), e **régua visual dos degraus de revenda** com as bonificações adicionais reais em alta escala.
+  - **Substituição Cirúrgica na Home:** A Seção 6 em `HomePage.jsx` foi substituída pelo novo componente, mantendo a responsividade, a estética de luxo e eliminando 100% de inconsistências entre o storefront e o painel administrativo.
+- **Serviço de Descontos e Cache Reativo (`descontosService.js` & `useCart.js`):**
+  - Adicionada memoização e evento reativo global (`configuracoes_updated`) para refletir na vitrine as mudanças do admin instantaneamente.
+- **Validações de Qualidade e Segurança (Sentinel):**
+  - ESLint executado nos arquivos alterados (`HomeBeneficiosSection.jsx`, `HomePage.jsx`) com 0 erros.
+  - Servidor local Vite (`http://localhost:3000`) testado e operacional com status 200 OK.
+  - **Decisão:** Código 100% gravado e preservado localmente, aguardando aprovação do sócio para deploy na VPS da Hostinger na próxima sessão.
+- **Pauta para a Próxima Sessão (13/10/2026):**
+  - 1. Aval do sócio sobre o novo layout dos cards, fluxo de encomendas e réguas da Home.
+  - 2. Deploy seguro das alterações na VPS (via GitHub Actions `main`).
+  - 3. Retomada da configuração de faturamento do Google Ads e vínculo com GMC.
+
+
+
 
 
 

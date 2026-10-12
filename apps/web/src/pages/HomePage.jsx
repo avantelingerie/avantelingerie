@@ -20,6 +20,7 @@ import StoreSection from '@/components/StoreSection.jsx';
 import { useNavigate } from 'react-router-dom';
 import FactoryMarquee from '@/components/FactoryMarquee.jsx';
 import FactorySection from '@/components/FactorySection.jsx';
+import HomeBeneficiosSection from '@/components/HomeBeneficiosSection.jsx';
 
 // Helper para o vídeo rotacionando a cada 3 horas
 const getHeroVideoForToday = () => {
@@ -403,162 +404,9 @@ export default function HomePage() {
       </section>
 
       {/* ==========================================
-          SECTION 6: DUAL PERSUASIVE BANNER (VAREJO & ATACADO)
+          SECTION 6: DUAL PERSUASIVE BANNER (VAREJO & ATACADO) - 100% DINÂMICO COM O ADMIN
           ========================================== */}
-      <section id="beneficios" className="py-24 bg-gradient-to-br from-[#0b0b0b] via-[#161616] to-[#251b11] text-white border-y border-[#c59b5f]/30 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('https://horizons-cdn.hostinger.com/2863a2ab-708d-40c9-b019-44d46f1b8bc1/32a1bb1a0ab84a2ba361f1c75c87c712.png')] opacity-[0.03] mix-blend-overlay"></div>
-        <div className="absolute top-[-10%] left-[-10%] w-[350px] h-[350px] bg-[#c59b5f]/10 rounded-full blur-[100px] pointer-events-none" />
-        <div className="absolute bottom-[-10%] right-[-10%] w-[350px] h-[350px] bg-[#c59b5f]/10 rounded-full blur-[100px] pointer-events-none" />
-
-        <div className="container-custom relative z-10">
-          <motion.div
-            whileInView={{ opacity: 1, y: 0 }}
-            initial={{ opacity: 0, y: -20 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
-            <span className="inline-flex items-center gap-1.5 py-1.5 px-4 rounded-full bg-[#c59b5f]/10 border border-[#c59b5f]/30 text-[10px] md:text-xs font-bold uppercase tracking-[3px] text-[#c59b5f] mb-4">
-              <Sparkles className="w-3.5 h-3.5" /> NA AVANTE VOCÊ GANHA SEMPRE
-            </span>
-            <h2 className="text-3xl md:text-5xl font-serif font-bold text-white leading-tight max-w-4xl mx-auto">
-              Luxo que se Sente, <span className="text-[#c59b5f] italic">Economia</span> que se Vive!
-            </h2>
-            <div className="w-20 h-0.5 bg-gradient-to-r from-transparent via-[#c59b5f] to-transparent mx-auto mt-5 mb-6"></div>
-            <p className="text-gray-400 text-sm md:text-base font-light max-w-2xl mx-auto leading-relaxed">
-              Descontos incríveis no varejo para uso próprio ou lucros imbatíveis comprando com preço de fábrica no atacado. Unimos luxo absoluto com economia sem limites para você ganhar sempre.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 max-w-5xl mx-auto">
-            {/* CARD VAREJO */}
-            <motion.div
-              whileInView={{ opacity: 1, x: 0 }}
-              initial={{ opacity: 0, x: -30 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className="bg-white/[0.02] backdrop-blur-md border border-[#c59b5f]/15 rounded-[2rem] p-8 md:p-10 flex flex-col justify-between hover:border-[#c59b5f]/40 hover:bg-white/[0.04] transition-all duration-500 shadow-2xl relative group"
-            >
-              <div>
-                <div className="flex items-center justify-between mb-6">
-                  <span className="text-[9px] font-bold text-[#c59b5f] bg-[#c59b5f]/10 border border-[#c59b5f]/20 px-3 py-1 rounded-full uppercase tracking-wider">
-                    Uso Pessoal
-                  </span>
-                  <div className="text-right">
-                    <span className="text-[10px] text-gray-400 block uppercase tracking-wider">Varejo Premium</span>
-                    <span className="text-lg font-bold text-[#c59b5f] font-serif">Até 15% OFF</span>
-                  </div>
-                </div>
-
-                <h3 className="text-2xl font-serif font-bold text-white mb-2">Compre para Você</h3>
-                <p className="text-gray-400 text-sm font-light mb-8">A modelagem que abraça suas curvas com descontos acumuláveis e cupons especiais.</p>
-
-                <ul className="space-y-5 mb-10">
-                  <li className="flex gap-4 items-start">
-                    <div className="w-10 h-10 rounded-full bg-[#c59b5f]/10 flex items-center justify-center shrink-0 border border-[#c59b5f]/20">
-                      <Percent className="w-4.5 h-4.5 text-[#c59b5f]" />
-                    </div>
-                    <div>
-                      <h4 className="text-sm font-bold text-white">PIX Extra (+5% OFF)</h4>
-                      <p className="text-xs text-gray-400 font-light mt-0.5">Ganhe desconto cumulativo imediato em todas as compras com PIX.</p>
-                    </div>
-                  </li>
-                  <li className="flex gap-4 items-start">
-                    <div className="w-10 h-10 rounded-full bg-[#c59b5f]/10 flex items-center justify-center shrink-0 border border-[#c59b5f]/20">
-                      <Heart className="w-4.5 h-4.5 text-[#c59b5f]" />
-                    </div>
-                    <div>
-                      <h4 className="text-sm font-bold text-white">Desconto Progressivo</h4>
-                      <p className="text-xs text-gray-400 font-light mt-0.5">Quanto mais conjuntos adicionar, maior é o desconto direto no carrinho.</p>
-                    </div>
-                  </li>
-                  <li className="flex gap-4 items-start">
-                    <div className="w-10 h-10 rounded-full bg-[#c59b5f]/10 flex items-center justify-center shrink-0 border border-[#c59b5f]/20">
-                      <ArrowLeftRight className="w-4.5 h-4.5 text-[#c59b5f]" />
-                    </div>
-                    <div>
-                      <h4 className="text-sm font-bold text-white">Troca Simplificada Garantida</h4>
-                      <p className="text-xs text-gray-400 font-light mt-0.5">Ficou pequena ou grande? Oferecemos troca simplificada em até 7 dias úteis.</p>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-
-              <Button
-                onClick={() => scrollToSection('categorias')}
-                className="w-full py-6 rounded-xl border border-[#c59b5f]/40 text-[#c59b5f] bg-transparent hover:bg-[#c59b5f] hover:text-black hover:border-transparent font-bold uppercase tracking-wider text-xs transition-all duration-300 flex items-center justify-center gap-2 group/btn cursor-pointer"
-              >
-                Explorar Coleções
-                <ChevronRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
-              </Button>
-            </motion.div>
-
-            {/* CARD ATACADO */}
-            <motion.div
-              whileInView={{ opacity: 1, x: 0 }}
-              initial={{ opacity: 0, x: 30 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className="bg-gradient-to-br from-[#121212] to-[#251e15] border-2 border-[#c59b5f] rounded-[2rem] p-8 md:p-10 flex flex-col justify-between hover:shadow-[0_0_45px_rgba(197,155,95,0.25)] transition-all duration-500 relative overflow-hidden group shadow-2xl"
-            >
-              <div className="absolute top-0 right-0 w-32 h-32 bg-[#c59b5f]/10 rounded-full blur-3xl pointer-events-none group-hover:bg-[#c59b5f]/20 transition-all duration-500" />
-
-              <div>
-                <div className="flex items-center justify-between mb-6 relative z-10">
-                  <span className="text-[9px] font-bold text-black bg-[#c59b5f] px-3 py-1 rounded-full uppercase tracking-wider animate-pulse">
-                    Faturamento Real
-                  </span>
-                  <div className="text-right">
-                    <span className="text-[10px] text-gray-400 block uppercase tracking-wider">Preço de Fábrica</span>
-                    <span className="text-lg font-bold text-white font-serif">50% de Desconto</span>
-                  </div>
-                </div>
-
-                <h3 className="text-2xl font-serif font-bold text-white mb-2 relative z-10">Revenda Avante Lingerie</h3>
-                <p className="text-gray-400 text-sm font-light mb-8 relative z-10">Seja dona do seu negócio e conquiste sua liberdade financeira revendendo luxo.</p>
-
-                <ul className="space-y-5 mb-10 relative z-10">
-                  <li className="flex gap-4 items-start">
-                    <div className="w-10 h-10 rounded-full bg-[#c59b5f]/10 flex items-center justify-center shrink-0 border border-[#c59b5f]/20">
-                      <Crown className="w-4.5 h-4.5 text-[#c59b5f]" />
-                    </div>
-                    <div>
-                      <h4 className="text-sm font-bold text-white">Compre à Preço de Fábrica</h4>
-                      <p className="text-xs text-gray-300 font-light mt-0.5">Destrave o desconto automático de atacado com pedido mínimo de apenas R$ 500.</p>
-                    </div>
-                  </li>
-                  <li className="flex gap-4 items-start">
-                    <div className="w-10 h-10 rounded-full bg-[#c59b5f]/10 flex items-center justify-center shrink-0 border border-[#c59b5f]/20">
-                      <ShoppingBag className="w-4.5 h-4.5 text-[#c59b5f]" />
-                    </div>
-                    <div>
-                      <h4 className="text-sm font-bold text-white">Descontos Progressivos (+2% e +5%)</h4>
-                      <p className="text-xs text-gray-300 font-light mt-0.5">Conquiste descontos extras em faturamentos de alto volume ou dependendo do seu Estado.</p>
-                    </div>
-                  </li>
-                  <li className="flex gap-4 items-start">
-                    <div className="w-10 h-10 rounded-full bg-[#c59b5f]/10 flex items-center justify-center shrink-0 border border-[#c59b5f]/20">
-                      <Shield className="w-4.5 h-4.5 text-[#c59b5f]" />
-                    </div>
-                    <div>
-                      <h4 className="text-sm font-bold text-white">Mídias e Lia Assistente Premium</h4>
-                      <p className="text-xs text-gray-300 font-light mt-0.5">Acesso completo a materiais fotográficos de estúdio e suporte comercial humanizado.</p>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-
-              <Button
-                onClick={() => navigate('/quero-revender')}
-                className="w-full py-6 rounded-xl bg-gradient-to-r from-[#c59b5f] to-[#e5c595] text-black font-bold uppercase tracking-wider text-xs hover:from-white hover:to-white transition-all duration-300 flex items-center justify-center gap-2 group/btn cursor-pointer shadow-[0_4px_15px_rgba(197,155,95,0.3)] relative z-10 border border-[#c59b5f]"
-              >
-                Seja uma Revendedora
-                <Crown className="w-4 h-4 text-black group-hover/btn:scale-110 transition-transform" />
-              </Button>
-            </motion.div>
-          </div>
-        </div>
-      </section>
+      <HomeBeneficiosSection onScrollToCategorias={() => scrollToSection('categorias')} />
 
       {/* ==========================================
           SECTION 7: FAVORITES DYNAMIC
