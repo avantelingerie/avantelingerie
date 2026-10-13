@@ -990,12 +990,28 @@ Planejamento comercial e técnico estruturado pela Ada e Vértice para alavancar
 
 ---
 
-
-
-
-
-
-
-
+### Sessão - 13/10/2026 (Configuração Oficial do Gateway Stripe & Validação em Tempo Real do Google Merchant Center)
+- **Validação em Tempo Real do Google Merchant Center (GMC):**
+  - O lojista cadastrou um novo produto no painel da loja e confirmou que ele já foi indexado e exibido perfeitamente no Google Merchant Center no mesmo dia, validando na prática o motor dinâmico de XML Feed do backend (`apps/api/src/routes/marketing.js`) com atributos fiscais e regras de vestuário aprovadas pelo Google.
+- **Configuração Oficial & Conclusão do Gateway Stripe:**
+  - **Identidade Visual de Luxo (Branding) Implementada:**
+    - Botão oficial de pagamento customizado no **Dourado Nobre (`#C59B5F`)**.
+    - Logomarca e brasão circular oficial da Avante Lingerie aplicados.
+    - Fundo branco puro de alta legibilidade bancária e estilo arredondado.
+    - Configurado como padrão permanente de toda a empresa.
+  - **Habilitação das Formas de Pagamento:**
+    - Cartões de crédito, Google Pay (Habilitado), Apple Pay (Habilitado), Link (Habilitado), Boleto e PIX ativados (aguardando prazo de compliance de 2 a 3 dias para liberação definitiva).
+  - **Saneamento Crítico do Webhook da Stripe:**
+    - Corrigido o endpoint legado/quebrado que continha erro de digitação (`https://avantelingerie.com.br/api/webhok`) para a rota oficial e ativa de produção:
+      `https://avantelingerie.com.br/hcgi/api/webhooks/stripe`.
+    - Validado o segredo de assinatura (`whsec_payi971YsEZmhhBCTCv8c5E0a8Lp9SL8`) que bate com 100% de exatidão com o banco de dados da VPS.
+    - 6 eventos essenciais de checkout e payment intent vinculados.
+  - **Diagnóstico do Erro Passado de PIX (10/10):**
+    - Identificado log de erro 400 (`invalid_request_error - payment_method_types: pix`) ocorrido em 10/10 em pedido teste (`mrkpsg5td76klrf`).
+    - Confirmada a causa raiz (PIX estava desabilitado na Stripe no dia 10/10). A ativação realizada hoje elimina a ocorrência do erro assim que a análise de compliance da Stripe for concluída.
+- **Ponto de Parada / Próximos Passos:**
+  - 1. Aguardar conclusão da análise de conformidade de documentos pela Stripe (2 a 3 dias).
+  - 2. Adicionar cartão corporativo no Google Ads e Meta Ads para início das campanhas de tráfego pago.
+  - 3. Implementação do programa "Amiga Indica Amiga" (Crédito em loja / MGM).
 
 
