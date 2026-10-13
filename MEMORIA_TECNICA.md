@@ -961,11 +961,35 @@ Para nÃ£o esquecermos, aqui estÃ£o os itens congelados e as datas de destrav
 - **Validações de Qualidade e Segurança (Sentinel):**
   - ESLint executado nos arquivos alterados (`HomeBeneficiosSection.jsx`, `HomePage.jsx`) com 0 erros.
   - Servidor local Vite (`http://localhost:3000`) testado e operacional com status 200 OK.
-  - **Decisão:** Código 100% gravado e preservado localmente, aguardando aprovação do sócio para deploy na VPS da Hostinger na próxima sessão.
-- **Pauta para a Próxima Sessão (13/10/2026):**
-  - 1. Aval do sócio sobre o novo layout dos cards, fluxo de encomendas e réguas da Home.
-  - 2. Deploy seguro das alterações na VPS (via GitHub Actions `main`).
-  - 3. Retomada da configuração de faturamento do Google Ads e vínculo com GMC.
+  - **Deploy em Produção & Resolução de Cache (12/10/2026):**
+  - Commit `0e373ea` enviado para a branch `main` e executado via GitHub Actions (`run/38318343381`).
+  - Deploy finalizado com sucesso na VPS da Hostinger com compilação atualizada do Vite (`App-lV6x6gwL.js` gerado contendo `#FFF700`, link de encomendas e nova seção).
+  - Diagnosticada retenção de cache e histórico nos navegadores locais (ausência de `Cache-Control: no-cache` para o `index.html`). O lojista validou o carregamento completo forçando a atualização (`Ctrl + F5` / Anônima).
+
+### Arquivo Estratégico & Priorização: Programa "Indicou, Ganhou!" e Afiliados (Q4 / Futuro Próximo)
+Planejamento comercial e técnico estruturado pela Ada e Vértice para alavancar vendas orgânicas da confecção sem custo fixo:
+
+#### Comparativo e Modelagem das Duas Vertentes:
+1. **Vertente A: "Amiga Indica Amiga" (Member-Get-Member com Crédito/Cupom na Loja)**
+   - **Mecânica:** A cliente cadastrada gera seu cupom/link de embaixadora (ex: `JULIA10`). A amiga indicada ganha R$ 20 (ou 10% OFF) na primeira compra. Assim que o pedido da amiga é aprovado, a cliente indicadora recebe R$ 20 em saldo/cupom na loja para sua próxima sacola.
+   - **Canal Principal:** Botão em 1 clique na área *Minha Conta* e no pós-compra da Lia: *"Compartilhar no WhatsApp"*, com texto pré-redigido persuasivo da marca.
+   - **Impacto no Caixa:** Custo de Aquisição (CAC) mínimo e zero saída de dinheiro. Todo o bônus concedido é reinvestido obrigatoriamente dentro da própria loja, aumentando o LTV (*Lifetime Value*) e garantindo margem de confecção retida.
+
+2. **Vertente B: Programa de Afiliados com Comissão em Dinheiro (PIX)**
+   - **Mecânica:** Afiliadas, revendedoras digitais e criadoras de conteúdo recebem de 10% a 12% em dinheiro (PIX) sobre vendas de varejo e de 3% a 5% sobre compras de atacado.
+   - **Portal da Afiliada (`/afiliado/dashboard`):** Gerador de links para qualquer peça da loja, contador de cliques, vendas aprovadas, saldo acumulado e botão de saque PIX.
+   - **Diferencial Fabril da Avante:** Criação do *"Banco de Mídias de Fábrica"* (pasta com vídeos em alta definição de provadores e modelos produzidos em Nova Friburgo sem marca d'água para as afiliadas postarem em Reels/TikTok).
+   - **Controle & Segurança:** Trava de segurança de 7 a 14 dias (prazo legal do CDC para evitar saques de pedidos cancelados/devolvidos), limite mínimo de saque de R$ 50/R$ 100 e bloqueio de auto-compra por CPF/IP.
+
+#### Matriz de Priorização (Retorno Rápido x Custo-Benefício):
+* **PRIORIDADE 1 (Vencedora Absoluta para o Próximo Passo):** **Vertente A — "Amiga Indica Amiga" (Crédito na Loja)**
+  - *Critério de Escolha:* **Retorno imediato com o menor esforço de desenvolvimento e risco financeiro zero.**
+  - *Justificativa:* Aproveita a base de clientes já existente e satisfeita. Utiliza a estrutura de cupons e usuários já presente no PocketBase sem necessidade de conciliação bancária de transferências PIX. Todo crédito concedido vira nova venda dentro da Avante Lingerie.
+* **PRIORIDADE 2 (Fase de Escala de Médio Prazo):** **Vertente B — Programa de Afiliadas em Dinheiro (PIX)**
+  - *Momento Ideal de Implementação:* Após o programa de indicação de clientes estar rodando com sucesso e quando houver capacidade operacional de triagem de cadastros de influenciadoras e rotina financeira semanal para liquidação dos saques via PIX.
+
+---
+
 
 
 
