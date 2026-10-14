@@ -1014,4 +1014,16 @@ Planejamento comercial e técnico estruturado pela Ada e Vértice para alavancar
   - 2. Adicionar cartão corporativo no Google Ads e Meta Ads para início das campanhas de tráfego pago.
   - 3. Implementação do programa "Amiga Indica Amiga" (Crédito em loja / MGM).
 
+### Sessão - 14/10/2026 (Manhã: Diagnóstico & Resolução do Compliance da Stripe)
+- **Diagnóstico de Notificações de KYC / Compliance da Stripe:**
+  - O lojista recebeu e-mail de alerta de tarefas em aberto para o representante legal da conta (`Dooner dos Santos Almeida`, conta `acct_1TJLbbBoRLEbDMKg`).
+  - Identificado desvio temporário para o ambiente Sandbox ("Área restrita"), onde a Stripe exibia dados fictícios de teste ("Randy Fowler", nascido em 1929). O lojista foi orientado a retornar à conta real em Modo Ao Vivo.
+  - **Mapeamento Exato das 2 Pendências Restantes no Modo Ao Vivo:**
+    1. *Nome Jurídico:* Divisão padronizada exigida pela Stripe: Nome (`Dooner`) e Sobrenome completo (`dos Santos Almeida`), conforme CPF/Receita Federal.
+    2. *Endereço Residencial:* Validação de conformidade com a base dos Correios para o CEP `28623-460` (`Rua Presidente Raul Veiga, 215, Apto 301, Nova Friburgo - RJ`), orientando a inserção completa de "Presidente" para evitar novas recusas automáticas por divergência cadastral.
+- **Ponto de Parada da Manhã (14/10/2026):**
+  - 1. Lojista concluirá o preenchimento das 2 etapas ao retornar (Nome e Endereço ajustado) e clicar em Continuar para avanço a `[Em análise]`.
+  - 2. Retomar o dia com a implementação do programa "Amiga Indica Amiga" e/ou estruturação das campanhas de tráfego de Q4.
+
+
 
