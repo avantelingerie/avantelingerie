@@ -4,8 +4,9 @@ import { motion } from 'framer-motion';
 export default function FactoryMarquee() {
   const items = [
     { icon: '🏭', text: 'COMPRE DIRETO DA FÁBRICA' },
+    { icon: '💰', text: 'REVENDA AVANTE LINGERIE: LUCRE DE 100% A 150% COMPRANDO DIRETO DA FÁBRICA' },
+    { icon: '👑', text: 'ATACADO COM APENAS R$ 69,90 NA SACOLA: DOBRE SEU DINHEIRO' },
     { icon: '📦', text: 'PRONTA-ENTREGA E SOB ENCOMENDA' },
-    { icon: '💎', text: 'PREÇO DE ATACADO E VAREJO' },
     { icon: '🚀', text: 'DESCONTOS PROGRESSIVOS' },
   ];
 
@@ -31,7 +32,7 @@ export default function FactoryMarquee() {
         transition={{
           repeat: Infinity,
           ease: "linear",
-          duration: 25 // 25s loop
+          duration: 35 // 35s loop suave e confortável para leitura
         }}
       >
         {renderGroup('g1')}
