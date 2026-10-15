@@ -1065,10 +1065,21 @@ Planejamento comercial e técnico estruturado pela Ada e Vértice para alavancar
     - Estratégia de Lance: `MAXIMIZE_CONVERSIONS`.
     - Regulamentação de Anúncios Políticos da UE: `DOES_NOT_CONTAIN_EU_POLITICAL_ADVERTISING` (compliance Google Ads v25).
     - Status de Segurança: `PAUSED` (Pausada).
-- **Ponto de Parada / Próximos Passos:**
-  - 1. Lojista adicionar o novo cartão Bradesco como método de pagamento no Meta Ads e Google Ads quando o cartão físico for entregue.
-  - 2. Vincular os criativos (vídeos e carrosséis com as fotos da fábrica) aos conjuntos criados.
-  - 3. Ativação das campanhas após conferência de faturamento.
+    - *Grupos de Anúncios Criados:*
+      - Grupo 1: `[GRUPO 01] Marca & Institucional (Avante Lingerie)` (ID: `206854315371`) com 4 palavras-chave de marca (frase/exata).
+      - Grupo 2: `[GRUPO 02] Lingerie Atacado & Fábrica Nova Friburgo` (ID: `206854315411`) com 5 palavras-chave de atacado.
+    - *Anúncios Responsivos de Pesquisa (RSA):* Criados e vinculados em ambos os grupos (`...828212102839` e `...828212102842`), apontando para `https://avantelingerie.com.br` com títulos persuasivos e descrições comerciais completas (Status: `PAUSED`).
+    - *Palavras-Chave Negativas:* 10 termos cadastrados a nível de campanha (`gratis`, `gratuito`, `molde`, `curso de costura`, `como fazer lingerie`, `vagas de emprego`, `trabalhe conosco`, `reclame aqui`, `usado`, `usada`).
+- **Acordo de Compliance & Políticas Anti-Bloqueio (Meta & Google Ads):**
+  - Definido fluxo blindado de publicação de criativos:
+    1. Lojista grava/separa fotos e vídeos no seu tempo.
+    2. Envia para Ada + Sentinel para análise prévia rigorosa de conformidade de políticas do Meta (sem "antes e depois" agressivo, sem promessas de emagrecimento, sem promessas irrealistas de renda, sem nudez/close excessivo em partes íntimas).
+    3. Após validação e selo verde, Ada faz a vinculação e upload aos conjuntos via MCP.
+- **Ponto de Parada / Reabertura (Para Amanhã - 16/10/2026):**
+  - 1. Acompanhar a entrega do cartão físico Bradesco corporativo.
+  - 2. Lojista preparar/gravar os criativos visuais (vídeos de celular e fotos de catálogo/produtos).
+  - 3. Ada + Sentinel auditar os primeiros criativos recebidos.
+  - 4. Inserir o método de pagamento nas plataformas e ativar as campanhas no momento desejado.
 
 
 
