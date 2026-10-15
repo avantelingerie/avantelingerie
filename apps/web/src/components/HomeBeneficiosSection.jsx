@@ -39,12 +39,12 @@ export default function HomeBeneficiosSection({ onScrollToCategorias }) {
 
   // 1. Desconto PIX Dinâmico
   const pixAtivo = config?.desconto_pix_ativo !== false;
-  const pixPct = config?.desconto_pix_pct != null ? Number(config.desconto_pix_pct) : 5;
+  const pixPct = (config?.desconto_pix_pct != null && Number(config.desconto_pix_pct) > 0) ? Number(config.desconto_pix_pct) : 5;
 
   // 2. Limite Mínimo de Atacado (Gatilho de Upgrade de Fábrica)
   const limiteUpgrade = config?.limite_upgrade_revenda != null 
     ? parseFloat(config.limite_upgrade_revenda) 
-    : 200;
+    : 69.90;
 
   // 3. Faixas de Desconto Progressivo - Varejo B2C
   const rawFaixasVarejo = config?.desconto_progressivo_faixas;
@@ -59,12 +59,13 @@ export default function HomeBeneficiosSection({ onScrollToCategorias }) {
     .sort((a, b) => a.min - b.min);
 
   const fallbackFaixasVarejo = [
-    { id: 'fv1', min: 300, max: 899.99, pct: 15 },
-    { id: 'fv2', min: 900, max: null, pct: 20 }
+    { id: 'fv1', min: 0, max: 20, pct: 1.67 },
+    { id: 'fv2', min: 20.01, max: 40, pct: 3.33 },
+    { id: 'fv3', min: 40.01, max: null, pct: 5 }
   ];
 
   const activeFaixasVarejo = faixasVarejo.length > 0 ? faixasVarejo : fallbackFaixasVarejo;
-  const maxVarejoPct = Math.max(...activeFaixasVarejo.map(f => f.pct), 15);
+  const maxVarejoPct = faixasVarejo.length > 0 ? Math.max(...faixasVarejo.map(f => f.pct)) : 5;
 
   // 4. Faixas de Desconto Progressivo - Atacado B2B
   const rawFaixasAtacado = config?.desconto_progressivo_faixas_revenda;
@@ -79,12 +80,13 @@ export default function HomeBeneficiosSection({ onScrollToCategorias }) {
     .sort((a, b) => a.min - b.min);
 
   const fallbackFaixasAtacado = [
-    { id: 'fa1', min: 1500, max: 2999.99, pct: 10 },
-    { id: 'fa2', min: 3000, max: null, pct: 15 }
+    { id: 'fa1', min: 0, max: 20, pct: 1.67 },
+    { id: 'fa2', min: 20.01, max: 40, pct: 3.33 },
+    { id: 'fa3', min: 40.01, max: null, pct: 5 }
   ];
 
   const activeFaixasAtacado = faixasAtacado.length > 0 ? faixasAtacado : fallbackFaixasAtacado;
-  const maxAtacadoPct = Math.max(...activeFaixasAtacado.map(f => f.pct), 15);
+  const maxAtacadoPct = faixasAtacado.length > 0 ? Math.max(...faixasAtacado.map(f => f.pct)) : 5;
 
   const formatCurrency = (val) => new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(val);
 
@@ -153,11 +155,11 @@ export default function HomeBeneficiosSection({ onScrollToCategorias }) {
                     <h4 className="text-sm font-bold text-white flex items-center gap-2">
                       PIX Imediato 
                       <span className="text-[11px] font-extrabold text-emerald-400 bg-emerald-950/80 px-2 py-0.5 rounded-full border border-emerald-500/30">
-                        +{pixPct}% OFF Extra
+                        {pixPct}% OFF
                       </span>
                     </h4>
                     <p className="text-xs text-gray-400 font-light mt-0.5">
-                      Desconto automático e cumulativo sobre o valor total do pedido pagando com PIX.
+                      Opção de desconto imediato pagando com PIX para pedidos abaixo da faixa máxima de desconto progressivo.
                     </p>
                   </div>
                 </li>

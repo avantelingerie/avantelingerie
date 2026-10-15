@@ -80,7 +80,7 @@ export default function OrderSummary({ subtotal, discount, total, pixEligible, n
                 <span>Desconto Máximo Atingido</span>
               </div>
               <span className="text-[#8B7355]/80 text-xs font-medium pl-6">
-                Você garantiu 20% OFF Progressivo em sua compra
+                Você garantiu {discount.label || 'o Desconto Máximo'} OFF Progressivo em sua compra
               </span>
             </div>
           )}

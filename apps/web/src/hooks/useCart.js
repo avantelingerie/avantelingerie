@@ -346,15 +346,20 @@ export function useCart() {
     const faixasArr = Array.isArray(faixas) ? faixas.filter(Boolean) : [];
 
     if (faixasArr.length > 0) {
-      const minTier = Math.min(...faixasArr.map(f => {
-        const valMin = String(f.valor_minimo || 0).replace(/[^\d.,]/g, '').replace(',', '.');
-        return parseFloat(valMin) || 0;
-      }));
-      return total < minTier;
+      // Identifica a faixa com o maior percentual de desconto (o teto, ex: 5%)
+      const maxTier = faixasArr.reduce((prev, curr) => {
+        const pCurr = parseFloat(String(curr.percentual || 0).replace(/[^\d.,]/g, '').replace(',', '.')) || 0;
+        const pPrev = parseFloat(String(prev.percentual || 0).replace(/[^\d.,]/g, '').replace(',', '.')) || 0;
+        return pCurr > pPrev ? curr : prev;
+      }, faixasArr[0]);
+
+      const maxTierMinVal = parseFloat(String(maxTier.valor_minimo || 0).replace(/[^\d.,]/g, '').replace(',', '.')) || 40.01;
+      // O PIX é liberado para quem ainda NÃO atingiu os 5% da barra progressiva
+      return total < maxTierMinVal;
     }
 
-    // Resilient fallback
-    const fallbackLimit = perfil === 'reseller' ? 1500 : 300;
+    // Fallback resiliente
+    const fallbackLimit = 40.01;
     return total < fallbackLimit;
   }, [getCartTotal, configuracoes, currentUser]);
 
