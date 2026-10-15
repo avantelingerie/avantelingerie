@@ -1047,6 +1047,29 @@ Planejamento comercial e técnico estruturado pela Ada e Vértice para alavancar
 - **Status dos MCPs:**
   - Tanto o **Meta Ads MCP** quanto o **Google Ads MCP** agora estão **100% ATIVOS, HOMOLOGADOS E REGISTRADOS** no arquivo mestre `mcp_config.json`. A Ada possui autoridade analítica e operacional completa em ambas as plataformas.
 
+### Sessão - 15/10/2026 (Tarde: Criação e Estruturação das Campanhas Pioneiras no Meta Ads e Google Ads)
+- **Decisão Estratégica de Ponto de Partida:**
+  - Definido que o **Meta Ads (Instagram & Facebook)** é a prioridade #1 para escala visual imediata (Reels/Stories/Feed) para moda íntima e recrutamento de revendedoras diretas de fábrica com entrada de R$ 69,90.
+  - O **Google Ads** atua sinergicamente como a rede de captura de intenção direta de pesquisa e atacado.
+- **Campanhas Criadas e Configuradas no Meta Ads (Conta `act_841441889539975`):**
+  - **Campanha 1 (Varejo B2C):** `[AVANTE VAREJO] Cintas & Conjuntos - Preço de Fábrica < Shopee [PAUSADA]` (ID: `120251762626930751`)
+    - *AdSet 01:* `[ADSET 01] Cluster Ouro (SP, RJ, MG, PR, SC, RS, DF) - Mulheres 22-55` (ID: `120251762649670751`), R$ 25/dia, Pixel `981595838258999`, Otimização Purchase.
+    - *AdSet 02:* `[ADSET 02] Brasil Amplo - Cintas & Modeladores - Mulheres 22-58` (ID: `120251762650110751`), R$ 25/dia.
+  - **Campanha 2 (Atacado & Revenda B2B):** `[AVANTE REVENDA] Atacado R$ 69,90 - Lucro 100% a 150% [PAUSADA]` (ID: `120251762627320751`)
+    - *AdSet 01:* `[ADSET 01] Revenda & Renda Extra (Entrada R$ 69,90) - Brasil Todo` (ID: `120251762650980751`), R$ 30/dia.
+    - *AdSet 02:* `[ADSET 02] Sacoleiras & Lingerie Atacado - Direto de Friburgo` (ID: `120251762651370751`), R$ 30/dia.
+  - **Status de Segurança:** Todas as entidades criadas estritamente com status `PAUSED` (Pausadas), garantindo gasto R$ 0,00 até a chegada e cadastro do cartão corporativo Bradesco.
+- **Campanha Criada e Configurada no Google Ads (Conta `1394292049`):**
+  - **Campanha 1 (Pesquisa):** `[GOOGLE PESQUISA] Avante Lingerie - Fábrica & Atacado [PAUSADA]` (ID: `24365539579`)
+    - Orçamento dedicado: R$ 20,00/dia (`customers/1394292049/campaignBudgets/15950458731`).
+    - Estratégia de Lance: `MAXIMIZE_CONVERSIONS`.
+    - Regulamentação de Anúncios Políticos da UE: `DOES_NOT_CONTAIN_EU_POLITICAL_ADVERTISING` (compliance Google Ads v25).
+    - Status de Segurança: `PAUSED` (Pausada).
+- **Ponto de Parada / Próximos Passos:**
+  - 1. Lojista adicionar o novo cartão Bradesco como método de pagamento no Meta Ads e Google Ads quando o cartão físico for entregue.
+  - 2. Vincular os criativos (vídeos e carrosséis com as fotos da fábrica) aos conjuntos criados.
+  - 3. Ativação das campanhas após conferência de faturamento.
+
 
 
 
