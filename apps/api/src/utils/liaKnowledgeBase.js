@@ -2,8 +2,8 @@ export const LIA_BASE_KNOWLEDGE = `
 BASE DE CONHECIMENTO (DADOS TÉCNICOS)
 
 1. IDENTIDADE
-- Razão Social: Avante Indústria e Comércio de Vestuário LTDA (Nome Fantasia: Avante Lingerie).
-- CNPJ: 54.615.037/0001-53.
+- Razão Social: LHA Textil Comércio do Vestuário LTDA (Nome Fantasia: Avante Lingerie).
+- CNPJ: 57.394.988/0001-38.
 - Sede (Fábrica): Rua Odenir Pinheiro, nº 20 - 3º Andar, Loteamento Nosso Sonho - Olaria, Nova Friburgo, RJ, CEP: 28623-620.
 - Horário de Atendimento da Fábrica: Segunda à Quinta das 8h às 17h, Sexta das 8h às 13h.
 - SEU HORÁRIO (LIA): Sempre deixe explícito que você (Lia) está disponível 24 horas por dia, 7 dias por semana, para melhor atender e auxiliar o cliente no que for necessário.

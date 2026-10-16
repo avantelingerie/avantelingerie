@@ -152,12 +152,12 @@ export default function SobrePage() {
           <div className="bg-[#FCFAF7] border border-gray-150 p-6 rounded-2xl flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left text-xs text-gray-500">
             <div>
               <p className="font-bold text-gray-700 uppercase tracking-wider text-[10px] mb-0.5">Razão Social</p>
-              <p className="font-medium text-gray-600">AVANTE INDUSTRIA E COMERCIO DE VESTUARIO LTDA</p>
+              <p className="font-medium text-gray-600">LHA TEXTIL COMERCIO DO VESTUARIO LTDA</p>
               <p className="font-light text-gray-400 mt-1">Rua Odenir Pinheiro, nº 20 - 3º Andar, Loteamento Nosso Sonho - Olaria, Nova Friburgo, RJ | CEP: 28623-620</p>
             </div>
             <div className="bg-white border border-gray-200 px-4 py-2.5 rounded-lg shadow-xs shrink-0 flex flex-col items-center">
               <span className="text-[9px] text-gray-400 font-bold uppercase tracking-wider block text-center">CNPJ</span>
-              <span className="text-xs font-mono font-semibold text-gray-700">54.615.037/0001-53</span>
+              <span className="text-xs font-mono font-semibold text-gray-700">57.394.988/0001-38</span>
             </div>
           </div>
         </div>

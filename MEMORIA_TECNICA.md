@@ -1081,6 +1081,49 @@ Planejamento comercial e técnico estruturado pela Ada e Vértice para alavancar
   - 3. Ada + Sentinel auditar os primeiros criativos recebidos.
   - 4. Inserir o método de pagamento nas plataformas e ativar as campanhas no momento desejado.
 
+---
+
+### Sessão - 16/10/2026 (Diagnóstico Definitivo de Compliance da Stripe & Migração para Nova Conta Oficial LHA Têxtil)
+- **Diagnóstico da Causa Raiz do Bloqueio na Stripe:**
+  - Conta anterior (`Avante Lingerie LTDA`, ID `acct_1TJLbbBoRLEbDMKg`) apresentava status `Suspenso: Pagamentos, Pagamentos via Pix`.
+  - Cruzamento de dados pelo motor da Receita Federal revelou que o CNPJ antigo (`54.615.037/0001-53`) possuía como única sócia-administradora no QSA oficial a Sra. `Michele de Medeiros Deruci`. O Dooner figurava como representante legal sem poderes societários cadastrados na Receita, causando rejeição automática de KYC (`Inválido`) pelo robô da Stripe, além de envio de conta de luz com mais de 7 meses (março/2026).
+- **Decisão Estratégica de Transição para Nova Empresa:**
+  - Os sócios decidiram migrar o gateway de pagamento para a nova pessoa jurídica regularizada com Dooner como titular:
+    - **Razão Social:** `LHA TEXTIL COMERCIO DO VESTUARIO LTDA`
+    - **CNPJ:** `57.394.988/0001-38` (Natureza: Sociedade Limitada Unipessoal - SLU / Microempresa)
+    - **Sede:** `Rua Odenir Pinheiro, nº 20, 3º Andar, Loteamento Nosso Sonho, Nova Friburgo - RJ, CEP 28623-620` (Endereço idêntico ao do Ateliê e Showroom da Avante Lingerie).
+    - **Sócio Único e Administrador (100% das quotas):** `Dooner dos Santos Almeida` (CPF `116.414.267-48`, CNH Detran/RJ `04353004400`, residente na `Rua Presidente Backer, 141, fundos, Olaria, Nova Friburgo/RJ, CEP 28620-240`).
+    - **Autenticação:** Documento de Transformação deferido e autenticado pela JUCERJA em 21/09/2026 (Protocolo 2026/01028233-2).
+- **Criação da Nova Conta de Produção (Modo Ao Vivo) na Stripe:**
+  - Criada nova conta isolada no mesmo login institucional (`avantelingerie@gmail.com`):
+    - Nome da Conta: `Avante Lingerie Oficial`.
+    - Modo: Produção Oficial (ao vivo para recebimento de dinheiro real).
+    - Tipo e Estrutura: Pessoa Jurídica -> Sociedade Limitada Unipessoal (SLU).
+    - Dados da Empresa e CNPJ: Inseridos e validados conforme cartão da Receita Federal.
+    - Categoria e CNAE: Roupas e acessórios (Comércio varejista e atacadista de moda íntima e lingeries no e-commerce).
+    - Dados Públicos e Suporte: Telefone de suporte ao cliente ajustado para o canal oficial da loja `(22) 98122-5010`.
+    - Descrição na Fatura do Cartão: `AVANTE LINGERIE` / Descrição Curta: `AVANTE`.
+- **Suporte Logístico - Melhor Envio:**
+  - Redigido e despachado parecer técnico ao suporte do Melhor Envio explicando a arquitetura híbrida da loja (cotação de frete em tempo real via API REST própria do Melhor Envio e backoffice operacional de remessas e etiquetas via Bling ERP), solicitando parametrização para débito recorrente/pagamento via cartão corporativo.
+- **Ponto de Parada Atual (16/10/2026 - Tarde):**
+  - Tela da Stripe em espera na etapa: **`Verifique sua identidade`** (Dooner dos Santos Almeida).
+  - Próximos passos imediatos:
+    1. Dooner escanear o QR Code no celular para foto da CNH e biometria/selfie facial.
+    2. Inserir dados bancários da conta PJ da LHA Têxtil (ou conta vinculada) para repasses.
+    3. Concluir ativação na Stripe.
+    4. Ada capturar as novas chaves de API (`STRIPE_PUBLISHABLE_KEY`, `STRIPE_SECRET_KEY`) e atualizar o webhook de produção na VPS da Avante Lingerie para colocar as vendas no ar.
+
+### Atualização [16/10/2026 - Noite] - Harmonização Visual Admin (Modo Claro vs Modo Escuro)
+- **Diagnóstico & Causa Raiz:** O alternador Sol/Lua do painel Admin injeta a classe `light` ou `dark` no wrapper raiz. Vários componentes possuíam classes fixas (`bg-[#121212]`, `bg-[#181818]`, `text-white`, `border-zinc-800`), fazendo com que no modo claro o fundo permanecesse preto ou contrastasse incorretamente com o fundo bege e textos brancos ficassem ilegíveis.
+- **Abas Corrigidas e Harmonizadas:**
+  1. **Coleções (`ColecoesManager.jsx`):** Containers, inputs, toggles e listagem com `bg-white dark:bg-[#121212]`, `text-zinc-900 dark:text-white` e `border-zinc-200 dark:border-[#c59b5f]/25`.
+  2. **Descontos Progressivos (`DescontoProgressivoTab.jsx`):** Sub-abas (Varejo B2C, Atacado B2B, Gatilho & Regras), cabeçalhos de tabela, cards de upgrade e formulários totalmente legíveis no modo claro e escuro.
+  3. **Cérebro da Lia (`LiaAdminPage.jsx`):** Tabs (Chats Ao Vivo, Treinamento, Conexão WhatsApp), cartões de métricas, balões de conversa, feeds de chat e cartões de conexão agora alternam perfeitamente.
+  4. **Analytics (`AnalyticsPage.jsx` & `TrackingPixelsTab.jsx`):** Todos os 4 painéis (Desempenho Geral, Demografia GA4, Jornadas ao Vivo e Tracking & Pixels) agora contam com suporte completo ao tema claro sem perder o luxo dourado no tema escuro.
+  5. **Produtos / Cadastro de Produtos (`ProdutoForm.jsx` & `VariacoesTable.jsx`):** Inputs, selects, seções de SEO & IA, modal de geração de textos, caixas de coleções, switches de vitrine e a planilha geradora de variações com suporte responsivo a ambos os temas.
+- **Validação:** `npm run build --prefix apps/web` compilado com sucesso (código 0) e servidor de preview ativo em `http://localhost:3000`.
+
+
 
 
 

@@ -126,23 +126,23 @@ export default function DescontoProgressivoTab({ configuracoes, onUpdateConfigur
   return (
     <div className="space-y-6 text-left">
       <div>
-        <h2 className="text-xl font-semibold flex items-center gap-2 text-white font-sans">
+        <h2 className="text-xl font-semibold flex items-center gap-2 text-zinc-900 dark:text-white font-sans">
           Configuração de Descontos e Atacado B2B
         </h2>
-        <p className="text-sm text-zinc-400 font-light mt-1">
+        <p className="text-sm text-zinc-600 dark:text-zinc-400 font-light mt-1">
           Gerencie as faixas de desconto progressivo para varejo e atacado, além dos parâmetros de upgrade de revendedoras.
         </p>
       </div>
 
       <Tabs value={activeSubTab} onValueChange={setActiveSubTab} className="w-full">
-        <TabsList className="grid grid-cols-3 max-w-xl bg-zinc-900 border border-zinc-850 p-1 rounded-xl">
-          <TabsTrigger value="varejo" className="rounded-lg flex items-center justify-center gap-1.5 py-2 font-medium transition-all text-zinc-400 data-[state=active]:bg-zinc-800 data-[state=active]:text-[#c59b5f] data-[state=active]:font-semibold">
+        <TabsList className="grid grid-cols-3 max-w-xl bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-850 p-1 rounded-xl">
+          <TabsTrigger value="varejo" className="rounded-lg flex items-center justify-center gap-1.5 py-2 font-medium transition-all text-zinc-600 dark:text-zinc-400 data-[state=active]:bg-white dark:data-[state=active]:bg-zinc-800 data-[state=active]:text-[#c59b5f] data-[state=active]:font-semibold data-[state=active]:shadow-sm">
             <UserCheck className="w-4 h-4" /> Varejo (B2C)
           </TabsTrigger>
-          <TabsTrigger value="revenda" className="rounded-lg flex items-center justify-center gap-1.5 py-2 font-medium transition-all text-zinc-400 data-[state=active]:bg-zinc-800 data-[state=active]:text-[#c59b5f] data-[state=active]:font-semibold">
+          <TabsTrigger value="revenda" className="rounded-lg flex items-center justify-center gap-1.5 py-2 font-medium transition-all text-zinc-600 dark:text-zinc-400 data-[state=active]:bg-white dark:data-[state=active]:bg-zinc-800 data-[state=active]:text-[#c59b5f] data-[state=active]:font-semibold data-[state=active]:shadow-sm">
             <ShieldCheck className="w-4 h-4" /> Atacado (B2B)
           </TabsTrigger>
-          <TabsTrigger value="parametros" className="rounded-lg flex items-center justify-center gap-1.5 py-2 font-medium transition-all text-zinc-400 data-[state=active]:bg-zinc-800 data-[state=active]:text-[#c59b5f] data-[state=active]:font-semibold">
+          <TabsTrigger value="parametros" className="rounded-lg flex items-center justify-center gap-1.5 py-2 font-medium transition-all text-zinc-600 dark:text-zinc-400 data-[state=active]:bg-white dark:data-[state=active]:bg-zinc-800 data-[state=active]:text-[#c59b5f] data-[state=active]:font-semibold data-[state=active]:shadow-sm">
             <TrendingUp className="w-4 h-4" /> Gatilho & Regras
           </TabsTrigger>
         </TabsList>
@@ -151,8 +151,8 @@ export default function DescontoProgressivoTab({ configuracoes, onUpdateConfigur
         <TabsContent value="varejo" className="space-y-4 mt-6 focus-visible:outline-none">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
             <div>
-              <h3 className="text-lg font-medium text-white">Faixas de Desconto Progressivo - Varejo B2C</h3>
-              <p className="text-xs text-zinc-400 mt-1">Configurações para clientes comuns de varejo.</p>
+              <h3 className="text-lg font-medium text-zinc-900 dark:text-white">Faixas de Desconto Progressivo - Varejo B2C</h3>
+              <p className="text-xs text-zinc-500 dark:text-zinc-400 mt-1">Configurações para clientes comuns de varejo.</p>
             </div>
             <Button 
               onClick={() => { setSelectedFaixa(null); setModalOpen(true); }} 
@@ -164,14 +164,14 @@ export default function DescontoProgressivoTab({ configuracoes, onUpdateConfigur
             </Button>
           </div>
 
-          <div className="border border-zinc-800 rounded-xl bg-[#121212] overflow-hidden">
+          <div className="border border-zinc-200 dark:border-zinc-800 rounded-xl bg-white dark:bg-[#121212] shadow-sm overflow-hidden">
             <Table>
-              <TableHeader className="bg-zinc-900/60 border-b border-zinc-800">
-                <TableRow className="border-b border-zinc-800 hover:bg-transparent">
-                  <TableHead className="text-zinc-300 font-medium">Valor Mínimo</TableHead>
-                  <TableHead className="text-zinc-300 font-medium">Valor Máximo</TableHead>
-                  <TableHead className="text-zinc-300 font-medium">Desconto</TableHead>
-                  <TableHead className="text-right text-zinc-300 font-medium">Ações</TableHead>
+              <TableHeader className="bg-zinc-50 dark:bg-zinc-900/60 border-b border-zinc-200 dark:border-zinc-800">
+                <TableRow className="border-b border-zinc-200 dark:border-zinc-800 hover:bg-transparent">
+                  <TableHead className="text-zinc-600 dark:text-zinc-300 font-medium">Valor Mínimo</TableHead>
+                  <TableHead className="text-zinc-600 dark:text-zinc-300 font-medium">Valor Máximo</TableHead>
+                  <TableHead className="text-zinc-600 dark:text-zinc-300 font-medium">Desconto</TableHead>
+                  <TableHead className="text-right text-zinc-600 dark:text-zinc-300 font-medium">Ações</TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
@@ -183,9 +183,9 @@ export default function DescontoProgressivoTab({ configuracoes, onUpdateConfigur
                   </TableRow>
                 ) : (
                   faixasVarejo.map((f) => (
-                    <TableRow key={f.id} className="border-b border-zinc-800 hover:bg-zinc-900/20">
-                      <TableCell className="font-semibold text-white">{formatCurrency(f.valor_minimo)}</TableCell>
-                      <TableCell className="text-zinc-300">{formatCurrency(f.valor_maximo)}</TableCell>
+                    <TableRow key={f.id} className="border-b border-zinc-200 dark:border-zinc-800 hover:bg-zinc-50 dark:hover:bg-zinc-900/20">
+                      <TableCell className="font-semibold text-zinc-900 dark:text-white">{formatCurrency(f.valor_minimo)}</TableCell>
+                      <TableCell className="text-zinc-600 dark:text-zinc-300">{formatCurrency(f.valor_maximo)}</TableCell>
                       <TableCell>
                         <span className="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-bold bg-[#c59b5f]/15 text-[#c59b5f] border border-[#c59b5f]/20">
                           {f.percentual}% OFF
@@ -197,16 +197,16 @@ export default function DescontoProgressivoTab({ configuracoes, onUpdateConfigur
                           size="icon" 
                           onClick={() => { setSelectedFaixa(f); setModalOpen(true); }}
                           disabled={isSaving}
-                          className="hover:bg-zinc-800 hover:text-white"
+                          className="hover:bg-zinc-100 dark:hover:bg-zinc-800 hover:text-zinc-900 dark:hover:text-white"
                         >
-                          <Edit className="w-4 h-4 text-zinc-400" />
+                          <Edit className="w-4 h-4 text-zinc-500 dark:text-zinc-400" />
                         </Button>
                         <Button 
                           variant="ghost" 
                           size="icon" 
                           onClick={() => handleDelete(f.id)}
                           disabled={isSaving}
-                          className="hover:bg-red-950/30 hover:text-red-400"
+                          className="hover:bg-red-50 dark:hover:bg-red-950/30 hover:text-red-500 dark:hover:text-red-400"
                         >
                           <Trash2 className="w-4 h-4 text-red-500/80" />
                         </Button>
@@ -223,27 +223,27 @@ export default function DescontoProgressivoTab({ configuracoes, onUpdateConfigur
         <TabsContent value="revenda" className="space-y-4 mt-6 focus-visible:outline-none">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
             <div>
-              <h3 className="text-lg font-medium text-white">Faixas de Desconto Progressivo - Atacado B2B</h3>
-              <p className="text-xs text-zinc-400 mt-1">Descontos extras cumulativos para revendedoras qualificadas.</p>
+              <h3 className="text-lg font-medium text-zinc-900 dark:text-white">Faixas de Desconto Progressivo - Atacado B2B</h3>
+              <p className="text-xs text-zinc-500 dark:text-zinc-400 mt-1">Descontos extras cumulativos para revendedoras qualificadas.</p>
             </div>
             <Button 
               onClick={() => { setSelectedFaixa(null); setModalOpen(true); }} 
               disabled={isSaving} 
-              className="bg-zinc-800 border border-[#c59b5f]/30 hover:border-[#c59b5f] text-[#c59b5f] hover:bg-[#c59b5f]/10 font-semibold rounded-lg px-4 py-2"
+              className="bg-white dark:bg-zinc-800 border border-[#c59b5f]/40 hover:border-[#c59b5f] text-[#c59b5f] hover:bg-[#c59b5f]/10 font-semibold rounded-lg px-4 py-2 shadow-xs"
             >
               <Plus className="w-4 h-4 mr-2" />
               Adicionar Faixa B2B
             </Button>
           </div>
 
-          <div className="border border-zinc-800 rounded-xl bg-[#121212] overflow-hidden">
+          <div className="border border-zinc-200 dark:border-zinc-800 rounded-xl bg-white dark:bg-[#121212] shadow-sm overflow-hidden">
             <Table>
-              <TableHeader className="bg-zinc-900/60 border-b border-zinc-800">
-                <TableRow className="border-b border-zinc-800 hover:bg-transparent">
-                  <TableHead className="text-zinc-300 font-medium">Valor Mínimo</TableHead>
-                  <TableHead className="text-zinc-300 font-medium">Valor Máximo</TableHead>
-                  <TableHead className="text-zinc-300 font-medium">Desconto Extra</TableHead>
-                  <TableHead className="text-right text-zinc-300 font-medium">Ações</TableHead>
+              <TableHeader className="bg-zinc-50 dark:bg-zinc-900/60 border-b border-zinc-200 dark:border-zinc-800">
+                <TableRow className="border-b border-zinc-200 dark:border-zinc-800 hover:bg-transparent">
+                  <TableHead className="text-zinc-600 dark:text-zinc-300 font-medium">Valor Mínimo</TableHead>
+                  <TableHead className="text-zinc-600 dark:text-zinc-300 font-medium">Valor Máximo</TableHead>
+                  <TableHead className="text-zinc-600 dark:text-zinc-300 font-medium">Desconto Extra</TableHead>
+                  <TableHead className="text-right text-zinc-600 dark:text-zinc-300 font-medium">Ações</TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
@@ -255,9 +255,9 @@ export default function DescontoProgressivoTab({ configuracoes, onUpdateConfigur
                   </TableRow>
                 ) : (
                   faixasRevenda.map((f) => (
-                    <TableRow key={f.id} className="border-b border-zinc-800 hover:bg-zinc-900/20">
-                      <TableCell className="font-semibold text-white">{formatCurrency(f.valor_minimo)}</TableCell>
-                      <TableCell className="text-zinc-300">{formatCurrency(f.valor_maximo)}</TableCell>
+                    <TableRow key={f.id} className="border-b border-zinc-200 dark:border-zinc-800 hover:bg-zinc-50 dark:hover:bg-zinc-900/20">
+                      <TableCell className="font-semibold text-zinc-900 dark:text-white">{formatCurrency(f.valor_minimo)}</TableCell>
+                      <TableCell className="text-zinc-600 dark:text-zinc-300">{formatCurrency(f.valor_maximo)}</TableCell>
                       <TableCell>
                         <span className="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-bold bg-[#c59b5f]/15 text-[#c59b5f] border border-[#c59b5f]/20">
                           +{f.percentual}% OFF Extra
@@ -269,16 +269,16 @@ export default function DescontoProgressivoTab({ configuracoes, onUpdateConfigur
                           size="icon" 
                           onClick={() => { setSelectedFaixa(f); setModalOpen(true); }}
                           disabled={isSaving}
-                          className="hover:bg-zinc-800 hover:text-white"
+                          className="hover:bg-zinc-100 dark:hover:bg-zinc-800 hover:text-zinc-900 dark:hover:text-white"
                         >
-                          <Edit className="w-4 h-4 text-zinc-400" />
+                          <Edit className="w-4 h-4 text-zinc-500 dark:text-zinc-400" />
                         </Button>
                         <Button 
                           variant="ghost" 
                           size="icon" 
                           onClick={() => handleDelete(f.id)}
                           disabled={isSaving}
-                          className="hover:bg-red-950/30 hover:text-red-400"
+                          className="hover:bg-red-50 dark:hover:bg-red-950/30 hover:text-red-500 dark:hover:text-red-400"
                         >
                           <Trash2 className="w-4 h-4 text-red-500/80" />
                         </Button>
@@ -293,21 +293,21 @@ export default function DescontoProgressivoTab({ configuracoes, onUpdateConfigur
 
         {/* Guia Gatilho & Regras */}
         <TabsContent value="parametros" className="space-y-4 mt-6 focus-visible:outline-none">
-          <div className="max-w-2xl border border-[#c59b5f]/20 rounded-2xl bg-gradient-to-br from-[#161616] to-[#121212] p-6 shadow-md border-l-4 border-l-[#c59b5f]">
-            <h3 className="text-lg font-semibold text-white mb-1 flex items-center gap-1.5 font-sans">
+          <div className="max-w-2xl border border-zinc-200 dark:border-[#c59b5f]/20 rounded-2xl bg-white dark:bg-gradient-to-br dark:from-[#161616] dark:to-[#121212] p-6 shadow-md border-l-4 border-l-[#c59b5f]">
+            <h3 className="text-lg font-semibold text-zinc-900 dark:text-white mb-1 flex items-center gap-1.5 font-sans">
               Gatilho de Upgrade Automático
             </h3>
-            <p className="text-xs text-zinc-400 font-light leading-relaxed mb-6">
+            <p className="text-xs text-zinc-600 dark:text-zinc-400 font-light leading-relaxed mb-6">
               Determine o valor mínimo no carrinho de uma cliente de varejo comum para acionar a conversão automática para o status de Revenda (com preços de atacado direto de fábrica e benefícios exclusivos).
             </p>
 
             <form onSubmit={handleSaveUpgradeLimit} className="space-y-4">
               <div className="space-y-2">
-                <Label htmlFor="limiteUpgrade" className="text-xs font-bold text-zinc-300">
+                <Label htmlFor="limiteUpgrade" className="text-xs font-bold text-zinc-700 dark:text-zinc-300">
                   Valor Limite para Upgrade (R$)
                 </Label>
                 <div className="relative max-w-xs">
-                  <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-zinc-550 font-bold text-sm">
+                  <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-zinc-400 dark:text-zinc-550 font-bold text-sm">
                     R$
                   </div>
                   <Input 
@@ -318,7 +318,7 @@ export default function DescontoProgressivoTab({ configuracoes, onUpdateConfigur
                     value={limiteUpgrade}
                     onChange={(e) => setLimiteUpgrade(e.target.value)}
                     required
-                    className="pl-10 font-bold border-zinc-800 bg-zinc-900 text-white focus:border-[#c59b5f] focus:ring-1 focus:ring-[#c59b5f]"
+                    className="pl-10 font-bold border-zinc-300 dark:border-zinc-800 bg-white dark:bg-zinc-900 text-zinc-900 dark:text-white focus:border-[#c59b5f] focus:ring-1 focus:ring-[#c59b5f]"
                   />
                 </div>
                 <p className="text-[10px] text-zinc-500 font-light">

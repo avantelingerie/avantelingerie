@@ -189,55 +189,55 @@ export default function VariacoesTable({ variacoes = [], onChange, productName =
   return (
     <div className="space-y-6">
       {/* 1. Header */}
-      <div className="flex items-center justify-between border-b border-[#c59b5f]/20 pb-4">
+      <div className="flex items-center justify-between border-b border-zinc-200 dark:border-[#c59b5f]/20 pb-4">
         <div>
-          <h3 className="text-lg font-bold text-white font-serif">Variações do Produto</h3>
-          <p className="text-xs text-gray-400 font-light mt-0.5">Informe os atributos e valores padrões abaixo para gerar todas as variações.</p>
+          <h3 className="text-lg font-bold text-zinc-900 dark:text-white font-serif">Variações do Produto</h3>
+          <p className="text-xs text-zinc-500 dark:text-gray-400 font-light mt-0.5">Informe os atributos e valores padrões abaixo para gerar todas as variações.</p>
         </div>
-        <span className="text-xs font-bold text-[#c59b5f] bg-[#c59b5f]/10 border border-[#c59b5f]/30 px-4 py-2 rounded-full shadow-sm">
+        <span className="text-xs font-bold text-[#a07b46] dark:text-[#c59b5f] bg-[#c59b5f]/10 border border-[#c59b5f]/30 px-4 py-2 rounded-full shadow-sm">
           Estoque Total: {totalEstoque} un
         </span>
       </div>
 
       {/* 2. Horizontal Row Creator */}
-      <div className="bg-[#1a1a1a] border border-[#c59b5f]/20 rounded-2xl p-5 shadow-sm space-y-4">
+      <div className="bg-zinc-50 dark:bg-[#1a1a1a] border border-zinc-200 dark:border-[#c59b5f]/20 rounded-2xl p-5 shadow-sm space-y-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="space-y-1.5">
-            <label className="text-[10px] font-bold text-gray-300 uppercase tracking-wider block">Tamanhos (ex: P, M, G, GG)</label>
+            <label className="text-[10px] font-bold text-zinc-700 dark:text-gray-300 uppercase tracking-wider block">Tamanhos (ex: P, M, G, GG)</label>
             <Input
               value={inputTamanhos}
               onChange={(e) => setInputTamanhos(e.target.value)}
               placeholder="Digite os tamanhos separados por vírgula..."
-              className="h-10 text-xs bg-[#121212] border-[#c59b5f]/25 text-white placeholder-gray-500 focus:border-[#c59b5f] focus-visible:ring-0 focus-visible:ring-offset-0 focus-visible:border-[#c59b5f] focus:outline-none"
+              className="h-10 text-xs bg-white dark:bg-[#121212] border-zinc-300 dark:border-[#c59b5f]/25 text-zinc-900 dark:text-white placeholder-zinc-400 dark:placeholder-gray-500 focus:border-[#c59b5f] focus-visible:ring-0 focus-visible:ring-offset-0 focus-visible:border-[#c59b5f] focus:outline-none"
             />
           </div>
 
           <div className="space-y-1.5">
-            <label className="text-[10px] font-bold text-gray-300 uppercase tracking-wider block">Cores (ex: Preto, Romance, Chocolate)</label>
+            <label className="text-[10px] font-bold text-zinc-700 dark:text-gray-300 uppercase tracking-wider block">Cores (ex: Preto, Romance, Chocolate)</label>
             <Input
               value={inputCores}
               onChange={(e) => setInputCores(e.target.value)}
               placeholder="Digite as cores separadas por vírgula..."
-              className="h-10 text-xs bg-[#121212] border-[#c59b5f]/25 text-white placeholder-gray-500 focus:border-[#c59b5f] focus-visible:ring-0 focus-visible:ring-offset-0 focus-visible:border-[#c59b5f] focus:outline-none"
+              className="h-10 text-xs bg-white dark:bg-[#121212] border-zinc-300 dark:border-[#c59b5f]/25 text-zinc-900 dark:text-white placeholder-zinc-400 dark:placeholder-gray-500 focus:border-[#c59b5f] focus-visible:ring-0 focus-visible:ring-offset-0 focus-visible:border-[#c59b5f] focus:outline-none"
             />
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 items-end pt-2 border-t border-[#c59b5f]/10">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 items-end pt-2 border-t border-zinc-200 dark:border-[#c59b5f]/10">
           <div className="space-y-1.5">
-            <label className="text-[10px] font-bold text-gray-300 uppercase tracking-wider block">Estoque Padrão</label>
+            <label className="text-[10px] font-bold text-zinc-700 dark:text-gray-300 uppercase tracking-wider block">Estoque Padrão</label>
             <Input
               type="number"
               min="0"
               value={defaultEstoque}
               onChange={(e) => setDefaultEstoque(e.target.value)}
               placeholder="Ex: 25"
-              className="h-10 text-xs bg-[#121212] border-[#c59b5f]/25 text-white placeholder-gray-500 focus:border-[#c59b5f] focus-visible:ring-0 focus-visible:ring-offset-0 focus-visible:border-[#c59b5f] focus:outline-none"
+              className="h-10 text-xs bg-white dark:bg-[#121212] border-zinc-300 dark:border-[#c59b5f]/25 text-zinc-900 dark:text-white placeholder-zinc-400 dark:placeholder-gray-500 focus:border-[#c59b5f] focus-visible:ring-0 focus-visible:ring-offset-0 focus-visible:border-[#c59b5f] focus:outline-none"
             />
           </div>
 
           <div className="space-y-1.5">
-            <label className="text-[10px] font-bold text-gray-300 uppercase tracking-wider block">Preço Varejo Padrão (R$)</label>
+            <label className="text-[10px] font-bold text-zinc-700 dark:text-gray-300 uppercase tracking-wider block">Preço Varejo Padrão (R$)</label>
             <Input
               type="number"
               step="0.01"
@@ -245,12 +245,12 @@ export default function VariacoesTable({ variacoes = [], onChange, productName =
               value={defaultPreco}
               onChange={(e) => setDefaultPreco(e.target.value)}
               placeholder="Ex: 79.90"
-              className="h-10 text-xs bg-[#121212] border-[#c59b5f]/25 text-white placeholder-gray-500 focus:border-[#c59b5f] focus-visible:ring-0 focus-visible:ring-offset-0 focus-visible:border-[#c59b5f] focus:outline-none"
+              className="h-10 text-xs bg-white dark:bg-[#121212] border-zinc-300 dark:border-[#c59b5f]/25 text-zinc-900 dark:text-white placeholder-zinc-400 dark:placeholder-gray-500 focus:border-[#c59b5f] focus-visible:ring-0 focus-visible:ring-offset-0 focus-visible:border-[#c59b5f] focus:outline-none"
             />
           </div>
 
           <div className="space-y-1.5">
-            <label className="text-[10px] font-bold text-gray-300 uppercase tracking-wider block">Preço Atacado Padrão (R$)</label>
+            <label className="text-[10px] font-bold text-zinc-700 dark:text-gray-300 uppercase tracking-wider block">Preço Atacado Padrão (R$)</label>
             <Input
               type="number"
               step="0.01"
@@ -258,7 +258,7 @@ export default function VariacoesTable({ variacoes = [], onChange, productName =
               value={defaultPrecoAtacado}
               onChange={(e) => setDefaultPrecoAtacado(e.target.value)}
               placeholder="Ex: 65.00"
-              className="h-10 text-xs bg-[#121212] border-[#c59b5f]/25 text-white placeholder-gray-500 focus:border-[#c59b5f] focus-visible:ring-0 focus-visible:ring-offset-0 focus-visible:border-[#c59b5f] focus:outline-none"
+              className="h-10 text-xs bg-white dark:bg-[#121212] border-zinc-300 dark:border-[#c59b5f]/25 text-zinc-900 dark:text-white placeholder-zinc-400 dark:placeholder-gray-500 focus:border-[#c59b5f] focus-visible:ring-0 focus-visible:ring-offset-0 focus-visible:border-[#c59b5f] focus:outline-none"
             />
           </div>
 
@@ -275,10 +275,10 @@ export default function VariacoesTable({ variacoes = [], onChange, productName =
       </div>
 
       {/* 3. Spreadsheet Table with Dynamic Inputs */}
-      <div className="border border-[#c59b5f]/20 rounded-2xl overflow-hidden bg-[#1a1a1a] shadow-sm">
+      <div className="border border-zinc-200 dark:border-[#c59b5f]/20 rounded-2xl overflow-hidden bg-white dark:bg-[#1a1a1a] shadow-sm">
         <div className="overflow-x-auto">
           <table className="w-full text-sm text-left">
-            <thead className="bg-[#121212] text-gray-300 border-b border-[#c59b5f]/25 text-[10px] uppercase tracking-wider font-bold">
+            <thead className="bg-zinc-100 dark:bg-[#121212] text-zinc-700 dark:text-gray-300 border-b border-zinc-200 dark:border-[#c59b5f]/25 text-[10px] uppercase tracking-wider font-bold">
               <tr>
                 <th className="px-4 py-3.5 font-bold">Cor</th>
                 <th className="px-4 py-3.5 font-bold">Tamanho</th>
@@ -291,31 +291,31 @@ export default function VariacoesTable({ variacoes = [], onChange, productName =
                 <th className="px-4 py-3.5 font-bold text-right w-16">Ações</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-[#c59b5f]/15 text-xs text-white">
+            <tbody className="divide-y divide-zinc-200 dark:divide-[#c59b5f]/15 text-xs text-zinc-900 dark:text-white">
               {variacoes.length === 0 ? (
                 <tr>
-                  <td colSpan="9" className="px-4 py-12 text-center text-gray-400 font-light italic">
+                  <td colSpan="9" className="px-4 py-12 text-center text-zinc-500 dark:text-gray-400 font-light italic">
                     Nenhuma variação adicionada ainda. Digite tamanhos e cores na linha acima para gerar a lista!
                   </td>
                 </tr>
               ) : (
                 variacoes.map((variacao) => (
-                  <tr key={variacao.id} className="hover:bg-[#121212]/30 transition-colors">
-                    <td className="px-4 py-3 font-bold uppercase text-[#c59b5f]">{variacao.cor}</td>
-                    <td className="px-4 py-3 font-bold text-white">{variacao.tamanho}</td>
+                  <tr key={variacao.id} className="hover:bg-zinc-50 dark:hover:bg-[#121212]/30 transition-colors">
+                    <td className="px-4 py-3 font-bold uppercase text-[#a07b46] dark:text-[#c59b5f]">{variacao.cor}</td>
+                    <td className="px-4 py-3 font-bold text-zinc-900 dark:text-white">{variacao.tamanho}</td>
                     <td className="px-4 py-2">
                       <Input
                         type="text"
                         value={variacao.sku || ''}
                         onChange={(e) => handleInlineChange(variacao.id, 'sku', e.target.value)}
-                        className="h-8 text-xs font-mono bg-[#121212] border-[#c59b5f]/20 text-white focus:border-[#c59b5f] focus-visible:ring-0 focus-visible:ring-offset-0 focus-visible:border-[#c59b5f] focus:outline-none w-32"
+                        className="h-8 text-xs font-mono bg-white dark:bg-[#121212] border-zinc-300 dark:border-[#c59b5f]/20 text-zinc-900 dark:text-white focus:border-[#c59b5f] focus-visible:ring-0 focus-visible:ring-offset-0 focus-visible:border-[#c59b5f] focus:outline-none w-32"
                       />
                     </td>
 
                     {/* Imagem / Foto selector inline */}
                     <td className="px-4 py-2">
                       <div className="flex items-center gap-2">
-                        <div className="w-8 h-10 rounded border border-[#c59b5f]/30 bg-[#121212] overflow-hidden flex items-center justify-center shrink-0">
+                        <div className="w-8 h-10 rounded border border-zinc-300 dark:border-[#c59b5f]/30 bg-zinc-100 dark:bg-[#121212] overflow-hidden flex items-center justify-center shrink-0">
                           {variacao.imagem_url ? (
                             isVideoUrl(variacao.imagem_url) ? (
                               <video src={getVariationImagePreview(variacao.imagem_url)} className="w-full h-full object-cover" controls={false} autoPlay muted loop playsInline />
@@ -323,13 +323,13 @@ export default function VariacoesTable({ variacoes = [], onChange, productName =
                               <img src={getVariationImagePreview(variacao.imagem_url)} alt="" className="w-full h-full object-cover" />
                             )
                           ) : (
-                            <span className="text-[9px] text-gray-500 font-bold">Sem foto</span>
+                            <span className="text-[9px] text-zinc-400 dark:text-gray-500 font-bold">Sem foto</span>
                           )}
                         </div>
                         <select
                           value={variacao.imagem_url || ''}
                           onChange={(e) => handleInlineChange(variacao.id, 'imagem_url', e.target.value)}
-                          className="bg-[#121212] border border-[#c59b5f]/25 rounded text-[10px] text-[#c59b5f] px-1.5 py-1 w-28 focus:border-[#c59b5f] focus:outline-none"
+                          className="bg-white dark:bg-[#121212] border border-zinc-300 dark:border-[#c59b5f]/25 rounded text-[10px] text-[#a07b46] dark:text-[#c59b5f] px-1.5 py-1 w-28 focus:border-[#c59b5f] focus:outline-none"
                         >
                           <option value="">Nenhuma</option>
                           {productImages.map((img, idx) => {
@@ -357,7 +357,7 @@ export default function VariacoesTable({ variacoes = [], onChange, productName =
                         min="0"
                         value={variacao.estoque}
                         onChange={(e) => handleInlineChange(variacao.id, 'estoque', e.target.value)}
-                        className="h-8 text-center text-xs bg-[#121212] border-[#c59b5f]/20 text-white focus:border-[#c59b5f] focus-visible:ring-0 focus-visible:ring-offset-0 focus-visible:border-[#c59b5f] focus:outline-none w-20 mx-auto"
+                        className="h-8 text-center text-xs bg-white dark:bg-[#121212] border-zinc-300 dark:border-[#c59b5f]/20 text-zinc-900 dark:text-white focus:border-[#c59b5f] focus-visible:ring-0 focus-visible:ring-offset-0 focus-visible:border-[#c59b5f] focus:outline-none w-20 mx-auto"
                       />
                     </td>
 
@@ -369,7 +369,7 @@ export default function VariacoesTable({ variacoes = [], onChange, productName =
                         value={variacao.preco || ''}
                         placeholder="Usar base"
                         onChange={(e) => handleInlineChange(variacao.id, 'preco', e.target.value)}
-                        className="h-8 text-xs font-mono bg-[#121212] border-[#c59b5f]/20 text-white focus:border-[#c59b5f] focus-visible:ring-0 focus-visible:ring-offset-0 focus-visible:border-[#c59b5f] focus:outline-none w-32"
+                        className="h-8 text-xs font-mono bg-white dark:bg-[#121212] border-zinc-300 dark:border-[#c59b5f]/20 text-zinc-900 dark:text-white focus:border-[#c59b5f] focus-visible:ring-0 focus-visible:ring-offset-0 focus-visible:border-[#c59b5f] focus:outline-none w-32"
                       />
                     </td>
 
@@ -381,7 +381,7 @@ export default function VariacoesTable({ variacoes = [], onChange, productName =
                         value={variacao.preco_atacado || ''}
                         placeholder="Usar base"
                         onChange={(e) => handleInlineChange(variacao.id, 'preco_atacado', e.target.value)}
-                        className="h-8 text-xs font-mono bg-[#121212] border-[#c59b5f]/20 text-white focus:border-[#c59b5f] focus-visible:ring-0 focus-visible:ring-offset-0 focus-visible:border-[#c59b5f] focus:outline-none w-32"
+                        className="h-8 text-xs font-mono bg-white dark:bg-[#121212] border-zinc-300 dark:border-[#c59b5f]/20 text-zinc-900 dark:text-white focus:border-[#c59b5f] focus-visible:ring-0 focus-visible:ring-offset-0 focus-visible:border-[#c59b5f] focus:outline-none w-32"
                       />
                     </td>
 
@@ -399,7 +399,7 @@ export default function VariacoesTable({ variacoes = [], onChange, productName =
                         size="icon"
                         variant="ghost"
                         onClick={() => handleRemove(variacao.id)}
-                        className="text-red-500 hover:text-red-400 hover:bg-red-950/30 h-8 w-8"
+                        className="text-red-500 hover:text-red-600 dark:hover:text-red-400 hover:bg-red-50 dark:hover:bg-red-950/30 h-8 w-8"
                       >
                         <Trash2 className="w-4 h-4" />
                       </Button>

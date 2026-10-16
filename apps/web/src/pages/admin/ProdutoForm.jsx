@@ -692,17 +692,17 @@ export default function ProdutoForm() {
 
   return (
     <form onSubmit={handleSubmit} className="max-w-5xl mx-auto space-y-8 pb-12">
-      <div className="flex items-center justify-between bg-card p-4 rounded-xl border border-[#c59b5f]/10 shadow-sm sticky top-0 z-30 font-sans">
+      <div className="flex items-center justify-between bg-white dark:bg-card p-4 rounded-xl border border-zinc-200 dark:border-[#c59b5f]/10 shadow-sm sticky top-0 z-30 font-sans">
         <div className="flex items-center gap-4">
-          <Button type="button" variant="ghost" size="icon" onClick={() => navigate('/admin/produtos')} className="text-white hover:bg-[#1a1a1a]">
+          <Button type="button" variant="ghost" size="icon" onClick={() => navigate('/admin/produtos')} className="text-zinc-700 dark:text-white hover:bg-zinc-100 dark:hover:bg-[#1a1a1a]">
             <ArrowLeft className="w-5 h-5" />
           </Button>
           <div>
-            <h1 className="text-xl font-bold text-white font-serif">{isEdit ? 'Editar Produto' : 'Novo Produto'}</h1>
+            <h1 className="text-xl font-bold text-zinc-900 dark:text-white font-serif">{isEdit ? 'Editar Produto' : 'Novo Produto'}</h1>
           </div>
         </div>
         <div className="flex items-center gap-3">
-          <Button type="button" variant="outline" onClick={() => navigate('/admin/produtos')} disabled={saving} className="bg-[#121212] border-[#c59b5f]/25 text-white">
+          <Button type="button" variant="outline" onClick={() => navigate('/admin/produtos')} disabled={saving} className="bg-white dark:bg-[#121212] border-zinc-300 dark:border-[#c59b5f]/25 text-zinc-700 dark:text-white hover:bg-zinc-50 dark:hover:bg-[#181818]">
             <X className="w-4 h-4 mr-2" /> Cancelar
           </Button>
           <Button type="submit" disabled={saving} className="bg-[#c59b5f] hover:bg-[#c59b5f]/90 text-black font-bold">
@@ -713,37 +713,37 @@ export default function ProdutoForm() {
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 text-left font-sans">
         <div className="lg:col-span-2 space-y-8">
-          <section className="bg-card p-6 rounded-xl border border-[#c59b5f]/10 shadow-sm space-y-6">
-            <h2 className="text-lg font-bold border-b border-[#c59b5f]/20 pb-2 text-white font-serif">Informações Básicas</h2>
+          <section className="bg-white dark:bg-card p-6 rounded-xl border border-zinc-200 dark:border-[#c59b5f]/10 shadow-sm space-y-6">
+            <h2 className="text-lg font-bold border-b border-zinc-200 dark:border-[#c59b5f]/20 pb-2 text-zinc-900 dark:text-white font-serif">Informações Básicas</h2>
             
             <div className="space-y-4">
               <div className="space-y-1.5">
-                  <label className="text-sm font-medium block text-gray-300">
-                    Nome do Produto * <span className="text-xs text-gray-500 font-normal ml-1">(Título exibido na loja)</span>
+                  <label className="text-sm font-medium block text-zinc-700 dark:text-gray-300">
+                    Nome do Produto * <span className="text-xs text-zinc-500 dark:text-gray-500 font-normal ml-1">(Título exibido na loja)</span>
                   </label>
-                  <Input required value={formData.name} onChange={(e) => handleInputChange('name', e.target.value)} placeholder="Ex: Conjunto Rendado Paris" className="bg-[#121212] border-[#c59b5f]/20 text-white font-medium" />
+                  <Input required value={formData.name} onChange={(e) => handleInputChange('name', e.target.value)} placeholder="Ex: Conjunto Rendado Paris" className="bg-white dark:bg-[#121212] border-zinc-300 dark:border-[#c59b5f]/20 text-zinc-900 dark:text-white font-medium" />
                 </div>
 
                 {/* BLOCO SEO + IA */}
-                <div className="bg-[#1a1a1a] p-4 rounded-lg border border-[#c59b5f]/30 mt-2 space-y-4 relative">
-                  <div className="absolute -top-3 left-3 bg-card px-2 text-xs font-bold text-[#c59b5f] flex items-center gap-1.5">
+                <div className="bg-amber-50/50 dark:bg-[#1a1a1a] p-4 rounded-lg border border-amber-200 dark:border-[#c59b5f]/30 mt-2 space-y-4 relative">
+                  <div className="absolute -top-3 left-3 bg-white dark:bg-card border border-amber-200 dark:border-transparent rounded px-2 text-xs font-bold text-[#a07b46] dark:text-[#c59b5f] flex items-center gap-1.5 shadow-xs">
                     <Sparkles className="w-3.5 h-3.5" /> Google SEO & IA
                   </div>
                   
                   <div className="pt-2 grid grid-cols-1 gap-4">
                     <div>
-                      <label className="text-xs font-bold mb-1.5 text-[#c59b5f] flex justify-between">
+                      <label className="text-xs font-bold mb-1.5 text-[#a07b46] dark:text-[#c59b5f] flex justify-between">
                         Título SEO
-                        <span className="text-gray-500 font-normal">Máx 60 caracteres</span>
+                        <span className="text-zinc-500 dark:text-gray-500 font-normal">Máx 60 caracteres</span>
                       </label>
-                      <Input type="text" value={formData.seo_title} onChange={(e) => handleInputChange('seo_title', e.target.value)} placeholder="Gerado automaticamente pela IA..." className="bg-[#121212] border-[#c59b5f]/20 text-white text-sm" />
+                      <Input type="text" value={formData.seo_title} onChange={(e) => handleInputChange('seo_title', e.target.value)} placeholder="Gerado automaticamente pela IA..." className="bg-white dark:bg-[#121212] border-zinc-300 dark:border-[#c59b5f]/20 text-zinc-900 dark:text-white text-sm" />
                     </div>
                     <div>
-                      <label className="text-xs font-bold mb-1.5 text-[#c59b5f] flex justify-between">
+                      <label className="text-xs font-bold mb-1.5 text-[#a07b46] dark:text-[#c59b5f] flex justify-between">
                         Meta Description
-                        <span className="text-gray-500 font-normal">Máx 160 caracteres</span>
+                        <span className="text-zinc-500 dark:text-gray-500 font-normal">Máx 160 caracteres</span>
                       </label>
-                      <Textarea value={formData.seo_meta_description} onChange={(e) => handleInputChange('seo_meta_description', e.target.value)} placeholder="Gerado automaticamente pela IA com funil de Varejo/Atacado..." className="bg-[#121212] border-[#c59b5f]/20 text-white text-sm min-h-[60px]" />
+                      <Textarea value={formData.seo_meta_description} onChange={(e) => handleInputChange('seo_meta_description', e.target.value)} placeholder="Gerado automaticamente pela IA com funil de Varejo/Atacado..." className="bg-white dark:bg-[#121212] border-zinc-300 dark:border-[#c59b5f]/20 text-zinc-900 dark:text-white text-sm min-h-[60px]" />
                     </div>
                     
                     <div className="pt-2">
@@ -753,26 +753,26 @@ export default function ProdutoForm() {
                             <Sparkles className="w-4 h-4" /> Gerar Textos e SEO Automaticamente com IA
                           </Button>
                         </DialogTrigger>
-                        <DialogContent className="sm:max-w-xl rounded-2xl bg-[#1a1a1a] border border-[#c59b5f]/30 text-white shadow-2xl p-6">
+                        <DialogContent className="sm:max-w-xl rounded-2xl bg-white dark:bg-[#1a1a1a] border border-zinc-200 dark:border-[#c59b5f]/30 text-zinc-900 dark:text-white shadow-2xl p-6">
                           <DialogHeader className="mb-4 text-left">
-                            <DialogTitle className="text-xl font-serif font-bold text-[#c59b5f] flex items-center gap-2">
+                            <DialogTitle className="text-xl font-serif font-bold text-[#a07b46] dark:text-[#c59b5f] flex items-center gap-2">
                               <Sparkles className="w-5 h-5" /> Assistente de Descrições IA
                             </DialogTitle>
-                            <DialogDescription className="text-gray-400">
+                            <DialogDescription className="text-zinc-600 dark:text-gray-400">
                               O Gemini vai criar todas as descrições das abas e as tags de SEO otimizadas para Google.
                             </DialogDescription>
                           </DialogHeader>
 
-                          <div className="space-y-4 py-2 text-left text-gray-300">
+                          <div className="space-y-4 py-2 text-left text-zinc-700 dark:text-gray-300">
                             <div className="space-y-1.5">
                               <label className="text-sm font-medium">Estilo Principal</label>
-                              <select className="flex h-10 w-full rounded-md border border-[#c59b5f]/25 bg-[#121212] px-3 py-2 text-sm text-white" value={aiEstilo} onChange={e => setAiEstilo(e.target.value)}>
+                              <select className="flex h-10 w-full rounded-md border border-zinc-300 dark:border-[#c59b5f]/25 bg-white dark:bg-[#121212] px-3 py-2 text-sm text-zinc-900 dark:text-white" value={aiEstilo} onChange={e => setAiEstilo(e.target.value)}>
                                 {estilosList.map(e => <option key={e.value} value={e.value}>{e.label}</option>)}
                               </select>
                             </div>
                             <div className="space-y-1.5">
                               <label className="text-sm font-medium">Tecido Principal</label>
-                              <select className="flex h-10 w-full rounded-md border border-[#c59b5f]/25 bg-[#121212] px-3 py-2 text-sm text-white" value={aiTecido} onChange={e => setAiTecido(e.target.value)}>
+                              <select className="flex h-10 w-full rounded-md border border-zinc-300 dark:border-[#c59b5f]/25 bg-white dark:bg-[#121212] px-3 py-2 text-sm text-zinc-900 dark:text-white" value={aiTecido} onChange={e => setAiTecido(e.target.value)}>
                                 {tecidosList.map(t => <option key={t.value} value={t.value}>{t.label}</option>)}
                               </select>
                             </div>
@@ -780,26 +780,26 @@ export default function ProdutoForm() {
                               <label className="text-sm font-medium block">Diferenciais e Destaques (Selecione quantos desejar)</label>
                               <div className="grid grid-cols-2 gap-2 mt-2">
                                 {destaquesList.map(destaque => (
-                                  <label key={destaque.value} className="flex items-center space-x-2 cursor-pointer bg-[#121212] p-2 rounded border border-[#c59b5f]/10 hover:border-[#c59b5f]/40 transition-colors">
+                                  <label key={destaque.value} className="flex items-center space-x-2 cursor-pointer bg-zinc-50 dark:bg-[#121212] p-2 rounded border border-zinc-200 dark:border-[#c59b5f]/10 hover:border-[#c59b5f]/40 transition-colors">
                                     <input 
                                       type="checkbox" 
-                                      className="rounded border-gray-600 bg-gray-700 text-[#c59b5f] focus:ring-[#c59b5f]"
+                                      className="rounded border-gray-400 dark:border-gray-600 bg-white dark:bg-gray-700 text-[#c59b5f] focus:ring-[#c59b5f]"
                                       checked={aiDestaques.includes(destaque.value)}
                                       onChange={(e) => {
                                         if (e.target.checked) setAiDestaques(prev => [...prev, destaque.value]);
                                         else setAiDestaques(prev => prev.filter(v => v !== destaque.value));
                                       }}
                                     />
-                                    <span className="text-xs">{destaque.label}</span>
+                                    <span className="text-xs text-zinc-800 dark:text-gray-300">{destaque.label}</span>
                                   </label>
                                 ))}
                               </div>
                             </div>
                           </div>
                           
-                          <div className="mt-6 flex justify-end gap-3 border-t border-[#c59b5f]/20 pt-4">
+                          <div className="mt-6 flex justify-end gap-3 border-t border-zinc-200 dark:border-[#c59b5f]/20 pt-4">
                             <DialogClose asChild>
-                              <Button type="button" variant="outline" className="border-[#c59b5f]/20 text-gray-300 hover:text-white">Cancelar</Button>
+                              <Button type="button" variant="outline" className="border-zinc-300 dark:border-[#c59b5f]/20 text-zinc-700 dark:text-gray-300 hover:text-zinc-900 dark:hover:text-white">Cancelar</Button>
                             </DialogClose>
                             <Button type="button" onClick={handleGenerateAI} disabled={aiLoading} className="bg-[#c59b5f] text-black font-bold flex items-center gap-1.5">
                               {aiLoading ? <Loader2 className="w-4 h-4 animate-spin" /> : <Sparkles className="w-4 h-4" />} Gerar com Gemini AI
@@ -813,38 +813,38 @@ export default function ProdutoForm() {
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div>
-                  <label className="text-sm font-medium mb-1.5 block text-gray-300">Categoria *</label>
-                  <select required className="flex h-10 w-full rounded-md border border-[#c59b5f]/25 bg-[#121212] px-3 py-2 text-sm text-white focus:outline-none" value={formData.categoria_id} onChange={(e) => handleInputChange('categoria_id', e.target.value)}>
+                  <label className="text-sm font-medium mb-1.5 block text-zinc-700 dark:text-gray-300">Categoria *</label>
+                  <select required className="flex h-10 w-full rounded-md border border-zinc-300 dark:border-[#c59b5f]/25 bg-white dark:bg-[#121212] px-3 py-2 text-sm text-zinc-900 dark:text-white focus:outline-none" value={formData.categoria_id} onChange={(e) => handleInputChange('categoria_id', e.target.value)}>
                     <option value="">Selecionar Categoria...</option>
                     {categorias.map(c => <option key={c.id} value={c.id}>{c.nome}</option>)}
                   </select>
                 </div>
                 <div>
-                  <label className="text-sm font-medium mb-1.5 flex items-center justify-between text-gray-300">
+                  <label className="text-sm font-medium mb-1.5 flex items-center justify-between text-zinc-700 dark:text-gray-300">
                     <span>NCM (Fiscal)</span>
-                    <span className="text-[10px] text-[#c59b5f]" title="Suede/Renda = 6108.32.00 | Algodão = 6208.21.00">❓ Automático</span>
+                    <span className="text-[10px] text-[#a07b46] dark:text-[#c59b5f]" title="Suede/Renda = 6108.32.00 | Algodão = 6208.21.00">❓ Automático</span>
                   </label>
-                  <input type="text" placeholder="Ex: 6208.21.00" className="flex h-10 w-full rounded-md border border-[#c59b5f]/25 bg-[#121212] px-3 py-2 text-sm text-white focus:outline-none" value={formData.ncm || ''} onChange={handleNcmChange} />
+                  <input type="text" placeholder="Ex: 6208.21.00" className="flex h-10 w-full rounded-md border border-zinc-300 dark:border-[#c59b5f]/25 bg-white dark:bg-[#121212] px-3 py-2 text-sm text-zinc-900 dark:text-white focus:outline-none" value={formData.ncm || ''} onChange={handleNcmChange} />
                 </div>
                 
                 <div>
-                  <label className="text-sm font-medium mb-1.5 block text-gray-300 flex items-center justify-between">
+                  <label className="text-sm font-medium mb-1.5 block text-zinc-700 dark:text-gray-300 flex items-center justify-between">
                     <span>Referência / Código Interno *</span>
-                    <button type="button" onClick={triggerAutoReference} className="text-[10px] text-[#c59b5f] flex items-center gap-1 hover:underline font-bold bg-[#c59b5f]/5 px-2 py-0.5 rounded border border-[#c59b5f]/20">
+                    <button type="button" onClick={triggerAutoReference} className="text-[10px] text-[#a07b46] dark:text-[#c59b5f] flex items-center gap-1 hover:underline font-bold bg-[#c59b5f]/5 px-2 py-0.5 rounded border border-[#c59b5f]/20">
                       <RefreshCw className="w-2.5 h-2.5" /> Gerar Automático
                     </button>
                   </label>
-                  <Input required value={formData.reference} onChange={(e) => handleInputChange('reference', e.target.value)} className="bg-[#121212] border-[#c59b5f]/20 text-white font-mono" />
+                  <Input required value={formData.reference} onChange={(e) => handleInputChange('reference', e.target.value)} className="bg-white dark:bg-[#121212] border-zinc-300 dark:border-[#c59b5f]/20 text-zinc-900 dark:text-white font-mono" />
                 </div>
               </div>
 
               <div>
-                <label className="text-sm font-medium mb-1.5 block text-gray-300">Coleções Especiais (Opcional)</label>
-                <div className="flex flex-wrap gap-3 p-3 bg-[#1a1a1a] border border-[#c59b5f]/25 rounded-md max-h-32 overflow-y-auto">
+                <label className="text-sm font-medium mb-1.5 block text-zinc-700 dark:text-gray-300">Coleções Especiais (Opcional)</label>
+                <div className="flex flex-wrap gap-3 p-3 bg-zinc-50 dark:bg-[#1a1a1a] border border-zinc-200 dark:border-[#c59b5f]/25 rounded-md max-h-32 overflow-y-auto">
                   {colecoes.map(col => {
                     const isChecked = formData.colecoes_ids.includes(col.id);
                     return (
-                      <label key={col.id} className="flex items-center gap-2 text-sm text-gray-300 cursor-pointer bg-[#121212] px-3 py-1.5 rounded border border-gray-800 hover:border-[#c59b5f]/50 transition-colors">
+                      <label key={col.id} className="flex items-center gap-2 text-sm text-zinc-800 dark:text-gray-300 cursor-pointer bg-white dark:bg-[#121212] px-3 py-1.5 rounded border border-zinc-200 dark:border-gray-800 hover:border-[#c59b5f]/50 transition-colors shadow-xs">
                         <input
                           type="checkbox"
                           checked={isChecked}
@@ -857,62 +857,62 @@ export default function ProdutoForm() {
                             }
                             handleInputChange('colecoes_ids', ids.join(','));
                           }}
-                          className="rounded bg-black border-gray-600 text-[#c59b5f] focus:ring-[#c59b5f]"
+                          className="rounded bg-white dark:bg-black border-zinc-300 dark:border-gray-600 text-[#c59b5f] focus:ring-[#c59b5f]"
                         />
                         {col.nome}
                       </label>
                     );
                   })}
-                  {colecoes.length === 0 && <span className="text-xs text-gray-500">Nenhuma coleção encontrada</span>}
+                  {colecoes.length === 0 && <span className="text-xs text-zinc-500 dark:text-gray-500">Nenhuma coleção encontrada</span>}
                 </div>
               </div>
 
               <div>
-                <label className="text-sm font-medium mb-1.5 block text-[#c59b5f]">
+                <label className="text-sm font-medium mb-1.5 block text-[#a07b46] dark:text-[#c59b5f]">
                   Complete o Look (Cross-sell)
                 </label>
-                <select className="flex h-10 w-full rounded-md border border-[#c59b5f]/40 bg-[#1a1a1a] px-3 py-2 text-sm text-white focus:outline-none" value={formData.cross_sell_id} onChange={(e) => handleInputChange('cross_sell_id', e.target.value)}>
+                <select className="flex h-10 w-full rounded-md border border-zinc-300 dark:border-[#c59b5f]/40 bg-white dark:bg-[#1a1a1a] px-3 py-2 text-sm text-zinc-900 dark:text-white focus:outline-none" value={formData.cross_sell_id} onChange={(e) => handleInputChange('cross_sell_id', e.target.value)}>
                   <option value="">Nenhum (Venda isolada)</option>
                   {allProducts.map(p => <option key={p.id} value={p.id}>{p.name} - {p.reference}</option>)}
                 </select>
-                <p className="text-xs text-gray-400 mt-1">Selecione uma peça que combina perfeitamente para incentivar a compra do conjunto (Ex: calcinha para combinar com este sutiã).</p>
+                <p className="text-xs text-zinc-500 dark:text-gray-400 mt-1">Selecione uma peça que combina perfeitamente para incentivar a compra do conjunto (Ex: calcinha para combinar com este sutiã).</p>
               </div>
 
-              <div className="flex items-center justify-between p-4 bg-[#1a1a1a] rounded-xl border border-[#c59b5f]/20 shadow-sm mt-2">
+              <div className="flex items-center justify-between p-4 bg-zinc-50 dark:bg-[#1a1a1a] rounded-xl border border-zinc-200 dark:border-[#c59b5f]/20 shadow-sm mt-2">
                 <div>
-                  <h4 className="font-bold text-xs text-white">Status de Exibição</h4>
-                  <p className="text-xs text-gray-400">Deixe inativo para esconder o produto na loja.</p>
+                  <h4 className="font-bold text-xs text-zinc-900 dark:text-white">Status de Exibição</h4>
+                  <p className="text-xs text-zinc-500 dark:text-gray-400">Deixe inativo para esconder o produto na loja.</p>
                 </div>
                 <Switch checked={formData.status} onCheckedChange={(c) => handleInputChange('status', c)} className="data-[state=checked]:bg-[#c59b5f]" />
               </div>
 
-              <div className="space-y-4 pt-4 border-t border-[#c59b5f]/20">
-                <h3 className="text-xs font-black text-gray-300 uppercase tracking-widest">Destaques e Vitrines na Home</h3>
+              <div className="space-y-4 pt-4 border-t border-zinc-200 dark:border-[#c59b5f]/20">
+                <h3 className="text-xs font-black text-zinc-700 dark:text-gray-300 uppercase tracking-widest">Destaques e Vitrines na Home</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div className="flex items-center justify-between p-4 bg-[#1a1a1a] rounded-xl border border-[#c59b5f]/20 hover:border-[#c59b5f]/40 transition-all shadow-sm">
+                  <div className="flex items-center justify-between p-4 bg-zinc-50 dark:bg-[#1a1a1a] rounded-xl border border-zinc-200 dark:border-[#c59b5f]/20 hover:border-[#c59b5f]/40 transition-all shadow-sm">
                     <div>
-                      <h4 className="font-bold text-xs text-white">Lançamentos Recentes</h4>
+                      <h4 className="font-bold text-xs text-zinc-900 dark:text-white">Lançamentos Recentes</h4>
                     </div>
                     <Switch checked={formData.is_novidade} onCheckedChange={(c) => handleInputChange('is_novidade', c)} className="data-[state=checked]:bg-[#c59b5f]" />
                   </div>
 
-                  <div className="flex items-center justify-between p-4 bg-[#1a1a1a] rounded-xl border border-[#c59b5f]/20 hover:border-[#c59b5f]/40 transition-all shadow-sm">
+                  <div className="flex items-center justify-between p-4 bg-zinc-50 dark:bg-[#1a1a1a] rounded-xl border border-zinc-200 dark:border-[#c59b5f]/20 hover:border-[#c59b5f]/40 transition-all shadow-sm">
                     <div>
-                      <h4 className="font-bold text-xs text-white">Ofertas Exclusivas</h4>
+                      <h4 className="font-bold text-xs text-zinc-900 dark:text-white">Ofertas Exclusivas</h4>
                     </div>
                     <Switch checked={formData.is_promocao} onCheckedChange={(c) => handleInputChange('is_promocao', c)} className="data-[state=checked]:bg-[#c59b5f]" />
                   </div>
 
-                  <div className="flex items-center justify-between p-4 bg-[#1a1a1a] rounded-xl border border-[#c59b5f]/20 hover:border-[#c59b5f]/40 transition-all shadow-sm">
+                  <div className="flex items-center justify-between p-4 bg-zinc-50 dark:bg-[#1a1a1a] rounded-xl border border-zinc-200 dark:border-[#c59b5f]/20 hover:border-[#c59b5f]/40 transition-all shadow-sm">
                     <div>
-                      <h4 className="font-bold text-xs text-white">Mais Vendidos da Avante</h4>
+                      <h4 className="font-bold text-xs text-zinc-900 dark:text-white">Mais Vendidos da Avante</h4>
                     </div>
                     <Switch checked={formData.is_mais_vendido} onCheckedChange={(c) => handleInputChange('is_mais_vendido', c)} className="data-[state=checked]:bg-[#c59b5f]" />
                   </div>
 
-                  <div className="flex items-center justify-between p-4 bg-[#1a1a1a] rounded-xl border border-[#c59b5f]/20 hover:border-[#c59b5f]/40 transition-all shadow-sm">
+                  <div className="flex items-center justify-between p-4 bg-zinc-50 dark:bg-[#1a1a1a] rounded-xl border border-zinc-200 dark:border-[#c59b5f]/20 hover:border-[#c59b5f]/40 transition-all shadow-sm">
                     <div>
-                      <h4 className="font-bold text-xs text-white">Destaques de Ouro</h4>
+                      <h4 className="font-bold text-xs text-zinc-900 dark:text-white">Destaques de Ouro</h4>
                     </div>
                     <Switch checked={formData.is_favorito} onCheckedChange={(c) => handleInputChange('is_favorito', c)} className="data-[state=checked]:bg-[#c59b5f]" />
                   </div>
@@ -921,15 +921,15 @@ export default function ProdutoForm() {
             </div>
           </section>
 
-          <section className="bg-card p-6 rounded-xl border border-[#c59b5f]/10 shadow-sm space-y-6 relative">
-            <div className="flex justify-between items-center border-b border-[#c59b5f]/20 pb-2">
-              <h2 className="text-lg font-bold text-white font-serif">Preço e Logística</h2>
+          <section className="bg-white dark:bg-card p-6 rounded-xl border border-zinc-200 dark:border-[#c59b5f]/10 shadow-sm space-y-6 relative">
+            <div className="flex justify-between items-center border-b border-zinc-200 dark:border-[#c59b5f]/20 pb-2">
+              <h2 className="text-lg font-bold text-zinc-900 dark:text-white font-serif">Preço e Logística</h2>
               <Button 
                 type="button" 
                 variant="outline" 
                 size="sm"
                 onClick={() => setIsCalculadoraOpen(true)}
-                className="bg-[#121212] border-[#c59b5f]/50 text-[#c59b5f] hover:bg-[#c59b5f]/10 hover:text-white"
+                className="bg-white dark:bg-[#121212] border-zinc-300 dark:border-[#c59b5f]/50 text-[#a07b46] dark:text-[#c59b5f] hover:bg-zinc-50 dark:hover:bg-[#c59b5f]/10 hover:text-[#c59b5f]"
               >
                 <Calculator className="w-4 h-4 mr-2" />
                 Calculadora Tributária
@@ -938,12 +938,12 @@ export default function ProdutoForm() {
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
-                <label className="text-sm font-medium mb-1.5 block text-gray-300">Preço de Venda Varejo (R$) *</label>
-                <Input required type="number" step="0.01" value={formData.price} onChange={(e) => handleInputChange('price', e.target.value)} className="bg-[#121212] border-[#c59b5f]/20 text-white" />
+                <label className="text-sm font-medium mb-1.5 block text-zinc-700 dark:text-gray-300">Preço de Venda Varejo (R$) *</label>
+                <Input required type="number" step="0.01" value={formData.price} onChange={(e) => handleInputChange('price', e.target.value)} className="bg-white dark:bg-[#121212] border-zinc-300 dark:border-[#c59b5f]/20 text-zinc-900 dark:text-white" />
               </div>
               <div>
-                <label className="text-sm font-medium mb-1.5 block text-gray-300">Preço de Atacado B2B (R$)</label>
-                <Input type="number" step="0.01" value={formData.price_wholesale} onChange={(e) => handleInputChange('price_wholesale', e.target.value)} className="bg-[#121212] border-[#c59b5f]/20 text-white" />
+                <label className="text-sm font-medium mb-1.5 block text-zinc-700 dark:text-gray-300">Preço de Atacado B2B (R$)</label>
+                <Input type="number" step="0.01" value={formData.price_wholesale} onChange={(e) => handleInputChange('price_wholesale', e.target.value)} className="bg-white dark:bg-[#121212] border-zinc-300 dark:border-[#c59b5f]/20 text-zinc-900 dark:text-white" />
               </div>
             </div>
             
@@ -961,25 +961,25 @@ export default function ProdutoForm() {
             
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pt-2">
               <div>
-                <label className="text-sm font-medium mb-1.5 block text-gray-300">Peso (g)</label>
-                <Input type="number" value={formData.peso_g} onChange={(e) => handleInputChange('peso_g', e.target.value)} placeholder="Ex: 150" className="bg-[#121212] border-[#c59b5f]/20 text-white" />
+                <label className="text-sm font-medium mb-1.5 block text-zinc-700 dark:text-gray-300">Peso (g)</label>
+                <Input type="number" value={formData.peso_g} onChange={(e) => handleInputChange('peso_g', e.target.value)} placeholder="Ex: 150" className="bg-white dark:bg-[#121212] border-zinc-300 dark:border-[#c59b5f]/20 text-zinc-900 dark:text-white" />
               </div>
               <div>
-                <label className="text-sm font-medium mb-1.5 block text-gray-300">Altura (cm)</label>
-                <Input type="number" value={formData.altura_cm} onChange={(e) => handleInputChange('altura_cm', e.target.value)} placeholder="Ex: 5" className="bg-[#121212] border-[#c59b5f]/20 text-white" />
+                <label className="text-sm font-medium mb-1.5 block text-zinc-700 dark:text-gray-300">Altura (cm)</label>
+                <Input type="number" value={formData.altura_cm} onChange={(e) => handleInputChange('altura_cm', e.target.value)} placeholder="Ex: 5" className="bg-white dark:bg-[#121212] border-zinc-300 dark:border-[#c59b5f]/20 text-zinc-900 dark:text-white" />
               </div>
               <div>
-                <label className="text-sm font-medium mb-1.5 block text-gray-300">Largura (cm)</label>
-                <Input type="number" value={formData.largura_cm} onChange={(e) => handleInputChange('largura_cm', e.target.value)} placeholder="Ex: 11" className="bg-[#121212] border-[#c59b5f]/20 text-white" />
+                <label className="text-sm font-medium mb-1.5 block text-zinc-700 dark:text-gray-300">Largura (cm)</label>
+                <Input type="number" value={formData.largura_cm} onChange={(e) => handleInputChange('largura_cm', e.target.value)} placeholder="Ex: 11" className="bg-white dark:bg-[#121212] border-zinc-300 dark:border-[#c59b5f]/20 text-zinc-900 dark:text-white" />
               </div>
               <div>
-                <label className="text-sm font-medium mb-1.5 block text-gray-300">Profundidade (cm)</label>
-                <Input type="number" value={formData.comprimento_cm} onChange={(e) => handleInputChange('comprimento_cm', e.target.value)} placeholder="Ex: 20" className="bg-[#121212] border-[#c59b5f]/20 text-white" />
+                <label className="text-sm font-medium mb-1.5 block text-zinc-700 dark:text-gray-300">Profundidade (cm)</label>
+                <Input type="number" value={formData.comprimento_cm} onChange={(e) => handleInputChange('comprimento_cm', e.target.value)} placeholder="Ex: 20" className="bg-white dark:bg-[#121212] border-zinc-300 dark:border-[#c59b5f]/20 text-zinc-900 dark:text-white" />
               </div>
             </div>
           </section>
 
-          <section className="bg-card p-6 rounded-xl border border-[#c59b5f]/10 shadow-sm">
+          <section className="bg-white dark:bg-card p-6 rounded-xl border border-zinc-200 dark:border-[#c59b5f]/10 shadow-sm">
             <VariacoesTable 
               variacoes={variacoes} 
               onChange={setVariacoes} 
@@ -991,13 +991,13 @@ export default function ProdutoForm() {
             />
           </section>
 
-          <section className="bg-card p-6 rounded-xl border border-[#c59b5f]/10 shadow-sm space-y-6">
-            <div className="flex items-center justify-between border-b border-[#c59b5f]/20 pb-2 font-sans">
-              <h2 className="text-lg font-bold text-white font-serif">Descrições Detalhadas em Abas</h2>
-              <span className="text-xs text-gray-400">Preenchidas via IA na seção Informações Básicas acima</span>
+          <section className="bg-white dark:bg-card p-6 rounded-xl border border-zinc-200 dark:border-[#c59b5f]/10 shadow-sm space-y-6">
+            <div className="flex items-center justify-between border-b border-zinc-200 dark:border-[#c59b5f]/20 pb-2 font-sans">
+              <h2 className="text-lg font-bold text-zinc-900 dark:text-white font-serif">Descrições Detalhadas em Abas</h2>
+              <span className="text-xs text-zinc-500 dark:text-gray-400">Preenchidas via IA na seção Informações Básicas acima</span>
             </div>
             
-            <div className="flex border-b border-[#c59b5f]/20 overflow-x-auto scrollbar-hide">
+            <div className="flex border-b border-zinc-200 dark:border-[#c59b5f]/20 overflow-x-auto scrollbar-hide">
               {[
                 { key: 'desc_geral', label: 'Geral' },
                 { key: 'desc_tecido', label: 'Tecido' },
@@ -1012,8 +1012,8 @@ export default function ProdutoForm() {
                   onClick={() => setActiveDescTab(tab.key)}
                   className={`px-4 py-2 text-xs font-bold uppercase tracking-wider whitespace-nowrap border-b-2 transition-all ${
                     activeDescTab === tab.key 
-                      ? 'border-[#c59b5f] text-[#c59b5f]' 
-                      : 'border-transparent text-gray-400 hover:text-white'
+                      ? 'border-[#c59b5f] text-[#a07b46] dark:text-[#c59b5f]' 
+                      : 'border-transparent text-zinc-500 dark:text-gray-400 hover:text-zinc-900 dark:hover:text-white'
                   }`}
                 >
                   {tab.label}
@@ -1024,38 +1024,38 @@ export default function ProdutoForm() {
             <div className="pt-2">
               {activeDescTab === 'desc_geral' && (
                 <div className="space-y-1.5">
-                  <label className="text-xs font-medium text-gray-300">Descrição Geral</label>
-                  <Textarea value={formData.desc_geral} onChange={(e) => handleInputChange('desc_geral', e.target.value)} className="bg-[#121212] border-[#c59b5f]/20 text-white min-h-[120px]" />
+                  <label className="text-xs font-medium text-zinc-700 dark:text-gray-300">Descrição Geral</label>
+                  <Textarea value={formData.desc_geral} onChange={(e) => handleInputChange('desc_geral', e.target.value)} className="bg-white dark:bg-[#121212] border-zinc-300 dark:border-[#c59b5f]/20 text-zinc-900 dark:text-white min-h-[120px]" />
                 </div>
               )}
               {activeDescTab === 'desc_tecido' && (
                 <div className="space-y-1.5">
-                  <label className="text-xs font-medium text-gray-300">Tecido & Composição</label>
-                  <Textarea value={formData.desc_tecido} onChange={(e) => handleInputChange('desc_tecido', e.target.value)} className="bg-[#121212] border-[#c59b5f]/20 text-white min-h-[120px]" />
+                  <label className="text-xs font-medium text-zinc-700 dark:text-gray-300">Tecido & Composição</label>
+                  <Textarea value={formData.desc_tecido} onChange={(e) => handleInputChange('desc_tecido', e.target.value)} className="bg-white dark:bg-[#121212] border-zinc-300 dark:border-[#c59b5f]/20 text-zinc-900 dark:text-white min-h-[120px]" />
                 </div>
               )}
               {activeDescTab === 'desc_modelagem' && (
                 <div className="space-y-1.5">
-                  <label className="text-xs font-medium text-gray-300">Modelagem & Caimento</label>
-                  <Textarea value={formData.desc_modelagem} onChange={(e) => handleInputChange('desc_modelagem', e.target.value)} className="bg-[#121212] border-[#c59b5f]/20 text-white min-h-[120px]" />
+                  <label className="text-xs font-medium text-zinc-700 dark:text-gray-300">Modelagem & Caimento</label>
+                  <Textarea value={formData.desc_modelagem} onChange={(e) => handleInputChange('desc_modelagem', e.target.value)} className="bg-white dark:bg-[#121212] border-zinc-300 dark:border-[#c59b5f]/20 text-zinc-900 dark:text-white min-h-[120px]" />
                 </div>
               )}
               {activeDescTab === 'desc_cuidados' && (
                 <div className="space-y-1.5">
-                  <label className="text-xs font-medium text-gray-300">Cuidados com a Peça</label>
-                  <Textarea value={formData.desc_cuidados} onChange={(e) => handleInputChange('desc_cuidados', e.target.value)} className="bg-[#121212] border-[#c59b5f]/20 text-white min-h-[120px]" />
+                  <label className="text-xs font-medium text-zinc-700 dark:text-gray-300">Cuidados com a Peça</label>
+                  <Textarea value={formData.desc_cuidados} onChange={(e) => handleInputChange('desc_cuidados', e.target.value)} className="bg-white dark:bg-[#121212] border-zinc-300 dark:border-[#c59b5f]/20 text-zinc-900 dark:text-white min-h-[120px]" />
                 </div>
               )}
               {activeDescTab === 'desc_diferenciais' && (
                 <div className="space-y-1.5">
-                  <label className="text-xs font-medium text-gray-300">Diferenciais do Produto</label>
-                  <Textarea value={formData.desc_diferenciais} onChange={(e) => handleInputChange('desc_diferenciais', e.target.value)} className="bg-[#121212] border-[#c59b5f]/20 text-white min-h-[120px]" />
+                  <label className="text-xs font-medium text-zinc-700 dark:text-gray-300">Diferenciais do Produto</label>
+                  <Textarea value={formData.desc_diferenciais} onChange={(e) => handleInputChange('desc_diferenciais', e.target.value)} className="bg-white dark:bg-[#121212] border-zinc-300 dark:border-[#c59b5f]/20 text-zinc-900 dark:text-white min-h-[120px]" />
                 </div>
               )}
               {activeDescTab === 'desc_compra_segura' && (
                 <div className="space-y-1.5">
-                  <label className="text-xs font-medium text-gray-300">Compra Segura Info</label>
-                  <Textarea value={formData.desc_compra_segura} onChange={(e) => handleInputChange('desc_compra_segura', e.target.value)} className="bg-[#121212] border-[#c59b5f]/20 text-white min-h-[120px]" />
+                  <label className="text-xs font-medium text-zinc-700 dark:text-gray-300">Compra Segura Info</label>
+                  <Textarea value={formData.desc_compra_segura} onChange={(e) => handleInputChange('desc_compra_segura', e.target.value)} className="bg-white dark:bg-[#121212] border-zinc-300 dark:border-[#c59b5f]/20 text-zinc-900 dark:text-white min-h-[120px]" />
                 </div>
               )}
             </div>
@@ -1063,19 +1063,19 @@ export default function ProdutoForm() {
         </div>
 
         <div className="space-y-8 sticky top-24 self-start max-h-[calc(100vh-7rem)] overflow-y-auto pb-2 pr-1">
-          <section className="bg-card p-6 rounded-xl border border-[#c59b5f]/10 shadow-sm space-y-6">
-            <div className="flex items-center justify-between border-b border-[#c59b5f]/20 pb-2">
-              <h2 className="text-lg font-bold text-white font-serif">Mídias e Fotos</h2>
-              <label className="text-xs text-[#c59b5f] hover:underline cursor-pointer flex items-center font-bold">
+          <section className="bg-white dark:bg-card p-6 rounded-xl border border-zinc-200 dark:border-[#c59b5f]/10 shadow-sm space-y-6">
+            <div className="flex items-center justify-between border-b border-zinc-200 dark:border-[#c59b5f]/20 pb-2">
+              <h2 className="text-lg font-bold text-zinc-900 dark:text-white font-serif">Mídias e Fotos</h2>
+              <label className="text-xs text-[#a07b46] dark:text-[#c59b5f] hover:underline cursor-pointer flex items-center font-bold">
                 <Plus className="w-3.5 h-3.5 mr-1" /> Adicionar Fotos/Vídeos
                 <input type="file" multiple accept="image/*, video/*" className="hidden" onChange={handleImageUpload} />
               </label>
             </div>
 
             {images.length === 0 ? (
-              <div className="border-2 border-dashed border-orange-500/40 rounded-2xl p-8 text-center text-gray-400">
+              <div className="border-2 border-dashed border-orange-500/40 rounded-2xl p-8 text-center text-zinc-500 dark:text-gray-400">
                 <ImageIcon className="w-8 h-8 mx-auto mb-2" />
-                <p className="text-xs text-orange-350 font-medium">Nenhuma imagem adicionada.</p>
+                <p className="text-xs text-orange-500 font-medium">Nenhuma imagem adicionada.</p>
               </div>
             ) : (
               <div className="space-y-4">
@@ -1092,10 +1092,10 @@ export default function ProdutoForm() {
                             value={img.label || ''} 
                             onChange={(e) => handleImageLabelChange(index, e.target.value)}
                             placeholder="Nome / Cor da Mídia"
-                            className="text-[10px] bg-[#121212] border border-[#c59b5f]/30 text-white focus:outline-none focus:border-[#c59b5f] w-full px-2 py-1 rounded"
+                            className="text-[10px] bg-white dark:bg-[#121212] border border-zinc-300 dark:border-[#c59b5f]/30 text-zinc-900 dark:text-white focus:outline-none focus:border-[#c59b5f] w-full px-2 py-1 rounded"
                           />
                         </div>
-                        <div className={`relative aspect-[3/4] rounded-xl border overflow-hidden bg-[#121212] group ${isCapa ? 'border-[#c59b5f] ring-2 ring-[#c59b5f]/30' : isVerso ? 'border-blue-500' : 'border-gray-800'}`}>
+                        <div className={`relative aspect-[3/4] rounded-xl border overflow-hidden bg-zinc-100 dark:bg-[#121212] group ${isCapa ? 'border-[#c59b5f] ring-2 ring-[#c59b5f]/30' : isVerso ? 'border-blue-500' : 'border-zinc-200 dark:border-gray-800'}`}>
                           {img.url.match(/\.(mp4|webm|mov)$/i) || (img.file && img.file.type && img.file.type.startsWith('video/')) ? (
                             <video src={img.url} className="w-full h-full object-cover" controls={false} autoPlay muted loop playsInline />
                           ) : (
@@ -1114,9 +1114,9 @@ export default function ProdutoForm() {
               </div>
             )}
 
-            <div className="mt-6 border-t border-[#c59b5f]/10 pt-6">
-              <h3 className="text-sm font-bold text-white font-serif mb-2">Vídeo Externo (YouTube/Vimeo/MP4)</h3>
-              <p className="text-xs text-gray-400 mb-3">
+            <div className="mt-6 border-t border-zinc-200 dark:border-[#c59b5f]/10 pt-6">
+              <h3 className="text-sm font-bold text-zinc-900 dark:text-white font-serif mb-2">Vídeo Externo (YouTube/Vimeo/MP4)</h3>
+              <p className="text-xs text-zinc-500 dark:text-gray-400 mb-3">
                 Para evitar lentidão e travamentos, cole o link do seu vídeo hospedado externamente.
               </p>
               
@@ -1131,7 +1131,7 @@ export default function ProdutoForm() {
                       setFormData({ ...formData, video_url: base ? (isFirst ? base + '#first' : base) : '' });
                     }}
                     placeholder="Ex: https://youtube.com/shorts/... ou link .mp4"
-                    className="w-full bg-[#121212] border border-[#c59b5f]/20 rounded-lg px-4 py-2 text-sm text-white focus:outline-none focus:border-[#c59b5f] focus:ring-1 focus:ring-[#c59b5f]"
+                    className="w-full bg-white dark:bg-[#121212] border border-zinc-300 dark:border-[#c59b5f]/20 rounded-lg px-4 py-2 text-sm text-zinc-900 dark:text-white focus:outline-none focus:border-[#c59b5f] focus:ring-1 focus:ring-[#c59b5f]"
                   />
                 </div>
                 <div className="md:col-span-1">
@@ -1142,7 +1142,7 @@ export default function ProdutoForm() {
                       if (!base) return;
                       setFormData({ ...formData, video_url: e.target.value === 'first' ? base + '#first' : base });
                     }}
-                    className="w-full bg-[#121212] border border-[#c59b5f]/20 rounded-lg px-4 py-2 text-sm text-white focus:outline-none focus:border-[#c59b5f]"
+                    className="w-full bg-white dark:bg-[#121212] border border-zinc-300 dark:border-[#c59b5f]/20 rounded-lg px-4 py-2 text-sm text-zinc-900 dark:text-white focus:outline-none focus:border-[#c59b5f]"
                   >
                     <option value="last">Exibir no Final</option>
                     <option value="first">Exibir como Primeira</option>

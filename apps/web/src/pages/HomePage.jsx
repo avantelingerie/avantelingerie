@@ -363,34 +363,36 @@ export default function HomePage() {
       {/* ==========================================
           SECTION 4: BEST SELLERS (MAIS VENDIDOS)
           ========================================== */}
-      <section id="mais-vendidos" className="py-24 bg-white relative overflow-hidden border-t border-gray-100">
-        <div className="absolute top-0 right-0 w-[450px] h-[450px] bg-[#c59b5f]/5 rounded-full blur-[100px] pointer-events-none" />
+      {(loading || data.maisVendidos.length > 0) && (
+        <section id="mais-vendidos" className="py-24 bg-white relative overflow-hidden border-t border-gray-100">
+          <div className="absolute top-0 right-0 w-[450px] h-[450px] bg-[#c59b5f]/5 rounded-full blur-[100px] pointer-events-none" />
 
-        <div className="container-custom">
-          <div className="text-center mb-16">
-            <span className="text-[10px] md:text-xs font-bold uppercase tracking-[3px] text-[#c59b5f]">
-              Consagrados por Milhares
-            </span>
-            <h2 className="text-3xl md:text-4.5xl font-serif font-bold text-gray-900 mt-2">
-              Mais Vendidos da Avante
-            </h2>
-            <p className="text-gray-500 text-sm md:text-base font-light max-w-lg mx-auto mt-2">
-              Os modelos favoritos eleitos por nossas clientes por seu caimento esculpido e durabilidade.
-            </p>
-            <div className="w-16 h-0.5 bg-[#c59b5f] mx-auto mt-4 rounded-full"></div>
-          </div>
-
-          {loading ? (
-            <ProductGridSkeleton count={4} />
-          ) : (
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 relative z-10">
-              {data.maisVendidos.slice(0, 8).map(p => (
-                <ProductCard key={p.id} produto={p} onComprarAgora={handleComprarAgora} onFavorite={handleFavoriteToggle} />
-              ))}
+          <div className="container-custom">
+            <div className="text-center mb-16">
+              <span className="text-[10px] md:text-xs font-bold uppercase tracking-[3px] text-[#c59b5f]">
+                Consagrados por Milhares
+              </span>
+              <h2 className="text-3xl md:text-4.5xl font-serif font-bold text-gray-900 mt-2">
+                Mais Vendidos da Avante
+              </h2>
+              <p className="text-gray-500 text-sm md:text-base font-light max-w-lg mx-auto mt-2">
+                Os modelos favoritos eleitos por nossas clientes por seu caimento esculpido e durabilidade.
+              </p>
+              <div className="w-16 h-0.5 bg-[#c59b5f] mx-auto mt-4 rounded-full"></div>
             </div>
-          )}
-        </div>
-      </section>
+
+            {loading ? (
+              <ProductGridSkeleton count={4} />
+            ) : (
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 relative z-10">
+                {data.maisVendidos.slice(0, 8).map(p => (
+                  <ProductCard key={p.id} produto={p} onComprarAgora={handleComprarAgora} onFavorite={handleFavoriteToggle} />
+                ))}
+              </div>
+            )}
+          </div>
+        </section>
+      )}
 
       {/* ==========================================
           SECTION 5: RESELLERS & TESTIMONIALS SECTIONS
@@ -404,38 +406,40 @@ export default function HomePage() {
       </section>
 
       {/* ==========================================
+          SECTION 7: FAVORITES DYNAMIC (SUBIU! AGORA ANTES DA SECTION 6)
+          ========================================== */}
+      {(loading || data.favorites.length > 0) && (
+        <section id="favoritos" className="py-24 bg-white relative overflow-hidden">
+          <div className="container-custom">
+            <div className="text-center mb-16">
+              <span className="text-[10px] md:text-xs font-bold uppercase tracking-[3px] text-[#c59b5f]">
+                Sua Próxima Joia
+              </span>
+              <h2 className="text-3xl md:text-4.5xl font-serif font-bold text-gray-900 mt-2">
+                Destaques de Ouro
+              </h2>
+              <p className="text-gray-500 text-sm md:text-base font-light max-w-md mx-auto mt-2">
+                Modelagem refinada e luxo traduzidos em lingeries atemporais.
+              </p>
+              <div className="w-16 h-0.5 bg-[#c59b5f] mx-auto mt-4 rounded-full"></div>
+            </div>
+            {loading ? (
+              <ProductGridSkeleton count={4} />
+            ) : (
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+                {data.favorites.slice(0, 8).map(p => (
+                  <ProductCard key={p.id} produto={p} onComprarAgora={handleComprarAgora} onFavorite={handleFavoriteToggle} />
+                ))}
+              </div>
+            )}
+          </div>
+        </section>
+      )}
+
+      {/* ==========================================
           SECTION 6: DUAL PERSUASIVE BANNER (VAREJO & ATACADO) - 100% DINÂMICO COM O ADMIN
           ========================================== */}
       <HomeBeneficiosSection onScrollToCategorias={() => scrollToSection('categorias')} />
-
-      {/* ==========================================
-          SECTION 7: FAVORITES DYNAMIC
-          ========================================== */}
-      <section id="favoritos" className="py-24 bg-white relative overflow-hidden">
-        <div className="container-custom">
-          <div className="text-center mb-16">
-            <span className="text-[10px] md:text-xs font-bold uppercase tracking-[3px] text-[#c59b5f]">
-              Sua Próxima Joia
-            </span>
-            <h2 className="text-3xl md:text-4.5xl font-serif font-bold text-gray-900 mt-2">
-              Destaques de Ouro
-            </h2>
-            <p className="text-gray-500 text-sm md:text-base font-light max-w-md mx-auto mt-2">
-              Modelagem refinada e luxo traduzidos em lingeries atemporais.
-            </p>
-            <div className="w-16 h-0.5 bg-[#c59b5f] mx-auto mt-4 rounded-full"></div>
-          </div>
-          {loading ? (
-            <ProductGridSkeleton count={4} />
-          ) : (
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-              {data.favorites.slice(0, 8).map(p => (
-                <ProductCard key={p.id} produto={p} onComprarAgora={handleComprarAgora} onFavorite={handleFavoriteToggle} />
-              ))}
-            </div>
-          )}
-        </div>
-      </section>
 
       {/* ==========================================
           SECTION 8: PROMOTIONS DYNAMIC
@@ -462,79 +466,65 @@ export default function HomePage() {
       )}
 
       {/* ==========================================
-          SECTION 9: LUXURY COLLECTIONS
+          SECTION 9: LUXURY COLLECTIONS (OCULTA SE VAZIA)
           ========================================== */}
-      <section id="colecoes" className="py-24 bg-white relative overflow-hidden">
-        <div className="absolute top-1/2 left-0 w-[550px] h-[550px] bg-[#c59b5f]/5 rounded-full blur-[100px] -translate-y-1/2 -translate-x-1/2 pointer-events-none" />
-        <div className="container-custom">
-          <div className="text-center mb-16">
-            <span className="text-[10px] md:text-xs font-bold uppercase tracking-[3px] text-[#c59b5f]">
-              Conceito & Essência
-            </span>
-            <h2 className="text-3xl md:text-4.5xl font-serif font-bold text-gray-900 mt-2">
-              Explore Nossas Coleções
-            </h2>
-            <p className="text-gray-500 text-sm md:text-base font-light max-w-md mx-auto mt-2">
-              Concebidas artesanalmente para cada instante da sua rotina ou ocasiões especiais.
-            </p>
-            <div className="w-16 h-0.5 bg-[#c59b5f] mx-auto mt-4 rounded-full"></div>
-          </div>
+      {!loading && data.colecoes && data.colecoes.length > 0 && (
+        <section id="colecoes" className="py-24 bg-white relative overflow-hidden">
+          <div className="absolute top-1/2 left-0 w-[550px] h-[550px] bg-[#c59b5f]/5 rounded-full blur-[100px] -translate-y-1/2 -translate-x-1/2 pointer-events-none" />
+          <div className="container-custom">
+            <div className="text-center mb-16">
+              <span className="text-[10px] md:text-xs font-bold uppercase tracking-[3px] text-[#c59b5f]">
+                Conceito & Essência
+              </span>
+              <h2 className="text-3xl md:text-4.5xl font-serif font-bold text-gray-900 mt-2">
+                Explore Nossas Coleções
+              </h2>
+              <p className="text-gray-500 text-sm md:text-base font-light max-w-md mx-auto mt-2">
+                Concebidas artesanalmente para cada instante da sua rotina ou ocasiões especiais.
+              </p>
+              <div className="w-16 h-0.5 bg-[#c59b5f] mx-auto mt-4 rounded-full"></div>
+            </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 relative z-10">
-            {data.colecoes && data.colecoes.length > 0 ? (
-              data.colecoes.map((col, idx) => (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 relative z-10">
+              {data.colecoes.map((col, idx) => (
                 <div key={col.id} onClick={() => navigate(`/categoria/${col.slug}`)} className={`cursor-pointer ${idx === 0 ? 'md:col-span-2 lg:col-span-2 aspect-[4/3] lg:aspect-auto' : ''}`}>
                   <CollectionCard 
                     title={col.nome} 
                     image={col.imagem_capa ? pb.files.getUrl(col, col.imagem_capa) : 'https://images.unsplash.com/photo-1568441556126-f36ae0900180?w=600&q=80'} 
                   />
                 </div>
-              ))
-            ) : (
-              <>
-                <div onClick={() => navigate('/categoria/premium')} className="cursor-pointer lg:col-span-2 aspect-[4/3] lg:aspect-auto">
-                  <CollectionCard title="Premium" image="https://images.unsplash.com/photo-1568441556126-f36ae0900180?w=600&q=80" />
-                </div>
-                <div onClick={() => navigate('/categoria/essenciais')} className="cursor-pointer">
-                  <CollectionCard title="Essenciais" image="https://images.unsplash.com/photo-1701017718943-996aa586e955?w=600&q=80" />
-                </div>
-                <div onClick={() => navigate('/categoria/sensuais')} className="cursor-pointer">
-                  <CollectionCard title="Sensuais" image="https://images.unsplash.com/photo-1700252713499-858564705cc3?w=600&q=80" />
-                </div>
-              </>
-            )}
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       {/* ==========================================
-          SECTION 10: NEW ARRIVALS (LANCAMENTOS DYNAMIC)
+          SECTION 10: NEW ARRIVALS (LANCAMENTOS DYNAMIC - OCULTA SE VAZIA)
           ========================================== */}
-      <section id="lancamentos" className="py-24 bg-white border-t border-gray-100">
-        <div className="container-custom">
-          <div className="text-center mb-16">
-            <span className="text-[10px] md:text-xs font-bold uppercase tracking-[3px] text-[#c59b5f]">
-              Diretamente do Ateliê
-            </span>
-            <h2 className="text-3xl md:text-4.5xl font-serif font-bold text-gray-900 mt-2">
-              Lançamentos Recentes
-            </h2>
-            <p className="text-gray-500 text-sm md:text-base font-light max-w-md mx-auto mt-2">
-              As novidades mais frescas e perfumadas do nosso processo de criação logístico.
-            </p>
-            <div className="w-16 h-0.5 bg-[#c59b5f] mx-auto mt-4 rounded-full"></div>
-          </div>
-          {loading ? (
-            <ProductGridSkeleton count={4} />
-          ) : (
+      {!loading && data.newArrivals.length > 0 && (
+        <section id="lancamentos" className="py-24 bg-white border-t border-gray-100">
+          <div className="container-custom">
+            <div className="text-center mb-16">
+              <span className="text-[10px] md:text-xs font-bold uppercase tracking-[3px] text-[#c59b5f]">
+                Diretamente do Ateliê
+              </span>
+              <h2 className="text-3xl md:text-4.5xl font-serif font-bold text-gray-900 mt-2">
+                Lançamentos Recentes
+              </h2>
+              <p className="text-gray-500 text-sm md:text-base font-light max-w-md mx-auto mt-2">
+                As novidades mais frescas e perfumadas do nosso processo de criação logístico.
+              </p>
+              <div className="w-16 h-0.5 bg-[#c59b5f] mx-auto mt-4 rounded-full"></div>
+            </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
               {data.newArrivals.slice(0, 8).map(p => (
                 <ProductCard key={p.id} produto={p} onComprarAgora={handleComprarAgora} onFavorite={handleFavoriteToggle} />
               ))}
             </div>
-          )}
-        </div>
-      </section>
+          </div>
+        </section>
+      )}
 
       {/* ==========================================
           SECTION 11: TRUSTED CUSTOMERS CAROUSEL

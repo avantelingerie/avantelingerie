@@ -5,7 +5,7 @@ const pb = new PocketBase('http://127.0.0.1:8090');
 const regras = [
   {
     titulo: "Sobre a Avante Lingerie (Identidade e História)",
-    conteudo: "Origem: Nova Friburgo/RJ (capital da lingerie). Foco: Conforto Real para o dia a dia. Materiais: Forro 100% algodão nobre, rendas francesas hipoalergênicas, metais sem níquel. Operação: Fabricação própria, CNPJ 54.615.037/0001-53."
+    conteudo: "Origem: Nova Friburgo/RJ (capital da lingerie). Foco: Conforto Real para o dia a dia. Materiais: Forro 100% algodão nobre, rendas francesas hipoalergênicas, metais sem níquel. Operação: Fabricação própria, CNPJ 57.394.988/0001-38."
   },
   {
     titulo: "Políticas de Revenda, Parcerias e Atacado B2B",
