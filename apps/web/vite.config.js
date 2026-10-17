@@ -379,9 +379,10 @@ export default defineConfig({
 				secure: true
 			},
 			'/hcgi/api': {
-				target: 'https://avantelingerie.com.br',
+				target: 'http://localhost:3001',
 				changeOrigin: true,
-				secure: true
+				secure: false,
+				rewrite: (path) => path.replace(/^\/hcgi\/api/, '')
 			},
 			'/video': {
 				target: 'https://avantelingerie.com.br',

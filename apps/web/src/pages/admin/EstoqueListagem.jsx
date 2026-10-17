@@ -12,6 +12,40 @@ import { ArrowLeftRight, Clock, Search, RefreshCw, AlertTriangle } from 'lucide-
 import MovimentacaoEstoqueModal from '@/components/admin/MovimentacaoEstoqueModal.jsx';
 import HistoricoEstoqueModal from '@/components/admin/HistoricoEstoqueModal.jsx';
 
+const getColorHex = (colorName) => {
+  if (!colorName) return '#e5e7eb';
+  const cleanName = colorName.toLowerCase().trim();
+
+  if (cleanName.includes('menta')) return '#98FF98';
+  if (cleanName.includes('romance')) return '#FFC0CB';
+  if (cleanName.includes('chocolate')) return '#5C4033';
+  if (cleanName.includes('sensual')) return '#8B0000';
+  if (cleanName.includes('nude')) return '#E3C1B2';
+  if (cleanName.includes('preto')) return '#0F0F0F';
+  if (cleanName.includes('branco')) return '#FFFFFF';
+  if (cleanName.includes('vermelho')) return '#DC2626';
+  if (cleanName.includes('azul') || cleanName.includes('marinho')) return '#1E3A8A';
+  if (cleanName.includes('rosa')) return '#EC4899';
+  if (cleanName.includes('amarelo')) return '#FBBF24';
+  if (cleanName.includes('verde')) return '#10B981';
+  if (cleanName.includes('vinho') || cleanName.includes('bordo') || cleanName.includes('bordô')) return '#722F37';
+  if (cleanName.includes('tiffany')) return '#0ABAB5';
+  if (cleanName.includes('lavanda') || cleanName.includes('lilas') || cleanName.includes('lilás')) return '#E6E6FA';
+  if (cleanName.includes('coral') || cleanName.includes('terracota')) return '#FF7F50';
+  if (cleanName.includes('bege') || cleanName.includes('creme')) return '#F5F5DC';
+  if (cleanName.includes('cinza') || cleanName.includes('grafite') || cleanName.includes('chumbo')) return '#6B7280';
+  if (cleanName.includes('rubi')) return '#E0115F';
+  if (cleanName.includes('esmeralda')) return '#50C878';
+  if (cleanName.includes('safira')) return '#0F52BA';
+
+  let hash = 0;
+  for (let i = 0; i < cleanName.length; i++) {
+    hash = cleanName.charCodeAt(i) + ((hash << 5) - hash);
+  }
+  const h = Math.abs(hash) % 360;
+  return `hsl(${h}, 55%, 50%)`;
+};
+
 export default function EstoqueListagem() {
   const [variacoes, setVariacoes] = useState([]);
   const [categorias, setCategorias] = useState([]);
@@ -81,10 +115,30 @@ export default function EstoqueListagem() {
     return filtered;
   }, [variacoes, statusFilter, limiteAlerta, isLoading, page, totalPages]);
 
+
   const StatusBadge = ({ status }) => {
-    if (status === 'zerado') return <Badge variant="destructive" className="uppercase text-[10px]">Zerado</Badge>;
-    if (status === 'baixo') return <Badge variant="outline" className="bg-amber-100 text-amber-800 border-amber-300 uppercase text-[10px]">Baixo</Badge>;
-    return <Badge variant="outline" className="bg-emerald-100 text-emerald-800 border-emerald-300 uppercase text-[10px]">Normal</Badge>;
+    if (status === 'zerado') {
+      return (
+        <Badge variant="destructive" className="uppercase text-[10px] inline-flex items-center gap-1.5 font-bold shadow-sm">
+          <span className="w-2 h-2 rounded-full bg-red-400 animate-pulse"></span>
+          Zerado
+        </Badge>
+      );
+    }
+    if (status === 'baixo') {
+      return (
+        <Badge variant="outline" className="bg-amber-100 dark:bg-amber-950/40 text-amber-800 dark:text-amber-300 border-amber-300 dark:border-amber-500/40 uppercase text-[10px] inline-flex items-center gap-1.5 font-bold shadow-sm">
+          <span className="w-2 h-2 rounded-full bg-amber-500 dark:bg-amber-400 animate-pulse"></span>
+          Baixo
+        </Badge>
+      );
+    }
+    return (
+      <Badge variant="outline" className="bg-emerald-100 dark:bg-emerald-950/40 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/40 uppercase text-[10px] inline-flex items-center gap-1.5 font-bold shadow-sm">
+        <span className="w-2 h-2 rounded-full bg-emerald-500 dark:bg-emerald-400"></span>
+        Normal
+      </Badge>
+    );
   };
 
   return (
@@ -184,11 +238,17 @@ export default function EstoqueListagem() {
                           <div className="text-xs text-muted-foreground">{item.expand?.produto_id?.expand?.categoria_id?.nome}</div>
                         </TableCell>
                         <TableCell>
-                          <div className="flex items-center gap-1.5">
+                          <div className="flex items-center gap-2">
                             {item.cor && (
-                              <span className="w-3 h-3 rounded-full border shadow-sm" style={{ backgroundColor: item.cor }}></span>
+                              <span 
+                                className="w-3.5 h-3.5 rounded-full border border-black/15 dark:border-white/20 shadow-sm shrink-0" 
+                                style={{ backgroundColor: getColorHex(item.cor) }}
+                                title={`Cor: ${item.cor}`}
+                              ></span>
                             )}
-                            <span className="text-sm font-medium">{item.tamanho}</span>
+                            <span className="text-sm font-medium text-foreground">
+                              {item.cor ? `${item.cor} • ${item.tamanho}` : item.tamanho}
+                            </span>
                           </div>
                         </TableCell>
                         <TableCell className="font-mono text-xs text-muted-foreground">

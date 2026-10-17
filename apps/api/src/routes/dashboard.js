@@ -187,23 +187,41 @@ router.get('/ultimos-pedidos', async (req, res) => {
   res.json(pedidosFormatados);
 });
 
-// GET /dashboard/estoque-critico - Fetch products with critical stock levels (< 5 units)
+// GET /dashboard/estoque-critico - Fetch products with critical stock levels (<= limite_alerta_global)
 router.get('/estoque-critico', async (req, res) => {
-  const variacoes = await pb.collection('variacoes').getFullList({
-    expand: 'produto_id',
-  });
+  try {
+    const configs = await pb.collection('configuracoes_estoque').getFullList({ $autoCancel: false });
+    const limiteAlerta = (configs.length > 0 && configs[0].limite_alerta_global != null)
+      ? Number(configs[0].limite_alerta_global)
+      : 10;
 
-  const estoqueCritico = variacoes
-    .filter((variacao) => (variacao.estoque || 0) < 5)
-    .map((variacao) => ({
-      id: variacao.id,
-      sku: variacao.sku,
-      nome: variacao.expand?.produto_id?.nome || `${variacao.cor || ''} ${variacao.tamanho || ''}`.trim() || variacao.sku,
-      estoque: variacao.estoque,
-      produto_id: variacao.produto_id,
-    }));
+    const variacoes = await pb.collection('variacoes').getFullList({
+      expand: 'produto_id',
+      $autoCancel: false,
+    });
 
-  res.json(estoqueCritico);
+    const estoqueCritico = variacoes
+      .filter((variacao) => (variacao.estoque ?? 0) <= limiteAlerta)
+      .map((variacao) => {
+        const prod = variacao.expand?.produto_id;
+        const prodNome = prod?.nome_produto || prod?.nome || prod?.name || 'Produto';
+        return {
+          id: variacao.id,
+          sku: variacao.sku,
+          nome: prodNome,
+          produto_nome: prodNome,
+          cor: variacao.cor || '',
+          tamanho: variacao.tamanho || '',
+          estoque: variacao.estoque ?? 0,
+          produto_id: variacao.produto_id,
+        };
+      });
+
+    res.json(estoqueCritico);
+  } catch (error) {
+    logger.error('Erro ao buscar estoque crítico para o dashboard:', error);
+    res.status(500).json({ erro: 'Falha ao buscar estoque crítico' });
+  }
 });
 
 // GET /dashboard/pedidos-aguardando - Fetch orders awaiting processing (status: pendente or processando)

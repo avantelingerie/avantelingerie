@@ -8053,3 +8053,323 @@
 ## 2026-09-29 18:55:47.112Z console.warn
 - text: Please replace pb.files.getUrl() with pb.files.getURL()
 
+## 2026-10-16 22:44:27.490Z load
+- url: http://localhost:3000/admin/estoque
+- title: Avante Lingerie | Oficial
+
+## 2026-10-16 22:44:40.754Z network.error
+- method: POST
+- url: http://localhost:3000/hcgi/platform/api/collections/analytics_events/records
+- requestBody: {"session_id":"sess_25sk6a3wrq5hmvbbeue0","event_type":"page_view","page_path":"/admin/estoque","item_id":"","value":"0","utm_source":"","utm_medium":"","utm_campaign":""}
+- message: Failed to fetch
+- durationMs: 283
+
+## 2026-10-16 22:44:40.755Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/api/notificacoes
+- message: Failed to fetch
+- durationMs: 62
+
+## 2026-10-16 22:44:40.755Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/integracoes_config/records?page=1&perPage=500&skipTotal=1&filter=servico%20%3D%20%22marketing%22%20%26%26%20ativo%20%3D%20true
+- message: Failed to fetch
+- durationMs: 285
+
+## 2026-10-16 22:44:40.755Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/configuracoes_estoque/records?page=1&perPage=500&skipTotal=1
+- message: Failed to fetch
+- durationMs: 61
+
+## 2026-10-16 22:44:40.756Z console.error
+- text: 
+    TypeError: Failed to fetch
+        at window.fetch (http://localhost:3000/@id/virtual:session-journal-client:328:28)
+        at window.fetch (http://localhost:3000/admin/estoque:500:23)
+        at Client.send (http://localhost:3000/node_modules/.vite/deps/pocketbase.js?v=5f05b779:939:31)
+        at RecordService.create (http://localhost:3000/node_modules/.vite/deps/pocketbase.js?v=5f05b779:448:78)
+        at RecordService.create (http://localhost:3000/node_modules/.vite/deps/pocketbase.js?v=5f05b779:508:18)
+        at trackEvent (http://localhost:3000/src/hooks/useMarketingTracker.js:20:39)
+        at http://localhost:3000/src/hooks/useMarketingTracker.js:63:7
+        at commitHookEffectListMount (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=5f05b779:16963:34)
+        at commitPassiveMountOnFiber (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=5f05b779:18206:19)
+        at commitPassiveMountEffects_complete (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=5f05b779:18179:17)
+
+## 2026-10-16 22:44:40.757Z console.error
+- text: 
+    TypeError: Failed to fetch
+        at window.fetch (http://localhost:3000/@id/virtual:session-journal-client:328:28)
+        at window.fetch (http://localhost:3000/admin/estoque:500:23)
+        at Object.fetch (http://localhost:3000/src/lib/apiServerClient.js:5:29)
+        at fetchNotificacoes (http://localhost:3000/src/components/admin/NotificacoesPanel.jsx:21:41)
+        at http://localhost:3000/src/components/admin/NotificacoesPanel.jsx:46:5
+        at commitHookEffectListMount (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=5f05b779:16963:34)
+        at commitPassiveMountOnFiber (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=5f05b779:18206:19)
+        at commitPassiveMountEffects_complete (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=5f05b779:18179:17)
+        at commitPassiveMountEffects_begin (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=5f05b779:18169:15)
+        at commitPassiveMountEffects (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=5f05b779:18159:11)
+
+## 2026-10-16 22:44:40.758Z console.error
+- text: 
+    TypeError: Failed to fetch
+        at window.fetch (http://localhost:3000/@id/virtual:session-journal-client:328:28)
+        at window.fetch (http://localhost:3000/admin/estoque:500:23)
+        at Client.send (http://localhost:3000/node_modules/.vite/deps/pocketbase.js?v=5f05b779:939:31)
+        at RecordService.getList (http://localhost:3000/node_modules/.vite/deps/pocketbase.js?v=5f05b779:435:128)
+        at RecordService.getList (http://localhost:3000/node_modules/.vite/deps/pocketbase.js?v=5f05b779:499:18)
+        at request (http://localhost:3000/node_modules/.vite/deps/pocketbase.js?v=5f05b779:458:47)
+        at RecordService._getFullList (http://localhost:3000/node_modules/.vite/deps/pocketbase.js?v=5f05b779:462:12)
+        at RecordService.getFullList (http://localhost:3000/node_modules/.vite/deps/pocketbase.js?v=5f05b779:432:93)
+        at RecordService.getFullList (http://localhost:3000/node_modules/.vite/deps/pocketbase.js?v=5f05b779:496:18)
+        at fetchAnalyticsConfigs (http://localhost:3000/src/components/AnalyticsTracker.jsx:15:67)
+
+## 2026-10-16 22:44:40.758Z console.error
+- text: 
+    TypeError: Failed to fetch
+        at window.fetch (http://localhost:3000/@id/virtual:session-journal-client:328:28)
+        at window.fetch (http://localhost:3000/admin/estoque:500:23)
+        at Client.send (http://localhost:3000/node_modules/.vite/deps/pocketbase.js?v=5f05b779:939:31)
+        at RecordService.getList (http://localhost:3000/node_modules/.vite/deps/pocketbase.js?v=5f05b779:435:128)
+        at RecordService.getList (http://localhost:3000/node_modules/.vite/deps/pocketbase.js?v=5f05b779:499:18)
+        at request (http://localhost:3000/node_modules/.vite/deps/pocketbase.js?v=5f05b779:458:47)
+        at RecordService._getFullList (http://localhost:3000/node_modules/.vite/deps/pocketbase.js?v=5f05b779:462:12)
+        at RecordService.getFullList (http://localhost:3000/node_modules/.vite/deps/pocketbase.js?v=5f05b779:432:93)
+        at RecordService.getFullList (http://localhost:3000/node_modules/.vite/deps/pocketbase.js?v=5f05b779:496:18)
+        at Object.buscarConfiguracoes (http://localhost:3000/src/services/estoqueService.js:105:68)
+
+## 2026-10-16 22:44:40.759Z console.error
+- text: 
+    Erro ao buscar notificações: TypeError: Failed to fetch
+        at window.fetch (http://localhost:3000/@id/virtual:session-journal-client:328:28)
+        at window.fetch (http://localhost:3000/admin/estoque:500:23)
+        at Object.fetch (http://localhost:3000/src/lib/apiServerClient.js:5:29)
+        at fetchNotificacoes (http://localhost:3000/src/components/admin/NotificacoesPanel.jsx:21:41)
+        at http://localhost:3000/src/components/admin/NotificacoesPanel.jsx:46:5
+        at commitHookEffectListMount (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=5f05b779:16963:34)
+        at commitPassiveMountOnFiber (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=5f05b779:18206:19)
+        at commitPassiveMountEffects_complete (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=5f05b779:18179:17)
+        at commitPassiveMountEffects_begin (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=5f05b779:18169:15)
+        at commitPassiveMountEffects (http://localhost:3000/node_modules/.vite/deps/chunk-POVVOG4E.js?v=5f05b779:18159:11)
+
+## 2026-10-16 22:44:40.760Z console.warn
+- text: Analytics Tracking Ignore: Something went wrong while processing your request.
+
+## 2026-10-16 22:44:40.761Z console.warn
+- text: 
+    AnalyticsTracker: Não foi possível carregar as configurações de marketing. ClientResponseError 0: ClientResponseError
+        at http://localhost:3000/node_modules/.vite/deps/pocketbase.js?v=5f05b779:948:13
+        at async fetchAnalyticsConfigs (http://localhost:3000/src/components/AnalyticsTracker.jsx:15:25)
+
+## 2026-10-16 22:44:40.761Z console.error
+- text: 
+    Error fetching settings ClientResponseError 0: ClientResponseError
+        at http://localhost:3000/node_modules/.vite/deps/pocketbase.js?v=5f05b779:948:13
+        at async Object.buscarConfiguracoes (http://localhost:3000/src/services/estoqueService.js:105:23)
+        at async fetchInventoryStats (http://localhost:3000/src/components/admin/AdminLayout.jsx:22:22)
+
+## 2026-10-16 22:44:41.095Z load
+- url: http://localhost:3000/admin/estoque
+- title: Avante Lingerie | Oficial
+
+## 2026-10-16 22:44:47.453Z network.error
+- method: POST
+- url: https://analytics.google.com/g/collect?v=2&tid=G-E2FS36FRG1&gtm=45je6ae1v9259987036za208xf1&_p=1792190680804&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AAAAACQC&cid=810338185.1792176167&frm=0&ibt=1&ngs=1&pscdl=noapi&rcb=18&sr=1366x768&uaa=x86&uab=64&uafvl=Google%2520Chrome%3B155.0.8059.84%7CChromium%3B155.0.8059.84%7CNot(A%253ABrand%3B24.0.0.0&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=pt-pt&_s=1&tag_exp=115616986~115938465~115938469~118897920~118897930~120213116~120385423~120469145~120469153~121246026~121246034&sid=1792183605&sct=2&seg=1&dl=http%3A%2F%2Flocalhost%2Fadmin%2Festoque&dt=Avante%20Lingerie%20%7C%20Oficial&en=page_view&_ee=1&tfd=6955
+- status: 0
+- durationMs: 79
+
+## 2026-10-16 22:44:47.454Z console.error
+- text: Fetch error from : 
+
+## 2026-10-16 22:45:10.516Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Produtos"}
+
+## 2026-10-16 22:45:10.528Z navigate
+- url: http://localhost:3000/admin/produtos
+- via: pushState
+
+## 2026-10-16 22:45:12.076Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Dashboard"}
+
+## 2026-10-16 22:45:12.078Z navigate
+- url: http://localhost:3000/admin
+- via: pushState
+
+## 2026-10-16 22:45:12.201Z network.error
+- method: POST
+- url: http://localhost:3000/hcgi/platform/api/collections/analytics_events/records
+- requestBody: {"session_id":"sess_25sk6a3wrq5hmvbbeue0","event_type":"page_view","page_path":"/admin/produtos","item_id":"","value":"0","utm_source":"","utm_medium":"","utm_campaign":""}
+- message: signal is aborted without reason
+- durationMs: 1627
+
+## 2026-10-16 22:45:12.201Z console.warn
+- text: Analytics Tracking Ignore: The request was autocancelled. You can find more info in https://github.com/pocketbase/js-sdk#auto-cancellation.
+
+## 2026-10-16 22:45:15.697Z network.error
+- method: POST
+- url: https://analytics.google.com/g/collect?v=2&tid=G-E2FS36FRG1&gtm=45je6ae1v9259987036za200xf1&_p=1792190680804&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEAAACQC&ae=a&cid=810338185.1792176167&frm=0&ibt=1&ngs=1&pscdl=noapi&rcb=18&sr=1366x768&uaa=x86&uab=64&uafvl=Google%2520Chrome%3B155.0.8059.84%7CChromium%3B155.0.8059.84%7CNot(A%253ABrand%3B24.0.0.0&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=pt-pt&tag_exp=115616986~115938465~115938469~118897920~118897930~120213116~120385423~120469145~120469153~121246026~121246034&sid=1792183605&sct=2&seg=1&dl=http%3A%2F%2Flocalhost%2Fadmin%2Fprodutos&dt=Avante%20Lingerie%20%7C%20Oficial&_s=2&tfd=35203
+- status: 0
+- requestBody: 
+    en=scroll&epn.percent_scrolled=90&_et=28241
+    en=page_view&_et=926&dl=http%3A%2F%2Flocalhost%3A3000%2Fadmin%2Fprodutos&dr=http%3A%2F%2Flocalhost%3A3000%2Fadmin%2Festoque
+    en=page_view&_et=1539&dl=http%3A%2F%2Flocalhost%3A3000%2Fadmin&dr=http%3A%2F%2Flocalhost%3A3000%2Fadmin%2Fprodutos
+- durationMs: 75
+
+## 2026-10-16 22:45:15.697Z console.error
+- text: Fetch error from : 
+
+## 2026-10-16 22:46:29.849Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-10-16 22:48:10.705Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Close"}
+
+## 2026-10-16 22:48:12.532Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"☀️"}
+
+## 2026-10-16 22:48:26.304Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Estoque"}
+
+## 2026-10-16 22:48:26.335Z navigate
+- url: http://localhost:3000/admin/estoque
+- via: pushState
+
+## 2026-10-16 22:48:27.589Z network.error
+- method: POST
+- url: https://analytics.google.com/g/collect?v=2&tid=G-E2FS36FRG1&gtm=45je6ae1v9259987036za200xf1&_p=1792190680804&_gaz=1&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEAAACQC&ae=a&cid=810338185.1792176167&frm=0&ibt=1&ngs=1&pscdl=noapi&rcb=18&sr=1366x768&uaa=x86&uab=64&uafvl=Google%2520Chrome%3B155.0.8059.84%7CChromium%3B155.0.8059.84%7CNot(A%253ABrand%3B24.0.0.0&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=pt-pt&_s=3&tag_exp=115616986~115938465~115938469~118897920~118897930~120213116~120385423~120469145~120469153~121246026~121246034&dl=http%3A%2F%2Flocalhost%3A3000%2Fadmin%2Festoque&dr=http%3A%2F%2Flocalhost%3A3000%2Fadmin&sid=1792183605&sct=2&seg=1&dt=Avante%20Lingerie%20%7C%20Oficial&en=page_view&_et=41060&tfd=226984
+- status: 0
+- durationMs: 185
+
+## 2026-10-16 22:48:27.589Z console.error
+- text: Fetch error from : 
+
+## 2026-10-16 22:48:35.718Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Ajustar"}
+
+## 2026-10-16 22:48:45.501Z click
+- element: {"tag":"body","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"\n\t\t\n\t\t<iframe src=\"https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX\"\n\t\theight=\"0\" width=\"0\" style=\"display:none;visibility:hidden\"></iframe>\n\t\t\n\t\t\n\t\tAvante AdminDashboardProdutosCategoriasColeçõesEstoquePedidosClientesIntegraçõesAnalyticsCérebro da LiaConfiguraçõesAAdministradoradminSair🌙Ver LojaEstoque de ProdutosGerencie a quantidade, ajustes e histórico de estoque por SKU.Todas as CategoriasTodos os StatusProdutoVariaçãoSKUQuantidadeStatusAçõesConjunto Lingerie Rendado Cropped Sem Bojo ConjuntoVerde Menta • GGAVL-CON-8949-VERDE-MENTA-GG100NormalAjustarConjunto Lingerie Rendado Cropped Sem Bojo ConjuntoVerde Menta • GAVL-CON-8949-VERDE-MENTA-G100NormalAjustarConjunto Lingerie Rendado Cropped Sem Bojo ConjuntoVerde Menta • MAVL-CON-8949-VERDE-MENTA-M100NormalAjustarConjunto Lingerie Rendado Cropped Sem Bojo ConjuntoVerde Menta • PAVL-CON-8949-VERDE-MENTA-P100NormalAjustarConjunto Lingerie Rendado Cropped Sem Bojo ConjuntoRosa Chiclete • GGAVL-CON-8949-ROSA-CHICLETE-GG100NormalAjustarConjunto Lingerie Rendado Cropped Sem Bojo ConjuntoRosa Chiclete • GAVL-CON-8949-ROSA-CHICLETE-G100NormalAjustarConjunto Lingerie Rendado Cropped Sem Bojo ConjuntoRosa Chiclete • MAVL-CON-8949-ROSA-CHICLETE-M100NormalAjustarConjunto Lingerie Rendado Cropped Sem Bojo ConjuntoRosa Chiclete • PAVL-CON-8949-ROSA-CHICLETE-P100NormalAjustarConjunto Lingerie Rendado Cropped Sem Bojo ConjuntoBranco • GGAVL-CON-8949-BRANCO-GG100NormalAjustarConjunto Lingerie Rendado Cropped Sem Bojo ConjuntoBranco • GAVL-CON-8949-BRANCO-G100NormalAjustarConjunto Lingerie Rendado Cropped Sem Bojo ConjuntoBranco • MAVL-CON-8949-BRANCO-M100NormalAjustarConjunto Lingerie Rendado Cropped Sem Bojo ConjuntoBranco • PAVL-CON-8949-BRANCO-P100NormalAjustarConjunto Lingerie Rendado Cropped Sem Bojo ConjuntoPreto • GGAVL-CON-8949-PRETO-GG100NormalAjustarConjunto Lingerie Rendado Cropped Sem Bojo ConjuntoPreto • GAVL-CON-8949-PRETO-G100NormalAjustarConjunto Lingerie Rendado Cropped Sem Bojo ConjuntoPreto • MAVL-CON-8..."}
+
+## 2026-10-16 22:48:47.542Z click
+- element: {"tag":"body","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"\n\t\t\n\t\t<iframe src=\"https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX\"\n\t\theight=\"0\" width=\"0\" style=\"display:none;visibility:hidden\"></iframe>\n\t\t\n\t\t\n\t\tAvante AdminDashboardProdutosCategoriasColeçõesEstoquePedidosClientesIntegraçõesAnalyticsCérebro da LiaConfiguraçõesAAdministradoradminSair🌙Ver LojaEstoque de ProdutosGerencie a quantidade, ajustes e histórico de estoque por SKU.Todas as CategoriasTodos os StatusProdutoVariaçãoSKUQuantidadeStatusAçõesConjunto Lingerie Rendado Cropped Sem Bojo ConjuntoVerde Menta • GGAVL-CON-8949-VERDE-MENTA-GG100NormalAjustarConjunto Lingerie Rendado Cropped Sem Bojo ConjuntoVerde Menta • GAVL-CON-8949-VERDE-MENTA-G100NormalAjustarConjunto Lingerie Rendado Cropped Sem Bojo ConjuntoVerde Menta • MAVL-CON-8949-VERDE-MENTA-M100NormalAjustarConjunto Lingerie Rendado Cropped Sem Bojo ConjuntoVerde Menta • PAVL-CON-8949-VERDE-MENTA-P100NormalAjustarConjunto Lingerie Rendado Cropped Sem Bojo ConjuntoRosa Chiclete • GGAVL-CON-8949-ROSA-CHICLETE-GG100NormalAjustarConjunto Lingerie Rendado Cropped Sem Bojo ConjuntoRosa Chiclete • GAVL-CON-8949-ROSA-CHICLETE-G100NormalAjustarConjunto Lingerie Rendado Cropped Sem Bojo ConjuntoRosa Chiclete • MAVL-CON-8949-ROSA-CHICLETE-M100NormalAjustarConjunto Lingerie Rendado Cropped Sem Bojo ConjuntoRosa Chiclete • PAVL-CON-8949-ROSA-CHICLETE-P100NormalAjustarConjunto Lingerie Rendado Cropped Sem Bojo ConjuntoBranco • GGAVL-CON-8949-BRANCO-GG100NormalAjustarConjunto Lingerie Rendado Cropped Sem Bojo ConjuntoBranco • GAVL-CON-8949-BRANCO-G100NormalAjustarConjunto Lingerie Rendado Cropped Sem Bojo ConjuntoBranco • MAVL-CON-8949-BRANCO-M100NormalAjustarConjunto Lingerie Rendado Cropped Sem Bojo ConjuntoBranco • PAVL-CON-8949-BRANCO-P100NormalAjustarConjunto Lingerie Rendado Cropped Sem Bojo ConjuntoPreto • GGAVL-CON-8949-PRETO-GG100NormalAjustarConjunto Lingerie Rendado Cropped Sem Bojo ConjuntoPreto • GAVL-CON-8949-PRETO-G100NormalAjustarConjunto Lingerie Rendado Cropped Sem Bojo ConjuntoPreto • MAVL-CON-8..."}
+
+## 2026-10-16 22:48:51.797Z click
+- element: {"tag":"div","role":"dialog","ariaLabel":null,"name":null,"type":null,"id":"radix-:r18:","placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Movimentar EstoqueAjuste o estoque do item selecionado. A alteração refletirá no ERP Bling.SKUEstoque AtualTipo de MovimentaçãoEntradaEntradaSaídaQuantidadeMotivoCompra de FornecedorCompra de FornecedorDevoluçãoAjuste de EstoqueOutrosData/Hora:16/10/2026, 19:48:35Responsável:AdministradorCancelarConfirmarClose"}
+
+## 2026-10-16 22:48:53.135Z click
+- element: {"tag":"body","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"\n\t\t\n\t\t<iframe src=\"https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX\"\n\t\theight=\"0\" width=\"0\" style=\"display:none;visibility:hidden\"></iframe>\n\t\t\n\t\t\n\t\tAvante AdminDashboardProdutosCategoriasColeçõesEstoquePedidosClientesIntegraçõesAnalyticsCérebro da LiaConfiguraçõesAAdministradoradminSair🌙Ver LojaEstoque de ProdutosGerencie a quantidade, ajustes e histórico de estoque por SKU.Todas as CategoriasTodos os StatusProdutoVariaçãoSKUQuantidadeStatusAçõesConjunto Lingerie Rendado Cropped Sem Bojo ConjuntoVerde Menta • GGAVL-CON-8949-VERDE-MENTA-GG100NormalAjustarConjunto Lingerie Rendado Cropped Sem Bojo ConjuntoVerde Menta • GAVL-CON-8949-VERDE-MENTA-G100NormalAjustarConjunto Lingerie Rendado Cropped Sem Bojo ConjuntoVerde Menta • MAVL-CON-8949-VERDE-MENTA-M100NormalAjustarConjunto Lingerie Rendado Cropped Sem Bojo ConjuntoVerde Menta • PAVL-CON-8949-VERDE-MENTA-P100NormalAjustarConjunto Lingerie Rendado Cropped Sem Bojo ConjuntoRosa Chiclete • GGAVL-CON-8949-ROSA-CHICLETE-GG100NormalAjustarConjunto Lingerie Rendado Cropped Sem Bojo ConjuntoRosa Chiclete • GAVL-CON-8949-ROSA-CHICLETE-G100NormalAjustarConjunto Lingerie Rendado Cropped Sem Bojo ConjuntoRosa Chiclete • MAVL-CON-8949-ROSA-CHICLETE-M100NormalAjustarConjunto Lingerie Rendado Cropped Sem Bojo ConjuntoRosa Chiclete • PAVL-CON-8949-ROSA-CHICLETE-P100NormalAjustarConjunto Lingerie Rendado Cropped Sem Bojo ConjuntoBranco • GGAVL-CON-8949-BRANCO-GG100NormalAjustarConjunto Lingerie Rendado Cropped Sem Bojo ConjuntoBranco • GAVL-CON-8949-BRANCO-G100NormalAjustarConjunto Lingerie Rendado Cropped Sem Bojo ConjuntoBranco • MAVL-CON-8949-BRANCO-M100NormalAjustarConjunto Lingerie Rendado Cropped Sem Bojo ConjuntoBranco • PAVL-CON-8949-BRANCO-P100NormalAjustarConjunto Lingerie Rendado Cropped Sem Bojo ConjuntoPreto • GGAVL-CON-8949-PRETO-GG100NormalAjustarConjunto Lingerie Rendado Cropped Sem Bojo ConjuntoPreto • GAVL-CON-8949-PRETO-G100NormalAjustarConjunto Lingerie Rendado Cropped Sem Bojo ConjuntoPreto • MAVL-CON-8..."}
+
+## 2026-10-16 22:48:55.432Z click
+- element: {"tag":"body","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"\n\t\t\n\t\t<iframe src=\"https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX\"\n\t\theight=\"0\" width=\"0\" style=\"display:none;visibility:hidden\"></iframe>\n\t\t\n\t\t\n\t\tAvante AdminDashboardProdutosCategoriasColeçõesEstoquePedidosClientesIntegraçõesAnalyticsCérebro da LiaConfiguraçõesAAdministradoradminSair🌙Ver LojaEstoque de ProdutosGerencie a quantidade, ajustes e histórico de estoque por SKU.Todas as CategoriasTodos os StatusProdutoVariaçãoSKUQuantidadeStatusAçõesConjunto Lingerie Rendado Cropped Sem Bojo ConjuntoVerde Menta • GGAVL-CON-8949-VERDE-MENTA-GG100NormalAjustarConjunto Lingerie Rendado Cropped Sem Bojo ConjuntoVerde Menta • GAVL-CON-8949-VERDE-MENTA-G100NormalAjustarConjunto Lingerie Rendado Cropped Sem Bojo ConjuntoVerde Menta • MAVL-CON-8949-VERDE-MENTA-M100NormalAjustarConjunto Lingerie Rendado Cropped Sem Bojo ConjuntoVerde Menta • PAVL-CON-8949-VERDE-MENTA-P100NormalAjustarConjunto Lingerie Rendado Cropped Sem Bojo ConjuntoRosa Chiclete • GGAVL-CON-8949-ROSA-CHICLETE-GG100NormalAjustarConjunto Lingerie Rendado Cropped Sem Bojo ConjuntoRosa Chiclete • GAVL-CON-8949-ROSA-CHICLETE-G100NormalAjustarConjunto Lingerie Rendado Cropped Sem Bojo ConjuntoRosa Chiclete • MAVL-CON-8949-ROSA-CHICLETE-M100NormalAjustarConjunto Lingerie Rendado Cropped Sem Bojo ConjuntoRosa Chiclete • PAVL-CON-8949-ROSA-CHICLETE-P100NormalAjustarConjunto Lingerie Rendado Cropped Sem Bojo ConjuntoBranco • GGAVL-CON-8949-BRANCO-GG100NormalAjustarConjunto Lingerie Rendado Cropped Sem Bojo ConjuntoBranco • GAVL-CON-8949-BRANCO-G100NormalAjustarConjunto Lingerie Rendado Cropped Sem Bojo ConjuntoBranco • MAVL-CON-8949-BRANCO-M100NormalAjustarConjunto Lingerie Rendado Cropped Sem Bojo ConjuntoBranco • PAVL-CON-8949-BRANCO-P100NormalAjustarConjunto Lingerie Rendado Cropped Sem Bojo ConjuntoPreto • GGAVL-CON-8949-PRETO-GG100NormalAjustarConjunto Lingerie Rendado Cropped Sem Bojo ConjuntoPreto • GAVL-CON-8949-PRETO-G100NormalAjustarConjunto Lingerie Rendado Cropped Sem Bojo ConjuntoPreto • MAVL-CON-8..."}
+
+## 2026-10-16 22:48:56.608Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Close"}
+
+## 2026-10-16 22:52:31.631Z load
+- url: http://localhost:3000/admin/estoque
+- title: Avante Lingerie | Oficial
+
+## 2026-10-16 23:35:11.476Z load
+- url: http://localhost:3000/
+- title: Avante Lingerie | Oficial
+
+## 2026-10-16 23:35:25.311Z navigate
+- url: http://localhost:3000/
+- via: replaceState
+
+## 2026-10-16 23:35:21.693Z load
+- url: http://localhost:3000/
+- title: Avante Lingerie | Oficial
+
+## 2026-10-16 23:35:25.305Z navigate
+- url: http://localhost:3000/
+- via: replaceState
+
+## 2026-10-16 23:35:29.706Z network.error
+- method: POST
+- url: https://analytics.google.com/g/collect?v=2&tid=G-E2FS36FRG1&gtm=45je6ae1h1v9259987036za208xf1&_p=1792193720960&_gaz=1&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AAAAACQC&cid=517519262.1791308800&frm=0&ibt=1&ngs=1&pscdl=noapi&rcb=2&sr=1366x768&uaa=x86&uab=64&uafvl=Google%2520Chrome%3B155.0.8059.84%7CChromium%3B155.0.8059.84%7CNot(A%253ABrand%3B24.0.0.0&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=pt-br&_s=1&tag_exp=115938465~115938468~118897920~118897930~119404697~120213116~120385423~120469145~120469153~121246026~121246034&sid=1792193728&sct=3&seg=0&dl=http%3A%2F%2Flocalhost%2F&dt=Avante%20Lingerie%20%7C%20Oficial&en=page_view&_ss=1&_ee=1&tfd=9786
+- status: 0
+- durationMs: 374
+
+## 2026-10-16 23:35:29.707Z console.error
+- text: Fetch error from : 
+
+## 2026-10-16 23:35:33.971Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/configuracoes_estoque/records?page=1&perPage=500&skipTotal=1
+- message: Failed to fetch
+- durationMs: 7109
+
+## 2026-10-16 23:35:33.974Z console.error
+- text: 
+    TypeError: Failed to fetch
+        at window.fetch (http://localhost:3000/@id/virtual:session-journal-client:328:28)
+        at window.fetch (http://localhost:3000/:500:23)
+        at Client.send (http://localhost:3000/node_modules/.vite/deps/pocketbase.js?v=5f05b779:939:31)
+        at RecordService.getList (http://localhost:3000/node_modules/.vite/deps/pocketbase.js?v=5f05b779:435:128)
+        at RecordService.getList (http://localhost:3000/node_modules/.vite/deps/pocketbase.js?v=5f05b779:499:18)
+        at request (http://localhost:3000/node_modules/.vite/deps/pocketbase.js?v=5f05b779:458:47)
+        at RecordService._getFullList (http://localhost:3000/node_modules/.vite/deps/pocketbase.js?v=5f05b779:462:12)
+        at RecordService.getFullList (http://localhost:3000/node_modules/.vite/deps/pocketbase.js?v=5f05b779:432:93)
+        at RecordService.getFullList (http://localhost:3000/node_modules/.vite/deps/pocketbase.js?v=5f05b779:496:18)
+        at Object.getConfiguracoes (http://localhost:3000/src/services/descontosService.js:12:62)
+
+## 2026-10-16 23:35:33.977Z console.error
+- text: 
+    [descontosService] Erro ao buscar configurações de descontos ClientResponseError 0: ClientResponseError
+        at http://localhost:3000/node_modules/.vite/deps/pocketbase.js?v=5f05b779:948:13
+
+## 2026-10-16 23:35:33.977Z console.error
+- text: 
+    [HomeBeneficiosSection] Erro ao carregar configurações de desconto: ClientResponseError 0: ClientResponseError
+        at http://localhost:3000/node_modules/.vite/deps/pocketbase.js?v=5f05b779:948:13
+
+## 2026-10-16 23:35:34.097Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/categorias/records?page=1&perPage=500&skipTotal=1&filter=ativo%20%3D%20true&sort=nome
+- message: Failed to fetch
+- durationMs: 7234
+
+## 2026-10-16 23:35:34.098Z console.error
+- text: 
+    TypeError: Failed to fetch
+        at window.fetch (http://localhost:3000/@id/virtual:session-journal-client:328:28)
+        at window.fetch (http://localhost:3000/:500:23)
+        at Client.send (http://localhost:3000/node_modules/.vite/deps/pocketbase.js?v=5f05b779:939:31)
+        at RecordService.getList (http://localhost:3000/node_modules/.vite/deps/pocketbase.js?v=5f05b779:435:128)
+        at RecordService.getList (http://localhost:3000/node_modules/.vite/deps/pocketbase.js?v=5f05b779:499:18)
+        at request (http://localhost:3000/node_modules/.vite/deps/pocketbase.js?v=5f05b779:458:47)
+        at RecordService._getFullList (http://localhost:3000/node_modules/.vite/deps/pocketbase.js?v=5f05b779:462:12)
+        at RecordService.getFullList (http://localhost:3000/node_modules/.vite/deps/pocketbase.js?v=5f05b779:432:93)
+        at RecordService.getFullList (http://localhost:3000/node_modules/.vite/deps/pocketbase.js?v=5f05b779:496:18)
+        at fetchCategorias (http://localhost:3000/src/components/Header.jsx:39:59)
+
+## 2026-10-16 23:35:34.098Z console.error
+- text: 
+    Erro ao buscar categorias para o Header: ClientResponseError 0: ClientResponseError
+        at http://localhost:3000/node_modules/.vite/deps/pocketbase.js?v=5f05b779:948:13
+        at async fetchCategorias (http://localhost:3000/src/components/Header.jsx:39:25)
+
+## 2026-10-16 23:35:36.323Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-10-16 23:35:36.435Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-10-16 23:35:38.479Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-10-16 23:35:38.522Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-10-16 23:35:38.645Z network.error
+- method: POST
+- url: https://analytics.google.com/g/collect?v=2&tid=G-E2FS36FRG1&gtm=45je6ae1h1v9259987036za208xf1&_p=1792193711162&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AAAAACQC&cid=517519262.1791308800&frm=0&ibt=1&ngs=1&pscdl=noapi&rcb=12&sr=1366x768&uaa=x86&uab=64&uafvl=Google%2520Chrome%3B155.0.8059.84%7CChromium%3B155.0.8059.84%7CNot(A%253ABrand%3B24.0.0.0&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=pt-br&_s=1&tag_exp=115938466~115938469~118897920~118897930~120213116~120385423~120469145~120469153~121246026~121246034&sid=1792193728&sct=3&seg=1&dl=http%3A%2F%2Flocalhost%2F&dt=Avante%20Lingerie%20%7C%20Oficial&en=page_view&_ee=1&tfd=28378
+- status: 0
+- durationMs: 115
+
+## 2026-10-16 23:35:38.650Z console.error
+- text: Fetch error from : 
+
+## 2026-10-16 23:35:42.407Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
