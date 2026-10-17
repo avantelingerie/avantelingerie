@@ -1122,8 +1122,9 @@ Planejamento comercial e técnico estruturado pela Ada e Vértice para alavancar
   4. **Analytics (`AnalyticsPage.jsx` & `TrackingPixelsTab.jsx`):** Todos os 4 painéis (Desempenho Geral, Demografia GA4, Jornadas ao Vivo e Tracking & Pixels) agora contam com suporte completo ao tema claro sem perder o luxo dourado no tema escuro.
   5. **Produtos / Cadastro de Produtos (`ProdutoForm.jsx` & `VariacoesTable.jsx`):** Inputs, selects, seções de SEO & IA, modal de geração de textos, caixas de coleções, switches de vitrine e a planilha geradora de variações com suporte responsivo a ambos os temas.
 - **Validação:** `npm run build --prefix apps/web` compilado com sucesso (código 0) e servidor de preview ativo em `http://localhost:3000`.
-
-
-
-
+### Atualização [16/10/2026 - Noite] - Correção do Mapeamento de Cores no Admin de Estoque
+- **Diagnóstico & Causa Raiz:** No componente `EstoqueListagem.jsx`, a função `getColorHex` utilizava comparações rígidas masculinas (`cleanName.includes('preto')`, `cleanName.includes('branco')`), deixando de capturar "Preta" e "Branca", e não possuía a cor "Marrom". Isso fazia essas variações caírem no fallback de cálculo hash HSL, gerando bolinhas verdes e magenta.
+- **Implementação:** Criado o utilitário centralizado `apps/web/src/utils/colors.js` com suporte completo a desinências de gênero (pret-, branc-, marrom-, etc.), remoção de acentos (NFD) e cobertura da paleta de moda íntima (nude, chocolate, romance, sensual, etc.).
+- **Integração:** `EstoqueListagem.jsx` refatorado para importar `getColorHex` de `@/utils/colors.js`.
+- **Validação:** `npm run lint --prefix apps/web` aprovado com código 0; testes de mapeamento confirmados com exatidão (`Preta -> #18181B`, `Branca -> #FFFFFF`, `Marrom -> #78350F`, `Bege -> #F5F5DC`).
 

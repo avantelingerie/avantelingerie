@@ -11,40 +11,7 @@ import { Pagination, PaginationContent, PaginationItem, PaginationLink, Paginati
 import { ArrowLeftRight, Clock, Search, RefreshCw, AlertTriangle } from 'lucide-react';
 import MovimentacaoEstoqueModal from '@/components/admin/MovimentacaoEstoqueModal.jsx';
 import HistoricoEstoqueModal from '@/components/admin/HistoricoEstoqueModal.jsx';
-
-const getColorHex = (colorName) => {
-  if (!colorName) return '#e5e7eb';
-  const cleanName = colorName.toLowerCase().trim();
-
-  if (cleanName.includes('menta')) return '#98FF98';
-  if (cleanName.includes('romance')) return '#FFC0CB';
-  if (cleanName.includes('chocolate')) return '#5C4033';
-  if (cleanName.includes('sensual')) return '#8B0000';
-  if (cleanName.includes('nude')) return '#E3C1B2';
-  if (cleanName.includes('preto')) return '#0F0F0F';
-  if (cleanName.includes('branco')) return '#FFFFFF';
-  if (cleanName.includes('vermelho')) return '#DC2626';
-  if (cleanName.includes('azul') || cleanName.includes('marinho')) return '#1E3A8A';
-  if (cleanName.includes('rosa')) return '#EC4899';
-  if (cleanName.includes('amarelo')) return '#FBBF24';
-  if (cleanName.includes('verde')) return '#10B981';
-  if (cleanName.includes('vinho') || cleanName.includes('bordo') || cleanName.includes('bordô')) return '#722F37';
-  if (cleanName.includes('tiffany')) return '#0ABAB5';
-  if (cleanName.includes('lavanda') || cleanName.includes('lilas') || cleanName.includes('lilás')) return '#E6E6FA';
-  if (cleanName.includes('coral') || cleanName.includes('terracota')) return '#FF7F50';
-  if (cleanName.includes('bege') || cleanName.includes('creme')) return '#F5F5DC';
-  if (cleanName.includes('cinza') || cleanName.includes('grafite') || cleanName.includes('chumbo')) return '#6B7280';
-  if (cleanName.includes('rubi')) return '#E0115F';
-  if (cleanName.includes('esmeralda')) return '#50C878';
-  if (cleanName.includes('safira')) return '#0F52BA';
-
-  let hash = 0;
-  for (let i = 0; i < cleanName.length; i++) {
-    hash = cleanName.charCodeAt(i) + ((hash << 5) - hash);
-  }
-  const h = Math.abs(hash) % 360;
-  return `hsl(${h}, 55%, 50%)`;
-};
+import { getColorHex } from '@/utils/colors.js';
 
 export default function EstoqueListagem() {
   const [variacoes, setVariacoes] = useState([]);

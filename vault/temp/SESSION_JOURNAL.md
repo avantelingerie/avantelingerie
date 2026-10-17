@@ -8373,3 +8373,365 @@
 ## 2026-10-16 23:35:42.407Z console.warn
 - text: Please replace pb.files.getUrl() with pb.files.getURL()
 
+## 2026-10-17 01:20:45.271Z load
+- url: http://localhost:3000/
+- title: Avante Lingerie | Oficial
+
+## 2026-10-17 01:20:54.761Z navigate
+- url: http://localhost:3000/
+- via: replaceState
+
+## 2026-10-17 01:20:55.666Z network.error
+- method: POST
+- url: https://analytics.google.com/g/collect?v=2&tid=G-E2FS36FRG1&gtm=45je6ae1v9259987036za208xf1&_p=1792200044809&_gaz=1&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AAAAACAC&cid=1422377976.1792200055&frm=0&ibt=1&ngs=1&pscdl=noapi&rcb=7&sr=1366x768&uaa=x86&uab=64&uafvl=Google%2520Chrome%3B155.0.8059.84%7CChromium%3B155.0.8059.84%7CNot(A%253ABrand%3B24.0.0.0&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=pt-pt&_s=1&tag_exp=115938466~115938469~118897920~118897930~119863601~120213116~120385422~120469145~120469153~121246026~121246034&sid=1792200055&sct=1&seg=0&dl=http%3A%2F%2Flocalhost%2F&dt=Avante%20Lingerie%20%7C%20Oficial&en=page_view&_fv=1&_nsi=1&_ss=1&_ee=1&tfd=11000
+- status: 0
+- durationMs: 466
+
+## 2026-10-17 01:20:55.666Z console.error
+- text: Fetch error from : 
+
+## 2026-10-17 01:20:56.491Z console.error
+- text: 
+    `DialogContent` requires a `DialogTitle` for the component to be accessible for screen reader users.
+    
+    If you want to hide the `DialogTitle`, you can wrap it with our VisuallyHidden component.
+    
+    For more information, see https://radix-ui.com/primitives/docs/components/dialog
+
+## 2026-10-17 01:20:56.492Z console.warn
+- text: Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+
+## 2026-10-17 01:20:58.283Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-10-17 01:20:59.011Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-10-17 01:20:59.070Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-10-17 01:20:59.137Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-10-17 01:20:59.204Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-10-17 01:21:00.294Z network.error
+- method: POST
+- url: https://analytics.google.com/g/collect?v=2&tid=G-E2FS36FRG1&gtm=45je6ae1v9259987036za200xf1&_p=1792200044809&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEAAACQC&ae=a&cid=1422377976.1792200055&frm=0&ibt=1&ngs=1&pscdl=noapi&rcb=7&sr=1366x768&uaa=x86&uab=64&uafvl=Google%2520Chrome%3B155.0.8059.84%7CChromium%3B155.0.8059.84%7CNot(A%253ABrand%3B24.0.0.0&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=pt-pt&_s=2&tag_exp=115938466~115938469~118897920~118897930~119863601~120213116~120385422~120469145~120469153~121246026~121246034&sid=1792200055&sct=1&seg=0&dl=http%3A%2F%2Flocalhost%2F&dt=Avante%20Lingerie%20%7C%20Oficial&en=scroll&epn.percent_scrolled=90&_et=7&tfd=16012
+- status: 0
+- durationMs: 78
+
+## 2026-10-17 01:21:00.294Z console.error
+- text: Fetch error from : 
+
+## 2026-10-17 01:21:04.415Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-10-17 01:21:05.442Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-10-17 01:21:05.637Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/testimonials/records?page=1&perPage=10&filter=status%20%3D%20true&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 192
+
+## 2026-10-17 01:21:05.637Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/testimonials/records?page=1&perPage=10&filter=status%20%3D%20true&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-10-17 01:21:05.667Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-10-17 01:21:05.669Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-10-17 01:21:05.684Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-10-17 01:21:05.685Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-10-17 01:21:05.688Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-10-17 01:21:05.688Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-10-17 01:21:05.691Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-10-17 01:21:05.692Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-10-17 01:21:05.701Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-10-17 01:21:05.702Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-10-17 01:21:05.710Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-10-17 01:21:05.711Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-10-17 01:21:05.718Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-10-17 01:21:05.718Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-10-17 01:21:05.721Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-10-17 01:21:05.721Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-10-17 01:21:05.730Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-10-17 01:21:05.731Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-10-17 01:21:05.853Z click
+- element: {"tag":"div","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-10-17 01:21:05.871Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-10-17 01:21:05.872Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-10-17 01:21:05.876Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-10-17 01:21:05.876Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-10-17 01:21:05.879Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-10-17 01:21:05.879Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-10-17 01:21:05.881Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-10-17 01:21:05.881Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-10-17 01:21:05.885Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-10-17 01:21:05.885Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-10-17 01:21:05.889Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-10-17 01:21:05.890Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-10-17 01:21:05.892Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-10-17 01:21:05.892Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-10-17 01:21:05.894Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-10-17 01:21:05.894Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-10-17 01:21:05.895Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-10-17 01:21:05.896Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-10-17 01:21:08.443Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-10-17 01:21:19.640Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-10-17 01:21:34.644Z load
+- url: http://localhost:3000/admin
+- title: Avante Lingerie | Oficial
+
+## 2026-10-17 01:21:35.365Z navigate
+- url: http://localhost:3000/admin
+- via: replaceState
+
+## 2026-10-17 01:21:35.847Z navigate
+- url: http://localhost:3000/admin/login
+- via: replaceState
+
+## 2026-10-17 01:21:36.265Z network.error
+- method: POST
+- url: https://analytics.google.com/g/collect?v=2&tid=G-E2FS36FRG1&gtm=45je6ae1v9259987036za208xf1&_p=1792200094558&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AAAAACQC&cid=1422377976.1792200055&frm=0&ibt=1&ngs=1&pscdl=noapi&rcb=3&sr=1366x768&uaa=x86&uab=64&uafvl=Google%2520Chrome%3B155.0.8059.84%7CChromium%3B155.0.8059.84%7CNot(A%253ABrand%3B24.0.0.0&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=pt-pt&_s=1&tag_exp=115616985~115938465~115938469~118897920~118897930~119860442~120213116~120385422~120469145~120469153~121246026~121246034&sid=1792200055&sct=1&seg=1&dl=http%3A%2F%2Flocalhost%2Fadmin%2Flogin&dt=Avante%20Lingerie%20%7C%20Oficial&en=page_view&_ee=1&tfd=2074
+- status: 0
+- durationMs: 91
+
+## 2026-10-17 01:21:36.267Z console.error
+- text: Fetch error from : 
+
+## 2026-10-17 01:21:37.514Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"email","id":null,"placeholder":"admin@avantelingerie.com.br","label":"admin@avantelingerie.com.br","value":"","valueLength":0,"text":""}
+
+## 2026-10-17 01:21:37.706Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"email","id":null,"placeholder":"admin@avantelingerie.com.br","label":"admin@avantelingerie.com.br","value":"","valueLength":0,"text":""}
+
+## 2026-10-17 01:21:41.269Z network.error
+- method: POST
+- url: https://analytics.google.com/g/collect?v=2&tid=G-E2FS36FRG1&gtm=45je6ae1v9259987036za200xf1&_p=1792200094558&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEAAACQC&ae=a&cid=1422377976.1792200055&frm=0&ibt=1&ngs=1&pscdl=noapi&rcb=3&sr=1366x768&uaa=x86&uab=64&uafvl=Google%2520Chrome%3B155.0.8059.84%7CChromium%3B155.0.8059.84%7CNot(A%253ABrand%3B24.0.0.0&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=pt-pt&_s=2&tag_exp=115616985~115938465~115938469~118897920~118897930~119860442~120213116~120385422~120469145~120469153~121246026~121246034&sid=1792200055&sct=1&seg=1&dl=http%3A%2F%2Flocalhost%2Fadmin%2Flogin&dt=Avante%20Lingerie%20%7C%20Oficial&en=scroll&epn.percent_scrolled=90&_et=2&tfd=7088
+- status: 0
+- durationMs: 80
+
+## 2026-10-17 01:21:41.270Z console.error
+- text: Fetch error from : 
+
+## 2026-10-17 01:21:41.702Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"email","id":null,"placeholder":"admin@avantelingerie.com.br","label":"admin@avantelingerie.com.br","value":"","valueLength":0,"text":""}
+
+## 2026-10-17 01:21:42.005Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"email","id":null,"placeholder":"admin@avantelingerie.com.br","label":"admin@avantelingerie.com.br","value":"admin@avantelingerie.com.br","valueLength":27,"text":""}
+
+## 2026-10-17 01:21:42.024Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"password","id":null,"placeholder":"••••••••","label":"••••••••","value":"[redacted:length=0]","valueLength":0,"text":""}
+
+## 2026-10-17 01:21:42.025Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"password","id":null,"placeholder":"••••••••","label":"••••••••","value":"[redacted:length=12]","valueLength":12,"text":""}
+
+## 2026-10-17 01:21:42.026Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"password","id":null,"placeholder":"••••••••","label":"••••••••","value":"[redacted:length=12]","valueLength":12,"text":""}
+
+## 2026-10-17 01:21:43.630Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"email","id":null,"placeholder":"admin@avantelingerie.com.br","label":"admin@avantelingerie.com.br","value":"admin@avantelingerie.com.br","valueLength":27,"text":""}
+
+## 2026-10-17 01:21:43.859Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"submit","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"ACESSAR PAINEL"}
+
+## 2026-10-17 01:21:43.902Z submit
+- action: http://localhost:3000/admin/login
+- fields: [{"label":"admin@avantelingerie.com.br","type":"email","value":"admin@avantelingerie.com.br","length":27,"redacted":false},{"label":"••••••••","type":"password","value":"[redacted:length=12]","length":12,"redacted":true},{"label":"Mostrar senha","type":"button","value":"","length":0,"redacted":false},{"label":"[submit]","type":"submit","value":"","length":0,"redacted":false}]
+
+## 2026-10-17 01:21:44.100Z navigate
+- url: http://localhost:3000/admin
+- via: pushState
+
+## 2026-10-17 01:21:45.194Z network.error
+- method: POST
+- url: https://analytics.google.com/g/collect?v=2&tid=G-E2FS36FRG1&gtm=45je6ae1v9259987036za200xf1&_p=1792200094558&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEEAACQC&ae=a&cid=1422377976.1792200055&frm=0&ibt=1&ngs=1&pscdl=noapi&rcb=3&sr=1366x768&uaa=x86&uab=64&uafvl=Google%2520Chrome%3B155.0.8059.84%7CChromium%3B155.0.8059.84%7CNot(A%253ABrand%3B24.0.0.0&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=pt-pt&_s=3&tag_exp=115616985~115938465~115938469~118897920~118897930~119860442~120213116~120385422~120469145~120469153~121246026~121246034&sid=1792200055&sct=1&seg=1&dl=http%3A%2F%2Flocalhost%2Fadmin%2Flogin&dt=Avante%20Lingerie%20%7C%20Oficial&en=form_start&ep.form_id=&ep.form_destination=http%3A%2F%2Flocalhost%3A3000%2Fadmin%2Flogin&epn.form_length=4&ep.first_field_id=&ep.first_field_type=email&epn.first_field_position=1&_et=3591&tfd=11022
+- status: 0
+- durationMs: 71
+
+## 2026-10-17 01:21:45.194Z console.error
+- text: Fetch error from : 
+
+## 2026-10-17 01:21:46.020Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Produtos"}
+
+## 2026-10-17 01:21:46.023Z navigate
+- url: http://localhost:3000/admin/produtos
+- via: pushState
+
+## 2026-10-17 01:21:48.355Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-10-17 01:21:48.370Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-10-17 01:21:48.371Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-10-17 01:21:48.371Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-10-17 01:21:48.372Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-10-17 01:21:48.372Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-10-17 01:21:48.372Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-10-17 01:21:48.373Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-10-17 01:21:48.373Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-10-17 01:21:48.374Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-10-17 01:21:48.374Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-10-17 01:21:48.375Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-10-17 01:21:48.375Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-10-17 01:21:48.375Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-10-17 01:21:48.376Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-10-17 01:21:48.376Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-10-17 01:21:48.376Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-10-17 01:21:48.376Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-10-17 01:21:50.203Z network.error
+- method: POST
+- url: https://analytics.google.com/g/collect?v=2&tid=G-E2FS36FRG1&gtm=45je6ae1v9259987036za200xf1&_p=1792200094558&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEAAACQC&ae=a&cid=1422377976.1792200055&frm=0&ibt=1&ngs=1&pscdl=noapi&rcb=3&sr=1366x768&uaa=x86&uab=64&uafvl=Google%2520Chrome%3B155.0.8059.84%7CChromium%3B155.0.8059.84%7CNot(A%253ABrand%3B24.0.0.0&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=pt-pt&tag_exp=115616985~115938465~115938469~118897920~118897930~119860442~120213116~120385422~120469145~120469153~121246026~121246034&dl=http%3A%2F%2Flocalhost%3A3000%2Fadmin&dr=http%3A%2F%2Flocalhost%3A3000%2Fadmin%2Flogin&sid=1792200055&sct=1&seg=1&dt=Avante%20Lingerie%20%7C%20Oficial&_s=4&tfd=16025
+- status: 0
+- requestBody: 
+    en=page_view&_et=3096
+    en=page_view&_et=1914&dl=http%3A%2F%2Flocalhost%3A3000%2Fadmin%2Fprodutos&dr=http%3A%2F%2Flocalhost%3A3000%2Fadmin
+- durationMs: 78
+
+## 2026-10-17 01:21:50.203Z console.error
+- text: Fetch error from : 
+
+## 2026-10-17 01:21:54.784Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Estoque"}
+
+## 2026-10-17 01:21:54.786Z navigate
+- url: http://localhost:3000/admin/estoque
+- via: pushState
+
+## 2026-10-17 01:21:55.880Z network.error
+- method: POST
+- url: https://analytics.google.com/g/collect?v=2&tid=G-E2FS36FRG1&gtm=45je6ae1v9259987036za200xf1&_p=1792200094558&_gaz=1&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEAAACQC&ae=a&cid=1422377976.1792200055&frm=0&ibt=1&ngs=1&pscdl=noapi&rcb=3&sr=1366x768&uaa=x86&uab=64&uafvl=Google%2520Chrome%3B155.0.8059.84%7CChromium%3B155.0.8059.84%7CNot(A%253ABrand%3B24.0.0.0&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=pt-pt&_s=5&tag_exp=115616985~115938465~115938469~118897920~118897930~119860442~120213116~120385422~120469145~120469153~121246026~121246034&dl=http%3A%2F%2Flocalhost%3A3000%2Fadmin%2Festoque&dr=http%3A%2F%2Flocalhost%3A3000%2Fadmin%2Fprodutos&sid=1792200055&sct=1&seg=1&dt=Avante%20Lingerie%20%7C%20Oficial&en=page_view&_et=8762&tfd=21709
+- status: 0
+- durationMs: 70
+
+## 2026-10-17 01:21:55.880Z console.error
+- text: Fetch error from : 
+
+## 2026-10-17 01:22:12.689Z click
+- element: {"tag":"a","role":null,"ariaLabel":"Go to next page","name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Next"}
+
+## 2026-10-17 01:22:27.504Z click
+- element: {"tag":"a","role":null,"ariaLabel":"Go to next page","name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Next"}
+
+## 2026-10-17 01:22:52.789Z click
+- element: {"tag":"a","role":null,"ariaLabel":"Go to next page","name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Next"}
+
