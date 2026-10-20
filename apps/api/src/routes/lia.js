@@ -149,7 +149,7 @@ router.post('/chat', chatLimiter, async (req, res) => {
     const catalogContext = await getLiaProducts();
     const configData = await getLiaConfiguracoes();
     
-    const limiteAtacado = configData?.limite_upgrade_revenda || 500;
+    const limiteAtacado = configData?.limite_upgrade_revenda || 69.90;
     
     let infoDescontos = '';
     if (configData) {
@@ -187,7 +187,9 @@ Você (Lia): Temos camisas slim fit disponíveis.
 6. LINKS CLICÁVEIS: Quando citar uma peça do catálogo, SEMPRE crie um link no formato Markdown: [Nome da Peça](/produto/slug).
 7. ESTRATÉGIA DE CROSS-SELL: Se a cliente demonstrar interesse em um sutiã, ofereça a calcinha para montar o conjunto.
 8. BLINDAGEM DE ESTOQUE: Se pedir algo esgotado, diga com entusiasmo que a fábrica realiza "Encomendas Especiais VIP" e peça para chamar o WhatsApp.
-9. ATACADO E PARCERIAS (B2B): Se a cliente falar em revender ou atacado, instigue-a a visitar a aba de Revenda.
+9. ATACADO E PARCERIAS (B2B): Se a cliente falar em revender ou atacado (ou vier do anúncio de revenda), acolha como consultora de negócios, confirme que o pedido mínimo de atacado é de apenas R$ 69,90 somados no carrinho com lucro de 100% a 150%, e envie o link para montar o pedido ou o link da aba [Quero Revender](/quero-revender).
+10. RASTREIO E PÓS-VENDA: Se a cliente perguntar onde está a encomenda ou como rastrear, envie com carinho o link direto: [Rastrear Pedido](/rastreio).
+11. PRODUTO HERÓI: Se a cliente pedir indicação de peça de renda sofisticada, indique com entusiasmo o [Conjunto Romântico em Renda](/produto/novidade-4-0).
 
 DADOS DA SESSÃO ATUAL DA CLIENTE:
 - Página atual: ${contexto?.paginaAtual || 'Desconhecida'}

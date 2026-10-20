@@ -1128,3 +1128,68 @@ Planejamento comercial e técnico estruturado pela Ada e Vértice para alavancar
 - **Integração:** `EstoqueListagem.jsx` refatorado para importar `getColorHex` de `@/utils/colors.js`.
 - **Validação:** `npm run lint --prefix apps/web` aprovado com código 0; testes de mapeamento confirmados com exatidão (`Preta -> #18181B`, `Branca -> #FFFFFF`, `Marrom -> #78350F`, `Bege -> #F5F5DC`).
 
+### Sessão - 18/10/2026 (Ativação Oficial da Loja Meta: Sacolinha Instagram & Loja Facebook)
+- **Criação e Conexão do Catálogo Oficial:**
+  - Criado o contêiner oficial **Catálogo Oficial Avante Lingerie** (ID: `28203576722654659`) no Gestor de Comércio da Meta sob o Portfólio de Negócios oficial (*Avante Lingerie | Confecção de Moda Íntima*, ID `1434883355105952`).
+  - Conectado o Feed XML dinâmico da VPS (`https://avantelingerie.com.br/hcgi/api/marketing/feed.xml`) formatado na especificação oficial Google Merchant Center / RSS 2.0.
+  - Sincronização horária automatizada ativada com sucesso: 100% dos 13 produtos carregados com status **Elegível (Verde)**, com fotos em alta resolução, títulos persuasivos, disponibilidade em estoque e preços em Reais (`BRL R$`).
+  - Pixel oficial (`981595838258999`) e App (`Avante Ads Hub`) associados ao catálogo para rastreamento de inventário e conversões.
+- **Estruturação da Loja (Instagram Shopping & Facebook Page Shop):**
+  - Conta de Comércio criada com direcionamento direto para o checkout do e-commerce da fábrica (`https://avantelingerie.com.br`).
+  - Canais de vendas oficiais unificados e submetidos para ativação da Sacolinha:
+    - **Instagram:** `@avante.lingerie` (ID: `17841421480843011`).
+    - **Facebook:** Página oficial *Avante Lingerie* (ID: `1051489401388433`).
+- **Conformidade de Envios e Devoluções (CDC & Meta Policies):**
+  - **Perfil de Envio:** Configurado `Envio Nacional Avante Lingerie` com destino Brasil (`BR`), envio padrão estimado em 5 a 8 dias úteis (saindo da fábrica em Nova Friburgo via Correios/Melhor Envio) aplicado a todos os produtos.
+  - **Perfil de Devolução:** Configurado `Devolução Padrão (CDC)` com prazo legal de **7 dias corridos** (Direito de Arrependimento - Art. 49 do CDC), instruções formais com WhatsApp oficial (`(22) 98122-5010`), política em espanhol para clientes internacionais e URL da Central da Cliente (`https://avantelingerie.com.br/central-da-cliente#trocas-e-devolucoes`).
+- **Estratégia Registrada para o Futuro (Expansão Internacional — Portugal, Europa e América Latina):**
+  - **Demanda e Mercado:** Moda íntima brasileira possui forte demanda e alto valor percebido em Portugal e na Europa pelo diferencial de modelagem e design de Nova Friburgo.
+  - **Passos para Ativação Futura:**
+    1. *E-commerce:* Adicionar suporte a moeda secundária (EUR / USD) e gateway internacional (Stripe já suporta transações globais nativamente na nova conta PJ da LHA Têxtil).
+    2. *Logística:* Integrar modalidade internacional (Correios Exporta Fácil / DHL Express / FedEx / Melhor Envio Internacional).
+    3. *Meta Commerce:* Adicionar perfil de envio internacional com destino Portugal/Europa no Gestor de Comércio, vincular catálogo com preços em EUR e acionar campanhas de tráfego para a comunidade lusófona e europeia.
+
+### Sessão - 19/10/2026 (Reestruturação Completa de Fim de Ano: Google Ads, Meta Ads & Capacitação da Lia)
+- **Documento Estratégico Oficial:**
+  - Criado o plano mestre detalhado em `PLANO_MESTRE_CAMPANHAS_FIM_DE_ANO_2026.md` contendo a arquitetura de 4 campanhas (alocação 70% Varejo / 30% Atacado), cerco geográfico anti-frete abusivo, dayparting, as 5 listas mestras de negativação, destinos de URLs de produto herói (`/produto/novidade-4-0`), pós-venda `/rastreio` e links parametrizados da Lia.
+- **Capacitação da Consultora Lia (Backend & Knowledge Base):**
+  - `apps/api/src/utils/liaKnowledgeBase.js`: Base de conhecimento atualizada com o pedido mínimo de atacado corrigido para R$ 69,90 (eliminando o antigo R$ 500), dados de confiança do ateliê físico em Olaria/Nova Friburgo (CNPJ 54.615.037/0001-53), link de rastreamento oficial `/rastreio` e tratamento dedicado para os fluxos de entrada do WhatsApp de revenda e varejo.
+  - `apps/api/src/routes/lia.js`: Rota e System Prompt enriquecidos com acolhimento de consultoria de negócios para revendedoras, redirecionamento para o produto herói e provador virtual.
+- **Implementação Cirúrgica no Google Ads (`139-429-2049`):**
+  - **Campanha 1 (B2B):** Reconfigurada para `[GOOGLE] B2B - Atacado | Fábrica Friburgo Mínimo R$ 69,90 [PAUSADA]` (ID: `24365539579`) com 12 palavras-chave negativas cruzadas do Bloco Varejo.
+  - **Campanha 2 (B2C):** Criada do zero como `[GOOGLE] B2C - Varejo | Kits & Renda [PAUSADA]` (ID: `24368401149`) com orçamento de R$ 20,00/dia, estratégia de Maximizar Cliques com teto de CPC, grupo de anúncios com 12 palavras-chave positivas de alta intenção, anúncio responsivo apontando para `/produto/novidade-4-0` e blindagem com 44 palavras negativas dos blocos Atacado, Antiespionagem e Adulto.
+- **Implementação Cirúrgica no Meta Ads (`act_841441889539975`):**
+  - **Campanha 3 (B2C):** Atualizada para `[META] B2C - Varejo | CBO Escala + Remarketing Agressivo [PAUSADA]` (ID: `120251762626930751`).
+  - **Campanha 4 (B2B):** Atualizada para `[META] B2B - Atacado | Captação Revendedoras Lia WhatsApp [PAUSADA]` (ID: `120251762627320751`).
+  - **Blindagem de Redes no Google Ads:** Desativada via API a opção "Incluir parceiros de pesquisa Google" (`targetSearchNetwork: false`) em ambas as campanhas (B2C e B2B). Apenas o Google.com oficial permanece ativo (`targetGoogleSearch: true`), blindando 100% da verba contra perda de controle de termos e cliques de baixa conversão em diretórios terceiros.
+  - **Segmentação Cirúrgica Completa Aplicada no Google Ads:**
+    - *Opção de Localização:* Atualizado para `PRESENCE` (Presença física no raio segmentado) em ambas as campanhas.
+    - *Idiomas:* 3 idiomas ativos em ambas as campanhas (Português, Inglês e Espanhol).
+    - *Cerco Geográfico Positivo (8 locais):* Estados completos de SP (20106), RJ (20102) e MG (20094) + Capitais Curitiba (1001634), Porto Alegre (1001686), Salvador (1001533), Recife (1001625) e Fortaleza (1001538).
+    - *Exclusão Geográfica Ativa (19 locais negativos):* AC, AP, AM, PA, RO, RR, TO, GO, MT, MS, DF, ES, SC, AL, MA, PB, PI, RN, SE.
+    - *Programação Horária (Dayparting - 10 blocos):* Seg-Qua (11h-14h e 18h-23h) e Qui-Dom (10h-24h).
+  - Todas as campanhas permanecem em status rigorosamente **PAUSADA** para inspeção e governança.
+- **Blindagem Crítica e Ajuste Cirúrgico na Campanha B2C (`24368401149`):**
+  - **Objetivo de Conversão Único:** Ação de conversão do GA4 (`Site Avante Lingerie (web) purchase`, ID `7827512380`) ativada e definida como primária (`primaryForGoal: true`), estabelecendo a meta `PURCHASE~WEBSITE` como a única acionável para lances (`biddable: true`). As metas residuais de `ENGAGEMENT` (inscrições do YouTube) e `YOUTUBE_FOLLOW_ON_VIEWS` foram desativadas para lances na campanha e no nível da conta.
+  - **Limite de CPC Máximo:** Reduzido de R$ 2,50 para **R$ 1,00** (`1000000` micros). No orçamento diário de R$ 20,00, isso assegura um volume real entre 20 a 25 cliques qualificados por dia (contra apenas 8 cliques no teto anterior).
+  - **Segmentação Cirúrgica por Dispositivos (Mobile First):**
+    - *Telefones Celulares (Mobile, `30001`):* Mantido em 100% (lance base padrão integral para capturar o público feminino de compras por impulso).
+    - *Computadores (Desktop, `30000`):* Ajuste de lance reduzido em **-50%** (`bidModifier: 0.5`) para poupar verba em leilões mais caros.
+    - *Tablets (`30002`):* Lance reduzido em **-100%** (`bidModifier: 0.0` / Desativado) eliminando o ralo de tráfego com alta taxa de rejeição no checkout.
+  - **DSA e Expansão de URL Final:** Confirmadas 100% vazias/desativadas, garantindo que o tráfego de varejo vá única e exclusivamente para as URLs definidas (`/produto/novidade-4-0` e home).
+- **Protocolo de Ciência de Dados & Motor de Diagnóstico Pós-Play:**
+  - Criado e homologado o motor automatizado de leitura analítica em `C:\Users\comer\.gemini\config\mcp\google-ads\analytics_engine.mjs` via API v25.
+  - O motor consolida os 5 pilares do protocolo: (1) KPIs e limiares de alarme (Impressões, CTR >3.5% B2C / >5% B2B, CPC < R$ 1,00, Conv >1.5%, Search Top IS >60%), (2) Termos de Pesquisa para mineração e negativação imediata, (3) Demografia (faixas etárias com corte de verba em grupos sem conversão), (4) Desempenho Geográfico (ajustes de lance de +20% / -15% orientados a conversões) e (5) Temporal (Dayparting dinâmico para reforço em picos como 12h-13h30).
+  - Cronograma oficial absorvido: Dias 1 a 3 (janela cega de aprendizado, sem toques), Dia 4 em diante (relatórios diários às 10h da manhã analisando o dia anterior completo) e Dia 7 (primeira análise macro de tendências e calibração de personas).
+- **Homologação da Matriz de Isolamento e Exclusões Demográficas:**
+  - *Dispositivos B2B:* Ajustado lance de computadores na campanha B2B (`24365539579~30000`) para **-50%** (`bidModifier: 0.5`), harmonizando 100% com a B2C (-50% computadores, -100% tablets, 100% celulares).
+  - *Exclusões Demográficas por Idade:* Aplicadas via `adGroupCriteria:mutate`:
+    - Na campanha B2B (Grupos `206854315371` e `206854315411`): Excluída ativamente a faixa de 18 a 24 anos (`AGE_RANGE_18_24`, `503001`) para blindar o WhatsApp da Lia contra curiosos sem capital, e excluída a faixa 65+ (`AGE_RANGE_65_UP`, `503006`).
+    - Na campanha B2C (Grupo `198510125222`): Excluída ativamente a faixa 65+ (`AGE_RANGE_65_UP`, `503006`).
+  - *Defesa Cruzada & Isolamento Geográfico:* Confirmada a separação cirúrgica: 63 palavras negativas ativas em B2C (Bloco D) e 41 em B2B (Bloco E), com rotina analítica geográfica 100% independente por campanha.
+
+
+
+
+
+
