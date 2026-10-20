@@ -1188,6 +1188,30 @@ Planejamento comercial e técnico estruturado pela Ada e Vértice para alavancar
     - Na campanha B2C (Grupo `198510125222`): Excluída ativamente a faixa 65+ (`AGE_RANGE_65_UP`, `503006`).
   - *Defesa Cruzada & Isolamento Geográfico:* Confirmada a separação cirúrgica: 63 palavras negativas ativas em B2C (Bloco D) e 41 em B2B (Bloco E), com rotina analítica geográfica 100% independente por campanha.
 
+### Sessão - 20/10/2026 (Auditoria Cirúrgica de Blocos Demográficos & Renda Familiar - Google Ads)
+- **Portão Nemotron (Crivo Prévio):**
+  - Mutações demográficas e de renda familiar validadas e aprovadas no terminal com o Nemotron (`qwen.mjs`), confirmando compatibilidade plena com a API v25 e integridade dos Resource Names e Criterion IDs globais (`503001`, `503004`, `503005`, `503006`, `510001`).
+- **Implementação e Auditoria Empírica na API v25 (`139-429-2049`):**
+  - **Pilar Atacado (B2B - `24365539579`):**
+    - `18 a 24 anos` (`AGE_RANGE_18_24` / `503001`): 🚫 Excluído ativamente (`negative: true`) nos grupos 1 e 2.
+    - `25 a 54 anos` (`AGE_RANGE_25_34`, `AGE_RANGE_35_44`, `AGE_RANGE_45_54`): ✅ Ativos com lance padrão.
+    - `55 a 64 anos` (`AGE_RANGE_55_64` / `503005`): 🚫 Excluído ativamente (`negative: true`) nos grupos 1 e 2.
+    - `65+ anos` (`AGE_RANGE_65_UP` / `503006`): 🚫 Excluído ativamente (`negative: true`) nos grupos 1 e 2.
+    - `Desconhecido`: ⚠️ Mantido ativo para preservar volume orgânico.
+  - **Pilar Varejo (B2C - `24368401149`):**
+    - `18 a 24 anos` (`503001`): ⚠️ Ativo com ajuste de lance protetor de **-40%** (`bidModifier: 0.6`).
+    - `25 a 44 anos` (`503002`, `503003`): ✅ Ativos com lance padrão (Foco total da persona).
+    - `45 a 54 anos` (`503004`): ⚠️ Ativo com ajuste de lance protetor de **-30%** (`bidModifier: 0.7`).
+    - `55 a 64 anos` (`503005`): 🚫 Excluído ativamente (`negative: true`).
+    - `65+ anos` (`503006`): 🚫 Excluído ativamente (`negative: true`).
+    - `Desconhecido`: ✅ Mantido ativo.
+    - **Renda Familiar (Household Income):**
+      - `50% Inferiores` (`INCOME_RANGE_0_50` / `510001`): 🚫 Excluído ativamente (`negative: true`).
+      - Mantidas ativas as faixas 10% superiores, 11-20%, 21-30%, 31-40%, 41-50% e Não determinado.
+  - **Checklists Cruzados de Integridade:**
+    - *Dispositivos:* Celulares 100% (lance base), Computadores -50% (`bidModifier: 0.5`), Tablets -100% (`bidModifier: 0.0` / Desativado) em ambas as campanhas.
+    - *Locais:* Cerco positivo com 8 localidades (SP, RJ, MG + Curitiba, Porto Alegre, Salvador, Recife, Fortaleza) e 19 estados expressamente na lista de exclusão, com segmentação positiva travada em `PRESENCE` (anulando o interior de BA, CE, PE, PR e RS).
+
 
 
 
