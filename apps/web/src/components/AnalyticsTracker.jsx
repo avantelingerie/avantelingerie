@@ -4,9 +4,9 @@ import pb from '@/lib/pocketbaseClient.js';
 
 export default function AnalyticsTracker() {
   const location = useLocation();
-  const [pixelId, setPixelId] = useState(null);
-  const [ga4Id, setGa4Id] = useState(null);
-  const [googleAdsId, setGoogleAdsId] = useState(null);
+  const [pixelId, setPixelId] = useState('981595838258999');
+  const [ga4Id, setGa4Id] = useState('G-E2FS36FRG1');
+  const [googleAdsId, setGoogleAdsId] = useState('AW-18499593515');
   const [isInitialized, setIsInitialized] = useState(false);
 
   // 1. Buscar configurações do banco de dados (PocketBase)

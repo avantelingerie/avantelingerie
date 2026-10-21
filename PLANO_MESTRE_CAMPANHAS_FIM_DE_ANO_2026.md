@@ -51,7 +51,7 @@ A **Avante Lingerie** opera no maior polo de moda íntima do Brasil (Nova Fribur
 ### 🛒 Campanha 1: [GOOGLE] B2C - Varejo | Kits & Renda [PAUSADA]
 - **ID da Campanha:** `24368401149`
 - **Status Atual:** `PAUSADA` (Custo R$ 0,00)
-- **Objetivo de Conversão Único:** **Compras** (`PURCHASE` / *Site Avante Lingerie (web) purchase*). Metas de "Interações" e "Visualizações do YouTube" foram rigorosamente removidas/desativadas para lances (`biddable: false`).
+- **Objetivo de Conversão Único:** **Compras em Tempo Real** (`PURCHASE` / *Compra no Site - Tag Direta*, ID `7861435868`, Tag `AW-18499593515`, Label `I3OOCNz7z6QdEKvKpfVE`). Ação do GA4 rebaixada para Secundária (backup/auditoria sem duplicação) e metas de "Interações", "Mapas" e "YouTube" desativadas de lances (`biddable: false`).
 - **Estratégia de Lances:** *Maximizar Cliques* com **Limite de CPC Máximo cravado em R$ 1,00** (garantindo entre 20 a 25 cliques qualificados por dia com a verba de R$ 20,00/dia).
 - **Segmentação Cirúrgica por Dispositivos (Mobile First):**
   - **Telefones Celulares (Mobile):** Lance base 100% (Foco total do tráfego feminino de impulso).

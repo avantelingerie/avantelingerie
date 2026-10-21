@@ -6,8 +6,8 @@ import { trackEvent } from '@/hooks/useMarketingTracker.js';
 const CONFIG_PIXELS_LOCAIS = {
   meta_pixel_id: '981595838258999',
   google_analytics_id: 'G-E2FS36FRG1',
-  google_ads_tag_id: '',
-  google_ads_conversion_label: '',
+  google_ads_tag_id: 'AW-18499593515',
+  google_ads_conversion_label: 'I3OOCNz7z6QdEKvKpfVE',
   enable_pocketbase_sync: true, // Habilitado para ler da integracoes_config
 };
 

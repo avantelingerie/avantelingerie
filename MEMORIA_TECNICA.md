@@ -1212,6 +1212,21 @@ Planejamento comercial e técnico estruturado pela Ada e Vértice para alavancar
     - *Dispositivos:* Celulares 100% (lance base), Computadores -50% (`bidModifier: 0.5`), Tablets -100% (`bidModifier: 0.0` / Desativado) em ambas as campanhas.
     - *Locais:* Cerco positivo com 8 localidades (SP, RJ, MG + Curitiba, Porto Alegre, Salvador, Recife, Fortaleza) e 19 estados expressamente na lista de exclusão, com segmentação positiva travada em `PRESENCE` (anulando o interior de BA, CE, PE, PR e RS).
 
+### Sessão - 21/10/2026 (Reestruturação da Arquitetura de Conversões Google Ads - Tag Nativa Real-Time)
+- **Portão Nemotron (Crivo Prévio):**
+  - Validação algorítmica da mutação `conversionActions:mutate` para criação da ação nativa `WEBPAGE` e rebaixamento do GA4 purchase via terminal com o Nemotron (`qwen.mjs`).
+- **Implementação na API v25 (`139-429-2049`):**
+  - Criada a Ação de Conversão Nativa: `Compra no Site - Tag Direta` (ID: `7861435868`, Categoria: `PURCHASE`, Tipo: `WEBPAGE`, `primaryForGoal: true`, `includeInConversionsMetric: true`).
+  - Snippets de tag extraídos com sucesso: Google Tag Global `AW-18499593515`, Conversion Label `I3OOCNz7z6QdEKvKpfVE`.
+  - Rebaixada a ação GA4 `Site Avante Lingerie (web) purchase` (ID: `7827512380`) para Secundária (`primaryForGoal: false`, `includeInConversionsMetric: false`), eliminando 100% o risco de contagem dupla de conversões e mantendo-a como backup/auditoria.
+  - As metas residuais de YouTube e Maps permanecem com lances desativados (`biddable: false`) a nível de campanha e conta.
+- **Implementação no E-commerce (`apps/web`):**
+  - Injetados `AW-18499593515` e `I3OOCNz7z6QdEKvKpfVE` no slot pré-construído em `apps/web/src/lib/marketingPixels.js`, disparando a conversão direta no momento da compra (tempo real, zero delay).
+  - Atualizado `apps/web/src/components/AnalyticsTracker.jsx` para inicialização imediata e resiliente da Google Ads Tag em toda a navegação.
+- **Validação de Engenharia:**
+  - Build do frontend (`npm run build`) validado com sucesso absoluto (`✓ built in 1m 56s`, 3113 módulos transformados).
+
+
 
 
 
