@@ -1,6 +1,6 @@
 // Caminho do arquivo: App.jsx
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation, Navigate } from 'react-router-dom';
 import { Toaster } from '@/components/ui/sonner.jsx';
 import ScrollToTop from '@/components/ScrollToTop.jsx';
 
@@ -254,6 +254,8 @@ const AppInterceptor = () => {
               <Route path="/lojas" element={<ErrorBoundary><LojasPage /></ErrorBoundary>} />
               <Route path="/faq" element={<ErrorBoundary><CentralDaClientePage /></ErrorBoundary>} />
               <Route path="/quero-revender" element={<ErrorBoundary><QueroRevenderPage /></ErrorBoundary>} />
+              <Route path="/revenda" element={<Navigate to="/quero-revender" replace />} />
+              <Route path="/atacado" element={<Navigate to="/quero-revender" replace />} />
               <Route 
                 path="/portal-revenda" 
                 element={

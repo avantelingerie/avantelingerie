@@ -1380,10 +1380,25 @@ Planejamento comercial e técnico estruturado pela Ada e Vértice para alavancar
     - API & Webhook Mercado Pago: `https://avantelingerie.com.br/hcgi/api/webhooks/mercadopago` respondendo com segurança (`{"status":"ignored","reason":"no_id"}` para requisições sem payload malicioso).
 - **Stripe Produção:**
   - Chaves `pk_live`, `rk_live` e Webhook (`whsec_...`) homologados com eventos `checkout.session.completed`, `checkout.session.async_payment_succeeded`, `payment_intent.succeeded` e `payment_intent.payment_failed` apontados para `https://avantelingerie.com.br/hcgi/api/webhooks/stripe`.
+- **Meta Ads — Blindagem Completa do Varejo (B2C) & Publicação do Atacado (B2B):**
+  - **Blindagem de IA no Quarteto Fantástico (B2C):**
+    - `AD 01 - Calcinha Cinta`, `AD 02 - Conjunto Romântico`, `AD 03 - Pijama Short Doll` e `AD 04 - Carrossel Vitrine` agora possuem 100% de `degrees_of_freedom_spec` com `enhance_cta: OPT_OUT`, `product_browsing: OPT_OUT` e `contextual_multi_ads: OPT_OUT`.
+    - Nenhuma IA da Meta tem permissão para alterar textos, botões ou inventar links nos anúncios da loja.
+  - **Upload das Artes Oficiais de Atacado:**
+    - `revenda_feed_4x5.jpg` (Hash `f162289da01be298d52357b1358c34c7`).
+    - `revenda_stories_9x16.jpg` (Hash `0144e6a65174b2b0030c7a5b19b92ee9`).
+  - **Criação e Publicação do Anúncio B2B de Revenda:**
+    - Nome: `AD B2B 01 - Comece a Revender com R$ 69,90`.
+    - Proposta forte: *"Chega de pedidos mínimos de R$ 500 ou R$ 1.000! Na Avante Lingerie compre direto da fábrica com pedido mínimo de apenas R$ 69,90 e margem de 100% a 150% de lucro para o fim de ano"*.
+    - Destino oficial: `https://avantelingerie.com.br/quero-revender` com UTMs de rastreamento.
+    - Publicado com sucesso no conjunto `[ADSET 01] Revenda & Renda Extra (Mínimo R$ 69,90) - Mulheres 25-54`.
+    - Status: `ACTIVE`, com entrega em `ADSET_PAUSED` (dormindo com segurança).
+  - **Auditoria de Gastos:** Conta com R$ 0,00 consumido. Todas as campanhas e conjuntos permanecem rigorosamente pausados.
+  - **Redirecionamento Inteligente no Frontend:** Adicionadas rotas de redirecionamento em `App.jsx` (`/revenda` e `/atacado` -> `/quero-revender`) para prevenir 404 em digitações diretas.
 - **Ponto de Parada Atual:**
-  - Sistema 100% atualizado, integrado e ativo na VPS da Hostinger.
-  - Aguardando o sócio enviar o código 2FA para concluir a conta do Mercado Pago (ou liberar as chaves de API `APP_USR-...`) para cadastrar no painel Admin (`/admin/integracoes`) e ativar o parcelamento de até 12x para os lojistas e revendedoras.
-  - Pendente também no Meta Ads: desligar as 3 otimizações automáticas (`Aprimorar a CTA`, `Navegação de produtos` e `Múltiplos anunciantes`) nos criativos `AD 01`, `AD 02` e `AD 03` e subir os anúncios de Revenda/Atacado para a Lia.
+  - Meta Ads: 100% estruturado, blindado contra IA e pronto para quando for dado o play geral das campanhas.
+  - Mercado Pago: aguardando segunda-feira o sócio enviar o código 2FA para concluir a conta PJ e inserir as chaves de API no painel Admin da loja.
+
 
 
 
