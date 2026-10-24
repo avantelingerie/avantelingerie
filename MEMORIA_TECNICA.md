@@ -1372,10 +1372,18 @@ Planejamento comercial e técnico estruturado pela Ada e Vértice para alavancar
   - Node syntax check em todos os 4 arquivos do backend: 100% aprovado (código 0).
   - Build do frontend (`vite build`): 100% aprovado (`✓ built in 50.70s`, 3113 módulos).
   - Lint do frontend (`eslint`): 100% aprovado (zero erros, zero warnings).
+- **Deploy para VPS Hostinger (Run #112 - Commit dba50d4):**
+  - Executado via GitHub Actions automaticamente com o push na branch `main`.
+  - Concluído com sucesso absoluto em 4m 46s (Run #112).
+  - Validação ao vivo na VPS:
+    - Frontend: `200 OK` em `https://avantelingerie.com.br/`.
+    - API & Webhook Mercado Pago: `https://avantelingerie.com.br/hcgi/api/webhooks/mercadopago` respondendo com segurança (`{"status":"ignored","reason":"no_id"}` para requisições sem payload malicioso).
+- **Stripe Produção:**
+  - Chaves `pk_live`, `rk_live` e Webhook (`whsec_...`) homologados com eventos `checkout.session.completed`, `checkout.session.async_payment_succeeded`, `payment_intent.succeeded` e `payment_intent.payment_failed` apontados para `https://avantelingerie.com.br/hcgi/api/webhooks/stripe`.
 - **Ponto de Parada Atual:**
-  - Toda a estrutura técnica do Mercado Pago e Stripe está pronta e em espera.
-  - Aguardando sócio enviar o SMS/WhatsApp para:
-    1. Copiar as chaves da Stripe (`pk_live` e `sk_live`) e criar o webhook na Stripe.
-    2. Concluir os 2 passos da conta PJ no Mercado Pago e colar as chaves no novo card do admin da loja.
+  - Sistema 100% atualizado, integrado e ativo na VPS da Hostinger.
+  - Aguardando o sócio enviar o código 2FA para concluir a conta do Mercado Pago (ou liberar as chaves de API `APP_USR-...`) para cadastrar no painel Admin (`/admin/integracoes`) e ativar o parcelamento de até 12x para os lojistas e revendedoras.
+  - Pendente também no Meta Ads: desligar as 3 otimizações automáticas (`Aprimorar a CTA`, `Navegação de produtos` e `Múltiplos anunciantes`) nos criativos `AD 01`, `AD 02` e `AD 03` e subir os anúncios de Revenda/Atacado para a Lia.
+
 
 
