@@ -80,7 +80,7 @@ A **Avante Lingerie** opera no maior polo de moda íntima do Brasil (Nova Fribur
   - `5% de Desconto no PIX`
   - `Desconto Progressivo Carrinho`
   - `Fábrica Real em Nova Friburgo`
-  - `CNPJ 54.615.037/0001-53`
+  - `CNPJ 57.394.988/0001-38`
   - `Envio Rápido para Todo o Brasil`
 - **Descrições:**
   - `Moda íntima de luxo direto da fábrica em Nova Friburgo. Qualidade superior com preço imbatível.`
@@ -125,60 +125,125 @@ A **Avante Lingerie** opera no maior polo de moda íntima do Brasil (Nova Fribur
 
 ---
 
-## 4. 📱 Arquitetura Meta Ads (Instagram & Facebook)
+## 4. 📱 Manual Operacional & Arquitetura Estratégica: Meta Ads (Instagram & Facebook)
 
 - **Conta Oficial:** `act_841441889539975`
-- **Pixel ID Oficial:** `981595838258999` (com Conversions API ativa na VPS).
-- **Estrutura:** Orçamento em Nível de Campanha (**CBO / Advantage+ Campaign Budget**) para que a IA distribua o investimento dinamicamente nas combinações de criativo/público de menor CPA.
+- **Pixel ID Oficial:** `981595838258999` (com Conversions API / CAPI ativa na VPS).
+- **Motor de Orçamento:** **CBO (Advantage+ Campaign Budget)** em ambas as campanhas para que o algoritmo da Meta redistribua a verba dinamicamente entre os conjuntos em tempo real com base no menor CPA.
 
 ---
 
-### 👗 Campanha 3: [META] B2C - Varejo | CBO Escala + Remarketing Agressivo
-- **Status Inicial:** `PAUSADA`
-- **Objetivo:** Vendas (`Purchase`).
-- **Orçamento Proporcional:** ~40% da verba total.
-- **Divisão em 2 Conjuntos de Anúncios:**
-  1. **Conjunto 01 — Público Frio (Descoberta):**
-     - Mulheres, 22 a 45 anos.
-     - Interesses: Lingerie, Moda íntima, Compras online + *Comportamento: Compradores Envolvidos*.
-     - Cerco Geográfico Ativo (SP, RJ, MG + 5 Capitais).
-     - **Exclusões:** Compradores dos últimos 30 dias, visitantes da URL `/rastreio` (últimos 14 dias), conexões lentas (2G/3G) e Bloco A (Gestores de Tráfego/Marketing).
-  2. **Conjunto 02 — Remarketing Dinâmico (7 Dias):**
-     - Visitou produtos (`ViewContent`) ou adicionou ao carrinho (`AddToCart`) nos últimos 7 dias e não finalizou a compra.
-- **Criativos em Rotação:**
-  - **Criativo 1 ("Shopee Killer" — Carrossel ou Vídeo UGC):**
-    - *Visual:* Conjuntos de renda e bodies em alta definição, iluminação natural de ateliê.
-    - *Copy:* "Preço de Shopee com qualidade de fábrica e entrega rápida. Conjuntos e calcinhas com o menor preço do mercado. Desconto progressivo no carrinho + 5% OFF no PIX! Compre direto de Nova Friburgo."
-    - *Link de Destino:* `https://avantelingerie.com.br/produto/novidade-4-0`
-  - **Criativo 2 ("Desafio do Carrinho" — Gravação de Tela):**
-    - *Visual:* Demonstração da barra de desconto progressivo subindo à medida que peças são adicionadas ao carrinho.
-    - *Copy:* "Monte o seu guarda-roupa de fim de ano ou garanta os presentes. Quanto mais peças você coloca no carrinho, menos paga por cada uma. Ganhe + 5% de desconto no PIX."
+### 📊 Painel de Monitoramento & Métricas-Chave (KPIs Vitais Meta)
+A leitura diária dos dados da Meta deve ser orientada por estes indicadores de referência para moda íntima no Brasil:
+* **CPM (Custo por Mil Impressões):** Faixa saudável entre **R$ 12,00 e R$ 22,00** no Sudeste. Se ultrapassar R$ 40,00, indica público excessivamente saturado ou rejeição de criativo.
+* **CTR Único no Link:** 
+  * *Varejo (B2C):* Meta **> 1.2%** (excelente > 1.8%).
+  * *Atacado (B2B):* Meta **> 1.5%** (excelente > 2.2%).
+  * *Alerta:* CTR < 0.8% exige troca imediata de criativo.
+* **CPC Único:** Faixa alvo entre **R$ 0,35 e R$ 0,70**.
+* **Frequência:** Público frio entre **1.1 e 1.3**. Remarketing entre **2.5 e 4.0**.
 
 ---
 
-### 💬 Campanha 4: [META] B2B - Atacado | Captação Revendedoras Lia WhatsApp
-- **Status Inicial:** `PAUSADA`
-- **Objetivo:** Mensagens no WhatsApp / Geração de Leads.
-- **Orçamento Proporcional:** ~15% da verba total.
-- **Segmentação do Conjunto:**
-  - Mulheres, 25 a 54 anos.
-  - Interesses: Atacado, Renda Extra, Revenda, Pequenos Negócios, Donas de Loja.
-  - Cerco Geográfico Ativo (SP, RJ, MG + 5 Capitais).
-  - **Exclusões Obrigatórias:** Compradores de Varejo B2C e visitantes de campanhas B2C.
-- **Criativo de Impacto:**
-  - **Criativo 3 ("A Menor Barreira do Mercado"):**
-    - *Visual:* Foto de caixas de remessa sendo embaladas no ateliê com letreiro gigante: **"MÍNIMO R$ 69,90 — APENAS PARA REVENDA"**.
-    - *Copy:* "Comece a revender com menos de 70 reais! Lingerie direto da fábrica em Nova Friburgo. Atacado com desconto progressivo para lucrar mais de 100% neste fim de ano. Fale com a Lia, nossa consultora de fábrica, e receba a seleção de peças mais lucrativas."
-    - *Link de Destino (WhatsApp Parametrizado):* `https://wa.me/5522981225010?text=Ol%C3%A1%20Lia%2C%20quero%20come%C3%A7ar%20a%20revender%20com%20o%20m%C3%ADnimo%20de%20R%24%2069%2C90%20da%20f%C3%A1brica%21`
+### 🛒 Campanha 1: [META] B2C - Varejo | CBO Escala + Remarketing Agressivo [PAUSADA]
+- **ID da Campanha:** `120251762626930751`
+- **Status Atual:** `PAUSADA`
+- **Objetivo da Campanha:** Vendas (`OUTCOME_SALES`).
+- **Evento de Otimização:** Compras no Site (`PURCHASE` / Pixel `981595838258999` + CAPI).
+- **Orçamento CBO:** R$ 35,00/dia (`daily_budget: 3500`).
+- **Configurações Gerais dos Conjuntos B2C:**
+  - **Gênero:** Feminino (100% no leilão regular; segmentação para homens ativada apenas em semanas temáticas de presentes de Natal).
+  - **Faixa Etária Estrita:** **22 a 45 anos** (`age_min: 22`, `age_max: 45`). Exclui menores de 21 anos (baixa bancarização) e acima de 65 anos.
+  - **Dispositivos:** Apenas Smartphones (`device_platforms: ['mobile']`). Desktops e tablets desativados.
+  - **Cerco Geográfico Positivo:** Estados de SP (460), RJ (454) e MG (449) completos + Perímetros urbanos das capitais Curitiba (250457), Porto Alegre (264859), Salvador (267730), Recife (266284) e Fortaleza (253370).
+  - **Posicionamentos:** Advantage+ Placements (Automático) para maximizar o inventário barato em Stories e Reels.
+
+#### Estrutura dos 3 Conjuntos de Anúncios B2C:
+1. **[ADSET 01] Remarketing 7D & Engajamento 45D - Mulheres 22-45** (ID: `120251762649670751`):
+   - *Finalidade:* Capturar tráfego quente que demonstrou alta intenção.
+   - *Públicos:* Visitantes do site últimos 7 dias, abandono de carrinho (`AddToCart` / `InitiateCheckout` 7D) e engajamento com perfil/sacolinha do Instagram e Facebook nos últimos 45 dias.
+   - *Exclusão:* Compradores dos últimos 180 dias.
+2. **[ADSET 02] Interesses Lingerie + Compradores Envolvidos - Mulheres 22-45** (ID: `120251762650110751`):
+   - *Finalidade:* Prospecção fria qualificada por intenção comercial.
+   - *Segmentação Obrigatória (AND Narrowing via `flexible_spec`):*
+     - Bloco 1 (Interesses): Lingerie (`6003024627293`), Sutiã (`6003313450363`), Calcinha (`6003204485047`), Vestuário/Body (`6003456388203`), Camisola (`6003242077675`).
+     - **E obrigatoriamente** Bloco 2 (Comportamento): Compradores envolvidos / Engaged Shoppers (`6071631541183`).
+3. **[ADSET 03] Aberto Avançado (Broad) - Mulheres 22-45** (ID: `120251864267230751`):
+   - *Finalidade:* Prospecção ampla de escala, permitindo que a IA da Meta identifique compradoras através do apelo visual do próprio criativo.
+   - *Segmentação:* Sem interesses. Apenas filtros demográficos, geográficos e restrições de aparelhos móveis ativos.
 
 ---
 
-### 🎁 Campanha 5 (Bônus LTV): [META] Pós-Venda | Recompra URL `/rastreio`
-- **Status Inicial:** `PAUSADA`
-- **Objetivo:** Vendas (`Purchase`).
-- **Orçamento:** Verba simbólica (R$ 5 a R$ 10/dia).
-- **Público:** Visitantes da URL `https://avantelingerie.com.br/rastreio` nos últimos 30 dias.
-- **Copy:** "Gostou da sua primeira compra na Avante? Garanta o seu próximo visual de fim de ano com a nossa barra de desconto progressivo + 5% OFF no PIX!"
+### 💼 Campanha 2: [META] B2B - Atacado | Captação Revendedoras Lia WhatsApp [PAUSADA]
+- **ID da Campanha:** `120251762627320751`
+- **Status Atual:** `PAUSADA`
+- **Objetivo da Campanha:** Geração de Leads / Mensagens (`OUTCOME_SALES` com destino WhatsApp/Conversas).
+- **Orçamento CBO:** R$ 15,00/dia (`daily_budget: 1500`).
+- **Configurações Gerais dos Conjuntos B2B:**
+  - **Gênero:** Feminino (foco em sacoleiras, donas de lojas e revendedoras autônomas).
+  - **Faixa Etária Estrita:** **25 a 54 anos** (`age_min: 25`, `age_max: 54`). Bloqueia menores de 25 anos para eliminar curiosos sem capital de giro.
+  - **Dispositivos:** Mobile (`device_platforms: ['mobile']`).
+  - **Cerco Geográfico:** Idêntico ao Varejo (SP, RJ, MG + 5 Capitais).
+  - **Posicionamentos Seletos Manuais:** Feed do Instagram, Feed do Facebook, Instagram Stories e Instagram Reels (sem Audience Network).
+
+#### Estrutura dos 2 Conjuntos de Anúncios B2B:
+1. **[ADSET 01] Revenda & Renda Extra (Mínimo R$ 69,90) - Mulheres 25-54** (ID: `120251762650980751`):
+   - *Interesses em Negócios:* Atacado (`6003107626192`), Revendedor (`6003248076467`), Pequena empresa (`6002884511422`).
+2. **[ADSET 02] Sacoleiras & Lojas - Mulheres 25-54** (ID: `120251762651370751`):
+   - *Comportamentos Comerciais:* Administradores de lojas (`6377178995383`).
+   - *Exclusão Cruzada:* Excluir compradores de varejo do site e engajados B2C (últimos 90 dias).
+
+---
+
+### 🎨 Roteiros de Criativos & Copys de Alta Conversão
+
+#### 🛍️ Criativos de Varejo B2C:
+* **Criativo 01 ("Shopee Killer" — Carrossel ou Vídeo UGC 9:16):**
+  * *Visual:* Conjuntos de renda e bodies em alta definição, close no acabamento e toque do tecido.
+  * *Headline:* Preço de Fábrica Melhor que a Shopee.
+  * *Texto Principal:* "Cansada de comprar lingerie na internet e se decepcionar com a qualidade? A Avante Lingerie fabrica direto em Nova Friburgo/RJ com padrão de ateliê e preços imbatíveis. Ganhe desconto progressivo na sacola + 5% de desconto extra no PIX! Envio imediato para todo o Brasil."
+  * *CTA:* Comprar Agora (`https://avantelingerie.com.br/produto/novidade-4-0`).
+* **Criativo 02 ("Desafio do Carrinho" — Gravação de Tela Dinâmica):**
+  * *Visual:* Demonstração da barra de desconto progressivo subindo conforme mais peças são adicionadas.
+  * *Headline:* Quanto Mais Peças, Menos Você Paga!
+  * *Texto Principal:* "Monte seu guarda-roupa de fim de ano ou antecipe seus presentes. Nosso desconto progressivo reduz o valor de cada peça direto no carrinho. Peças a partir de R$ 19,00 + 5% OFF no PIX."
+  * *CTA:* Ver Ofertas.
+
+#### 💼 Criativos de Atacado B2B:
+* **Criativo 03 ("A Menor Barreira do Mercado" — Foto/Vídeo de Ateliê):**
+  * *Visual:* Caixas de remessa sendo embaladas no ateliê em Nova Friburgo com letreiro: **"MÍNIMO R$ 69,90 — APENAS PARA REVENDA"**.
+  * *Headline:* Comece a Revender com Menos de R$ 70!
+  * *Texto Principal:* "Chega de pedidos mínimos abusivos de R$ 500 ou R$ 1.000! Na Avante Lingerie, você compra direto da fábrica em Nova Friburgo com pedido mínimo de apenas R$ 69,90 e margem de 100% a 150% de lucro para o fim de ano. Sem burocracia, compre com CPF. Chame a consultora Lia agora no WhatsApp e receba o catálogo completo!"
+  * *CTA:* Enviar Mensagem no WhatsApp (`https://wa.me/5522981225010?text=Ol%C3%A1%20Lia%2C%20quero%20come%C3%A7ar%20a%20revender%20com%20o%20m%C3%ADnimo%20de%20R%24%2069%2C90%20da%20f%C3%A1brica%21`).
+
+---
+
+### ⏱️ Cronograma de Acompanhamento e Governança da Cientista de Dados (Pós-Play)
+
+* **Primeiras 24 Horas (Entrega & Integridade):**
+  * Verificar consumo normal de orçamento do CBO, disparos de eventos pelo Pixel/CAPI e ausência de reprovações de criativos pelas políticas de privacidade da Meta.
+  * Alarme: CPM > R$ 40,00 indica saturação precoce ou rejeição algorítmica.
+* **Após 3 Dias (72 Horas - Estabilização de Leilão):**
+  * Métrica Alvo: CTR Único > 1.2% (Varejo) e > 1.5% (Atacado).
+  * Ação: Se um anúncio dentro do conjunto concentrar mais de 80% do gasto com CTR medíocre (< 0.8%), pausar o criativo deficitário para forçar a rotação dos demais.
+* **Após 7 Dias (Primeira Janela de Otimização Real):**
+  * Avaliação de CPA real e ROAS em relação ao ticket médio. Frequência em público frio entre 1.1 e 1.3.
+  * Ação: Desativar conjuntos de anúncios com CPA persistentemente acima do teto de lucro e iniciar rotação de novos criativos nos públicos vencedores.
+* **Após 14 Dias (Consolidação & Escala):**
+  * Cruzamento de relatórios de detalhamento por Idade e Cidade.
+  * Aplicação de Escala Vertical (aumentos graduais de 15% a 20% a cada 48h) ou Escala Horizontal (duplicação de criativos vencedores em públicos semelhantes / Lookalike 1% baseados em compradores reais).
+
+---
+
+### 🩺 Matriz de Diagnóstico de Gargalos (Ações Corretivas de Gestão)
+
+| Sintoma Identificado | Causa Provável | Diagnóstico Técnico | Ação Corretiva Imediata |
+| :--- | :--- | :--- | :--- |
+| **CPM muito alto (> R$ 30,00)** | Público pequeno ou criativo com baixa aceitação. | Índice de qualidade abaixo da média ou audiência restrita. | Expandir o público com o conjunto Aberto (Broad) ou trocar por vídeo UGC mais natural. |
+| **CTR Baixo (< 1.0%)** | Criativo sem gancho visual ou proposta fraca. | CTR < 1.0% com CPC elevado. | Trocar criativo. Inserir o gancho do "Preço de Shopee" ou "Mínimo R$ 69,90" em letras garrafais nos primeiros 3 segundos. |
+| **CPC Caro com CTR Bom** | Alta concorrência no leilão ou posicionamento restrito. | CTR > 1.5%, mas CPC > R$ 1,50. | Deixar posicionamentos 100% no automático (Advantage+) para capturar inventários mais baratos no Reels/Stories. |
+| **Cliques no link, mas zero vendas/leads** | Lentidão de página, quebra de expectativa ou objeção de frete. | Cliques altos, mas AddToCart ou conversas no WhatsApp zeradas. | 1. Verificar tempo de carregamento mobile.<br>2. Adicionar chat da Lia flutuante na página do produto.<br>3. Confirmar se o preço do anúncio é exatamente idêntico ao do site. |
+| **Muitas adições ao carrinho, mas sem compra** | Fricção no checkout, frete alto ou desconfiança na marca. | Alta taxa de AddToCart com baixa taxa de conversão final. | 1. Ativar barra de frete fixo ou desconto progressivo no carrinho.<br>2. Remarketing agressivo destacando o CNPJ oficial e o ateliê físico em Nova Friburgo. |
 
 ---
 
@@ -240,7 +305,7 @@ O grande gargalo de conversão no checkout de e-commerce é o frete alto para re
 ## 8. 👩‍💼 Roteiro & Inteligência da Consultora Lia no WhatsApp
 
 - **Número Oficial:** `(22) 98122-5010`
-- **Razão Social & Dados de Confiança:** *Avante Indústria e Comércio de Vestuário LTDA* — CNPJ: `54.615.037/0001-53`.
+- **Razão Social & Dados de Confiança:** *LHA TEXTIL COMERCIO DO VESTUARIO LTDA* — CNPJ: `57.394.988/0001-38`.
 - **Endereço Físico:** Ateliê e Showroom em Olaria, Nova Friburgo/RJ.
 
 ### Fluxo B2B — Entrada de Revendedoras:
@@ -333,4 +398,33 @@ Para garantir que o algoritmo nunca misture os públicos nem contamine o aprendi
 | **2. Renda Familiar (Household Income)** | **Foco em Classes A, B e C Alta:**<br>• 50% Inferiores: 🚫 Excluído (`INCOME_RANGE_0_50`)<br>• 10% sup, 11-20%, 21-30%, 31-40%, 41-50% e Desconhecido: ✅ Ativos | **Livre / Não restrito** (O critério B2B é poder de revenda e compra mínima de R$ 69,90). | No varejo, elimina público sem capacidade de compra online ou com alta taxa de abandono por falta de limite/meio de pagamento. |
 | **3. Defesa Cruzada de Palavras** | **Negativação Ativa: Bloco D**<br>Termos de atacado, revenda, fábrica, distribuidor, lote, CNPJ. | **Negativação Ativa: Bloco E**<br>Termos de 1 peça, unidade, avulso, frete grátis sem mínimo, provador. | Impede que quem busca comprar 1 calcinha caia na página de atacado e vice-versa. Blindagem cirúrgica dos funis. |
 | **4. Leitura e Lances Geográficos** | **Análise e Ajustes 100% Isolados**<br>Pode elevar lance no RJ pelo frete rápido ou SP por volume B2C. | **Análise e Ajustes 100% Isolados**<br>Pode elevar lance em MG ou SP pela concentração de lojistas e revendedoras físicas. | A dinâmica logística e a margem de atacado são diferentes do varejo. Um estado campeão em B2C não é necessariamente o líder em B2B. |
+
+---
+
+## 7. META ADS (FACEBOOK & INSTAGRAM) — ARQUITETURA CBO & CRIATIVOS DE ALTA CONVERSÃO
+
+### 7.1 Configuração do Motor CBO (Advantage+ Campaign Budget)
+- **Conta de Anúncios:** `act_841441889539975`
+- **Pixel Ativo:** `981595838258999` (Evento Principal: `Purchase`)
+- **Status Inicial de Segurança:** Rigorosamente **PAUSED** em todos os níveis.
+
+| Campanha | ID da Campanha | Orçamento Diário (CBO) | Objetivo / Destino | Estrutura de AdSets |
+| :--- | :--- | :--- | :--- | :--- |
+| **B2C - Varejo** | `120251762626930751` | R$ 35,00/dia (`daily_budget: 3500`) | Vendas no E-commerce (`OUTCOME_SALES` / Pixel Purchase) | **ADSET 01:** Remarketing 7D & Engajamento 45D (`120251762649670751`)<br>**ADSET 02:** Interesses Lingerie + Compradores Envolvidos (`120251762650110751`)<br>**ADSET 03:** Aberto Avançado - Broad (`120251864267230751`) |
+| **B2B - Atacado** | `120251762627320751` | R$ 15,00/dia (`daily_budget: 1500`) | Leads / Vendas WhatsApp (`OUTCOME_SALES` com Lia no WhatsApp) | **ADSET 01:** Revenda Mínimo R$ 69,90 (`120251762650980751`)<br>**ADSET 02:** Sacoleiras & Lojas - Adm Lojas (`120251762651370751`) |
+
+### 7.2 Cerco Geográfico & Dispositivos Meta Ads
+- **Aparelhos:** 100% Mobile (`device_platforms: ['mobile']`).
+- **Idades:**
+  - Varejo B2C: Mulheres de 22 a 45 anos (`age_min: 22`, `age_max: 45`, `genders: [2]`).
+  - Atacado B2B: Mulheres de 25 a 54 anos (`age_min: 25`, `age_max: 54`, `genders: [2]`).
+- **Localidades Positivas:** SP, RJ, MG + 5 Capitais Estratégicas (Curitiba, Porto Alegre, Salvador, Recife e Fortaleza).
+
+### 7.3 Dossiê de Criativos e Copywriting Persuasivo
+1. **Criativo 01 - Varejo B2C (Feed 1:1 & 9:16):** Conjunto Renda Francesa / Cropped Renda. Ângulo "Shopee Killer" + Preço de Fábrica de Nova Friburgo (R$ 28,28). CTA: "Comprar agora". Destino: `/produto/9tk3mn8peava03b` (`utm_content=conjunto_renda`).
+2. **Criativo 02 - Atacado B2B (Feed 1:1):** Caixas kraft de encomendas no ateliê com laços e carretéis. Ângulo "A Menor Barreira de Entrada do Mercado" (Mínimo R$ 69,90) + 100% a 150% de Margem. CTA: "Enviar mensagem pelo WhatsApp" para a Lia (`(22) 98122-5010`).
+3. **Criativo 03 - Varejo B2C (Feed 1:1 & Stories 9:16):** Pijama Short Doll Suede Confortável (R$ 22,91). Ângulo Toque Macio / Noite Fresquinha + Direto de Fábrica. CTA: "Comprar agora". Destino: `/produto/xi70phh81xh7zms` (`utm_content=short_doll`).
+4. **Criativo 04 - Carrossel de Produtos da Loja (Multi-cards / Catálogo Dinâmico DPA):** Vitrine interativa com as peças reais da loja/sacolinha (fotos, nomes e preços dinâmicos). Foco total em conversão e remarketing no `ADSET 01` e `ADSET 02`. CTA: "Comprar agora".
+
+
 

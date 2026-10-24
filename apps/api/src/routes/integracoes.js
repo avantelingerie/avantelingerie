@@ -4,6 +4,7 @@ import axios from 'axios';
 import pb from '../utils/pocketbaseClient.js';
 import logger from '../utils/logger.js';
 import { getBlingToken } from '../utils/blingTokenManager.js';
+import { mercadoPagoService } from '../services/mercadoPagoService.js';
 
 const router = express.Router();
 
@@ -24,7 +25,7 @@ router.get('/status', async (req, res) => {
   });
 
   // Ensure all services are represented
-  const servicosEsperados = ['bling', 'stripe', 'melhor_envio', 'gemini', 'whatsapp', 'anthropic'];
+  const servicosEsperados = ['bling', 'stripe', 'melhor_envio', 'gemini', 'whatsapp', 'anthropic', 'mercadopago'];
   servicosEsperados.forEach((servico) => {
     if (!statusMap[servico]) {
       statusMap[servico] = {
@@ -93,6 +94,14 @@ router.post('/limpar', async (req, res) => {
     // Clear all stripe configurations
     const existing = await pb.collection('integracoes_config').getFullList({
       filter: 'servico = "stripe"',
+    });
+    for (const record of existing) {
+      await pb.collection('integracoes_config').delete(record.id);
+    }
+  } else if (servico === 'mercadopago') {
+    // Clear all Mercado Pago configurations
+    const existing = await pb.collection('integracoes_config').getFullList({
+      filter: 'servico = "mercadopago"',
     });
     for (const record of existing) {
       await pb.collection('integracoes_config').delete(record.id);
@@ -193,6 +202,10 @@ router.post('/testar/:servico', async (req, res) => {
         sucesso = true;
         mensagem = 'Conexão com Stripe estabelecida com sucesso';
       }
+    } else if (servico === 'mercadopago') {
+      const testResult = await mercadoPagoService.testConnection();
+      sucesso = true;
+      mensagem = testResult.mensagem || 'Conexão com Mercado Pago estabelecida com sucesso';
     } else if (servico === 'melhor_envio') {
       let melhorEnvioToken = process.env.MELHOR_ENVIO_TOKEN;
       if (!melhorEnvioToken) {

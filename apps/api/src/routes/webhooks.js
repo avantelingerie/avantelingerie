@@ -7,6 +7,7 @@ import logger from '../utils/logger.js';
 import { blingService } from '../services/blingService.js';
 import { notificationService } from '../services/notificationService.js';
 import { getBlingToken } from '../utils/blingTokenManager.js';
+import { mercadoPagoService } from '../services/mercadoPagoService.js';
 
 const router = express.Router();
 
@@ -450,6 +451,200 @@ router.post('/melhorenvio', async (req, res) => {
   res.json({
     message: 'Melhor Envio webhook received',
   });
+});
+
+// POST /webhooks/mercadopago - Handle Mercado Pago webhook & IPN events
+router.post('/mercadopago', async (req, res) => {
+  const correlationId = `MP-${Date.now()}`;
+  try {
+    const payload = req.body || {};
+    const query = req.query || {};
+
+    const dataId = String(payload.data?.id || payload.id || query['data.id'] || query.id || '');
+    const eventType = String(payload.type || payload.action || query.topic || query.type || '');
+
+    logger.info(`[MercadoPagoWebhook][${correlationId}] Evento recebido: type=${eventType}, id=${dataId}`);
+
+    // === DIAGNÓSTICO EM BANCO (LOGS) ===
+    try {
+      await pb.collection('webhook_logs').create({
+        origem: 'mercadopago',
+        payload: JSON.stringify({ body: payload, query }),
+        headers: JSON.stringify(req.headers || {}),
+      }, { $autoCancel: false });
+    } catch {
+      // Ignora erro de gravação de log
+    }
+
+    if (!dataId) {
+      logger.warn(`[MercadoPagoWebhook][${correlationId}] Notificação recebida sem identificador (id/data.id).`);
+      return res.status(200).json({ status: 'ignored', reason: 'no_id' });
+    }
+
+    // 1. Validação de Assinatura HMAC SHA-256 (Nemotron P0)
+    const creds = await mercadoPagoService.getCredentials();
+    if (creds.webhookSecret) {
+      const isSignatureValid = mercadoPagoService.verifyWebhookSignature(req.headers, dataId, creds.webhookSecret);
+      if (!isSignatureValid) {
+        logger.error(`[MercadoPagoWebhook][${correlationId}] Assinatura HMAC inválida. Rejeitando.`);
+        return res.status(401).json({ error: 'Assinatura HMAC inválida.' });
+      }
+    }
+
+    // 2. Processa apenas eventos de pagamento (payment / payment.updated / payment.created)
+    const isPaymentEvent = eventType.includes('payment') || query.topic === 'payment' || !eventType;
+    if (!isPaymentEvent) {
+      logger.info(`[MercadoPagoWebhook][${correlationId}] Evento ${eventType} ignorado (não é pagamento).`);
+      return res.status(200).json({ status: 'ignored', eventType });
+    }
+
+    // 3. Consulta detalhes oficiais do pagamento na API do Mercado Pago
+    let payment = null;
+    try {
+      payment = await mercadoPagoService.getPayment(dataId);
+    } catch (errPayment) {
+      logger.error(`[MercadoPagoWebhook][${correlationId}] Erro ao consultar pagamento ${dataId}: ${errPayment.message}`);
+      return res.status(200).json({ status: 'payment_lookup_failed' });
+    }
+
+    if (!payment) {
+      return res.status(200).json({ status: 'payment_not_found' });
+    }
+
+    const orderId = payment.external_reference || payment.metadata?.order_id;
+    if (!orderId) {
+      logger.warn(`[MercadoPagoWebhook][${correlationId}] Pagamento ${dataId} não possui external_reference ou metadata.order_id.`);
+      return res.status(200).json({ status: 'no_order_reference' });
+    }
+
+    // 4. Localiza o pedido correspondente no PocketBase
+    let pedido = null;
+    let collectionName = 'pedidos';
+    try {
+      pedido = await pb.collection('pedidos').getOne(orderId, { $autoCancel: false });
+    } catch {
+      try {
+        pedido = await pb.collection('orders').getOne(orderId, { $autoCancel: false });
+        collectionName = 'orders';
+      } catch {
+        logger.error(`[MercadoPagoWebhook][${correlationId}] Pedido ${orderId} não encontrado.`);
+        return res.status(200).json({ status: 'order_not_found' });
+      }
+    }
+
+    logger.info(`[MercadoPagoWebhook][${correlationId}] Pedido ${pedido.numero_pedido || orderId} localizado. Status MP: ${payment.status}, Status Loja: ${pedido.status}`);
+
+    // 5. Conciliação Financeira e de Moeda (Nemotron P0)
+    if (payment.currency_id && payment.currency_id !== 'BRL') {
+      logger.error(`[MercadoPagoWebhook][${correlationId}] Moeda divergente detectada: ${payment.currency_id} !== BRL.`);
+      await pb.collection(collectionName).update(orderId, {
+        observacoes: `ALERTA AUDITORIA: Moeda divergente no Mercado Pago (${payment.currency_id})`,
+      }, { $autoCancel: false });
+      return res.status(200).json({ status: 'currency_mismatch' });
+    }
+
+    const paymentAmount = Number(payment.transaction_amount) || 0;
+    const orderTotal = Number(pedido.valor_total) || 0;
+    if (Math.abs(paymentAmount - orderTotal) > 0.05) {
+      logger.warn(`[MercadoPagoWebhook][${correlationId}] Divergência de valor: Pago R$ ${paymentAmount} vs Pedido R$ ${orderTotal}.`);
+      await pb.collection(collectionName).update(orderId, {
+        observacoes: `ALERTA AUDITORIA: Valor pago (R$ ${paymentAmount}) diverge do total do pedido (R$ ${orderTotal})`,
+      }, { $autoCancel: false });
+      if (paymentAmount < orderTotal) {
+        return res.status(200).json({ status: 'amount_underpaid' });
+      }
+    }
+
+    // 6. Idempotência Blindada (Nemotron P0)
+    if (pedido.status === 'confirmado' && pedido.mercadopago_payment_id === String(payment.id)) {
+      logger.info(`[MercadoPagoWebhook][${correlationId}] Pedido ${orderId} já confirmado para o pagamento ${payment.id}. Idempotência garantida.`);
+      return res.status(200).json({ status: 'already_confirmed' });
+    }
+
+    // 7. Processamento de Status Aprovado
+    if (payment.status === 'approved') {
+      const historico = pedido.historico_status || [];
+      if (!historico.some(h => h.status === 'confirmado')) {
+        historico.push({
+          status: 'confirmado',
+          timestamp: new Date().toISOString(),
+          detalhes: `Pagamento aprovado via Mercado Pago (${payment.payment_method_id || 'cartão/pix'}) - ID ${payment.id}`,
+        });
+      }
+
+      await pb.collection(collectionName).update(orderId, {
+        status: 'confirmado',
+        mercadopago_payment_id: String(payment.id),
+        historico_status: historico,
+      }, { $autoCancel: false });
+
+      logger.info(`[MercadoPagoWebhook][${correlationId}] Pedido ${pedido.numero_pedido || orderId} atualizado para 'confirmado' com sucesso.`);
+
+      // 8. Desacoplamento de Efeitos Colaterais (Estoque, Bling, Lia)
+      (async () => {
+        // Baixa de estoque
+        try {
+          if (pedido.itens && pedido.itens.length > 0) {
+            for (const item of pedido.itens) {
+              const varId = item.variacao_id || item.id;
+              if (varId) {
+                try {
+                  const variacao = await pb.collection('variacoes').getOne(varId, { $autoCancel: false });
+                  const novoEstoque = Math.max(0, (parseInt(variacao.estoque, 10) || 0) - (parseInt(item.quantidade, 10) || 1));
+                  await pb.collection('variacoes').update(varId, { estoque: novoEstoque }, { $autoCancel: false });
+                  logger.info(`[MercadoPagoWebhook][${correlationId}] Estoque da variação ${varId} baixado: ${variacao.estoque} -> ${novoEstoque}`);
+                } catch (errVar) {
+                  logger.warn(`[MercadoPagoWebhook][${correlationId}] Falha ao baixar variação ${varId}: ${errVar.message}`);
+                }
+              }
+            }
+          }
+        } catch (errEstoque) {
+          logger.error(`[MercadoPagoWebhook][${correlationId}] Erro geral ao baixar estoque: ${errEstoque.message}`);
+        }
+
+        // Notificação de confirmação (Lia / WhatsApp)
+        try {
+          await notificationService.sendOrderStatusNotification(pedido, 'confirmado');
+        } catch (errNotif) {
+          logger.warn(`[MercadoPagoWebhook][${correlationId}] Erro ao enviar notificação: ${errNotif.message}`);
+        }
+
+        // Envio para o Bling ERP
+        try {
+          await blingService.sincronizarPedido(pedido);
+          logger.info(`[MercadoPagoWebhook][${correlationId}] Pedido sincronizado com Bling ERP com sucesso.`);
+        } catch (errBling) {
+          logger.warn(`[MercadoPagoWebhook][${correlationId}] Falha não-bloqueante no Bling ERP: ${errBling.message}`);
+        }
+      })().catch(errSide => logger.error(`[MercadoPagoWebhook][${correlationId}] Erro em side-effects: ${errSide.message}`));
+
+      return res.status(200).json({ status: 'approved_processed', orderId });
+    }
+
+    // 9. Pagamento Rejeitado / Cancelado
+    if (payment.status === 'rejected' || payment.status === 'cancelled') {
+      const historico = pedido.historico_status || [];
+      historico.push({
+        status: 'cancelado',
+        timestamp: new Date().toISOString(),
+        detalhes: `Pagamento ${payment.status} no Mercado Pago (Motivo: ${payment.status_detail || 'não especificado'})`,
+      });
+
+      await pb.collection(collectionName).update(orderId, {
+        status: 'cancelado',
+        historico_status: historico,
+      }, { $autoCancel: false });
+
+      logger.info(`[MercadoPagoWebhook][${correlationId}] Pedido ${pedido.numero_pedido || orderId} cancelado devido ao status ${payment.status}.`);
+      return res.status(200).json({ status: 'cancellation_processed' });
+    }
+
+    return res.status(200).json({ status: 'unhandled_status', mpStatus: payment.status });
+  } catch (errGeneral) {
+    logger.error(`[MercadoPagoWebhook][${correlationId}] Erro crítico no webhook: ${errGeneral.message}`);
+    return res.status(200).json({ status: 'error_caught', message: errGeneral.message });
+  }
 });
 
 export default router;

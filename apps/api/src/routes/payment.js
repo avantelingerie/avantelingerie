@@ -7,6 +7,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import { blingService } from '../services/blingService.js';
 import { notificationService } from '../services/notificationService.js';
+import { mercadoPagoService } from '../services/mercadoPagoService.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -244,7 +245,41 @@ router.post('/create-checkout-session', async (req, res, next) => {
       }
     }
 
-    // 2. Fetch Stripe secret key from env or pocketbase database
+    // 2. Check Mercado Pago as Primary Brazilian Gateway
+    const origin = req.headers.origin || process.env.PUBLIC_WEB_URL || 'http://localhost:3000';
+    const mpCreds = await mercadoPagoService.getCredentials();
+
+    if (mpCreds.isConfigured && mpCreds.isActive) {
+      try {
+        const preference = await mercadoPagoService.createPreference(order, origin);
+
+        // Update order with Mercado Pago Preference ID
+        try {
+          await pb.collection('pedidos').update(order.id, {
+            mercadopago_preference_id: preference.id,
+          }, { $autoCancel: false });
+        } catch {
+          try {
+            await pb.collection('orders').update(order.id, {
+              mercadopago_preference_id: preference.id,
+            }, { $autoCancel: false });
+          } catch {
+            // non-blocking
+          }
+        }
+
+        logger.info(`[CreateCheckoutSession] Sessão criada via Mercado Pago: ID=${preference.id}`);
+        return res.json({
+          id: preference.id,
+          url: preference.init_point,
+          gateway: 'mercadopago',
+        });
+      } catch (mpErr) {
+        logger.error(`[CreateCheckoutSession] Falha ao criar preferência no Mercado Pago: ${mpErr.message}. Executando fallback para Stripe.`);
+      }
+    }
+
+    // 3. Fallback: Stripe Payment Gateway
     let stripeSecretKey = process.env.STRIPE_SECRET_KEY;
     if (!stripeSecretKey) {
       const configs = await pb.collection('integracoes_config').getFullList({
@@ -263,10 +298,7 @@ router.post('/create-checkout-session', async (req, res, next) => {
     // 3. Initialize Stripe
     const stripe = new Stripe(stripeSecretKey);
 
-    // 4. Determine absolute origin domain of frontend to handle redirections
-    const origin = req.headers.origin || 'http://localhost:3000';
-
-    // 5. Create checkout session
+    // 4. Create checkout session (Stripe)
     const totalAmountCents = Math.round(order.valor_total * 100);
 
     // Restrict payment methods dynamically to align with storefront selection and prevent discount exploits

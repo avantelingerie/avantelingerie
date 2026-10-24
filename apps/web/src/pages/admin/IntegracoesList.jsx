@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
-import { Link2, Key, CheckCircle2, XCircle, AlertCircle, Eye, EyeOff, Loader2, RefreshCw, Save, Sparkles, MessageSquare, Trash2 } from 'lucide-react';
+import { Link2, Key, CheckCircle2, XCircle, AlertCircle, Eye, EyeOff, Loader2, RefreshCw, Save, Sparkles, MessageSquare, Trash2, CreditCard } from 'lucide-react';
 import { Button } from '@/components/ui/button.jsx';
 import { Input } from '@/components/ui/input.jsx';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card.jsx';
@@ -32,6 +32,7 @@ export default function IntegracoesList() {
   }, [searchParams, setSearchParams]);
 
   const [status, setStatus] = useState({
+    mercadopago: { status: 'nao_configurado', ultimo_teste: null },
     bling: { status: 'nao_configurado', ultimo_teste: null },
     stripe: { status: 'nao_configurado', ultimo_teste: null },
     melhor_envio: { status: 'nao_configurado', ultimo_teste: null },
@@ -45,6 +46,11 @@ export default function IntegracoesList() {
   const [showKeys, setShowKeys] = useState({});
 
   const [keys, setKeys] = useState({
+    mercadopago_public_key: '',
+    mercadopago_access_token: '',
+    mercadopago_webhook_secret: '',
+    mercadopago_parcelas_max: '12',
+    mercadopago_parcela_minima: '30',
     stripe_pk_live: '',
     stripe_sk_live: '',
     stripe_webhook_secret: '',
@@ -232,6 +238,140 @@ export default function IntegracoesList() {
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        {/* Mercado Pago Card */}
+        <Card className="shadow-sm border-[#009EE3]/20 dark:border-[#009EE3]/30">
+          <CardHeader>
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-lg bg-[#009EE3]/10 flex items-center justify-center">
+                  <CreditCard className="w-5 h-5 text-[#009EE3]" />
+                </div>
+                <div>
+                  <div className="flex items-center gap-2">
+                    <CardTitle>Mercado Pago</CardTitle>
+                    <Badge variant="outline" className="text-[10px] text-[#009EE3] border-[#009EE3]/40 bg-[#009EE3]/5 font-semibold">
+                      Principal BR
+                    </Badge>
+                  </div>
+                  <CardDescription>Gateway Nacional (Parcelamento até 12x, PIX e Boleto)</CardDescription>
+                </div>
+              </div>
+              <StatusBadge statusData={status.mercadopago} />
+            </div>
+          </CardHeader>
+          <CardContent className="space-y-4">
+            <div className="space-y-2">
+              <label className="text-sm font-medium">Public Key (APP_USR-... ou TEST-...)</label>
+              <div className="relative">
+                <Input 
+                  type={showKeys.mp_public_key ? "text" : "password"} 
+                  placeholder="APP_USR-..." 
+                  value={keys.mercadopago_public_key}
+                  onChange={e => setKeys({...keys, mercadopago_public_key: e.target.value})}
+                  className="pr-10"
+                />
+                <button type="button" onClick={() => toggleShowKey('mp_public_key')} className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground">
+                  {showKeys.mp_public_key ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
+                </button>
+              </div>
+            </div>
+
+            <div className="space-y-2">
+              <label className="text-sm font-medium">Access Token (APP_USR-...)</label>
+              <div className="relative">
+                <Input 
+                  type={showKeys.mp_access_token ? "text" : "password"} 
+                  placeholder="APP_USR-..." 
+                  value={keys.mercadopago_access_token}
+                  onChange={e => setKeys({...keys, mercadopago_access_token: e.target.value})}
+                  className="pr-10"
+                />
+                <button type="button" onClick={() => toggleShowKey('mp_access_token')} className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground">
+                  {showKeys.mp_access_token ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
+                </button>
+              </div>
+            </div>
+
+            <div className="space-y-2">
+              <label className="text-sm font-medium">Webhook Secret (Segredo HMAC)</label>
+              <div className="relative">
+                <Input 
+                  type={showKeys.mp_webhook_secret ? "text" : "password"} 
+                  placeholder="Segredo de validação de Webhook" 
+                  value={keys.mercadopago_webhook_secret}
+                  onChange={e => setKeys({...keys, mercadopago_webhook_secret: e.target.value})}
+                  className="pr-10"
+                />
+                <button type="button" onClick={() => toggleShowKey('mp_webhook_secret')} className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground">
+                  {showKeys.mp_webhook_secret ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
+                </button>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-2 gap-3 pt-1 border-t border-dashed">
+              <div className="space-y-1.5">
+                <label className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">Máx. Parcelas</label>
+                <select
+                  value={keys.mercadopago_parcelas_max || '12'}
+                  onChange={e => setKeys({...keys, mercadopago_parcelas_max: e.target.value})}
+                  className="w-full h-9 rounded-md border border-input bg-background px-3 py-1 text-sm shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
+                >
+                  <option value="1">1x (À vista)</option>
+                  <option value="2">Até 2x</option>
+                  <option value="3">Até 3x</option>
+                  <option value="4">Até 4x</option>
+                  <option value="5">Até 5x</option>
+                  <option value="6">Até 6x</option>
+                  <option value="10">Até 10x</option>
+                  <option value="12">Até 12x (Padrão)</option>
+                </select>
+              </div>
+              <div className="space-y-1.5">
+                <label className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">Parcela Mínima (R$)</label>
+                <Input
+                  type="number"
+                  min="5"
+                  step="5"
+                  placeholder="30"
+                  value={keys.mercadopago_parcela_minima}
+                  onChange={e => setKeys({...keys, mercadopago_parcela_minima: e.target.value})}
+                  className="h-9"
+                />
+              </div>
+            </div>
+
+            {status.mercadopago?.ultimo_teste && (
+              <p className="text-xs text-muted-foreground">Último teste: {new Date(status.mercadopago.ultimo_teste).toLocaleString('pt-BR')}</p>
+            )}
+          </CardContent>
+          <CardFooter className="flex justify-between border-t pt-4 bg-muted/20">
+            <div className="flex gap-2">
+              <Button variant="outline" onClick={() => handleTest('mercadopago')} disabled={isTesting.mercadopago}>
+                {isTesting.mercadopago ? <Loader2 className="w-4 h-4 mr-2 animate-spin" /> : <RefreshCw className="w-4 h-4 mr-2" />}
+                Testar Conexão
+              </Button>
+              <Button variant="ghost" className="text-red-500 hover:text-red-700 hover:bg-red-50" onClick={() => handleClearClick('mercadopago')} disabled={isSaving.mercadopago}>
+                <Trash2 className="w-4 h-4 mr-2" />
+                Limpar
+              </Button>
+            </div>
+            <Button 
+              onClick={() => handleSave('mercadopago', { 
+                mp_public_key: keys.mercadopago_public_key, 
+                mp_access_token: keys.mercadopago_access_token, 
+                mp_webhook_secret: keys.mercadopago_webhook_secret,
+                mp_parcelas_max: keys.mercadopago_parcelas_max,
+                mp_parcela_minima: keys.mercadopago_parcela_minima
+              })} 
+              disabled={isSaving.mercadopago || (!keys.mercadopago_public_key && !keys.mercadopago_access_token && !keys.mercadopago_webhook_secret && !keys.mercadopago_parcelas_max && !keys.mercadopago_parcela_minima)}
+              className="bg-[#009EE3] hover:bg-[#0082ba] text-white"
+            >
+              {isSaving.mercadopago ? <Loader2 className="w-4 h-4 mr-2 animate-spin" /> : <Save className="w-4 h-4 mr-2" />}
+              Salvar
+            </Button>
+          </CardFooter>
+        </Card>
+
         {/* Stripe Card */}
         <Card className="shadow-sm">
           <CardHeader>
@@ -651,7 +791,7 @@ export default function IntegracoesList() {
               Confirmar Exclusão
             </DialogTitle>
             <DialogDescription className="pt-2 text-muted-foreground text-sm">
-              Você está prestes a apagar as credenciais de <strong>{confirmModal.servico === 'gemini' ? 'Google Gemini AI' : confirmModal.servico === 'whatsapp' ? 'WhatsApp (Lia)' : confirmModal.servico === 'stripe' ? 'Stripe' : confirmModal.servico === 'melhor_envio' ? 'Melhor Envio' : confirmModal.servico === 'bling' ? 'Bling ERP' : confirmModal.servico}</strong>.
+              Você está prestes a apagar as credenciais de <strong>{confirmModal.servico === 'gemini' ? 'Google Gemini AI' : confirmModal.servico === 'whatsapp' ? 'WhatsApp (Lia)' : confirmModal.servico === 'stripe' ? 'Stripe' : confirmModal.servico === 'mercadopago' ? 'Mercado Pago' : confirmModal.servico === 'melhor_envio' ? 'Melhor Envio' : confirmModal.servico === 'bling' ? 'Bling ERP' : confirmModal.servico}</strong>.
               <br /><br />
               Esta ação é destrutiva e pode interromper o funcionamento dessa integração. Para continuar, insira a senha de liberação das integrações:
             </DialogDescription>

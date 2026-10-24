@@ -1226,9 +1226,156 @@ Planejamento comercial e técnico estruturado pela Ada e Vértice para alavancar
 - **Validação de Engenharia:**
   - Build do frontend (`npm run build`) validado com sucesso absoluto (`✓ built in 1m 56s`, 3113 módulos transformados).
 
+### Sessão - 21/10/2026 (Auditoria, Correção de Bug e Estruturação Avançada CBO - Meta Ads)
+- **Portão Nemotron (Crivo Prévio):**
+  - Validação algorítmica de targeting JSON na Meta Graph API v21 via terminal com o Nemotron (`qwen.mjs`), confirmando o uso de `flexible_spec` para AND narrowing (Interesses + Compradores Envolvidos) e o padrão de `device_platforms: ['mobile']`.
+- **Descoberta Empírica & Correção de Bug Crítico na API (`act_841441889539975`):**
+  - *Bug Corrigido:* Identificado que o conjunto legado `ADSET 01` (`120251762649670751`) continha regiões dos Estados Unidos (Missouri, Virginia, etc.) por erro de chaves numéricas anteriores. Corrigido 100% para o Cerco Geográfico Oficial do Brasil.
+  - *Atualização da Meta API v21:* A Meta depreciou oficialmente `exclusions.interests` (exclusões detalhadas de interesses são rejeitadas pelo backend com erro `3858492`), direcionando a proteção de orçamento para exclusões de Públicos Personalizados, Dispositivos e Cerco Geográfico.
+- **Implementação do Motor CBO (Advantage+ Campaign Budget):**
+  - **Campanha 1 (Varejo B2C - `120251762626930751`):** Configurada para CBO com `daily_budget: 3500` (R$ 35,00/dia), objetivo `OUTCOME_SALES` com otimização no Pixel `981595838258999` (Purchase).
+    - `ADSET 01` (`120251762649670751`): Remarketing 7D & Engajamento 45D (Mulheres 22-45 anos, Mobile Only, Cerco SP/RJ/MG + 5 Capitais).
+    - `ADSET 02` (`120251762650110751`): Interesses Lingerie (Lingerie `6003024627293`, Sutiã `6003313450363`, Calcinha `6003204485047`, Vestuário `6003456388203`, Camisola `6003242077675`) com cruzamento obrigatório em Compradores Envolvidos (`6071631541183`).
+    - `ADSET 03` (`120251864267230751`): **Criado do zero** como Aberto Avançado (Broad) para escala da IA visual da Meta (Mulheres 22-45 anos, Mobile Only, Cerco SP/RJ/MG + 5 Capitais).
+  - **Campanha 2 (Atacado B2B - `120251762627320751`):** Configurada para CBO com `daily_budget: 1500` (R$ 15,00/dia), objetivo `OUTCOME_SALES` com destino WhatsApp da consultora Lia (`(22) 98122-5010`).
+    - `ADSET 01` (`120251762650980751`): Revenda & Renda Extra Mínimo R$ 69,90 (Mulheres 25-54 anos, Interesses em Atacado `6003107626192`, Revendedor `6003248076467`, Pequena Empresa `6002884511422`).
+    - `ADSET 02` (`120251762651370751`): Sacoleiras & Lojas (Mulheres 25-54 anos, Comportamento Administradores de Lojas `6377178995383`).
+- **Governança & Status:** Todas as campanhas e ad sets mantêm status estritamente **PAUSED**.
 
+### Sessão - 21/10/2026 (Engenharia de Criativos Estratégicos & Copywriting Meta Ads)
+- **Criação de Ativos Visuais Oficiais:**
+  - `criativo_varejo_feed_renda_1792610823524.jpg` (Varejo B2C - Feed 1:1): Conjunto de renda floral francesa blush sobre linho rústico com iluminação difusa natural.
+  - `criativo_atacado_feed_caixas_1792610862660.jpg` (Atacado B2B - Feed 1:1): Caixas kraft de despacho prontas no atelier com fitas acetinadas e carretéis, transmitindo alto volume de saída e pronta entrega.
+  - `criativo_stories_reels_916_1792610932838.jpg` (Vertical Stories/Reels 9:16): Modelo elegante no ateliê em Nova Friburgo com conjunto cropped renda esmeralda e preta, máquina de costura e rolos de tecido ao fundo (editorial Vogue/Harper's Bazaar).
+- **Elaboração do Dossiê Completo:**
+  - Registrado em `CRIATIVOS_ESTRATEGICOS_META_ADS.md` e na Seção 7 de `PLANO_MESTRE_CAMPANHAS_FIM_DE_ANO_2026.md`.
+  - Copywriting com ganchos emocionais alinhados aos diferenciais reais da Avante Lingerie: Shopee Killer, 5% PIX, Desconto Progressivo no Carrinho, Mínimo de R$ 69,90 no Atacado e contato VIP com a Lia no WhatsApp (`(22) 98122-5010`).
+  - Integração do **Carrossel de Produtos da Loja / Catálogo Dinâmico (DPA)** como Criativo 04, aproveitando os 45 dias de dados orgânicos da sacolinha para remarketing no `ADSET 01` e catálogo no `ADSET 02`.
+  - Geração dos Modelos Visuais de Alta Conversão com Tags de Ateliê Físicas: `criativo_varejo_pecas_reais_990_1792616862920.jpg` (Varejo a partir de R$ 9,90 com forro 100% algodão) e `criativo_atacado_minimo_6990_1792616899845.jpg` (Kit Atacado com pedido mínimo de R$ 69,90 e margem de 100% a 150%).
+  - Estruturação do Manual Executivo de Produção com Modelos (Seção 8 de `CRIATIVOS_ESTRATEGICOS_META_ADS.md`), com especificações de enquadramento 4:5 e 9:16, branding elegante de confecção própria e roteiro dos 4 criativos campeões.
+  - Alinhamento de precificação exata da Imagem 01 para R$ 15,67 (correspondendo exatamente ao valor da Calcinha Cinta Modeladora Cós Alto com Renda no catálogo oficial).
+- **Conclusão e Arquivamento dos Criativos:**
+  - Auditados os 8 arquivos finais salvos localmente em `C:\Users\comer\Downloads\conjunto_rendado_cropped` (4 criativos x 2 proporções: Feed 4:5 e Stories/Reels 9:16):
+    1. `calcinha_modeladora1.jpg` (4:5) e `calcinha_modeladora.jpg` (9:16) — R$ 15,67.
+    2. `conjunto_renda1.jpg` (4:5) e `conjunto_renda.jpg` (9:16) — R$ 28,28.
+    3. `revenda1.jpg` (4:5) e `revenda.jpg` (9:16) — Mínimo R$ 69,90.
+    4. `Short_doll.jpg` (4:5) e `Short_doll2.jpg` (9:16) — R$ 22,91.
+  - Roteiro de colagem e subida rápida para o Gerenciador de Anúncios documentado com cópias, títulos, chamadas para ação e URLs rastreadas com UTM específicas para os produtos da loja.
 
+### Sessão - 22/10/2026 (Desbloqueio de Governança Meta, Conexão do Pixel e Publicação Oficial do Criativo 01)
+- **Descoberta Estratégica & Resolução de Governança do Facebook/Meta:**
+  - *Identificação do Dono / Administrador Máximo:* Identificado que o controle total ("Acesso total: Tudo") do Portfólio de Negócios `1434883355105952` (*Avante Lingerie | Confecção de Moda Intima*) pertence ao perfil pessoal **`Luiz Taveira Machado`** (associado aos e-mails `eletricamachados@gmail.com` e `comercial.luizmachado@gmail.com`).
+  - *Causa Raiz do "Acesso Recusado":* O navegador estava operando sob a identidade da "Página Avante Lingerie" em vez do perfil de pessoa física. Ao alternar para o perfil pessoal `Luiz Taveira Machado`, o acesso administrativo às Configurações do Negócio foi destravado instantaneamente com autoridade máxima.
+- **Resolução de Erros Críticos de Veiculação:**
+  1. *Certificação Obrigatória (#2859002):* Assinado e homologado oficialmente o acordo da Política de Não Discriminação da Meta em nome de *Avante Lingerie Confecção de Moda Íntima*.
+  2. *Permissão de Ativo do Pixel:* Resolvido o erro `Account does not have access to pixel`. Acessadas as Configurações do Negócio (`Fontes de dados` -> `Conjuntos de dados e píxeis` -> Pixel `981595838258999` da Avante Lingerie) e adicionada a Conta de Anúncios `841441889539975` na aba **Ativos Associados**. O Pixel agora é ativo conectado oficial permanente da conta.
+- **Publicação Bem-Sucedida do Anúncio Oficial (AD 01):**
+  - **Campanha:** `[META] B2C - Varejo | CBO Escala + Remarketing Agressivo` (`120251762626930751`).
+  - **Conjunto:** `[ADSET 02] Interesses Lingerie + Compradores Envolvidos - Mulheres 22-45` (`120251762650110751`).
+  - **Anúncio Publicado:** `AD 01 - Calcinha Cinta Modeladora R$ 15,67`.
+  - **Ativos Visuais Integrados:**
+    - Feed: `calcinha_modeladora1.jpg` (proporção 4:5 otimizada para mobile).
+    - Stories/Reels: `calcinha_modeladora.jpg` (proporção vertical 9:16 preenchendo a tela cheia).
+  - **Destino e Rastreamento:**
+    - URL do Produto: `https://avantelingerie.com.br/produto/99k9uikfczop1zd`.
+    - Parâmetros da URL: `utm_source=meta&utm_medium=cbo&utm_campaign=varejo_b2c&utm_content=calcinha_modeladora`.
+    - Chamada para Ação (CTA): `Compre agora`.
+  - **Status de Entrega:** `Ad published (1 ad was published) — Delivery: Processing`.
+- **Governança & Segurança Orçamentária:**
+  - A Campanha Mãe e os Conjuntos de Anúncios permanecem com status estritamente **OFF / PAUSED**.
+  - Orçamento diário 100% blindado (gasto R$ 0,00) enquanto aguardamos a subida dos demais criativos e a revisão final de ponta a ponta solicitada pelo cliente.
+- **Ponto de Parada:** 
+  - Criativo 01 publicado com sucesso e em processamento.
+  - Próxima sessão: Subir os próximos criativos na mesma esteira agora desimpedida (Conjunto Cropped `conjunto_renda1`, Short Doll `Short_doll` e Atacado B2B `revenda1`) e realizar a auditoria completa final antes do play.
 
+### Sessão - 23/10/2026 (Eliminação de Erros de Entrega, Publicação do AD 02, Calibração Visual do AD 01 e Mapeamento do AD 03)
+- **Eliminação de Erros Críticos de Veiculação:**
+  - *Identidade do Anunciante:* Submetida comprovação oficial com CNH de Luiz Taveira Machado.
+  - *Hard Delivery Error (#2859024):* Resolvida a pendência de Não Discriminação exigida especificamente para Utilizadores do Sistema (`Ada Copiloto` e `Conversions API System User`). O status na API destravou de `WITH_ISSUES` para `ADSET_PAUSED` com zero restrições.
+  - *Idiomas nos Conjuntos B2C:* Persistidos via API Graph v21 os códigos `locales: [6, 7, 16, 23, 24, 31]` cobrindo Português, Inglês e Espanhol em todos os ad sets de Varejo.
+- **Publicação Bem-Sucedida do `AD 02 - Conjunto Romântico Cropped Renda R$ 28,28`:**
+  - **ID do Anúncio:** `120251902593130751` | **Criativo:** `1638558311057097`.
+  - **Mídias Utilizadas:** `conjunto_renda1.jpg` (Feed 4:5) e `conjunto_renda.jpg` (Stories/Reels vertical 9:16).
+  - **Destino e Rastreamento:** Link oficial descoberto e integrado: `https://avantelingerie.com.br/produto/9tk3mn8peava03b` com `utm_source=meta&utm_medium=cbo&utm_campaign=varejo_b2c&utm_content=conjunto_renda`.
+  - **Status:** `ACTIVE` / `ADSET_PAUSED` (100% aprovado).
+- **Calibração Visual e Otimização do `AD 01 - Calcinha Cinta Modeladora R$ 15,67`:**
+  - *Diagnóstico Cromático:* Detectada dominância avermelhada/quente excessiva na foto original (Média RGB [196, 156, 142]).
+  - *Tratamento de Estúdio:* Geradas as versões com balanço de branco neutro e pele saudável: `calcinha_modeladora1_calibrada.jpg` e `calcinha_modeladora_calibrada.jpg` (salvas na pasta Downloads).
+  - *Resolução de Erro de Publicação (#1885681):* O usuário havia atribuído a foto quadrada à 3ª coluna Horizontal, gerando erro de duplicidade de ativos. Orientado descarte do rascunho local e reenvio mantendo a coluna Horizontal em Original.
+  - *Resultado:* Novo criativo `1660909655385211` publicado com sucesso, ativo e com fotos impecáveis.
+- **Mapeamento do Catálogo para o `AD 03` (Short Doll):**
+  - Consulta ao PocketBase ao vivo da loja revelou o ID e slug reais:
+    - Produto: *Pijama Feminino Short Doll Suede Confortável Tecido Leve e Macio Fresquinho* (R$ 22,91).
+    - ID do Produto: `xi70phh81xh7zms`.
+    - URL Oficial: `https://avantelingerie.com.br/produto/xi70phh81xh7zms`.
+    - UTM: `utm_source=meta&utm_medium=cbo&utm_campaign=varejo_b2c&utm_content=short_doll`.
+    - Mídias prontas: `Short_doll.jpg` (Feed 4:5) e `Short_doll2.jpg` (Stories 9:16).
+- **Publicação Bem-Sucedida do `AD 03 - Pijama Short Doll Suede R$ 22,91`:**
+  - **ID do Anúncio:** `120251905773570751`.
+  - **Auditoria de Criativo (Sentinel):** Identificada tentativa de sobreposição do criativo lilás do AD 02 por herança da duplicação. Usuário orientado a desmarcar o conjunto herdado na aba Mídia e manter estritamente as fotos oficiais do Short Doll (`Short_doll.jpg` e `Short_doll2.jpg`).
+  - **Otimizações Advantage+:** Todas as melhorias automáticas de IA (cortes imprevisíveis, músicas e reações) desligadas para preservar a identidade premium da Avante Lingerie.
+  - **Destino e Rastreamento:** `https://avantelingerie.com.br/produto/xi70phh81xh7zms` com `utm_source=meta&utm_medium=cbo&utm_campaign=varejo_b2c&utm_content=short_doll`.
+  - **Status:** `ACTIVE` / `PENDING_REVIEW` (processando aprovação oficial da Meta).
+- **Consolidação do Trio de Varejo B2C:**
+  - `AD 01 - Calcinha Cinta Modeladora R$ 15,67` (`120251880920770751`)
+  - `AD 02 - Conjunto Romântico Cropped Renda R$ 28,28` (`120251902593130751`)
+  - `AD 03 - Pijama Short Doll Suede R$ 22,91` (`120251905773570751`)
+  - Todos os 3 anúncios estão 100% inseridos no `[ADSET 02] Interesses Lingerie + Compradores Envolvidos`, seguros em `ADSET_PAUSED` com R$ 0,00 consumido.
+- **Publicação Bem-Sucedida do `AD 04 - Carrossel Vitrine Direto de Fábrica`:**
+  - **ID do Anúncio:** `120251906115190751`.
+  - **Estrutura dos Cartões (Cards):**
+    - Card 1: `Conjunto Cropped Renda — R$ 28,28` (`https://avantelingerie.com.br/produto/9tk3mn8peava03b`).
+    - Card 2: `Calcinha Cinta com Renda — R$ 15,67` (`https://avantelingerie.com.br/produto/99k9uikfczop1zd`).
+    - Card 3: `Short Doll Suede Leve — R$ 22,91` (`https://avantelingerie.com.br/produto/xi70phh81xh7zms`).
+  - **Destino Geral:** `https://avantelingerie.com.br/` com UTM `utm_source=meta&utm_medium=cbo&utm_campaign=varejo_b2c&utm_content=carrossel_vitrine`.
+  - **Auditoria de Erros (Sentinel):** Resolvido o erro `#2446880` (WhatsApp desconectado) ao desmarcar aprimoramento de IA `Aprimorar a CTA` e manter o objetivo puramente em E-commerce (`PURCHASE` no site).
+  - **Status:** `ACTIVE` / `PENDING_REVIEW` (aprovando normalmente na Meta).
+- **Consolidação do Quarteto Fantástico de Varejo B2C:**
+  - `AD 01 - Calcinha Cinta Modeladora R$ 15,67` (`120251880920770751`)
+  - `AD 02 - Conjunto Romântico Cropped Renda R$ 28,28` (`120251902593130751`)
+  - `AD 03 - Pijama Short Doll Suede R$ 22,91` (`120251905773570751`)
+  - `AD 04 - Carrossel Vitrine Direto de Fábrica` (`120251906115190751`)
+  - Todos os 4 anúncios estão 100% integrados no `[ADSET 02] Interesses Lingerie + Compradores Envolvidos`, blindados em `ADSET_PAUSED` com R$ 0,00 consumido.
+- **Auditoria de Otimizações Automáticas (Sentinel & Descoberta do Usuário):**
+  - O usuário identificou com precisão cirúrgica a necessidade de verificar se os anúncios anteriores (`AD 01`, `AD 02` e `AD 03`) não herdaram melhorias automáticas ativadas por padrão pela Meta.
+  - Consulta via API (`degrees_of_freedom_spec`) comprovou que:
+    - `AD 04`: 100% blindado com `enhance_cta: OPT_OUT`, `product_browsing: OPT_OUT` e `contextual_multi_ads: OPT_OUT`.
+    - `AD 01`, `AD 02` e `AD 03`: Possuem `enhance_cta: OPT_IN` e `product_browsing: OPT_IN` ativos por padrão da Meta.
+  - **Ação Imediata para o Início da Próxima Sessão:** Fazer a revisão rápida de 2 minutos em `AD 01`, `AD 02` e `AD 03` para desligar `Aprimorar a CTA`, `Navegação de produtos` e `Múltiplos anunciantes`, alinhando todos ao padrão estrito do `AD 04`.
 
+### Sessão - 24/10/2026 (Aprovação Definitiva da Stripe, Decisão Estratégica & Construção Total do Mercado Pago)
+- **Aprovação Definitiva de Compliance da Stripe ("Avante Lingerie Oficial"):**
+  - Conta da empresa `LHA TEXTIL COMERCIO DO VESTUARIO LTDA` (CNPJ `57.394.988/0001-38`) e titular `Dooner dos Santos Almeida` 100% aprovada pelo compliance sem nenhuma pendência.
+  - Status ativo com selo verde em "Pagamentos, Payouts".
+  - Habilitados: Cartões, Pix, Boleto, Apple Pay, Google Pay e Link.
+- **Constatação Crítica de Mercado & Decisão Estratégica (Parcelamento):**
+  - Identificado que a Stripe no Brasil opera estritamente à vista no cartão de crédito doméstico (sem suporte ao parcelamento tradicional em 2x-12x das adquirentes nacionais).
+  - Como a Avante Lingerie opera forte no Atacado/Revenda para sacoleiras (onde o parcelamento em até 12x é essencial para giro de estoque), foi definida a arquitetura híbrida de dois gateways:
+    - **Mercado Pago (Gateway Nacional Principal):** Processamento em Reais (BRL) com parcelamento em até 12x, PIX instantâneo (D+0 sem taxa fixa) e Mercado Crédito.
+    - **Stripe (Gateway Internacional & Contingência):** Processamento para expansão global (Portugal, Europa, EUA) em EUR/USD.
+  - Análise comparativa descartou a Appmax devido a custos abusivos (3,49% + 2,49% por parcela cumulativa = ~18,4% em 6x, taxa fixa de R$ 0,99 em itens pequenos e D+30).
+- **Crivo do Portão Nemotron (`nvidia/nemotron-3-ultra-550b`):**
+  - O Nemotron desafiou a arquitetura inicial e exigiu 5 blindagens P0:
+    1. Assinatura HMAC SHA-256 no Webhook (`x-signature` com `ts` e `v1`, tolerância ±5 min).
+    2. Conciliação financeira estrita de valor e moeda (`currency_id === 'BRL'` e tolerância ≤ 0.05).
+    3. Idempotência transacional (`mercadopago_payment_id` + status `confirmado`).
+    4. Desacoplamento assíncrono de efeitos colaterais (baixa de estoque, Bling e Lia desacoplados da resposta 200).
+    5. Configuração dinâmica 12-Factor via `integracoes_config`.
+  - Reavaliação no terminal: **APROVADO PARA PRODUÇÃO (Production-Ready)**.
+- **Implementação Cirúrgica pela Ada:**
+  - `apps/api/src/services/mercadoPagoService.js`: Criado serviço completo com criação de preferências, teste de conexão e validação criptográfica HMAC SHA-256.
+  - `apps/api/src/routes/webhooks.js`: Adicionado endpoint `/webhooks/mercadopago` com todas as blindagens do Nemotron.
+  - `apps/api/src/routes/payment.js`: Rota de checkout session atualizada para direcionar transparentemente ao Mercado Pago quando ativo, com fallback seguro para Stripe.
+  - `apps/api/src/routes/integracoes.js`: Adicionados status, teste de conexão (`/testar/mercadopago`) e limpeza segura para Mercado Pago.
+  - `apps/web/src/pages/admin/IntegracoesList.jsx`: Criado o Card Oficial do Mercado Pago com campos para Public Key, Access Token, Webhook Secret, Máx. Parcelas (1x a 12x), Parcela Mínima (R$), Testar Conexão, Limpar e Salvar (compatível com Dark e Light mode).
+- **Auditoria de Qualidade (Sentinel):**
+  - Node syntax check em todos os 4 arquivos do backend: 100% aprovado (código 0).
+  - Build do frontend (`vite build`): 100% aprovado (`✓ built in 50.70s`, 3113 módulos).
+  - Lint do frontend (`eslint`): 100% aprovado (zero erros, zero warnings).
+- **Ponto de Parada Atual:**
+  - Toda a estrutura técnica do Mercado Pago e Stripe está pronta e em espera.
+  - Aguardando sócio enviar o SMS/WhatsApp para:
+    1. Copiar as chaves da Stripe (`pk_live` e `sk_live`) e criar o webhook na Stripe.
+    2. Concluir os 2 passos da conta PJ no Mercado Pago e colar as chaves no novo card do admin da loja.
 
 
