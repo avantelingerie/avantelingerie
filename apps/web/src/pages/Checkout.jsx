@@ -477,7 +477,7 @@ export default function Checkout() {
                 <h3 className="text-base font-serif font-bold text-gray-950">Forma de Pagamento</h3>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <div className={`grid grid-cols-1 ${isBoletoActive ? 'sm:grid-cols-3' : 'sm:grid-cols-2'} gap-4`}>
                 <div
                   onClick={() => !isSubmitting && setPaymentMethod('credit_card')}
                   className={`border-2 rounded-2xl p-6 cursor-pointer transition-all duration-300 ${isSubmitting ? 'cursor-not-allowed opacity-60' : ''} ${paymentMethod === 'credit_card' ? 'border-[#c59b5f] bg-[#c59b5f]/5 shadow-premium-sm scale-[1.01]' : 'border-gray-100 hover:border-[#c59b5f]/30 hover:bg-[#FFFBF8]'}`}
@@ -488,7 +488,7 @@ export default function Checkout() {
                     </div>
                     <span className="font-bold text-gray-900 text-sm tracking-wide">Cartão de Crédito</span>
                   </div>
-                  <p className="text-xs text-gray-400 font-light mt-2 ml-8">Até 6x sem juros</p>
+                  <p className="text-xs text-gray-400 font-light mt-2 ml-8">Em até 6x no cartão</p>
                 </div>
 
                 <div
@@ -528,13 +528,13 @@ export default function Checkout() {
                   <div className="text-left">
                     <strong className="block font-serif text-sm font-bold text-amber-900 mb-1">Aviso de Compensação:</strong>
                     O boleto bancário pode levar **de 1 a 3 dias úteis** para ser compensado pelo sistema.
-                    Seu pedido será preparado e enviado somente após a confirmação automática do pagamento pela Stripe.
+                    Seu pedido será preparado e enviado somente após a confirmação automática do pagamento pelo Mercado Pago.
                     O envio de comprovantes de pagamento não antecipa a liberação do pedido.
                   </div>
                 </div>
               ) : (
-                <div className="bg-[#FFFBF8] p-5 rounded-2xl text-center text-xs text-gray-400 border border-dashed border-[#c59b5f]/25 font-light mt-6 opacity-70">
-                  Formulário de pagamento seguro integrado com a plataforma de pagamentos Stripe.
+                <div className="bg-[#FFFBF8] p-5 rounded-2xl text-center text-xs text-gray-400 border border-dashed border-[#c59b5f]/25 font-light mt-6 opacity-80">
+                  Ambiente de pagamento 100% seguro processado pelo Mercado Pago. Aceitamos Cartões, PIX, Boleto e Mercado Crédito.
                 </div>
               )}
             </div>
@@ -574,7 +574,7 @@ export default function Checkout() {
               </Button>
 
               <p className="text-[10px] text-gray-400 font-light text-center mt-3.5 px-4 leading-normal max-w-sm mx-auto">
-                Pagamento processado com criptografia e segurança de nível bancário pela <strong className="text-gray-600 font-semibold">Stripe</strong>. Seus dados de cartão estão 100% protegidos.
+                Pagamento processado com criptografia e segurança de nível bancário pelo <strong className="text-gray-600 font-semibold">Mercado Pago</strong>. Seus dados estão 100% protegidos.
               </p>
 
               {/* SECURITY CERTIFICATE BADGES */}

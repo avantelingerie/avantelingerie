@@ -1416,7 +1416,32 @@ Planejamento comercial e técnico estruturado pela Ada e Vértice para alavancar
   - Build de Produção (`vite build`): 100% aprovado (`built in 52.73s`, 3113 módulos transformados).
   - Teste de Rede Real: Consulta direta aos 6 produtos da busca no PocketBase ao vivo comprovando HTTP 200 em todas as URLs de imagem resolvidas.
 
-
-
-
-
+### Sessão - 26/10/2026 (Ativação Oficial Mercado Pago & Trava de Valor Mínimo para Boleto Bancário)
+- **Integração do Gateway Mercado Pago (Checkout Pro Oficial):**
+  - Aplicação oficial criada e homologada: `Avante Lingerie Loja Oficial`.
+  - Credenciais produtivas (`Public Key` e `Access Token`) salvas no PocketBase em `integracoes_config` e testadas ao vivo via `/users/me` retornando status `conectado`.
+  - Preferência de pagamento testada de ponta a ponta gerando ID e `init_point` funcional sem erros.
+  - Taxas e repasse configurados na conta Mercado Pago da loja: `Oferecer parcelado vendedor` DESATIVADO -> Modalidade ativa: `Parcelado comprador/cliente` (juros do parcelamento no cartão assumidos pelo cliente, protegendo a margem da fábrica).
+  - Conta bancária e Pix de recebimento cadastrados: chave Pix `doonersantoslha@gmail.com` vinculada à conta PJ do Bradesco (`Lha Textil Comercio do Vestuario Ltda`).
+- **Trava de Valor Mínimo para Boleto Bancário (Proteção contra taxas fixas):**
+  - **Problema de Negócio:** No boleto bancário tradicional à vista, a taxa do Mercado Pago é fixa em R$ 3,49 (cobrada apenas se o cliente pagar). Em compras de baixo ticket (ex: calcinha avulsa de R$ 9,90), essa taxa representaria ~35% do valor do produto, gerando prejuízo líquido à fábrica.
+  - **Solução Implementada:**
+    - No painel administrativo (`Configurações` -> `Descontos` -> aba `Boleto`), adicionado o campo de controle: **Valor Mínimo do Pedido (R$)**, permitindo ao lojista estipular livremente o valor de corte (padrão inicial configurado em **R$ 59,90**).
+    - Persistência no PocketBase: chave `boleto_valor_minimo` em `integracoes_config`.
+    - No hook de checkout (`useCheckoutLogic.js`): o boleto só é elegível e exibido se `isBoletoActive === true && subtotal >= boletoValorMinimo`. Caso o subtotal caia abaixo do mínimo enquanto o boleto estava selecionado, o checkout retrocede com segurança para `credit_card`.
+    - No componente `Checkout.jsx`: a grade adapta-se harmonicamente (2 colunas quando boleto está oculto, 3 colunas quando visível).
+- **Adequação e Refinamento de Design e Textos da Loja:**
+  - `Checkout.jsx`:
+    - Atualizado o texto informativo de cartão de `"Até 6x sem juros"` para `"Em até 6x no cartão"`.
+    - Atualizados todos os avisos de segurança e processamento de `"Stripe"` para `"Mercado Pago"`.
+  - `Footer.jsx`:
+    - Atualizado o selo de processamento para `"Mercado Pago | Pagamento 100% Criptografado"` com estética dark luxury (`bg-white/[0.02] border border-white/5`).
+    - Adicionado badge de `"Mercado Crédito"` destacando a possibilidade de parcelamento no boleto sem cartão.
+  - `ProductPage.jsx`, `CartPage.jsx`, `HomePage.jsx`, `FAQAccordion.jsx`, `CentralDaClientePage.jsx`, `OrderConfirmation.jsx`:
+    - Atualizadas todas as menções de parcelamento para `"em até 6x no cartão"`, além de inclusão das opções de PIX com 5% de desconto, boleto bancário e Mercado Crédito nas dúvidas frequentes.
+- **Auditoria de Qualidade (Sentinel):**
+  - ESLint (`npm run lint`): 100% aprovado, 0 erros.
+  - Build de Produção (`npm run build`): 100% aprovado (`built in 38.27s`, 3113 módulos transformados).
+  - Testes lógicos de corte (`test_boleto_min_logic.mjs`):
+    - Subtotal R$ 38,88 (< R$ 59,90) -> Boleto bloqueado/oculto (CORRETO).
+    - Subtotal R$ 77,76 (>= R$ 59,90) -> Boleto liberado (CORRETO).

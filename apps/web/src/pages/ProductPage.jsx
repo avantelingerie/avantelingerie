@@ -1147,7 +1147,7 @@ export default function ProductPage() {
                         {formatPrice(activePrice)}
                       </span>
                       <span className="text-sm md:text-[15px] text-gray-600 font-medium">
-                        em até <span className="font-bold text-[#444]">12x de {formatPrice(activePrice / 12)}</span> sem juros no cartão de crédito.
+                        em até <span className="font-bold text-[#444]">6x de {formatPrice(activePrice / 6)}</span> no cartão de crédito.
                       </span>
                     </div>
                   </div>

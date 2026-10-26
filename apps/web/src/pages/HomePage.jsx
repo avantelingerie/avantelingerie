@@ -604,7 +604,7 @@ export default function HomePage() {
             answer: "Se a sua joia não vestir com perfeição, oferecemos um fluxo de troca simplificada. Você tem até 7 dias corridos após o recebimento para solicitar por arrependimento (frete da cliente), ou 30 dias para defeitos (frete da loja), basta manter as etiquetas originais."
           }, {
             question: "Quais os métodos de pagamento aceitos?",
-            answer: "Aceitamos cartões de crédito Visa, MasterCard, Elo e Amex com parcelamento in até 6x sem juros, além de PIX seguro com processamento imediato."
+            answer: "Aceitamos cartões de crédito Visa, MasterCard, Elo e Amex em até 6x, PIX seguro com 5% de desconto e aprovação imediata, boleto bancário e Mercado Crédito."
           }]} />
         </div>
       </section>

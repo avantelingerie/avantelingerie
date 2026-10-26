@@ -11,6 +11,7 @@ import { Loader2, Save, Calendar } from 'lucide-react';
 export default function BoletoConfigTab() {
   const [ativo, setAtivo] = useState(true);
   const [vencimentoDias, setVencimentoDias] = useState(3);
+  const [valorMinimo, setValorMinimo] = useState(59.90);
   const [isLoading, setIsLoading] = useState(true);
   const [isSaving, setIsSaving] = useState(false);
   const [error, setError] = useState('');
@@ -19,18 +20,22 @@ export default function BoletoConfigTab() {
     setIsLoading(true);
     try {
       const records = await pb.collection('integracoes_config').getFullList({
-        filter: 'servico = "stripe" && (chave_nome = "boleto_vencimento_dias" || chave_nome = "boleto_ativo")',
+        filter: 'chave_nome = "boleto_vencimento_dias" || chave_nome = "boleto_ativo" || chave_nome = "boleto_valor_minimo"',
         $autoCancel: false
       });
 
       const activeRecord = records.find(r => r.chave_nome === 'boleto_ativo');
       const daysRecord = records.find(r => r.chave_nome === 'boleto_vencimento_dias');
+      const minRecord = records.find(r => r.chave_nome === 'boleto_valor_minimo');
 
       if (activeRecord) {
         setAtivo(activeRecord.chave_valor === 'true');
       }
       if (daysRecord && daysRecord.chave_valor) {
         setVencimentoDias(parseInt(daysRecord.chave_valor, 10) || 3);
+      }
+      if (minRecord && minRecord.chave_valor) {
+        setValorMinimo(parseFloat(minRecord.chave_valor) || 59.90);
       }
     } catch (err) {
       console.error('[BoletoConfigTab] Erro ao carregar configurações do Boleto:', err);
@@ -44,34 +49,45 @@ export default function BoletoConfigTab() {
     fetchConfig();
   }, []);
 
-  const validateForm = (val) => {
+  const validateForm = (days, minVal) => {
     if (!ativo) {
       setError('');
       return true;
     }
-    const d = parseInt(val, 10);
+    const d = parseInt(days, 10);
     if (isNaN(d) || d < 1 || d > 120) {
       setError('O prazo de vencimento deve ser entre 1 e 120 dias.');
+      return false;
+    }
+    const m = parseFloat(minVal);
+    if (isNaN(m) || m < 0) {
+      setError('O valor mínimo deve ser um número maior ou igual a zero.');
       return false;
     }
     setError('');
     return true;
   };
 
-  const handleInputChange = (e) => {
+  const handleDaysChange = (e) => {
     const val = e.target.value;
     setVencimentoDias(val);
-    validateForm(val);
+    validateForm(val, valorMinimo);
+  };
+
+  const handleMinValChange = (e) => {
+    const val = e.target.value;
+    setValorMinimo(val);
+    validateForm(vencimentoDias, val);
   };
 
   useEffect(() => {
-    validateForm(vencimentoDias);
+    validateForm(vencimentoDias, valorMinimo);
   }, [ativo]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     
-    if (!validateForm(vencimentoDias)) {
+    if (!validateForm(vencimentoDias, valorMinimo)) {
       toast.error('Por favor, corrija os erros antes de salvar.');
       return;
     }
@@ -79,12 +95,13 @@ export default function BoletoConfigTab() {
     try {
       setIsSaving(true);
       const existing = await pb.collection('integracoes_config').getFullList({
-        filter: 'servico = "stripe" && (chave_nome = "boleto_vencimento_dias" || chave_nome = "boleto_ativo")',
+        filter: 'chave_nome = "boleto_vencimento_dias" || chave_nome = "boleto_ativo" || chave_nome = "boleto_valor_minimo"',
         $autoCancel: false
       });
 
       const activeRecord = existing.find(r => r.chave_nome === 'boleto_ativo');
       const daysRecord = existing.find(r => r.chave_nome === 'boleto_vencimento_dias');
+      const minRecord = existing.find(r => r.chave_nome === 'boleto_valor_minimo');
 
       // Save 'boleto_ativo'
       if (activeRecord) {
@@ -93,7 +110,7 @@ export default function BoletoConfigTab() {
         }, { $autoCancel: false });
       } else {
         await pb.collection('integracoes_config').create({
-          servico: 'stripe',
+          servico: 'mercadopago',
           chave_nome: 'boleto_ativo',
           chave_valor: String(ativo),
           ambiente: 'producao'
@@ -107,9 +124,23 @@ export default function BoletoConfigTab() {
         }, { $autoCancel: false });
       } else {
         await pb.collection('integracoes_config').create({
-          servico: 'stripe',
+          servico: 'mercadopago',
           chave_nome: 'boleto_vencimento_dias',
           chave_valor: String(vencimentoDias),
+          ambiente: 'producao'
+        }, { $autoCancel: false });
+      }
+
+      // Save 'boleto_valor_minimo'
+      if (minRecord) {
+        await pb.collection('integracoes_config').update(minRecord.id, {
+          chave_valor: String(valorMinimo)
+        }, { $autoCancel: false });
+      } else {
+        await pb.collection('integracoes_config').create({
+          servico: 'mercadopago',
+          chave_nome: 'boleto_valor_minimo',
+          chave_valor: String(valorMinimo),
           ambiente: 'producao'
         }, { $autoCancel: false });
       }
@@ -139,8 +170,8 @@ export default function BoletoConfigTab() {
   return (
     <div className="space-y-6 max-w-2xl">
       <div>
-        <h2 className="text-xl font-semibold">Configuração do Boleto Bancário (Stripe)</h2>
-        <p className="text-sm text-muted-foreground">Ative/desative a exibição do boleto e defina o prazo de vencimento.</p>
+        <h2 className="text-xl font-semibold">Configuração do Boleto Bancário</h2>
+        <p className="text-sm text-muted-foreground">Ative ou desative a exibição do boleto, defina o prazo de vencimento e o valor mínimo do carrinho.</p>
       </div>
 
       {/* Summary Card */}
@@ -153,6 +184,9 @@ export default function BoletoConfigTab() {
           {ativo && (
             <p className="text-sm text-muted-foreground">
               O boleto expira em <strong className="text-foreground">{vencimentoDias} {parseInt(vencimentoDias, 10) === 1 ? 'dia' : 'dias'}</strong> após a emissão.
+              <span className="block text-xs mt-0.5 text-primary/80">
+                Disponível no checkout para pedidos a partir de <strong>R$ {Number(valorMinimo || 0).toFixed(2).replace('.', ',')}</strong>.
+              </span>
             </p>
           )}
         </div>
@@ -180,11 +214,33 @@ export default function BoletoConfigTab() {
               min="1" 
               max="120" 
               value={vencimentoDias} 
-              onChange={handleInputChange} 
+              onChange={handleDaysChange} 
               disabled={!ativo}
               required={ativo}
-              className={error ? 'border-destructive' : ''}
+              className={error && error.includes('prazo') ? 'border-destructive' : ''}
             />
+          </div>
+
+          <div className="space-y-2">
+            <Label htmlFor="valorMinimo">Valor Mínimo do Pedido (R$)</Label>
+            <p className="text-xs text-muted-foreground mb-2">
+              Valor mínimo no carrinho para exibir a opção de boleto no checkout. Pedidos abaixo deste valor não verão a opção de boleto, protegendo a margem da loja contra taxas fixas.
+            </p>
+            <div className="relative">
+              <span className="absolute left-3 top-1/2 -translate-y-1/2 text-sm text-muted-foreground font-semibold">R$</span>
+              <Input 
+                id="valorMinimo"
+                type="number" 
+                step="0.01"
+                min="0"
+                value={valorMinimo} 
+                onChange={handleMinValChange} 
+                disabled={!ativo}
+                required={ativo}
+                className={`pl-10 ${error && error.includes('mínimo') ? 'border-destructive' : ''}`}
+                placeholder="59,90"
+              />
+            </div>
             {error && <p className="text-xs text-destructive mt-1">{error}</p>}
           </div>
         </div>

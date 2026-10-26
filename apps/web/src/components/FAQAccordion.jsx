@@ -47,7 +47,7 @@ const faqData = [
   },
   {
     question: "Quais as formas de pagamento aceitas?",
-    answer: "Aceitamos PIX com 5% de desconto de processamento imediato, e cartões de crédito Visa, MasterCard, Elo e Amex em até 6x sem juros em um checkout com ambiente 100% criptografado e seguro.",
+    answer: "Aceitamos PIX com 5% de desconto de processamento imediato, cartões de crédito Visa, MasterCard, Elo e Amex em até 6x, boleto bancário e Mercado Crédito em um ambiente 100% criptografado e seguro.",
     link: "/checkout",
     linkLabel: "Finalizar pedido"
   }

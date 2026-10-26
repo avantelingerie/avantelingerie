@@ -114,6 +114,7 @@ export function useCheckoutLogic() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isBoletoActive, setIsBoletoActive] = useState(true);
   const [boletoVencimentoDias, setBoletoVencimentoDias] = useState(3);
+  const [boletoValorMinimo, setBoletoValorMinimo] = useState(59.90);
   const [localPickupConfig, setLocalPickupConfig] = useState(null);
 
   // Sync Boleto configs from PocketBase settings
@@ -121,17 +122,21 @@ export function useCheckoutLogic() {
     const fetchBoletoConfigs = async () => {
       try {
         const records = await pb.collection('integracoes_config').getFullList({
-          filter: 'servico = "stripe" && (chave_nome = "boleto_ativo" || chave_nome = "boleto_vencimento_dias")',
+          filter: 'chave_nome = "boleto_ativo" || chave_nome = "boleto_vencimento_dias" || chave_nome = "boleto_valor_minimo"',
           $autoCancel: false
         });
         const activeRecord = records.find(r => r.chave_nome === 'boleto_ativo');
         const daysRecord = records.find(r => r.chave_nome === 'boleto_vencimento_dias');
+        const minRecord = records.find(r => r.chave_nome === 'boleto_valor_minimo');
 
         if (activeRecord) {
           setIsBoletoActive(activeRecord.chave_valor === 'true');
         }
         if (daysRecord && daysRecord.chave_valor) {
           setBoletoVencimentoDias(parseInt(daysRecord.chave_valor, 10) || 3);
+        }
+        if (minRecord && minRecord.chave_valor) {
+          setBoletoValorMinimo(parseFloat(minRecord.chave_valor) || 59.90);
         }
       } catch (err) {
         console.warn('[useCheckoutLogic] Erro ao carregar configurações de boleto:', err);
@@ -305,6 +310,16 @@ export function useCheckoutLogic() {
 
   const shippingCost = shippingOption ? shippingOption.cost : 0;
   const finalTotal = subtotal - finalDiscountAmount + shippingCost;
+
+  // Boleto só é exibido e elegível se estiver ativo E se o subtotal atingir o mínimo estipulado
+  const isBoletoAvailable = isBoletoActive && (subtotal >= boletoValorMinimo);
+
+  // Se o método de pagamento selecionado for boleto e o carrinho ficar abaixo do mínimo, volta para cartão
+  useEffect(() => {
+    if (paymentMethod === 'boleto' && !isBoletoAvailable) {
+      setPaymentMethod('credit_card');
+    }
+  }, [paymentMethod, isBoletoAvailable]);
 
   // High #15: Rigorous address fields validation
   const validateAddress = (addr) => {
@@ -512,7 +527,9 @@ export function useCheckoutLogic() {
     loadingCep,
     paymentMethod,
     setPaymentMethod,
-    isBoletoActive,
+    isBoletoActive: isBoletoAvailable,
+    isBoletoAvailable,
+    boletoValorMinimo,
     boletoVencimentoDias,
     shippingCost,
     removeFromCart,

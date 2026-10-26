@@ -338,7 +338,7 @@ export default function OrderConfirmation() {
                   <CreditCard className="w-4.5 h-4.5 text-[#c59b5f] shrink-0" strokeWidth={1.5} />
                   <span>
                     Pago via <strong className="text-gray-900 uppercase font-extrabold">{(order.paymentMethod === 'credit_card' || order.paymentMethod === 'credito') ? 'Cartão de Crédito' : (order.paymentMethod === 'boleto' ? 'Boleto Bancário' : 'PIX')}</strong>
-                    {order.installments > 1 ? ` em ${order.installments}x sem juros` : ''}
+                    {order.installments > 1 ? ` em ${order.installments}x no cartão` : ''}
                   </span>
                 </div>
 
@@ -348,7 +348,7 @@ export default function OrderConfirmation() {
                     <div className="text-left">
                       <strong className="block font-serif text-sm font-bold text-amber-900 mb-1">Aviso sobre o Boleto:</strong>
                       A compensação bancária pode levar **de 1 a 3 dias úteis**. 
-                      Seu pedido será separado e postado somente após a confirmação sistêmica automática da Stripe. 
+                      Seu pedido será separado e postado somente após a confirmação sistêmica automática do Mercado Pago. 
                       O envio de comprovantes de pagamento não antecipa a liberação do pedido.
                     </div>
                   </div>

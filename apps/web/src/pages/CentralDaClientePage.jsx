@@ -540,7 +540,7 @@ export default function CentralDaClientePage() {
     },
     {
       q: "Qual o prazo e meio de recebimento do reembolso?",
-      a: "Os reembolsos são processados na mesma forma de pagamento da compra original e somente após o produto devolvido passar por análise técnica (que leva até 2 dias úteis): no <strong>PIX</strong>, o valor é creditado em até <strong>7 dias úteis</strong>; no <strong>cartão de crédito</strong>, a solicitação é feita de imediato à Stripe e o crédito pode constar em até <strong>2 faturas subsequentes</strong>."
+      a: "Os reembolsos são processados na mesma forma de pagamento da compra original e somente após o produto devolvido passar por análise técnica (que leva até 2 dias úteis): no <strong>PIX</strong>, o valor é creditado em até <strong>7 dias úteis</strong>; no <strong>cartão de crédito</strong>, a solicitação é feita de imediato à operadora e o crédito pode constar em até <strong>2 faturas subsequentes</strong>."
     }
   ];
 
@@ -740,10 +740,10 @@ export default function CentralDaClientePage() {
 
             <h3 id="termos-pagamento">2.2. Preços e Pagamentos</h3>
             <p>
-              Todos os preços estão sujeitos a alterações sem aviso prévio. O valor válido é o exibido no momento da finalização da compra. Aceitamos pagamentos via <strong>Cartão de Crédito</strong> (em até 6x sem juros) e <strong>PIX à vista</strong> (com benefício de 5% de desconto extra).
+              Todos os preços estão sujeitos a alterações sem aviso prévio. O valor válido é o exibido no momento da finalização da compra. Aceitamos pagamentos via <strong>Cartão de Crédito</strong> (em até 6x), <strong>PIX à vista</strong> (com benefício de 5% de desconto extra), <strong>Boleto Bancário</strong> e parcelamento no boleto via <strong>Mercado Crédito</strong>.
             </p>
             <p>
-              Todas as transações financeiras são processadas de forma 100% segura e criptografada pela <strong>Stripe</strong>, líder global em infraestrutura de pagamentos digitais. O processo utiliza criptografia de nível bancário (SSL/TLS e conformidade com o padrão internacional de segurança PCI-DSS Nível 1). Por conta disso, os dados do seu cartão de crédito nunca são armazenados ou sequer trafegam em nossos servidores, garantindo total blindagem contra vazamento de dados e fraudes.
+              Todas as transações financeiras são processadas de forma 100% segura e criptografada pelo <strong>Mercado Pago</strong>, ecossistema líder de tecnologia de pagamentos da América Latina. O processo utiliza criptografia de nível bancário (SSL/TLS e conformidade com o padrão internacional de segurança PCI-DSS Nível 1). Por conta disso, os dados do seu cartão de crédito nunca são armazenados ou sequer trafegam em nossos servidores, garantindo total blindagem contra vazamento de dados e fraudes.
             </p>
 
             <h3 id="termos-entrega">2.3. Entrega e Frete</h3>
@@ -829,7 +829,7 @@ export default function CentralDaClientePage() {
             <p>Fale conosco no WhatsApp <strong>(22) 98122-5010</strong> ou e-mail <strong>trocas@avantelingerie.com.br</strong> com o número do pedido e fotos. Retornamos em até <strong>2 dias úteis</strong> com as orientações de envio.</p>
 
             <h3 id="trocas-reembolso">3.6. Estorno e Prazos</h3>
-            <p>Os reembolsos ocorrem após a recepção e perícia no CD (até 2 dias): no <strong>PIX</strong>, o estorno ocorre em <strong>7 dias úteis</strong>; no <strong>cartão de crédito (Stripe)</strong>, o estorno é processado de imediato e constará em até <strong>2 faturas subsequentes</strong> (prazo da sua operadora).</p>
+            <p>Os reembolsos ocorrem após a recepção e perícia no CD (até 2 dias): no <strong>PIX</strong>, o estorno ocorre em <strong>7 dias úteis</strong>; no <strong>cartão de crédito</strong>, o estorno é processado de imediato e constará em até <strong>2 faturas subsequentes</strong> (prazo da sua operadora de cartão).</p>
           </section>
 
           <hr />
