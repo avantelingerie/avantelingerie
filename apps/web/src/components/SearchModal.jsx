@@ -36,15 +36,18 @@ export default function SearchModal({ isOpen, onClose }) {
   // Fetch logic
   useEffect(() => {
     const fetchResults = async () => {
-      if (!debouncedQuery || debouncedQuery.length < 2) {
+      const trimmed = debouncedQuery ? debouncedQuery.trim() : '';
+      if (!trimmed || trimmed.length < 2) {
         setResults([]);
         return;
       }
       
       setLoading(true);
       try {
+        const cleanQuery = trimmed.replace(/"/g, '\\"');
         const res = await pb.collection('products').getList(1, 6, {
-          filter: `name ~ "${debouncedQuery}" || categoria ~ "${debouncedQuery}"`,
+          filter: `(name ~ "${cleanQuery}" || categoria ~ "${cleanQuery}") && status = true`,
+          sort: '-created',
           $autoCancel: false
         });
         setResults(res.items);
@@ -74,6 +77,42 @@ export default function SearchModal({ isOpen, onClose }) {
   };
 
   const formatPrice = (val) => new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(val);
+
+  // Helper robusto para resolução de imagens de produtos (prioridade: imagem_principal > gallery > image > imagem_produto)
+  const getProductImage = (record) => {
+    if (!record) return null;
+
+    let filename = record.imagem_principal;
+    if (!filename && Array.isArray(record.gallery) && record.gallery.length > 0) {
+      filename = record.gallery[0];
+    }
+    if (!filename && record.image) {
+      filename = Array.isArray(record.image) ? record.image[0] : record.image;
+    }
+    if (!filename && record.imagem_produto) {
+      filename = Array.isArray(record.imagem_produto) ? record.imagem_produto[0] : record.imagem_produto;
+    }
+
+    if (!filename) return null;
+
+    if (typeof filename === 'string' && (filename.startsWith('http://') || filename.startsWith('https://') || filename.startsWith('data:'))) {
+      return filename;
+    }
+
+    try {
+      const target = typeof filename === 'string' ? filename.trim() : null;
+      if (!target) return null;
+      const getUrlFn = pb.files.getURL ? pb.files.getURL.bind(pb.files) : pb.files.getUrl.bind(pb.files);
+      const rawUrl = getUrlFn(record, target);
+      if (typeof window !== 'undefined' && rawUrl && !rawUrl.startsWith('http')) {
+        return `${window.location.origin}${rawUrl.startsWith('/') ? '' : '/'}${rawUrl}`;
+      }
+      return rawUrl;
+    } catch (err) {
+      console.error('[SearchModal] Erro ao obter URL da imagem no PocketBase:', err);
+      return null;
+    }
+  };
 
   return (
     <AnimatePresence>
@@ -138,35 +177,44 @@ export default function SearchModal({ isOpen, onClose }) {
               ) : results.length > 0 ? (
                 <div className="flex flex-col gap-2">
                   <h3 className="text-xs font-bold text-muted-foreground uppercase tracking-wider mb-2 px-2">Produtos Encontrados</h3>
-                  {results.map((product) => (
-                    <div 
-                      key={product.id}
-                      onClick={() => handleResultClick(product)}
-                      className="flex items-center gap-4 p-3 rounded-xl hover:bg-card border border-transparent hover:border-primary/20 hover:shadow-sm cursor-pointer transition-all group"
-                    >
-                      <div className="w-16 h-16 rounded-lg overflow-hidden bg-muted shrink-0">
-                        {product.image || product.imagem_produto ? (
-                          <img 
-                            src={product.imagem_produto || pb.files.getUrl(product, product.image)} 
-                            alt={product.name}
-                            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                          />
-                        ) : (
-                          <div className="w-full h-full flex items-center justify-center text-muted-foreground">
-                            <Tag className="w-6 h-6" />
-                          </div>
-                        )}
+                  {results.map((product) => {
+                    const imgUrl = getProductImage(product);
+                    const productName = product.name || product.nome_produto || 'Produto Avante Lingerie';
+                    return (
+                      <div 
+                        key={product.id}
+                        onClick={() => handleResultClick(product)}
+                        className="flex items-center gap-4 p-3 rounded-xl hover:bg-card border border-transparent hover:border-primary/20 hover:shadow-sm cursor-pointer transition-all group"
+                      >
+                        <div className="w-16 h-16 rounded-lg overflow-hidden bg-muted shrink-0 flex items-center justify-center">
+                          {imgUrl ? (
+                            <img 
+                              src={imgUrl} 
+                              alt={productName}
+                              className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                              loading="lazy"
+                              onError={(e) => {
+                                e.currentTarget.onerror = null;
+                                e.currentTarget.src = 'https://placehold.co/100x100/1a1a1a/c59b5f?text=Avante';
+                              }}
+                            />
+                          ) : (
+                            <div className="w-full h-full flex items-center justify-center text-muted-foreground">
+                              <Tag className="w-6 h-6" />
+                            </div>
+                          )}
+                        </div>
+                        <div className="flex flex-col flex-1 min-w-0">
+                          <span className="text-xs font-bold text-primary mb-1 uppercase">{product.categoria || 'Produto'}</span>
+                          <h4 className="font-bold text-sm text-foreground truncate group-hover:text-primary transition-colors">{productName}</h4>
+                          <span className="text-sm font-medium text-muted-foreground">{formatPrice(product.price || product.preco_varejo || 0)}</span>
+                        </div>
+                        <div className="w-8 h-8 rounded-full bg-muted/50 flex items-center justify-center group-hover:bg-primary group-hover:text-primary-foreground transition-colors shrink-0">
+                          <ArrowRight className="w-4 h-4" />
+                        </div>
                       </div>
-                      <div className="flex flex-col flex-1 min-w-0">
-                        <span className="text-xs font-bold text-primary mb-1 uppercase">{product.categoria || 'Produto'}</span>
-                        <h4 className="font-bold text-sm text-foreground truncate group-hover:text-primary transition-colors">{product.name || product.nome_produto}</h4>
-                        <span className="text-sm font-medium text-muted-foreground">{formatPrice(product.price || product.preco_varejo || 0)}</span>
-                      </div>
-                      <div className="w-8 h-8 rounded-full bg-muted/50 flex items-center justify-center group-hover:bg-primary group-hover:text-primary-foreground transition-colors shrink-0">
-                        <ArrowRight className="w-4 h-4" />
-                      </div>
-                    </div>
-                  ))}
+                    );
+                  })}
                   
                   {results.length > 0 && (
                     <button 

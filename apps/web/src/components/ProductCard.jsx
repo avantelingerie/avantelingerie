@@ -279,11 +279,14 @@ export default function ProductCard({
 
   const getProductImage = (record, filename) => {
     if (!filename) return 'https://placehold.co/400x533/1a1a1a/c59b5f?text=Avante+Lingerie';
-    if (typeof filename === 'string' && (filename.startsWith('http://') || filename.startsWith('https://') || filename.startsWith('data:'))) {
-      return filename;
+    const target = Array.isArray(filename) ? filename[0] : filename;
+    if (!target) return 'https://placehold.co/400x533/1a1a1a/c59b5f?text=Avante+Lingerie';
+    if (typeof target === 'string' && (target.startsWith('http://') || target.startsWith('https://') || target.startsWith('data:'))) {
+      return target;
     }
     try {
-      return pb.files.getUrl(record, filename);
+      const getUrlFn = pb.files.getURL ? pb.files.getURL.bind(pb.files) : pb.files.getUrl.bind(pb.files);
+      return getUrlFn(record, target);
     } catch (err) {
       console.error('[ProductCard] Erro ao obter URL da imagem no PocketBase:', err);
       return 'https://placehold.co/400x533/1a1a1a/c59b5f?text=Avante+Lingerie';

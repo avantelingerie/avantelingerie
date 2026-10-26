@@ -1395,9 +1395,27 @@ Planejamento comercial e técnico estruturado pela Ada e Vértice para alavancar
     - Status: `ACTIVE`, com entrega em `ADSET_PAUSED` (dormindo com segurança).
   - **Auditoria de Gastos:** Conta com R$ 0,00 consumido. Todas as campanhas e conjuntos permanecem rigorosamente pausados.
   - **Redirecionamento Inteligente no Frontend:** Adicionadas rotas de redirecionamento em `App.jsx` (`/revenda` e `/atacado` -> `/quero-revender`) para prevenir 404 em digitações diretas.
-- **Ponto de Parada Atual:**
-  - Meta Ads: 100% estruturado, blindado contra IA e pronto para quando for dado o play geral das campanhas.
-  - Mercado Pago: aguardando segunda-feira o sócio enviar o código 2FA para concluir a conta PJ e inserir as chaves de API no painel Admin da loja.
+### Sessão - 26/10/2026 (Correção e Blindagem das Imagens no Modal de Busca Global)
+- **Diagnóstico com Evidência Comprovada (Atlas):**
+  - Identificado que na busca rápida da loja (`SearchModal.jsx`, acessível pelo Header na Home e em todas as páginas), os produtos apareciam perfeitamente, mas com ícone de imagem quebrada.
+  - Investigação de esquema no PocketBase comprovou que o campo `image` é um array de nomes de arquivos (`['foto1.jpg', 'foto2.jpg']`), enquanto a imagem principal fica gravada no campo `imagem_principal` (string).
+  - O código legado do `SearchModal` chamava `pb.files.getUrl(product, product.image)`. Ao receber um array, o SDK concatenava todos os nomes com `%2C` (`.../foto1.jpg%2Cfoto2.jpg...`), retornando HTTP 404 da VPS.
+  - Além disso, campos `imagem_principal` e `gallery` eram ignorados, sem `onError` nem tratamento de falha.
+- **Crivo do Portão Nemotron (`nvidia/nemotron-3-ultra-550b`):**
+  - Proposta técnica submetida e avaliada no terminal via OpenRouter.
+  - Avaliação: Causa raiz solucionada com extração do primeiro filename string antes da chamada do SDK, cobertura de prioridade (`imagem_principal` > `gallery[0]` > `image[0]` > `imagem_produto`), zero risco ao backend/banco, e aprovação formal: `CLEARED_FOR_MERGE`.
+- **Implementação Cirúrgica pela Ada:**
+  - `apps/web/src/components/SearchModal.jsx`:
+    - Adicionado helper `getProductImage` com prioridade estrita de campos, normalização de caminhos relativos e compatibilidade `getURL`/`getUrl`.
+    - Sanitização de aspas na query de busca (`cleanQuery = trimmed.replace(/"/g, '\\"')`) e filtro por `status = true`.
+    - Renderização da imagem com tag `loading="lazy"` e `onError` resiliente apontando para fallback da Avante Lingerie sem loops.
+  - `apps/web/src/components/ProductCard.jsx`:
+    - Blindagem preventiva no helper `getProductImage` para garantir que arrays sejam descompactados de forma segura (`Array.isArray(filename) ? filename[0] : filename`).
+- **Auditoria de Qualidade (Sentinel):**
+  - ESLint (`npm run lint`): 100% aprovado, zero erros e zero avisos.
+  - Build de Produção (`vite build`): 100% aprovado (`built in 52.73s`, 3113 módulos transformados).
+  - Teste de Rede Real: Consulta direta aos 6 produtos da busca no PocketBase ao vivo comprovando HTTP 200 em todas as URLs de imagem resolvidas.
+
 
 
 
