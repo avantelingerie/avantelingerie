@@ -1462,3 +1462,15 @@ Planejamento comercial e técnico estruturado pela Ada e Vértice para alavancar
 - **Auditoria de Qualidade (Sentinel):**
   - ESLint (`npm run lint`): 100% aprovado, 0 erros e 0 avisos.
   - Build de Produção (`npm run build`): 100% aprovado (`built in 27.52s`, 3113 módulos transformados).
+
+### Sessão - 26/10/2026 (Consolidação das 6 Regras Oficiais de Pagamentos e Descontos)
+- **Definição e Implementação das 6 Regras de Ouro:**
+  1. **Descontos Progressivos (Varejo B2C):** Faixa 1 (R$ 20,00 a R$ 24,00 -> 1.67%), Faixa 2 (R$ 24,01 a R$ 40,00 -> 3.33%), Faixa 3 (R$ 40,01 a R$ 60,00 -> 5.00%). A partir de R$ 69,90 ativação do Atacado B2B.
+  2. **Boleto Bancário Tradicional:** Compra mínima de R$ 59,90. ZERO desconto aplicado no checkout (margem protegida da taxa fixa de R$ 3,49).
+  3. **Cartão de Crédito 1x:** Recebimento único integral em 14 a 30 dias. Ativo para qualquer valor. Aplica o desconto progressivo da barra.
+  4. **Cartão de Crédito Parcelado:** Recebimento único integral de todas as parcelas em 14 a 30 dias. Juros do parcelamento repassados ao comprador. Parcela mínima de R$ 9,90. Aplica o desconto progressivo da barra.
+  5. **Mercado Crédito (Boleto Parcelado sem Cartão):** Trava de segurança configurada no backend (`mercadoPagoService.js`). Só é permitido para compras a partir de R$ 29,90 (abaixo de R$ 29,90 `consumer_credits` é excluído na API do Mercado Pago).
+  6. **PIX:** Sem valor mínimo. Sempre 5% OFF à vista. Regra estrita anti-acúmulo mantida (`paymentMethod === 'pix'` concede 5% e não soma com descontos da barra).
+- **Validação de Código e Execução:**
+  - Script de teste unitário (`scratch/test_checkout_rules.mjs`): 100% dos testes passaram com assert.
+  - ESLint e Build de produção: 100% aprovados.

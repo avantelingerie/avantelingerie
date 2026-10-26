@@ -190,17 +190,42 @@ class MercadoPagoService {
       },
     };
 
-    // 4. Configura métodos de pagamento e parcelamento
-    const paymentMethods = {
-      installments: creds.maxInstallments,
-      excluded_payment_methods: [],
-      excluded_payment_types: [],
-    };
+    // 4. Configura métodos de pagamento e parcelamento conforme regras da Avante Lingerie
+    const excludedTypes = [];
 
-    // Se o pedido for explicitamente PIX na loja, priorizamos/restringimos se necessário
-    if (order.metodo_pagamento === 'pix') {
-      // Deixamos aberto ou focado em PIX
+    // Regra 5: Mercado Crédito só aparece se o carrinho tiver no mínimo R$ 29,90
+    if (finalTotal < 29.90) {
+      excludedTypes.push({ id: 'consumer_credits' });
     }
+
+    // Regra 2: Boleto Bancário tradicional só é permitido com compra mínima de R$ 59,90
+    if (finalTotal < 59.90) {
+      excludedTypes.push({ id: 'ticket' });
+    }
+
+    // Se o pedido for explicitamente PIX na loja, isola para recebimento via PIX
+    if (order.metodo_pagamento === 'pix') {
+      excludedTypes.push({ id: 'ticket' });
+      excludedTypes.push({ id: 'credit_card' });
+      excludedTypes.push({ id: 'debit_card' });
+      excludedTypes.push({ id: 'consumer_credits' });
+    } else if (order.metodo_pagamento === 'boleto') {
+      // Se selecionou boleto no checkout da loja
+      excludedTypes.push({ id: 'credit_card' });
+      excludedTypes.push({ id: 'debit_card' });
+      excludedTypes.push({ id: 'consumer_credits' });
+    }
+
+    // Remove duplicatas de excludedTypes se houver
+    const uniqueExcludedTypes = Array.from(
+      new Map(excludedTypes.map(item => [item.id, item])).values()
+    );
+
+    const paymentMethods = {
+      installments: creds.maxInstallments || 6,
+      excluded_payment_methods: [],
+      excluded_payment_types: uniqueExcludedTypes,
+    };
 
     // 5. Payload canônico da Preferência
     const preferencePayload = {

@@ -534,7 +534,7 @@ export default function Checkout() {
                 </div>
               ) : (
                 <div className="bg-[#FFFBF8] p-5 rounded-2xl text-center text-xs text-gray-400 border border-dashed border-[#c59b5f]/25 font-light mt-6 opacity-80">
-                  Ambiente de pagamento 100% seguro processado pelo Mercado Pago. Aceitamos Cartões, PIX, Boleto e Mercado Crédito.
+                  Ambiente de pagamento 100% seguro pelo Mercado Pago. Aceitamos Cartões, PIX, Boleto (a partir de R$ 59,90) e Mercado Crédito (a partir de R$ 29,90).
                 </div>
               )}
             </div>
