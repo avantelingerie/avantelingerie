@@ -1445,3 +1445,20 @@ Planejamento comercial e técnico estruturado pela Ada e Vértice para alavancar
   - Testes lógicos de corte (`test_boleto_min_logic.mjs`):
     - Subtotal R$ 38,88 (< R$ 59,90) -> Boleto bloqueado/oculto (CORRETO).
     - Subtotal R$ 77,76 (>= R$ 59,90) -> Boleto liberado (CORRETO).
+
+### Sessão - 26/10/2026 (Refinamento Vetorial do Rodapé, Desacoplamento do PIX 5% e Faixas de Desconto)
+- **Refinamento dos Selos de Gateway no Rodapé (`Footer.jsx`):**
+  - **Problema:** O selo de processamento de pagamentos utilizava caixas de texto com iniciais simplificadas ("MP" e "stripe"), que não transmitiam o peso e a autoridade visual das marcas oficiais.
+  - **Solução Implementada:**
+    - **Mercado Pago:** Emblema circular oficial com fundo azul `#009EE3`, contendo o aperto de mãos vetorial estilizado em branco puro (`w-7 h-7 rounded-full shadow-sm`).
+    - **Stripe:** Badge retangular oficial com fundo roxo `#635BFF`, contendo o wordmark vetorial autêntico da Stripe em branco (`h-7 px-2 rounded-md shadow-sm`).
+    - **Tipografia e Segurança:** Textos alinhados com `Mercado Pago & Stripe` em branco bold e `Infraestrutura Criptografada` acompanhada pelo ícone vetorial de cadeado verde esmeralda (`Lock` em `#10B981`).
+- **Desacoplamento e Correção do Desconto PIX 5% (`PixInfoBlock.jsx`, `useCart.js`, `useCheckoutLogic.js`):**
+  - **Problema:** O bloco informativo do PIX (`PixInfoBlock`) não renderizava na página de produto por divergência no nome da prop (`eligible` vs `isEligible`). Além disso, clientes que atingiam a última faixa de desconto progressivo perdiam a visibilidade do benefício do PIX.
+  - **Solução Implementada:**
+    - `PixInfoBlock.jsx`: Atualizado para aceitar `const show = isEligible || eligible`, garantindo exibição em qualquer componente da loja.
+    - `useCart.js`: `getPixBenefitEligibility` agora retorna `true` enquanto `desconto_pix_ativo !== false`, garantindo que o cliente sempre saiba que pagar no PIX garante 5% OFF à vista.
+    - `useCheckoutLogic.js`: Ao selecionar PIX, o sistema concede 5% OFF à vista; ao selecionar cartão de crédito, o sistema aplica o desconto progressivo acumulado da barra. Regra anti-acúmulo estrita mantida para proteger as margens da fábrica.
+- **Auditoria de Qualidade (Sentinel):**
+  - ESLint (`npm run lint`): 100% aprovado, 0 erros e 0 avisos.
+  - Build de Produção (`npm run build`): 100% aprovado (`built in 27.52s`, 3113 módulos transformados).

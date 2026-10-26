@@ -2,10 +2,11 @@ import React from 'react';
 import { Zap } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-export default function PixInfoBlock({ isEligible = false }) {
+export default function PixInfoBlock({ isEligible = false, eligible }) {
+  const show = isEligible || eligible;
   return (
     <AnimatePresence>
-      {isEligible && (
+      {show && (
         <motion.div
           initial={{ opacity: 0, height: 0, marginBottom: 0 }}
           animate={{ opacity: 1, height: 'auto', marginBottom: 16 }}

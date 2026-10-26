@@ -339,29 +339,12 @@ export function useCart() {
   }, [getCartTotal, configuracoes, currentUser]);
 
   const getPixBenefitEligibility = useCallback(() => {
-    const total = getCartTotal();
-    const isReseller = currentUser?.commercial_profile === 'reseller' || currentUser?.tipo_cliente === 'revendedor';
-    const perfil = isReseller ? 'reseller' : 'retail';
-    const faixas = descontosService.getFaixasPorPerfil(configuracoes, perfil);
-    const faixasArr = Array.isArray(faixas) ? faixas.filter(Boolean) : [];
-
-    if (faixasArr.length > 0) {
-      // Identifica a faixa com o maior percentual de desconto (o teto, ex: 5%)
-      const maxTier = faixasArr.reduce((prev, curr) => {
-        const pCurr = parseFloat(String(curr.percentual || 0).replace(/[^\d.,]/g, '').replace(',', '.')) || 0;
-        const pPrev = parseFloat(String(prev.percentual || 0).replace(/[^\d.,]/g, '').replace(',', '.')) || 0;
-        return pCurr > pPrev ? curr : prev;
-      }, faixasArr[0]);
-
-      const maxTierMinVal = parseFloat(String(maxTier.valor_minimo || 0).replace(/[^\d.,]/g, '').replace(',', '.')) || 40.01;
-      // O PIX é liberado para quem ainda NÃO atingiu os 5% da barra progressiva
-      return total < maxTierMinVal;
+    // Se o desconto PIX estiver explicitamente desativado no painel, retorna false
+    if (configuracoes && configuracoes.desconto_pix_ativo === false) {
+      return false;
     }
-
-    // Fallback resiliente
-    const fallbackLimit = 40.01;
-    return total < fallbackLimit;
-  }, [getCartTotal, configuracoes, currentUser]);
+    return true;
+  }, [configuracoes]);
 
   return {
     cart,

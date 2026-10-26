@@ -298,7 +298,7 @@ export function useCheckoutLogic() {
   // 1. Se o cliente escolheu PIX e ainda não atingiu o teto de 5% da barra progressiva: ganha 5% no PIX!
   // 2. Se já atingiu 5% na barra progressiva: mantém os 5% da barra progressiva (sem acúmulo duplo).
   // 3. Se pagou com cartão: recebe o desconto da barra progressiva (1.67%, 3.33% ou 5%).
-  if (paymentMethod === 'pix' && isPixEligible) {
+  if (paymentMethod === 'pix') {
     activeBenefitMessage = 'Benefício aplicado: 5% OFF no PIX à vista';
     finalDiscountAmount = subtotal * 0.05;
     benefitType = 'pix';
