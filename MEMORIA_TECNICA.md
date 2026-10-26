@@ -1435,8 +1435,8 @@ Planejamento comercial e técnico estruturado pela Ada e Vértice para alavancar
     - Atualizado o texto informativo de cartão de `"Até 6x sem juros"` para `"Em até 6x no cartão"`.
     - Atualizados todos os avisos de segurança e processamento de `"Stripe"` para `"Mercado Pago"`.
   - `Footer.jsx`:
-    - Atualizado o selo de processamento para `"Mercado Pago | Pagamento 100% Criptografado"` com estética dark luxury (`bg-white/[0.02] border border-white/5`).
-    - Adicionado badge de `"Mercado Crédito"` destacando a possibilidade de parcelamento no boleto sem cartão.
+    - Atualizado o selo de processamento para `"Mercado Pago & Stripe | Infraestrutura Criptografada"` com estética dark luxury (`bg-white/[0.02] border border-white/5`), exibindo ambos os logos oficiais.
+    - Adicionadas badges de `"Stripe Link"` e `"Mercado Crédito"` destacando as soluções inovadoras de checkout rápido e boleto parcelado.
   - `ProductPage.jsx`, `CartPage.jsx`, `HomePage.jsx`, `FAQAccordion.jsx`, `CentralDaClientePage.jsx`, `OrderConfirmation.jsx`:
     - Atualizadas todas as menções de parcelamento para `"em até 6x no cartão"`, além de inclusão das opções de PIX com 5% de desconto, boleto bancário e Mercado Crédito nas dúvidas frequentes.
 - **Auditoria de Qualidade (Sentinel):**
