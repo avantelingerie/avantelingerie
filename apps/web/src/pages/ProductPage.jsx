@@ -686,8 +686,13 @@ export default function ProductPage() {
   const activeOldPrice = isReseller ? activeVarPrice : baseOldPrice;
   const activeDiscount = isReseller ? Math.round((1 - activeVarWholesalePrice / activeVarPrice) * 100) : baseDiscount;
 
-  const profitPerPiece = activeVarPrice - activeVarWholesalePrice;
-  const profitMarginPercent = activeVarWholesalePrice > 0 ? Math.round((profitPerPiece / activeVarWholesalePrice) * 100) : 0;
+  // Preço de Varejo Sugerido para a Revendedora revender com margem digna de boutique (~70% de margem ou campo específico)
+  const suggestedRetailPrice = product?.preco_sugerido_revenda || product?.preco_sugerido || (activeVarWholesalePrice > 0 ? activeVarWholesalePrice * 1.7 : activeVarPrice * 1.5);
+  const profitPerPiece = suggestedRetailPrice - activeVarWholesalePrice;
+  const profitMarginPercent = activeVarWholesalePrice > 0 ? Math.round((profitPerPiece / activeVarWholesalePrice) * 100) : 70;
+
+  // Parcelamento no cartão: respeita a parcela mínima de R$ 9,90 e limite de 6x
+  const calcMaxInstallments = Math.min(6, Math.floor(activePrice / 9.90));
 
   const maxPurchaseQuantity = activeVariation ? (activeVariation.estoque || 5) : (product?.stock || fallbackProduct.stock || 1);
 
@@ -1112,7 +1117,7 @@ export default function ProductPage() {
                       </div>
                       <div className="flex items-end gap-3">
                         <span className="text-4xl font-bold text-white tracking-tight">{formatPrice(activePrice)}</span>
-                        <span className="text-sm text-gray-400 line-through mb-1.5">{formatPrice(activeOldPrice)}</span>
+                        <span className="text-sm text-gray-400 line-through mb-1.5" title="Preço sugerido para revenda em boutique">Sugerido: {formatPrice(suggestedRetailPrice)}</span>
                       </div>
                     </div>
 
@@ -1123,7 +1128,7 @@ export default function ProductPage() {
                       <span className="text-lg font-bold text-[#c59b5f] leading-none mb-1">
                         +{profitMarginPercent}%
                       </span>
-                      <span className="text-xs text-gray-400 font-medium">Revenda a {formatPrice(activeOldPrice)}</span>
+                      <span className="text-xs text-gray-400 font-medium">Revenda a {formatPrice(suggestedRetailPrice)}</span>
                     </div>
                   </div>
                 </div>
@@ -1147,7 +1152,11 @@ export default function ProductPage() {
                         {formatPrice(activePrice)}
                       </span>
                       <span className="text-sm md:text-[15px] text-gray-600 font-medium">
-                        em até <span className="font-bold text-[#444]">6x de {formatPrice(activePrice / 6)}</span> no cartão de crédito.
+                        {calcMaxInstallments >= 2 ? (
+                          <>em até <span className="font-bold text-[#444]">{calcMaxInstallments}x de {formatPrice(activePrice / calcMaxInstallments)}</span> no cartão de crédito.</>
+                        ) : (
+                          <>no cartão em até <span className="font-bold text-[#444]">6x</span>.</>
+                        )}
                       </span>
                     </div>
                   </div>

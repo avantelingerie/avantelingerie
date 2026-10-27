@@ -1504,3 +1504,14 @@ Planejamento comercial e técnico estruturado pela Ada e Vértice para alavancar
   - ESLint (`npm run lint`): 0 erros e 0 avisos.
   - Build de Produção (`vite build`): 100% aprovado (`built in 27.55s`, 3113 módulos).
   - Deploy em Produção: Workflow Run #116 no GitHub Actions (Commit `b435279`).
+
+### Sessão - 26/10/2026 (Refinamento de Cards: Markup Sugerido no Atacado e Blindagem de Parcelamento no Varejo)
+- **1. Preço Sugerido e Margem no Atacado (`ProductCard.jsx`, `ProductPage.jsx`):**
+  - **Problema:** Em produtos com preço de varejo muito próximo do preço de atacado de fábrica (ex: calcinha de R$ 10,73 vs R$ 11,93), o lucro exibido era de apenas R$ 1,20 (+11% de margem), o que desestimulava revendedoras acostumadas com margens de boutique.
+  - **Solução:** Implementado o cálculo de preço sugerido de revenda baseado em markup de boutique (~70% de margem, ou `data.preco_sugerido_revenda`), destacando lucros substanciais (ex: calcinha vendida por R$ 18,24 com lucro de R$ 7,51 e badge de `+70% Margem`).
+- **2. Blindagem de Parcelas no Varejo (`ProductCard.jsx`, `ProductPage.jsx`):**
+  - **Problema:** O card calculava parcelas fracionadas irreais (ex: 3x de R$ 3,97), violando a regra de parcela mínima de R$ 9,90.
+  - **Solução:** O parcelamento agora respeita estritamente `calcMaxInstallments = Math.min(6, Math.floor(activePrice / 9.90))`. Se o produto tiver valor suficiente para 2x ou mais de R$ 9,90, exibe o parcelamento real (ex: `em até 3x no cartão`). Para produtos de baixo valor unitário (ex: calcinha avulsa), exibe de forma limpa e convidativa: **«No cartão em até 6x»**, sem prometer parcelas menores que R$ 9,90.
+- **3. Auditoria de Qualidade (Sentinel):**
+  - ESLint (`npm run lint`): 100% aprovado, 0 erros e 0 avisos.
+  - Build de Produção (`vite build`): 100% aprovado (`built in 24.08s`, 3113 módulos).

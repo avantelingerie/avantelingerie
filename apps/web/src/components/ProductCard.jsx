@@ -59,8 +59,10 @@ export default function ProductCard({
   const soldCount = data.vendidos_semana || (1150 + ((seed * 37) % 1850)); // de 1.150 a 2.999
   const soldFormatted = Number(soldCount).toLocaleString('pt-BR');
 
-  const profitPerPiece = price - wholesalePrice;
-  const profitMarginPercent = wholesalePrice > 0 ? Math.round((profitPerPiece / wholesalePrice) * 100) : 0;
+  // Preço de Varejo Sugerido para a Revendedora revender com margem digna de boutique (~70% de margem ou campo específico)
+  const suggestedRetailPrice = data.preco_sugerido_revenda || data.preco_sugerido || (wholesalePrice > 0 ? wholesalePrice * 1.7 : price * 1.5);
+  const profitPerPiece = suggestedRetailPrice - wholesalePrice;
+  const profitMarginPercent = wholesalePrice > 0 ? Math.round((profitPerPiece / wholesalePrice) * 100) : 70;
   const wholesaleSavingsPercent = price > 0 ? Math.round((1 - (wholesalePrice / price)) * 100) : 45;
 
   const { configuracoes } = useCart();
@@ -79,11 +81,11 @@ export default function ProductCard({
     ? Math.max(...faixasProgressivas.map(f => Number(f.percentual) || 0))
     : (isReseller ? 15 : 10);
 
-  const installmentText = activePrice >= 60
-    ? `em até 12x de ${new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(activePrice / 12)}`
-    : (activePrice >= 30
-      ? `em até 6x de ${new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(activePrice / 6)}`
-      : `em até 3x de ${new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(activePrice / 3)}`);
+  // Parcelamento no cartão: respeita a parcela mínima de R$ 9,90 e limite de 6x
+  const calcMaxInstallments = Math.min(6, Math.floor(activePrice / 9.90));
+  const installmentText = calcMaxInstallments >= 2
+    ? `em até ${calcMaxInstallments}x no cartão`
+    : 'No cartão em até 6x';
 
   // Helper mapper to convert color names into beautiful solid hex circles
   const getColorHex = (colorName) => {
@@ -454,7 +456,7 @@ export default function ProductCard({
                 <Crown className="w-3 h-3 text-[#c59b5f]" /> Seu Custo de Fábrica
               </span>
               <span className="text-[10px] text-gray-400 line-through">
-                Sugerido: {formatPrice(price)}
+                Sugerido: {formatPrice(suggestedRetailPrice)}
               </span>
             </div>
             <div className="flex items-baseline justify-between">
