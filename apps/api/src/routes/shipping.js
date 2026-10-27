@@ -108,7 +108,7 @@ router.post('/calculate', async (req, res, next) => {
 
     const toCepNum = parseInt(cleanToCep, 10);
     let freeShippingApplied = false;
-    let freeShippingMin = 299; // Default threshold fallback
+    let freeShippingMin = null; // Só definido se houver regra ativa no banco de dados
 
     for (const rule of rules) {
       let matches = false;
@@ -193,28 +193,38 @@ router.post('/calculate', async (req, res, next) => {
       filteredOptions[0].isFree = true;
     }
 
-    // 7.5 Check if local pickup is enabled in configuracoes_estoque
+    // 7.5 Check if local pickup is enabled in configuracoes_estoque AND destination is Nova Friburgo
     let localPickupConfig = null;
     try {
       const configRecords = await pb.collection('configuracoes_estoque').getFullList({ $autoCancel: false });
       if (configRecords.length > 0 && configRecords[0].retirada_ativo) {
-        localPickupConfig = {
-          ativo: true,
-          endereco: configRecords[0].retirada_endereco,
-          horario: configRecords[0].retirada_horario,
-          prazo_mensagem: configRecords[0].retirada_prazo_mensagem,
-          instrucoes: configRecords[0].retirada_instrucoes
-        };
-        // Inject at the beginning of options
-        filteredOptions.unshift({
-          id: 'retirada_local',
-          company: 'Avante Lingerie',
-          name: 'Retirada no Local',
-          price: 0,
-          originalPrice: 0,
-          delivery_time: localPickupConfig.prazo_mensagem || '1 dia',
-          isFree: true
-        });
+        // Validação estrita: Retirada Local é permitida EXCLUSIVAMENTE para a cidade da fábrica (Nova Friburgo - RJ)
+        // Faixa oficial dos Correios para Nova Friburgo (incluindo todos os distritos como Lumiar, São Pedro da Serra, Conselheiro Paulino, Olaria, etc.): 28600-000 a 28636-999
+        const isFriburgoCep = toCepNum >= 28600000 && toCepNum <= 28636999;
+        const isFriburgoCity = typeof cidade === 'string' && cidade.toLowerCase().includes('friburgo');
+        const isOtherCityExplicit = typeof cidade === 'string' && !cidade.toLowerCase().includes('friburgo');
+
+        const canLocalPickup = (isFriburgoCep && !isOtherCityExplicit) || isFriburgoCity;
+
+        if (canLocalPickup) {
+          localPickupConfig = {
+            ativo: true,
+            endereco: configRecords[0].retirada_endereco,
+            horario: configRecords[0].retirada_horario,
+            prazo_mensagem: configRecords[0].retirada_prazo_mensagem,
+            instrucoes: configRecords[0].retirada_instrucoes
+          };
+          // Inject at the beginning of options
+          filteredOptions.unshift({
+            id: 'retirada_local',
+            company: 'Avante Lingerie',
+            name: 'Retirada na Fábrica (Nova Friburgo)',
+            price: 0,
+            originalPrice: 0,
+            delivery_time: localPickupConfig.prazo_mensagem || 'Disponível em até 1 dia útil',
+            isFree: true
+          });
+        }
       }
     } catch (err) {
       logger.warn('[ShippingAPI] Falha ao verificar configuracoes_estoque para retirada:', err.message);

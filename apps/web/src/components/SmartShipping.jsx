@@ -15,10 +15,10 @@ export default function SmartShipping({ currentTotal, onSelectShipping }) {
   const [options, setOptions] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
-  const [freeShippingMin, setFreeShippingMin] = useState(299); // Dynamic threshold from database
+  const [freeShippingMin, setFreeShippingMin] = useState(null); // Limite dinâmico do banco de dados
 
-  const diff = freeShippingMin - currentTotal;
-  const progressPercent = Math.min(100, (currentTotal / freeShippingMin) * 100);
+  const diff = freeShippingMin ? freeShippingMin - currentTotal : 0;
+  const progressPercent = freeShippingMin ? Math.min(100, (currentTotal / freeShippingMin) * 100) : 0;
 
   const formatPrice = (val) => new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(val);
 
@@ -49,7 +49,7 @@ export default function SmartShipping({ currentTotal, onSelectShipping }) {
       const result = await response.json();
       if (result.sucesso && result.options) {
         setOptions(result.options);
-        setFreeShippingMin(result.freeShippingMin || 299);
+        setFreeShippingMin(result.freeShippingMin || null);
         setCalculated(true);
 
         if (result.options.length > 0) {
@@ -111,23 +111,25 @@ export default function SmartShipping({ currentTotal, onSelectShipping }) {
         </Button>
       </div>
 
-      {/* Free Shipping Progress */}
-      <div className="mb-4">
-        <div className="flex justify-between text-xs font-medium mb-1.5">
-          <span className="text-muted-foreground">Frete Grátis</span>
-          <span className={diff > 0 ? "text-primary" : "text-green-600 font-bold"}>
-            {diff > 0 ? `Falta ${formatPrice(diff)}` : 'Desbloqueado!'}
-          </span>
+      {/* Free Shipping Progress (somente exibido se houver regra de frete grátis ativa no banco de dados) */}
+      {freeShippingMin && freeShippingMin > 0 && (
+        <div className="mb-4">
+          <div className="flex justify-between text-xs font-medium mb-1.5">
+            <span className="text-muted-foreground">Frete Grátis</span>
+            <span className={diff > 0 ? "text-primary" : "text-green-600 font-bold"}>
+              {diff > 0 ? `Falta ${formatPrice(diff)}` : 'Desbloqueado!'}
+            </span>
+          </div>
+          <div className="h-2 w-full bg-muted rounded-full overflow-hidden">
+            <motion.div 
+              className={`h-full ${diff > 0 ? 'bg-primary' : 'bg-green-500'}`}
+              initial={{ width: 0 }}
+              animate={{ width: `${progressPercent}%` }}
+              transition={{ duration: 0.5 }}
+            />
+          </div>
         </div>
-        <div className="h-2 w-full bg-muted rounded-full overflow-hidden">
-          <motion.div 
-            className={`h-full ${diff > 0 ? 'bg-primary' : 'bg-green-500'}`}
-            initial={{ width: 0 }}
-            animate={{ width: `${progressPercent}%` }}
-            transition={{ duration: 0.5 }}
-          />
-        </div>
-      </div>
+      )}
 
       {error && (
         <div className="bg-red-50 text-red-700 p-3 rounded-xl text-xs font-semibold text-center mt-3">
@@ -157,7 +159,9 @@ export default function SmartShipping({ currentTotal, onSelectShipping }) {
                     {opt.company} {opt.name}
                   </div>
                   <div className="text-xs text-muted-foreground">
-                    Prazo: {opt.delivery_time} {opt.delivery_time === 1 ? 'dia útil' : 'dias úteis'}
+                    Prazo: {typeof opt.delivery_time === 'number'
+                      ? `${opt.delivery_time} ${opt.delivery_time === 1 ? 'dia útil' : 'dias úteis'}`
+                      : (opt.delivery_time || '1 a 3 dias úteis')}
                   </div>
                 </div>
               </div>

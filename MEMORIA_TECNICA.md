@@ -1515,3 +1515,19 @@ Planejamento comercial e técnico estruturado pela Ada e Vértice para alavancar
 - **3. Auditoria de Qualidade (Sentinel):**
   - ESLint (`npm run lint`): 100% aprovado, 0 erros e 0 avisos.
   - Build de Produção (`vite build`): 100% aprovado (`built in 24.08s`, 3113 módulos).
+
+### Sessão - 26/10/2026 (Blindagem de Frete: Retirada no Local Restrita a Nova Friburgo)
+- **1. Diagnóstico do Problema:**
+  - Ao simular frete para CEPs fora de Nova Friburgo (ex: `21921-110` no Rio de Janeiro / Jardim Carioca), o sistema inseria incondicionalmente a opção `Avante Lingerie Retirada no Local` como `Grátis` (`isFree: true`).
+  - Como o frontend (`SmartShipping.jsx` e `useCheckoutLogic.js`) priorizava opções gratuitas por padrão, a retirada local em Nova Friburgo era automaticamente selecionada para clientes de outras cidades e estados, exibindo erroneamente `Frete: Grátis` no resumo do pedido.
+- **2. Correção no Backend (`apps/api/src/routes/shipping.js`):**
+  - Adicionada validação geográfica estrita: `retirada_local` só é injetada nas opções se o CEP de destino estiver dentro da faixa postal oficial dos Correios de Nova Friburgo (`28600-000` a `28636-999`, abrangendo Centro, Olaria, Conselheiro Paulino e distritos como Lumiar e São Pedro da Serra) ou se a cidade informada for comprovadamente Nova Friburgo.
+  - Ajustado `freeShippingMin`: agora inicia como `null` e só é preenchido se houver regra ativa correspondente na coleção `regras_frete_gratis` do PocketBase, impedindo valores fictícios de frete grátis nacional.
+- **3. Correção no Frontend (`apps/web/src/components/SmartShipping.jsx`):**
+  - Barra de progresso de frete grátis agora só é renderizada se houver uma regra com valor mínimo positivo vinda do banco de dados.
+  - Formatação do prazo de entrega corrigida para evitar concatenação redundante de "dias úteis".
+- **4. Validação e Auditoria (Sentinel):**
+  - Testes unitários (`scratch/test_shipping_rules.mjs`): 8/8 cenários aprovados (Rio de Janeiro bloqueado, Nova Friburgo liberado, distritos liberados, cidades vizinhas bloqueadas).
+  - ESLint (`npm run lint`): 100% aprovado (0 erros, 0 avisos).
+  - Build de Produção (`vite build`): 100% aprovado (`built in 18.99s`, 3113 módulos).
+
