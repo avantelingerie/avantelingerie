@@ -481,7 +481,44 @@ export default function ProductPage() {
     };
     fetchData();
     window.scrollTo(0, 0);
-    return () => { isMounted = false; };
+
+    // Reatividade em tempo real via PocketBase (Portão Nemotron)
+    const subscribedId = id;
+    if (subscribedId && pb?.collection) {
+      try {
+        pb.collection('products').subscribe(subscribedId, (e) => {
+          if (e.action === 'update' && isMounted) {
+            setProduct(prev => ({ ...prev, ...e.record }));
+          }
+        });
+        pb.collection('variacoes').subscribe('*', (e) => {
+          if (isMounted && e.record?.produto_id === subscribedId) {
+            setVariacoesList(prev => {
+              if (e.action === 'update') {
+                return prev.map(v => v.id === e.record.id ? { ...v, ...e.record } : v);
+              } else if (e.action === 'create') {
+                return [...prev, e.record];
+              } else if (e.action === 'delete') {
+                return prev.filter(v => v.id !== e.record.id);
+              }
+              return prev;
+            });
+          }
+        });
+      } catch (err) {
+        console.warn('[ProductPage] Realtime subscription notice:', err);
+      }
+    }
+
+    return () => {
+      isMounted = false;
+      try {
+        if (subscribedId && pb?.collection) {
+          pb.collection('products').unsubscribe(subscribedId);
+          pb.collection('variacoes').unsubscribe('*');
+        }
+      } catch (_) {}
+    };
   }, [id, navigate]);
 
   useEffect(() => {
@@ -694,6 +731,23 @@ export default function ProductPage() {
   // Parcelamento no cartão: respeita a parcela mínima de R$ 9,90 e limite de 6x
   const calcMaxInstallments = Math.min(6, Math.floor(activePrice / 9.90));
 
+  // Detecção robusta e sanitizada de estoque (Portão Nemotron)
+  const parseStockNumber = (val) => {
+    if (val === undefined || val === null || val === '') return null;
+    const num = Number(val);
+    return isNaN(num) ? null : num;
+  };
+
+  const isVariationOutOfStock = !semVariacoes && activeVariation 
+    ? (parseStockNumber(activeVariation.estoque) !== null && parseStockNumber(activeVariation.estoque) <= 0)
+    : false;
+
+  const isProductOutOfStock = semVariacoes 
+    ? (parseStockNumber(product?.stock ?? product?.estoque) !== null && parseStockNumber(product?.stock ?? product?.estoque) <= 0)
+    : false;
+
+  const isOutOfStock = isVariationOutOfStock || isProductOutOfStock;
+
   const maxPurchaseQuantity = activeVariation ? (activeVariation.estoque || 5) : (product?.stock || fallbackProduct.stock || 1);
 
   useEffect(() => {
@@ -859,7 +913,25 @@ export default function ProductPage() {
 
   const handleEncomendaClick = (e) => {
     if (e && e.preventDefault) e.preventDefault();
-    navigate(`/contato?assunto=Encomendas%20Especiais%20%2F%20Produção&produto=${encodeURIComponent(productName)}&ref=${encodeURIComponent(productReferencia)}`);
+    try {
+      if (typeof window !== 'undefined' && window.dataLayer) {
+        window.dataLayer.push({
+          event: 'encomenda_fabrica_click',
+          productId: product?.id,
+          productName: productName,
+          reference: productReferencia,
+          color: activeColorName || '',
+          size: selectedSize || ''
+        });
+      }
+    } catch (_) {}
+
+    const detailParts = [productName];
+    if (selectedSize) detailParts.push(`Tam: ${selectedSize}`);
+    if (activeColorName) detailParts.push(`Cor: ${activeColorName}`);
+    const productDetail = detailParts.join(' - ');
+
+    navigate(`/contato?assunto=Encomendas%20Especiais%20%2F%20Produção&produto=${encodeURIComponent(productDetail)}&ref=${encodeURIComponent(productReferencia)}`);
   };
 
   const handleMouseMove = (e) => {
@@ -1444,11 +1516,16 @@ export default function ProductPage() {
               <div className="flex items-center justify-between mb-2">
                 <span className="text-sm font-bold text-gray-900 uppercase tracking-wider">Quantidade</span>
                 {!semVariacoes && activeVariation && (
-                  <span className={`text-xs font-semibold px-2 py-1 rounded-full ${activeVariation.estoque > 10 ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700 animate-pulse'
-                    }`}>
+                  <span className={`text-xs font-semibold px-2.5 py-1 rounded-full ${
+                    activeVariation.estoque > 10 
+                      ? 'bg-green-100 text-green-700' 
+                      : activeVariation.estoque > 0
+                        ? 'bg-red-100 text-red-700 animate-pulse'
+                        : 'bg-[#FAF7F2] text-[#8C6D3B] border border-[#c59b5f]/40 font-bold'
+                  }`}>
                     {activeVariation.estoque > 0
                       ? `${activeVariation.estoque} disponíveis`
-                      : 'Esgotado'}
+                      : '📦 Sob encomenda de fábrica'}
                   </span>
                 )}
               </div>
@@ -1476,20 +1553,33 @@ export default function ProductPage() {
                   </button>
                 </div>
 
-                <Button
-                  onClick={() => handleAddToCart()}
-                  disabled={semVariacoes || (activeVariation && activeVariation.estoque <= 0)}
-                  className={`flex-1 h-[52px] rounded-2xl text-xs font-bold tracking-wider uppercase transition-all duration-300 shadow-md active:scale-[0.98] 
-                  ${semVariacoes || (activeVariation && activeVariation.estoque <= 0)
-                      ? 'bg-gray-300 border-gray-300 text-gray-500 cursor-not-allowed'
-                      : isReseller
-                        ? 'bg-[#121212] hover:bg-black text-[#c59b5f] border border-[#c59b5f]/30 shadow-xl'
-                        : 'bg-[#121212] hover:bg-[#c59b5f] text-white hover:text-black border border-[#c59b5f]/30 hover:shadow-lg'
-                    }`}
-                >
-                  <ShoppingBag className="w-4 h-4 mr-2 hidden sm:block" />
-                  Adicionar
-                </Button>
+                {isOutOfStock ? (
+                  <Button
+                    type="button"
+                    onClick={handleEncomendaClick}
+                    aria-label="Encomendar de fábrica diretamente com a confecção"
+                    className="flex-1 h-[52px] rounded-2xl text-xs font-bold tracking-wider uppercase transition-all duration-300 shadow-md active:scale-[0.98] bg-gradient-to-r from-[#121212] via-[#241F18] to-[#121212] text-[#c59b5f] hover:from-[#c59b5f] hover:to-[#dfc193] hover:text-black border border-[#c59b5f]/40 hover:border-transparent cursor-pointer"
+                  >
+                    <span aria-hidden="true" className="mr-2 text-sm">📦</span>
+                    ENCOMENDAR DE FÁBRICA
+                  </Button>
+                ) : (
+                  <Button
+                    type="button"
+                    onClick={() => handleAddToCart()}
+                    disabled={semVariacoes}
+                    className={`flex-1 h-[52px] rounded-2xl text-xs font-bold tracking-wider uppercase transition-all duration-300 shadow-md active:scale-[0.98] 
+                    ${semVariacoes
+                        ? 'bg-gray-300 border-gray-300 text-gray-500 cursor-not-allowed'
+                        : isReseller
+                          ? 'bg-[#121212] hover:bg-black text-[#c59b5f] border border-[#c59b5f]/30 shadow-xl cursor-pointer'
+                          : 'bg-[#121212] hover:bg-[#c59b5f] text-white hover:text-black border border-[#c59b5f]/30 hover:shadow-lg cursor-pointer'
+                      }`}
+                  >
+                    <ShoppingBag className="w-4 h-4 mr-2 hidden sm:block" />
+                    Adicionar
+                  </Button>
+                )}
 
                 <button
                   onClick={handleToggleFavorite}
@@ -1503,18 +1593,27 @@ export default function ProductPage() {
                 </button>
               </div>
 
-              <Button
-                  onClick={() => handleBuy()}
-                  disabled={semVariacoes || (activeVariation && activeVariation.estoque <= 0)}
-                  className={`mt-2 h-[52px] rounded-2xl text-xs font-bold tracking-wider uppercase transition-all duration-300 shadow-md active:scale-[0.98] w-full 
-                  ${semVariacoes || (activeVariation && activeVariation.estoque <= 0)
-                      ? 'hidden'
-                      : 'bg-gradient-to-r from-[#c59b5f] to-[#a37c46] hover:from-[#a37c46] hover:to-[#c59b5f] text-black border-0 shadow-xl'
-                    }`}
-                >
-                  <Zap className="w-4 h-4 mr-2" />
-                  {isReseller ? 'FINALIZAR LOTE AGORA' : 'COMPRAR AGORA'}
-              </Button>
+              {isOutOfStock ? (
+                <div className="mt-2 p-3.5 bg-[#FAF7F2] border border-[#c59b5f]/30 rounded-2xl text-center">
+                  <p className="text-xs text-[#8C6D3B] font-medium flex items-center justify-center gap-2">
+                    <span aria-hidden="true" className="text-sm">🏭</span>
+                    <span>Peça produzida sob encomenda na fábrica. Despacho em <strong>5 a 7 dias úteis</strong>.</span>
+                  </p>
+                </div>
+              ) : (
+                <Button
+                    onClick={() => handleBuy()}
+                    disabled={semVariacoes}
+                    className={`mt-2 h-[52px] rounded-2xl text-xs font-bold tracking-wider uppercase transition-all duration-300 shadow-md active:scale-[0.98] w-full cursor-pointer
+                    ${semVariacoes
+                        ? 'hidden'
+                        : 'bg-gradient-to-r from-[#c59b5f] to-[#a37c46] hover:from-[#a37c46] hover:to-[#c59b5f] text-black border-0 shadow-xl'
+                      }`}
+                  >
+                    <Zap className="w-4 h-4 mr-2" />
+                    {isReseller ? 'FINALIZAR LOTE AGORA' : 'COMPRAR AGORA'}
+                </Button>
+              )}
             </div>
 
             {/* Simulador de Frete Inteligente */}
@@ -1837,22 +1936,35 @@ export default function ProductPage() {
                   </button>
                 </div>
 
-                <Button
-                  onClick={() => {
-                    handleAddToCart();
-                    // Opcional: feedback visual extra no mobile ou abrir mini-cart
-                  }}
-                  disabled={semVariacoes || (activeVariation && activeVariation.estoque <= 0)}
-                  className={`flex-1 h-[48px] rounded-xl text-xs font-bold tracking-wider uppercase shadow-md ${semVariacoes || (activeVariation && activeVariation.estoque <= 0)
-                    ? 'bg-gray-300 text-gray-500 border-0'
-                    : isReseller
-                      ? 'bg-gray-900 hover:bg-black text-white'
-                      : 'bg-[#c59b5f] hover:bg-[#a37c46] text-white'
-                    }`}
-                >
-                  <ShoppingBag className="w-4 h-4 mr-2" />
-                  ADICIONAR
-                </Button>
+                {isOutOfStock ? (
+                  <Button
+                    type="button"
+                    onClick={handleEncomendaClick}
+                    aria-label="Encomendar de fábrica diretamente com a confecção"
+                    className="flex-1 h-[48px] rounded-xl text-xs font-bold tracking-wider uppercase shadow-md bg-gradient-to-r from-[#121212] via-[#241F18] to-[#121212] text-[#c59b5f] border border-[#c59b5f]/40 hover:text-white cursor-pointer"
+                  >
+                    <span aria-hidden="true" className="mr-1.5 text-sm">📦</span>
+                    ENCOMENDAR DE FÁBRICA
+                  </Button>
+                ) : (
+                  <Button
+                    type="button"
+                    onClick={() => {
+                      handleAddToCart();
+                    }}
+                    disabled={semVariacoes}
+                    className={`flex-1 h-[48px] rounded-xl text-xs font-bold tracking-wider uppercase shadow-md cursor-pointer ${
+                      semVariacoes
+                        ? 'bg-gray-300 text-gray-500 border-0 cursor-not-allowed'
+                        : isReseller
+                          ? 'bg-gray-900 hover:bg-black text-white'
+                          : 'bg-[#c59b5f] hover:bg-[#a37c46] text-white'
+                      }`}
+                  >
+                    <ShoppingBag className="w-4 h-4 mr-2" />
+                    ADICIONAR
+                  </Button>
+                )}
               </div>
             </div>
           </motion.div>

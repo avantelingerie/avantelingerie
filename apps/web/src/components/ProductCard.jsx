@@ -54,7 +54,19 @@ export default function ProductCard({
     return Math.abs(hash);
   };
   const seed = hashStr(id);
-  const stock = data.estoque_restante || data.stock || ((seed % 14) + 2); // de 2 a 15
+
+  // Detecção robusta e sanitizada de estoque (Portão Nemotron)
+  const parseStockNumber = (val) => {
+    if (val === undefined || val === null || val === '') return null;
+    const num = Number(val);
+    return isNaN(num) ? null : num;
+  };
+  const parsedRawStock = parseStockNumber(data.stock ?? data.estoque ?? data.estoque_restante);
+  const isOutOfStock = parsedRawStock !== null && parsedRawStock <= 0;
+  const stock = !isOutOfStock 
+    ? (parsedRawStock !== null ? parsedRawStock : ((seed % 14) + 2))
+    : 0;
+
   // Quantidade de peças despachadas acima de 1.000 com variação natural e determinística por produto
   const soldCount = data.vendidos_semana || (1150 + ((seed * 37) % 1850)); // de 1.150 a 2.999
   const soldFormatted = Number(soldCount).toLocaleString('pt-BR');
@@ -336,6 +348,16 @@ export default function ProductCard({
   const handleEncomendaClick = (e) => {
     e.preventDefault();
     e.stopPropagation();
+    try {
+      if (typeof window !== 'undefined' && window.dataLayer) {
+        window.dataLayer.push({
+          event: 'encomenda_fabrica_click',
+          productId: id,
+          productName: name,
+          reference: reference
+        });
+      }
+    } catch (_) {}
     navigate(`/contato?assunto=Encomendas%20Especiais%20%2F%20Produção&produto=${encodeURIComponent(name)}&ref=${encodeURIComponent(reference)}`);
   };
 
@@ -552,19 +574,30 @@ export default function ProductCard({
           </button>
         </div>
 
-        {/* 9. Botão Único Principal de Ação (Retangular reto, sem cantos arredondados) */}
+        {/* 9. Botão Único Principal de Ação (Camaleão: Pronta Entrega vs Encomenda de Fábrica) */}
         <div className="mt-auto">
-          <button
-            onClick={handleBuyClick}
-            className={`w-full h-11 sm:h-12 rounded-none font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 transition-all duration-300 shadow-sm active:scale-[0.98] cursor-pointer ${
-              isReseller
-                ? 'bg-gradient-to-r from-[#121212] via-[#241F18] to-[#121212] text-white hover:from-[#C59B5F] hover:to-[#DFC193] hover:text-black border border-[#C59B5F]/35'
-                : 'bg-[#121212] text-white hover:bg-[#C59B5F] hover:text-black hover:shadow-[0_4px_16px_rgba(197,155,95,0.25)]'
-            }`}
-          >
-            <ShoppingCart size={15} />
-            {isReseller ? 'ADICIONAR AO PEDIDO' : 'ADICIONAR À SACOLA'}
-          </button>
+          {isOutOfStock ? (
+            <button
+              onClick={handleEncomendaClick}
+              aria-label="Encomendar de fábrica diretamente com a confecção"
+              className="w-full h-11 sm:h-12 rounded-none font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 transition-all duration-300 shadow-sm active:scale-[0.98] cursor-pointer bg-gradient-to-r from-[#121212] via-[#241F18] to-[#121212] text-[#c59b5f] border border-[#c59b5f]/50 hover:from-[#c59b5f] hover:to-[#dfc193] hover:text-black hover:border-transparent"
+            >
+              <span aria-hidden="true" className="text-sm">📦</span>
+              ENCOMENDAR DE FÁBRICA
+            </button>
+          ) : (
+            <button
+              onClick={handleBuyClick}
+              className={`w-full h-11 sm:h-12 rounded-none font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 transition-all duration-300 shadow-sm active:scale-[0.98] cursor-pointer ${
+                isReseller
+                  ? 'bg-gradient-to-r from-[#121212] via-[#241F18] to-[#121212] text-white hover:from-[#C59B5F] hover:to-[#DFC193] hover:text-black border border-[#C59B5F]/35'
+                  : 'bg-[#121212] text-white hover:bg-[#C59B5F] hover:text-black hover:shadow-[0_4px_16px_rgba(197,155,95,0.25)]'
+              }`}
+            >
+              <ShoppingCart size={15} />
+              {isReseller ? 'ADICIONAR AO PEDIDO' : 'ADICIONAR À SACOLA'}
+            </button>
+          )}
         </div>
       </div>
     </div>

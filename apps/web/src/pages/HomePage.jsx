@@ -21,6 +21,7 @@ import { useNavigate } from 'react-router-dom';
 import FactoryMarquee from '@/components/FactoryMarquee.jsx';
 import FactorySection from '@/components/FactorySection.jsx';
 import HomeBeneficiosSection from '@/components/HomeBeneficiosSection.jsx';
+import FitnessLaunchBanner from '@/components/FitnessLaunchBanner.jsx';
 
 // Helper para o vídeo rotacionando a cada 3 horas
 const getHeroVideoForToday = () => {
@@ -393,6 +394,11 @@ export default function HomePage() {
           </div>
         </section>
       )}
+
+      {/* ==========================================
+          SECTION 4.5: BANNER DE LANÇAMENTO FITNESS (PRE-ORDER / PRÉ-VENDA DIRETO DA FÁBRICA)
+          ========================================== */}
+      <FitnessLaunchBanner />
 
       {/* ==========================================
           SECTION 5: RESELLERS & TESTIMONIALS SECTIONS
