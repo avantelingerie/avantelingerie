@@ -1531,3 +1531,20 @@ Planejamento comercial e técnico estruturado pela Ada e Vértice para alavancar
   - ESLint (`npm run lint`): 100% aprovado (0 erros, 0 avisos).
   - Build de Produção (`vite build`): 100% aprovado (`built in 18.99s`, 3113 módulos).
 
+---
+
+## 7. Rotina de Fechamento do Dia & Ponto de Parada (26/10/2026)
+- **Status do Repositório:** 100% limpo, branch `main` sincronizada com `origin/main` (Commits: `b435279`, `b82c26b`, `d80f4a5`, `85f5d23`).
+- **Deploy na VPS:** GitHub Actions Workflows #116, #117 e #118 disparados e processados.
+- **Conquistas Consolidadas Hoje:**
+  1. Rodapé institucional atualizado com selos vetoriais oficiais de Mercado Pago e Stripe e trava de segurança PIX 5%.
+  2. Dossiê comercial e regras oficiais de pagamento integradas (PIX 5%, Boleto a partir de R$ 59,90 com 0% desconto, Mercado Crédito com trava de R$ 29,90, Cartão em até 6x com parcela mínima de R$ 9,90).
+  3. Atualização das tabelas de desconto progressivo no PocketBase (Varejo de R$ 20 a R$ 69,90; Atacado de R$ 70 a R$ 300+).
+  4. Modal Champagne Gold de upgrade condicionado para revenda em R$ 69,90.
+  5. Refinamento dos Cards com markup de boutique (+70% de margem no atacado) e parcelamento seguro ("No cartão em até 6x").
+  6. Blindagem de Frete: Retirada no Local restrita estritamente a Nova Friburgo/RJ (faixa 28600-000 a 28636-999).
+- **Ponto de Parada para Amanhã:**
+  - Realizar validação visual em produção no site online (`avantelingerie.com.br`) do carrinho com CEPs de fora (ex: RJ 21921-110) e de Friburgo.
+  - Verificar se há novas demandas comerciais, produtos ou ajustes na Lia/WhatsApp.
+
+
