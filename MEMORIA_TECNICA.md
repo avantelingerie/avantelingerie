@@ -1533,18 +1533,40 @@ Planejamento comercial e técnico estruturado pela Ada e Vértice para alavancar
 
 ---
 
-## 7. Rotina de Fechamento do Dia & Ponto de Parada (26/10/2026)
-- **Status do Repositório:** 100% limpo, branch `main` sincronizada com `origin/main` (Commits: `b435279`, `b82c26b`, `d80f4a5`, `85f5d23`).
-- **Deploy na VPS:** GitHub Actions Workflows #116, #117 e #118 disparados e processados.
-- **Conquistas Consolidadas Hoje:**
-  1. Rodapé institucional atualizado com selos vetoriais oficiais de Mercado Pago e Stripe e trava de segurança PIX 5%.
-  2. Dossiê comercial e regras oficiais de pagamento integradas (PIX 5%, Boleto a partir de R$ 59,90 com 0% desconto, Mercado Crédito com trava de R$ 29,90, Cartão em até 6x com parcela mínima de R$ 9,90).
-  3. Atualização das tabelas de desconto progressivo no PocketBase (Varejo de R$ 20 a R$ 69,90; Atacado de R$ 70 a R$ 300+).
-  4. Modal Champagne Gold de upgrade condicionado para revenda em R$ 69,90.
-  5. Refinamento dos Cards com markup de boutique (+70% de margem no atacado) e parcelamento seguro ("No cartão em até 6x").
-  6. Blindagem de Frete: Retirada no Local restrita estritamente a Nova Friburgo/RJ (faixa 28600-000 a 28636-999).
-- **Ponto de Parada para Amanhã:**
-  - Realizar validação visual em produção no site online (`avantelingerie.com.br`) do carrinho com CEPs de fora (ex: RJ 21921-110) e de Friburgo.
-  - Verificar se há novas demandas comerciais, produtos ou ajustes na Lia/WhatsApp.
+### Sessão - 27/10/2026 (Botão Camaleão para Encomendas, Arquitetura de Coleções Fitness & Faturamento Google Ads)
+- **1. Inteligência Comercial do Botão Camaleão (Pronta-Entrega vs. Encomenda de Fábrica):**
+  - **Problema de Negócio:** Produtos esgotados exibiam botões inativos e cinzas ("Esgotado"), causando abandono de tráfego e perda de potenciais encomendas sob medida para o polo fabril de Nova Friburgo.
+  - **Solução Implementada:**
+    - `ProductCard.jsx` e `ProductPage.jsx`: Criada a função de sanitização de estoque `parseStockNumber`.
+    - Quando `estoque > 0`: o botão opera normalmente como `ADICIONAR À SACOLA` (varejo) ou `ADICIONAR AO PEDIDO` (revendedoras B2B), permitindo checkout imediato.
+    - Quando `estoque <= 0`: o botão se metamorfoseia reativamente em `📦 ENCOMENDAR DE FÁBRICA`. Ao clicar, direciona o cliente para `/contato` com formulário pré-preenchido contendo o nome da peça, cor, tamanho e referência para Nova Friburgo.
+    - Conectada subscrição em tempo real ao PocketBase: se o lojista alterar o estoque no admin, o botão altera seu comportamento no storefront sem necessidade de recarregar a página.
+- **2. Arquitetura de Lançamento Fitness & Coleções Nativas da Loja:**
+  - Inicialmente planejado e prototipado um banner avulso na Home.
+  - Após análise estratégica com o lojista, optou-se pela **arquitetura nativa de Coleções** da Avante Lingerie:
+    - Seção editorial `Explore Nossas Coleções` em `HomePage.jsx` com cards de luxo (`CollectionCard.jsx`).
+    - Filtro nativo automático em `CategoryPage.jsx` via slug `/categoria/fitness` conectando o campo `colecoes_ids` no PocketBase.
+    - Gestão completa pelo Painel Admin em `/admin/colecoes` (`ColecoesManager.jsx`).
+  - O banner avulso e seus imports foram excluídos de forma limpa (Commit `0a7d1ee`), deixando a Home leve e veloz.
+  - Deploy em produção processado com sucesso na VPS (GitHub Actions Run #122).
+- **3. Direção de Arte da Coleção Fitness:**
+  - Analisada e dimensionada a arte da Linha Fitness com 3 modelos em cenário florestal de Nova Friburgo.
+  - Proporção validada em **3:4** (exatamente a proporção utilizada nos cards `aspect-[3/4]` e `aspect-[4/5]` da vitrine).
+  - Escalas recomendadas para exportação: `1080 x 1440 px` (Full HD / Retina) para visualização ultra nítida em mobile e desktop.
+- **4. Faturamento Google Ads & Validação de Cartão Corporativo PJ:**
+  - Mapeado o faturamento da conta de anúncios: modalidade **Pós-pagamento** ativa com o cartão `Mastercard •••• 6317`.
+  - Esclarecidos os avisos visuais do Google Ads (tarja vermelha de campanhas pausadas de propósito para proteger o orçamento e aviso amarelo de método alternativo opcional).
+  - Identificada a causa do código de 6 dígitos da cobrança teste de R$ 3,00 do cartão **ELO •••• 1285 (Bradesco PJ)** não aparecer no extrato comum (truncamento do soft descriptor pelo limite de caracteres do Bradesco). Mapeados os 3 caminhos de recuperação: SMS do titular, tela expandida de detalhes da compra no app Bradesco Cartões ou ligação de 2 minutos para a Central Elo PJ no verso do cartão.
+
+---
+
+## 8. Rotina de Fechamento do Dia & Ponto de Parada (27/10/2026)
+- **Status do Repositório:** 100% limpo, branch `main` sincronizada com `origin/main` (Commits: `367f13e`, `48b88cc`, `0a7d1ee`).
+- **Deploy na VPS:** GitHub Actions Workflows #121 e #122 processados e finalizados com sucesso na VPS da Hostinger.
+- **Ponto de Parada para Amanhã (28/10/2026):**
+  1. *Google Ads:* Inserir o código de validação de 6 dígitos do cartão ELO 1285 (obtido via SMS do Bradesco ou ligação para a Central) e defini-lo como o cartão principal da conta PJ.
+  2. *Coleção Fitness:* Cadastrar a coleção "Linha Fitness" no Painel Admin (`/admin/colecoes`) com a foto de capa e vincular os produtos/modelos fitness cadastrados.
+  3. *Revisão Final:* Conferir a ativação das campanhas de tráfego de fim de ano quando o lojista der o sinal verde.
+
 
 
