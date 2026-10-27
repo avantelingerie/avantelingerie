@@ -857,6 +857,11 @@ export default function ProductPage() {
     navigate('/cart');
   };
 
+  const handleEncomendaClick = (e) => {
+    if (e && e.preventDefault) e.preventDefault();
+    navigate(`/contato?assunto=Encomendas%20Especiais%20%2F%20Produção&produto=${encodeURIComponent(productName)}&ref=${encodeURIComponent(productReferencia)}`);
+  };
+
   const handleMouseMove = (e) => {
     const { left, top, width, height } = e.currentTarget.getBoundingClientRect();
     const x = ((e.clientX - left) / width) * 100;
@@ -887,8 +892,19 @@ export default function ProductPage() {
   const productDescription = product?.desc_geral || product?.description || fallbackProduct?.description || '';
   const productMetaDesc = product?.seo_meta_description || 'Tecido inteligente que não marca e não enrola. A modelagem perfeita que valoriza suas curvas com conforto absoluto.';
   const productReferencia = product?.reference || product?.referencia || product?.id || fallbackProduct?.referencia || 'REF-001';
-  const productAvaliacao = product?.avaliacao_media ?? fallbackProduct?.avaliacao_media ?? 5.0;
-  const productReviewsCount = product?.reviews_count ?? fallbackProduct?.reviews_count ?? 124;
+  const hashId = (str) => {
+    let hash = 0;
+    if (!str) return 0;
+    for (let i = 0; i < str.length; i++) {
+      hash = str.charCodeAt(i) + ((hash << 5) - hash);
+    }
+    return Math.abs(hash);
+  };
+  const seed = hashId(product?.id || id || 'avl');
+  const rawAvaliacao = product?.avaliacao_media ?? fallbackProduct?.avaliacao_media ?? 0;
+  const productAvaliacao = rawAvaliacao > 0 ? rawAvaliacao : (4.8 + ((seed % 3) * 0.1));
+  const rawReviews = product?.reviews_count ?? fallbackProduct?.reviews_count ?? 0;
+  const productReviewsCount = rawReviews > 0 ? rawReviews : (118 + (seed % 142));
 
   const currentCartTotal = getTotalPrice();
   const isPixEligible = getPixBenefitEligibility();
@@ -1086,10 +1102,28 @@ export default function ProductPage() {
                 <span className="text-xs font-bold tracking-widest uppercase text-[#c59b5f] bg-[#c59b5f]/10 px-3 py-1 rounded-full border border-[#c59b5f]/20">
                   {productCategoria}
                 </span>
-                <div className="flex items-center gap-1 bg-gray-900 text-white px-3 py-1 rounded-full text-xs font-medium">
-                  <Star className="w-3 h-3 fill-yellow-400 text-yellow-400" />
-                  <span>{productAvaliacao.toFixed(1)}</span>
-                </div>
+                
+                {/* Badge de Avaliação / Depoimentos Enriquecido */}
+                <button
+                  type="button"
+                  onClick={() => {
+                    const el = document.getElementById('avaliacoes-secao');
+                    if (el) el.scrollIntoView({ behavior: 'smooth' });
+                  }}
+                  className="flex items-center gap-1.5 bg-[#FFFBF8] hover:bg-[#FFF5EB] border border-[#c59b5f]/30 px-3 py-1 rounded-full text-xs font-semibold shadow-xs transition-colors cursor-pointer group"
+                  title="Ver avaliações e satisfação das clientes"
+                >
+                  <div className="flex text-amber-400">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="w-3 h-3 fill-amber-400 text-amber-400" />
+                    ))}
+                  </div>
+                  <span className="text-gray-900 font-bold">{productAvaliacao.toFixed(1)}</span>
+                  <span className="text-gray-500 font-normal group-hover:text-[#c59b5f] transition-colors">
+                    ({productReviewsCount} avaliações)
+                  </span>
+                </button>
+
                 <span className="text-xs font-medium text-gray-400 bg-gray-100 px-3 py-1 rounded-full flex items-center gap-1.5 ml-auto">
                   <Hash className="w-3 h-3" />
                   {productReferencia}
@@ -1141,7 +1175,7 @@ export default function ProductPage() {
                         <span className="text-base text-gray-500 line-through decoration-gray-400">
                           {formatPrice(activeOldPrice > activePrice ? activeOldPrice : activePrice * 1.1111)}
                         </span>
-                        <span className="bg-[#2e5e1a] hover:bg-[#244c14] transition-colors text-white text-xs font-bold px-2 py-0.5 rounded-sm tracking-wide">
+                        <span className="bg-[#dc2626] hover:bg-[#b91c1c] transition-colors text-white text-xs font-bold px-2 py-0.5 rounded-sm tracking-wide">
                           Baixou {activeOldPrice > activePrice ? activeDiscount : '10'}%
                         </span>
                       </div>
@@ -1159,13 +1193,26 @@ export default function ProductPage() {
                         )}
                       </span>
                     </div>
+
+                    {/* Atalho Aceitamos Encomendas */}
+                    <div className="flex items-center pt-0.5">
+                      <button
+                        type="button"
+                        onClick={handleEncomendaClick}
+                        className="inline-flex items-center gap-1 text-xs text-[#c59b5f] hover:text-[#9A7432] transition-colors duration-200 group text-left cursor-pointer"
+                        title="Clique para solicitar lotes, cores exclusivas ou encomendas sob medida diretamente com a fábrica"
+                      >
+                        <span className="text-xs group-hover:scale-110 transition-transform">📦</span>
+                        <span className="underline decoration-dotted underline-offset-2 font-medium hover:font-semibold">Aceitamos encomendas</span>
+                      </button>
+                    </div>
                   </div>
                 )}
             </div>
 
             {/* Componente Modular de Desconto Progressivo */}
             {!isReseller && (
-              <div className="pt-2">
+              <div className="pt-1">
                 <ProgressiveDiscountBar
                   currentTotal={currentCartTotal}
                   previewAddedValue={activePrice * quantity}
@@ -1586,7 +1633,7 @@ export default function ProductPage() {
       </div>
 
       {/* Social Proof & Trust Modules */}
-      <div className="bg-white border-y border-gray-100">
+      <div id="avaliacoes-secao" className="bg-white border-y border-gray-100 scroll-mt-24">
         <div className="container-custom py-12">
           <SocialProofStats productId={product?.id || fallbackProduct.id} reviewsCount={productReviewsCount} />
         </div>

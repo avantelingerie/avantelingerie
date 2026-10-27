@@ -370,35 +370,27 @@ export default function Footer() {
           {/* Gateways & Payment Brands (Premium) */}
           <div className="flex flex-col sm:flex-row items-center gap-6 shrink-0">
             {/* Gateways Badge (Mercado Pago & Stripe) */}
-            <div className="flex items-center gap-3.5 bg-white/[0.03] border border-white/10 rounded-xl px-3.5 py-2 hover:border-[#c59b5f]/30 transition-all duration-300 shadow-sm">
-              <div className="flex items-center gap-2">
-                {/* Official Mercado Pago Logo Vector Badge */}
-                <div className="w-7 h-7 rounded-full bg-[#009EE3] flex items-center justify-center p-1 shrink-0 shadow-sm" title="Mercado Pago">
-                  <svg className="w-4.5 h-4.5 text-white" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M40.9763,30.6458a5.2763,5.2763,0,0,1-2.1726-2.0337,54.6611,54.6611,0,0,1-8.7476,1.0169c-3.701,0-6.6869-.1757-5.4673-3.6243s4.4579-10.5561,5.5934-11.986,2.6859-3.239,3.4486-3.1542c.9463.1051,2.7152,1.2834,2.5166,2.0333-.1892.715-1.1287,2.2774-2.7471,1.1649" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
-                    <path d="M32.8639,14.8392a8.1339,8.1339,0,0,1,1.2926-1.6406" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
-                    <path d="M35.9393,13.4064c.5677-.1443,1.64.5818,1.035,1.3272a4.7779,4.7779,0,0,1-2.8178,1.3248c-.6248.0556-2.7967-.021-2.7967-.021-.9252,1.5981-.7149,4.0374-.7991,6.1822a9.3461,9.3461,0,0,1-.8831,3.6589c3.7009-1.7243,10.0093-3.028,13.8224-2.3972" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
-                    <path d="M7.0237,30.6458a5.2763,5.2763,0,0,0,2.1726-2.0337,54.6611,54.6611,0,0,0,8.7476,1.0169c3.701,0,6.6869-.1757,5.4673-3.6243s-4.4579-10.5561-5.5934-11.986-2.6859-3.239-3.4486-3.1542c-.9463.1051-2.7152,1.2834-2.5166,2.0333.1892.715-1.1287,2.2774-2.7471,1.1649" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
-                    <path d="M15.1361,14.8392a8.1339,8.1339,0,0,0-1.2926-1.6406" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
-                    <path d="M12.0607,13.4064c-.5677-.1443-1.6405.5818-1.035,1.3272a4.7779,4.7779,0,0,0,2.8178,1.3248c.6248.0556-2.7967-.021-2.7967-.021-.9252,1.5981.7149,4.0374.7991,6.1822a9.3461,9.3461,0,0,0,.8831,3.6589C14.6215,24.1542,8.3131,22.8505,4.5,23.4813" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
-                    <path d="M32.1812,11.742a27.5655,27.5655,0,0,0-16.3641.0006" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
-                    <path d="M10.9168,13.9894C6.9758,16.46,4.5,20.03,4.5,24c0,7.4558,8.73,13.5,19.5,13.5S43.5,31.4558,43.5,24c0-3.9705-2.4759-7.5407-6.4172-10.0109" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                </div>
+            <div className="flex items-center gap-3 bg-white/[0.03] border border-white/10 rounded-xl px-3.5 py-2 hover:border-[#c59b5f]/30 transition-all duration-300 shadow-sm">
+              <div className="flex items-center gap-2.5">
+                {/* Official Mercado Pago Logo */}
+                <img 
+                  src="/icons/mercadopago.png" 
+                  alt="Mercado Pago" 
+                  className="h-6 sm:h-[26px] w-auto object-contain select-none" 
+                  title="Mercado Pago"
+                  loading="lazy"
+                />
                 {/* Official Stripe Wordmark Badge */}
-                <div className="h-7 px-2 rounded-md bg-[#635BFF] flex items-center justify-center shrink-0 shadow-sm" title="Stripe">
-                  <svg className="w-10 h-3.5 text-white" viewBox="54 36 360 150" fill="currentColor">
-                    <path d="M414,113.4c0-25.6-12.4-45.8-36.1-45.8c-23.8,0-38.2,20.2-38.2,45.6c0,30.1,17,45.3,41.4,45.3c11.9,0,20.9-2.7,27.7-6.5v-20c-6.8,3.4-14.6,5.5-24.5,5.5c-9.7,0-18.3-3.4-19.4-15.2h48.9C413.8,121,414,115.8,414,113.4z M364.6,103.9c0-11.3,6.9-16,13.2-16c6.1,0,12.6,4.7,12.6,16H364.6z" />
-                    <path d="M301.1,67.6c-9.8,0-16.1,4.6-19.6,7.8l-1.3-6.2h-22v116.6l25-5.3l0.1-28.3c3.6,2.6,8.9,6.3,17.7,6.3c17.9,0,34.2-14.4,34.2-46.1C335.1,83.4,318.6,67.6,301.1,67.6z M295.1,136.5c-5.9,0-9.4-2.1-11.8-4.7l-0.1-37.1c2.6-2.9,6.2-4.9,11.9-4.9c9.1,0,15.4,10.2,15.4,23.3C310.5,126.5,304.3,136.5,295.1,136.5z" />
-                    <polygon points="223.8,61.7 248.9,56.3 248.9,36 223.8,41.3" />
-                    <rect x="223.8" y="69.3" width="25.1" height="87.5" />
-                    <path d="M196.9,76.7l-1.6-7.4h-21.6v87.5h25V97.5c5.9-7.7,15.9-6.3,19-5.2v-23C214.5,68.1,202.8,65.9,196.9,76.7z" />
-                    <path d="M146.9,47.6l-24.4,5.2l-0.1,80.1c0,14.8,11.1,25.7,25.9,25.7c8.2,0,14.2-1.5,17.5-3.3V135c-3.2,1.3-19,5.9-19-8.9V90.6h19V69.3h-19L146.9,47.6z" />
-                    <path d="M79.3,94.7c0-3.9,3.2-5.4,8.5-5.4c7.6,0,17.2,2.3,24.8,6.4V72.2c-8.3-3.3-16.5-4.6-24.8-4.6C67.5,67.6,54,78.2,54,95.9c0,27.6,38,23.2,38,35.1c0,4.6-4,6.1-9.6,6.1c-8.3,0-18.9-3.4-27.3-8v23.8c9.3,4,18.7,5.7,27.3,5.7c20.8,0,35.1-10.3,35.1-28.2C117.4,100.6,79.3,105.9,79.3,94.7z" />
-                  </svg>
-                </div>
+                <img 
+                  src="/icons/stripe.png" 
+                  alt="Stripe" 
+                  className="h-6 sm:h-[26px] w-auto object-contain rounded select-none shadow-sm" 
+                  title="Stripe"
+                  loading="lazy"
+                />
               </div>
-              <div className="text-[11px] text-gray-400 font-light flex flex-col leading-tight pl-1">
+              <div className="h-6 w-px bg-white/10"></div>
+              <div className="text-[11px] text-gray-400 font-light flex flex-col leading-tight">
                 <span className="text-white font-bold tracking-tight text-xs">Mercado Pago & Stripe</span>
                 <span className="text-gray-400 flex items-center gap-1 text-[10px]">
                   <Lock className="w-2.5 h-2.5 text-emerald-400 shrink-0" /> Infraestrutura Criptografada
