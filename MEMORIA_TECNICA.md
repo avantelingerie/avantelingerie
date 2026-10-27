@@ -1463,14 +1463,44 @@ Planejamento comercial e técnico estruturado pela Ada e Vértice para alavancar
   - ESLint (`npm run lint`): 100% aprovado, 0 erros e 0 avisos.
   - Build de Produção (`npm run build`): 100% aprovado (`built in 27.52s`, 3113 módulos transformados).
 
-### Sessão - 26/10/2026 (Consolidação das 6 Regras Oficiais de Pagamentos e Descontos)
-- **Definição e Implementação das 6 Regras de Ouro:**
-  1. **Descontos Progressivos (Varejo B2C):** Faixa 1 (R$ 20,00 a R$ 24,00 -> 1.67%), Faixa 2 (R$ 24,01 a R$ 40,00 -> 3.33%), Faixa 3 (R$ 40,01 a R$ 60,00 -> 5.00%). A partir de R$ 69,90 ativação do Atacado B2B.
-  2. **Boleto Bancário Tradicional:** Compra mínima de R$ 59,90. ZERO desconto aplicado no checkout (margem protegida da taxa fixa de R$ 3,49).
-  3. **Cartão de Crédito 1x:** Recebimento único integral em 14 a 30 dias. Ativo para qualquer valor. Aplica o desconto progressivo da barra.
-  4. **Cartão de Crédito Parcelado:** Recebimento único integral de todas as parcelas em 14 a 30 dias. Juros do parcelamento repassados ao comprador. Parcela mínima de R$ 9,90. Aplica o desconto progressivo da barra.
-  5. **Mercado Crédito (Boleto Parcelado sem Cartão):** Trava de segurança configurada no backend (`mercadoPagoService.js`). Só é permitido para compras a partir de R$ 29,90 (abaixo de R$ 29,90 `consumer_credits` é excluído na API do Mercado Pago).
-  6. **PIX:** Sem valor mínimo. Sempre 5% OFF à vista. Regra estrita anti-acúmulo mantida (`paymentMethod === 'pix'` concede 5% e não soma com descontos da barra).
-- **Validação de Código e Execução:**
-  - Script de teste unitário (`scratch/test_checkout_rules.mjs`): 100% dos testes passaram com assert.
-  - ESLint e Build de produção: 100% aprovados.
+### Sessão - 26/10/2026 (Dossiê Mestre: Arquitetura Comercial, 6 Regras de Pagamento, Atacado e Gateway)
+- **1. Página do Produto (`ProductPage.jsx`):**
+  - **Bloco Informativo do PIX (`PixInfoBlock.jsx`):** Correção da recepção de props (`eligible` / `isEligible`) para exibir com destaque o selo verde esmeralda de 5% OFF no PIX à vista.
+  - **Adequação do Parcelamento:** Menções atualizadas para "Em até 6x no cartão", respeitando a parcela mínima de R$ 9,90 e a modalidade *parcelado comprador*.
+  - **Incentivo de Upgrade:** Cálculo dinâmico para clientes de varejo informando quanto falta para atingir a compra direta de fábrica (R$ 69,90).
+- **2. Carrinho de Compras (`CartPage.jsx`):**
+  - **Barra de Gamificação Progressiva (`ProgressiveDiscountBar.jsx`):** Conexão dinâmica com as tabelas de Varejo B2C e Atacado B2B do PocketBase (`configuracoes_estoque`), calculando os marcos centavo a centavo.
+  - **Modal Champagne Gold de Upgrade para Atacado B2B:**
+    - Ativação condicionada ao marco de **R$ 69,90**.
+    - **Livre Escolha da Cliente:** Opção A (*«Ativar Cadastro Revenda & Recalcular»* - recalcula carrinho a preço de fábrica) e Opção B (*«Não quero desconto de fábrica, continuar no varejo»* - avança para checkout normal de varejo com o desconto conquistado).
+- **3. Checkout e Regras de Negócio (`Checkout.jsx` e `useCheckoutLogic.js`):**
+  - **PIX:** 5% OFF à vista, sem valor mínimo de pedido.
+  - **Boleto Bancário Tradicional:** Compra mínima travada em R$ 59,90 (oculto para carrinhos menores). ZERO desconto progressivo concedido (protegendo a fábrica da taxa fixa de R$ 3,49 do Mercado Pago). Aviso detalhado de compensação bancária (1 a 3 dias úteis).
+  - **Cartão de Crédito 1x:** Aberto para qualquer valor. Concede o desconto progressivo da barra. Recebimento integral em 14 a 30 dias.
+  - **Cartão de Crédito Parcelado (até 6x):** Parcela mínima de R$ 9,90. Juros por conta da compradora (*parcelado comprador*). Concede o desconto progressivo da barra. Recebimento integral de todas as parcelas adiantadas em 14 a 30 dias.
+  - **Mercado Crédito (Boleto Parcelado sem Cartão):** Trava de ativação em R$ 29,90. Recebimento total à vista com inadimplência assumida 100% pelo Mercado Pago.
+  - **Regra Estrita Anti-Acúmulo:** O sistema isola os benefícios: ou a cliente ganha 5% no PIX ou ganha o desconto progressivo no Cartão. Nunca cumulativos.
+  - **Aviso Institucional:** Mensagem de segurança no rodapé do checkout atualizada informando a aceitação de Cartões, PIX, Boleto (a partir de R$ 59,90) e Mercado Crédito (a partir de R$ 29,90).
+- **4. Backend e API do Mercado Pago (`apps/api/src/services/mercadoPagoService.js`):**
+  - Configuração dinâmica de `excluded_payment_types` na criação da preferência:
+    - `{ id: 'consumer_credits' }` excluído se total do pedido < R$ 29,90.
+    - `{ id: 'ticket' }` excluído se total do pedido < R$ 59,90.
+    - Isolamento de métodos quando o cliente seleciona explicitamente PIX ou Boleto na loja.
+- **5. Rodapé Institucional (`Footer.jsx`):**
+  - Selo de autoridade reformulado com emblema circular oficial do **Mercado Pago** em `#009EE3` com o aperto de mãos vetorial estilizado em branco puro, badge da **Stripe** em `#635BFF` com o wordmark vetorial autêntico, texto `Mercado Pago & Stripe` e `Infraestrutura Criptografada` acompanhado de ícone vetorial de cadeado verde esmeralda (`Lock`).
+  - Grade completa de bandeiras: VISA, Mastercard, Elo, AMEX, Stripe Link, Mercado Crédito, Boleto e PIX.
+- **6. Configurações Ativas no PocketBase (`configuracoes_estoque`):**
+  - **Gatilho de Upgrade Automático:** `limite_upgrade_revenda: 69.90`.
+  - **Tabela Varejo (B2C):**
+    - Faixa 1: R$ 20,00 a R$ 24,00 ➔ 1,67% OFF
+    - Faixa 2: R$ 24,01 a R$ 40,00 ➔ 3,33% OFF
+    - Faixa 3: R$ 40,01 a R$ 69,90 ➔ 5,00% OFF
+  - **Tabela Atacado (B2B):**
+    - Faixa 1: R$ 70,00 a R$ 149,99 ➔ Preço de Fábrica + 1,67% OFF Extra
+    - Faixa 2: R$ 150,00 a R$ 299,99 ➔ Preço de Fábrica + 3,33% OFF Extra
+    - Faixa 3: A partir de R$ 300,00 ➔ Preço de Fábrica + 5,00% OFF Extra (Teto)
+- **7. Validações e Auditoria de Qualidade (Sentinel):**
+  - Testes unitários automatizados (`scratch/test_checkout_rules.mjs`): 100% aprovados.
+  - ESLint (`npm run lint`): 0 erros e 0 avisos.
+  - Build de Produção (`vite build`): 100% aprovado (`built in 27.55s`, 3113 módulos).
+  - Deploy em Produção: Workflow Run #116 no GitHub Actions (Commit `b435279`).
