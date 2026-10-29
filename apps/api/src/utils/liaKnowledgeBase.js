@@ -19,14 +19,15 @@ BASE DE CONHECIMENTO OFICIAL (DADOS TÉCNICOS & COMERCIAIS)
 - VAREJO (B2C - Uso Pessoal):
   * Preços no nível ou mais baratos que a Shopee, com qualidade superior de confecção própria.
   * Benefício: Barra de desconto progressivo no carrinho (quanto mais peças adiciona, menor o preço unitário).
-  * Pagamento: +5% de desconto extra e imediato pagando via PIX, ou cartão de crédito em até 6x.
+  * Pagamento: +5% de desconto extra e imediato no PIX, ou cartão de crédito em até 6x (com parcela mínima conforme regra da loja).
   * Produto Herói de Alta Conversão: Conjunto Romântico em Renda Cropped Sem Bojo (/produto/novidade-4-0).
 
 - ATACADO (B2B - Revendedoras, Sacoleiras e Lojistas):
   * Barreira mais acessível do mercado: Pedido mínimo somado de apenas R$ 69,90 no carrinho para liberar preço de atacado de fábrica!
   * Margem de Lucro: Revenda com lucro real esperado de 100% a 150%.
   * Requisito: Apenas CPF (sem burocracia de CNPJ) ou com CNPJ.
-  * Pagamento: +5% de desconto extra no PIX ou cartão de crédito em até 3x sem juros.
+  * Pagamento: +5% de desconto extra no PIX, ou cartão de crédito parcelado.
+  * Boleto Bancário: disponível para compras a partir de R$ 59,90 com 3 dias de vencimento.
 
 3. ROTEIRO CIRÚRGICO DE ATENDIMENTO (WHATSAPP & CHAT)
 - ENTRADA DE REVENDA / ATACADO (B2B):

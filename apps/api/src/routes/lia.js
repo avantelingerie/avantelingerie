@@ -75,17 +75,92 @@ async function getLiaProducts() {
   } catch (err) { return ''; }
 }
 
-// Helper para buscar as configurações globais de descontos e atacado
-async function getLiaConfiguracoes() {
+// Helper para buscar as configurações comerciais dinâmicas da loja (estoque, atacado, réguas, integrações)
+async function getLiaCommercialContext() {
   try {
-    const records = await pb.collection('configuracoes_estoque').getFullList({ $autoCancel: false });
-    if (records.length > 0) {
-      return records[0];
+    const configRecords = await pb.collection('configuracoes_estoque').getFullList({ $autoCancel: false });
+    const config = configRecords[0] || {};
+    
+    let integracoesRecords = [];
+    try {
+      integracoesRecords = await pb.collection('integracoes_config').getFullList({ $autoCancel: false });
+    } catch (e) {}
+
+    const mpMaxRecord = integracoesRecords.find(r => r.chave_nome === 'mp_parcelas_max');
+    const mpMinRecord = integracoesRecords.find(r => r.chave_nome === 'mp_parcela_minima');
+    const boletoAtivoRecord = integracoesRecords.find(r => r.chave_nome === 'boleto_ativo');
+    const boletoMinRecord = integracoesRecords.find(r => r.chave_nome === 'boleto_valor_minimo');
+    const boletoDiasRecord = integracoesRecords.find(r => r.chave_nome === 'boleto_vencimento_dias');
+
+    const limiteAtacado = Number(config.limite_upgrade_revenda || 69.90).toFixed(2).replace('.', ',');
+    const pixPct = config.desconto_pix_pct || 5;
+    const mpMaxParcelas = mpMaxRecord?.chave_valor || '6';
+    const mpParcelaMinima = Number(mpMinRecord?.chave_valor || 9.90).toFixed(2).replace('.', ',');
+    const boletoAtivo = boletoAtivoRecord ? (boletoAtivoRecord.chave_valor === 'true') : true;
+    const boletoMinimo = Number(boletoMinRecord?.chave_valor || 59.90).toFixed(2).replace('.', ',');
+    const boletoDias = boletoDiasRecord?.chave_valor || '3';
+
+    // Formata faixas de desconto progressivo de varejo
+    let faixasVarejoTxt = '';
+    const faixasVarejo = typeof config.desconto_progressivo_faixas === 'string'
+      ? JSON.parse(config.desconto_progressivo_faixas)
+      : (config.desconto_progressivo_faixas || []);
+    if (Array.isArray(faixasVarejo) && faixasVarejo.length > 0) {
+      faixasVarejoTxt = faixasVarejo
+        .map(f => `  * De R$ ${Number(f.valor_minimo).toFixed(2).replace('.', ',')} até R$ ${f.valor_maximo ? Number(f.valor_maximo).toFixed(2).replace('.', ',') : '+'}: ${f.percentual}% de desconto`)
+        .join('\n');
     }
+
+    // Formata faixas de desconto progressivo de atacado/revenda
+    let faixasAtacadoTxt = '';
+    const faixasAtacado = typeof config.desconto_progressivo_faixas_revenda === 'string'
+      ? JSON.parse(config.desconto_progressivo_faixas_revenda)
+      : (config.desconto_progressivo_faixas_revenda || []);
+    if (Array.isArray(faixasAtacado) && faixasAtacado.length > 0) {
+      faixasAtacadoTxt = faixasAtacado
+        .map(f => `  * De R$ ${Number(f.valor_minimo).toFixed(2).replace('.', ',')} até R$ ${f.valor_maximo ? Number(f.valor_maximo).toFixed(2).replace('.', ',') : '+'}: +${f.percentual}% de desconto extra acumulativo`)
+        .join('\n');
+    }
+
+    const contextText = `
+CONFIGURAÇÕES COMERCIAIS ATIVAS NO PAINEL ADMIN (FONTE DA VERDADE):
+1. ENTRADA DE ATACADO / REVENDA DE FÁBRICA:
+   - Pedido mínimo de fábrica somado no carrinho: R$ ${limiteAtacado}
+   - Ao atingir R$ ${limiteAtacado}, o carrinho desbloqueia automaticamente preços de atacado de fábrica com margem de lucro de 100% a 150%.
+   - Não exige CNPJ (pode comprar com CPF ou CNPJ).
+
+2. RÉGUA DE DESCONTO PROGRESSIVO (AUTOMÁTICA NO CARRINHO):
+- Varejo (Compras abaixo de R$ ${limiteAtacado}):
+${faixasVarejoTxt || '  * Descontos progressivos automáticos por valor total no carrinho.'}
+- Atacado / Revenda (Compras a partir de R$ ${limiteAtacado}):
+${faixasAtacadoTxt || '  * Descontos progressivos adicionais de fábrica no atacado.'}
+
+3. FORMAS DE PAGAMENTO NO CHECKOUT:
+   - PIX: +${pixPct}% de desconto imediato acumulativo com todas as ofertas e descontos da loja!
+   - Cartão de Crédito: em até ${mpMaxParcelas}x no cartão (com parcela mínima de R$ ${mpParcelaMinima}). O checkout e o Mercado Pago calculam as parcelas reais automaticamente com base no total da compra.
+   ${boletoAtivo ? `- Boleto Bancário: disponível para compras acima de R$ ${boletoMinimo} com vencimento em ${boletoDias} dias.` : ''}
+
+4. RETIRADA LOCAL NA FÁBRICA:
+   - Ateliê Físico: ${config.retirada_endereco || 'Rua Odenir Pinheiro, 20 - 3º andar, Olaria, Nova Friburgo/RJ'}.
+   - Horário: ${config.retirada_horario || 'Seg-Qui 8h-17h, Sex 8h-13h'}.
+   - Frete grátis para retirada.
+`;
+
+    return {
+      limiteAtacado,
+      pixPct,
+      contextText,
+      configData: config
+    };
   } catch (err) {
-    logger.error(`Aviso RAG de Configurações: ${err.message}`);
+    logger.error(`Aviso RAG de Configurações da Lia: ${err.message}`);
+    return {
+      limiteAtacado: '69,90',
+      pixPct: 5,
+      contextText: '',
+      configData: null
+    };
   }
-  return null;
 }
 
 router.post('/chat', chatLimiter, async (req, res) => {
@@ -144,25 +219,11 @@ router.post('/chat', chatLimiter, async (req, res) => {
 
     historico.push({ role: 'user', content: mensagem });
 
-    // 2. Monta o contexto dinâmico, conhecimento e catálogo
+    // 2. Monta o contexto dinâmico, conhecimento, catálogo e regras comerciais do Admin
     const knowledgeContext = await getLiaKnowledge();
     const catalogContext = await getLiaProducts();
-    const configData = await getLiaConfiguracoes();
-    
-    const limiteAtacado = configData?.limite_upgrade_revenda || 69.90;
-    
-    let infoDescontos = '';
-    if (configData) {
-       const faixasAtacado = typeof configData.desconto_progressivo_faixas_revenda === 'string' ? JSON.parse(configData.desconto_progressivo_faixas_revenda) : configData.desconto_progressivo_faixas_revenda;
-       if (faixasAtacado && faixasAtacado.length > 0) {
-         const maxDesconto = Math.max(...faixasAtacado.map(f => f.percentual));
-         infoDescontos = `(lucro alto de até ${maxDesconto}%, pedido mínimo de R$${limiteAtacado} no carrinho)`;
-       } else {
-         infoDescontos = `(lucro alto, pedido mínimo de R$${limiteAtacado} no carrinho)`;
-       }
-    } else {
-       infoDescontos = `(lucro alto, pedido mínimo de R$${limiteAtacado} no carrinho)`;
-    }
+    const commercial = await getLiaCommercialContext();
+    const limiteAtacado = commercial.limiteAtacado;
 
     // Constrói o System Prompt blindado
 const systemPrompt = `Você é a Lia, consultora virtual da Avante Lingerie.
@@ -187,7 +248,7 @@ Você (Lia): Temos camisas slim fit disponíveis.
 6. LINKS CLICÁVEIS: Quando citar uma peça do catálogo, SEMPRE crie um link no formato Markdown: [Nome da Peça](/produto/slug).
 7. ESTRATÉGIA DE CROSS-SELL: Se a cliente demonstrar interesse em um sutiã, ofereça a calcinha para montar o conjunto.
 8. BLINDAGEM DE ESTOQUE: Se pedir algo esgotado, diga com entusiasmo que a fábrica realiza "Encomendas Especiais VIP" e peça para chamar o WhatsApp.
-9. ATACADO E PARCERIAS (B2B): Se a cliente falar em revender ou atacado (ou vier do anúncio de revenda), acolha como consultora de negócios, confirme que o pedido mínimo de atacado é de apenas R$ 69,90 somados no carrinho com lucro de 100% a 150%, e envie o link para montar o pedido ou o link da aba [Quero Revender](/quero-revender).
+9. ATACADO E PARCERIAS (B2B): Se a cliente falar em revender ou atacado (ou vier do anúncio de revenda), acolha como consultora de negócios, confirme que o pedido mínimo de atacado é de apenas R$ ${limiteAtacado} somados no carrinho com lucro de 100% a 150%, e envie o link para montar o pedido ou o link da aba [Quero Revender](/quero-revender).
 10. RASTREIO E PÓS-VENDA: Se a cliente perguntar onde está a encomenda ou como rastrear, envie com carinho o link direto: [Rastrear Pedido](/rastreio).
 11. PRODUTO HERÓI: Se a cliente pedir indicação de peça de renda sofisticada, indique com entusiasmo o [Conjunto Romântico em Renda](/produto/novidade-4-0).
 
@@ -201,6 +262,7 @@ ${catalogContext}
 =========================================
 BASE DE CONHECIMENTO DA LOJA (USAR APENAS COMO REFERÊNCIA PASSIVA, NÃO LEIA ISSO PARA O CLIENTE SEM QUE ELE PERGUNTE DIRETAMENTE):
 ${LIA_BASE_KNOWLEDGE}
+${commercial.contextText}
 ${knowledgeContext}
 =========================================
 `;
@@ -443,9 +505,11 @@ router.post('/whatsapp-webhook', async (req, res) => {
 
     historico.push({ role: 'user', content: mensagem });
 
-    // 2. Monta o contexto (reduzido para WhatsApp)
+    // 2. Monta o contexto dinâmico sincronizado com o Admin da loja
     const knowledgeContext = await getLiaKnowledge();
     const catalogContext = await getLiaProducts();
+    const commercial = await getLiaCommercialContext();
+    const limiteAtacado = commercial.limiteAtacado;
 
     const systemPrompt = `Você é a Lia, consultora virtual da Avante Lingerie.
 Tom de voz: Feminino, direto e acolhedor. Você está falando NO WHATSAPP com a cliente ${nome_cliente}.
@@ -456,7 +520,8 @@ FECHAMENTO SEMPRE COM UMA PERGUNTA.
 
 LINKS OBRIGATÓRIOS (CRÍTICO): 
 Sempre que falar sobre revenda, produtos ou o catálogo, VOCÊ DEVE enviar o link completo na resposta. Nunca mande o cliente "clicar no menu".
-- Link para Revenda: https://avantelingerie.com.br/revenda
+- Link para Revenda: https://avantelingerie.com.br/quero-revender
+- Entrada de Atacado: Pedido mínimo no carrinho de apenas R$ ${limiteAtacado} (100% a 150% de lucro)
 - Link para o Catálogo Geral: https://avantelingerie.com.br/shop
 - Para um produto específico: https://avantelingerie.com.br/produto/ID_DO_PRODUTO (CRÍTICO: Copie o ID EXATAMENTE como está no catálogo, não misture os links!).
 
@@ -465,6 +530,7 @@ ${catalogContext}
 =========================================
 BASE DE CONHECIMENTO DA LOJA:
 ${LIA_BASE_KNOWLEDGE}
+${commercial.contextText}
 ${knowledgeContext}
 =========================================
 `;
