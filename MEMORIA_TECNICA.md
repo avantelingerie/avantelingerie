@@ -1568,5 +1568,38 @@ Planejamento comercial e técnico estruturado pela Ada e Vértice para alavancar
   2. *Coleção Fitness:* Cadastrar a coleção "Linha Fitness" no Painel Admin (`/admin/colecoes`) com a foto de capa e vincular os produtos/modelos fitness cadastrados.
   3. *Revisão Final:* Conferir a ativação das campanhas de tráfego de fim de ano quando o lojista der o sinal verde.
 
+---
+
+### Sessão - 28/10/2026 (Auditoria Completa do Checkout, Saneamento de 6 Anomalias, Portão Nemotron, Inteligência da Lia & Planejamento Onboarding B2B)
+- **1. Saneamento das 6 Anomalias Críticas do E-commerce:**
+  1. *Blindagem Anti-Tradução do Google Chrome:* Em `index.html`, configurado `lang="pt-BR"`, `<meta name="google" content="notranslate" />` e classes `notranslate translate="no"`. Eliminadas falhas de DOM no React (`NotFoundError: removeChild on Node`).
+  2. *WhatsApp no Checkout para Clientes Logados:* Em `Checkout.jsx`, exibe campo destacado caso falte no cadastro e em `useCheckoutLogic.js` grava automaticamente no perfil do PocketBase (`users`).
+  3. *Modais e Réguas 100% Sincronizados com o Admin (R$ 69,90):* Substituídos todos os fallbacks antigos estáticos em `descontosService.js`, `ProductPage.jsx`, `QueroRevenderPage.jsx`, `CartPage.jsx` e `ProductCard.jsx`. Sincronização dinâmica com `configuracoes_estoque`.
+  4. *Autopreenchimento de Login Nativo & Segurança de Admin:* Mantidos `autoComplete="username"` e `autoComplete="current-password"` em `LoginPage.jsx` para comodidade dos clientes. Removido placeholder visual demonstrativo em `AdminLogin.jsx`.
+  5. *Modo Binário no Mercado Pago (`binary_mode: true`):* Resposta imediata aprovado/recusado, sem status "em análise" intermediário, operando com Guest Checkout (sem obrigar criação de conta).
+  6. *Cálculo Dinâmico e Trava Real de Parcelamento no Checkout e na API:* Em `useCheckoutLogic.js` e `Checkout.jsx`, cálculo em tempo real `min(mp_parcelas_max, floor(finalTotal / mp_parcela_minima))`. Em `mercadoPagoService.js`, a API envia `installments` calculado e isola o pagamento direto (PIX abre no PIX, Cartão abre no Cartão).
+- **2. Validação e Crivo do Nemotron (Terminal Audit Gate):**
+  - Script `scratch/audit_nemotron_todas_correcoes.cjs` submetido ao modelo `nvidia/nemotron-3.5-lightning:free`. Parecer Oficial: **PRODUÇÃO LIBERADA**.
+- **3. Deploy na VPS (Hostinger):**
+  - Commit `39682b4`. Workflow do GitHub Actions #123 finalizado com sucesso e validado diretamente na VPS via HTTP.
+- **4. Inteligência Comercial da Lia (Web Chat + WhatsApp):**
+  - Implementada função `getLiaCommercialContext()` em `apps/api/src/routes/lia.js` e atualizada a base em `apps/api/src/utils/liaKnowledgeBase.js`. Lia lê em tempo real: réguas de desconto progressivo de varejo e atacado, entrada de revenda em R$ 69,90, frete e retirada em Nova Friburgo, e formas de pagamento. Commit local `8b3bd8f`.
+- **5. Status dos Cartões de Anúncios (Google Ads & Meta Ads):**
+  - Cartões já adicionados e configurados com sucesso em ambas as plataformas pelo lojista.
+
+---
+
+## 9. Rotina de Fechamento do Dia & Ponto de Parada (28/10/2026)
+- **Status do Repositório:** Commit local `8b3bd8f` pronto para sincronização na VPS.
+- **Deploy na VPS:** Deploy do checkout aprovado e confirmado ativo pelo lojista na loja online.
+- **Ponto de Parada para Amanhã (29/10/2026):**
+  1. *Automação de Boas-Vindas e Apresentação VIP para Novos Cadastros B2B/Revenda:*
+     - Criar régua de onboarding multicanal encantadora e persuasiva (WhatsApp da Lia + E-mail via Resend + Apresentação Exclusiva).
+     - Pilares: Confecção própria em Nova Friburgo, oportunidade de renda extra/negócio próprio, Black Friday, varejo competitivo vs Shopee, vantagens de atacado com pedido mínimo de R$ 69,90, descontos progressivos, PIX 5% extra e parcelas, margem de 100% a 150%, e preparação para as vendas de Final de Ano.
+  2. *Compra sob Encomenda no Checkout (Backorder Inteligente):*
+     - Retomar implementação da arquitetura detalhada em `ESPECIFICACAO_TECNICA_ENCOMENDA_CHECKOUT.md`.
+  3. *Ativação das Campanhas de Anúncios:*
+     - Ligar e monitorar as campanhas de tráfego pago na Meta Ads e Google Ads com cartões corporativos já cadastrados.
+
 
 
