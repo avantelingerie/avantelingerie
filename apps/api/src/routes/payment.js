@@ -174,6 +174,13 @@ router.post('/create-order', async (req, res) => {
       logger.error(`[CreateOrder] Erro ao enviar notificação de pedido criado: ${err.message}`);
     });
 
+    // INTEGRAÇÃO BLING: Envio imediato do pedido de venda para o ERP Bling
+    blingService.sendPedidoToBling(createdOrder.id).then(resBling => {
+      logger.info(`[CreateOrder] Pedido ${numero_pedido} enviado com sucesso para o Bling:`, resBling);
+    }).catch(errBling => {
+      logger.error(`[CreateOrder] Erro ao sincronizar pedido ${numero_pedido} com o Bling: ${errBling.message}`);
+    });
+
     // NOVO: Atualizar/reduzir o estoque das variações (com bypass para encomendas)
     try {
       if (orderPayload.itens && orderPayload.itens.length > 0) {

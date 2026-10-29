@@ -9,6 +9,29 @@ function getResendClient() {
     return new Resend(key.trim());
 }
 
+const getWhatsAppHosts = () => {
+    const list = [];
+    if (process.env.WHATSAPP_API_URL) list.push(process.env.WHATSAPP_API_URL.replace(/\/$/, ''));
+    list.push('http://whatsapp-bot:3000');
+    list.push('http://localhost:3000');
+    return [...new Set(list)];
+};
+
+async function sendWhatsAppDirect(phone, message) {
+    if (!phone || !message) return false;
+    const hosts = getWhatsAppHosts();
+    for (const host of hosts) {
+        try {
+            await axios.post(`${host}/send`, { phone, message }, { timeout: 3500 });
+            logger.info(`[NotificationService] WhatsApp enviado com sucesso para ${phone} via ${host}`);
+            return true;
+        } catch (err) {
+            logger.warn(`[NotificationService] Falha ao tentar enviar via ${host} (${err.message}). Tentando próximo host...`);
+        }
+    }
+    return false;
+}
+
 class NotificationService {
     async sendOrderStatusNotification(order, novoStatus, rastreio = null) {
         if (!order || !order.cliente_telefone) {
@@ -52,16 +75,7 @@ class NotificationService {
         }
 
         // 1. Disparo de WhatsApp
-        try {
-            const waHost = process.env.WHATSAPP_API_URL || 'http://localhost:3000';
-            await axios.post(`${waHost}/send`, {
-                phone: order.cliente_telefone,
-                message: messageWa
-            });
-            logger.info(`[NotificationService] WhatsApp enviado para ${order.cliente_telefone} (Pedido #${numPedido})`);
-        } catch (err) {
-            logger.error(`[NotificationService] Falha ao enviar WhatsApp para ${order.cliente_telefone}: ${err.message}`);
-        }
+        await sendWhatsAppDirect(order.cliente_telefone, messageWa);
 
         // 2. Disparo de E-mail (Se Resend configurado)
         const resend = getResendClient();
@@ -115,16 +129,9 @@ class NotificationService {
 
         // 4. Disparo WhatsApp automatizado (se bot disponível)
         if (cleanPhone.length >= 12) {
-            try {
-                const waHost = process.env.WHATSAPP_API_URL || 'http://localhost:3000';
-                await axios.post(`${waHost}/send`, {
-                    phone: cleanPhone,
-                    message: messageWa
-                }, { timeout: 3500 });
-                waSent = true;
-                logger.info(`[NotificationService] WhatsApp de boas-vindas B2B enviado para ${cleanPhone}`);
-            } catch (err) {
-                logger.warn(`[NotificationService] WhatsApp automático indisponível (${err.message}). Link manual pronto.`);
+            waSent = await sendWhatsAppDirect(cleanPhone, messageWa);
+            if (!waSent) {
+                logger.warn(`[NotificationService] WhatsApp automático indisponível em todos os hosts testados. Link manual pronto: ${waLink}`);
             }
         }
 

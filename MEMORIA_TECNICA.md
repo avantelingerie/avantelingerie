@@ -1651,3 +1651,32 @@ Planejamento comercial e técnico estruturado pela Ada e Vértice para alavancar
   - ESLint frontend (`npm run lint`): 0 erros, 0 avisos.
   - Build de Produção (`npm run build`): 100% aprovado (`✓ built in 21.16s`, 3113 módulos).
 
+---
+
+### Sessão - 29/10/2026 (Correção de "Minha Conta", Sincronização Bling, WhatsApp Bot Docker & Novo Favicon)
+- **1. Saneamento e Correção da Área do Cliente ("Minha Conta" - `MinhaContaPage.jsx`):**
+  - **Causa Raiz Identificada:** A query de pedidos buscava por `user_id = "${currentUser.id}"`, mas no schema real do PocketBase a coluna se chama `cliente_id`. A chamada falhava (400 Bad Request) e caía no `.catch`, onde um mock residual antigo (`PED-98412`, R$ 468,20) era injetado indevidamente.
+  - **Correção da Query:** Atualizada para buscar por `cliente_id = "${currentUser.id}" || cliente_email = "${currentUser.email}"` com fallback para `user_id`.
+  - **Remoção Absoluta de Mocks:** Removido o mock `PED-98412`. Agora, se não houver pedidos ou em caso de erro, exibe estado vazio real (`setPedidos([])`).
+  - **Exibição Dinâmica no Painel Geral & Meus Pedidos:** O card de "Último Pedido" e a listagem exibem `numero_pedido || id` (ex: PED-002), data real, forma de pagamento, contagem de itens e valor formatado real via `valor_total ?? total`.
+  - **Cálculo Real do Tracker de Descontos & Vantagens:** O `totalPurchases` agora calcula a soma real em R$ de todos os pedidos do cliente (`pedidos.reduce((acc, p) => acc + (p.valor_total || p.total || 0), 0)`), eliminando o bug de exibir "R$ 1,00" (que vinha da contagem de quantidade de pedidos salva em `total_compras`).
+- **2. Sincronização Automática com o Bling ERP (`payment.js`):**
+  - **Causa Raiz Identificada:** No endpoint `/create-order`, o pedido era gravado no PocketBase, mas a chamada a `blingService.sendPedidoToBling` só existia no webhook do Stripe.
+  - **Correção:** Inserida chamada assíncrona imediata `blingService.sendPedidoToBling(createdOrder.id)` logo após a criação do pedido no banco de dados.
+  - **Validação com Pedido Real:** O pedido do cliente Dooner (`PED-002`, PocketBase ID `1n639ykjzezxzrx`) foi sincronizado e validado diretamente com a API v3 do Bling, gerando o Pedido de Venda Bling **ID 27260001736**.
+- **3. Resiliência do Disparo WhatsApp da Lia em Ambiente Docker (`notificationService.js`):**
+  - **Causa Raiz Identificada:** No container Docker de produção (`api`), `localhost:3000` se refere ao próprio container da API, gerando `ECONNREFUSED`. O container do WhatsApp bot está no Docker Compose sob o hostname `whatsapp-bot:3000`.
+  - **Correção Multi-Host:** Implementada função `sendWhatsAppDirect` que tenta prioritariamente o hostname de produção (`http://whatsapp-bot:3000`), com fallback para `http://localhost:3000` (desenvolvimento local) e variável `WHATSAPP_API_URL` configurada no `.env`.
+- **4. Atualização do Favicon e Ícones Oficiais da Marca (Print 5):**
+  - O novo ícone de luxo fornecido pelo lojista (monograma "A" dourado estilizado com silhueta feminina em fundo preto) foi implementado em `apps/web/public/`:
+    - `favicon.png` (PNG de alta resolução)
+    - `favicon.ico`
+    - `apple-touch-icon.png`
+    - `imagens/logo_avante_fav_icon.png`
+  - Atualizado `apps/web/index.html` com tags `<link rel="icon">`, `<link rel="shortcut icon">` e `<link rel="apple-touch-icon">`.
+- **5. Crivo Nemotron & Validações de Engenharia (Sentinel):**
+  - Crivo Nemotron executado via terminal.
+  - Syntax check Node: 100% aprovado (`node --check apps/api/src/routes/payment.js`, `node --check apps/api/src/services/notificationService.js`).
+  - ESLint frontend: 100% aprovado (`npx eslint src/pages/MinhaContaPage.jsx`, 0 erros, 0 avisos).
+  - Build de Produção (`npm run build`): 100% aprovado (`✓ built in 19.43s`, 3113 módulos transformados).
+

@@ -65,43 +65,36 @@ export default function MinhaContaPage() {
     }
   }
 
-  // Fetch orders from Pocketbase (Adaptive 'pedidos' vs 'orders' check)
+  // Fetch orders from Pocketbase (Query by cliente_id and cliente_email)
   useEffect(() => {
-    if (!currentUser?.id) return;
+    if (!currentUser?.id && !currentUser?.email) return;
     setLoadingPedidos(true);
 
     const fetchOrders = async () => {
       try {
-        // Attempt 1: Fetch from 'pedidos' collection
-        const res = await pb.collection('pedidos').getList(1, 20, {
-          filter: `user_id = "${currentUser.id}"`,
+        const filterParts = [];
+        if (currentUser.id) filterParts.push(`cliente_id = "${currentUser.id}"`);
+        if (currentUser.email) filterParts.push(`cliente_email = "${currentUser.email}"`);
+        const filterStr = filterParts.join(' || ');
+
+        const res = await pb.collection('pedidos').getList(1, 50, {
+          filter: filterStr,
           sort: '-created',
           $autoCancel: false
         });
         setPedidos(res.items || []);
       } catch (err1) {
-        console.log('[MinhaConta] Coleção "pedidos" falhou ou não existe, tentando "orders"...', err1);
+        console.warn('[MinhaConta] Erro ao buscar pedidos por cliente_id/email:', err1);
         try {
-          // Attempt 2: Fetch from 'orders' collection
-          const res = await pb.collection('orders').getList(1, 20, {
+          const res = await pb.collection('pedidos').getList(1, 50, {
             filter: `user_id = "${currentUser.id}"`,
             sort: '-created',
             $autoCancel: false
           });
           setPedidos(res.items || []);
         } catch (err2) {
-          console.log('[MinhaConta] Ambas as coleções ("pedidos" e "orders") falharam. Carregando fallback premium.', err2);
-          // Premium Mock Orders for B2C/B2B to deliver absolute design excellence
-          setPedidos([
-            {
-              id: 'PED-98412',
-              created: new Date().toISOString(),
-              status: 'Preparando envio',
-              total: isReseller ? 468.20 : 780.00,
-              metodo_pagamento: 'PIX (5% OFF Extra)',
-              items_count: 8
-            }
-          ]);
+          console.warn('[MinhaConta] Consulta de pedidos falhou:', err2);
+          setPedidos([]);
         }
       } finally {
         setLoadingPedidos(false);
@@ -109,7 +102,7 @@ export default function MinhaContaPage() {
     };
 
     fetchOrders();
-  }, [currentUser, isReseller]);
+  }, [currentUser]);
 
   const handleLogout = () => {
     logout();
@@ -201,9 +194,11 @@ export default function MinhaContaPage() {
 
   const formatCurrency = (val) => new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(val);
 
-  // Reseller Perks Config
-  const totalPurchases = currentUser?.total_compras || 1200.00; // Mock or real purchases
-  const nextLevelProgress = totalPurchases >= 3000 ? 100 : (totalPurchases / 3000) * 100;
+  // Reseller Perks Config - Calculate real accumulated purchase value from actual orders
+  const totalPurchases = pedidos.length > 0
+    ? pedidos.reduce((acc, p) => acc + (Number(p.valor_total) || Number(p.total) || 0), 0)
+    : (Number(currentUser?.faturamento_acumulado) || Number(currentUser?.total_gasto) || 0);
+  const nextLevelProgress = totalPurchases >= 3000 ? 100 : Math.min(100, (totalPurchases / 3000) * 100);
   const remainingForGold = Math.max(0, 3000 - totalPurchases);
 
   // Marketing materials download assets
@@ -462,8 +457,8 @@ export default function MinhaContaPage() {
                         <h4 className="font-serif font-bold text-gray-900 text-sm">Último Pedido</h4>
                         {pedidos.length > 0 ? (
                           <div className="text-xs text-gray-500 font-light space-y-1">
-                            <p>Pedido <strong>{pedidos[0].id}</strong> - <span className="font-semibold text-[#c59b5f]">{pedidos[0].status}</span></p>
-                            <p>Valor total: <strong>{formatCurrency(pedidos[0].total)}</strong></p>
+                            <p>Pedido <strong>{pedidos[0].numero_pedido || pedidos[0].id}</strong> - <span className="font-semibold text-[#c59b5f] capitalize">{pedidos[0].status || 'Pendente'}</span></p>
+                            <p>Valor total: <strong>{formatCurrency(pedidos[0].valor_total ?? pedidos[0].total ?? 0)}</strong></p>
                           </div>
                         ) : (
                           <p className="text-xs text-gray-400 font-light">Nenhum pedido efetuado ainda.</p>
@@ -510,26 +505,43 @@ export default function MinhaContaPage() {
                     </div>
                   ) : pedidos.length > 0 ? (
                     <div className="space-y-4">
-                      {pedidos.map(p => (
-                        <div key={p.id} className="border border-gray-100 rounded-2xl p-5 hover:border-[#c59b5f]/30 transition-all duration-300 flex flex-col md:flex-row md:items-center justify-between gap-4">
-                          <div className="space-y-1.5">
-                            <div className="flex items-center gap-3">
-                              <span className="text-xs font-bold text-white bg-[#121212] px-2.5 py-1 rounded-md tracking-wider">{p.id}</span>
-                              <span className="text-[10px] text-gray-400 font-semibold uppercase">{new Date(p.created).toLocaleDateString('pt-BR')}</span>
-                            </div>
-                            <p className="text-xs text-gray-500 font-light">
-                              Pagamento via: <strong>{p.metodo_pagamento}</strong> | Quantidade de itens: <strong>{p.items_count} pçs</strong>
-                            </p>
-                          </div>
+                      {pedidos.map(p => {
+                        const orderNum = p.numero_pedido || p.id;
+                        const orderDate = p.created || p.data_pedido;
+                        const orderTotal = p.valor_total ?? p.total ?? 0;
+                        const itemCount = Array.isArray(p.itens)
+                          ? p.itens.reduce((acc, it) => acc + (Number(it.quantidade) || 1), 0)
+                          : (p.items_count || (p.itens ? 1 : 0));
+                        const paymentMethodStr = p.metodo_pagamento
+                          ? (p.metodo_pagamento === 'credito' ? 'Cartão de Crédito' : (p.metodo_pagamento === 'pix' ? 'PIX' : p.metodo_pagamento))
+                          : 'Online';
 
-                          <div className="flex md:flex-col items-start md:items-end justify-between gap-2 border-t md:border-none border-gray-50 pt-2.5 md:pt-0">
-                            <span className="text-xs text-white bg-gradient-to-r from-emerald-600 to-teal-600 px-3 py-1 rounded-full font-bold uppercase tracking-wider">
-                              {p.status}
-                            </span>
-                            <span className="text-base font-bold text-gray-900 mt-1">{formatCurrency(p.total)}</span>
+                        return (
+                          <div key={p.id} className="border border-gray-100 rounded-2xl p-5 hover:border-[#c59b5f]/30 transition-all duration-300 flex flex-col md:flex-row md:items-center justify-between gap-4">
+                            <div className="space-y-1.5">
+                              <div className="flex items-center gap-3">
+                                <span className="text-xs font-bold text-white bg-[#121212] px-2.5 py-1 rounded-md tracking-wider">{orderNum}</span>
+                                {orderDate && (
+                                  <span className="text-[10px] text-gray-400 font-semibold uppercase">{new Date(orderDate).toLocaleDateString('pt-BR')}</span>
+                                )}
+                              </div>
+                              <p className="text-xs text-gray-500 font-light">
+                                Pagamento via: <strong>{paymentMethodStr}</strong> {itemCount > 0 && <>| Quantidade de itens: <strong>{itemCount} pçs</strong></>}
+                              </p>
+                              {p.observacoes && (
+                                <p className="text-[11px] text-[#c59b5f] font-medium">{p.observacoes}</p>
+                              )}
+                            </div>
+
+                            <div className="flex md:flex-col items-start md:items-end justify-between gap-2 border-t md:border-none border-gray-50 pt-2.5 md:pt-0">
+                              <span className="text-xs text-white bg-gradient-to-r from-emerald-600 to-teal-600 px-3 py-1 rounded-full font-bold uppercase tracking-wider capitalize">
+                                {p.status || 'Pendente'}
+                              </span>
+                              <span className="text-base font-bold text-gray-900 mt-1">{formatCurrency(orderTotal)}</span>
+                            </div>
                           </div>
-                        </div>
-                      ))}
+                        );
+                      })}
                     </div>
                   ) : (
                     <div className="text-center py-16 bg-[#FFFBF8] border border-dashed border-[#c59b5f]/30 rounded-3xl p-8 max-w-xl mx-auto">
