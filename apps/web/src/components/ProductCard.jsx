@@ -358,7 +358,7 @@ export default function ProductCard({
         });
       }
     } catch (_) {}
-    navigate(`/contato?assunto=Encomendas%20Especiais%20%2F%20Produção&produto=${encodeURIComponent(name)}&ref=${encodeURIComponent(reference)}`);
+    navigate(`/produto/${id}`);
   };
 
   return (
@@ -579,11 +579,11 @@ export default function ProductCard({
           {isOutOfStock ? (
             <button
               onClick={handleEncomendaClick}
-              aria-label="Encomendar de fábrica diretamente com a confecção"
-              className="w-full h-11 sm:h-12 rounded-none font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 transition-all duration-300 shadow-sm active:scale-[0.98] cursor-pointer bg-gradient-to-r from-[#121212] via-[#241F18] to-[#121212] text-[#c59b5f] border border-[#c59b5f]/50 hover:from-[#c59b5f] hover:to-[#dfc193] hover:text-black hover:border-transparent"
+              aria-label="Comprar sob encomenda diretamente com a confecção"
+              className="w-full h-11 sm:h-12 rounded-none font-extrabold text-xs uppercase tracking-wider flex items-center justify-center gap-2 transition-all duration-300 shadow-sm hover:shadow-md active:scale-[0.98] cursor-pointer bg-[#c59b5f] hover:bg-[#b0874c] text-[#121212] border border-[#c59b5f]"
             >
-              <span aria-hidden="true" className="text-sm">📦</span>
-              ENCOMENDAR DE FÁBRICA
+              <span aria-hidden="true" className="text-sm">🧵</span>
+              COMPRAR SOB ENCOMENDA
             </button>
           ) : (
             <button

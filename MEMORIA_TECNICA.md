@@ -1601,5 +1601,53 @@ Planejamento comercial e técnico estruturado pela Ada e Vértice para alavancar
   3. *Ativação das Campanhas de Anúncios:*
      - Ligar e monitorar as campanhas de tráfego pago na Meta Ads e Google Ads com cartões corporativos já cadastrados.
 
+---
 
+### Sessão - 29/10/2026 (Automação de Onboarding & Boas-Vindas VIP B2B, Gatilho R$ 69,90 & Crivo Nemotron)
+- **1. Automação de Onboarding B2B no Clique de Aprovação:**
+  - No Painel Admin (`/admin/clientes`, aba "Solicitações B2B"), o clique no botão verde "Aprovar" agora atualiza o banco de dados e dispara a régua oficial de boas-vindas multicanal.
+  - **E-mail VIP Transacional (Resend):** Disparo automatizado com template editorial da Avante Lingerie (#c59b5f, #121212), destacando o gatilho de Black Friday de R$ 69,90, margem de 100% a 150%, 5% no PIX ou até 6x no cartão, e CTA direto para a vitrine de atacado.
+  - **WhatsApp da Lia:** Disparo automático via API e geração de atalho de 1 clique no Modal de Conclusão do Admin (`wa.me/55...`), abrindo a conversa no WhatsApp Web com a mensagem personalizada pronta para envio humano de contingência.
+  - **Sanitização de Dados:** Tratamento regex de telefone garantindo o prefixo DDI 55 em todos os números legados (ex: Raiza Bella e Ariane Muniz).
+  - **Idempotência & Anti-Duplo Clique:** Controle de cache em memória de 5 minutos por `solicitacaoId` e bloqueio de botão com spinner (`Loader2`) no frontend.
+- **2. Reconhecimento de Recorrência & Trava de Gatilho (R$ 69,90):**
+  - Revendedoras aprovadas mantêm status permanente (`commercial_profile: 'reseller'`), vendo a loja inteira em modo "Seu Custo de Fábrica" com preços de atacado.
+  - Pedidos >= R$ 69,90 avançam normalmente; pedidos < R$ 69,90 disparam bloqueio educativo informando o valor faltante para fechar no atacado.
+  - Corrigido fallback residual antigo de 500 no `.catch` de `useCheckoutLogic.js` para 69.90.
+- **3. Crivo do Portão Nemotron (`nvidia/nemotron-3.5-lightning:free`):**
+  - Auditoria lógica aprovada com parecer oficial documentado em `scratch/nemotron_validate_onboarding_b2b.cjs`.
+  - Recomendações de higienização de telefone, proteção de duplo clique e resiliência de API 100% incorporadas.
+- **4. Validação de Engenharia (Sentinel):**
+  - Node syntax check backend: 100% aprovado.
+  - ESLint frontend (`npm run lint`): 0 erros, 0 avisos.
+  - Build de Produção (`vite build`): 100% aprovado (`✓ built in 1m 45s`, 3113 módulos transformados).
+  - Teste transacional com a API do Resend executado com entrega real comprovada.
+
+---
+
+### Sessão - 29/10/2026 (Módulo de Compra sob Encomenda / Backorder Inteligente no Checkout)
+- **1. Diretrizes Comerciais & Design Implementados:**
+  - **Botão de Ação:** Estilizado em Dourado Champagne Nobre (`#c59b5f`, hover `#b0874c`, texto em negrito `#121212`) com o texto oficial: `"🧵 COMPRAR SOB ENCOMENDA"`.
+  - **Prazo de Confecção Fixo:** 5 dias úteis de confecção da fábrica em Nova Friburgo/RJ.
+  - **Cálculo Transparente de Frete:** O prazo total exibido no simulador (`SmartShipping`) e no checkout (`Checkout.jsx`) soma matematicamente:
+    `Prazo Total = Prazo Correios/Melhor Envio + 5 dias úteis de confecção`.
+  - **Regra de Remessa Única:** Carrinhos mistos (peças pronta-entrega + peças sob encomenda) são unificados para despacho único quando o lote de confecção estiver pronto, cobrando frete único do cliente.
+- **2. Engenharia Frontend:**
+  - `useCart.js`: Bypass da trava de estoque zerado (`stockLimit <= 0`) quando `item.is_encomenda: true`. Permite ajuste de quantidade sem bloqueio e exporta helpers reativos `hasEncomendaItems` e `maxDiasProducao` (5).
+  - `ProductPage.jsx`: Substituição do redirecionamento legado para contato por fluxo de compra direto. Exibe botão Dourado Champagne e abre Modal de Consentimento Rápido (com detalhes da peça, tamanho, cor, quantidade e aviso de 5 dias úteis de confecção antes de adicionar à sacola).
+  - `ProductCard.jsx`: Botão Dourado Champagne `"🧵 COMPRAR SOB ENCOMENDA"` redireciona o cliente diretamente para a página do produto para seleção de tamanho e cor.
+  - `CartItem.jsx`: Badge visual `🧵 Sob Encomenda (5 dias úteis de confecção)` abaixo da variação e ajuste de `stockLimit` para até 99 unidades.
+  - `CartPage.jsx`: Banner informativo no topo da lista de itens informando que o prazo de confecção será somado ao frete com remessa única.
+  - `SmartShipping.jsx` & `Checkout.jsx`: Banners explicativos e prazos de cada transportadora exibindo a composição transparente: `X dias úteis (Yd frete + 5d confecção)`.
+- **3. Engenharia Backend & Integrações:**
+  - `apps/api/src/routes/payment.js`: Persistência de `is_encomenda: true` e `dias_producao: 5` no array `itens`. Inserção automática de `observacoes: '[🧵 PEDIDO SOB ENCOMENDA - CONFECÇÃO: 5 DIAS ÚTEIS]'`. Bypass na rotina de baixa de estoque para não negativar ou alterar o estoque físico das variações esgotadas.
+  - `apps/api/src/services/blingService.js`: Envio das observações do pedido sob encomenda diretamente para a API v3 de pedidos de vendas do Bling.
+  - `apps/api/src/services/notificationService.js`: Mensagem personalizada da Lia no WhatsApp e e-mail timbrado transacional no status 'pago', informando que a peça entrou na esteira de confecção em Nova Friburgo com prazo estimado de 5 dias úteis.
+  - `apps/web/src/components/admin/PedidosTable.jsx`: Badge visual destacado `🧵 ENCOMENDA (5 DIAS)` na listagem do Admin para rápida identificação pela equipe de separação e confecção.
+- **4. Crivo Nemotron (Terminal Gate):**
+  - Proposta integralmente avaliada e auditada via `scratch/nemotron_validate_backorder_checkout.cjs` com parecer técnico de **APROVADO PARA IMPLEMENTAÇÃO** e todas as 6 recomendações refinadas atendidas.
+- **5. Validação de Engenharia (Sentinel):**
+  - Node syntax check backend: 100% aprovado (`node --check`).
+  - ESLint frontend (`npm run lint`): 0 erros, 0 avisos.
+  - Build de Produção (`npm run build`): 100% aprovado (`✓ built in 21.16s`, 3113 módulos).
 

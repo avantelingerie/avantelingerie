@@ -2,10 +2,10 @@ import React from 'react';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table.jsx';
 import { Badge } from '@/components/ui/badge.jsx';
 import { Skeleton } from '@/components/ui/skeleton.jsx';
-import { CheckCircle2, XCircle, Clock } from 'lucide-react';
+import { CheckCircle2, XCircle, Clock, Loader2 } from 'lucide-react';
 import { Button } from '@/components/ui/button.jsx';
 
-export default function SolicitacoesRevendedorTable({ solicitacoes, isLoading, onAprovar, onRejeitar }) {
+export default function SolicitacoesRevendedorTable({ solicitacoes, isLoading, onAprovar, onRejeitar, approvingId }) {
   if (isLoading) {
     return (
       <div className="border rounded-xl overflow-hidden bg-card">
@@ -113,12 +113,23 @@ export default function SolicitacoesRevendedorTable({ solicitacoes, isLoading, o
                   <Button
                     variant="default"
                     size="sm"
-                    className="bg-green-600 hover:bg-green-700 text-white"
+                    className="bg-green-600 hover:bg-green-700 text-white font-medium shadow-sm transition-all"
+                    disabled={approvingId === solicitacao.id}
                     onClick={() => onAprovar(solicitacao.id, solicitacao.user_id)}
                   >
-                    <CheckCircle2 className="w-4 h-4 mr-1" />
-                    Aprovar
+                    {approvingId === solicitacao.id ? (
+                      <>
+                        <Loader2 className="w-4 h-4 mr-1 animate-spin" />
+                        Aprovando...
+                      </>
+                    ) : (
+                      <>
+                        <CheckCircle2 className="w-4 h-4 mr-1" />
+                        Aprovar
+                      </>
+                    )}
                   </Button>
+
                 </div>
               </TableCell>
             </TableRow>

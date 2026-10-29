@@ -5,8 +5,9 @@ import { isExternalVideo, getYoutubeThumbnail, isDirectVideo } from '@/lib/utils
 
 export default function CartItem({ item, getItemPrice, onUpdateQuantity, onRemove }) {
   const price = getItemPrice ? getItemPrice(item) : item.price;
+  const isEncomenda = Boolean(item.is_encomenda);
+  const stockLimit = isEncomenda ? 99 : (typeof item.stock === 'number' ? item.stock : Infinity);
   const subtotal = price * item.quantity;
-  const stockLimit = typeof item.stock === 'number' ? item.stock : Infinity;
 
   const formatPrice = (val) => new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(val);
 
@@ -54,6 +55,13 @@ export default function CartItem({ item, getItemPrice, onUpdateQuantity, onRemov
               </span>
               <span>Tam: <strong className="text-foreground">{item.selectedSize || 'M'}</strong></span>
             </div>
+            {isEncomenda && (
+              <div className="mt-1.5">
+                <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-[#c59b5f]/15 text-[#8C6D3B] border border-[#c59b5f]/30">
+                  🧵 Sob Encomenda (5 dias úteis de confecção)
+                </span>
+              </div>
+            )}
           </div>
           <button 
             onClick={() => onRemove(item.cartItemId)}

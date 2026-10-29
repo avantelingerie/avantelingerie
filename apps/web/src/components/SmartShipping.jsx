@@ -8,7 +8,7 @@ import apiServerClient from '@/lib/apiServerClient.js';
 import { toast } from 'sonner';
 
 export default function SmartShipping({ currentTotal, onSelectShipping }) {
-  const { cart } = useCart();
+  const { cart, hasEncomendaItems } = useCart();
   const [cep, setCep] = useState('');
   const [calculated, setCalculated] = useState(false);
   const [selectedOption, setSelectedOption] = useState(null);
@@ -139,6 +139,14 @@ export default function SmartShipping({ currentTotal, onSelectShipping }) {
 
       {calculated && options.length > 0 && (
         <div className="mt-4 space-y-3 border-t border-primary/10 pt-4">
+          {hasEncomendaItems && (
+            <div className="p-3 rounded-xl bg-amber-50 border border-amber-200/70 text-xs text-amber-900 flex items-start gap-2 mb-2">
+              <span className="text-base leading-none">🧵</span>
+              <div>
+                <strong>Prazo Especial de Confecção:</strong> Seu carrinho contém peça(s) sob encomenda. O prazo total exibido abaixo já inclui os <strong>5 dias úteis de confecção</strong> somados ao transporte em remessa única.
+              </div>
+            </div>
+          )}
           {options.map((opt) => (
             <label 
               key={opt.id} 
@@ -159,9 +167,14 @@ export default function SmartShipping({ currentTotal, onSelectShipping }) {
                     {opt.company} {opt.name}
                   </div>
                   <div className="text-xs text-muted-foreground">
-                    Prazo: {typeof opt.delivery_time === 'number'
-                      ? `${opt.delivery_time} ${opt.delivery_time === 1 ? 'dia útil' : 'dias úteis'}`
-                      : (opt.delivery_time || '1 a 3 dias úteis')}
+                    Prazo:{' '}
+                    {typeof opt.delivery_time === 'number'
+                      ? hasEncomendaItems
+                        ? `${opt.delivery_time + 5} dias úteis (${opt.delivery_time}d frete + 5d confecção)`
+                        : `${opt.delivery_time} ${opt.delivery_time === 1 ? 'dia útil' : 'dias úteis'}`
+                      : hasEncomendaItems
+                        ? `${opt.delivery_time || '3 a 5 dias'} + 5 dias úteis de confecção`
+                        : (opt.delivery_time || '1 a 3 dias úteis')}
                   </div>
                 </div>
               </div>

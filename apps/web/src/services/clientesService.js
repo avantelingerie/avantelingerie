@@ -1,4 +1,5 @@
 import pb from '@/lib/pocketbaseClient.js';
+import apiServerClient from '@/lib/apiServerClient.js';
 
 export const clientesService = {
   async getClientes(page = 1, limit = 20, filters = {}, sort = '-criado_em') {
@@ -259,24 +260,62 @@ export const clientesService = {
 
   async aprovarRevendedor(solicitacaoId, userId) {
     try {
-      await pb.collection('solicitacoes_revendedor').update(solicitacaoId, {
+      // 1. Atualizar a solicitação B2B para aprovado
+      const solicitacao = await pb.collection('solicitacoes_revendedor').update(solicitacaoId, {
         status: 'aprovado'
       }, { $autoCancel: false });
 
+      let user = null;
       if (userId) {
-        await pb.collection('users').update(userId, {
+        user = await pb.collection('users').update(userId, {
           tipo_cliente: 'revendedor',
           commercial_profile: 'reseller',
           cadastro_completo: true,
           account_level: 'verified'
         }, { $autoCancel: false });
       }
-      return true;
+
+      // 2. Extrair dados para a notificação de onboarding VIP
+      const targetName = user?.name || user?.nome || solicitacao?.nome || 'Revendedora';
+      const targetEmail = user?.email || solicitacao?.email || '';
+      const targetPhone = user?.whatsapp || solicitacao?.whatsapp || solicitacao?.telefone || '';
+
+      // 3. Disparar notificação automática (Resend E-mail + Lia WhatsApp) via backend
+      let notification = null;
+      try {
+        const notifRes = await apiServerClient.fetch('/notificacoes/boas-vindas-revendedor', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            name: targetName,
+            email: targetEmail,
+            whatsapp: targetPhone,
+            solicitacaoId,
+            userId
+          })
+        });
+
+        if (notifRes.ok) {
+          notification = await notifRes.json();
+        }
+      } catch (notifErr) {
+        console.warn('[clientesService] Aviso: Erro ao despachar notificação automática, cadastro aprovado com sucesso:', notifErr);
+      }
+
+      return {
+        success: true,
+        user,
+        notification,
+        targetName,
+        targetPhone,
+        targetEmail
+      };
     } catch (error) {
       console.error('Erro ao aprovar revendedor:', error);
       throw error;
     }
   },
+
 
   async rejeitarRevendedor(solicitacaoId) {
     try {

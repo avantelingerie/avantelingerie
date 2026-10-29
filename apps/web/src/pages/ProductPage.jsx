@@ -58,6 +58,7 @@ export default function ProductPage() {
   const [selectedSize, setSelectedSize] = useState(null);
   const [quantity, setQuantity] = useState(1);
   const [isFavorite, setIsFavorite] = useState(false);
+  const [isBackorderModalOpen, setIsBackorderModalOpen] = useState(false);
 
   // Inicializa o state de favorito baseado no localStorage
   useEffect(() => {
@@ -748,7 +749,7 @@ export default function ProductPage() {
 
   const isOutOfStock = isVariationOutOfStock || isProductOutOfStock;
 
-  const maxPurchaseQuantity = activeVariation ? (activeVariation.estoque || 5) : (product?.stock || fallbackProduct.stock || 1);
+  const maxPurchaseQuantity = isOutOfStock ? 99 : (activeVariation ? (activeVariation.estoque || 5) : (product?.stock || fallbackProduct.stock || 1));
 
   useEffect(() => {
     if (!hasClickedColor) return;
@@ -767,7 +768,7 @@ export default function ProductPage() {
     }
   }, [activeVariation?.imagem_url, resolvedImages]);
 
-  const handleAddToCart = () => {
+  const handleAddToCart = (asEncomenda = false) => {
     if (!selectedSize) {
       toast.error('Por favor, selecione um tamanho.', { duration: 3000 });
       return;
@@ -785,9 +786,6 @@ export default function ProductPage() {
 
     const colorName = dynamicColors[selectedColor];
     const mainItemPrice = activePrice;
-
-    const currentCartTotal = getTotalPrice();
-    const newTotal = currentCartTotal + (mainItemPrice * quantity);
 
     let cartImage = resolvedImages?.find(img => !isDirectVideo(img) && !isExternalVideo(img)) || (product?.image ? getProductImageUrl(product, Array.isArray(product.image) ? product.image[0] : product.image) : fallbackProduct.image);
     if (activeVariation?.imagem_url && resolvedImages?.length) {
@@ -809,10 +807,13 @@ export default function ProductPage() {
       selectedSize: selectedSize,
       selectedColor: colorName,
       quantity: quantity,
-      stock: maxPurchaseQuantity,
+      stock: asEncomenda ? 999 : maxPurchaseQuantity,
       preco_varejo: activeVarPrice,
       preco_atacado: activeVarWholesalePrice,
-      sku: activeVariation?.sku || product?.sku || ''
+      sku: activeVariation?.sku || product?.sku || '',
+      is_encomenda: asEncomenda,
+      dias_producao: asEncomenda ? 5 : 0,
+      tag_encomenda: asEncomenda ? 'Confecção de Fábrica (5 dias úteis)' : undefined
     });
 
     trackAddToCart(product || fallbackProduct, quantity);
@@ -820,15 +821,18 @@ export default function ProductPage() {
     let toastMessage = '';
     const desc = `Tamanho: ${selectedSize} | Cor: ${colorName}`;
 
-    const nextTier = getNextTierInfo();
-    if (nextTier && nextTier.remaining > 0) {
-      toastMessage = `${quantity} ${isReseller ? 'peças adicionadas' : 'itens adicionados'} à sacola - Faltam apenas ${formatPrice(nextTier.remaining)} para liberar ${nextTier.label} de desconto progressivo`;
+    if (asEncomenda) {
+      toastMessage = `Peça sob encomenda adicionada com sucesso! Confecção em até 5 dias úteis.`;
     } else {
-      toastMessage = `${quantity} ${isReseller ? 'peças adicionadas' : 'itens adicionados'} à sacola com sucesso!`;
+      const nextTier = getNextTierInfo();
+      if (nextTier && nextTier.remaining > 0) {
+        toastMessage = `${quantity} ${isReseller ? 'peças adicionadas' : 'itens adicionados'} à sacola - Faltam apenas ${formatPrice(nextTier.remaining)} para liberar ${nextTier.label} de desconto progressivo`;
+      } else {
+        toastMessage = `${quantity} ${isReseller ? 'peças adicionadas' : 'itens adicionados'} à sacola com sucesso!`;
+      }
     }
 
     toast.success(toastMessage, { description: desc, duration: 4500 });
-
     setQuantity(1);
   };
 
@@ -896,6 +900,14 @@ export default function ProductPage() {
 
   const handleEncomendaClick = (e) => {
     if (e && e.preventDefault) e.preventDefault();
+    if (!selectedSize) {
+      toast.error('Por favor, selecione um tamanho para sua encomenda.', { duration: 3000 });
+      return;
+    }
+    if (selectedColor === null || selectedColor === undefined || !dynamicColors[selectedColor]) {
+      toast.error('Por favor, selecione uma cor para sua encomenda.', { duration: 3000 });
+      return;
+    }
     try {
       if (typeof window !== 'undefined' && window.dataLayer) {
         window.dataLayer.push({
@@ -909,12 +921,7 @@ export default function ProductPage() {
       }
     } catch (_) {}
 
-    const detailParts = [productName];
-    if (selectedSize) detailParts.push(`Tam: ${selectedSize}`);
-    if (activeColorName) detailParts.push(`Cor: ${activeColorName}`);
-    const productDetail = detailParts.join(' - ');
-
-    navigate(`/contato?assunto=Encomendas%20Especiais%20%2F%20Produção&produto=${encodeURIComponent(productDetail)}&ref=${encodeURIComponent(productReferencia)}`);
+    setIsBackorderModalOpen(true);
   };
 
   const handleMouseMove = (e) => {
@@ -1540,11 +1547,11 @@ export default function ProductPage() {
                   <Button
                     type="button"
                     onClick={handleEncomendaClick}
-                    aria-label="Encomendar de fábrica diretamente com a confecção"
-                    className="flex-1 h-[52px] rounded-2xl text-xs font-bold tracking-wider uppercase transition-all duration-300 shadow-md active:scale-[0.98] bg-gradient-to-r from-[#121212] via-[#241F18] to-[#121212] text-[#c59b5f] hover:from-[#c59b5f] hover:to-[#dfc193] hover:text-black border border-[#c59b5f]/40 hover:border-transparent cursor-pointer"
+                    aria-label="Comprar sob encomenda diretamente com a confecção"
+                    className="flex-1 h-[52px] rounded-2xl text-xs font-extrabold tracking-wider uppercase transition-all duration-300 shadow-md hover:shadow-lg active:scale-[0.98] bg-[#c59b5f] hover:bg-[#b0874c] text-[#121212] border border-[#c59b5f] cursor-pointer"
                   >
-                    <span aria-hidden="true" className="mr-2 text-sm">📦</span>
-                    ENCOMENDAR DE FÁBRICA
+                    <span aria-hidden="true" className="mr-2 text-sm">🧵</span>
+                    COMPRAR SOB ENCOMENDA
                   </Button>
                 ) : (
                   <Button
@@ -1580,7 +1587,7 @@ export default function ProductPage() {
                 <div className="mt-2 p-3.5 bg-[#FAF7F2] border border-[#c59b5f]/30 rounded-2xl text-center">
                   <p className="text-xs text-[#8C6D3B] font-medium flex items-center justify-center gap-2">
                     <span aria-hidden="true" className="text-sm">🏭</span>
-                    <span>Peça produzida sob encomenda na fábrica. Despacho em <strong>5 a 7 dias úteis</strong>.</span>
+                    <span>Peça produzida sob encomenda na fábrica. Confecção em <strong>5 dias úteis</strong> + frete.</span>
                   </p>
                 </div>
               ) : (
@@ -1923,11 +1930,11 @@ export default function ProductPage() {
                   <Button
                     type="button"
                     onClick={handleEncomendaClick}
-                    aria-label="Encomendar de fábrica diretamente com a confecção"
-                    className="flex-1 h-[48px] rounded-xl text-xs font-bold tracking-wider uppercase shadow-md bg-gradient-to-r from-[#121212] via-[#241F18] to-[#121212] text-[#c59b5f] border border-[#c59b5f]/40 hover:text-white cursor-pointer"
+                    aria-label="Comprar sob encomenda diretamente com a confecção"
+                    className="flex-1 h-[48px] rounded-xl text-xs font-extrabold tracking-wider uppercase shadow-md active:scale-[0.98] bg-[#c59b5f] hover:bg-[#b0874c] text-[#121212] border border-[#c59b5f] cursor-pointer"
                   >
-                    <span aria-hidden="true" className="mr-1.5 text-sm">📦</span>
-                    ENCOMENDAR DE FÁBRICA
+                    <span aria-hidden="true" className="mr-1.5 text-sm">🧵</span>
+                    COMPRAR SOB ENCOMENDA
                   </Button>
                 ) : (
                   <Button
@@ -1953,6 +1960,71 @@ export default function ProductPage() {
           </motion.div>
         )}
       </AnimatePresence>
+
+      {/* Modal de Consentimento Rápido - Compra sob Encomenda */}
+      <Dialog open={isBackorderModalOpen} onOpenChange={setIsBackorderModalOpen}>
+        <DialogContent className="sm:max-w-md bg-white border border-[#c59b5f]/30 rounded-3xl p-6 shadow-2xl">
+          <DialogHeader>
+            <div className="w-12 h-12 rounded-2xl bg-[#c59b5f]/15 text-[#8C6D3B] flex items-center justify-center mb-2">
+              <span className="text-2xl">🧵</span>
+            </div>
+            <DialogTitle className="text-lg font-bold text-gray-900 tracking-tight">
+              Confecção Sob Encomenda — Avante Lingerie
+            </DialogTitle>
+            <DialogDescription className="text-sm text-gray-600 leading-relaxed mt-2">
+              Esta peça exclusiva será produzida sob medida para você diretamente em nossa fábrica em Nova Friburgo/RJ.
+            </DialogDescription>
+          </DialogHeader>
+
+          <div className="my-4 p-4 rounded-2xl bg-[#FAF7F2] border border-[#c59b5f]/25 space-y-2 text-xs text-gray-700">
+            <div className="flex justify-between">
+              <span className="text-gray-500">Peça:</span>
+              <strong className="text-gray-900">{productName}</strong>
+            </div>
+            <div className="flex justify-between">
+              <span className="text-gray-500">Tamanho:</span>
+              <strong className="text-gray-900">{selectedSize}</strong>
+            </div>
+            <div className="flex justify-between">
+              <span className="text-gray-500">Cor:</span>
+              <strong className="text-gray-900">{dynamicColors[selectedColor]}</strong>
+            </div>
+            <div className="flex justify-between">
+              <span className="text-gray-500">Quantidade:</span>
+              <strong className="text-gray-900">{quantity} unidade(s)</strong>
+            </div>
+            <div className="pt-2 border-t border-[#c59b5f]/20 flex justify-between items-center text-[#8C6D3B] font-bold">
+              <span>Prazo de Confecção:</span>
+              <span className="bg-[#c59b5f]/20 px-2.5 py-0.5 rounded-full text-xs">5 dias úteis</span>
+            </div>
+          </div>
+
+          <div className="bg-amber-50 border border-amber-200/70 rounded-xl p-3 text-[11px] text-amber-900 leading-relaxed mb-4">
+            💡 <strong>Aviso de Entrega:</strong> O prazo total de entrega será a soma dos <strong>5 dias úteis de confecção</strong> + o prazo dos Correios/transportadora (em remessa única).
+          </div>
+
+          <div className="flex gap-3 justify-end">
+            <Button
+              type="button"
+              variant="outline"
+              onClick={() => setIsBackorderModalOpen(false)}
+              className="rounded-xl border-gray-200 text-gray-700 hover:bg-gray-50 text-xs font-semibold px-4 cursor-pointer"
+            >
+              Cancelar
+            </Button>
+            <Button
+              type="button"
+              onClick={() => {
+                setIsBackorderModalOpen(false);
+                handleAddToCart(true);
+              }}
+              className="rounded-xl bg-[#c59b5f] hover:bg-[#b0874c] text-[#121212] font-extrabold text-xs px-5 shadow-md hover:shadow-lg transition-all cursor-pointer"
+            >
+              🧵 Confirmar e Adicionar à Sacola
+            </Button>
+          </div>
+        </DialogContent>
+      </Dialog>
     </article>
   );
 }

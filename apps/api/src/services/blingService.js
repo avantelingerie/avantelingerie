@@ -118,7 +118,8 @@ const formatPedidoForBling = (pedido, userCpf = '') => {
         uf: (pedido.estado || 'SP').substring(0, 2),
         cep: cep
       }
-    }
+    },
+    observacoes: pedido.observacoes || ''
   };
 };
 

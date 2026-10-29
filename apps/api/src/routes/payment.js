@@ -143,7 +143,9 @@ router.post('/create-order', async (req, res) => {
       cidade: actualDelivery.cidade,
       estado: actualDelivery.estado || '',
       cep: actualDelivery.cep,
-      observacoes: '',
+      observacoes: (cart || []).some(item => Boolean(item.is_encomenda))
+        ? '[🧵 PEDIDO SOB ENCOMENDA - CONFECÇÃO: 5 DIAS ÚTEIS]'
+        : '',
       metodo_pagamento: paymentMethod === 'credit_card' ? 'credito' : (paymentMethod === 'pix' ? 'pix' : 'boleto'),
       
       // Items array (itens)
@@ -158,7 +160,9 @@ router.post('/create-order', async (req, res) => {
         nome: item.name || item.nome || '',
         sku: item.sku || '',
         image: item.image || item.imagem || '',
-        imagem: item.image || item.imagem || ''
+        imagem: item.image || item.imagem || '',
+        is_encomenda: Boolean(item.is_encomenda),
+        dias_producao: item.dias_producao || (item.is_encomenda ? 5 : 0)
       }))
     };
 
@@ -170,10 +174,14 @@ router.post('/create-order', async (req, res) => {
       logger.error(`[CreateOrder] Erro ao enviar notificação de pedido criado: ${err.message}`);
     });
 
-    // NOVO: Atualizar/reduzir o estoque das variações
+    // NOVO: Atualizar/reduzir o estoque das variações (com bypass para encomendas)
     try {
       if (orderPayload.itens && orderPayload.itens.length > 0) {
         for (const item of orderPayload.itens) {
+          if (item.is_encomenda) {
+            logger.info(`[CreateOrder] Item ${item.nome} (${item.variacao_id}) é sob encomenda. Pulando redução de estoque físico.`);
+            continue;
+          }
           try {
             const variacao = await pb.collection('variacoes').getOne(item.variacao_id, { $autoCancel: false });
             const novoEstoque = Math.max(0, (parseInt(variacao.estoque) || 0) - (parseInt(item.quantidade) || 1));

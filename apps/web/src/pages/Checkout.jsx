@@ -62,6 +62,8 @@ export default function Checkout() {
     localPickupConfig
   } = useCheckoutLogic();
 
+  const hasEncomendaItems = cart.some(item => Boolean(item.is_encomenda));
+
   const maxCardInstallments = Math.min(
     mpMaxParcelas || 6,
     Math.max(1, Math.floor((finalTotal || 0) / (mpParcelaMinima || 10.00)))
@@ -442,6 +444,14 @@ export default function Checkout() {
                 </div>
               ) : shippingOptions.length > 0 ? (
                 <div className="flex flex-col gap-3">
+                  {hasEncomendaItems && (
+                    <div className="p-3.5 rounded-2xl bg-amber-50 border border-amber-200/80 text-xs text-amber-900 flex items-start gap-2.5 shadow-sm">
+                      <span className="text-lg leading-none">🧵</span>
+                      <div>
+                        <strong>Prazo Especial de Confecção:</strong> Seu carrinho contém peça(s) sob encomenda. O prazo estimado abaixo já inclui os <strong>5 dias úteis de confecção</strong> somados ao frete em remessa única.
+                      </div>
+                    </div>
+                  )}
                   {shippingOptions.map((option) => (
                     <div
                       key={option.id}
@@ -460,8 +470,18 @@ export default function Checkout() {
                           <span className="font-bold text-gray-900 text-sm tracking-wide">
                             {option.company} - {option.name}
                           </span>
-                          <span className="text-xs text-gray-400 font-light mt-0.5">
-                            Prazo estimado: {option.delivery_time || option.delivery_range || option.prazo} {option.id !== 'retirada_local' && 'dias úteis'}
+                          <span className="text-xs text-gray-500 font-medium mt-0.5">
+                            Prazo estimado:{' '}
+                            {option.id === 'retirada_local'
+                              ? (hasEncomendaItems ? 'Pronto em 5 dias úteis (tempo de confecção)' : 'Pronto em 2 horas úteis')
+                              : typeof option.delivery_time === 'number'
+                                ? hasEncomendaItems
+                                  ? `${option.delivery_time + 5} dias úteis (${option.delivery_time}d frete + 5d confecção)`
+                                  : `${option.delivery_time} ${option.delivery_time === 1 ? 'dia útil' : 'dias úteis'}`
+                                : hasEncomendaItems
+                                  ? `${option.delivery_time || option.delivery_range || option.prazo} + 5 dias úteis confecção`
+                                  : `${option.delivery_time || option.delivery_range || option.prazo} ${option.id !== 'retirada_local' ? 'dias úteis' : ''}`
+                            }
                           </span>
                         </div>
                       </div>

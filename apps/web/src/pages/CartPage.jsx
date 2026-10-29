@@ -34,7 +34,8 @@ export default function CartPage() {
     getActiveDiscount,
     getNextTierInfo,
     getPixBenefitEligibility,
-    getItemPrice
+    getItemPrice,
+    hasEncomendaItems
   } = useCart();
 
   const [shipping, setShipping] = useState({ cost: 0, method: null });
@@ -510,6 +511,14 @@ export default function CartPage() {
                       )}
                     </h2>
                   </div>
+                  {hasEncomendaItems && (
+                    <div className="mb-4 p-3.5 rounded-2xl bg-amber-50 border border-amber-200/80 text-xs text-amber-900 flex items-start gap-2.5 shadow-sm">
+                      <span className="text-lg leading-none">🧵</span>
+                      <div>
+                        <strong>Contém peça sob encomenda:</strong> O prazo de confecção da fábrica (5 dias úteis) será somado ao frete selecionado com remessa única para todos os seus itens.
+                      </div>
+                    </div>
+                  )}
                   <div className="flex flex-col divide-y divide-gray-100">
                     {cart.map(item => (
                       <CartItem 

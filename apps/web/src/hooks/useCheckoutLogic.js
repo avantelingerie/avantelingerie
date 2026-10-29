@@ -104,7 +104,7 @@ export function useCheckoutLogic() {
       setLimiteUpgrade(descontosService.getLimiteUpgrade(config));
     }).catch(err => {
       console.error('[useCheckoutLogic] Erro ao carregar limite de upgrade:', err);
-      setLimiteUpgrade(500);
+      setLimiteUpgrade(69.90);
     });
   }, []);
 

@@ -2,6 +2,7 @@ import 'dotenv/config';
 import express from 'express';
 import pb from '../utils/pocketbaseClient.js';
 import logger from '../utils/logger.js';
+import { notificationService } from '../services/notificationService.js';
 
 const router = express.Router();
 
@@ -116,6 +117,33 @@ router.post('/marcar-todas-lidas', async (req, res) => {
     mensagem: 'Todas as notificações foram marcadas como lidas',
     total_atualizadas: notificacoes.length,
   });
+});
+
+// POST /notificacoes/boas-vindas-revendedor - Dispara e-mail VIP (Resend) e mensagem WhatsApp da Lia
+router.post('/boas-vindas-revendedor', async (req, res) => {
+  try {
+    const { name, email, whatsapp, solicitacaoId, userId } = req.body;
+
+    if (!name && !email && !whatsapp) {
+      return res.status(400).json({ erro: 'Dados insuficientes para envio de notificação' });
+    }
+
+    const result = await notificationService.sendResellerWelcomeNotification({
+      name,
+      email,
+      phone: whatsapp,
+      solicitacaoId
+    });
+
+    res.json({
+      sucesso: true,
+      mensagem: 'Notificação de boas-vindas processada com sucesso',
+      ...result
+    });
+  } catch (err) {
+    logger.error(`[notificacoes] Erro ao processar boas-vindas de revendedor: ${err.message}`);
+    res.status(500).json({ erro: 'Falha ao processar notificação de revendedora', detalhe: err.message });
+  }
 });
 
 export default router;

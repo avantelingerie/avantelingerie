@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Users, Download, Search, ArrowUpDown, AlertCircle, Briefcase } from 'lucide-react';
+import { Users, Download, Search, ArrowUpDown, AlertCircle, Briefcase, Crown, Mail, MessageCircle, ExternalLink } from 'lucide-react';
 import { Button } from '@/components/ui/button.jsx';
 import { Input } from '@/components/ui/input.jsx';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select.jsx';
@@ -10,6 +10,8 @@ import { clientesService } from '@/services/clientesService.js';
 import ClientesTable from '@/components/admin/ClientesTable.jsx';
 import SolicitacoesRevendedorTable from '@/components/admin/SolicitacoesRevendedorTable.jsx';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert.jsx';
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogFooter } from '@/components/ui/dialog.jsx';
+
 
 export default function ClientesPage() {
   const [clientes, setClientes] = useState([]);
@@ -22,6 +24,9 @@ export default function ClientesPage() {
 
   const [solicitacoes, setSolicitacoes] = useState([]);
   const [isLoadingSolicitacoes, setIsLoadingSolicitacoes] = useState(true);
+  const [approvingId, setApprovingId] = useState(null);
+  const [approvedModalData, setApprovedModalData] = useState(null);
+
 
   const fetchClientesList = async (currentPage = 1) => {
     setIsLoadingClientes(true);
@@ -69,15 +74,49 @@ export default function ClientesPage() {
   };
 
   const handleAprovar = async (id, userId) => {
+    setApprovingId(id);
     try {
-      await clientesService.aprovarRevendedor(id, userId);
-      toast.success('Solicitação aprovada com sucesso! Cliente agora é revendedor.');
-      fetchSolicitacoes();
-      fetchClientesList(page); 
+      const res = await clientesService.aprovarRevendedor(id, userId);
+      const notif = res?.notification;
+      const targetName = res?.targetName || 'Revendedora';
+      const targetEmail = res?.targetEmail || '';
+      const targetPhone = res?.targetPhone || '';
+      const emailSent = notif?.emailSent;
+      const waLink = notif?.waLink;
+      const messageWa = notif?.messageWa;
+
+      if (emailSent) {
+        toast.success(`👑 ${targetName} aprovada! E-mail VIP de boas-vindas enviado.`, {
+          duration: 8000,
+          action: waLink ? {
+            label: 'WhatsApp da Lia',
+            onClick: () => window.open(waLink, '_blank')
+          } : undefined
+        });
+      } else {
+        toast.success(`👑 ${targetName} aprovada com sucesso! Perfil B2B ativo na loja.`);
+      }
+
+      setApprovedModalData({
+        name: targetName,
+        email: targetEmail,
+        phone: targetPhone,
+        emailSent,
+        waLink,
+        messageWa
+      });
+
+      await Promise.all([
+        fetchSolicitacoes(),
+        fetchClientesList(page)
+      ]);
     } catch (error) {
-      toast.error('Erro ao aprovar solicitação.');
+      toast.error('Erro ao aprovar solicitação: ' + (error?.message || 'Tente novamente.'));
+    } finally {
+      setApprovingId(null);
     }
   };
+
 
   const handleRejeitar = async (id) => {
     try {
@@ -192,9 +231,82 @@ export default function ClientesPage() {
             isLoading={isLoadingSolicitacoes} 
             onAprovar={handleAprovar} 
             onRejeitar={handleRejeitar} 
+            approvingId={approvingId}
           />
         </TabsContent>
       </Tabs>
+
+      {/* Modal de Conclusão de Aprovação e Boas-Vindas VIP */}
+      <Dialog open={!!approvedModalData} onOpenChange={(open) => !open && setApprovedModalData(null)}>
+        <DialogContent className="max-w-md bg-zinc-950 text-white border border-[#c59b5f]/40 p-6 rounded-2xl shadow-2xl">
+          <DialogHeader className="text-left space-y-2">
+            <div className="w-12 h-12 rounded-full bg-[#c59b5f]/20 border border-[#c59b5f]/50 flex items-center justify-center text-[#c59b5f] mb-1">
+              <Crown className="w-6 h-6 animate-pulse" />
+            </div>
+            <DialogTitle className="text-xl font-serif font-bold text-white flex items-center gap-2">
+              Revendedora Oficial Aprovada! 👑
+            </DialogTitle>
+            <DialogDescription className="text-zinc-400 text-sm">
+              <strong className="text-white">{approvedModalData?.name}</strong> foi promovida para a tabela de atacado e já acessa os preços de fábrica com pedido mínimo de R$ 69,90.
+            </DialogDescription>
+          </DialogHeader>
+
+          <div className="space-y-3 my-2 text-xs">
+            {/* Status E-mail */}
+            <div className="flex items-start gap-2.5 bg-zinc-900/90 border border-zinc-800 p-3 rounded-xl">
+              <Mail className={`w-4 h-4 shrink-0 mt-0.5 ${approvedModalData?.emailSent ? 'text-emerald-400' : 'text-zinc-500'}`} />
+              <div className="flex-1">
+                <p className="font-semibold text-zinc-200">
+                  {approvedModalData?.emailSent ? 'E-mail VIP Enviado com Sucesso' : 'E-mail VIP Pendente / Verifique Resend'}
+                </p>
+                <p className="text-zinc-400 text-[11px] truncate">
+                  {approvedModalData?.email || 'Nenhum e-mail cadastrado'}
+                </p>
+              </div>
+              {approvedModalData?.emailSent && (
+                <span className="text-[10px] bg-emerald-950 text-emerald-400 border border-emerald-500/30 px-1.5 py-0.5 rounded font-bold">
+                  Enviado
+                </span>
+              )}
+            </div>
+
+            {/* Status WhatsApp */}
+            <div className="flex items-start gap-2.5 bg-zinc-900/90 border border-zinc-800 p-3 rounded-xl">
+              <MessageCircle className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
+              <div className="flex-1">
+                <p className="font-semibold text-zinc-200">Mensagem da Lia no WhatsApp</p>
+                <p className="text-zinc-400 text-[11px]">
+                  {approvedModalData?.phone ? approvedModalData.phone : 'Telefone não informado'}
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <DialogFooter className="flex flex-col sm:flex-row gap-2 mt-4">
+            {approvedModalData?.waLink && (
+              <Button
+                type="button"
+                className="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold gap-2 shadow-lg shadow-emerald-900/40"
+                onClick={() => {
+                  window.open(approvedModalData.waLink, '_blank');
+                }}
+              >
+                <MessageCircle className="w-4 h-4" />
+                Conversar no WhatsApp da Lia
+                <ExternalLink className="w-3.5 h-3.5 ml-1" />
+              </Button>
+            )}
+            <Button
+              type="button"
+              variant="outline"
+              className="w-full border-zinc-700 text-zinc-300 hover:bg-zinc-900"
+              onClick={() => setApprovedModalData(null)}
+            >
+              Concluir
+            </Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 }

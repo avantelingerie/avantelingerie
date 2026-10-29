@@ -102,19 +102,22 @@ export function useCart() {
     return () => window.removeEventListener('configuracoes_updated', handleConfigUpdate);
   }, []);
 
-  // High #9: Enforce rigorous stock checks and alert user with warnings
+  // High #9: Enforce rigorous stock checks and alert user with warnings (with backorder bypass)
   const addToCart = (product) => {
-    const cartItemId = `${product.id}-${product.selectedSize || ''}-${product.selectedColor || ''}`;
+    const isEncomenda = Boolean(product.is_encomenda);
+    const cartItemId = `${product.id}-${product.selectedSize || ''}-${product.selectedColor || ''}${isEncomenda ? '-encomenda' : ''}`;
     const existing = globalCart.find(item => item.cartItemId === cartItemId);
-    const stockLimit = typeof product.stock === 'number' ? product.stock : (typeof product.estoque === 'number' ? product.estoque : Infinity);
+    const stockLimit = isEncomenda
+      ? 999
+      : (typeof product.stock === 'number' ? product.stock : (typeof product.estoque === 'number' ? product.estoque : Infinity));
     const requestedQty = (existing ? existing.quantity : 0) + (product.quantity || 1);
 
-    if (stockLimit <= 0) {
+    if (stockLimit <= 0 && !isEncomenda) {
       toast.error('Desculpe, este produto esgotou no momento!');
       return false;
     }
 
-    if (requestedQty > stockLimit) {
+    if (requestedQty > stockLimit && !isEncomenda) {
       toast.warning(`Apenas ${stockLimit} unidade(s) deste produto estão disponíveis em estoque.`);
       if (existing) {
         globalCart = globalCart.map(item =>
@@ -143,7 +146,7 @@ export function useCart() {
       }];
     }
     notifyListeners();
-    toast.success('Produto adicionado ao seu carrinho!');
+    toast.success(isEncomenda ? 'Peça sob encomenda adicionada à sacola!' : 'Produto adicionado ao seu carrinho!');
     return true;
   };
 
@@ -159,9 +162,12 @@ export function useCart() {
     const item = globalCart.find(i => i.cartItemId === cartItemId);
     if (!item) return;
 
-    const stockLimit = typeof item.stock === 'number' ? item.stock : (typeof item.estoque === 'number' ? item.estoque : Infinity);
+    const isEncomenda = Boolean(item.is_encomenda);
+    const stockLimit = isEncomenda
+      ? 999
+      : (typeof item.stock === 'number' ? item.stock : (typeof item.estoque === 'number' ? item.estoque : Infinity));
 
-    if (newQty > stockLimit) {
+    if (newQty > stockLimit && !isEncomenda) {
       toast.warning(`Apenas ${stockLimit} unidade(s) deste produto estão disponíveis em estoque.`);
       globalCart = globalCart.map(i =>
         i.cartItemId === cartItemId ? { ...i, quantity: stockLimit } : i
@@ -346,6 +352,9 @@ export function useCart() {
     return true;
   }, [configuracoes]);
 
+  const hasEncomendaItems = cart.some(item => Boolean(item.is_encomenda));
+  const maxDiasProducao = hasEncomendaItems ? 5 : 0;
+
   return {
     cart,
     addToCart,
@@ -358,6 +367,8 @@ export function useCart() {
     getActiveDiscount,
     getNextTierInfo,
     getPixBenefitEligibility,
-    configuracoes
+    configuracoes,
+    hasEncomendaItems,
+    maxDiasProducao
   };
 }

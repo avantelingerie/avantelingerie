@@ -90,6 +90,11 @@ export default function PedidosTable({ pedidos, isLoading }) {
                   <Badge variant="outline" className={`border-0 whitespace-nowrap ${pedido.bling_pedido_id ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}`}>
                     {pedido.bling_pedido_id ? 'BLING: ENVIADO' : 'BLING: PENDENTE'}
                   </Badge>
+                  {(pedido.observacoes?.includes('ENCOMENDA') || (Array.isArray(pedido.itens) && pedido.itens.some(i => i.is_encomenda))) && (
+                    <Badge variant="outline" className="border-0 whitespace-nowrap bg-amber-100 text-amber-900 font-bold border border-amber-300">
+                      🧵 ENCOMENDA (5 DIAS)
+                    </Badge>
+                  )}
                 </div>
               </TableCell>
               <TableCell className="capitalize">{pedido.metodo_pagamento || pedido.forma_pagamento || '-'}</TableCell>
