@@ -67,10 +67,11 @@ export default function AdminLogin() {
               <div className="relative">
                 <Mail className="absolute left-3 top-3 w-5 h-5 text-muted-foreground pointer-events-none" />
                 <Input 
+                  name="avante_admin_email"
                   type="email" 
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  placeholder="admin@avantelingerie.com.br"
+                  placeholder="seu@email.com"
                   className="pl-10 h-12"
                   required
                 />

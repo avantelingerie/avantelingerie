@@ -25,7 +25,7 @@ export default function DescontoProgressivoTab({ configuracoes, onUpdateConfigur
     if (configuracoes) {
       setFaixasVarejo(configuracoes.desconto_progressivo_faixas || []);
       setFaixasRevenda(configuracoes.desconto_progressivo_faixas_revenda || []);
-      setLimiteUpgrade(configuracoes.limite_upgrade_revenda?.toString() || '400.00');
+      setLimiteUpgrade(configuracoes.limite_upgrade_revenda?.toString() || '69.90');
     }
   }, [configuracoes]);
 
@@ -47,7 +47,7 @@ export default function DescontoProgressivoTab({ configuracoes, onUpdateConfigur
     const batchPayload = {
       desconto_progressivo_faixas: activeSubTab === 'varejo' ? newFaixas : faixasVarejo,
       desconto_progressivo_faixas_revenda: activeSubTab === 'revenda' ? newFaixas : faixasRevenda,
-      limite_upgrade_revenda: parseFloat(limiteUpgrade) || 400.00
+      limite_upgrade_revenda: parseFloat(limiteUpgrade) || 69.90
     };
 
     if (activeSubTab === 'varejo') {
@@ -70,7 +70,7 @@ export default function DescontoProgressivoTab({ configuracoes, onUpdateConfigur
     const batchPayload = {
       desconto_progressivo_faixas: activeSubTab === 'varejo' ? newFaixas : faixasVarejo,
       desconto_progressivo_faixas_revenda: activeSubTab === 'revenda' ? newFaixas : faixasRevenda,
-      limite_upgrade_revenda: parseFloat(limiteUpgrade) || 400.00
+      limite_upgrade_revenda: parseFloat(limiteUpgrade) || 69.90
     };
 
     if (activeSubTab === 'varejo') {

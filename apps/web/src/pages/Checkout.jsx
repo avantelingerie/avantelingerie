@@ -47,6 +47,8 @@ export default function Checkout() {
     setPaymentMethod,
     isBoletoActive,
     boletoVencimentoDias,
+    mpMaxParcelas,
+    mpParcelaMinima,
     shippingCost,
     removeFromCart,
     isSubmitting,
@@ -59,6 +61,14 @@ export default function Checkout() {
     selectShippingOption,
     localPickupConfig
   } = useCheckoutLogic();
+
+  const maxCardInstallments = Math.min(
+    mpMaxParcelas || 6,
+    Math.max(1, Math.floor((finalTotal || 0) / (mpParcelaMinima || 10.00)))
+  );
+  const cardInstallmentValue = finalTotal && maxCardInstallments > 0
+    ? (finalTotal / maxCardInstallments).toFixed(2).replace('.', ',')
+    : '0,00';
 
   const isReseller = currentUser?.commercial_profile === 'reseller' || currentUser?.tipo_cliente === 'revendedor';
   const showWholesaleLock = isReseller && subtotal < limiteUpgrade;
@@ -237,34 +247,70 @@ export default function Checkout() {
             {/* IDENTIFICATION & PERSONAL INFO SECTION */}
             <div className="bg-white border border-[#c59b5f]/15 border-l-4 border-l-[#c59b5f] rounded-3xl p-6 md:p-8 shadow-premium-sm transition-all duration-300 hover:shadow-[0_12px_30px_rgba(197,155,95,0.04)]">
               {currentUser ? (
-                <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-                  <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 rounded-full bg-[#c59b5f]/10 border border-[#c59b5f]/20 flex items-center justify-center text-[#c59b5f]">
-                      <UserCircle className="w-6 h-6" strokeWidth={1.5} />
+                <div className="flex flex-col gap-5">
+                  <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+                    <div className="flex items-center gap-4">
+                      <div className="w-12 h-12 rounded-full bg-[#c59b5f]/10 border border-[#c59b5f]/20 flex items-center justify-center text-[#c59b5f]">
+                        <UserCircle className="w-6 h-6" strokeWidth={1.5} />
+                      </div>
+                      <div>
+                        <h2 className="text-base md:text-lg font-serif font-bold text-gray-950">Conta Autenticada</h2>
+                        <p className="text-xs text-gray-500 mt-1 font-light">
+                          Comprando como <strong>{personalInfo.nome || currentUser.name}</strong> ({personalInfo.email || currentUser.email}).
+                        </p>
+                      </div>
                     </div>
-                    <div>
-                      <h2 className="text-base md:text-lg font-serif font-bold text-gray-950">Conta Autenticada</h2>
-                      <p className="text-xs text-gray-500 mt-1 font-light">
-                        Comprando como <strong>{personalInfo.nome}</strong> ({personalInfo.email}).
-                      </p>
-                      {(!personalInfo.cpf || personalInfo.cpf.replace(/\D/g, '').length !== 11) && (
-                        <div className="mt-4 flex flex-col gap-1.5 w-full sm:w-80">
-                          <Label htmlFor="auth-cpf" className="text-[10px] font-bold text-amber-700 uppercase tracking-wider">⚠️ CPF Obrigatório para Nota Fiscal</Label>
-                          <input
-                            id="auth-cpf"
-                            type="text"
-                            inputMode="numeric"
-                            placeholder="000.000.000-00"
-                            value={personalInfo.cpf || ''}
-                            onChange={(e) => handlePersonalInfoChange('cpf', formatCPF(e.target.value))}
-                            className="bg-amber-50 border border-amber-200 rounded-xl p-3 text-sm focus:outline-none focus:ring-2 focus:ring-amber-400 transition-all text-amber-900"
-                          />
-                        </div>
-                      )}
+                    <div className="flex items-center gap-2 text-[10px] font-bold text-green-600 bg-green-50 border border-green-200 px-3 py-1.5 rounded-full uppercase tracking-wider">
+                      <Shield className="w-3.5 h-3.5" strokeWidth={2} /> Sessão Ativa
                     </div>
                   </div>
-                  <div className="flex items-center gap-2 text-[10px] font-bold text-green-600 bg-green-50 border border-green-200 px-3 py-1.5 rounded-full uppercase tracking-wider">
-                    <Shield className="w-3.5 h-3.5" strokeWidth={2} /> Sessão Ativa
+
+                  {/* Informações Complementares de Contato e Documento */}
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 border-t border-gray-100">
+                    <div className="flex flex-col gap-1.5">
+                      <Label htmlFor="auth-whatsapp" className="text-xs font-bold text-gray-700 uppercase tracking-wider flex items-center gap-1.5">
+                        <span>📱 WhatsApp / Celular</span>
+                        <span className="text-red-500">*</span>
+                      </Label>
+                      <input
+                        id="auth-whatsapp"
+                        type="text"
+                        placeholder="(00) 00000-0000"
+                        value={personalInfo.whatsapp || ''}
+                        onChange={(e) => handlePersonalInfoChange('whatsapp', e.target.value)}
+                        className={`rounded-2xl p-4 text-sm focus:outline-none focus:ring-2 focus:ring-[#c59b5f]/30 transition-all ${
+                          !personalInfo.whatsapp?.trim() 
+                            ? 'bg-amber-50/80 border-2 border-amber-300 text-amber-950 shadow-sm' 
+                            : 'bg-gray-50 border border-gray-200 text-gray-900'
+                        }`}
+                      />
+                      {!personalInfo.whatsapp?.trim() && (
+                        <span className="text-[10px] text-amber-700 font-medium">Informe seu WhatsApp para receber o rastreio do pedido.</span>
+                      )}
+                    </div>
+
+                    <div className="flex flex-col gap-1.5">
+                      <Label htmlFor="auth-cpf" className="text-xs font-bold text-gray-700 uppercase tracking-wider flex items-center gap-1.5">
+                        <span>📄 CPF (Nota Fiscal)</span>
+                        <span className="text-red-500">*</span>
+                      </Label>
+                      <input
+                        id="auth-cpf"
+                        type="text"
+                        inputMode="numeric"
+                        placeholder="000.000.000-00"
+                        value={personalInfo.cpf || ''}
+                        onChange={(e) => handlePersonalInfoChange('cpf', formatCPF(e.target.value))}
+                        className={`rounded-2xl p-4 text-sm focus:outline-none focus:ring-2 focus:ring-[#c59b5f]/30 transition-all ${
+                          (!personalInfo.cpf || personalInfo.cpf.replace(/\D/g, '').length !== 11)
+                            ? 'bg-amber-50/80 border-2 border-amber-300 text-amber-950 shadow-sm' 
+                            : 'bg-gray-50 border border-gray-200 text-gray-900'
+                        }`}
+                      />
+                      {(!personalInfo.cpf || personalInfo.cpf.replace(/\D/g, '').length !== 11) && (
+                        <span className="text-[10px] text-amber-700 font-medium">CPF obrigatório para emissão da NF-e e envio seguro.</span>
+                      )}
+                    </div>
                   </div>
                 </div>
               ) : (
@@ -488,7 +534,11 @@ export default function Checkout() {
                     </div>
                     <span className="font-bold text-gray-900 text-sm tracking-wide">Cartão de Crédito</span>
                   </div>
-                  <p className="text-xs text-gray-400 font-light mt-2 ml-8">Em até 6x no cartão</p>
+                  <p className="text-xs text-gray-400 font-light mt-2 ml-8">
+                    {maxCardInstallments > 1
+                      ? `Em até ${maxCardInstallments}x de R$ ${cardInstallmentValue} no cartão`
+                      : `1x de R$ ${(finalTotal || 0).toFixed(2).replace('.', ',')} no cartão`}
+                  </p>
                 </div>
 
                 <div

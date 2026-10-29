@@ -82,7 +82,7 @@ export default function ProductCard({
   // 1. Limite dinâmico do gatilho configurado no painel admin (Configurações > Descontos > Gatilhos & Regras)
   const limiteUpgrade = configuracoes?.limite_upgrade_revenda != null 
     ? parseFloat(configuracoes.limite_upgrade_revenda) 
-    : 200;
+    : 69.90;
 
   // 2. Maior porcentagem configurada no painel admin (Configurações > Descontos > Varejo ou Atacado)
   const faixasProgressivas = isReseller

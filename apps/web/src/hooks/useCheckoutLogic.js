@@ -24,7 +24,18 @@ export function useCheckoutLogic() {
   const { currentUser } = useAuth();
   const { cart, getCartTotal, getActiveDiscount, getPixBenefitEligibility, removeFromCart, clearCart, getItemPrice } = useCart();
 
-  const [limiteUpgrade, setLimiteUpgrade] = useState(500);
+  const [limiteUpgrade, setLimiteUpgrade] = useState(69.90);
+
+  // High #22: Dynamically load wholesale minimum threshold from database settings
+  useEffect(() => {
+    descontosService.getConfiguracoes()
+      .then(config => {
+        if (config) {
+          setLimiteUpgrade(descontosService.getLimiteUpgrade(config));
+        }
+      })
+      .catch(err => console.error('[useCheckoutLogic] Erro ao carregar configurações de atacado:', err));
+  }, []);
 
   const [personalInfo, setPersonalInfo] = useState({
     nome: '',
@@ -117,17 +128,22 @@ export function useCheckoutLogic() {
   const [boletoValorMinimo, setBoletoValorMinimo] = useState(59.90);
   const [localPickupConfig, setLocalPickupConfig] = useState(null);
 
-  // Sync Boleto configs from PocketBase settings
+  const [mpMaxParcelas, setMpMaxParcelas] = useState(6);
+  const [mpParcelaMinima, setMpParcelaMinima] = useState(10.00);
+
+  // Sync Boleto & Mercado Pago parcelamento configs from PocketBase settings
   useEffect(() => {
-    const fetchBoletoConfigs = async () => {
+    const fetchPaymentConfigs = async () => {
       try {
         const records = await pb.collection('integracoes_config').getFullList({
-          filter: 'chave_nome = "boleto_ativo" || chave_nome = "boleto_vencimento_dias" || chave_nome = "boleto_valor_minimo"',
+          filter: 'chave_nome = "boleto_ativo" || chave_nome = "boleto_vencimento_dias" || chave_nome = "boleto_valor_minimo" || chave_nome = "mp_parcelas_max" || chave_nome = "mp_parcela_minima"',
           $autoCancel: false
         });
         const activeRecord = records.find(r => r.chave_nome === 'boleto_ativo');
         const daysRecord = records.find(r => r.chave_nome === 'boleto_vencimento_dias');
         const minRecord = records.find(r => r.chave_nome === 'boleto_valor_minimo');
+        const mpMaxRecord = records.find(r => r.chave_nome === 'mp_parcelas_max');
+        const mpMinRecord = records.find(r => r.chave_nome === 'mp_parcela_minima');
 
         if (activeRecord) {
           setIsBoletoActive(activeRecord.chave_valor === 'true');
@@ -138,11 +154,23 @@ export function useCheckoutLogic() {
         if (minRecord && minRecord.chave_valor) {
           setBoletoValorMinimo(parseFloat(minRecord.chave_valor) || 59.90);
         }
+        if (mpMaxRecord && mpMaxRecord.chave_valor) {
+          const parsed = parseInt(mpMaxRecord.chave_valor, 10);
+          if (!isNaN(parsed) && parsed >= 1 && parsed <= 12) {
+            setMpMaxParcelas(parsed);
+          }
+        }
+        if (mpMinRecord && mpMinRecord.chave_valor) {
+          const parsed = parseFloat(mpMinRecord.chave_valor);
+          if (!isNaN(parsed) && parsed > 0) {
+            setMpParcelaMinima(parsed);
+          }
+        }
       } catch (err) {
-        console.warn('[useCheckoutLogic] Erro ao carregar configurações de boleto:', err);
+        console.warn('[useCheckoutLogic] Erro ao carregar configurações de pagamento:', err);
       }
     };
-    fetchBoletoConfigs();
+    fetchPaymentConfigs();
   }, []);
 
   // Sync addresses if toggle is active
@@ -458,6 +486,20 @@ export function useCheckoutLogic() {
         } catch (errUpdate) {
           console.warn('[Checkout] Erro ao atualizar total de compras do cliente:', errUpdate);
         }
+
+        // Auto-save WhatsApp and CPF into user profile so customer never has to type it again
+        if (currentUser) {
+          try {
+            const userUpdates = {};
+            if (!currentUser.whatsapp && personalInfo.whatsapp) userUpdates.whatsapp = personalInfo.whatsapp;
+            if (!currentUser.cpf && personalInfo.cpf) userUpdates.cpf = personalInfo.cpf;
+            if (Object.keys(userUpdates).length > 0) {
+              await pb.collection('users').update(createdOrder.cliente_id, userUpdates, { $autoCancel: false });
+            }
+          } catch (errUserUp) {
+            console.warn('[Checkout] Erro ao sincronizar WhatsApp/CPF no cadastro do usuário:', errUserUp);
+          }
+        }
       }
 
       // Order created successfully!
@@ -539,6 +581,8 @@ export function useCheckoutLogic() {
     isBoletoAvailable,
     boletoValorMinimo,
     boletoVencimentoDias,
+    mpMaxParcelas,
+    mpParcelaMinima,
     shippingCost,
     removeFromCart,
     clearCart,

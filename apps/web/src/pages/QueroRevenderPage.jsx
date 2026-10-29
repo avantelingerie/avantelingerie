@@ -46,7 +46,7 @@ export default function QueroRevenderPage() {
     return `${max}%`;
   };
 
-  const limiteUpgrade = configuracoes?.limite_upgrade_revenda || 500;
+  const limiteUpgrade = Number(configuracoes?.limite_upgrade_revenda) || 69.90;
 
   // Simulator State
   const [investimento, setInvestimento] = useState(1000);

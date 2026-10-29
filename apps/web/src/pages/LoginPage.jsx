@@ -390,7 +390,9 @@ export default function LoginPage() {
                   <Label htmlFor="login-email">E-mail</Label>
                   <Input
                     id="login-email"
+                    name="email"
                     type="email"
+                    autoComplete="username"
                     placeholder="seu@email.com"
                     required
                     value={loginData.email}
@@ -407,7 +409,9 @@ export default function LoginPage() {
                   </div>
                   <Input
                     id="login-password"
+                    name="password"
                     type="password"
+                    autoComplete="current-password"
                     placeholder="••••••••"
                     required
                     value={loginData.password}

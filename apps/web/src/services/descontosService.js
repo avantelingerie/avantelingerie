@@ -91,10 +91,10 @@ export const descontosService = {
     return configuracoes.desconto_progressivo_faixas || [];
   },
 
-  // Retorna o valor limite para se tornar revendedora padrão (R$ 500,00)
+  // Retorna o valor limite para se tornar revendedora padrão (R$ 69,90)
   getLimiteUpgrade(configuracoes) {
     if (!configuracoes || configuracoes.limite_upgrade_revenda == null) {
-      return 500.00; // Sensible default minimum for wholesale
+      return 69.90; // Default threshold aligned with business plan (R$ 69,90)
     }
     return parseFloat(configuracoes.limite_upgrade_revenda);
   },

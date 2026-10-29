@@ -44,7 +44,7 @@ import { generateProductJsonLd } from '../utils/schemaProduct.js';
 export default function ProductPage() {
   const { id } = useParams();
   const navigate = useNavigate();
-  const { cart, addToCart, getTotalPrice, getPixBenefitEligibility } = useCart();
+  const { cart, addToCart, getTotalPrice, getPixBenefitEligibility, getNextTierInfo } = useCart();
   const { currentUser } = useAuth();
 
   const [product, setProduct] = useState(null);
@@ -820,28 +820,11 @@ export default function ProductPage() {
     let toastMessage = '';
     const desc = `Tamanho: ${selectedSize} | Cor: ${colorName}`;
 
-    if (isReseller) {
-      if (newTotal >= 3000 && currentCartTotal < 3000) {
-        toastMessage = `${quantity} conjuntos adicionados ao lote - Sensacional! Desconto máximo de atacado ativado.`;
-      } else if (newTotal >= 1500 && currentCartTotal < 1500) {
-        toastMessage = `${quantity} conjuntos adicionados ao lote - Excelente! Novo patamar de desconto extra desbloqueado.`;
-      } else if (newTotal < 1500) {
-        toastMessage = `${quantity} conjuntos adicionados - Faltam ${formatPrice(1500 - newTotal)} para liberar 10% OFF EXTRA no atacado.`;
-      } else {
-        toastMessage = `${quantity} conjuntos adicionados ao lote de atacado!`;
-      }
+    const nextTier = getNextTierInfo();
+    if (nextTier && nextTier.remaining > 0) {
+      toastMessage = `${quantity} ${isReseller ? 'peças adicionadas' : 'itens adicionados'} à sacola - Faltam apenas ${formatPrice(nextTier.remaining)} para liberar ${nextTier.label} de desconto progressivo`;
     } else {
-      if (newTotal >= 900 && currentCartTotal < 900) {
-        toastMessage = `${quantity} itens adicionados à sacola - Parabéns! Novo desconto desbloqueado`;
-      } else if (newTotal >= 300 && currentCartTotal < 300) {
-        toastMessage = `${quantity} itens adicionados à sacola - Parabéns! Novo desconto desbloqueado`;
-      } else if (newTotal < 300) {
-        toastMessage = `${quantity} itens adicionados à sacola - Faltam apenas ${formatPrice(300 - newTotal)} para desbloquear seu próximo benefício`;
-      } else if (newTotal < 900) {
-        toastMessage = `${quantity} itens adicionados à sacola - Faltam apenas ${formatPrice(900 - newTotal)} para desbloquear seu próximo benefício`;
-      } else {
-        toastMessage = `${quantity} itens adicionados à sacola com sucesso!`;
-      }
+      toastMessage = `${quantity} ${isReseller ? 'peças adicionadas' : 'itens adicionados'} à sacola com sucesso!`;
     }
 
     toast.success(toastMessage, { description: desc, duration: 4500 });

@@ -214,6 +214,11 @@ class MercadoPagoService {
       excludedTypes.push({ id: 'credit_card' });
       excludedTypes.push({ id: 'debit_card' });
       excludedTypes.push({ id: 'consumer_credits' });
+    } else if (order.metodo_pagamento === 'credit_card') {
+      // Se selecionou cartão de crédito no checkout da loja, direciona direto para cartão
+      excludedTypes.push({ id: 'ticket' });
+      excludedTypes.push({ id: 'bank_transfer' });
+      excludedTypes.push({ id: 'consumer_credits' });
     }
 
     // Remove duplicatas de excludedTypes se houver
@@ -221,8 +226,14 @@ class MercadoPagoService {
       new Map(excludedTypes.map(item => [item.id, item])).values()
     );
 
+    // Calcula o limite real de parcelas respeitando o valor mínimo da parcela configurado no Admin
+    const maxConfigInstallments = creds.maxInstallments || 6;
+    const minInstallmentAmount = creds.minInstallmentAmount && creds.minInstallmentAmount > 0 ? creds.minInstallmentAmount : 9.90;
+    const calculatedMaxByMinAmount = Math.max(1, Math.floor(finalTotal / minInstallmentAmount));
+    const effectiveInstallments = Math.min(maxConfigInstallments, calculatedMaxByMinAmount);
+
     const paymentMethods = {
-      installments: creds.maxInstallments || 6,
+      installments: effectiveInstallments,
       excluded_payment_methods: [],
       excluded_payment_types: uniqueExcludedTypes,
     };
@@ -238,6 +249,7 @@ class MercadoPagoService {
         failure: `${baseUrl}/checkout?status=failure&order_id=${order.id}`,
       },
       auto_return: 'approved',
+      binary_mode: true,
       notification_url: `${apiUrl}/webhooks/mercadopago`,
       external_reference: String(order.id),
       statement_descriptor: 'AVANTE LINGERIE',
