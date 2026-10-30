@@ -13,6 +13,7 @@ import CheckoutAddressForm from '@/components/CheckoutAddressForm.jsx';
 import CheckoutOrderSummary from '@/components/CheckoutOrderSummary.jsx';
 import CheckoutMicroOffer from '@/components/CheckoutMicroOffer.jsx';
 import { trackInitiateCheckout } from '@/lib/marketingPixels.js';
+import { getGenderTerms } from '@/utils/genderHelper.js';
 
 // CORRIGIDO: máscara de CPF aplicada durante a digitação (000.000.000-00)
 const formatCPF = (value) => {
@@ -62,6 +63,7 @@ export default function Checkout() {
     localPickupConfig
   } = useCheckoutLogic();
 
+  const genderTerms = getGenderTerms(currentUser?.name || currentUser?.nome_completo || personalInfo?.nome);
   const hasEncomendaItems = cart.some(item => Boolean(item.is_encomenda));
 
   const maxCardInstallments = Math.min(
@@ -230,7 +232,7 @@ export default function Checkout() {
                   <div className="flex-1">
                     <h4 className="font-bold text-red-900 text-sm uppercase">Pedido abaixo do mínimo de atacado</h4>
                     <p className="text-xs text-red-700 mt-1 leading-relaxed">
-                      Como revendedora oficial, o valor mínimo do seu pedido de atacado deve ser de <strong>R$ {limiteUpgrade.toFixed(2)}</strong>.
+                      Como {genderTerms.revendedorMinusculo} oficial, o valor mínimo do seu pedido de atacado deve ser de <strong>R$ {limiteUpgrade.toFixed(2)}</strong>.
                       Seu carrinho atual é de <strong>R$ {subtotal.toFixed(2)}</strong>. Por favor, retorne ao carrinho para completar seu pedido ou alterar para varejo.
                     </p>
                     <div className="flex flex-wrap gap-3 mt-4">

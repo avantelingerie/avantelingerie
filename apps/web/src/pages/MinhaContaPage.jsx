@@ -15,6 +15,7 @@ import { useAuth } from '@/context/AuthContext.jsx';
 import { Button } from '@/components/ui/button.jsx';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs.jsx';
 import { Skeleton } from '@/components/ui/skeleton.jsx';
+import { getGenderTerms } from '@/utils/genderHelper.js';
 
 export default function MinhaContaPage() {
   const navigate = useNavigate();
@@ -52,6 +53,7 @@ export default function MinhaContaPage() {
   }, [currentUser]);
 
   const isReseller = currentUser?.commercial_profile === 'reseller' || currentUser?.tipo_cliente === 'revendedor';
+  const genderTerms = getGenderTerms(currentUser?.name || currentUser?.nome_completo || formData.name);
 
   // Calculate dynamic accountLevel
   let accountLevel = 'basic';
@@ -352,7 +354,7 @@ export default function MinhaContaPage() {
             {isReseller ? (
               <>
                 <span className="bg-[#c59b5f] text-black font-extrabold text-[9px] sm:text-xs uppercase tracking-widest px-3 py-1 rounded-full shadow-md flex items-center gap-1">
-                  <Crown className="w-3.5 h-3.5" /> Revendedora PRO
+                  <Crown className="w-3.5 h-3.5" /> {genderTerms.badgeRevenda}
                 </span>
                 {renderLevelBadge()}
               </>
@@ -418,7 +420,7 @@ export default function MinhaContaPage() {
                 >
                   <div>
                     <h2 className="text-2xl font-serif font-bold text-gray-900 mb-1 flex items-center gap-2">
-                      Bem-vinda à sua área exclusiva
+                      {genderTerms.bemVindo} à sua área exclusiva
                     </h2>
                     <p className="text-gray-400 text-xs font-light">
                       Acompanhe o andamento de suas compras e aproveite as ferramentas do nosso ateliê.

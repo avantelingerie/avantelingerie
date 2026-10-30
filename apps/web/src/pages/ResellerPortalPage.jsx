@@ -9,9 +9,11 @@ import {
 import { useAuth } from '@/context/AuthContext.jsx';
 import pb from '@/lib/pocketbaseClient.js';
 import { toast } from 'sonner';
+import { getGenderTerms } from '@/utils/genderHelper.js';
 
 export default function ResellerPortalPage() {
   const { currentUser, updateUser } = useAuth();
+  const genderTerms = getGenderTerms(currentUser?.name || currentUser?.nome || currentUser?.nome_completo);
 
   // Tab/Screen state
   const [activeTab, setActiveTab] = useState('dashboard'); // 'dashboard', 'downloads', 'pricing', 'catalog'
@@ -480,10 +482,10 @@ export default function ResellerPortalPage() {
           <div className="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-6">
             <div className="space-y-3 text-left">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#C59B5F]/20 border border-[#C59B5F]/30 text-[#C59B5F] font-bold text-[10px] tracking-wider uppercase">
-                <Crown className="w-3.5 h-3.5" /> Parceira {isGold ? 'Gold Elite' : 'Silver Verified'}
+                <Crown className="w-3.5 h-3.5" /> {genderTerms.isMale ? 'Parceiro' : 'Parceira'} {isGold ? 'Gold Elite' : 'Silver Verified'}
               </div>
               <h1 className="text-3xl sm:text-4xl font-serif font-bold text-white">
-                Seja bem-vinda ao Portal, {currentUser?.nome || 'Revendedora Avante'}!
+                {genderTerms.sejaBemVindo} ao Portal, {currentUser?.nome || currentUser?.name || (genderTerms.isMale ? 'Revendedor Avante' : 'Revendedora Avante')}!
               </h1>
               <p className="text-white/70 text-sm font-light max-w-xl">
                 Parabéns pelo seu faturamento! Você tem acesso a preços de fábrica exclusivos, kits com alto faturamento e recursos avançados de anúncios.

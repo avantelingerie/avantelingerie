@@ -2,6 +2,7 @@ import 'dotenv/config';
 import axios from 'axios';
 import logger from '../utils/logger.js';
 import { Resend } from 'resend';
+import { getGenderTerms } from '../utils/genderHelper.js';
 
 function getResendClient() {
     const key = process.env.RESEND_API_KEY;
@@ -109,7 +110,8 @@ class NotificationService {
             }
         }
 
-        const firstName = (name || 'Revendedora').trim().split(' ')[0];
+        const genderTerms = getGenderTerms(name);
+        const firstName = (name || genderTerms.revendedor).trim().split(' ')[0];
         
         // 2. Sanitização estrita de telefone (Portão Nemotron: DDI 55)
         let cleanPhone = (phone || '').replace(/\D/g, '');
@@ -117,8 +119,8 @@ class NotificationService {
             cleanPhone = '55' + cleanPhone;
         }
 
-        // 3. Cópia oficial persuasiva da Lia para WhatsApp
-        const messageWa = `Olá, ${firstName}! Tudo bem? Aqui é a Lia, consultora de revenda da *Avante Lingerie*, direto da nossa fábrica em Nova Friburgo/RJ! 🌸✨\n\nPassando para te dar as *boas-vindas oficiais ao nosso Clube de Revendedoras VIP!* 👑\n\nSeu cadastro foi ativado com sucesso e eu tenho uma notícia espetacular para te dar:\n\n🚨 *ESPECIAL BLACK FRIDAY & FIM DE ANO:*\nPara você já começar lucrando alto na melhor época de vendas do ano, nossa confecção liberou o *Acesso Direto de Fábrica com Pedido Mínimo de apenas R$ 69,90!*\n\n❌ Nada de pedidos de R$ 500 ou R$ 1.000 para começar.\n✅ Com apenas *R$ 69,90* no carrinho, toda a nossa tabela de atacado destrava automaticamente para você!\n\n💎 *Por que lucrar com a Avante neste fim de ano?*\n- *Margem de 100% a 150% de lucro líquido* no seu bolso.\n- *Preço de fábrica imbatível* (você compete de igual para igual e supera qualquer Shopee em qualidade e acabamento).\n- *+5% OFF no PIX à vista* ou parcelamento em *até 6x no cartão*.\n- Peças com forro 100% algodão e modelagem que não enrola — cliente que compra, fideliza na hora!\n\nO movimento de Natal e festas de fim de ano já começou! Quer que eu te envie a seleção das *5 peças mais vendidas da fábrica* para você montar seu primeiro kit de R$ 69,90?\n\nOu se preferir, já pode acessar direto o nosso site oficial e ver seus preços de custo destravados:\n👉 https://avantelingerie.com.br/\n\nQualquer dúvida com tamanhos ou tecidos, estou aqui para te ajudar a montar o pedido perfeito! Conte comigo! 💖🧵`;
+        // 3. Cópia oficial persuasiva da Lia para WhatsApp (com gênero dinâmico)
+        const messageWa = `Olá, ${firstName}! Tudo bem? Aqui é a Lia, consultora de revenda da *Avante Lingerie*, direto da nossa fábrica em Nova Friburgo/RJ! 🌸✨\n\nPassando para te dar as *boas-vindas oficiais ao nosso ${genderTerms.clubeRevendedores}!* 👑\n\nSeu cadastro foi ativado com sucesso e eu tenho uma notícia espetacular para te dar:\n\n🚨 *ESPECIAL BLACK FRIDAY & FIM DE ANO:*\nPara você já começar lucrando alto na melhor época de vendas do ano, nossa confecção liberou o *Acesso Direto de Fábrica com Pedido Mínimo de apenas R$ 69,90!*\n\n❌ Nada de pedidos de R$ 500 ou R$ 1.000 para começar.\n✅ Com apenas *R$ 69,90* no carrinho, toda a nossa tabela de atacado destrava automaticamente para você!\n\n💎 *Por que lucrar com a Avante neste fim de ano?*\n- *Margem de 100% a 150% de lucro líquido* no seu bolso.\n- *Preço de fábrica imbatível* (você compete de igual para igual e supera qualquer Shopee em qualidade e acabamento).\n- *+5% OFF no PIX à vista* ou parcelamento em *até 6x no cartão*.\n- Peças com forro 100% algodão e modelagem que não enrola — cliente que compra, fideliza na hora!\n\nO movimento de Natal e festas de fim de ano já começou! Quer que eu te envie a seleção das *5 peças mais vendidas da fábrica* para você montar seu primeiro kit de R$ 69,90?\n\nOu se preferir, já pode acessar direto o nosso site oficial e ver seus preços de custo destravados:\n👉 https://avantelingerie.com.br/\n\nQualquer dúvida com tamanhos ou tecidos, estou aqui para te ajudar a montar o pedido perfeito! Conte comigo! 💖🧵`;
 
         const waLink = cleanPhone.length >= 12 
             ? `https://wa.me/${cleanPhone}?text=${encodeURIComponent(messageWa)}`
@@ -172,7 +174,7 @@ class NotificationService {
                             Parabéns, ${firstName}! Seu acesso de fábrica foi ativado! 👑✨
                           </h2>
                           <p style="margin: 0 0 20px; color: #52525b; font-size: 15px; line-height: 1.6;">
-                            É um grande privilégio ter você como nossa revendedora oficial. A partir de agora, você tem um canal direto com a nossa fábrica aqui na <strong>Capital da Moda Íntima</strong> para abastecer seu negócio com máxima lucratividade.
+                            É um grande privilégio ter você como ${genderTerms.nossoRevendedor}. A partir de agora, você tem um canal direto com a nossa fábrica aqui na <strong>Capital da Moda Íntima</strong> para abastecer seu negócio com máxima lucratividade.
                           </p>
 
                           <!-- Box Destaque Black Friday -->

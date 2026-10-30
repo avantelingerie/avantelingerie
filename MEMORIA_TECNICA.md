@@ -1668,15 +1668,46 @@ Planejamento comercial e técnico estruturado pela Ada e Vértice para alavancar
   - **Causa Raiz Identificada:** No container Docker de produção (`api`), `localhost:3000` se refere ao próprio container da API, gerando `ECONNREFUSED`. O container do WhatsApp bot está no Docker Compose sob o hostname `whatsapp-bot:3000`.
   - **Correção Multi-Host:** Implementada função `sendWhatsAppDirect` que tenta prioritariamente o hostname de produção (`http://whatsapp-bot:3000`), com fallback para `http://localhost:3000` (desenvolvimento local) e variável `WHATSAPP_API_URL` configurada no `.env`.
 - **4. Atualização do Favicon e Ícones Oficiais da Marca (Print 5):**
-  - O novo ícone de luxo fornecido pelo lojista (monograma "A" dourado estilizado com silhueta feminina em fundo preto) foi implementado em `apps/web/public/`:
-    - `favicon.png` (PNG de alta resolução)
-    - `favicon.ico`
-    - `apple-touch-icon.png`
-    - `imagens/logo_avante_fav_icon.png`
-  - Atualizado `apps/web/index.html` com tags `<link rel="icon">`, `<link rel="shortcut icon">` e `<link rel="apple-touch-icon">`.
+  - O monograma "A" dourado estilizado com silhueta feminina em fundo preto (`media_1793314672820.jpg`) foi processado via biblioteca `sharp` em alta definição com sharpening inteligente para nitidez perfeita em abas de navegadores:
+    - `favicon-32x32.png` (32x32 com sharpening otimizado para abas do Chrome/Edge)
+    - `favicon.png` (64x64 de alta resolução)
+    - `favicon.ico` (32x32)
+    - `apple-touch-icon.png` (180x180)
+    - `logo-512.png` (512x512 master)
+    - `imagens/logo_avante_fav_icon.png` (128x128)
+  - Atualizado `apps/web/index.html` com tags explícitas e cache-busting `?v=2` para forçar atualização imediata nos navegadores.
 - **5. Crivo Nemotron & Validações de Engenharia (Sentinel):**
   - Crivo Nemotron executado via terminal.
   - Syntax check Node: 100% aprovado (`node --check apps/api/src/routes/payment.js`, `node --check apps/api/src/services/notificationService.js`).
   - ESLint frontend: 100% aprovado (`npx eslint src/pages/MinhaContaPage.jsx`, 0 erros, 0 avisos).
-  - Build de Produção (`npm run build`): 100% aprovado (`✓ built in 19.43s`, 3113 módulos transformados).
+  - Build de Produção (`npm run build`): 100% aprovado (`✓ built in 43.20s`, 3113 módulos transformados).
+
+---
+
+### Sessão - 29/10/2026 (Módulo de Reconhecimento e Concordância de Gênero por Nome - `genderHelper`)
+- **1. Objetivo de Negócio & Diagnóstico:**
+  - O lojista identificou que seu sócio Dooner dos Santos Almeida (PED-002) recebia comunicações e visualizava títulos no feminino ("Bem-vinda", "Revendedora PRO", "Clube de Revendedoras VIP").
+  - O ecossistema precisava de uma inteligência capaz de inferir o gênero do cliente/parceiro através do primeiro nome, adaptando saudações, cargos e comunicações de forma personalizada e elegante.
+- **2. Arquitetura da Solução (`genderHelper.js`):**
+  - Criado utilitário unificado e de alta performance (`apps/web/src/utils/genderHelper.js` e `apps/api/src/utils/genderHelper.js`):
+    - **Lookup O(1):** Base com mais de 100 nomes masculinos frequentes no Brasil + inclusão específica do nome `dooner`.
+    - **Regras Morfológicas do Português:** Sufixos masculinos consistentes (`-o`, `-os`, `-or`, `-er`, `-el`, `-on`, `-an`, `-im`, `-us`, `-ur`, `-ão`, `-ir`, `-ar`, `-ck`).
+    - **Exceções Femininas:** Nomes com grafias especiais (`Alice`, `Beatriz`, `Carol`, `Ingrid`, `Simone`, `Thais`, etc.).
+    - **Fallback:** Padrão feminino suave apenas para nomes estritamente terminados em `-a` ou desconhecidos no nicho de moda íntima.
+  - Exporta `getGenderTerms(name)` que provê concordâncias completas: `bemVindo` ("Bem-vindo" / "Bem-vinda"), `badgeRevenda` ("Revendedor PRO" / "Revendedora PRO"), `revendedor` ("Revendedor" / "Revendedora"), `clubeRevendedores` ("Clube de Revendedores VIP" / "Clube de Revendedoras VIP") e `nossoRevendedor` ("nosso revendedor oficial" / "nossa revendedora oficial").
+- **3. Integrações Realizadas:**
+  - `MinhaContaPage.jsx`:
+    - Saudação no Painel Geral: `{genderTerms.bemVindo} à sua área exclusiva` (Dooner vê "Bem-vindo à sua área exclusiva").
+    - Badge de Perfil: `<Crown /> {genderTerms.badgeRevenda}` (Dooner vê "Revendedor PRO").
+  - `CartPage.jsx` & `Checkout.jsx`:
+    - Toasts e avisos de limite de atacado personalizados: "Como revendedor oficial..." / "Bem-vindo de volta!".
+  - `ResellerPortalPage.jsx`:
+    - Saudação do portal: `{genderTerms.sejaBemVindo} ao Portal, Dooner!` e badge "Parceiro {tier}".
+  - `notificationService.js`:
+    - WhatsApp da Lia e e-mails VIP transacionais do Resend agora chamam "Clube de Revendedores VIP" e "nosso revendedor oficial" quando o parceiro for homem.
+- **4. Validação de Engenharia (Sentinel):**
+  - Testes unitários com casos reais: `Dooner dos Santos Almeida -> M`, `Maria -> F`, `João -> M`, `Alice -> F`, `Carlos -> M`, `Beatriz -> F`.
+  - Node syntax check backend: 100% aprovado (`node --check`).
+  - ESLint frontend: 100% aprovado (0 erros, 0 avisos em todos os 5 arquivos).
+  - Build de Produção (`npm run build`): 100% aprovado (`✓ built in 27.48s`).
 

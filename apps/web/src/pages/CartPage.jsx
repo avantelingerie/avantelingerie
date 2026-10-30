@@ -10,6 +10,7 @@ import { useAuth } from '@/context/AuthContext.jsx';
 import pb from '@/lib/pocketbaseClient.js';
 import { descontosService } from '@/services/descontosService.js';
 import { trackResellerUpgrade } from '@/lib/marketingPixels.js';
+import { getGenderTerms } from '@/utils/genderHelper.js';
 
 import CartItem from '@/components/CartItem.jsx';
 import ProgressiveDiscountBar from '@/components/ProgressiveDiscountBar.jsx';
@@ -24,6 +25,7 @@ import { Button } from '@/components/ui/button.jsx';
 export default function CartPage() {
   const navigate = useNavigate();
   const { currentUser, isAuthenticated, updateUser, signup, login } = useAuth();
+  const genderTerms = getGenderTerms(currentUser?.name || currentUser?.nome_completo);
   
   const { 
     cart, 
@@ -272,7 +274,7 @@ export default function CartPage() {
 
           updateUser(updatedModel);
           trackResellerUpgrade({ email: updatedModel.email, name: updatedModel.name || updatedModel.nome_completo });
-          toast.success('👑 Bem-vinda de volta! Seu perfil de revenda está ativo e o carrinho foi atualizado.');
+          toast.success(`👑 ${genderTerms.bemVindoDeVolta}! Seu perfil de revenda está ativo e o carrinho foi atualizado.`);
           setShowUpgradeModal(false);
         } else {
           // B) Fast Register & Upgrade
@@ -472,7 +474,7 @@ export default function CartPage() {
                       <div className="flex-1">
                         <h4 className="font-bold text-red-900 text-sm uppercase">Pedido abaixo do mínimo de atacado</h4>
                         <p className="text-xs text-red-700 mt-1 leading-relaxed">
-                          Como revendedora oficial, o valor mínimo do seu pedido de atacado deve ser de <strong>R$ {limiteUpgrade.toFixed(2)}</strong>. 
+                          Como {genderTerms.revendedorMinusculo} oficial, o valor mínimo do seu pedido de atacado deve ser de <strong>R$ {limiteUpgrade.toFixed(2)}</strong>. 
                           Seu carrinho atual é de <strong>R$ {subtotal.toFixed(2)}</strong>. Por favor, adicione mais <strong>R$ {(limiteUpgrade - subtotal).toFixed(2)}</strong> em produtos para finalizar a compra no atacado.
                         </p>
                         <div className="flex flex-wrap gap-3 mt-4">
@@ -561,7 +563,7 @@ export default function CartPage() {
                         </h4>
                         <p className="text-[11px] text-white/70 font-light leading-relaxed">
                           {subtotal >= limiteUpgrade 
-                            ? `Economize R$ ${resellerSaving.toFixed(2).replace('.', ',')} imediatamente neste pedido ativando seu perfil de revendedora!`
+                            ? `Economize R$ ${resellerSaving.toFixed(2).replace('.', ',')} imediatamente neste pedido ativando seu perfil de ${genderTerms.revendedorMinusculo}!`
                             : `Falta R$ ${(limiteUpgrade - subtotal).toFixed(2).replace('.', ',')} para comprar direto de fábrica e economizar cerca de R$ ${resellerSaving.toFixed(2).replace('.', ',')}!`
                           }
                         </p>
@@ -736,7 +738,7 @@ export default function CartPage() {
                 <div className="p-5 md:p-6">
                   <p className="text-gray-600 font-light text-sm text-center leading-relaxed mb-4">
                     Parabéns! Sua sacola atingiu o valor necessário para comprar direto da fábrica. 
-                    Ao ativar seu perfil de revendedora, <strong>você economizará R$ {resellerSaving.toFixed(2).replace('.', ',')} imediatamente</strong> neste pedido!
+                    Ao ativar seu perfil de {genderTerms.revendedorMinusculo}, <strong>você economizará R$ {resellerSaving.toFixed(2).replace('.', ',')} imediatamente</strong> neste pedido!
                   </p>
 
                   <div className="grid grid-cols-3 gap-2 mb-4 bg-gradient-to-br from-[#FFFBF8] to-[#FCF9F5] border border-[#c59b5f]/15 rounded-xl p-3">
