@@ -1792,3 +1792,19 @@ Planejamento comercial e técnico estruturado pela Ada e Vértice para alavancar
   - Ativação via WhatsApp da Lia: Card de luxo na confirmação possui botão de 1 clique que dispara notificação oficial da Lia via bot backend e abre chat direto no WhatsApp com mensagem pré-preenchida.
 - **Crivo Nemotron (Terminal Gate):** Blueprint e regras auditados pelo Nemotron. Ressalvas de atomicidade e anticumulação no backend foram integralmente blindadas com recálculo soberano e revalidação estrita em 'create-order'.
 - **Auditoria Sentinel:** Sintaxe Node checada em 100% dos arquivos de backend. Build Vite ('npm run build') concluído com sucesso absoluto (0 erros, 3114 módulos transformados).
+
+---
+
+### Sessão - 30/10/2026 (Parte 2: Módulo de Prova Social de Alta Costura - Live Social Proof Toast)
+- **Objetivo:** Implementação da persuasão sutil e nobre de prova social em tempo real no canto inferior esquerdo para alavancar a conversão de tráfego frio vindo de Meta Ads e Google Ads.
+- **Arquitetura & Especificações Implementadas:**
+  - Componente: `apps/web/src/components/SocialProofToast.jsx`.
+  - Backend: `apps/api/src/routes/marketing.js` (`GET /marketing/social-proof`) com cache em memória de 10 min.
+  - Posição: `fixed bottom-5 left-4 md:bottom-6 md:left-6 z-40` (equilíbrio com o widget da Lia à direita).
+  - Dimensões: Compacto de luxo (`max-w-[280px] sm:max-w-[325px]`, altura enxuta de ~64px), preto ônix com borda dourada suave (`#c59b5f/30`) e efeito vidro fosco (`backdrop-blur-md`).
+  - Timing: Delay inicial de 11 segundos, duração em tela de 4.5 segundos, intervalo de 28 segundos entre notificações. Máximo de 4 notificações por sessão.
+  - Segurança e LGPD: Anonimização estrita (Primeiro Nome + Inicial, cidade e estado, foto real do produto). Zero PII exposto.
+  - Blindagem de Checkout: Totalmente desativado nas rotas `/checkout`, `/admin`, `/confirmacao` e `/order-confirmation`.
+  - Silenciamento por Sessão: Botão fechar (X) salva no `sessionStorage` e silencia se o visitante optar.
+- **Auditoria Nemotron:** Ressalvas de CLS, Core Web Vitals e dimensões responsivas para mobile atendidas integralmente com transições por `transform: translateY` e `opacity`.
+- **Auditoria Sentinel:** Build de produção (`npm run build`) 100% aprovado em 17.20s (0 erros).
