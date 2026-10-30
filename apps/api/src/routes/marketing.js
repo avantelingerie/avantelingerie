@@ -181,7 +181,7 @@ const CURATED_PROOF_ITEMS = [
     productImage: 'https://images.unsplash.com/photo-1596704017254-9b121068fb31?w=200&auto=format&fit=crop&q=80',
     productUrl: '/categoria/croppeds',
     timeAgo: 'há 14 min',
-    tag: 'Compra no Ateliê',
+    tag: 'COMPRA REALIZADA',
     type: 'varejo'
   },
   {
@@ -214,7 +214,7 @@ const CURATED_PROOF_ITEMS = [
     productImage: 'https://images.unsplash.com/photo-1517445312882-bc9910d016b7?w=200&auto=format&fit=crop&q=80',
     productUrl: '/categoria/pijamas',
     timeAgo: 'há 1 hora',
-    tag: 'Compra no Ateliê',
+    tag: 'COMPRA REALIZADA',
     type: 'varejo'
   },
   {
@@ -303,7 +303,7 @@ router.get('/social-proof', async (req, res) => {
             productImage,
             productUrl: firstItem.id ? `/produto/${firstItem.id}` : '/produto',
             timeAgo,
-            tag: isRevenda ? 'Nova Revendedora' : 'Compra no Ateliê',
+            tag: isRevenda ? 'Nova Revendedora' : 'COMPRA REALIZADA',
             type: isRevenda ? 'atacado' : 'varejo'
           };
         }).filter(item => Boolean(item.productName));
