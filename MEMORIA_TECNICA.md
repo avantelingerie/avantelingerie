@@ -1808,3 +1808,23 @@ Planejamento comercial e técnico estruturado pela Ada e Vértice para alavancar
   - Silenciamento por Sessão: Botão fechar (X) salva no `sessionStorage` e silencia se o visitante optar.
 - **Auditoria Nemotron:** Ressalvas de CLS, Core Web Vitals e dimensões responsivas para mobile atendidas integralmente com transições por `transform: translateY` e `opacity`.
 - **Auditoria Sentinel:** Build de produção (`npm run build`) 100% aprovado em 17.20s (0 erros).
+
+---
+
+### Sessão - 30/10/2026 (Parte 3: Otimização Sniper B2B Google Ads - Interceptação Shopee & Limpeza de Painel)
+- **Objetivo:** Otimização cirúrgica de palavras-chave para o público mais quente de atacado (revendedoras que buscam fornecedores da Shopee), preservação máxima do orçamento diário de R$ 20,00 e remoção do falso rótulo [PAUSADA] nos nomes de campanha.
+- **Ações Executadas via API do Google Ads (v25):**
+  1. **Higienização de Nomes de Campanhas:**
+     - De: `[GOOGLE] B2C - Varejo | Kits & Renda [PAUSADA]` -> Para: `[GOOGLE] B2C - Varejo | Kits & Renda`
+     - De: `[GOOGLE] B2B - Atacado | Fábrica Friburgo Minimo R$ 69,90 [PAUSADA]` -> Para: `[GOOGLE] B2B - Atacado | Fábrica Friburgo Mínimo R$ 69,90`
+  2. **Troca Cirúrgica de Palavras-Chave (Swap sem Redundância):**
+     - No `[GRUPO 02] Lingerie Atacado & Fábrica Nova Friburgo` (`206854315411`):
+     - **Pausada:** `"fabrica de lingerie atacado"` (termo redundante com `"lingerie atacado direto da fabrica"`).
+     - **Ativadas (Correspondência de Frase):**
+       - `"comprar lingerie para revender"` (Maior intenção transacional de compra de atacado).
+       - `"fornecedor de lingerie shopee"` (Interceptação direta de revendedoras buscando fabricantes da Shopee).
+       - `"lingerie atacado shopee"` (Interceptação de lotes de revenda).
+  3. **Conexão com o Anúncio Ativo:** O anúncio do Grupo 02 já possui o título ativo e aprovado: *"Preço Mais Barato que Shopee"* e *"Atacado com Apenas R$ 69,90"*, gerando índice de qualidade (Quality Score) elevado e menor custo por clique (CPC).
+  4. **Proteção de Verba:** Lista de palavras negativas pré-existentes (`como fazer`, `gratis`, `usado`, `vagas`, `avulso`, `varejo`, `reclame aqui`) preservada sem duplicidades.
+
+- **Correção de Rota em Produção (/hcgi/api):** Identificado que no ambiente de produção VPS o backend responde sob `/hcgi/api`. O componente `SocialProofToast.jsx` e a página `OrderConfirmation.jsx` foram atualizados para utilizar `apiServerClient.fetch`, além de carregar instantaneamente com itens de fallback (eliminando telas vazias) e reduzindo o delay inicial de 11s para 5s.

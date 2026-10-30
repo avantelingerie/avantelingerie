@@ -25,6 +25,7 @@ import { Card, CardContent } from '@/components/ui/card.jsx';
 import { Separator } from '@/components/ui/separator.jsx';
 import { Skeleton } from '@/components/ui/skeleton.jsx';
 import pb from '@/lib/pocketbaseClient.js';
+import apiServerClient from '@/lib/apiServerClient.js';
 import ProductCard from '@/components/ProductCard.jsx';
 import { trackPurchase } from '@/lib/marketingPixels.js';
 
@@ -184,7 +185,7 @@ export default function OrderConfirmation() {
 
       // 1. Notifica o backend para disparar mensagem oficial da Lia no WhatsApp
       try {
-        await fetch('/api/notificacoes/ativar-cupom-vip', {
+        await apiServerClient.fetch('/notificacoes/ativar-cupom-vip', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({

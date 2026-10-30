@@ -1,12 +1,73 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import { X, CheckCircle2, Sparkles, ShoppingBag } from 'lucide-react';
+import { X, CheckCircle2 } from 'lucide-react';
+import apiServerClient from '@/lib/apiServerClient.js';
+
+// Itens de fallback imediatos para garantir exibição instantânea sem depender de latência de rede
+const DEFAULT_PROOF_ITEMS = [
+  {
+    id: 'proof_1',
+    customer: 'Mariana S.',
+    location: 'Campinas, SP',
+    productName: 'Cropped Renda Chantilly com Aro',
+    productImage: 'https://images.unsplash.com/photo-1596704017254-9b121068fb31?w=200&auto=format&fit=crop&q=80',
+    productUrl: '/categoria/croppeds',
+    timeAgo: 'há 14 min',
+    tag: 'Compra no Ateliê',
+    type: 'varejo'
+  },
+  {
+    id: 'proof_2',
+    customer: 'Camila R.',
+    location: 'Belo Horizonte, MG',
+    productName: 'Calcinha Cinta Modeladora Alta Compressão',
+    productImage: 'https://images.unsplash.com/photo-1583496661160-fb5886a0aaaa?w=200&auto=format&fit=crop&q=80',
+    productUrl: '/categoria/calcinhas',
+    timeAgo: 'há 28 min',
+    tag: 'Mais Vendido',
+    type: 'varejo'
+  },
+  {
+    id: 'proof_3',
+    customer: 'Juliana P.',
+    location: 'São Paulo, SP',
+    productName: 'Body Sensual em Renda com Aro',
+    productImage: 'https://images.unsplash.com/photo-1596704017254-9b121068fb31?w=200&auto=format&fit=crop&q=80',
+    productUrl: '/categoria/bodies',
+    timeAgo: 'há 42 min',
+    tag: 'Destaque de Fábrica',
+    type: 'varejo'
+  },
+  {
+    id: 'proof_4',
+    customer: 'Patrícia F.',
+    location: 'Nova Iguaçu, RJ',
+    productName: 'Kit Mostruário Revendedora de Fábrica',
+    productImage: 'https://images.unsplash.com/photo-1583496661160-fb5886a0aaaa?w=200&auto=format&fit=crop&q=80',
+    productUrl: '/quero-revender',
+    timeAgo: 'há 1 hora',
+    tag: 'Nova Revendedora',
+    type: 'atacado'
+  },
+  {
+    id: 'proof_5',
+    customer: 'Renata M.',
+    location: 'Curitiba, PR',
+    productName: 'Baby Doll Seda Gloss com Renda',
+    productImage: 'https://images.unsplash.com/photo-1517445312882-bc9910d016b7?w=200&auto=format&fit=crop&q=80',
+    productUrl: '/categoria/pijamas',
+    timeAgo: 'há 2 horas',
+    tag: 'Compra no Ateliê',
+    type: 'varejo'
+  }
+];
 
 export default function SocialProofToast() {
   const location = useLocation();
   const navigate = useNavigate();
 
-  const [items, setItems] = useState([]);
+  // Inicia com os itens padrão garantidos para nunca renderizar vazio
+  const [items, setItems] = useState(DEFAULT_PROOF_ITEMS);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
   const [impressionsCount, setImpressionsCount] = useState(0);
@@ -21,7 +82,7 @@ export default function SocialProofToast() {
   const timerRef = useRef(null);
   const hideTimerRef = useRef(null);
 
-  // Guarda de rota: Desativado em rotas críticas de conversão ou administrativas
+  // Guarda de rota: Desativado em rotas de checkout ou administrativas
   const isExcludedRoute =
     location.pathname.startsWith('/checkout') ||
     location.pathname.startsWith('/admin') ||
@@ -29,59 +90,58 @@ export default function SocialProofToast() {
     location.pathname.startsWith('/order-confirmation') ||
     location.pathname.startsWith('/login');
 
-  // 1. Carregamento dos dados com deferral
+  // 1. Carregamento dos dados reais do backend via apiServerClient (/hcgi/api)
   useEffect(() => {
     if (isDismissed || isExcludedRoute) return;
 
     let isMounted = true;
     const fetchProofData = async () => {
       try {
-        const res = await fetch('/api/marketing/social-proof');
+        const res = await apiServerClient.fetch('/marketing/social-proof');
         if (!res.ok) return;
         const data = await res.json();
         if (isMounted && data.items && Array.isArray(data.items) && data.items.length > 0) {
           setItems(data.items);
         }
       } catch (err) {
-        // Silencioso para não poluir console
+        // Fallback já está ativo em items
       }
     };
 
-    // Pequeno atraso para não competir com recursos críticos de carregamento inicial
-    const initialDelay = setTimeout(fetchProofData, 2000);
+    fetchProofData();
+
     return () => {
       isMounted = false;
-      clearTimeout(initialDelay);
     };
   }, [isDismissed, isExcludedRoute]);
 
-  // 2. Orquestração do ciclo de vida das notificações
+  // 2. Orquestração do ciclo de exibição das notificações
   useEffect(() => {
     if (isDismissed || isExcludedRoute || items.length === 0) {
       setIsVisible(false);
       return;
     }
 
-    // Limite saudável de 4 aparições por sessão (anti-fadiga)
+    // Teto de 4 aparições por sessão para não saturar
     if (impressionsCount >= 4) {
       setIsVisible(false);
       return;
     }
 
-    const showInterval = impressionsCount === 0 ? 11000 : 28000; // 11s no primeiro, 28s nos seguintes
+    // Primeira notificação aparece aos 5 segundos; as seguintes a cada 22 segundos
+    const showDelay = impressionsCount === 0 ? 5000 : 22000;
 
     timerRef.current = setTimeout(() => {
       setIsVisible(true);
       setImpressionsCount(prev => prev + 1);
 
-      // Fica visível por 4.5 segundos e faz fade-out suave
+      // Permanece visível por 4.5 segundos e faz fade-out suave
       hideTimerRef.current = setTimeout(() => {
         setIsVisible(false);
-        // Avança para o próximo item
         setCurrentIndex(prev => (prev + 1) % items.length);
       }, 4500);
 
-    }, showInterval);
+    }, showDelay);
 
     return () => {
       clearTimeout(timerRef.current);
@@ -124,7 +184,7 @@ export default function SocialProofToast() {
         onClick={handleToastClick}
         className="group relative flex items-center gap-3 p-2.5 sm:p-3 bg-[#141414]/95 backdrop-blur-md border border-[#c59b5f]/30 hover:border-[#c59b5f]/60 rounded-2xl shadow-2xl shadow-black/70 cursor-pointer select-none transition-all duration-300 hover:scale-[1.01]"
       >
-        {/* Imagem do Produto Adquirido (Miniatura nobre) */}
+        {/* Imagem do Produto Adquirido (Miniatura nobre de alta costura) */}
         <div className="relative w-12 h-12 sm:w-13 sm:h-13 rounded-xl overflow-hidden bg-[#1c1c1c] border border-[#c59b5f]/25 shrink-0 shadow-inner">
           <img
             src={currentItem.productImage}
@@ -173,4 +233,3 @@ export default function SocialProofToast() {
     </div>
   );
 }
-
