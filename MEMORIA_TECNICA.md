@@ -1751,3 +1751,29 @@ Planejamento comercial e tÃ©cnico estruturado pela Ada e VÃ©rtice para alavancar
   - **Meta Ads:** 6 anÃºncios confirmados como **`ACTIVE`** (AD 01 Calcinha Cinta, AD 02 Cropped, AD 03 Pijama, AD 04 Carrossel, AD B2B 01, AD B2B 02). Zero erros ou bloqueios remanescentes na conta.
   - Ponto de Parada: OperaÃ§Ã£o no ar. Monitorar primeiras mÃ©tricas de impressÃµes, CTR e vendas na loja.
 
+
+---
+
+### Diretriz Fixa de Comunicação - Relatórios Matinais (30/10/2026)
+- **Destinatário Final:** Luiz Machado apresentando diretamente ao seu sócio.
+- **Perfil do Sócio:** Leigo em tráfego pago / marketing digital. Não domina jargões técnicos (CTR, CPC, CAPI, Pixel, RSAs).
+- **Formato Obrigatório do Relatório das 09h00:**
+  - Redigido em primeira pessoa (*Luiz falando com o sócio*), pronto para leitura, áudio ou envio direto no WhatsApp/reunião.
+  - Tradução imediata de qualquer métrica técnica para linguagem de negócio:
+    - Investimento = Dinheiro colocado no dia;
+    - Impressões = Quantas vezes a nossa marca apareceu na tela das pessoas;
+    - Cliques / CTR = Pessoas interessadas que clicaram para ver nossas peças;
+    - CPC = Quanto custou para colocar cada visitante dentro da nossa loja ou no WhatsApp da Lia;
+    - Meta vs Google = Redes sociais (Instagram/Facebook) vs Buscas ativas no Google;
+    - Próximo passo = Ação prática do dia sem termos difíceis.
+
+
+- **Saudação e Fechamento Padronizados (Obrigatórios):**
+  - **Abertura:** 'Bom dia meu amado! A Paz do Senhor Jesus. Um dia abençoado pra nós. Um raio-X de hoje de como acordaram os nossos anúncios que colocamos no ar ontem no Instagram, Facebook e Google.'
+  - **Encerramento:** 'Seguimos com a operação redonda e vamos nos atualizando todos os dias às 9h, ok?!'
+
+
+- **Regras Inegociáveis de Automação e Otimização:**
+  - **Entrega Automática Matinal:** Na primeira interação do dia (ou às 9h), a Ada entrega o relatório matinal automaticamente, sem o Luiz precisar pedir.
+  - **Portão de Permissão Estrita (Zero Mutação Sem Aval):** A Ada NUNCA altera orçamentos, pausa criativos ou mexe em campanhas por conta própria. O fluxo obrigatório é: Apresentar o Relatório Matinal -> Explicar a proposta e o motivo -> Perguntar: 'Posso executar essa otimização?' -> Aguardar autorização expressa do Luiz -> Somente após o 'Ok' ou 'Pode executar', realizar a mutação via API e emitir o comprovante.
+
