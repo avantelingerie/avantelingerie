@@ -1711,3 +1711,43 @@ Planejamento comercial e técnico estruturado pela Ada e Vértice para alavancar
   - ESLint frontend: 100% aprovado (0 erros, 0 avisos em todos os 5 arquivos).
   - Build de Produção (`npm run build`): 100% aprovado (`✓ built in 27.48s`).
 
+---
+
+### Sessão - 29/10/2026 (Ativação Oficial e Histórica: Google Ads & Meta Ads Ao Vivo)
+- **1. Auditoria Panorâmica & Validação em Tempo Real (MCPs Oficiais):**
+  - **Google Ads API v25:**
+    - Conta: `1394292049` (Avante Lingerie).
+    - Faturamento: `billing_setup` `8626933064` com status **`APPROVED`** (Perfil: `3585-0843-9051`, AVANTE LINGERIE LTDA).
+    - Conversões: Tag nativa de compra `AW-18499593515/I3OOCNz7z6QdEKvKpfVE` confirmada como primária com meta exclusiva `PURCHASE` (`biddable: true`).
+    - Redes: 100% blindadas para Apenas Pesquisa (`targetSearchNetwork: false`, `targetContentNetwork: false`), alvo com `PRESENCE` físico no Brasil.
+    - Palavras-chave: 21 termos em frase/exata e 66 negativas aplicadas cirurgicamente.
+  - **Meta Graph API v21:**
+    - Conta: `act_841441889539975` (Avante Lingerie | Confecção de Moda Intima).
+    - Faturamento: Status `ACTIVE`, `HAS_VALID_PAYMENT_METHODS`, saldo pré-pago ativo de R$ 101,23 BRL.
+    - Pixels: `981595838258999` e `1586501669344280` confirmados na API como vinculados à conta de anúncios, recebendo disparos em tempo real com desduplicação CAPI.
+    - Blindagem de IA: `OPT_OUT` em melhorias invasivas de CTA e multi-anunciantes em todos os criativos.
+- **2. Diagnóstico & Saneamento do Chrome Local:**
+  - Localizados 21 processos zumbis de instâncias antigas do Chrome com processo de rede consumindo >680s de CPU em deadlock.
+  - Processos encerrados à força e DNS liberado, restaurando a navegação normal.
+- **3. Ativação Definitiva de Todas as Campanhas, Conjuntos e Anúncios:**
+  - **Google Ads Ativado:**
+    - Campanha B2B (`24365539579`): `ENABLED` (R$ 20,00/dia).
+    - Campanha B2C (`24368401149`): `ENABLED` (R$ 20,00/dia, teto R$ 1,00/clique).
+    - Grupos (`198510125222`, `206854315371`, `206854315411`): `ENABLED`.
+    - Palavras-chave e Anúncios RSAs: `ENABLED`.
+  - **Meta Ads Ativado:**
+    - Campanha B2B (`120251762627320751`): `ACTIVE` (R$ 15,00/dia).
+    - Campanha B2C (`120251762626930751`): `ACTIVE` (R$ 35,00/dia).
+    - Ad Sets (`120251864267230751`, `120251762651370751`, `120251762650980751`, `120251762650110751`, `120251762649670751`): `ACTIVE`.
+    - Anúncios (`AD 01`, `AD 02`, `AD 03`, `AD 04`, `AD B2B 02`): `ACTIVE`.
+- **4. Desbloqueio de Segurança e Publicação Oficial do AD 01 (Calcinha Cinta):**
+  - Autenticação de segurança da conta Meta Ads concluída com sucesso pelo usuário via código de e-mail.
+  - Identificado erro #1885183 no rascunho antigo do AD 01 devido a amarração a post de app em desenvolvimento.
+  - Rascunho antigo corrompido (`120251880920770751`) purgado e excluído via Graph API (`success: true`).
+  - Novo anúncio nativo `AD 01 - Calcinha Cinta Modeladora R$ 15,67` (`120252007284510751`) publicado pelo usuário com parâmetros UTM cirúrgicos (`utm_source=meta&utm_medium=cbo&utm_campaign=varejo_b2c&utm_content=calcinha_modeladora`) e pixel vinculado.
+  - Status verificado na Meta Graph API v21: **`ACTIVE`** (status de veiculação em entrega normal).
+- **5. Auditoria do Sentinel & Confirmação Live Definitiva:**
+  - **Google Ads:** Campanhas B2C (`24368401149`) e B2B (`24365539579`) confirmadas como **`ENABLED`**.
+  - **Meta Ads:** 6 anúncios confirmados como **`ACTIVE`** (AD 01 Calcinha Cinta, AD 02 Cropped, AD 03 Pijama, AD 04 Carrossel, AD B2B 01, AD B2B 02). Zero erros ou bloqueios remanescentes na conta.
+  - Ponto de Parada: Operação no ar. Monitorar primeiras métricas de impressões, CTR e vendas na loja.
+
