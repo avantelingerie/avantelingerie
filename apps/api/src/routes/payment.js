@@ -126,6 +126,68 @@ router.post('/create-order', async (req, res) => {
     const actualDelivery = isSameAddress ? billingAddress : deliveryAddress;
     const formattedAddress = `${actualDelivery.rua}, ${actualDelivery.numero}${actualDelivery.complemento ? ' - ' + actualDelivery.complemento : ''}, ${actualDelivery.bairro}`;
 
+    const cupomDesconto = (req.body.cupom_desconto || req.body.appliedCoupon?.code || '').trim().toUpperCase();
+
+    let verifiedDiscount = Number(finalDiscountAmount) || 0;
+    let verifiedTotal = Number(finalTotal) || 0;
+
+    // Blindagem de Servidor: Revalidação estrita do cupom AVANTELIA10
+    if (cupomDesconto === 'AVANTELIA10') {
+      // 1. Bloqueio de Atacado/Revenda
+      let isReseller = false;
+      if (targetUserId) {
+        try {
+          const uRec = await pb.collection('users').getOne(targetUserId, { $autoCancel: false });
+          if (uRec.tipo_cliente === 'revendedor' || uRec.tipo_cliente === 'reseller') isReseller = true;
+        } catch (e) {}
+      }
+      if (isReseller) {
+        return res.status(400).json({ error: 'O cupom de boas-vindas é exclusivo para clientes do Varejo.' });
+      }
+
+      // 2. Recálculo soberano do subtotal diretamente dos itens do carrinho
+      const computedSubtotal = (cart || []).reduce((acc, item) => {
+        const qty = Number(item.quantity) || 1;
+        const price = Number(item.price || item.preco_varejo) || 0;
+        return acc + (price * qty);
+      }, 0);
+
+      if (computedSubtotal < 59.90) {
+        return res.status(400).json({ error: 'O cupom AVANTELIA10 exige pedido mínimo de R$ 59,90 em produtos.' });
+      }
+
+      // 3. Verificação de unicidade por CPF no banco de dados PocketBase
+      const cleanCpf = (personalInfo.cpf || '').replace(/\D/g, '');
+      if (cleanCpf && cleanCpf.length >= 11) {
+        let alreadyUsed = false;
+        try {
+          const pOrders = await pb.collection('pedidos').getList(1, 1, {
+            filter: `(cpf ~ "${cleanCpf}" || cliente_cpf ~ "${cleanCpf}") && observacoes ~ "AVANTELIA10"`,
+            $autoCancel: false
+          });
+          if (pOrders.totalItems > 0) alreadyUsed = true;
+        } catch (e) {}
+
+        if (!alreadyUsed && targetUserId) {
+          try {
+            const uList = await pb.collection('uso_cupons').getList(1, 1, {
+              filter: `cliente_id = "${targetUserId}"`,
+              $autoCancel: false
+            });
+            if (uList.totalItems > 0) alreadyUsed = true;
+          } catch (e) {}
+        }
+
+        if (alreadyUsed) {
+          return res.status(400).json({ error: 'Atenção: Este cupom de boas-vindas já foi utilizado anteriormente para este CPF.' });
+        }
+      }
+
+      // 4. Regra de Ouro Anticumulação: Estritamente 10% no subtotal, NUNCA somado a PIX 5% ou progressivo
+      verifiedDiscount = Math.round(computedSubtotal * 0.10 * 100) / 100;
+      verifiedTotal = Math.max(0, Math.round((computedSubtotal - verifiedDiscount + Number(shippingCost || 0)) * 100) / 100);
+    }
+
     const orderPayload = {
       numero_pedido,
       cliente_id: targetUserId,
@@ -136,16 +198,17 @@ router.post('/create-order', async (req, res) => {
       cpf: personalInfo.cpf || '',
       data_pedido: new Date().toISOString().replace('T', ' ').substring(0, 19),
       status: 'pendente',
-      valor_total: Number(finalTotal) || 0,
-      valor_desconto: Number(finalDiscountAmount) || 0,
+      valor_total: Number(verifiedTotal) || 0,
+      valor_desconto: Number(verifiedDiscount) || 0,
       valor_frete: Number(shippingCost) || 0,
       endereco_entrega: formattedAddress,
       cidade: actualDelivery.cidade,
       estado: actualDelivery.estado || '',
       cep: actualDelivery.cep,
-      observacoes: (cart || []).some(item => Boolean(item.is_encomenda))
-        ? '[🧵 PEDIDO SOB ENCOMENDA - CONFECÇÃO: 5 DIAS ÚTEIS]'
-        : '',
+      observacoes: [
+        (cart || []).some(item => Boolean(item.is_encomenda)) ? '[🧵 PEDIDO SOB ENCOMENDA - CONFECÇÃO: 5 DIAS ÚTEIS]' : '',
+        cupomDesconto ? `[CUPOM: ${cupomDesconto} - DESCONTO R$ ${Number(verifiedDiscount).toFixed(2)}]` : ''
+      ].filter(Boolean).join(' | '),
       metodo_pagamento: paymentMethod === 'credit_card' ? 'credito' : (paymentMethod === 'pix' ? 'pix' : 'boleto'),
       
       // Items array (itens)
@@ -168,6 +231,28 @@ router.post('/create-order', async (req, res) => {
 
     logger.info(`[CreateOrder] Salvando pedido ${numero_pedido} no PocketBase como superusuário.`);
     const createdOrder = await pb.collection('pedidos').create(orderPayload, { $autoCancel: false });
+
+    // NOVO: Registro do uso do cupom no banco de dados PocketBase (uso_cupons)
+    if (cupomDesconto) {
+      try {
+        let cupomId = '';
+        try {
+          const cList = await pb.collection('cupons').getList(1, 1, { filter: `codigo = "${cupomDesconto}"`, $autoCancel: false });
+          if (cList.items.length > 0) cupomId = cList.items[0].id;
+        } catch (eC) {}
+
+        await pb.collection('uso_cupons').create({
+          cupom_id: cupomId || '',
+          pedido_id: createdOrder.id,
+          cliente_id: targetUserId || '',
+          valor_desconto: Number(verifiedDiscount) || 0,
+          usado_em: new Date().toISOString()
+        }, { $autoCancel: false });
+        logger.info(`[CreateOrder] Uso do cupom ${cupomDesconto} registrado com sucesso para o pedido ${numero_pedido}.`);
+      } catch (errUso) {
+        logger.warn(`[CreateOrder] Aviso ao registrar uso_cupons: ${errUso.message}`);
+      }
+    }
 
     // NOVO: Disparo de notificação de pedido criado (Pendente)
     notificationService.sendOrderStatusNotification(createdOrder, 'pendente').catch(err => {
@@ -612,6 +697,101 @@ router.get('/inspect-pedidos', async (req, res) => {
     });
   } catch (err) {
     res.status(500).json({ error: err.message });
+  }
+});
+
+// POST /payment/validate-coupon - Validação cirúrgica de cupom por CPF e regras de negócio
+router.post('/validate-coupon', async (req, res) => {
+  try {
+    await pb.collection('_superusers').authWithPassword(
+      process.env.PB_SUPERUSER_EMAIL,
+      process.env.PB_SUPERUSER_PASSWORD
+    );
+
+    const { codigo, cpf, subtotal, tipo_cliente } = req.body;
+
+    if (!codigo || typeof codigo !== 'string') {
+      return res.status(400).json({ valid: false, message: 'Por favor, informe o código do cupom.' });
+    }
+
+    const sanitizedCode = codigo.trim().toUpperCase();
+
+    // 1. Validar nome do cupom oficial
+    if (sanitizedCode !== 'AVANTELIA10') {
+      return res.status(400).json({ valid: false, message: 'Cupom inválido ou não encontrado.' });
+    }
+
+    // 2. Validar tipo de cliente (exclusivo para Varejo)
+    if (tipo_cliente === 'revendedor' || tipo_cliente === 'reseller') {
+      return res.status(400).json({
+        valid: false,
+        message: 'O cupom de boas-vindas é exclusivo para compras no Varejo. Sua conta já possui Tabela de Revenda de Fábrica.'
+      });
+    }
+
+    // 3. Validar piso mínimo aprovado (R$ 59,90)
+    const numSubtotal = Number(subtotal) || 0;
+    if (numSubtotal < 59.90) {
+      return res.status(400).json({
+        valid: false,
+        message: 'Este cupom é exclusivo para pedidos a partir de R$ 59,90 no Varejo.'
+      });
+    }
+
+    // 4. Validar se o CPF foi informado
+    const cleanCpf = (cpf || '').replace(/\D/g, '');
+    if (cleanCpf.length < 11) {
+      return res.status(400).json({
+        valid: false,
+        message: 'Por favor, preencha o seu CPF nos dados pessoais para validar o cupom.'
+      });
+    }
+
+    // 5. Validar unicidade de uso por CPF no banco de dados
+    try {
+      // Checagem em pedidos confirmados/processando ou observações
+      const existingOrders = await pb.collection('pedidos').getList(1, 1, {
+        filter: `(cpf = "${cleanCpf}" || cliente_cpf = "${cleanCpf}") && observacoes ~ "${sanitizedCode}" && status != "cancelado"`,
+        $autoCancel: false
+      });
+
+      if (existingOrders.items.length > 0) {
+        return res.status(400).json({
+          valid: false,
+          message: 'Atenção: Este cupom de boas-vindas já foi utilizado anteriormente para este CPF.'
+        });
+      }
+
+      // Checagem adicional na coleção uso_cupons caso o cliente tenha registro lá
+      const existingUsos = await pb.collection('uso_cupons').getList(1, 1, {
+        filter: `pedido_id.cpf = "${cleanCpf}" || cliente_id.cpf = "${cleanCpf}"`,
+        $autoCancel: false
+      });
+
+      if (existingUsos.items.length > 0) {
+        return res.status(400).json({
+          valid: false,
+          message: 'Atenção: Este cupom de boas-vindas já foi utilizado anteriormente para este CPF.'
+        });
+      }
+    } catch (errCheck) {
+      logger.warn(`[ValidateCoupon] Aviso na consulta de unicidade: ${errCheck.message}`);
+    }
+
+    // 6. Retorno de aprovação (10% de desconto no subtotal das peças)
+    const discountPercent = 10;
+    const discountAmount = Number((numSubtotal * 0.10).toFixed(2));
+
+    return res.json({
+      valid: true,
+      code: 'AVANTELIA10',
+      discountPercent,
+      discountAmount,
+      message: 'Cupom AVANTELIA10 aplicado com sucesso! 10% OFF garantido.'
+    });
+  } catch (err) {
+    logger.error(`[ValidateCoupon] Erro ao validar cupom: ${err.message}`);
+    return res.status(500).json({ valid: false, message: 'Erro interno ao validar cupom. Tente novamente.' });
   }
 });
 

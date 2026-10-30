@@ -44,6 +44,12 @@ export function useCheckoutLogic() {
     cpf: ''
   });
 
+  // Estado e Controle de Cupons de Desconto (Exclusivo Varejo, não cumulativo)
+  const [couponCode, setCouponCode] = useState('');
+  const [appliedCoupon, setAppliedCoupon] = useState(null); // { code, discountPercent, discountAmount }
+  const [couponError, setCouponError] = useState('');
+  const [isApplyingCoupon, setIsApplyingCoupon] = useState(false);
+
   // Sync personal info when currentUser is loaded, or fallback to localStorage drafts
   useEffect(() => {
     if (currentUser) {
@@ -313,6 +319,89 @@ export function useCheckoutLogic() {
     }
   }, [shippingOptions]);
 
+  // --- Métodos de Cupons de Desconto ---
+  const applyCoupon = useCallback(async (codeToApply) => {
+    const targetCode = (codeToApply || couponCode || '').trim();
+    if (!targetCode) {
+      setCouponError('Por favor, digite o código do cupom.');
+      return false;
+    }
+
+    const cleanCpf = (personalInfo.cpf || '').replace(/\D/g, '');
+    if (cleanCpf.length < 11) {
+      setCouponError('Por favor, informe seu CPF nos Dados Pessoais acima para validar o cupom.');
+      toast.error('Informe seu CPF completo nos dados pessoais para validar o cupom.');
+      return false;
+    }
+
+    setIsApplyingCoupon(true);
+    setCouponError('');
+
+    try {
+      const response = await apiServerClient.fetch('/payment/validate-coupon', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          codigo: targetCode,
+          cpf: cleanCpf,
+          subtotal: getCartTotal(),
+          tipo_cliente: currentUser?.tipo_cliente || 'varejo'
+        })
+      });
+
+      const data = await response.json();
+
+      if (!response.ok || !data.valid) {
+        setCouponError(data.message || 'Cupom inválido.');
+        toast.error(data.message || 'Cupom inválido.');
+        setAppliedCoupon(null);
+        return false;
+      }
+
+      setAppliedCoupon({
+        code: data.code,
+        discountPercent: data.discountPercent,
+        discountAmount: data.discountAmount
+      });
+      setCouponError('');
+      toast.success(data.message || 'Cupom aplicado com sucesso!');
+      return true;
+    } catch (err) {
+      setCouponError('Erro ao validar cupom. Verifique sua conexão.');
+      toast.error('Erro ao conectar com o validador de cupom.');
+      return false;
+    } finally {
+      setIsApplyingCoupon(false);
+    }
+  }, [couponCode, personalInfo.cpf, getCartTotal, currentUser]);
+
+  const removeCoupon = useCallback(() => {
+    setAppliedCoupon(null);
+    setCouponCode('');
+    setCouponError('');
+    toast.info('Cupom removido. Descontos padrão recalculados.');
+  }, []);
+
+  // Monitora subtotal e perfil para invalidar cupom caso caia abaixo de R$ 59,90 ou vire atacado
+  useEffect(() => {
+    if (appliedCoupon) {
+      const currentSubtotal = getCartTotal();
+      if (currentSubtotal < 59.90) {
+        setAppliedCoupon(null);
+        setCouponError('Cupom removido: pedido mínimo de R$ 59,90.');
+        toast.info('Cupom AVANTELIA10 removido: o pedido precisa ser a partir de R$ 59,90.');
+      } else if (currentUser?.tipo_cliente === 'revendedor' || currentUser?.commercial_profile === 'reseller') {
+        setAppliedCoupon(null);
+        setCouponError('');
+      } else {
+        const newDiscountAmount = Number((currentSubtotal * (appliedCoupon.discountPercent / 100)).toFixed(2));
+        if (newDiscountAmount !== appliedCoupon.discountAmount) {
+          setAppliedCoupon(prev => prev ? { ...prev, discountAmount: newDiscountAmount } : null);
+        }
+      }
+    }
+  }, [cart, appliedCoupon, currentUser, getCartTotal]);
+
   // --- Core Commercial Logic (Validated & Real-time) ---
   const subtotal = getCartTotal();
   const progressiveDiscount = getActiveDiscount(); // { percent, amount, label }
@@ -320,13 +409,18 @@ export function useCheckoutLogic() {
 
   let activeBenefitMessage = null;
   let finalDiscountAmount = 0;
-  let benefitType = 'none'; // 'progressive' | 'pix' | 'none'
+  let benefitType = 'none'; // 'progressive' | 'pix' | 'coupon' | 'none'
 
-  // Regra Oficial Avante Lingerie: Teto de 5% (Ou Barra Progressiva ou PIX, nunca cumulativo)
-  // 1. Se o cliente escolheu PIX: ganha 5% no PIX à vista (sem valor mínimo).
-  // 2. Se escolheu Boleto: NÃO HÁ NENHUM DESCONTO (margem protegida da taxa fixa de R$ 3,49).
-  // 3. Se pagou com Cartão de Crédito (1x ou parcelado): recebe o desconto da barra progressiva (1.67%, 3.33% ou 5%).
-  if (paymentMethod === 'pix') {
+  // Regra Oficial Avante Lingerie: Se houver cupom aplicado, ele é SOBERANO (10% no subtotal, NUNCA cumulativo).
+  // 1. Se tem cupom: abate 10% no subtotal e anula PIX 5% e progressivo.
+  // 2. Se NÃO tem cupom e escolheu PIX: ganha 5% no PIX à vista (sem valor mínimo).
+  // 3. Se NÃO tem cupom e escolheu Boleto: NÃO HÁ NENHUM DESCONTO.
+  // 4. Se NÃO tem cupom e pagou Cartão: recebe o desconto da barra progressiva.
+  if (appliedCoupon && appliedCoupon.discountAmount > 0) {
+    activeBenefitMessage = `Benefício aplicado: 10% OFF Cupom ${appliedCoupon.code}`;
+    finalDiscountAmount = appliedCoupon.discountAmount;
+    benefitType = 'coupon';
+  } else if (paymentMethod === 'pix') {
     activeBenefitMessage = 'Benefício aplicado: 5% OFF no PIX à vista';
     finalDiscountAmount = subtotal * 0.05;
     benefitType = 'pix';
@@ -441,6 +535,7 @@ export function useCheckoutLogic() {
       subtotal,
       finalDiscountAmount,
       finalTotal,
+      cupom_desconto: appliedCoupon ? appliedCoupon.code : null,
       cart: cart.map(item => ({
         id: item.id,
         variacao_id: item.variacao_id || '',
@@ -594,6 +689,13 @@ export function useCheckoutLogic() {
     loadingShipping,
     selectedShippingId,
     selectShippingOption,
-    localPickupConfig
+    localPickupConfig,
+    couponCode,
+    setCouponCode,
+    appliedCoupon,
+    couponError,
+    isApplyingCoupon,
+    applyCoupon,
+    removeCoupon
   };
 }

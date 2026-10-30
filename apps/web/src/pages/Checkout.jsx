@@ -60,7 +60,14 @@ export default function Checkout() {
     loadingShipping,
     selectedShippingId,
     selectShippingOption,
-    localPickupConfig
+    localPickupConfig,
+    couponCode,
+    setCouponCode,
+    appliedCoupon,
+    couponError,
+    isApplyingCoupon,
+    applyCoupon,
+    removeCoupon
   } = useCheckoutLogic();
 
   const genderTerms = getGenderTerms(currentUser?.name || currentUser?.nome_completo || personalInfo?.nome);
@@ -629,6 +636,14 @@ export default function Checkout() {
                 shippingCost={shippingCost}
                 onRemove={removeFromCart}
                 getItemPrice={getItemPrice}
+                couponCode={couponCode}
+                setCouponCode={setCouponCode}
+                appliedCoupon={appliedCoupon}
+                couponError={couponError}
+                isApplyingCoupon={isApplyingCoupon}
+                onApplyCoupon={applyCoupon}
+                onRemoveCoupon={removeCoupon}
+                tipoCliente={currentUser?.tipo_cliente || 'varejo'}
               />
 
               <Button

@@ -17,7 +17,8 @@ import {
   RefreshCcw,
   HeartHandshake,
   ChevronRight,
-  Play
+  Play,
+  Check
 } from 'lucide-react';
 import { Button } from '@/components/ui/button.jsx';
 import { Card, CardContent } from '@/components/ui/card.jsx';
@@ -33,6 +34,10 @@ export default function OrderConfirmation() {
   const [order, setOrder] = useState(null);
   const [suggestions, setSuggestions] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [isFirstPurchase, setIsFirstPurchase] = useState(false);
+  const [isActivatingCoupon, setIsActivatingCoupon] = useState(false);
+  const [couponActivated, setCouponActivated] = useState(false);
+  const [couponCopied, setCouponCopied] = useState(false);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -75,8 +80,52 @@ export default function OrderConfirmation() {
             discount: rawOrder.valor_desconto || rawOrder.discount || 0,
             discountLabel: rawOrder.discountLabel || 'Desconto Progressivo',
             total: rawOrder.valor_total || rawOrder.total || 0,
-            estimatedDelivery: rawOrder.estimatedDelivery || '3 a 5 dias úteis'
+            estimatedDelivery: rawOrder.estimatedDelivery || '3 a 5 dias úteis',
+            cliente_nome: rawOrder.cliente_nome || '',
+            cliente_telefone: rawOrder.cliente_telefone || '',
+            cliente_cpf: rawOrder.cliente_cpf || rawOrder.cpf || '',
+            cliente_email: rawOrder.cliente_email || '',
+            cliente_id: rawOrder.cliente_id || ''
           };
+
+          // Avaliação de Primeira Compra para exibição do Cupom VIP da Lia
+          try {
+            let isReseller = false;
+            if (rawOrder.cliente_id) {
+              try {
+                const uRec = await pb.collection('users').getOne(rawOrder.cliente_id, { $autoCancel: false });
+                if (uRec?.tipo_cliente === 'revendedor' || uRec?.tipo_cliente === 'reseller') {
+                  isReseller = true;
+                }
+              } catch (e) {}
+            }
+
+            if (!isReseller) {
+              const cleanCpf = (rawOrder.cliente_cpf || rawOrder.cpf || '').replace(/\D/g, '');
+              const cleanEmail = (rawOrder.cliente_email || '').trim().toLowerCase();
+              
+              let filterQuery = '';
+              if (cleanCpf && cleanCpf.length >= 11) {
+                filterQuery = `cpf ~ "${cleanCpf}" || cliente_cpf ~ "${cleanCpf}"`;
+              } else if (cleanEmail) {
+                filterQuery = `cliente_email = "${cleanEmail}"`;
+              }
+
+              if (filterQuery) {
+                const pastOrders = await pb.collection('pedidos').getList(1, 2, {
+                  filter: filterQuery,
+                  $autoCancel: false
+                });
+                if (pastOrders.totalItems <= 1) {
+                  setIsFirstPurchase(true);
+                }
+              } else {
+                setIsFirstPurchase(true);
+              }
+            }
+          } catch (errCheck) {
+            console.warn('[OrderConfirmation] Verificação de 1ª compra:', errCheck);
+          }
         } catch (err1) {
           console.log('[OrderConfirmation] Coleção "pedidos" falhou, tentando "orders"...', err1);
           try {
@@ -119,8 +168,53 @@ export default function OrderConfirmation() {
   const formatPrice = (val) => new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(val);
 
   const copyCoupon = () => {
-    navigator.clipboard.writeText('AVANTE10');
-    toast.success('Cupom copiado com sucesso! Aproveite em sua próxima compra.');
+    navigator.clipboard.writeText('AVANTELIA10');
+    setCouponCopied(true);
+    toast.success('Cupom AVANTELIA10 copiado! Aproveite 10% OFF no seu próximo pedido.');
+    setTimeout(() => setCouponCopied(false), 4000);
+  };
+
+  const handleActivateVipCoupon = async () => {
+    if (isActivatingCoupon || couponActivated) return;
+    setIsActivatingCoupon(true);
+    try {
+      const cleanPhone = (order?.cliente_telefone || '').replace(/\D/g, '');
+      const cleanCpf = (order?.cliente_cpf || '').replace(/\D/g, '');
+      const orderNum = order?.numero_pedido || order?.id || '';
+
+      // 1. Notifica o backend para disparar mensagem oficial da Lia no WhatsApp
+      try {
+        await fetch('/api/notificacoes/ativar-cupom-vip', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            orderId: orderNum,
+            whatsapp: cleanPhone,
+            nome: order?.cliente_nome || 'Cliente',
+            cpf: cleanCpf
+          })
+        });
+      } catch (errApi) {
+        console.warn('[OrderConfirmation] Falha ao acionar API da Lia:', errApi);
+      }
+
+      setCouponActivated(true);
+      toast.success('✨ Presente VIP ativado! Redirecionando para o WhatsApp da Lia...');
+
+      // 2. Abre o WhatsApp com a mensagem da Lia pré-preenchida
+      const liaNumber = '5522981225010';
+      const waMsg = encodeURIComponent(
+        `Olá Lia! ✨ Acabei de fazer minha 1ª compra (Pedido ${orderNum}) e amei meu presente de 10% OFF com o cupom AVANTELIA10! Já deixei salvo aqui no nosso chat para o meu próximo pedido de varejo. Muito obrigada pelo carinho!`
+      );
+      setTimeout(() => {
+        window.open(`https://wa.me/${liaNumber}?text=${waMsg}`, '_blank');
+      }, 500);
+    } catch (err) {
+      console.error('[OrderConfirmation] Erro ao ativar cupom VIP:', err);
+      toast.error('Não foi possível conectar com o WhatsApp da Lia no momento.');
+    } finally {
+      setIsActivatingCoupon(false);
+    }
   };
 
   const handleSupportClick = () => {
@@ -378,31 +472,89 @@ export default function OrderConfirmation() {
           </div>
         </div>
 
-        {/* CADEAU / COUPON OFFER */}
-        <div className="bg-gradient-to-br from-[#242424] to-[#1a1a1a] border border-[#c59b5f]/30 rounded-3xl p-8 md:p-12 text-center shadow-premium relative overflow-hidden transition-all duration-300">
-          <div className="absolute top-0 right-0 w-64 h-64 bg-[#c59b5f]/10 rounded-full blur-3xl pointer-events-none"></div>
+        {/* LIA VIP WELCOME COUPON CARD (Exclusivo para 1ª Compra no Varejo) */}
+        {isFirstPurchase && (
+          <div className="bg-gradient-to-br from-[#1c1813] via-[#141414] to-[#0d0d0d] border border-[#c59b5f]/40 rounded-3xl p-6 sm:p-8 md:p-10 shadow-premium relative overflow-hidden transition-all duration-300">
+            {/* Glow decorativo de alta costura */}
+            <div className="absolute top-0 right-0 w-80 h-80 bg-[#c59b5f]/15 rounded-full blur-3xl pointer-events-none"></div>
+            <div className="absolute -bottom-20 -left-20 w-64 h-64 bg-[#c59b5f]/10 rounded-full blur-3xl pointer-events-none"></div>
 
-          <h3 className="text-xl md:text-2xl font-serif font-bold text-white mb-3 relative z-10">
-            Um presente para sua próxima experiência
-          </h3>
-          <p className="text-gray-400 font-light text-sm md:text-base max-w-xl mx-auto mb-8 relative z-10 leading-relaxed">
-            Cada compra na Avante Lingerie destrava benefícios de alta costura. Utilize o cupom abaixo e garanta 10% OFF em seu próximo pedido.
-          </p>
+            <div className="relative z-10 flex flex-col md:flex-row items-center gap-6 md:gap-8">
+              {/* Avatar da Lia com status online ao vivo */}
+              <div className="relative shrink-0">
+                <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-full overflow-hidden ring-4 ring-[#c59b5f]/40 shadow-xl bg-[#242424]">
+                  <img
+                    src="/lia-padrao.jpg"
+                    alt="Lia • Consultora VIP Avante Lingerie"
+                    className="w-full h-full object-cover"
+                    onError={(e) => {
+                      e.target.onerror = null;
+                      e.target.src = 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=300&auto=format&fit=crop&q=80';
+                    }}
+                  />
+                </div>
+                <span className="absolute bottom-1 right-1 w-5 h-5 bg-emerald-500 border-2 border-[#141414] rounded-full ring-2 ring-emerald-400/50 shadow-sm animate-pulse" title="Lia Online no WhatsApp"></span>
+              </div>
 
-          <div className="inline-flex items-center bg-[#1A1A1A] border border-[#c59b5f]/40 rounded-2xl p-2.5 shadow-premium-sm relative z-10">
-            <span className="px-6 py-2 text-xl font-extrabold tracking-widest text-[#c59b5f] select-all">
-              AVANTE10
-            </span>
-            <Button
-              onClick={copyCoupon}
-              className="bg-[#c59b5f] hover:bg-[#a37c46] text-white rounded-xl px-6 py-3.5 text-xs font-bold tracking-widest uppercase transition-all duration-300 shadow-md"
-            >
-              <Copy className="w-4 h-4 mr-2" />
-              Copiar
-            </Button>
+              {/* Conteúdo Persuasivo de Boas-Vindas */}
+              <div className="flex-1 text-center md:text-left">
+                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#c59b5f]/15 border border-[#c59b5f]/30 text-[#c59b5f] text-xs font-semibold tracking-wider uppercase mb-3">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#c59b5f] animate-ping"></span>
+                  Presente Exclusivo de 1ª Compra
+                </div>
+
+                <h3 className="text-xl sm:text-2xl font-serif font-bold text-white mb-2 leading-snug">
+                  Parabéns pela sua 1ª compra! A Lia preparou um presente para você ✨
+                </h3>
+                <p className="text-gray-300 font-light text-sm sm:text-base leading-relaxed mb-5 max-w-2xl">
+                  Para celebrar sua chegada ao universo Avante Lingerie, você ganhou <strong className="text-white font-semibold">10% OFF</strong> no subtotal da sua próxima compra no varejo (a partir de R$ 59,90).
+                </p>
+
+                {/* Bloco do Cupom e Ação */}
+                <div className="flex flex-wrap items-center justify-center md:justify-start gap-3">
+                  {/* Caixa do Código com Copiar */}
+                  <div className="inline-flex items-center bg-[#0d0d0d] border border-[#c59b5f]/50 rounded-xl p-1.5 shadow-inner">
+                    <span className="px-4 py-2 font-mono font-bold text-base sm:text-lg tracking-widest text-[#c59b5f] select-all">
+                      AVANTELIA10
+                    </span>
+                    <Button
+                      type="button"
+                      onClick={copyCoupon}
+                      className="bg-[#c59b5f] hover:bg-[#a37c46] text-white rounded-lg px-4 py-2 text-xs font-bold tracking-wider uppercase transition-all shadow"
+                    >
+                      {couponCopied ? (
+                        <>
+                          <Check className="w-3.5 h-3.5 mr-1 text-emerald-200" />
+                          Copiado!
+                        </>
+                      ) : (
+                        <>
+                          <Copy className="w-3.5 h-3.5 mr-1" />
+                          Copiar
+                        </>
+                      )}
+                    </Button>
+                  </div>
+
+                  {/* Botão de 1 Clique: Salvar/Ativar no WhatsApp da Lia */}
+                  <Button
+                    type="button"
+                    onClick={handleActivateVipCoupon}
+                    disabled={isActivatingCoupon}
+                    className="bg-emerald-600 hover:bg-emerald-500 text-white rounded-xl px-5 py-3 text-xs sm:text-sm font-bold tracking-wide uppercase shadow-lg shadow-emerald-900/30 transition-all hover:scale-[1.02] active:scale-95 flex items-center gap-2"
+                  >
+                    <MessageCircle className="w-4 h-4 text-emerald-100" />
+                    {couponActivated ? 'Presente Salvo no WhatsApp ✓' : (isActivatingCoupon ? 'Salvando...' : 'Salvar Presente no WhatsApp da Lia')}
+                  </Button>
+                </div>
+
+                <p className="text-[11px] text-gray-400 mt-4 leading-normal">
+                  🔒 Válido para 1 único uso por CPF no Varejo • Pedido mínimo de R$ 59,90 • Não cumulativo com PIX ou outras promoções.
+                </p>
+              </div>
+            </div>
           </div>
-          <p className="text-[10px] text-[#c59b5f] font-semibold tracking-wider mt-4 relative z-10 uppercase">Cupom válido por 48 horas.</p>
-        </div>
+        )}
 
         {/* PRODUCT SUGGESTIONS */}
         {suggestions.length > 0 && (

@@ -1777,3 +1777,18 @@ Planejamento comercial e técnico estruturado pela Ada e Vértice para alavancar
   - **Entrega Autom�tica Matinal:** Na primeira intera��o do dia (ou �s 9h), a Ada entrega o relat�rio matinal automaticamente, sem o Luiz precisar pedir.
   - **Port�o de Permiss�o Estrita (Zero Muta��o Sem Aval):** A Ada NUNCA altera or�amentos, pausa criativos ou mexe em campanhas por conta pr�pria. O fluxo obrigat�rio �: Apresentar o Relat�rio Matinal -> Explicar a proposta e o motivo -> Perguntar: 'Posso executar essa otimiza��o?' -> Aguardar autoriza��o expressa do Luiz -> Somente ap�s o 'Ok' ou 'Pode executar', realizar a muta��o via API e emitir o comprovante.
 
+
+---
+
+### Sessão - 30/10/2026 (Módulo Cupom VIP de Boas-Vindas da Lia - AVANTELIA10)
+- **Objetivo:** Implementação cirúrgica do cupom de 1ª compra "AVANTELIA10" com blindagem anticumulação, portal da Lia no WhatsApp e validação no PocketBase.
+- **Regras de Negócio e Engenharia:**
+  - Código: "AVANTELIA10" (10% OFF no subtotal dos produtos no Varejo).
+  - Piso Mínimo: R$ 59,90 em compras no Varejo (B2C).
+  - Bloqueio de Atacado: Revendedores/atacadistas são terminantemente impedidos de usar cupom (já compram a preço de fábrica com até 40% OFF).
+  - Exclusividade de 1ª Compra: Card do cupom só é renderizado na página de confirmação (OrderConfirmation.jsx) para clientes em sua 1ª compra. Clientes com >= 2 pedidos ou revendedores não visualizam o card.
+  - Regra de Ouro Anticumulação: Se AVANTELIA10 for aplicado, o sistema anula rigorosamente desconto de 5% no PIX e desconto progressivo no cartão. NUNCA há soma de benefícios.
+  - Unicidade por CPF: Válido para 1 único uso por CPF em toda a história da loja. O backend valida em 'pedidos' e 'uso_cupons'.
+  - Ativação via WhatsApp da Lia: Card de luxo na confirmação possui botão de 1 clique que dispara notificação oficial da Lia via bot backend e abre chat direto no WhatsApp com mensagem pré-preenchida.
+- **Crivo Nemotron (Terminal Gate):** Blueprint e regras auditados pelo Nemotron. Ressalvas de atomicidade e anticumulação no backend foram integralmente blindadas com recálculo soberano e revalidação estrita em 'create-order'.
+- **Auditoria Sentinel:** Sintaxe Node checada em 100% dos arquivos de backend. Build Vite ('npm run build') concluído com sucesso absoluto (0 erros, 3114 módulos transformados).

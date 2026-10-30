@@ -146,4 +146,39 @@ router.post('/boas-vindas-revendedor', async (req, res) => {
   }
 });
 
+// POST /notificacoes/ativar-cupom-vip - Dispara mensagem carinhosa da Lia com o cupom AVANTELIA10
+router.post('/ativar-cupom-vip', async (req, res) => {
+  try {
+    const { orderId, whatsapp, nome, cpf } = req.body;
+
+    if (!whatsapp || !orderId) {
+      return res.status(400).json({ erro: 'WhatsApp e ID do pedido são obrigatórios.' });
+    }
+
+    let orderNum = orderId;
+    try {
+      const order = await pb.collection('pedidos').getOne(orderId, { $autoCancel: false });
+      if (order && order.numero_pedido) orderNum = order.numero_pedido;
+    } catch (e) {
+      // Usa orderId como fallback
+    }
+
+    const sent = await notificationService.sendVipCouponNotification({
+      phone: whatsapp,
+      name: nome,
+      orderNum,
+      cpf
+    });
+
+    res.json({
+      sucesso: true,
+      whatsappEnviado: sent,
+      mensagem: 'Presente VIP ativado com sucesso!'
+    });
+  } catch (err) {
+    logger.error(`[notificacoes] Erro ao ativar cupom VIP da Lia: ${err.message}`);
+    res.status(500).json({ erro: 'Falha ao ativar cupom VIP', detalhe: err.message });
+  }
+});
+
 export default router;

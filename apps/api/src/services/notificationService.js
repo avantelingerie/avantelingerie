@@ -284,6 +284,25 @@ class NotificationService {
 
         return result;
     }
+
+    /**
+     * Envia mensagem carinhosa e oficial no WhatsApp da cliente ativando o cupom VIP AVANTELIA10
+     */
+    async sendVipCouponNotification({ phone, name, orderNum, cpf }) {
+        if (!phone) {
+            logger.warn('[NotificationService] Telefone não informado para envio de cupom VIP.');
+            return false;
+        }
+
+        const firstName = (name || 'Cliente').trim().split(' ')[0];
+        const cleanPhone = phone.replace(/\D/g, '');
+        const targetPhone = cleanPhone.startsWith('55') ? cleanPhone : `55${cleanPhone}`;
+
+        const messageWa = `Olá, ${firstName}! 💖 Aqui é a Lia, consultora da *Avante Lingerie*!\n\nPassando para te parabenizar pelo seu primeiro pedido *#${orderNum || 'Confirmado'}* e confirmar que o seu *Presente VIP de Boas-Vindas* já está ativado com sucesso! 🎁✨\n\n🏷️ *Seu Cupom Exclusivo:* AVANTELIA10\n✨ *Benefício:* 10% OFF no seu próximo pedido (em compras acima de R$ 59,90 no Varejo)\n🔒 *Validade:* Vinculado exclusivamente ao seu CPF para uso único.\n\nO seu pedido atual já está sendo preparado com muito carinho aqui na fábrica em Nova Friburgo/RJ. Assim que for despachado, te aviso por aqui com o código de rastreamento! 🥰\n\nGuarde este contato para não perder seu cupom. Se precisar de qualquer ajuda com tamanhos ou tecidos, é só me responder por aqui!\n\nCom carinho,\n*Lia • Avante Lingerie 🌸*`;
+
+        const sent = await sendWhatsAppDirect(targetPhone, messageWa);
+        return sent;
+    }
 }
 
 // Map de idempotência em memória para prevenir múltiplos cliques acidentais
