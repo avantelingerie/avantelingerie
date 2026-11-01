@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Preview Executivo — Central de Atendimento & CRM Lia | Avante Lingerie</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: #09090b;
+      color: #f4f4f5;
+    }
+    .font-serif {
+      font-family: 'Cinzel', serif;
+    }
+    ::-webkit-scrollbar {
+      width: 5px;
+      height: 5px;
+    }
+    ::-webkit-scrollbar-track {
+      background: rgba(24, 24, 27, 0.5);
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(82, 82, 91, 0.5);
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #c59b5f;
+    }
+  </style>
+</head>
+<body class="h-screen w-screen overflow-hidden flex bg-[#09090b]">
+
+  <!-- SIDEBAR DO AVANTE ADMIN -->
+  <aside class="w-64 bg-[#111113] border-r border-zinc-800/80 flex flex-col shrink-0">
+    <div class="h-16 flex items-center px-6 border-b border-zinc-800/80 bg-[#0d0d0e]">
+      <span class="text-base font-bold tracking-wider uppercase bg-gradient-to-r from-white via-zinc-200 to-[#c59b5f] bg-clip-text text-transparent">
+        AVANTE ADMIN
+      </span>
+    </div>
+
+    <!-- Navegação -->
+    <nav class="flex-1 px-3 py-4 space-y-1 text-xs">
+      <div class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-zinc-400 hover:text-white hover:bg-zinc-850">
+        <svg class="w-4 h-4 text-zinc-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+        <span>Dashboard</span>
+      </div>
+      <div class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-zinc-400 hover:text-white hover:bg-zinc-850">
+        <svg class="w-4 h-4 text-zinc-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
+        <span>Produtos</span>
+      </div>
+      <div class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-zinc-400 hover:text-white hover:bg-zinc-850">
+        <svg class="w-4 h-4 text-zinc-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"/></svg>
+        <span>Categorias</span>
+      </div>
+      <div class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-zinc-400 hover:text-white hover:bg-zinc-850">
+        <svg class="w-4 h-4 text-zinc-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"/></svg>
+        <span>Estoque</span>
+      </div>
+      <div class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-zinc-400 hover:text-white hover:bg-zinc-850">
+        <svg class="w-4 h-4 text-zinc-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+        <span>Pedidos</span>
+      </div>
+      <div class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-zinc-400 hover:text-white hover:bg-zinc-850">
+        <svg class="w-4 h-4 text-zinc-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+        <span>Clientes</span>
+      </div>
+      <div class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-zinc-400 hover:text-white hover:bg-zinc-850">
+        <svg class="w-4 h-4 text-zinc-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+        <span>Analytics</span>
+      </div>
+
+      <!-- Item Ativo: Cérebro da Lia -->
+      <div class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-gradient-to-r from-[#c59b5f]/20 to-transparent border-l-2 border-[#c59b5f] text-[#c59b5f] font-bold shadow-sm">
+        <svg class="w-4 h-4 text-[#c59b5f]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
+        <span>Cérebro da Lia</span>
+        <span class="ml-auto w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+      </div>
+    </nav>
+
+    <!-- Usuário Rodapé -->
+    <div class="p-3 border-t border-zinc-800/80 bg-[#0d0d0e] flex items-center gap-3">
+      <div class="w-8 h-8 rounded-full bg-[#c59b5f] text-zinc-950 font-bold flex items-center justify-center text-xs">
+        L
+      </div>
+      <div class="overflow-hidden">
+        <p class="text-xs font-semibold text-white truncate">Luiz (Diretoria)</p>
+        <p class="text-[10px] text-[#c59b5f] truncate">Avante Lingerie Admin</p>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ÁREA PRINCIPAL DO CRM LIA -->
+  <main class="flex-1 flex flex-col min-w-0 bg-zinc-950 overflow-hidden">
+    
+    <!-- BARRA SUPERIOR EXECUTIVA -->
+    <header class="h-16 px-6 bg-zinc-900/90 border-b border-zinc-800/80 flex items-center justify-between gap-4 shrink-0">
+      <div class="flex items-center gap-3">
+        <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-[#c59b5f]/30 to-[#c59b5f]/5 border border-[#c59b5f]/40 flex items-center justify-center text-[#c59b5f]">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
+        </div>
+        <div>
+          <div class="flex items-center gap-2">
+            <h1 class="text-base font-serif font-bold text-white tracking-wide">
+              Central de Atendimento & CRM Lia
+            </h1>
+            <span class="inline-flex items-center gap-1.5 text-[10px] font-semibold text-emerald-400 bg-emerald-950/80 border border-emerald-800/50 px-2 py-0.5 rounded-full">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+              WhatsApp Fábrica (22) 98122-5010
+            </span>
+          </div>
+          <p class="text-[11px] text-zinc-400">
+            Pipeline Omnichannel: Anúncios Meta Ads (B2B WhatsApp) + Loja Virtual em Tempo Real
+          </p>
+        </div>
+      </div>
+
+      <!-- KPIs no Topo -->
+      <div class="flex items-center gap-2 text-xs">
+        <span class="px-2.5 py-1 rounded-lg bg-zinc-800/90 text-zinc-300 border border-zinc-700/50">
+          Total: <strong class="text-white ml-1">4</strong>
+        </span>
+        <span class="px-2.5 py-1 rounded-lg bg-emerald-950/70 border border-emerald-800/50 text-emerald-300">
+          WhatsApp: <strong class="text-emerald-200 ml-1">2</strong>
+        </span>
+        <span class="px-2.5 py-1 rounded-lg bg-[#c59b5f]/15 border border-[#c59b5f]/30 text-[#c59b5f]">
+          Loja Virtual: <strong class="text-white ml-1">2</strong>
+        </span>
+        <button class="px-3 py-1 rounded-xl bg-zinc-800 hover:bg-zinc-700 text-zinc-200 border border-zinc-700 text-xs font-medium flex items-center gap-1.5 transition-all">
+          <svg class="w-3.5 h-3.5 text-[#c59b5f]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+          Sincronizar
+        </button>
+      </div>
+    </header>
+
+    <!-- SUBNAVEGAÇÃO (ABAS) -->
+    <div class="px-6 py-2 bg-zinc-900/40 border-b border-zinc-800/60 flex items-center justify-between shrink-0">
+      <div class="flex items-center gap-1 bg-zinc-950 p-1 rounded-xl border border-zinc-800/80">
+        <button class="px-3.5 py-1.5 rounded-lg text-xs font-bold bg-[#c59b5f] text-zinc-950 flex items-center gap-1.5 shadow-sm">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+          Atendimentos & CRM (4)
+        </button>
+        <button class="px-3.5 py-1.5 rounded-lg text-xs font-medium text-zinc-400 hover:text-zinc-200 flex items-center gap-1.5">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+          Treinamento & Regras
+        </button>
+        <button class="px-3.5 py-1.5 rounded-lg text-xs font-medium text-zinc-400 hover:text-zinc-200 flex items-center gap-1.5">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+          Conexão WhatsApp
+        </button>
+      </div>
+
+      <span class="text-[11px] text-zinc-500 font-mono">
+        Portão Nemotron 3.5: 🟢 APROVADO PARA PRODUÇÃO
+      </span>
+    </div>
+
+    <!-- CORPO DO CRM (2 COLUNAS EDGE-TO-EDGE) -->
+    <div class="flex-1 flex overflow-hidden">
+      
+      <!-- COLUNA ESQUERDA: LISTA DE LEADS & CONTATOS -->
+      <div class="w-[380px] bg-zinc-900/90 border-r border-zinc-800/80 flex flex-col shrink-0">
+        
+        <!-- Busca e Filtros Rápidos -->
+        <div class="p-3 border-b border-zinc-800/80 space-y-2.5 bg-zinc-900/60">
+          <div class="relative">
+            <svg class="w-3.5 h-3.5 text-zinc-500 absolute left-3 top-1/2 -translate-y-1/2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+            <input 
+              type="text" 
+              placeholder="Buscar por telefone, nome ou mensagem..." 
+              class="w-full pl-8 pr-3 py-1.5 bg-zinc-950 border border-zinc-800 text-zinc-200 placeholder:text-zinc-600 rounded-xl text-xs focus:outline-none focus:border-[#c59b5f]"
+              value=""
+            />
+          </div>
+
+          <!-- Pílulas de Filtro (Estilo WhatsApp Business) -->
+          <div class="flex items-center gap-1.5 text-[11px] overflow-x-auto pb-0.5">
+            <button class="px-2.5 py-1 rounded-lg font-semibold bg-[#c59b5f] text-zinc-950 shadow-sm whitespace-nowrap">
+              Todos (4)
+            </button>
+            <button class="px-2.5 py-1 rounded-lg font-semibold bg-zinc-800/90 text-zinc-400 hover:text-emerald-400 hover:bg-zinc-800 flex items-center gap-1 whitespace-nowrap">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> WhatsApp (2)
+            </button>
+            <button class="px-2.5 py-1 rounded-lg font-semibold bg-zinc-800/90 text-zinc-400 hover:text-zinc-200 hover:bg-zinc-800 flex items-center gap-1 whitespace-nowrap">
+              Loja (2)
+            </button>
+            <button class="px-2.5 py-1 rounded-lg font-semibold bg-zinc-800/90 text-zinc-400 hover:text-amber-400 hover:bg-zinc-800 flex items-center gap-1 whitespace-nowrap">
+              Humano (0)
+            </button>
+          </div>
+        </div>
+
+        <!-- Lista de Cards de Contatos -->
+        <div class="flex-1 overflow-y-auto p-2 space-y-1">
+          
+          <!-- CONTATO 1 (SELECIONADO) — LEAD WHATSAPP META ADS -->
+          <div class="p-3 rounded-xl border bg-zinc-800/95 border-[#c59b5f] shadow-md shadow-[#c59b5f]/5 flex gap-3 items-start relative cursor-pointer">
+            <div class="absolute left-0 top-2 bottom-2 w-1 bg-[#c59b5f] rounded-r"></div>
+            
+            <div class="w-10 h-10 rounded-full bg-emerald-950/80 border border-emerald-500/50 text-emerald-400 flex items-center justify-center shrink-0">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+            </div>
+
+            <div class="flex-1 min-w-0">
+              <div class="flex items-center justify-between gap-1 mb-0.5">
+                <span class="font-bold text-xs text-white truncate">+55 (22) 98122-5010</span>
+                <span class="text-[10px] text-[#c59b5f] font-medium">Hoje às 10:45</span>
+              </div>
+              <p class="text-[11px] text-zinc-300 truncate leading-relaxed">
+                <span class="text-[#c59b5f]">✨ Lia:</span> Com certeza! Nosso pedido mínimo de fábrica é R$ 69,90...
+              </p>
+              <div class="flex items-center gap-1.5 mt-2 flex-wrap">
+                <span class="text-[9px] font-bold text-emerald-400 bg-emerald-950/90 border border-emerald-800/40 px-1.5 py-0.5 rounded-md">
+                  WhatsApp
+                </span>
+                <span class="text-[9px] font-medium text-zinc-300 bg-zinc-800/90 px-1.5 py-0.5 rounded-md">
+                  🤖 Lia Ativa
+                </span>
+                <span class="text-[9px] text-zinc-500 ml-auto font-mono">
+                  3 msgs
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- CONTATO 2 — LEAD SEGURO META ADS (@LID) -->
+          <div class="p-3 rounded-xl border bg-zinc-950/40 border-zinc-800/50 hover:bg-zinc-850 hover:border-zinc-700/80 flex gap-3 items-start cursor-pointer">
+            <div class="w-10 h-10 rounded-full bg-emerald-950/50 border border-emerald-800/40 text-emerald-400/80 flex items-center justify-center shrink-0">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+            </div>
+            <div class="flex-1 min-w-0">
+              <div class="flex items-center justify-between gap-1 mb-0.5">
+                <span class="font-semibold text-xs text-zinc-200 truncate">WhatsApp • Contato #601688</span>
+                <span class="text-[10px] text-zinc-500">Ontem às 18:32</span>
+              </div>
+              <p class="text-[11px] text-zinc-400 truncate leading-relaxed">
+                👤 Gostaria de saber os modelos de pijama longo...
+              </p>
+              <div class="flex items-center gap-1.5 mt-2 flex-wrap">
+                <span class="text-[9px] font-bold text-emerald-400 bg-emerald-950/70 border border-emerald-800/30 px-1.5 py-0.5 rounded-md">
+                  WhatsApp
+                </span>
+                <span class="text-[9px] font-medium text-zinc-400 bg-zinc-800/70 px-1.5 py-0.5 rounded-md">
+                  🤖 Lia Ativa
+                </span>
+                <span class="text-[9px] text-zinc-500 ml-auto font-mono">
+                  2 msgs
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- CONTATO 3 — VISITANTE SITE (LOJA VIRTUAL) -->
+          <div class="p-3 rounded-xl border bg-zinc-950/40 border-zinc-800/50 hover:bg-zinc-850 hover:border-zinc-700/80 flex gap-3 items-start cursor-pointer">
+            <div class="w-10 h-10 rounded-full bg-[#c59b5f]/15 border border-[#c59b5f]/30 text-[#c59b5f] flex items-center justify-center shrink-0">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            </div>
+            <div class="flex-1 min-w-0">
+              <div class="flex items-center justify-between gap-1 mb-0.5">
+                <span class="font-semibold text-xs text-zinc-200 truncate">Visitante Loja #FDCE</span>
+                <span class="text-[10px] text-zinc-500">Ontem às 14:10</span>
+              </div>
+              <p class="text-[11px] text-zinc-400 truncate leading-relaxed">
+                👤 Qual o prazo de entrega para o Rio de Janeiro?
+              </p>
+              <div class="flex items-center gap-1.5 mt-2 flex-wrap">
+                <span class="text-[9px] font-bold text-[#c59b5f] bg-[#c59b5f]/10 border border-[#c59b5f]/30 px-1.5 py-0.5 rounded-md">
+                  Loja Virtual
+                </span>
+                <span class="text-[9px] font-bold text-emerald-300 bg-emerald-900/60 border border-emerald-700/50 px-1.5 py-0.5 rounded-md">
+                  ✓ Compra Fechada
+                </span>
+                <span class="text-[9px] text-zinc-500 ml-auto font-mono">
+                  4 msgs
+                </span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- COLUNA DIREITA: CANVAS DE CONVERSA REAL (ESTILO WHATSAPP) -->
+      <div class="flex-1 flex flex-col bg-zinc-950 overflow-hidden">
+        
+        <!-- Header da Conversa -->
+        <div class="h-16 px-6 border-b border-zinc-800/80 bg-zinc-900/90 flex items-center justify-between gap-4 shrink-0">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-emerald-950 border border-emerald-500/50 text-emerald-400 flex items-center justify-center shrink-0">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+            </div>
+            <div>
+              <div class="flex items-center gap-2">
+                <h2 class="font-bold text-base text-white">+55 (22) 98122-5010</h2>
+                <span class="text-[10px] font-bold text-emerald-400 bg-emerald-950 border border-emerald-700/50 px-2 py-0.5 rounded-full">
+                  WhatsApp Oficial da Fábrica
+                </span>
+              </div>
+              <p class="text-[11px] text-zinc-400">
+                Lead vindo do Anúncio Meta B2B Revenda • 3 mensagens registradas
+              </p>
+            </div>
+          </div>
+
+          <!-- Botões de Ação CRM -->
+          <div class="flex items-center gap-2">
+            <a 
+              href="https://web.whatsapp.com/send?phone=5522981225010" 
+              target="_blank"
+              class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold bg-emerald-600 hover:bg-emerald-500 text-white shadow-sm transition-all"
+            >
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+              Abrir no Zap
+            </a>
+            
+            <button class="inline-flex items-center gap-1 px-3 py-1.5 rounded-xl text-xs font-semibold border border-red-900/60 bg-red-950/30 text-red-300 hover:bg-red-900/50 hover:text-white transition-all">
+              <svg class="w-3.5 h-3.5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 11.5V14m0-2.5v-6a1.5 1.5 0 113 0m-3 6a1.5 1.5 0 00-3 0v2a7.5 7.5 0 0015 0v-5a1.5 1.5 0 00-3 0m-6-3V11m0-5.5v-1a1.5 1.5 0 013 0v1m0 0V11m0-5.5a1.5 1.5 0 013 0v3m0 0V11"/></svg>
+              Pausar Lia (Assumir)
+            </button>
+          </div>
+        </div>
+
+        <!-- Banner de Status da Inteligência -->
+        <div class="bg-zinc-900/40 border-b border-zinc-800/70 px-6 py-2 flex items-center justify-between text-[11px] text-zinc-400 shrink-0">
+          <span class="flex items-center gap-1.5">
+            <svg class="w-3.5 h-3.5 text-[#c59b5f]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
+            <span><strong>Lia 100% Ativa:</strong> Respondendo automaticamente com base no catálogo de atacado e regras da fábrica.</span>
+          </span>
+          <span class="text-zinc-500 font-mono text-[10px]">
+            Sessão: wa_5522981225010
+          </span>
+        </div>
+
+        <!-- Área de Balões de Mensagem (Canvas WhatsApp) -->
+        <div class="flex-1 overflow-y-auto p-6 bg-[#0c0d0e] space-y-4">
+          <div class="max-w-2xl mx-auto space-y-3.5">
+            
+            <!-- Mensagem 1: Cliente (Recebida) -->
+            <div class="flex justify-start">
+              <div class="max-w-[75%] p-3.5 text-xs rounded-2xl bg-zinc-900 text-zinc-100 border border-zinc-800 rounded-tl-xs shadow-sm">
+                <div class="flex items-center justify-between gap-3 mb-1 text-[10px] text-zinc-400 font-semibold">
+                  <span>👤 Revendedora (Lead Meta Ads)</span>
+                </div>
+                <div class="leading-relaxed">
+                  Olá! Vi o anúncio de vocês no Instagram sobre revenda de lingerie direto da fábrica. Gostaria de saber como funciona o pedido mínimo de R$ 69,90 e as margens de lucro!
+                </div>
+                <div class="flex items-center justify-end gap-1 mt-1 text-[9px] text-zinc-500">
+                  10:44
+                </div>
+              </div>
+            </div>
+
+            <!-- Mensagem 2: Lia IA (Enviada) -->
+            <div class="flex justify-end">
+              <div class="max-w-[75%] p-3.5 text-xs rounded-2xl bg-emerald-950/80 border border-emerald-600/40 text-emerald-50 rounded-tr-xs shadow-sm">
+                <div class="flex items-center justify-between gap-3 mb-1 text-[10px] text-emerald-400 font-bold uppercase tracking-wider">
+                  <span class="flex items-center gap-1">
+                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
+                    Lia • Consultora Avante
+                  </span>
+                </div>
+                <div class="leading-relaxed">
+                  Bom dia! Seja muito bem-vinda à fábrica da Avante Lingerie em Nova Friburgo! 💖<br><br>
+                  Funciona assim: a partir de apenas <strong>R$ 69,90</strong> no carrinho, você já garante preço de atacado de fábrica com <strong>100% a 150% de lucro na revenda</strong>!<br><br>
+                  Você já revende lingerie ou está querendo começar agora?
+                </div>
+                <div class="flex items-center justify-end gap-1 mt-1.5 text-[9px] text-emerald-400/80">
+                  <span>10:45</span>
+                  <svg class="w-3.5 h-3.5 text-emerald-400 ml-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7m-7 7l4 4L22 7"/></svg>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Barra de Digitação Manual / Operador Humano -->
+        <div class="p-3 border-t border-zinc-800 bg-zinc-900/90 flex items-center gap-2 shrink-0">
+          <input 
+            type="text" 
+            placeholder="Digite uma resposta humana para assumir o atendimento da revendedora..." 
+            class="flex-1 bg-zinc-950 border border-zinc-800 text-zinc-100 placeholder:text-zinc-500 text-xs rounded-xl px-4 py-2.5 focus:outline-none focus:border-[#c59b5f]"
+          />
+          <button class="bg-[#c59b5f] hover:bg-[#b58825] text-zinc-950 font-bold px-4 py-2.5 rounded-xl text-xs flex items-center gap-1.5 shadow-md shadow-[#c59b5f]/20">
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg>
+            Enviar
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+
+  </main>
+
+</body>
+</html>
+

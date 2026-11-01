@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Relatório Executivo de Tráfego — Avante Lingerie</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+    @page {
+      size: A4 landscape;
+      margin: 8mm 12mm;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background-color: #0b0c10;
+      color: #f1f1f1;
+      padding: 16px;
+      font-size: 11px;
+      line-height: 1.4;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    /* Barra de Ações (Apenas na tela) */
+    .action-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: linear-gradient(135deg, #16181f 0%, #1f232e 100%);
+      border: 1px solid rgba(197, 155, 95, 0.35);
+      border-radius: 10px;
+      padding: 12px 20px;
+      margin-bottom: 16px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    }
+
+    .action-title {
+      font-size: 13px;
+      font-weight: 600;
+      color: #c59b5f;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-print {
+      background: linear-gradient(135deg, #c59b5f 0%, #a4783d 100%);
+      color: #000;
+      font-weight: 700;
+      font-size: 12px;
+      padding: 8px 18px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s ease;
+      box-shadow: 0 2px 10px rgba(197, 155, 95, 0.4);
+    }
+
+    .btn-print:hover {
+      background: #e0b475;
+      transform: translateY(-1px);
+    }
+
+    /* Cabeçalho Executivo */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid #c59b5f;
+      padding-bottom: 10px;
+      margin-bottom: 14px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-badge {
+      background: #c59b5f;
+      color: #0b0c10;
+      font-weight: 800;
+      font-size: 18px;
+      padding: 6px 12px;
+      border-radius: 6px;
+      letter-spacing: 1px;
+    }
+
+    .brand-info h1 {
+      font-size: 17px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: #ffffff;
+      text-transform: uppercase;
+    }
+
+    .brand-info p {
+      font-size: 10px;
+      color: #a0a5b5;
+    }
+
+    .meta-info {
+      text-align: right;
+      font-size: 10px;
+      color: #c59b5f;
+    }
+
+    .meta-info span {
+      display: block;
+      color: #e5e5e5;
+      font-weight: 600;
+    }
+
+    /* KPI Summary Cards */
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .kpi-card {
+      background: #14161e;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 8px;
+      padding: 8px 12px;
+      border-left: 3px solid #c59b5f;
+    }
+
+    .kpi-label {
+      font-size: 9px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: #8c93a8;
+      margin-bottom: 3px;
+    }
+
+    .kpi-value {
+      font-size: 15px;
+      font-weight: 700;
+      color: #ffffff;
+    }
+
+    .kpi-sub {
+      font-size: 9px;
+      color: #10b981;
+      font-weight: 600;
+    }
+
+    /* Seções e Tabelas Horizontais */
+    .section-title {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: #c59b5f;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .badge-platform {
+      font-size: 9px;
+      padding: 2px 7px;
+      border-radius: 4px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .badge-meta {
+      background: #0081fb;
+      color: #fff;
+    }
+
+    .badge-google {
+      background: #ea4335;
+      color: #fff;
+    }
+
+    .table-container {
+      margin-bottom: 14px;
+      background: #12141c;
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.07);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+    }
+
+    th {
+      background-color: #181b24;
+      color: #a0a7ba;
+      font-size: 9px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding: 7px 10px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      white-space: nowrap;
+    }
+
+    td {
+      padding: 7px 10px;
+      font-size: 10px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+      color: #e5e7eb;
+      white-space: nowrap;
+    }
+
+    tr:hover td {
+      background-color: rgba(197, 155, 95, 0.04);
+    }
+
+    .col-campaign {
+      font-weight: 600;
+      color: #ffffff;
+      min-width: 250px;
+    }
+
+    .col-num {
+      text-align: right;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .status-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 8.5px;
+      font-weight: 700;
+      color: #10b981;
+      background: rgba(16, 185, 129, 0.12);
+      padding: 2px 6px;
+      border-radius: 12px;
+      border: 1px solid rgba(16, 185, 129, 0.3);
+    }
+
+    .status-dot {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: #10b981;
+    }
+
+    .row-subtotal {
+      background: rgba(197, 155, 95, 0.08);
+      font-weight: 700;
+    }
+
+    .row-subtotal td {
+      border-top: 1px solid rgba(197, 155, 95, 0.3);
+      border-bottom: 1px solid rgba(197, 155, 95, 0.3);
+      color: #c59b5f;
+    }
+
+    .row-total-geral {
+      background: linear-gradient(90deg, rgba(197, 155, 95, 0.18) 0%, rgba(197, 155, 95, 0.08) 100%);
+      font-weight: 800;
+      font-size: 11px;
+    }
+
+    .row-total-geral td {
+      padding: 9px 10px;
+      border-top: 2px solid #c59b5f;
+      border-bottom: 2px solid #c59b5f;
+      color: #ffffff;
+    }
+
+    .highlight-gold {
+      color: #c59b5f;
+      font-weight: 700;
+    }
+
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 12px;
+      padding-top: 8px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      font-size: 8.5px;
+      color: #6b7280;
+    }
+
+    /* REGRAS ESTRITAS DE IMPRESSÃO (A4 Paisagem) */
+    @media print {
+      body {
+        background-color: #ffffff !important;
+        color: #111827 !important;
+        padding: 0 !important;
+        font-size: 9.5px;
+      }
+
+      .action-bar {
+        display: none !important;
+      }
+
+      .container {
+        max-width: 100% !important;
+      }
+
+      .header {
+        border-bottom: 2px solid #a4783d !important;
+      }
+
+      .logo-badge {
+        background: #a4783d !important;
+        color: #ffffff !important;
+      }
+
+      .brand-info h1 {
+        color: #111827 !important;
+      }
+
+      .brand-info p {
+        color: #4b5563 !important;
+      }
+
+      .meta-info {
+        color: #a4783d !important;
+      }
+
+      .meta-info span {
+        color: #111827 !important;
+      }
+
+      .kpi-card {
+        background: #f9fafb !important;
+        border: 1px solid #e5e7eb !important;
+        border-left: 3px solid #a4783d !important;
+      }
+
+      .kpi-label {
+        color: #6b7280 !important;
+      }
+
+      .kpi-value {
+        color: #111827 !important;
+      }
+
+      .section-title {
+        color: #a4783d !important;
+      }
+
+      .table-container {
+        background: #ffffff !important;
+        border: 1px solid #d1d5db !important;
+      }
+
+      th {
+        background-color: #f3f4f6 !important;
+        color: #374151 !important;
+        border-bottom: 1px solid #d1d5db !important;
+      }
+
+      td {
+        color: #1f2937 !important;
+        border-bottom: 1px solid #e5e7eb !important;
+      }
+
+      .col-campaign {
+        color: #111827 !important;
+      }
+
+      .row-subtotal {
+        background: #fef9c3 !important;
+      }
+
+      .row-subtotal td {
+        color: #854d0e !important;
+        border-color: #fde047 !important;
+      }
+
+      .row-total-geral {
+        background: #fef08a !important;
+      }
+
+      .row-total-geral td {
+        color: #713f12 !important;
+        border-color: #a4783d !important;
+      }
+
+      .status-pill {
+        background: #dcfce7 !important;
+        color: #166534 !important;
+        border-color: #86efac !important;
+      }
+
+      .status-dot {
+        background: #16a34a !important;
+      }
+
+      .highlight-gold {
+        color: #854d0e !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- Barra de Ação (Apenas tela) -->
+    <div class="action-bar">
+      <div class="action-title">
+        <span>📊 Relatório Consolidado de Anúncios Diário</span>
+      </div>
+      <button class="btn-print" onclick="window.print()">
+        <span>🖨️ IMPRIMIR / SALVAR EM PDF</span>
+      </button>
+    </div>
+
+    <!-- Cabeçalho Executivo -->
+    <div class="header">
+      <div class="brand">
+        <div class="logo-badge">AVANTE</div>
+        <div class="brand-info">
+          <h1>Avante Lingerie — Inteligência de Tráfego Pago</h1>
+          <p>Consolidado Oficial de Performance: Meta Ads (Instagram/Facebook) + Google Ads</p>
+        </div>
+      </div>
+      <div class="meta-info">
+        Emissão Oficial: <span>01/11/2026</span>
+        Período Acumulado: <span>Últimos 30 Dias</span>
+      </div>
+    </div>
+
+    <!-- Resumo dos Principais KPIs em Cartões Horizontais -->
+    <div class="kpi-grid">
+      <div class="kpi-card">
+        <div class="kpi-label">Investimento Total</div>
+        <div class="kpi-value highlight-gold">R$ 197,81</div>
+        <div class="kpi-sub">Meta (R$ 191,53) + Google (R$ 6,28)</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-label">Impressões Totais</div>
+        <div class="kpi-value">9.031</div>
+        <div class="kpi-sub">8.968 Meta + 63 Google</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-label">Cliques Totais</div>
+        <div class="kpi-value">234</div>
+        <div class="kpi-sub">226 Meta + 8 Google</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-label">Cliques no Link / Whats</div>
+        <div class="kpi-value highlight-gold">150</div>
+        <div class="kpi-sub">57 Lia Whats + 93 Loja Virtual</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-label">CPC Médio Consolidado</div>
+        <div class="kpi-value highlight-gold">R$ 0,84</div>
+        <div class="kpi-sub">CTR Médio: 2,59%</div>
+      </div>
+    </div>
+
+    <!-- TABELA 1: META ADS (SUPERIOR) -->
+    <div class="section-title">
+      <span class="badge-platform badge-meta">Meta Ads</span>
+      <span>Campanhas Instagram & Facebook (Conta: 841441889539975)</span>
+    </div>
+
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>Campanha</th>
+            <th>Status</th>
+            <th class="col-num">Orçamento/Dia</th>
+            <th class="col-num">Alcance</th>
+            <th class="col-num">Impressões</th>
+            <th class="col-num">Cliques Totais</th>
+            <th class="col-num">Cliques no Link</th>
+            <th class="col-num">CTR</th>
+            <th class="col-num">CPC Médio</th>
+            <th class="col-num">Valor Gasto</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="col-campaign">[META] B2B - Atacado | Captação Revendedoras Lia WhatsApp</td>
+            <td><span class="status-pill"><span class="status-dot"></span> Ativo</span></td>
+            <td class="col-num">R$ 15,00</td>
+            <td class="col-num">2.639</td>
+            <td class="col-num">2.976</td>
+            <td class="col-num">99</td>
+            <td class="col-num highlight-gold">57</td>
+            <td class="col-num">3,33%</td>
+            <td class="col-num highlight-gold">R$ 0,61</td>
+            <td class="col-num">R$ 60,56</td>
+          </tr>
+          <tr>
+            <td class="col-campaign">[META] B2C - Varejo | CBO Escala + Remarketing Agressivo</td>
+            <td><span class="status-pill"><span class="status-dot"></span> Ativo</span></td>
+            <td class="col-num">R$ 35,00</td>
+            <td class="col-num">4.936</td>
+            <td class="col-num">5.992</td>
+            <td class="col-num">127</td>
+            <td class="col-num highlight-gold">85</td>
+            <td class="col-num">2,12%</td>
+            <td class="col-num highlight-gold">R$ 1,03</td>
+            <td class="col-num">R$ 130,97</td>
+          </tr>
+          <tr class="row-subtotal">
+            <td class="col-campaign">SUBTOTAL META ADS</td>
+            <td>—</td>
+            <td class="col-num">R$ 50,00</td>
+            <td class="col-num">7.575</td>
+            <td class="col-num">8.968</td>
+            <td class="col-num">226</td>
+            <td class="col-num">142</td>
+            <td class="col-num">2,52%</td>
+            <td class="col-num">R$ 0,85</td>
+            <td class="col-num">R$ 191,53</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- TABELA 2: GOOGLE ADS (INFERIOR) -->
+    <div class="section-title">
+      <span class="badge-platform badge-google">Google Ads</span>
+      <span>Campanhas Rede de Pesquisa (Conta: 1394292049)</span>
+    </div>
+
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>Campanha</th>
+            <th>Status</th>
+            <th class="col-num">Orçamento/Dia</th>
+            <th class="col-num">Alcance</th>
+            <th class="col-num">Impressões</th>
+            <th class="col-num">Cliques Totais</th>
+            <th class="col-num">Cliques no Link</th>
+            <th class="col-num">CTR</th>
+            <th class="col-num">CPC Médio</th>
+            <th class="col-num">Valor Gasto</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="col-campaign">[GOOGLE] B2B - Atacado | Fábrica Friburgo Mínimo R$ 69,90</td>
+            <td><span class="status-pill"><span class="status-dot"></span> Ativo</span></td>
+            <td class="col-num">R$ 10,00</td>
+            <td class="col-num">—</td>
+            <td class="col-num">21</td>
+            <td class="col-num">2</td>
+            <td class="col-num">2</td>
+            <td class="col-num">9,52%</td>
+            <td class="col-num">R$ 1,79</td>
+            <td class="col-num">R$ 3,58</td>
+          </tr>
+          <tr>
+            <td class="col-campaign">[GOOGLE] B2C - Varejo | Kits & Renda</td>
+            <td><span class="status-pill"><span class="status-dot"></span> Ativo</span></td>
+            <td class="col-num">R$ 10,00</td>
+            <td class="col-num">—</td>
+            <td class="col-num">42</td>
+            <td class="col-num">6</td>
+            <td class="col-num">6</td>
+            <td class="col-num">14,29%</td>
+            <td class="col-num">R$ 0,45</td>
+            <td class="col-num">R$ 2,70</td>
+          </tr>
+          <tr class="row-subtotal">
+            <td class="col-campaign">SUBTOTAL GOOGLE ADS</td>
+            <td>—</td>
+            <td class="col-num">R$ 20,00</td>
+            <td class="col-num">—</td>
+            <td class="col-num">63</td>
+            <td class="col-num">8</td>
+            <td class="col-num">8</td>
+            <td class="col-num">12,70%</td>
+            <td class="col-num">R$ 0,79</td>
+            <td class="col-num">R$ 6,28</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- TABELA 3: TOTAL GERAL CONSOLIDADO -->
+    <div class="table-container">
+      <table>
+        <tbody>
+          <tr class="row-total-geral">
+            <td class="col-campaign">TOTAL GERAL CONSOLIDADO (META + GOOGLE)</td>
+            <td><span class="status-pill"><span class="status-dot"></span> Operação 100% Ativa</span></td>
+            <td class="col-num">R$ 70,00/dia</td>
+            <td class="col-num">7.575+</td>
+            <td class="col-num">9.031</td>
+            <td class="col-num">234</td>
+            <td class="col-num">150</td>
+            <td class="col-num">2,59%</td>
+            <td class="col-num highlight-gold">R$ 0,84</td>
+            <td class="col-num highlight-gold">R$ 197,81</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Rodapé -->
+    <div class="footer">
+      <div>Avante Lingerie LTDA • CNPJ 44.577.864/0001-44 • Nova Friburgo/RJ</div>
+      <div>Gerado automaticamente via API por Ada (Lead Architect & Engineering) • Relatório Diário de Tráfego Pago</div>
+    </div>
+
+  </div>
+</body>
+</html>

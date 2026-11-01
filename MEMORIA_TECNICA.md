@@ -1828,3 +1828,58 @@ Planejamento comercial e técnico estruturado pela Ada e Vértice para alavancar
   4. **Proteção de Verba:** Lista de palavras negativas pré-existentes (`como fazer`, `gratis`, `usado`, `vagas`, `avulso`, `varejo`, `reclame aqui`) preservada sem duplicidades.
 
 - **Correção de Rota em Produção (/hcgi/api):** Identificado que no ambiente de produção VPS o backend responde sob `/hcgi/api`. O componente `SocialProofToast.jsx` e a página `OrderConfirmation.jsx` foram atualizados para utilizar `apiServerClient.fetch`, além de carregar instantaneamente com itens de fallback (eliminando telas vazias) e reduzindo o delay inicial de 11s para 5s.
+
+---
+
+### Sessão - 30/10/2026 (Parte 4: Refinamento de UX do Toast, Chime Web Audio & Estratégia de Transmissão WhatsApp)
+- **Objetivo:** Refinamento dos Toasts de Prova Social com som elegante e micro-animação para chamar a atenção, correção do ciclo de temporização em tela, e criação da estratégia de divulgação via Lista de Transmissão no WhatsApp.
+- **Implementações Técnicas:**
+  1. **Toast de Prova Social (SocialProofToast.jsx & marketing.js):**
+     - Rótulo/tag atualizada de 'COMPRA NO ATELIÊ' para 'COMPRA REALIZADA'.
+     - Síntese de áudio cristalino 'playLuxuryChime()' via Web Audio API nativa (osciladores harmônicos 1046Hz e 2093Hz com fade out a 6% de volume, zero dependência de arquivos de áudio externos).
+     - Micro-animação de wobble visual (@keyframes avanteLuxuryWobble de 0.5s) ao entrar em tela.
+     - Ciclo de temporização reconstruído via 'scheduleNext' e 'itemsRef': tempo estrito de 5.5s em exibição e 17s de intervalo entre aparições (teto de até 10 exibições por sessão).
+  2. **Validações de Código:**
+     - Sintaxe backend verificada com sucesso ('node --check apps/api/src/routes/marketing.js').
+     - Build Vite de produção concluído com sucesso ('✓ built in 30.49s').
+  3. **Estratégia de Aquisição e Disparo WhatsApp:**
+     - Estruturação de copy persuasiva de alto impacto integrando autoridade de Nova Friburgo, combate a intermediários da Shopee, catálogo dinâmico com mais de 1.000 modelos e ampla esteira de pagamentos (PIX, Mercado Crédito, Stripe Internacional).
+     - Roteamento e instrução de envio seguro e 100% gratuito via Lista de Transmissão nativa no WhatsApp Business, blindando o chip contra bloqueios da Meta.
+
+
+---
+
+### Sessão - 31/10/2026 (Emissão Real NF-e Bling SEFAZ/RJ, Diagnóstico Logística & POP de Expedição)
+- **Objetivo:** Emissão em Produção da 1ª Nota Fiscal real no Bling ERP (SEFAZ/RJ) para o Pedido de Teste nº 55 (Dooner dos Santos Almeida, R$ 73,99), diagnóstico da etiqueta unificada (Melhor Envio) e monitoramento de campanhas Meta e Google Ads.
+- **Conquistas & Operações Executadas:**
+  1. **Auditoria Fiscal & Desbloqueio da SEFAZ:**
+     - Identificado que o histórico fiscal da Série 1 já possuía emissões até a nota nº 13 (emitida em 31/08/2026).
+     - Resolvida a Rejeição 539 da SEFAZ (Duplicidade) ao ajustar o sequencial de numeração em *Preferências > Notas Fiscais > Controle de numeração* para Série 1, próximo número 14.
+     - Venda 54 clonada em Venda 55 para contornar bloqueio de rascunho excluído.
+     - Emitida e autorizada com sucesso na SEFAZ/RJ a NF-e nº 000014 com status 'Autorizada', contas a receber integradas, baixa de estoque e venda atendida.
+  2. **Diagnóstico Logístico & Etiqueta Unificada (Melhor Envio):**
+     - Mapeada a razão de não alimentar automaticamente a aba 'Objetos de postagem': o pedido original foi configurado como 'Retirada no local', sem transportadora/serviço logístico atribuído e com peso bruto 0,000kg.
+     - Explicado o travamento de integridade fiscal do SEFAZ/Bling: após a emissão da NF-e, os dados da venda são congelados para evitar divergência cadastral com o fisco estadual.
+     - Confirmado cadastro do 'ID do serviço logístico: Envios por Melhor Envio'. Para os próximos pedidos com frete pago pelo e-commerce, a integração preencherá os dados automaticamente e habilitará o botão 'DANFE Simplificado + Etiqueta de transporte' em lote.
+  3. **Guia POP de Expedição Rápida:**
+     - Estruturado e entregue o Procedimento Operacional Padrão em 5 passos simples para Luiz repassar ao sócio/equipe da fábrica em dias de ausência.
+  4. **Monitoramento de Tráfego Pago (Live MCP):**
+     - Meta Ads: Campanha B2B Atacado com performance excepcional (CTR de 3,03% e CPC de R$ 0,64). Campanha B2C Varejo ativa com CPC de R$ 0,82.
+     - Google Ads: Campanhas de Atacado e Varejo ativas com palavras-chave cirúrgicas de intenção de compra.
+- **Ponto de Parada & Próximo Passo Prioritário:**
+  - Google Meu Negócio (Perfil da Empresa no Google Maps): Criação de publicação promocional atraente com fotos de alta qualidade dos bestsellers e link direto para https://avantelingerie.com.br, captando clientes orgânicos e revendedoras sem custo de clique.
+
+- **Adendo da Noite (Resolução Faturamento Meta Ads & Desbloqueio de Campanhas):**
+  - Conta Meta Ads (`841441889539975`) desbloqueada com sucesso:
+    1. Cartão `MasterCard •••• 2855` 100% verificado e ativado.
+    2. Recarga de R$ 130,00 aprovada com sucesso no saldo pré-pago (saldo ativo: R$ 130,01).
+    3. Recarga Automática configurada e ativada: quando o saldo for <= R$ 6,00, a Meta recarrega R$ 130,00 automaticamente via MasterCard, blindando contra pausas futuras.
+    4. Limpeza de nomenclatura executada via API Meta (mutate): removido o falso sufixo `[PAUSADA]` dos títulos de campanha, refletindo seu real estado `ACTIVE`.
+    5. Ambas as campanhas (`B2B Atacado` e `B2C Varejo`) com entrega ativa (`• Active`).
+    6. Alinhamento estratégico com o Luiz sobre a estrutura de escala (Adset 02 nichado -> Escala Vertical de verba -> Escala Horizontal no Adset 03 Broad oceano aberto).
+
+- **Padronização do Relatório Executivo Diário das 9h (relatorio-anuncios.html):**
+  - Desenvolvido e aprovado pelo Luiz o novo modelo executivo de visualização e impressão: `relatorio-anuncios.html`.
+  - Padrão gráfico A4 Paisagem (Horizontal) de luxo (preto ônix e dourado Avante) com botão nativo `[IMPRIMIR / SALVAR EM PDF]`.
+  - Estrutura consolidada: KPIs superiores, Bloco 1 (Meta Ads horizontal), Bloco 2 (Google Ads horizontal) e Bloco 3 (Total Geral Consolidado).
+  - Protocolo diário estabelecido: Todo dia na rotina de abertura das 9h, a Ada puxa os dados consolidados das APIs, atualiza a tabela no chat e regenera o arquivo para impressão/PDF da diretoria.
