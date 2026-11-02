@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Users, Download, Search, ArrowUpDown, AlertCircle, Briefcase, Crown, Mail, MessageCircle, ExternalLink } from 'lucide-react';
+import { Users, Download, Search, ArrowUpDown, AlertCircle, Briefcase, Crown, Mail, MessageCircle, ExternalLink, Copy } from 'lucide-react';
 import { Button } from '@/components/ui/button.jsx';
 import { Input } from '@/components/ui/input.jsx';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select.jsx';
@@ -82,15 +82,21 @@ export default function ClientesPage() {
       const targetEmail = res?.targetEmail || '';
       const targetPhone = res?.targetPhone || '';
       const emailSent = notif?.emailSent;
-      const waLink = notif?.waLink;
       const messageWa = notif?.messageWa;
+
+      // Sanitiza telefone e constrói link nativo api.whatsapp.com que preserva 100% dos emojis UTF-8
+      const rawDigits = targetPhone.replace(/\D/g, '');
+      const cleanPhone = rawDigits.startsWith('55') ? rawDigits : (rawDigits.length > 0 ? `55${rawDigits}` : '');
+      const safeWaLink = (cleanPhone.length >= 12 && messageWa)
+        ? `https://api.whatsapp.com/send?phone=${cleanPhone}&text=${encodeURIComponent(messageWa)}`
+        : notif?.waLink;
 
       if (emailSent) {
         toast.success(`👑 ${targetName} aprovada! E-mail VIP de boas-vindas enviado.`, {
           duration: 8000,
-          action: waLink ? {
+          action: safeWaLink ? {
             label: 'WhatsApp da Lia',
-            onClick: () => window.open(waLink, '_blank')
+            onClick: () => window.open(safeWaLink, '_blank')
           } : undefined
         });
       } else {
@@ -102,7 +108,7 @@ export default function ClientesPage() {
         email: targetEmail,
         phone: targetPhone,
         emailSent,
-        waLink,
+        waLink: safeWaLink,
         messageWa
       });
 
@@ -296,10 +302,24 @@ export default function ClientesPage() {
                 <ExternalLink className="w-3.5 h-3.5 ml-1" />
               </Button>
             )}
+            {approvedModalData?.messageWa && (
+              <Button
+                type="button"
+                variant="outline"
+                className="w-full sm:w-auto border-zinc-700 text-zinc-300 hover:bg-zinc-900 gap-1.5"
+                onClick={() => {
+                  navigator.clipboard.writeText(approvedModalData.messageWa);
+                  toast.success('Mensagem VIP copiada com todos os emojis!');
+                }}
+              >
+                <Copy className="w-3.5 h-3.5 text-[#c59b5f]" />
+                Copiar Texto
+              </Button>
+            )}
             <Button
               type="button"
               variant="outline"
-              className="w-full border-zinc-700 text-zinc-300 hover:bg-zinc-900"
+              className="w-full sm:w-auto border-zinc-700 text-zinc-300 hover:bg-zinc-900"
               onClick={() => setApprovedModalData(null)}
             >
               Concluir

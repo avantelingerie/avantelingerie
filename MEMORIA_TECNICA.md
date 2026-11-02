@@ -1883,3 +1883,16 @@ Planejamento comercial e técnico estruturado pela Ada e Vértice para alavancar
   - Padrão gráfico A4 Paisagem (Horizontal) de luxo (preto ônix e dourado Avante) com botão nativo `[IMPRIMIR / SALVAR EM PDF]`.
   - Estrutura consolidada: KPIs superiores, Bloco 1 (Meta Ads horizontal), Bloco 2 (Google Ads horizontal) e Bloco 3 (Total Geral Consolidado).
   - Protocolo diário estabelecido: Todo dia na rotina de abertura das 9h, a Ada puxa os dados consolidados das APIs, atualiza a tabela no chat e regenera o arquivo para impressão/PDF da diretoria.
+
+- **01/11/2026 — Transformação do "Cérebro da Lia" em CRM Executivo Omnichannel & Blindagem Nemotron:**
+  1. **Redesign Panorâmico & Experiência de Atendimento (Lumi + Ada):**
+     - O painel /admin/lia foi totalmente refatorado de um card estreito para um CRM moderno estilo WhatsApp Business / Kommo / Chatwoot.
+     - Barra de filtros com 1 clique (Todos, 📱 WhatsApp, 💻 Loja Virtual, 👤 Humano).
+     - Tratamento elegante de identificadores: números reais formatados (+55 (DD) 9XXXX-XXXX), IDs seguros da Meta (WhatsApp • Contato #XXXXXX) e visitantes da loja (Visitante Loja #XXXX).
+     - Horários humanizados (Hoje às 10:45, Ontem às 18:30), balões de conversa no padrão WhatsApp com duplo check (✓✓), botão direto Abrir no Zap e formulário de resposta manual do operador humano.
+  2. **Auditoria e Portão Nemotron (Segurança de Tráfego Pago):**
+     - No 1º crivo do Nemotron, foram apontados riscos em horário de pico de anúncios da Meta/Google Ads.
+     - A Ada implementou 4 blindagens: (a) Trava de segurança no botão de desconectar do WhatsApp exigindo digitar 'DESCONECTAR'; (b) Paginação/limite inteligente nas 50 conversas mais ativas (sort: '-updated'); (c) Confirmação com título na exclusão de regras; (d) Confirmação de isolamento estrito da rota administrativa /admin/lia em relação à vitrine e checkout públicos.
+     - O Nemotron emitiu parecer formal de **APROVAÇÃO PARA DEPLOY EM PRODUÇÃO**.
+  3. **Ajuste de Altura e Responsividade (Feedback Luiz):**
+     - Resolvido corte na base e sobreposição de ícones no cabeçalho através da remoção de margens negativas e flexibilização de rolagem nativa nas abas de Treinamento e Conexão WhatsApp.
