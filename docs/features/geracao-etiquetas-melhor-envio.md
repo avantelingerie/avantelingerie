@@ -70,3 +70,4 @@ sequenceDiagram
 - Saldo suficiente na carteira do Melhor Envio.
 - Chave de API ativa com escopos: `cart-read`, `cart-write`, `shipping-calculate`, `shipping-checkout`, `shipping-print`.
 - Medidas e pesos dos produtos devidamente cadastrados.
+
