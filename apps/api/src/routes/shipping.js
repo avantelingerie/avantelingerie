@@ -265,12 +265,12 @@ router.post('/track', async (req, res, next) => {
     // 1. Try to find the order in the database
     try {
       const orderSearch = await pb.collection('pedidos').getFullList({
-        filter: `numero_pedido = "${cleanCode}" || id = "${cleanCode}" || codigo_rastreio = "${cleanCode}" || rastreamento = "${cleanCode}"`,
+        filter: `numero_pedido = "${cleanCode}" || id = "${cleanCode}" || rastreamento = "${cleanCode}"`,
         $autoCancel: false
       });
       if (orderSearch.length > 0) {
         orderRecord = orderSearch[0];
-        trackingCode = orderRecord.codigo_rastreio || orderRecord.rastreamento || cleanCode;
+        trackingCode = orderRecord.rastreamento || cleanCode;
       }
     } catch (err) {
       logger.warn('[ShippingAPI] Erro ao buscar pedido para rastreio:', err.message);
@@ -470,30 +470,24 @@ router.post('/despachar', async (req, res) => {
       return res.status(404).json({ sucesso: false, erro: 'Pedido não encontrado.' });
     }
 
-    // 2. Monta o histórico de status de forma cronológica
-    let historico = Array.isArray(pedido.historico_status) ? [...pedido.historico_status] : [];
-    if (typeof pedido.historico_status === 'string') {
-      try { historico = JSON.parse(pedido.historico_status); } catch (e) {}
-    }
-
+    // 2. Atualiza o pedido no PocketBase estritamente com os campos existentes no schema
     const agora = new Date().toISOString();
-    historico.push({
-      status: 'enviado',
-      data: agora,
-      observacao: `Pedido despachado via ${carrier}. Código de rastreamento: ${cleanCode}`
-    });
+    const obsDespacho = `[EXPEDIÇÃO ${new Date().toLocaleDateString('pt-BR')}] Enviado via ${carrier}. Rastreio: ${cleanCode}`;
+    const novasObservacoes = pedido.observacoes 
+      ? `${pedido.observacoes}\n${obsDespacho}` 
+      : obsDespacho;
 
-    // 3. Atualiza o pedido no PocketBase
     const updatedPedido = await pb.collection('pedidos').update(pedido.id, {
       status: 'enviado',
-      codigo_rastreio: cleanCode,
       rastreamento: cleanCode,
-      transportadora: carrier,
-      data_envio: agora,
-      historico_status: historico
+      observacoes: novasObservacoes
     }, { $autoCancel: false });
 
-    // 4. Dispara as notificações oficiais (E-mail VIP Resend + WhatsApp Lia)
+    // Anexa dados voláteis para consumo das notificações
+    updatedPedido.transportadora = carrier;
+    updatedPedido.codigo_rastreio = cleanCode;
+
+    // 3. Dispara as notificações oficiais (E-mail VIP Resend + WhatsApp Lia)
     let notifResult = { emailSent: false, waSent: false, waLink: null, trackingUrl: null };
     try {
       notifResult = await notificationService.sendOrderDispatchedNotification({

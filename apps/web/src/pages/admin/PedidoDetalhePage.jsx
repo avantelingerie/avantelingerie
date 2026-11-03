@@ -27,6 +27,7 @@ export default function PedidoDetalhePage() {
   const [isDespachando, setIsDespachando] = useState(false);
   const [dispatchFeedback, setDispatchFeedback] = useState(null);
   const [isCopied, setIsCopied] = useState(false);
+  const [isMsgCopied, setIsMsgCopied] = useState(false);
 
   const fetchPedido = async () => {
     try {
@@ -120,6 +121,45 @@ export default function PedidoDetalhePage() {
     }
   };
 
+  const getWhatsAppMessageText = () => {
+    const firstName = (pedido?.cliente_nome || 'Cliente').trim().split(' ')[0];
+    const numPedido = pedido?.numero_pedido || pedido?.id?.slice(-6) || 'PED';
+    const tracking = codigoRastreioInput || pedido?.rastreamento || pedido?.codigo_rastreio || '888031017960740';
+    const carrier = transportadoraInput || 'J&T Express';
+    const dest = pedido?.cidade && pedido?.estado ? `${pedido.cidade} / ${pedido.estado}` : 'Contagem / MG';
+    const url = `https://avantelingerie.com.br/rastreio?codigo=${encodeURIComponent(tracking)}`;
+
+    return [
+      `Olá, ${firstName}! Tudo bem? Aqui é a Lia, consultora da Avante Lingerie, direto da nossa fábrica em Nova Friburgo/RJ! 🌸✨`,
+      ``,
+      `Passando com uma notícia maravilhosa sobre o seu pedido *#${numPedido}*! 💖`,
+      ``,
+      `Seu Pedido acabou de ser inspecionado no nosso controle de qualidade, carinhosamente embalado e já foi entregue à transportadora! 🚚📦`,
+      ``,
+      `📋 *Dados do Envio:*`,
+      `• *Pedido:* #${numPedido}`,
+      `• *Transportadora:* ${carrier}`,
+      `• *Código de Rastreio:* ${tracking}`,
+      `• *Destino:* ${dest}`,
+      ``,
+      `Você pode acompanhar cada movimentação da sua entrega em tempo real direto na nossa página oficial:`,
+      `👉 ${url}`,
+      ``,
+      `Assim que suas lingeries chegarem, me conta o que achou! Se precisar de qualquer ajuda durante o transporte, estou aqui à disposição. 🥰`,
+      ``,
+      `Com carinho,`,
+      `*Lia • Avante Lingerie* 💕`
+    ].join('\n');
+  };
+
+  const copyWhatsAppMessage = () => {
+    const text = getWhatsAppMessageText();
+    navigator.clipboard.writeText(text);
+    setIsMsgCopied(true);
+    setTimeout(() => setIsMsgCopied(false), 2500);
+    toast.success('Texto oficial copiado! Basta colar (Ctrl + V) no WhatsApp.');
+  };
+
   if (isLoading) {
     return <div className="p-8 space-y-6"><Skeleton className="h-12 w-1/3" /><Skeleton className="h-64 w-full" /></div>;
   }
@@ -180,8 +220,8 @@ export default function PedidoDetalhePage() {
         const currentTracking = pedido.codigo_rastreio || pedido.rastreamento || codigoRastreioInput;
         const cleanPhone = (pedido.cliente_telefone || '').replace(/\D/g, '');
         const waPhone = cleanPhone.startsWith('55') ? cleanPhone : (cleanPhone ? `55${cleanPhone}` : '');
-        const defaultWaUrl = waPhone ? `https://api.whatsapp.com/send?phone=${waPhone}` : null;
-        const waUrl = dispatchFeedback?.waLink || defaultWaUrl;
+        const textEncoded = encodeURIComponent(getWhatsAppMessageText());
+        const waUrl = waPhone ? `https://wa.me/${waPhone}?text=${textEncoded}` : null;
 
         return (
           <div className="bg-card border border-border/80 rounded-xl p-5 md:p-6 shadow-sm space-y-5 bg-gradient-to-br from-card via-card to-amber-950/10">
@@ -305,10 +345,21 @@ export default function PedidoDetalhePage() {
                       <Button variant="outline" size="sm" asChild className="border-emerald-500/30 text-emerald-600 dark:text-emerald-400 hover:bg-emerald-500/10">
                         <a href={waUrl} target="_blank" rel="noopener noreferrer">
                           <MessageCircle className="w-4 h-4 mr-1.5 text-emerald-500" />
-                          Conversa WhatsApp (Lia)
+                          Abrir WhatsApp Web
                         </a>
                       </Button>
                     )}
+
+                    <Button 
+                      type="button" 
+                      variant="outline" 
+                      size="sm" 
+                      onClick={copyWhatsAppMessage}
+                      className="border-amber-500/30 text-amber-600 dark:text-amber-400 hover:bg-amber-500/10"
+                    >
+                      {isMsgCopied ? <Check className="w-4 h-4 mr-1.5 text-emerald-500" /> : <Copy className="w-4 h-4 mr-1.5 text-amber-500" />}
+                      {isMsgCopied ? 'Texto Copiado!' : 'Copiar Mensagem (Zap)'}
+                    </Button>
                   </>
                 )}
 
