@@ -2,6 +2,7 @@ import express from 'express';
 import axios from 'axios';
 import pb from '../utils/pocketbaseClient.js';
 import logger from '../utils/logger.js';
+import { notificationService } from '../services/notificationService.js';
 
 const router = express.Router();
 
@@ -264,12 +265,12 @@ router.post('/track', async (req, res, next) => {
     // 1. Try to find the order in the database
     try {
       const orderSearch = await pb.collection('pedidos').getFullList({
-        filter: `numero_pedido = "${cleanCode}" || id = "${cleanCode}"`,
+        filter: `numero_pedido = "${cleanCode}" || id = "${cleanCode}" || codigo_rastreio = "${cleanCode}" || rastreamento = "${cleanCode}"`,
         $autoCancel: false
       });
       if (orderSearch.length > 0) {
         orderRecord = orderSearch[0];
-        trackingCode = orderRecord.rastreamento || '';
+        trackingCode = orderRecord.codigo_rastreio || orderRecord.rastreamento || cleanCode;
       }
     } catch (err) {
       logger.warn('[ShippingAPI] Erro ao buscar pedido para rastreio:', err.message);
@@ -433,6 +434,92 @@ router.post('/track', async (req, res, next) => {
   } catch (error) {
     logger.error('[ShippingAPI] Erro ao rastrear:', error.message);
     res.status(500).json({ sucesso: false, erro: 'Erro interno ao consultar o rastreamento.' });
+  }
+});
+
+// POST /shipping/despachar - Despachar pedido, salvar rastreio e disparar notificações (E-mail Resend + WhatsApp Lia)
+router.post('/despachar', async (req, res) => {
+  try {
+    const { pedidoId, codigoRastreio, transportadora } = req.body;
+
+    if (!pedidoId) {
+      return res.status(400).json({ sucesso: false, erro: 'ID ou número do pedido é obrigatório.' });
+    }
+    if (!codigoRastreio || !codigoRastreio.trim()) {
+      return res.status(400).json({ sucesso: false, erro: 'Código de rastreamento é obrigatório.' });
+    }
+
+    const cleanCode = codigoRastreio.trim().toUpperCase();
+    const carrier = (transportadora || 'J&T Express').trim();
+
+    // 1. Localiza o pedido no banco de dados
+    let pedido = null;
+    try {
+      pedido = await pb.collection('pedidos').getOne(pedidoId, { $autoCancel: false });
+    } catch (e) {
+      const search = await pb.collection('pedidos').getFullList({
+        filter: `numero_pedido = "${pedidoId}" || id = "${pedidoId}"`,
+        $autoCancel: false
+      });
+      if (search.length > 0) {
+        pedido = search[0];
+      }
+    }
+
+    if (!pedido) {
+      return res.status(404).json({ sucesso: false, erro: 'Pedido não encontrado.' });
+    }
+
+    // 2. Monta o histórico de status de forma cronológica
+    let historico = Array.isArray(pedido.historico_status) ? [...pedido.historico_status] : [];
+    if (typeof pedido.historico_status === 'string') {
+      try { historico = JSON.parse(pedido.historico_status); } catch (e) {}
+    }
+
+    const agora = new Date().toISOString();
+    historico.push({
+      status: 'enviado',
+      data: agora,
+      observacao: `Pedido despachado via ${carrier}. Código de rastreamento: ${cleanCode}`
+    });
+
+    // 3. Atualiza o pedido no PocketBase
+    const updatedPedido = await pb.collection('pedidos').update(pedido.id, {
+      status: 'enviado',
+      codigo_rastreio: cleanCode,
+      rastreamento: cleanCode,
+      transportadora: carrier,
+      data_envio: agora,
+      historico_status: historico
+    }, { $autoCancel: false });
+
+    // 4. Dispara as notificações oficiais (E-mail VIP Resend + WhatsApp Lia)
+    let notifResult = { emailSent: false, waSent: false, waLink: null, trackingUrl: null };
+    try {
+      notifResult = await notificationService.sendOrderDispatchedNotification({
+        order: updatedPedido,
+        codigoRastreio: cleanCode,
+        transportadora: carrier
+      });
+    } catch (notifErr) {
+      logger.error('[ShippingAPI] Erro ao disparar notificações de despacho:', notifErr.message);
+    }
+
+    logger.info(`[ShippingAPI] Pedido ${pedido.numero_pedido || pedido.id} despachado com sucesso via ${carrier}. Rastreio: ${cleanCode}`);
+
+    return res.json({
+      sucesso: true,
+      mensagem: 'Pedido despachado e cliente notificada com sucesso!',
+      pedido: updatedPedido,
+      emailSent: notifResult.emailSent,
+      waSent: notifResult.waSent,
+      waLink: notifResult.waLink,
+      trackingUrl: notifResult.trackingUrl || `https://avantelingerie.com.br/rastreio?codigo=${cleanCode}`
+    });
+
+  } catch (error) {
+    logger.error('[ShippingAPI] Erro ao processar despacho:', error);
+    res.status(500).json({ sucesso: false, erro: error.message || 'Erro interno ao despachar pedido.' });
   }
 });
 

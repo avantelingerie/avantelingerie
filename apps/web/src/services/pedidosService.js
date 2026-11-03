@@ -1,5 +1,6 @@
 import pb from '@/lib/pocketbaseClient.js';
 import { clientesService } from './clientesService.js';
+import apiServerClient from '@/lib/apiServerClient.js';
 
 export const pedidosService = {
   async getPedidos(filters = {}, page = 1, limit = 20) {
@@ -126,6 +127,24 @@ export const pedidosService = {
       return updated;
     } catch (e) {
       console.error('[pedidosService] Erro ao atualizar status', e);
+      throw e;
+    }
+  },
+
+  async despacharPedido({ pedidoId, codigoRastreio, transportadora }) {
+    try {
+      const response = await apiServerClient.fetch('/shipping/despachar', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ pedidoId, codigoRastreio, transportadora })
+      });
+      const data = await response.json();
+      if (!response.ok || !data.sucesso) {
+        throw new Error(data.erro || data.mensagem || 'Falha ao despachar pedido.');
+      }
+      return data;
+    } catch (e) {
+      console.error('[pedidosService] Erro ao despachar pedido:', e);
       throw e;
     }
   },

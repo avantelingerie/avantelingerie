@@ -18,13 +18,32 @@ const getWhatsAppHosts = () => {
     return [...new Set(list)];
 };
 
+const normalizePhone = (phone) => {
+    let clean = (phone || '').replace(/\D/g, '');
+    if (clean.length > 0 && !clean.startsWith('55')) {
+        clean = '55' + clean;
+    }
+    return clean;
+};
+
 async function sendWhatsAppDirect(phone, message) {
-    if (!phone || !message) return false;
+    const cleanPhone = normalizePhone(phone);
+    if (!cleanPhone || !message) return false;
+    
+    // Normalização estrita UTF-8 NFC para evitar caracteres corrompidos/mojibake
+    const safeMessage = String(message).normalize('NFC');
     const hosts = getWhatsAppHosts();
+    
     for (const host of hosts) {
         try {
-            await axios.post(`${host}/send`, { phone, message }, { timeout: 3500 });
-            logger.info(`[NotificationService] WhatsApp enviado com sucesso para ${phone} via ${host}`);
+            await axios.post(`${host}/send`, { phone: cleanPhone, message: safeMessage }, {
+                headers: {
+                    'Content-Type': 'application/json; charset=utf-8',
+                    'Accept': 'application/json'
+                },
+                timeout: 4500
+            });
+            logger.info(`[NotificationService] WhatsApp enviado com sucesso para ${cleanPhone} via ${host}`);
             return true;
         } catch (err) {
             logger.warn(`[NotificationService] Falha ao tentar enviar via ${host} (${err.message}). Tentando próximo host...`);
@@ -67,9 +86,11 @@ class NotificationService {
         } 
         else if (novoStatus === 'despachado' || (rastreio && !order.rastreio_enviado)) {
             const trackCode = rastreio || order.codigo_rastreio;
-            messageWa = `Oie, ${firstName}! 🚚✨\n\nSeu pedido *#${numPedido}* acabou de sair do nosso ateliê!\n\nVocê pode rastrear a sua caixinha usando o código: *${trackCode}*\n\nBasta ir na página de rastreio no nosso site ou me perguntar por aqui mesmo! 🥰`;
-            subjectEmail = `[Avante Lingerie] O seu pedido foi despachado! (#${numPedido})`;
-            htmlEmail = `<h2>Oie, ${firstName}! 🚚✨</h2><p>Seu pedido <strong>#${numPedido}</strong> acabou de sair do nosso ateliê!</p><p>Seu código de rastreio é: <strong>${trackCode}</strong></p>`;
+            return await this.sendOrderDispatchedNotification({
+                order,
+                codigoRastreio: trackCode,
+                transportadora: order.transportadora || 'J&T Express'
+            });
         }
         else {
             return; // Status irrelevante
@@ -286,6 +307,260 @@ class NotificationService {
     }
 
     /**
+     * Dispara notificação oficial e de alto padrão quando um pedido é despachado:
+     * - E-mail VIP via Resend (pedidos@avantelingerie.com.br)
+     * - Notificação carinhosa no WhatsApp da Lia com normalização UTF-8 sem emojis corrompidos
+     * - Idempotência por orderId + trackingCode (Portão Nemotron)
+     */
+    async sendOrderDispatchedNotification({ order, codigoRastreio, transportadora }) {
+        if (!order) {
+            logger.warn('[NotificationService] Pedido inválido para notificação de despacho.');
+            return { success: false, erro: 'Pedido não fornecido' };
+        }
+
+        const numPedido = order.numero_pedido || (order.id ? order.id.slice(-6) : 'Avante');
+        const trackingCode = (codigoRastreio || order.codigo_rastreio || order.rastreamento || '').trim();
+        const carrier = (transportadora || order.transportadora || 'J&T Express').trim();
+        const firstName = (order.cliente_nome || order.nome_cliente || 'Cliente').trim().split(' ')[0];
+        const fullName = (order.cliente_nome || order.nome_cliente || firstName).trim();
+        const email = (order.cliente_email || '').trim();
+        const phone = order.cliente_telefone || '';
+
+        // 1. Idempotência (Portão Nemotron): Evita disparos duplicados num intervalo de 2 minutos
+        const cacheKey = `${order.id || numPedido}_${trackingCode}`;
+        const lastDispatch = processedDispatches.get(cacheKey);
+        const now = Date.now();
+        if (lastDispatch && (now - lastDispatch.timestamp) < 120000) {
+            logger.warn(`[NotificationService] Despacho ${cacheKey} já processado há menos de 2 min. Retornando cache.`);
+            return lastDispatch.result;
+        }
+
+        const trackingUrl = `https://avantelingerie.com.br/rastreio?codigo=${encodeURIComponent(trackingCode)}`;
+
+        // Monta o endereço de entrega formatado
+        const addressParts = [
+            order.endereco_entrega,
+            order.numero ? `nº ${order.numero}` : '',
+            order.complemento ? `(${order.complemento})` : '',
+            order.bairro,
+            order.cidade && order.estado ? `${order.cidade} - ${order.estado}` : (order.cidade || order.estado || ''),
+            order.cep ? `CEP: ${order.cep}` : ''
+        ].filter(Boolean);
+        const enderecoDestino = addressParts.length > 0 ? addressParts.join(', ') : (order.cidade && order.estado ? `${order.cidade} - ${order.estado}` : 'Endereço cadastrado');
+
+        // 2. Cópia oficial e carinhosa da Lia para WhatsApp (Unicode Seguro)
+        const destinationShort = order.cidade && order.estado ? `${order.cidade} / ${order.estado}` : 'Contagem / MG';
+        const messageWa = [
+            `Olá, ${firstName}! Tudo bem? Aqui é a Lia, consultora da Avante Lingerie, direto da nossa fábrica em Nova Friburgo/RJ! 🌸✨`,
+            ``,
+            `Passando com uma notícia maravilhosa sobre o seu pedido *#${numPedido}*! 💖`,
+            ``,
+            `Seu Pedido acabou de ser inspecionado no nosso controle de qualidade, carinhosamente embalado e já foi entregue à transportadora! 🚚📦`,
+            ``,
+            `📋 *Dados do Envio:*`,
+            `• *Pedido:* #${numPedido}`,
+            `• *Transportadora:* ${carrier}`,
+            `• *Código de Rastreio:* ${trackingCode}`,
+            `• *Destino:* ${destinationShort}`,
+            ``,
+            `Você pode acompanhar cada movimentação da sua entrega em tempo real direto na nossa página oficial:`,
+            `👉 ${trackingUrl}`,
+            ``,
+            `Assim que suas lingeries chegarem, me conta o que achou! Se precisar de qualquer ajuda durante o transporte, estou aqui à disposição. 🥰`,
+            ``,
+            `Com carinho,`,
+            `*Lia • Avante Lingerie* 💕`
+        ].join('\n').normalize('NFC');
+
+        const cleanPhone = normalizePhone(phone);
+        const waLink = cleanPhone.length >= 12
+            ? `https://api.whatsapp.com/send?phone=${cleanPhone}&text=${encodeURIComponent(messageWa)}`
+            : null;
+
+        let waSent = false;
+        let emailSent = false;
+
+        // 3. Disparo WhatsApp automatizado (via bot)
+        if (cleanPhone.length >= 12) {
+            waSent = await sendWhatsAppDirect(cleanPhone, messageWa);
+            if (!waSent) {
+                logger.warn(`[NotificationService] WhatsApp automático offline ou indisponível. Link manual gerado: ${waLink}`);
+            }
+        }
+
+        // 4. Montagem da lista de itens para o e-mail
+        let itemsList = Array.isArray(order.itens) ? order.itens : [];
+        if (typeof order.itens === 'string') {
+            try { itemsList = JSON.parse(order.itens); } catch (e) {}
+        }
+
+        let itemsRows = '';
+        if (itemsList.length > 0) {
+            itemsRows = itemsList.map(item => {
+                const nome = item.nome_produto || item.nome || item.name || item.title || 'Lingerie Avante';
+                const variacao = [item.tamanho, item.cor].filter(Boolean).join(' / ') || item.variacao || '';
+                const qtd = item.quantity || item.quantidade || item.qtd || 1;
+                return `
+                    <tr style="border-bottom: 1px solid #f4f4f5;">
+                        <td style="padding: 10px 12px; font-weight: 500; color: #18181b;">
+                            ${nome}
+                            ${variacao ? `<br><span style="font-size: 11px; color: #71717a;">${variacao}</span>` : ''}
+                        </td>
+                        <td style="padding: 10px 12px; text-align: center; color: #52525b; font-weight: 600;">${qtd}x</td>
+                    </tr>
+                `;
+            }).join('');
+        }
+
+        // 5. Template Editorial de E-mail VIP (Resend)
+        const resendClient = getResendClient();
+        if (resendClient && email && email.includes('@')) {
+            const subjectEmail = `✨ Seu pedido #${numPedido} foi despachado! Sua caixinha Avante está a caminho 🚚`;
+            const htmlEmail = `
+            <!DOCTYPE html>
+            <html lang="pt-BR">
+            <head>
+              <meta charset="utf-8">
+              <meta name="viewport" content="width=device-width, initial-scale=1.0">
+              <title>${subjectEmail}</title>
+            </head>
+            <body style="margin: 0; padding: 0; background-color: #f4f4f5; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; color: #18181b;">
+              <table width="100%" border="0" cellspacing="0" cellpadding="0" style="background-color: #f4f4f5; padding: 30px 15px;">
+                <tr>
+                  <td align="center">
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0" style="max-width: 600px; background-color: #ffffff; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.06); border: 1px solid #e4e4e7;">
+                      
+                      <!-- Header Luxo Preto & Dourado -->
+                      <tr>
+                        <td style="background-color: #121212; padding: 35px 30px; text-align: center; border-bottom: 3px solid #c59b5f;">
+                          <h1 style="margin: 0; color: #ffffff; font-size: 24px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;">
+                            AVANTE LINGERIE
+                          </h1>
+                          <p style="margin: 6px 0 0; color: #c59b5f; font-size: 11px; letter-spacing: 3px; text-transform: uppercase; font-weight: 600;">
+                            Confecção Própria • Nova Friburgo / RJ
+                          </p>
+                        </td>
+                      </tr>
+
+                      <!-- Conteúdo Principal -->
+                      <tr>
+                        <td style="padding: 35px 30px;">
+                          <h2 style="margin: 0 0 15px; color: #18181b; font-size: 20px; font-weight: 700;">
+                            Olá, ${firstName}! Suas lingeries estão a caminho! 🚚✨
+                          </h2>
+                          <p style="margin: 0 0 20px; color: #52525b; font-size: 15px; line-height: 1.6;">
+                            Temos uma notícia maravilhosa! Suas peças foram cuidadosamente separadas, passaram pelo nosso rigoroso controle de qualidade, foram embaladas com todo carinho no nosso ateliê e <strong>já foram entregues à transportadora</strong>.
+                          </p>
+
+                          <!-- Box Destaque de Rastreio -->
+                          <div style="background: linear-gradient(135deg, #18181b 0%, #27272a 100%); border: 1px solid #c59b5f; border-radius: 12px; padding: 22px; margin: 25px 0; color: #ffffff;">
+                            <span style="display: inline-block; background-color: #c59b5f; color: #121212; font-size: 11px; font-weight: 800; padding: 4px 12px; border-radius: 20px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px;">
+                              📦 Pedido Despachado
+                            </span>
+                            <h3 style="margin: 0 0 10px; color: #ffffff; font-size: 18px; font-weight: 700;">
+                              Código: <span style="color: #c59b5f; letter-spacing: 1px;">${trackingCode}</span>
+                            </h3>
+                            <p style="margin: 0 0 6px; color: #d4d4d8; font-size: 13px;">
+                              <strong>Transportadora:</strong> ${carrier}
+                            </p>
+                            <p style="margin: 0 0 6px; color: #d4d4d8; font-size: 13px;">
+                              <strong>Pedido:</strong> #${numPedido}
+                            </p>
+                            <p style="margin: 0; color: #d4d4d8; font-size: 13px;">
+                              <strong>Destino:</strong> ${enderecoDestino}
+                            </p>
+                          </div>
+
+                          <!-- Botão CTA Principal -->
+                          <div style="text-align: center; margin: 30px 0;">
+                            <a href="${trackingUrl}" style="background-color: #c59b5f; color: #121212; padding: 16px 36px; border-radius: 30px; font-weight: 700; font-size: 14px; text-decoration: none; display: inline-block; letter-spacing: 0.5px; box-shadow: 0 4px 12px rgba(197,155,95,0.3);">
+                              RASTREAR MINHA ENCOMENDA NO SITE ➜
+                            </a>
+                          </div>
+
+                          ${itemsRows ? `
+                          <!-- Resumo dos Itens -->
+                          <h4 style="margin: 25px 0 12px; color: #18181b; font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">
+                            🛍️ Peças da sua caixinha:
+                          </h4>
+                          <table width="100%" border="0" cellspacing="0" cellpadding="8" style="background-color: #fafafa; border-radius: 8px; font-size: 13px; color: #3f3f46; border: 1px solid #f4f4f5; margin-bottom: 25px;">
+                            <thead>
+                              <tr style="border-bottom: 1px solid #e4e4e7; background-color: #f4f4f5; text-align: left; color: #71717a; font-size: 11px; text-transform: uppercase;">
+                                <th style="padding: 10px 12px;">Produto</th>
+                                <th style="padding: 10px 12px; text-align: center;">Quantidade</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              ${itemsRows}
+                            </tbody>
+                          </table>
+                          ` : ''}
+
+                          <!-- Dica Especial de Cuidado -->
+                          <div style="background-color: #fffbeb; border-left: 4px solid #c59b5f; padding: 14px 16px; border-radius: 4px; margin: 25px 0;">
+                            <p style="margin: 0; color: #92400e; font-size: 13px; line-height: 1.5;">
+                              💡 <strong>Dica especial de cuidado Avante:</strong><br>
+                              Ao receber suas lingeries, lave-as preferencialmente à mão com sabão neutro e deixe secar à sombra. Isso preserva a maciez da renda, a vivacidade das cores e a durabilidade das peças por muito mais tempo!
+                            </p>
+                          </div>
+
+                          <!-- Contato da Consultora Lia -->
+                          <p style="margin: 30px 0 0; color: #71717a; font-size: 13px; text-align: center; border-top: 1px solid #e4e4e7; padding-top: 20px;">
+                            Dúvidas sobre o transporte ou quer falar com a nossa equipe?<br>
+                            Fale com a <strong>Lia</strong> no WhatsApp: <a href="https://wa.me/5522981225010" style="color: #c59b5f; font-weight: 600; text-decoration: none;">(22) 98122-5010</a>
+                          </p>
+                        </td>
+                      </tr>
+
+                      <!-- Footer -->
+                      <tr>
+                        <td style="background-color: #fafafa; padding: 20px 30px; text-align: center; border-top: 1px solid #e4e4e7;">
+                          <p style="margin: 0; color: #a1a1aa; font-size: 11px;">
+                            Avante Lingerie • Nova Friburgo / RJ • Todos os direitos reservados.
+                          </p>
+                        </td>
+                      </tr>
+
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </body>
+            </html>
+            `;
+
+            try {
+                await resendClient.emails.send({
+                    from: 'Avante Lingerie <pedidos@avantelingerie.com.br>',
+                    to: email,
+                    subject: subjectEmail,
+                    html: htmlEmail
+                });
+                emailSent = true;
+                logger.info(`[NotificationService] E-mail de despacho enviado com sucesso via Resend para ${email}`);
+            } catch (err) {
+                logger.error(`[NotificationService] Erro ao enviar e-mail de despacho para ${email}: ${err.message}`);
+            }
+        }
+
+        const result = {
+            success: true,
+            emailSent,
+            waSent,
+            waLink,
+            messageWa,
+            trackingUrl
+        };
+
+        processedDispatches.set(cacheKey, {
+            timestamp: Date.now(),
+            result
+        });
+
+        return result;
+    }
+
+    /**
      * Envia mensagem carinhosa e oficial no WhatsApp da cliente ativando o cupom VIP AVANTELIA10
      */
     async sendVipCouponNotification({ phone, name, orderNum, cpf }) {
@@ -307,6 +582,7 @@ class NotificationService {
 
 // Map de idempotência em memória para prevenir múltiplos cliques acidentais
 const processedApprovals = new Map();
+const processedDispatches = new Map();
 
 export const notificationService = new NotificationService();
 

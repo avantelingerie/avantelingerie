@@ -162,9 +162,14 @@ app.post('/send', async (req, res) => {
     }
     
     try {
-        const chatId = `${phone.replace(/\D/g, '')}@c.us`;
-        await client.sendMessage(chatId, message);
-        console.log(`[Push] Mensagem enviada para ${phone}`);
+        let clean = phone.replace(/\D/g, '');
+        if (clean.length > 0 && !clean.startsWith('55')) {
+            clean = '55' + clean;
+        }
+        const chatId = `${clean}@c.us`;
+        const safeMessage = String(message).normalize('NFC');
+        await client.sendMessage(chatId, safeMessage);
+        console.log(`[Push] Mensagem enviada com sucesso para ${clean}`);
         res.json({ sucesso: true });
     } catch (e) {
         console.error(`[Push] Erro ao enviar mensagem para ${phone}:`, e);
