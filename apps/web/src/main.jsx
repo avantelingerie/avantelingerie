@@ -26,6 +26,20 @@ if (typeof window !== 'undefined' && window.localStorage) {
   window.localStorage.removeItem = function (key) {
     originalRemoveItem(getTargetKey(key));
   };
+
+  // Proteção contra cópia não autorizada de imagens e mídias de produtos
+  document.addEventListener('contextmenu', (e) => {
+    const target = e.target;
+    if (
+      target.tagName === 'IMG' ||
+      target.tagName === 'VIDEO' ||
+      target.closest('.aspect-\\[3\\/4\\]') ||
+      target.closest('.product-gallery-container') ||
+      target.closest('[data-protected-media]')
+    ) {
+      e.preventDefault();
+    }
+  }, { passive: false });
 }
 
 // Dynamically import the App and CSS to ensure the localStorage interceptor runs first

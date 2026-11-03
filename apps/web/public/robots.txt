@@ -1,3 +1,13 @@
 User-agent: *
 Allow: /
+Disallow: /admin/
+Disallow: /hcgi/platform/
+Disallow: /checkout
+Disallow: /carrinho
+Disallow: /minha-conta/
+
+# Permite explicitamente o Google Imagens rastrear fotos de produtos para o Google Shopping
+User-agent: Googlebot-Image
+Allow: /
+
 Sitemap: https://avantelingerie.com.br/sitemap.xml
