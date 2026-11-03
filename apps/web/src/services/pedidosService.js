@@ -149,6 +149,40 @@ export const pedidosService = {
     }
   },
 
+  async consultarNfeBling(pedidoId) {
+    try {
+      const response = await apiServerClient.fetch(`/shipping/consultar-nfe-bling/${pedidoId}`);
+      const data = await response.json();
+      return data;
+    } catch (e) {
+      console.error('[pedidosService] Erro ao consultar NF-e no Bling:', e);
+      return { sucesso: false, erro: e.message };
+    }
+  },
+
+  async gerarEtiquetaUnificada({ pedidoId, chaveNfe, transportadora, serviceId }) {
+    try {
+      const response = await apiServerClient.fetch('/shipping/gerar-etiqueta-unificada', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ pedidoId, chaveNfe, transportadora, serviceId })
+      });
+      const data = await response.json();
+      if (!response.ok || !data.sucesso) {
+        throw new Error(data.erro || data.mensagem || 'Falha ao gerar etiqueta unificada no Melhor Envio.');
+      }
+      return data;
+    } catch (e) {
+      console.error('[pedidosService] Erro ao gerar etiqueta unificada:', e);
+      throw e;
+    }
+  },
+
+  getEtiquetaUnificadaUrl(pedidoId, autoprint = true) {
+    const base = '/hcgi/api';
+    return `${base}/shipping/etiqueta-unificada/${pedidoId}${autoprint ? '?autoprint=1' : ''}`;
+  },
+
   async generatePedidoNumber() {
     try {
       const result = await pb.collection('pedidos').getList(1, 1, {

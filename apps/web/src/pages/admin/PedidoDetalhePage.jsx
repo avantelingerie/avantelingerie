@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { ArrowLeft, Send, FileText, Copy, CheckCircle2, Truck, ExternalLink, MessageCircle, RotateCw, Loader2, Check, Sparkles } from 'lucide-react';
+import { ArrowLeft, Send, FileText, Copy, CheckCircle2, Truck, ExternalLink, MessageCircle, RotateCw, Loader2, Check, Sparkles, Printer, Search, Tag, Barcode } from 'lucide-react';
 import { Button } from '@/components/ui/button.jsx';
 import { Badge } from '@/components/ui/badge.jsx';
 import { Input } from '@/components/ui/input.jsx';
@@ -24,6 +24,9 @@ export default function PedidoDetalhePage() {
   const [isSendingBling, setIsSendingBling] = useState(false);
   const [codigoRastreioInput, setCodigoRastreioInput] = useState('');
   const [transportadoraInput, setTransportadoraInput] = useState('J&T Express');
+  const [chaveNfeInput, setChaveNfeInput] = useState('');
+  const [isCheckingNfe, setIsCheckingNfe] = useState(false);
+  const [isGeneratingLabel, setIsGeneratingLabel] = useState(false);
   const [isDespachando, setIsDespachando] = useState(false);
   const [dispatchFeedback, setDispatchFeedback] = useState(null);
   const [isCopied, setIsCopied] = useState(false);
@@ -36,6 +39,9 @@ export default function PedidoDetalhePage() {
       if (data) {
         setCodigoRastreioInput(data.codigo_rastreio || data.rastreamento || '');
         setTransportadoraInput(data.transportadora || 'J&T Express');
+        if (data.chave_nfe) {
+          setChaveNfeInput(data.chave_nfe);
+        }
       }
     } catch (err) {
       toast.error('Erro ao carregar detalhes do pedido.');
@@ -119,6 +125,52 @@ export default function PedidoDetalhePage() {
       setTimeout(() => setIsCopied(false), 2000);
       toast.success('Código de rastreio copiado!');
     }
+  };
+
+  const handleBuscarNfeBling = async () => {
+    setIsCheckingNfe(true);
+    try {
+      const res = await pedidosService.consultarNfeBling(pedido.id || pedido.numero_pedido);
+      if (res.sucesso && res.nfe?.chaveAcesso) {
+        setChaveNfeInput(res.nfe.chaveAcesso);
+        toast.success(`NF-e #${res.nfe.numero || ''} localizada no Bling! Chave vinculada.`);
+        await fetchPedido();
+      } else {
+        toast.info(res.mensagem || 'Nenhuma NF-e de saída localizada no Bling para este pedido.');
+      }
+    } catch (err) {
+      toast.error('Erro ao consultar NF-e no Bling.');
+    } finally {
+      setIsCheckingNfe(false);
+    }
+  };
+
+  const handleGerarEtiquetaUnificada = async () => {
+    setIsGeneratingLabel(true);
+    try {
+      const res = await pedidosService.gerarEtiquetaUnificada({
+        pedidoId: pedido.id || pedido.numero_pedido,
+        chaveNfe: chaveNfeInput.trim(),
+        transportadora: transportadoraInput
+      });
+
+      toast.success('Etiqueta unificada gerada com sucesso no Melhor Envio!');
+      
+      // Abre a etiqueta unificada 100x150mm pronta para a Gainscha GS-2406T
+      const printUrl = res.thermalUrl || pedidosService.getEtiquetaUnificadaUrl(pedido.id, true);
+      window.open(printUrl, '_blank', 'width=520,height=780,toolbar=0,menubar=0,location=0');
+
+      await fetchPedido();
+    } catch (err) {
+      toast.error(err.message || 'Erro ao gerar etiqueta unificada.');
+    } finally {
+      setIsGeneratingLabel(false);
+    }
+  };
+
+  const handleImprimirEtiquetaGainscha = () => {
+    const printUrl = pedidosService.getEtiquetaUnificadaUrl(pedido.id, true);
+    window.open(printUrl, '_blank', 'width=520,height=780,toolbar=0,menubar=0,location=0');
   };
 
   const getWhatsAppMessageText = () => {
@@ -252,6 +304,93 @@ export default function PedidoDetalhePage() {
               </div>
             </div>
 
+            {/* BLOCO PREMIUM: GERAÇÃO & IMPRESSÃO TÉRMICA UNIFICADA (GAINSCHA GS-2406T 100x150mm) */}
+            <div className="bg-background/60 border border-amber-500/30 rounded-lg p-4 space-y-3.5">
+              <div className="flex flex-wrap items-center justify-between gap-2 border-b border-border/50 pb-2.5">
+                <div className="flex items-center gap-2">
+                  <Tag className="w-4 h-4 text-amber-500" />
+                  <span className="text-xs font-bold uppercase tracking-wider text-foreground">
+                    Etiqueta Unificada Térmica (Gainscha GS-2406T &bull; 100x150mm)
+                  </span>
+                  <Badge variant="outline" className="text-[10px] border-amber-500/40 text-amber-500 py-0">
+                    DANFE + Envio
+                  </Badge>
+                </div>
+                
+                <div className="flex items-center gap-2">
+                  {pedido.chave_nfe ? (
+                    <Badge className="bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 border border-emerald-500/30 text-xs gap-1">
+                      <Check className="w-3 h-3" /> NF-e Vinculada
+                    </Badge>
+                  ) : (
+                    <Button
+                      type="button"
+                      variant="outline"
+                      size="sm"
+                      onClick={handleBuscarNfeBling}
+                      disabled={isCheckingNfe}
+                      className="h-7 text-xs border-amber-500/40 hover:bg-amber-500/10 text-amber-500"
+                    >
+                      {isCheckingNfe ? <Loader2 className="w-3 h-3 mr-1 animate-spin" /> : <Search className="w-3 h-3 mr-1" />}
+                      Puxar NF-e do Bling
+                    </Button>
+                  )}
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-12 gap-3 items-end">
+                <div className="md:col-span-7 space-y-1">
+                  <label className="text-[11px] font-medium text-muted-foreground flex items-center justify-between">
+                    <span>Chave de Acesso da NF-e (44 dígitos da SEFAZ):</span>
+                    {chaveNfeInput && (
+                      <span className="text-[10px] text-muted-foreground font-mono">
+                        {chaveNfeInput.length}/44 dígitos
+                      </span>
+                    )}
+                  </label>
+                  <Input
+                    value={chaveNfeInput}
+                    onChange={(e) => setChaveNfeInput(e.target.value.replace(/\D/g, ''))}
+                    placeholder="Ex: 33261154615037000153550010000000151801150819"
+                    className="font-mono text-xs tracking-wider"
+                    maxLength={44}
+                  />
+                </div>
+
+                <div className="md:col-span-5 flex flex-wrap gap-2">
+                  <Button
+                    type="button"
+                    onClick={handleGerarEtiquetaUnificada}
+                    disabled={isGeneratingLabel}
+                    className="flex-1 bg-amber-500 hover:bg-amber-600 text-black font-bold text-xs h-9 shadow-sm"
+                  >
+                    {isGeneratingLabel ? (
+                      <>
+                        <Loader2 className="w-3.5 h-3.5 mr-1.5 animate-spin" />
+                        Gerando...
+                      </>
+                    ) : (
+                      <>
+                        <Tag className="w-3.5 h-3.5 mr-1.5" />
+                        Gerar no Melhor Envio
+                      </>
+                    )}
+                  </Button>
+
+                  <Button
+                    type="button"
+                    variant="outline"
+                    onClick={handleImprimirEtiquetaGainscha}
+                    className="border-amber-500/50 hover:bg-amber-500/10 text-amber-500 font-semibold text-xs h-9 px-3"
+                    title="Imprimir formato térmico 100x150mm"
+                  >
+                    <Printer className="w-3.5 h-3.5 mr-1.5" />
+                    Imprimir na Gainscha (100x150)
+                  </Button>
+                </div>
+              </div>
+            </div>
+
             {/* Formulário de Despacho */}
             <div className="grid grid-cols-1 md:grid-cols-12 gap-4 items-end">
               <div className="md:col-span-5 space-y-1.5">
@@ -368,6 +507,15 @@ export default function PedidoDetalhePage() {
                     <a href={pedido.danfe_url} target="_blank" rel="noopener noreferrer">
                       <FileText className="w-4 h-4 mr-1.5 text-blue-500" />
                       Ver DANFE (NF-e)
+                    </a>
+                  </Button>
+                )}
+
+                {pedido.etiqueta_url && (
+                  <Button variant="outline" size="sm" asChild className="border-amber-500/40 text-amber-600 dark:text-amber-400 hover:bg-amber-500/10">
+                    <a href={pedido.etiqueta_url} target="_blank" rel="noopener noreferrer">
+                      <Tag className="w-4 h-4 mr-1.5 text-amber-500" />
+                      PDF Oficial Melhor Envio
                     </a>
                   </Button>
                 )}

@@ -1967,3 +1967,22 @@ Planejamento comercial e técnico estruturado pela Ada e Vértice para alavancar
      - Implementado e destacado o botão [ 📋 Copiar Mensagem Completa (Zap) ] que grava os dados puros com emojis diretamente no clipboard via navigator.clipboard.writeText.
   4. **Especificação de Etiquetas com 1 Clique:**
      - Criado documento oficial em docs/features/geracao-etiquetas-melhor-envio.md detalhando endpoints, fluxos de API, requisitos e telas para geração e impressão térmica de etiquetas direto no admin da loja.
+
+---
+
+### [2026-11-03 15:25] GERAÇÃO E IMPRESSÃO DE ETIQUETA UNIFICADA (GAINSCHA GS-2406T 100x150mm) COM MELHOR ENVIO E BLING
+- **Agentes:** Ada (Líder), Atlas (Diagnóstico), Forge (Backend), Lumi (Frontend), Sentinel (Auditoria QA)
+- **Portão Prévio Nemotron:** APROVADO via OpenRouter (`nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free`). Risco ao checkout/catálogo = 0%.
+- **Funcionalidades Implementadas:**
+  1. `GET /shipping/consultar-nfe-bling/:pedidoId`: Busca automática da chave de acesso e dados da NF-e no Bling API v3.
+  2. `POST /shipping/gerar-etiqueta-unificada`: Fluxo de 1 clique integrando Melhor Envio (cart + checkout + generate + print) com dedução da carteira oficial (R$ 78,16), salvando rastreio e disparando notificações VIP (Resend + Lia WhatsApp).
+  3. `GET /shipping/etiqueta-unificada/:pedidoId`: Renderizador HTML/SVG de alta definição para impressoras térmicas (100x150mm) compatível com Gainscha GS-2406T:
+     - Metade Superior (0-75mm): DANFE Simplificado - Etiqueta conforme SEFAZ NT 2020.004 e Ajuste SINIEF 07/05 (Chave 44 dígitos com Code 128 em SVG, protocolo SEFAZ, dados da Avante Lingerie LTDA e destinatário completo).
+     - Divisória física: Picote/dobra central aos 75mm.
+     - Metade Inferior (75-150mm): Etiqueta de Transporte oficial (J&T Express, Jadlog ou Correios), roteamento, destinatário completo, remetente completo em Nova Friburgo/RJ, código de barras Code 128 e QR Code de rastreio direto da loja.
+  4. Interface no Admin (`apps/web/src/pages/admin/PedidoDetalhePage.jsx`):
+     - Bloco dedicado de geração e impressão térmica unificada no card de Expedição com botões [ 🏷️ Gerar no Melhor Envio ] e [ 🖨️ Imprimir na Gainscha (100x150) ].
+- **Validações:**
+  - Build Vite Frontend: 3.115 módulos transformados com 0 erros.
+  - Verificação de sintaxe Node.js: 0 erros.
+  - Isolamento da loja, checkout e campanhas: 100% blindado.
