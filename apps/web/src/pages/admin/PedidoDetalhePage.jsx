@@ -157,7 +157,10 @@ export default function PedidoDetalhePage() {
       toast.success('Etiqueta unificada gerada com sucesso no Melhor Envio!');
       
       // Abre a etiqueta unificada 100x150mm pronta para a Gainscha GS-2406T
-      const printUrl = res.thermalUrl || pedidosService.getEtiquetaUnificadaUrl(pedido.id, true);
+      const rawUrl = res.thermalUrl || pedidosService.getEtiquetaUnificadaUrl(pedido.id, true);
+      const printUrl = (rawUrl.startsWith('/hcgi/api') || rawUrl.startsWith('http'))
+        ? rawUrl
+        : `/hcgi/api${rawUrl.startsWith('/') ? '' : '/'}${rawUrl}`;
       window.open(printUrl, '_blank', 'width=520,height=780,toolbar=0,menubar=0,location=0');
 
       await fetchPedido();

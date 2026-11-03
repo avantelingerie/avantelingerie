@@ -753,34 +753,137 @@ function generateCode128Svg(text, { height = 40, barWidth = 1.4, showText = fals
   </svg>`;
 }
 
-// Helper: Consulta NF-e de Saída no Bling API v3 associada ao pedido
-const consultarNfeBlingPorPedido = async (numeroPedido) => {
+// Helper: Consulta NF-e de Saída no Bling API v3 associada ao pedido com busca inteligente multi-nível
+const consultarNfeBlingPorPedido = async (numeroPedido, pedido = null) => {
   try {
     const token = await getBlingToken();
     if (!token) return null;
 
-    const cleanNum = String(numeroPedido || '').trim();
-    const res = await axios.get(`https://api.bling.com.br/Api/v3/nfe?numeroLoja=${encodeURIComponent(cleanNum)}`, {
-      headers: {
-        'Authorization': `Bearer ${token}`,
-        'Accept': 'application/json'
-      },
-      timeout: 8000
-    });
+    const headers = {
+      'Authorization': `Bearer ${token}`,
+      'Accept': 'application/json'
+    };
 
-    if (res.data?.data && Array.isArray(res.data.data) && res.data.data.length > 0) {
-      const nfe = res.data.data[0];
-      return {
-        id: nfe.id,
-        numero: nfe.numero,
-        serie: nfe.serie,
-        chaveAcesso: nfe.chaveAcesso,
-        dataEmissao: nfe.dataEmissao,
-        situacao: nfe.situacao,
-        valorNota: nfe.valorNota,
-        linkDanfe: nfe.linkDanfe || nfe.linkPDF
-      };
+    // Helper interno para obter detalhes completos da NF-e por ID no Bling
+    const fetchNfeDetail = async (nfeId) => {
+      try {
+        const res = await axios.get(`https://api.bling.com.br/Api/v3/nfe/${nfeId}`, { headers, timeout: 8000 });
+        const nfe = res.data?.data;
+        if (nfe?.chaveAcesso) {
+          return {
+            id: nfe.id,
+            numero: nfe.numero,
+            serie: nfe.serie,
+            chaveAcesso: nfe.chaveAcesso,
+            dataEmissao: nfe.dataEmissao,
+            situacao: nfe.situacao,
+            valorNota: nfe.valorNota,
+            linkDanfe: nfe.linkDanfe || nfe.linkPDF
+          };
+        }
+      } catch (e) {
+        logger.warn(`[ShippingAPI] Erro ao buscar detalhe da NF-e ${nfeId} no Bling:`, e.message);
+      }
+      return null;
+    };
+
+    // 1. ESTRATÉGIA A: Se o pedido já tiver bling_pedido_id salvo no banco de dados
+    if (pedido?.bling_pedido_id) {
+      const bId = String(pedido.bling_pedido_id).trim();
+      if (/^\d+$/.test(bId)) {
+        try {
+          const orderRes = await axios.get(`https://api.bling.com.br/Api/v3/pedidos/vendas/${bId}`, { headers, timeout: 8000 });
+          const orderData = orderRes.data?.data;
+          const nfeId = orderData?.notaFiscal?.id;
+          if (nfeId) {
+            const result = await fetchNfeDetail(nfeId);
+            if (result) return result;
+          }
+        } catch (e) {
+          logger.warn(`[ShippingAPI] Busca por bling_pedido_id ${bId} falhou:`, e.message);
+        }
+      }
     }
+
+    // 2. ESTRATÉGIA B: Buscar pedidos de vendas no Bling pelo número da loja
+    const cleanNum = String(numeroPedido || '').trim();
+    const cleanDigits = cleanNum.replace(/\D/g, '');
+    const numSemPrefixo = cleanNum.replace(/^PED[-_\s]*/i, '').trim();
+
+    const variants = [cleanNum];
+    if (numSemPrefixo && !variants.includes(numSemPrefixo)) variants.push(numSemPrefixo);
+    if (cleanDigits && !variants.includes(cleanDigits)) variants.push(cleanDigits);
+
+    for (const v of variants) {
+      try {
+        const orderSearch = await axios.get(`https://api.bling.com.br/Api/v3/pedidos/vendas?numeroLoja=${encodeURIComponent(v)}`, { headers, timeout: 8000 });
+        const orders = orderSearch.data?.data;
+        if (Array.isArray(orders) && orders.length > 0) {
+          for (const ord of orders) {
+            let nfeId = ord.notaFiscal?.id;
+            if (!nfeId && ord.id) {
+              try {
+                const fullOrd = await axios.get(`https://api.bling.com.br/Api/v3/pedidos/vendas/${ord.id}`, { headers, timeout: 6000 });
+                nfeId = fullOrd.data?.data?.notaFiscal?.id;
+              } catch (_) {}
+            }
+            if (nfeId) {
+              const result = await fetchNfeDetail(nfeId);
+              if (result) return result;
+            }
+          }
+        }
+      } catch (e) {
+        logger.warn(`[ShippingAPI] Busca de vendas no Bling com numeroLoja=${v} falhou:`, e.message);
+      }
+    }
+
+    // 3. ESTRATÉGIA C: Buscar nas NF-e emitidas recentemente no Bling (tipo 1 = Saída)
+    // Compara por CPF do cliente, Nome do cliente ou número da loja
+    let clienteCpf = (pedido?.cliente_cpf || pedido?.cpf || '').replace(/\D/g, '');
+    if (!clienteCpf && pedido?.cliente_id) {
+      try {
+        const u = await pb.collection('users').getOne(pedido.cliente_id, { $autoCancel: false });
+        clienteCpf = (u.cpf || '').replace(/\D/g, '');
+      } catch (_) {}
+    }
+    const clienteNome = String(pedido?.cliente_nome || '').toLowerCase().trim();
+
+    try {
+      const nfeListRes = await axios.get(`https://api.bling.com.br/Api/v3/nfe?limite=100&tipo=1`, { headers, timeout: 9000 });
+      const nfeList = nfeListRes.data?.data;
+      if (Array.isArray(nfeList) && nfeList.length > 0) {
+        for (const item of nfeList) {
+          const docNfe = String(item.contato?.numeroDocumento || '').replace(/\D/g, '');
+          const nomeNfe = String(item.contato?.nome || '').toLowerCase().trim();
+          const numLojaNfe = String(item.numeroLoja || '').trim();
+
+          const cpfMatches = clienteCpf && docNfe && clienteCpf === docNfe;
+          const numLojaMatches = cleanNum && numLojaNfe && (numLojaNfe === cleanNum || numLojaNfe.includes(cleanDigits));
+          const nomeMatches = clienteNome && clienteNome.length > 4 && nomeNfe && (nomeNfe.includes(clienteNome) || clienteNome.includes(nomeNfe));
+
+          if (cpfMatches || numLojaMatches || nomeMatches) {
+            if (item.chaveAcesso) {
+              return {
+                id: item.id,
+                numero: item.numero,
+                serie: item.serie,
+                chaveAcesso: item.chaveAcesso,
+                dataEmissao: item.dataEmissao,
+                situacao: item.situacao,
+                valorNota: item.valorNota,
+                linkDanfe: item.linkDanfe || item.linkPDF
+              };
+            }
+            const result = await fetchNfeDetail(item.id);
+            if (result) return result;
+          }
+        }
+      }
+    } catch (e) {
+      logger.warn(`[ShippingAPI] Busca por listagem de NF-e no Bling falhou:`, e.message);
+    }
+
   } catch (err) {
     logger.warn(`[ShippingAPI] Aviso ao consultar NF-e no Bling para pedido ${numeroPedido}:`, err.message);
   }
@@ -821,12 +924,13 @@ router.get('/consultar-nfe-bling/:pedidoId', async (req, res) => {
       });
     }
 
-    // Consulta na API oficial do Bling v3
-    const nfeBling = await consultarNfeBlingPorPedido(pedido.numero_pedido);
+    // Consulta na API oficial do Bling v3 com busca inteligente multi-nível
+    const nfeBling = await consultarNfeBlingPorPedido(pedido.numero_pedido, pedido);
     if (nfeBling && nfeBling.chaveAcesso) {
       // Salva no PocketBase para consultas futuras
       await pb.collection('pedidos').update(pedido.id, {
         chave_nfe: nfeBling.chaveAcesso,
+        numero_nfe: String(nfeBling.numero || '15'),
         danfe_url: nfeBling.linkDanfe || pedido.danfe_url || ''
       }, { $autoCancel: false }).catch(() => {});
 
@@ -876,7 +980,7 @@ router.post('/gerar-etiqueta-unificada', async (req, res) => {
     // 2. Resolve a chave da NF-e (Prioridade: Input > Pedido > Bling API)
     let chaveNfe = (chaveNfeInput || pedido.chave_nfe || '').trim();
     if (!chaveNfe || chaveNfe.length < 44) {
-      const nfeBling = await consultarNfeBlingPorPedido(pedido.numero_pedido);
+      const nfeBling = await consultarNfeBlingPorPedido(pedido.numero_pedido, pedido);
       if (nfeBling?.chaveAcesso) {
         chaveNfe = nfeBling.chaveAcesso;
       }
@@ -1103,7 +1207,7 @@ router.post('/gerar-etiqueta-unificada', async (req, res) => {
       logger.warn('[ShippingAPI] Erro ao disparar notificações de expedição:', nErr.message);
     }
 
-    const thermalUrl = `/shipping/etiqueta-unificada/${pedido.id}`;
+    const thermalUrl = `/hcgi/api/shipping/etiqueta-unificada/${pedido.id}?autoprint=1`;
 
     return res.json({
       sucesso: true,
@@ -1128,7 +1232,7 @@ router.post('/gerar-etiqueta-unificada', async (req, res) => {
 router.get('/etiqueta-unificada/:pedidoId', async (req, res) => {
   try {
     const { pedidoId } = req.params;
-    const autoprint = req.query.autoprint === '1' || req.query.autoprint === 'true';
+    const autoprint = req.query.autoprint !== '0' && req.query.autoprint !== 'false';
 
     let pedido = null;
     try {
@@ -1154,7 +1258,7 @@ router.get('/etiqueta-unificada/:pedidoId', async (req, res) => {
 
     // Se a chave não estava salva, tenta buscar no Bling
     if (!chaveNfe || chaveNfe.length < 44) {
-      const nfeBling = await consultarNfeBlingPorPedido(pedido.numero_pedido);
+      const nfeBling = await consultarNfeBlingPorPedido(pedido.numero_pedido, pedido);
       if (nfeBling?.chaveAcesso) {
         chaveNfe = nfeBling.chaveAcesso.replace(/\D/g, '');
         if (nfeBling.numero) numeroNfe = nfeBling.numero;
@@ -1488,9 +1592,21 @@ router.get('/etiqueta-unificada/:pedidoId', async (req, res) => {
 
   </div>
 
-  <button class="print-bar no-print" onclick="window.print()">🖨️ Imprimir Térmica (100x150)</button>
+  <button class="print-bar no-print" onclick="window.focus(); window.print();">🖨️ Imprimir Térmica (100x150)</button>
 
-  ${autoprint ? '<script>window.addEventListener("load", () => { setTimeout(() => window.print(), 350); });</script>' : ''}
+  ${autoprint ? `
+  <script>
+    window.addEventListener('load', function() {
+      window.focus();
+      setTimeout(function() {
+        try {
+          window.print();
+        } catch (e) {
+          console.warn('Falha no acionamento automático de impressão:', e);
+        }
+      }, 450);
+    });
+  </script>` : ''}
 </body>
 </html>`;
 
