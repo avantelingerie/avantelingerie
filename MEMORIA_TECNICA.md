@@ -1986,3 +1986,15 @@ Planejamento comercial e técnico estruturado pela Ada e Vértice para alavancar
   - Build Vite Frontend: 3.115 módulos transformados com 0 erros.
   - Verificação de sintaxe Node.js: 0 erros.
   - Isolamento da loja, checkout e campanhas: 100% blindado.
+
+---
+
+### [2026-11-03 20:30] HOMOLOGACAO DA ETIQUETA TERMICA GAINSCHA, BLINDAGEM NFE BLING, NCM CROPPED (6109.10.00) E SEGURANCA/LGPD
+- **Agentes:** Ada (Lider), Forge (Backend/Fiscal), Lumi (Frontend/UX), Sentinel (Auditoria QA & Seguranca)
+- **Realizacoes Tecnicas do Turno:**
+  1. **Resolucao de Rota Termica e Fim do Erro 404:** Ajustado o prefixo de proxy reverso /hcgi/api/shipping/etiqueta-unificada/:pedidoId no backend e frontend.
+  2. **Autoprint Nativo para Gainscha GS-2406T:** Ativado autoprint padrao com foco forçado e disparo em 450ms da caixa de dialogo nativa do Chrome.
+  3. **Blindagem Quadrupla Anti-Ambiguidade na Busca da NF-e do Bling:** Cruzamento de ID do pedido, numero da loja, CPF identico, data de emissao, valor da compra e SKUs dos itens.
+  4. **Suporte Fiscal Oficial ao NCM de Croppeds e Regatas de Algodao:** Mapeado NCM 6109.10.00 (Receita Federal/Siscomex) com 18 testes automatizados aprovados e botao interativo Sugerir NCM no admin.
+  5. **Seguranca de Ativos Visuais e Auditoria LGPD:** Bloqueio de clique direito e arraste em fotos de produtos contra pirataria, preservacao total do Googlebot-Image, blindagem do robots.txt e confirmacao de isolamento estrito de dados dos clientes no banco de dados.
+- **Validacoes:** Build Vite Frontend aprovado (0 erros) e commits registrados: ff281ee, 14be39a, 1993d95, e675a7a.
