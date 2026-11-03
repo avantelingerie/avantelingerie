@@ -229,9 +229,13 @@ export default function ProdutoForm() {
       const updated = { ...prev, [field]: value };
       
       // Sugere o NCM apenas se o lojista ainda não mexeu manualmente, ou se estiver vazio
-      if (field === 'name') {
+      if (field === 'name' || field === 'categoria_id') {
         if (!ncmTouchedManually || !prev.ncm) {
-          const suggested = guessNcm(value);
+          const currentName = field === 'name' ? value : prev.name;
+          const currentCatId = field === 'categoria_id' ? value : prev.categoria_id;
+          const catObj = categorias.find(c => c.id === currentCatId);
+          const textToGuess = `${currentName || ''} ${catObj?.nome || ''}`;
+          const suggested = guessNcm(textToGuess);
           if (suggested) updated.ncm = suggested;
         }
       }
@@ -241,6 +245,19 @@ export default function ProdutoForm() {
       }
       return updated;
     });
+  };
+
+  const handleTriggerAutoNcm = () => {
+    const catObj = categorias.find(c => c.id === formData.categoria_id);
+    const textToGuess = `${formData.name || ''} ${catObj?.nome || ''}`;
+    const suggested = guessNcm(textToGuess);
+    if (suggested) {
+      setFormData(prev => ({ ...prev, ncm: suggested }));
+      setNcmTouchedManually(false);
+      toast.success(`NCM identificado: ${suggested}`);
+    } else {
+      toast.info('Não foi possível identificar o NCM automaticamente com as palavras informadas.');
+    }
   };
 
   const handleNcmChange = (e) => {
@@ -822,9 +839,16 @@ export default function ProdutoForm() {
                 <div>
                   <label className="text-sm font-medium mb-1.5 flex items-center justify-between text-zinc-700 dark:text-gray-300">
                     <span>NCM (Fiscal)</span>
-                    <span className="text-[10px] text-[#a07b46] dark:text-[#c59b5f]" title="Suede/Renda = 6108.32.00 | Algodão = 6208.21.00">❓ Automático</span>
+                    <button
+                      type="button"
+                      onClick={handleTriggerAutoNcm}
+                      className="text-[10px] text-[#a07b46] dark:text-[#c59b5f] hover:underline cursor-pointer flex items-center gap-1 font-semibold bg-[#c59b5f]/10 px-1.5 py-0.5 rounded border border-[#c59b5f]/20"
+                      title="Clique para sugerir o NCM automaticamente pelo nome e categoria"
+                    >
+                      ⚡ Sugerir NCM
+                    </button>
                   </label>
-                  <input type="text" placeholder="Ex: 6208.21.00" className="flex h-10 w-full rounded-md border border-zinc-300 dark:border-[#c59b5f]/25 bg-white dark:bg-[#121212] px-3 py-2 text-sm text-zinc-900 dark:text-white focus:outline-none" value={formData.ncm || ''} onChange={handleNcmChange} />
+                  <input type="text" placeholder="Ex: 6109.10.00" className="flex h-10 w-full rounded-md border border-zinc-300 dark:border-[#c59b5f]/25 bg-white dark:bg-[#121212] px-3 py-2 text-sm text-zinc-900 dark:text-white focus:outline-none" value={formData.ncm || ''} onChange={handleNcmChange} />
                 </div>
                 
                 <div>

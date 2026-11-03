@@ -29,7 +29,17 @@ const testCases = [
   { input: 'Body rendado com abertura marido apressado Lingerie Sexy', expected: '6114.30.00' },
 
   // Moda Praia
-  { input: 'Biquini Cortininha Moda Praia', expected: '6112.41.00' }
+  { input: 'Biquini Cortininha Moda Praia', expected: '6112.41.00' },
+
+  // Croppeds e Regatas de Algodão (Caso Real da Avante Lingerie)
+  { input: 'Cropped Regata Feminino Sem Gola Canelado em Algodão Confortável Hipoalérgico', expected: '6109.10.00' },
+  { input: 'Regata Canelada 100% Algodao', expected: '6109.10.00' },
+
+  // Croppeds Sintéticos
+  { input: 'Cropped Suplex Poliamida Fitness', expected: '6109.90.00' },
+
+  // Cropped Lingerie / Renda
+  { input: 'Cropped Rendado Sem Bojo Lingerie', expected: '6212.10.00' }
 ];
 
 let failed = 0;

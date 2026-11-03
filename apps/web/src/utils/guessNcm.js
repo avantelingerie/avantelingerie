@@ -19,12 +19,24 @@ export const guessNcm = (value) => {
   const hasWord = (w) => tokens.includes(w);
   const hasAny = (list) => list.some((w) => tokens.includes(w));
 
-  const isSintetico = hasAny(['suede', 'sintetico', 'poliester', 'microfibra', 'poliamida', 'nylon', 'renda']);
+  const isSintetico = hasAny(['suede', 'sintetico', 'poliester', 'microfibra', 'poliamida', 'nylon', 'renda', 'suplex', 'viscose', 'viscolycra']);
   const isAlgodao = hasAny(['algodao', 'cotton']);
 
-  // Sutiãs, Conjuntos, Tops, Bustiês (6212.10.00)
+  // Sutiãs, Conjuntos, Tops de Lingerie, Bustiês, Corpetes (6212.10.00)
   if (hasAny(['sutia', 'sutias', 'conjunto', 'conjuntos', 'corpete', 'top', 'bustie'])) {
     return '6212.10.00';
+  }
+
+  // Cropped estilo lingerie (rendado, com bojo ou sutiã)
+  if (hasAny(['cropped', 'croppeds']) && hasAny(['renda', 'rendado', 'bojo', 'lingerie', 'sexy', 'apressado'])) {
+    return '6212.10.00';
+  }
+
+  // Croppeds, Regatas, Camisetas, T-Shirts de Malha / Vestuário (Posição NCM 61.09)
+  if (hasAny(['cropped', 'croppeds', 'regata', 'regatas', 'camiseta', 'camisetas', 'camisete', 'tshirt', 'blusa'])) {
+    if (isAlgodao) return '6109.10.00';          // De algodão (ex: Regata/Cropped Canelado Algodão)
+    if (isSintetico) return '6109.90.00';        // De fibras sintéticas / poliamida / suplex / poliéster
+    return '6109.10.00';                         // Padrão algodão/canelado Avante Lingerie
   }
 
   // Cintas, Calcinhas, Tangas, Fios (6212.20.00)
