@@ -144,7 +144,7 @@ class NotificationService {
         const messageWa = `Olá, ${firstName}! Tudo bem? Aqui é a Lia, consultora de revenda da *Avante Lingerie*, direto da nossa fábrica em Nova Friburgo/RJ! 🌸✨\n\nPassando para te dar as *boas-vindas oficiais ao nosso ${genderTerms.clubeRevendedores}!* 👑\n\nSeu cadastro foi ativado com sucesso e eu tenho uma notícia espetacular para te dar:\n\n🚨 *ESPECIAL BLACK FRIDAY & FIM DE ANO:*\nPara você já começar lucrando alto na melhor época de vendas do ano, nossa confecção liberou o *Acesso Direto de Fábrica com Pedido Mínimo de apenas R$ 69,90!*\n\n❌ Nada de pedidos de R$ 500 ou R$ 1.000 para começar.\n✅ Com apenas *R$ 69,90* no carrinho, toda a nossa tabela de atacado destrava automaticamente para você!\n\n💎 *Por que lucrar com a Avante neste fim de ano?*\n- *Margem de 100% a 150% de lucro líquido* no seu bolso.\n- *Preço de fábrica imbatível* (você compete de igual para igual e supera qualquer Shopee em qualidade e acabamento).\n- *+5% OFF no PIX à vista* ou parcelamento em *até 6x no cartão*.\n- Peças com forro 100% algodão e modelagem que não enrola — cliente que compra, fideliza na hora!\n\nO movimento de Natal e festas de fim de ano já começou! Quer que eu te envie a seleção das *5 peças mais vendidas da fábrica* para você montar seu primeiro kit de R$ 69,90?\n\nOu se preferir, já pode acessar direto o nosso site oficial e ver seus preços de custo destravados:\n👉 https://avantelingerie.com.br/\n\nQualquer dúvida com tamanhos ou tecidos, estou aqui para te ajudar a montar o pedido perfeito! Conte comigo! 💖🧵`;
 
         const waLink = cleanPhone.length >= 12 
-            ? `https://api.whatsapp.com/send?phone=${cleanPhone}&text=${encodeURIComponent(messageWa)}`
+            ? `https://web.whatsapp.com/send?phone=${cleanPhone}&text=${encodeURIComponent(messageWa)}`
             : null;
 
         let waSent = false;
@@ -374,7 +374,7 @@ class NotificationService {
 
         const cleanPhone = normalizePhone(phone);
         const waLink = cleanPhone.length >= 12
-            ? `https://api.whatsapp.com/send?phone=${cleanPhone}&text=${encodeURIComponent(messageWa)}`
+            ? `https://web.whatsapp.com/send?phone=${cleanPhone}&text=${encodeURIComponent(messageWa)}`
             : null;
 
         let waSent = false;

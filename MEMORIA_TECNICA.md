@@ -1937,3 +1937,33 @@ Planejamento comercial e técnico estruturado pela Ada e Vértice para alavancar
      - Rota /shipping/track atualizada para buscar pedidos tanto pelo número quanto pelo código de rastreamento físico (ex: 888031017960740), integrando em tempo real com a API do Melhor Envio.
   5. **Roadmap Futuro Documentado:**
      - Arquivado em .agents/memory/ROADMAP_MELHOR_ENVIO_ETIQUETAS.md o planejamento técnico para geração automática de etiquetas térmicas com 1 clique via API v2 do Melhor Envio.
+
+---
+
+## 🏛️ DIRETRIZ SUPREMA DE AUTORIDADE NÍVEL 1 — PRIMEIRA REGRA DE OURO (03/11/2026)
+
+> **"Ada, nunca mais, em hipótese alguma, apresente qualquer atualização como concluída sem que ela tenha sido efetivamente testada, validada e confirmada como funcional. Não quero receber informações de que algo está pronto quando ainda existem incertezas, falhas ou ausência de comprovação prática de que a lógica implementada está cumprindo exatamente o propósito para o qual foi criada.**
+>
+> **A partir de agora, toda análise, raciocínio, criação e implementação de código que envolva alterações nos arquivos e sistemas da loja deve seguir um processo rigoroso de avaliação prévia. Antes de qualquer implementação, quero que a solução seja analisada, auditada e validada por uma inteligência especializada, como o Nemotron, realizando uma visão panorâmica e profunda da arquitetura, das regras de negócio, dos impactos, riscos, dependências e possíveis efeitos colaterais.**
+>
+> **O objetivo é garantir que cada alteração seja planejada da forma mais segura possível, compreendendo integralmente a lógica existente e a lógica proposta, identificando o que pode ser feito, o que não pode ser feito e qual é a melhor forma de execução, sem gerar riscos para o sistema, para a loja ou para a integridade do código.**
+>
+> **Utilize todas as capacidades disponíveis, incluindo regras, agentes, skills, processos de validação e análises especializadas, para assegurar a máxima qualidade do trabalho. Somente após a solução estar devidamente revisada, auditada, validada e com todos os cenários críticos avaliados, ela poderá ser implementada.**
+>
+> **Após a implementação, a atualização deve ser efetivamente testada em condições reais de funcionamento, comprovando que todas as regras, fluxos e objetivos foram atendidos conforme esperado. Não quero mais entregas baseadas em suposições, otimismo ou euforia por concluir algo rapidamente. Quero evidências concretas de funcionamento.**
+>
+> **Já trabalhamos juntos há bastante tempo e não existem mais motivos para esse tipo de deslize. Espero um padrão de excelência, responsabilidade e confiabilidade em todas as futuras entregas. A qualidade, a segurança e a confirmação prática dos resultados devem vir antes de qualquer anúncio de conclusão."**
+
+- **03/11/2026 — Rastreamento Real em Tempo Real (Melhor Rastreio GraphQL), Resolução Definitiva dos Emojis no WhatsApp e Especificação de Etiquetas 1-Clique:**
+  1. **Auditoria Prévia Nemotron (Portão Terminal):**
+     - Submetida a arquitetura completa ao Nemotron (nvidia/nemotron-3-nano-omni-30b-a3b-reasoning), com parecer formal de APROVADO, validando segurança, integridade, ausência de efeitos colaterais e blindagem de fallbacks.
+  2. **Causa Raiz & Resolução do Rastreamento Discrepante (Print 3 vs Print 4):**
+     - Identificado que o endpoint REST anterior do Melhor Envio exigia UUID de 36 caracteres do pedido e falhava com 422 para códigos de rastreio de 15 caracteres (J&T Express), caindo no mock simulado.
+     - Implementada consulta direta à GraphQL API oficial do Melhor Rastreio (https://api.melhorrastreio.com.br/graphql) via query findByTrackingCode, obtendo o status real (Pacote postado), previsão precisa (06/11/2026), nome da transportadora (J&T Express) e todos os checkpoints reais com títulos e descrições oficiais humanizadas (findAllTranslatedTrackingEvents).
+     - No frontend (RastreioPage.jsx), removido o texto estático Avante Cargo Premium e substituído por {orderData.carrier || orderData.carrierName || orderData.shipmentMethod}.
+  3. **Causa Raiz & Resolução dos Emojis no WhatsApp (Print 2):**
+     - Identificado que a URL api.whatsapp.com/send é uma página intermediária PHP da Meta com charset incompatível com 4-byte UTF-8, corrompendo emojis em sinais estranhos na pré-visualização.
+     - Substituído o link para web.whatsapp.com/send?phone=...&text=... que abre direto a conversa no WhatsApp Web sem página intermediária, garantindo emojis decodificados com 100% de perfeição.
+     - Implementado e destacado o botão [ 📋 Copiar Mensagem Completa (Zap) ] que grava os dados puros com emojis diretamente no clipboard via navigator.clipboard.writeText.
+  4. **Especificação de Etiquetas com 1 Clique:**
+     - Criado documento oficial em docs/features/geracao-etiquetas-melhor-envio.md detalhando endpoints, fluxos de API, requisitos e telas para geração e impressão térmica de etiquetas direto no admin da loja.

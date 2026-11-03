@@ -221,7 +221,7 @@ export default function PedidoDetalhePage() {
         const cleanPhone = (pedido.cliente_telefone || '').replace(/\D/g, '');
         const waPhone = cleanPhone.startsWith('55') ? cleanPhone : (cleanPhone ? `55${cleanPhone}` : '');
         const textEncoded = encodeURIComponent(getWhatsAppMessageText());
-        const waUrl = waPhone ? `https://wa.me/${waPhone}?text=${textEncoded}` : null;
+        const waWebUrl = waPhone ? `https://web.whatsapp.com/send?phone=${waPhone}&text=${textEncoded}` : null;
 
         return (
           <div className="bg-card border border-border/80 rounded-xl p-5 md:p-6 shadow-sm space-y-5 bg-gradient-to-br from-card via-card to-amber-950/10">
@@ -341,9 +341,9 @@ export default function PedidoDetalhePage() {
                       </a>
                     </Button>
 
-                    {waUrl && (
+                    {waWebUrl && (
                       <Button variant="outline" size="sm" asChild className="border-emerald-500/30 text-emerald-600 dark:text-emerald-400 hover:bg-emerald-500/10">
-                        <a href={waUrl} target="_blank" rel="noopener noreferrer">
+                        <a href={waWebUrl} target="_blank" rel="noopener noreferrer">
                           <MessageCircle className="w-4 h-4 mr-1.5 text-emerald-500" />
                           Abrir WhatsApp Web
                         </a>
@@ -355,7 +355,7 @@ export default function PedidoDetalhePage() {
                       variant="outline" 
                       size="sm" 
                       onClick={copyWhatsAppMessage}
-                      className="border-amber-500/30 text-amber-600 dark:text-amber-400 hover:bg-amber-500/10"
+                      className="border-amber-500/40 bg-amber-500/10 text-amber-600 dark:text-amber-400 hover:bg-amber-500/20 font-semibold"
                     >
                       {isMsgCopied ? <Check className="w-4 h-4 mr-1.5 text-emerald-500" /> : <Copy className="w-4 h-4 mr-1.5 text-amber-500" />}
                       {isMsgCopied ? 'Texto Copiado!' : 'Copiar Mensagem (Zap)'}

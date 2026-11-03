@@ -205,7 +205,7 @@ export default function RastreioPage() {
   // Helper to generate dynamic pre-filled WhatsApp URLs
   const getSupportWhatsappURL = (code) => {
     const message = encodeURIComponent(`Olá! Estou acompanhando meu pedido na página de rastreio e gostaria de suporte sobre o código de rastreamento: ${code || 'AVANTE-GERAL'}`);
-    return `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${message}`;
+    return `https://wa.me/${whatsappNumber}?text=${message}`;
   };
 
   return (
@@ -328,7 +328,7 @@ export default function RastreioPage() {
                 <div>
                   <h2 className="text-2xl font-bold font-serif text-gray-900 mb-1">{orderData.orderNumber}</h2>
                   <p className="text-xs md:text-sm text-gray-500 font-medium">
-                    Status: <span className="text-black font-bold uppercase">{orderData.status}</span> • Transportadora: <span className="font-semibold">Avante Cargo Premium</span>
+                    Status: <span className="text-black font-bold uppercase">{orderData.status}</span> • Transportadora: <span className="font-semibold">{orderData.carrier || orderData.carrierName || orderData.shipmentMethod || 'Transportadora Parceira'}</span>
                   </p>
                 </div>
                 <div className="md:text-right shrink-0">

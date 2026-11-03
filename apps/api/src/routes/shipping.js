@@ -249,6 +249,211 @@ router.post('/calculate', async (req, res, next) => {
   }
 });
 
+// Cache em memória para eventos traduzidos do Melhor Rastreio (TTL: 24h)
+let mrTranslationsCache = null;
+let mrTranslationsTimestamp = 0;
+
+const getMelhorRastreioTranslations = async () => {
+  const now = Date.now();
+  if (mrTranslationsCache && (now - mrTranslationsTimestamp) < 86400000) {
+    return mrTranslationsCache;
+  }
+  try {
+    const res = await axios.post('https://api.melhorrastreio.com.br/graphql', {
+      query: `
+        query {
+          findAllTranslatedTrackingEvents {
+            referenceId
+            title
+            description
+          }
+        }
+      `
+    }, {
+      headers: { 
+        'Content-Type': 'application/json',
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AvanteLingerie/1.0'
+      },
+      timeout: 5000
+    });
+    const list = res.data?.data?.findAllTranslatedTrackingEvents || [];
+    const map = {};
+    for (const item of list) {
+      if (item.referenceId) {
+        map[item.referenceId] = {
+          title: item.title,
+          description: item.description
+        };
+      }
+    }
+    mrTranslationsCache = map;
+    mrTranslationsTimestamp = now;
+    return map;
+  } catch (err) {
+    logger.warn('[ShippingAPI] Falha ao carregar traduções do Melhor Rastreio:', err.message);
+    return mrTranslationsCache || {};
+  }
+};
+
+// Consulta em tempo real à API oficial do Melhor Rastreio via GraphQL
+const fetchMelhorRastreioLive = async (code) => {
+  const cleanCode = (code || '').trim().toUpperCase();
+  if (!cleanCode) return null;
+
+  try {
+    const transMap = await getMelhorRastreioTranslations();
+
+    const query = `
+      query getByCode($tracker: TrackerTrackingCode!) {
+        findByTrackingCode(tracker: $tracker) {
+          id
+          lastStatus
+          estimatedDelivery
+          postedAt
+          deliveredAt
+          trackers {
+            type
+            shippingService
+            trackingCode
+          }
+          trackingEvents {
+            trackingCode
+            createdAt
+            status
+            title
+            description
+            translatedEventId
+            location {
+              city
+              state
+            }
+            from
+            to
+          }
+        }
+      }
+    `;
+
+    const res = await axios.post('https://api.melhorrastreio.com.br/graphql', {
+      query,
+      variables: {
+        tracker: {
+          trackingCode: cleanCode
+        }
+      }
+    }, {
+      headers: {
+        'Content-Type': 'application/json',
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AvanteLingerieBot/1.0'
+      },
+      timeout: 8000
+    });
+
+    const data = res.data?.data?.findByTrackingCode;
+    if (!data || !data.trackingEvents || data.trackingEvents.length === 0) {
+      return null;
+    }
+
+    // Identifica o nome oficial da transportadora
+    let carrierName = 'Transportadora Parceira';
+    if (data.trackers && data.trackers.length > 0) {
+      const activeTracker = data.trackers.find(t => t.type !== 'melhorenvio') || data.trackers[0];
+      if (activeTracker.type === 'jet') carrierName = 'J&T Express';
+      else if (activeTracker.type === 'correios') carrierName = 'Correios';
+      else if (activeTracker.type === 'jadlog') carrierName = 'Jadlog';
+      else if (activeTracker.type === 'azul') carrierName = 'Azul Cargo Express';
+      else if (activeTracker.type === 'loggi') carrierName = 'Loggi';
+      else if (activeTracker.type) carrierName = activeTracker.type.toUpperCase();
+    }
+
+    // Mapeamento de status e régua de progresso
+    const lastStatus = (data.lastStatus || '').toUpperCase();
+    let statusText = 'Em Trânsito';
+    let activeStep = 3;
+    let completedSteps = [1, 2];
+    let progressPercent = 60;
+
+    if (lastStatus === 'DELIVERED' || data.deliveredAt) {
+      statusText = 'Entregue com Sucesso';
+      activeStep = 5;
+      completedSteps = [1, 2, 3, 4];
+      progressPercent = 100;
+    } else if (lastStatus === 'OUT_FOR_DELIVERY' || lastStatus === 'ROTA_DE_ENTREGA') {
+      statusText = 'Na Rota de Entrega';
+      activeStep = 4;
+      completedSteps = [1, 2, 3];
+      progressPercent = 85;
+    } else if (lastStatus === 'POSTED') {
+      statusText = 'Pacote Postado (Em Trânsito)';
+      activeStep = 3;
+      completedSteps = [1, 2];
+      progressPercent = 60;
+    } else if (lastStatus === 'CREATED' || lastStatus === 'PENDING') {
+      statusText = 'Etiqueta Criada / Pronto p/ Envio';
+      activeStep = 2;
+      completedSteps = [1];
+      progressPercent = 35;
+    }
+
+    // Previsão de entrega formatada no fuso do Brasil
+    let etaFormatted = 'A caminho';
+    if (data.estimatedDelivery) {
+      const d = new Date(data.estimatedDelivery);
+      if (!isNaN(d.getTime())) {
+        etaFormatted = d.toLocaleDateString('pt-BR', { timeZone: 'America/Sao_Paulo' });
+      }
+    }
+
+    // Ordena os eventos do mais recente ao mais antigo
+    const sortedEvents = [...data.trackingEvents].sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+
+    const history = sortedEvents.map((evt, idx) => {
+      const trans = transMap[evt.translatedEventId];
+      const title = trans?.title || evt.title || 'Movimentação do pacote';
+      const desc = trans?.description ? `${trans.description}` : (evt.description || '');
+      const fullText = desc ? `${title} — ${desc}` : title;
+
+      let locStr = 'Em Trânsito';
+      if (evt.location?.city && evt.location?.state) {
+        locStr = `${evt.location.city}/${evt.location.state}`;
+      } else if (evt.from) {
+        locStr = evt.from;
+      }
+
+      const evtDate = new Date(evt.createdAt);
+      const timeFormatted = isNaN(evtDate.getTime()) 
+        ? evt.createdAt 
+        : evtDate.toLocaleString('pt-BR', {
+            day: '2-digit',
+            month: '2-digit',
+            year: 'numeric',
+            hour: '2-digit',
+            minute: '2-digit',
+            timeZone: 'America/Sao_Paulo'
+          });
+
+      return {
+        time: timeFormatted,
+        desc: fullText,
+        location: locStr,
+        isLatest: idx === 0
+      };
+    });
+
+    return {
+      carrierName,
+      status: statusText,
+      etaDate: etaFormatted,
+      progressPercent,
+      stepsConfig: { activeStep, completedSteps },
+      history
+    };
+  } catch (err) {
+    logger.warn('[ShippingAPI] Falha ao consultar Melhor Rastreio GraphQL:', err.message);
+    return null;
+  }
+};
+
 // POST /shipping/track
 router.post('/track', async (req, res, next) => {
   try {
@@ -346,77 +551,28 @@ router.post('/track', async (req, res, next) => {
       }
     }
 
-    // 3. If there is a tracking code, call Melhor Envio API to fetch real-time carrier status
+    // 3. Se temos código de rastreamento físico, consultar em tempo real o Melhor Rastreio oficial
     if (trackingCode) {
-      const token = await getMelhorEnvioToken();
-      if (token) {
-        try {
-          const meResponse = await axios.post('https://api.melhorenvio.com.br/api/v2/me/shipment/tracking', {
-            orders: [trackingCode]
-          }, {
-            headers: {
-              'Authorization': `Bearer ${token}`,
-              'Content-Type': 'application/json',
-              'Accept': 'application/json'
-            }
-          });
+      const liveData = await fetchMelhorRastreioLive(trackingCode);
+      if (liveData && liveData.history && liveData.history.length > 0) {
+        const orderNumber = orderRecord ? `Pedido #${orderRecord.numero_pedido || orderRecord.id.slice(-6)}` : `Código: ${trackingCode}`;
+        const destiny = orderRecord ? (orderRecord.cidade && orderRecord.estado ? `${orderRecord.cidade} - ${orderRecord.estado}` : orderRecord.endereco_entrega || '') : 'Destinatária';
 
-          const trackData = meResponse.data?.[trackingCode];
-          if (trackData && !trackData.error && trackData.tracking && trackData.tracking.length > 0) {
-            // Map status from Melhor Envio
-            const latestTrack = trackData.tracking[trackData.tracking.length - 1];
-            const meStatus = trackData.status || ''; // pending, released, posted, delivered, canceled
-            
-            let statusText = 'Em Separação';
-            let activeStep = 2;
-            let completedSteps = [1];
-            let progressPercent = 25;
-
-            if (meStatus === 'delivered') {
-              statusText = 'Entregue';
-              activeStep = 5;
-              completedSteps = [1, 2, 3, 4];
-              progressPercent = 100;
-            } else if (meStatus === 'posted') {
-              statusText = 'Em Trânsito';
-              activeStep = 3;
-              completedSteps = [1, 2];
-              progressPercent = 50;
-            } else if (meStatus === 'released') {
-              statusText = 'Na Rota de Entrega';
-              activeStep = 4;
-              completedSteps = [1, 2, 3];
-              progressPercent = 75;
-            }
-
-            const meHistory = [...trackData.tracking].reverse().map((event, idx) => ({
-              time: new Date(event.date).toLocaleString('pt-BR'),
-              desc: event.message || event.status || '',
-              location: event.location || 'Em Trânsito',
-              isLatest: idx === 0
-            }));
-
-            // Merge order number and destiny if available in DB
-            const orderNumber = orderRecord ? `Pedido #${orderRecord.numero_pedido || orderRecord.id.slice(-6)}` : `Código: ${trackingCode}`;
-            const destiny = orderRecord ? (orderRecord.cidade && orderRecord.estado ? `${orderRecord.cidade} - ${orderRecord.estado}` : orderRecord.endereco_entrega || '') : 'Destinatária';
-
-            return res.json({
-              sucesso: true,
-              data: {
-                orderNumber,
-                status: statusText,
-                etaDate: trackData.estimated_delivery ? new Date(trackData.estimated_delivery).toLocaleDateString('pt-BR') : 'Consultar histórico',
-                destiny,
-                shipmentMethod: trackData.service_name || 'Transportadora Parceira',
-                progressPercent,
-                stepsConfig: { activeStep, completedSteps },
-                history: meHistory
-              }
-            });
+        return res.json({
+          sucesso: true,
+          data: {
+            orderNumber,
+            status: liveData.status,
+            etaDate: liveData.etaDate,
+            destiny,
+            carrier: liveData.carrierName,
+            carrierName: liveData.carrierName,
+            shipmentMethod: `${liveData.carrierName} Standard`,
+            progressPercent: liveData.progressPercent,
+            stepsConfig: liveData.stepsConfig,
+            history: liveData.history
           }
-        } catch (meError) {
-          logger.warn('[ShippingAPI] Falha ao rastrear código no Melhor Envio:', meError.message);
-        }
+        });
       }
     }
 
