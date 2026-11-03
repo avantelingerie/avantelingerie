@@ -764,6 +764,22 @@ const consultarNfeBlingPorPedido = async (numeroPedido, pedido = null) => {
       'Accept': 'application/json'
     };
 
+    // Cálculo dos valores e datas do pedido para validação cruzada à prova de ambiguidades
+    const totalPedido = Number(pedido?.total || pedido?.valor_total || 0);
+    let subtotalItens = 0;
+    const orderSkus = new Set();
+    if (Array.isArray(pedido?.itens)) {
+      for (const it of pedido.itens) {
+        const preco = Number(it.preco_unitario || it.preco || it.price || 0);
+        const qtd = Number(it.quantidade || 1);
+        subtotalItens += (preco * qtd);
+        if (it.sku) orderSkus.add(String(it.sku).trim().toUpperCase());
+      }
+    }
+    const orderCreatedDate = pedido?.created ? new Date(pedido.created).getTime() : 0;
+    // Margem de segurança de 12 horas antes da criação para compensar eventuais fusos horários SEFAZ/Bling
+    const minEmissionTimestamp = orderCreatedDate ? (orderCreatedDate - (12 * 3600 * 1000)) : 0;
+
     // Helper interno para obter detalhes completos da NF-e por ID no Bling
     const fetchNfeDetail = async (nfeId) => {
       try {
@@ -778,7 +794,9 @@ const consultarNfeBlingPorPedido = async (numeroPedido, pedido = null) => {
             dataEmissao: nfe.dataEmissao,
             situacao: nfe.situacao,
             valorNota: nfe.valorNota,
-            linkDanfe: nfe.linkDanfe || nfe.linkPDF
+            linkDanfe: nfe.linkDanfe || nfe.linkPDF,
+            itens: nfe.itens || [],
+            numeroLoja: nfe.numeroLoja || ''
           };
         }
       } catch (e) {
@@ -838,8 +856,11 @@ const consultarNfeBlingPorPedido = async (numeroPedido, pedido = null) => {
       }
     }
 
-    // 3. ESTRATÉGIA C: Buscar nas NF-e emitidas recentemente no Bling (tipo 1 = Saída)
-    // Compara por CPF do cliente, Nome do cliente ou número da loja
+    // 3. ESTRATÉGIA C (Protegida contra compras múltiplas e homônimos):
+    // Busca nas NF-e emitidas recentemente no Bling com validações cruzadas obrigatórias:
+    // - O CPF do cliente deve ser idêntico (busca por nome isolado foi totalmente eliminada).
+    // - A data de emissão não pode ser anterior à data de realização deste pedido (evita compras antigas).
+    // - O valor da nota deve coincidir com o subtotal/total deste pedido OU os SKUs devem coincidir.
     let clienteCpf = (pedido?.cliente_cpf || pedido?.cpf || '').replace(/\D/g, '');
     if (!clienteCpf && pedido?.cliente_id) {
       try {
@@ -847,41 +868,60 @@ const consultarNfeBlingPorPedido = async (numeroPedido, pedido = null) => {
         clienteCpf = (u.cpf || '').replace(/\D/g, '');
       } catch (_) {}
     }
-    const clienteNome = String(pedido?.cliente_nome || '').toLowerCase().trim();
 
-    try {
-      const nfeListRes = await axios.get(`https://api.bling.com.br/Api/v3/nfe?limite=100&tipo=1`, { headers, timeout: 9000 });
-      const nfeList = nfeListRes.data?.data;
-      if (Array.isArray(nfeList) && nfeList.length > 0) {
-        for (const item of nfeList) {
-          const docNfe = String(item.contato?.numeroDocumento || '').replace(/\D/g, '');
-          const nomeNfe = String(item.contato?.nome || '').toLowerCase().trim();
-          const numLojaNfe = String(item.numeroLoja || '').trim();
+    if (clienteCpf && clienteCpf.length >= 11) {
+      try {
+        const nfeListRes = await axios.get(`https://api.bling.com.br/Api/v3/nfe?limite=100&tipo=1`, { headers, timeout: 9000 });
+        const nfeList = nfeListRes.data?.data;
+        if (Array.isArray(nfeList) && nfeList.length > 0) {
+          for (const item of nfeList) {
+            const docNfe = String(item.contato?.numeroDocumento || '').replace(/\D/g, '');
+            
+            // 1. CPF precisa ser estritamente idêntico
+            if (docNfe !== clienteCpf) continue;
 
-          const cpfMatches = clienteCpf && docNfe && clienteCpf === docNfe;
-          const numLojaMatches = cleanNum && numLojaNfe && (numLojaNfe === cleanNum || numLojaNfe.includes(cleanDigits));
-          const nomeMatches = clienteNome && clienteNome.length > 4 && nomeNfe && (nomeNfe.includes(clienteNome) || clienteNome.includes(nomeNfe));
-
-          if (cpfMatches || numLojaMatches || nomeMatches) {
-            if (item.chaveAcesso) {
-              return {
-                id: item.id,
-                numero: item.numero,
-                serie: item.serie,
-                chaveAcesso: item.chaveAcesso,
-                dataEmissao: item.dataEmissao,
-                situacao: item.situacao,
-                valorNota: item.valorNota,
-                linkDanfe: item.linkDanfe || item.linkPDF
-              };
+            // 2. Data de emissão não pode ser anterior à data em que o pedido foi criado
+            const nfeDate = item.dataEmissao ? new Date(item.dataEmissao).getTime() : 0;
+            if (minEmissionTimestamp > 0 && nfeDate > 0 && nfeDate < minEmissionTimestamp) {
+              // Pedido anterior do mesmo cliente: ignora com segurança
+              continue;
             }
-            const result = await fetchNfeDetail(item.id);
-            if (result) return result;
+
+            // 3. Validação de Conteúdo (Garante que a nota pertence a ESTE pedido específico)
+            const numLojaNfe = String(item.numeroLoja || '').trim();
+            const valorNota = Number(item.valorNota || 0);
+
+            const numLojaMatches = cleanNum && numLojaNfe && (numLojaNfe === cleanNum || numLojaNfe.includes(cleanDigits));
+            
+            // Verifica se o valor da nota bate com o subtotal dos produtos ou com o total com frete (tolerância de R$ 0,50)
+            const valorMatches = (subtotalItens > 0 && Math.abs(valorNota - subtotalItens) <= 0.5) ||
+                                 (totalPedido > 0 && Math.abs(valorNota - totalPedido) <= 0.5);
+
+            if (numLojaMatches || valorMatches) {
+              const fullNfe = item.chaveAcesso ? item : await fetchNfeDetail(item.id);
+              if (fullNfe?.chaveAcesso) {
+                logger.info(`[ShippingAPI] NF-e #${fullNfe.numero} vinculada com segurança ao pedido ${numeroPedido} (CPF + ${numLojaMatches ? 'NumeroLoja' : 'Valor ' + valorNota}).`);
+                return fullNfe;
+              }
+            } else {
+              // Caso o valor não tenha batido diretamente, busca os itens da nota para cruzar SKUs
+              const fullNfe = await fetchNfeDetail(item.id);
+              if (fullNfe?.chaveAcesso && Array.isArray(fullNfe.itens)) {
+                const hasMatchingSku = fullNfe.itens.some(it => {
+                  const sku = String(it.codigo || it.sku || '').trim().toUpperCase();
+                  return sku && orderSkus.has(sku);
+                });
+                if (hasMatchingSku) {
+                  logger.info(`[ShippingAPI] NF-e #${fullNfe.numero} vinculada com segurança ao pedido ${numeroPedido} via correspondência de SKU de produto.`);
+                  return fullNfe;
+                }
+              }
+            }
           }
         }
+      } catch (e) {
+        logger.warn(`[ShippingAPI] Busca por listagem de NF-e no Bling falhou:`, e.message);
       }
-    } catch (e) {
-      logger.warn(`[ShippingAPI] Busca por listagem de NF-e no Bling falhou:`, e.message);
     }
 
   } catch (err) {
