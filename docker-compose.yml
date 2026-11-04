@@ -84,6 +84,7 @@ services:
       - MEDIA_DIR=/var/www/public_media/imagens
     volumes:
       - ./public_media:/var/www/public_media
+      - whatsapp_auth:/app/.wwebjs_auth
     networks:
       - avante-network
     depends_on:
@@ -96,3 +97,4 @@ networks:
 volumes:
   caddy_data:
   caddy_config:
+  whatsapp_auth:

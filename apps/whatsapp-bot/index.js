@@ -36,6 +36,8 @@ if (fs.existsSync(flagPath)) {
     console.log('Limpeza concluída. Prosseguindo com a inicialização normal...');
 }
 
+let botState = 'STARTING';
+
 const client = new Client({
     authStrategy: new LocalAuth(),
     puppeteer: {
@@ -44,6 +46,7 @@ const client = new Client({
 });
 
 client.on('qr', (qr) => {
+    botState = 'QR_READY';
     console.log('QR Code gerado! Salvando na pasta de mídias para a patroa escanear...');
     
     // Certifique-se de que o diretório existe
@@ -66,12 +69,18 @@ client.on('qr', (qr) => {
 });
 
 client.on('ready', () => {
+    botState = 'CONNECTED';
     console.log('Porteiro conectado e pronto para trabalhar!');
     // Remove o QR code para não confundir depois
     const qrPath = path.join(MEDIA_DIR, 'qr.png');
     if (fs.existsSync(qrPath)) {
         fs.unlinkSync(qrPath);
     }
+});
+
+client.on('disconnected', (reason) => {
+    botState = 'DISCONNECTED';
+    console.log(`Porteiro desconectado. Motivo: ${reason}`);
 });
 // Cache para evitar mensagens duplicadas (bug do whatsapp-web.js com Multi-Device)
 const processedMessageIds = new Set();
@@ -180,6 +189,16 @@ app.post('/send', async (req, res) => {
         console.error(`[Push] Erro ao enviar mensagem para ${phone}:`, e);
         res.status(500).json({ erro: 'Falha ao enviar mensagem', detalhe: e.message });
     }
+});
+
+app.get('/status', (req, res) => {
+    const qrPath = path.join(MEDIA_DIR, 'qr.png');
+    const qrExists = fs.existsSync(qrPath);
+    res.json({
+        state: botState,
+        connected: botState === 'CONNECTED',
+        hasQr: qrExists
+    });
 });
 
 app.listen(3000, '0.0.0.0', () => {

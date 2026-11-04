@@ -113,4 +113,21 @@ router.post('/send', async (req, res) => {
   }
 });
 
+/**
+ * Endpoint para checar o status real de conexão do WhatsApp
+ */
+router.get('/status', async (req, res) => {
+  try {
+    const botRes = await axios.get('http://whatsapp-bot:3000/status', { timeout: 3000 });
+    return res.json(botRes.data);
+  } catch (error) {
+    return res.json({
+      state: 'OFFLINE',
+      connected: false,
+      hasQr: false,
+      erro: error.message
+    });
+  }
+});
+
 export default router;

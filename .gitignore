@@ -7,3 +7,6 @@ pb_data/
 apps/api/node_modules/
 apps/web/node_modules/
 *.mp4
+.wwebjs_auth/
+apps/whatsapp-bot/.wwebjs_auth/
+apps/whatsapp-bot/.reset_flag

@@ -160,18 +160,56 @@ export default function LiaAdminPage() {
   const [isKnowledgeLoading, setIsKnowledgeLoading] = useState(true);
 
   const [novaRegra, setNovaRegra] = useState({ titulo: '', conteudo: '', data_expiracao: '' });
+  const [activeTab, setActiveTab] = useState('chats');
   const [qrTimestamp, setQrTimestamp] = useState(Date.now());
   const [isDisconnecting, setIsDisconnecting] = useState(false);
-  const [qrError, setQrError] = useState(false);
+  const [botStatus, setBotStatus] = useState({ state: 'CHECKING', connected: false, hasQr: false });
+  const [isCheckingBot, setIsCheckingBot] = useState(false);
 
-  const messagesEndRef = useRef(null);
+  const checkBotStatus = async () => {
+    try {
+      setIsCheckingBot(true);
+      let qrExists = false;
+      try {
+        const qrRes = await fetch(`https://avantelingerie.com.br/imagens/qr.png?t=${Date.now()}`);
+        qrExists = qrRes.status === 200;
+      } catch (e) {}
+
+      try {
+        const baseUrl = import.meta.env.VITE_API_URL || 'https://avantelingerie.com.br/hcgi/api';
+        const res = await fetch(`${baseUrl}/whatsapp/status`);
+        if (res.ok) {
+          const data = await res.json();
+          setBotStatus({
+            state: data.state || (qrExists ? 'QR_READY' : 'STARTING'),
+            connected: data.connected || false,
+            hasQr: qrExists || data.hasQr || false
+          });
+          return;
+        }
+      } catch (e) {}
+
+      setBotStatus({
+        state: qrExists ? 'QR_READY' : 'STARTING',
+        connected: false,
+        hasQr: qrExists
+      });
+    } catch (err) {
+      setBotStatus({ state: 'OFFLINE', connected: false, hasQr: false });
+    } finally {
+      setIsCheckingBot(false);
+    }
+  };
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setQrTimestamp(Date.now());
-    }, 10000);
-    return () => clearInterval(interval);
-  }, []);
+    if (activeTab === 'whatsapp') {
+      checkBotStatus();
+      const interval = setInterval(checkBotStatus, 3000);
+      return () => clearInterval(interval);
+    }
+  }, [activeTab]);
+
+  const messagesEndRef = useRef(null);
 
   const fetchConversas = async (isBackground = false) => {
     try {
@@ -405,7 +443,7 @@ export default function LiaAdminPage() {
 
   const handleDisconnect = async () => {
     const confirmacao = window.prompt(
-      "⚠️ ALERTA DE SEGURANÇA (TRÁFEGO PAGO ATIVO):\n\nDesconectar o WhatsApp fará o bot da Lia ficar temporariamente offline, o que pode pausar o atendimento automático das revendedoras vindas dos anúncios da Meta Ads.\n\nPara confirmar a reinicialização forçada do robô, digite exatamente DESCONECTAR:"
+      "⚠️ ALERTA DE SEGURANÇA (TRÁFEGO PAGO ATIVO):\n\nDesconectar o WhatsApp fará o bot da Lia reiniciar na VPS e gerar um novo QR Code.\n\nPara confirmar a reinicialização forçada do robô, digite exatamente DESCONECTAR:"
     );
     if (confirmacao !== "DESCONECTAR") {
       toast.info("Ação cancelada com segurança. O WhatsApp da Lia continua ativo.");
@@ -413,14 +451,21 @@ export default function LiaAdminPage() {
     }
     
     setIsDisconnecting(true);
+    setBotStatus({ state: 'STARTING', connected: false, hasQr: false });
     try {
       const baseUrl = import.meta.env.VITE_API_URL || 'https://avantelingerie.com.br/hcgi/api';
       const response = await fetch(`${baseUrl}/whatsapp/disconnect`, {
         method: 'POST'
       });
       if (response.ok) {
-        toast.success('Lia está se desconectando! Aguarde um instante para o novo QR Code.');
-        setTimeout(() => setQrTimestamp(Date.now()), 4000);
+        toast.success('Lia está se desconectando! Aguarde alguns segundos para o novo QR Code.');
+        let attempts = 0;
+        const pollInterval = setInterval(async () => {
+          attempts++;
+          await checkBotStatus();
+          setQrTimestamp(Date.now());
+          if (attempts >= 15) clearInterval(pollInterval);
+        }, 2000);
       } else {
         toast.error('Erro ao enviar o comando para o bot.');
       }
@@ -536,7 +581,7 @@ export default function LiaAdminPage() {
       </div>
 
       {/* ================= ABAS PRINCIPAIS ================= */}
-      <Tabs defaultValue="chats" className="w-full space-y-4">
+      <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full space-y-4">
         
         {/* Barra de Navegação das Abas */}
         <div className="flex flex-wrap items-center justify-between gap-3 border-b border-zinc-800/80 pb-3">
@@ -1099,56 +1144,72 @@ export default function LiaAdminPage() {
             </CardHeader>
             <CardContent className="flex flex-col items-center justify-center py-6">
               <div className="bg-zinc-950 p-6 rounded-2xl border border-zinc-800 shadow-inner flex flex-col items-center relative overflow-hidden w-full max-w-sm">
-                {!showQrCode ? (
-                  <div className="flex flex-col items-center justify-center p-6 space-y-4 text-center w-full h-64">
-                    <div className="w-16 h-16 bg-zinc-900 rounded-full flex items-center justify-center border border-[#c59b5f]/30">
-                      <Smartphone className="w-8 h-8 text-[#c59b5f]" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-base text-white mb-2">Conectar WhatsApp da Fábrica</h3>
-                      <p className="text-xs text-zinc-400 mb-4">Número cadastrado: (22) 98122-5010</p>
-                      <Button onClick={() => setShowQrCode(true)} className="bg-[#c59b5f] hover:bg-[#b58825] text-zinc-950 font-bold rounded-xl text-xs">
-                        Exibir QR Code
-                      </Button>
-                    </div>
-                  </div>
-                ) : !qrError ? (
-                  <img 
-                    src={`https://avantelingerie.com.br/imagens/qr.png?t=${qrTimestamp}`} 
-                    alt="QR Code WhatsApp"
-                    className="w-60 h-60 object-contain bg-white p-3 rounded-xl shadow-md relative z-10 transition-all duration-300"
-                    onError={() => setQrError(true)}
-                    onLoad={() => setQrError(false)}
-                  />
-                ) : (
-                  <div className="flex flex-col items-center justify-center p-6 space-y-3 text-center w-full h-64">
-                    <div className="w-16 h-16 bg-emerald-600/20 border border-emerald-500/40 rounded-full flex items-center justify-center">
+                {botStatus.connected ? (
+                  <div className="flex flex-col items-center justify-center p-6 space-y-3 text-center w-full min-h-[260px]">
+                    <div className="w-16 h-16 bg-emerald-600/20 border border-emerald-500/40 rounded-full flex items-center justify-center shadow-lg shadow-emerald-500/10">
                       <CheckCircle2 className="w-8 h-8 text-emerald-400" />
                     </div>
                     <div>
                       <h3 className="font-bold text-lg text-white">Lia Conectada!</h3>
-                      <p className="text-xs text-zinc-400 mt-1">
-                        O bot do WhatsApp está online e ativo na VPS.<br />
-                        As mensagens recebidas serão atendidas automaticamente.
+                      <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-emerald-400 bg-emerald-950/80 border border-emerald-800/50 px-2.5 py-0.5 rounded-full mt-2">
+                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                        (22) 98122-5010 Online
+                      </span>
+                      <p className="text-xs text-zinc-400 mt-3 leading-relaxed">
+                        O bot oficial do WhatsApp está online e ativo na VPS. As mensagens recebidas serão atendidas automaticamente.
                       </p>
+                    </div>
+                  </div>
+                ) : botStatus.hasQr ? (
+                  <div className="flex flex-col items-center justify-center space-y-3 text-center w-full">
+                    <div className="bg-white p-3 rounded-2xl shadow-xl border border-zinc-200">
+                      <img 
+                        src={`https://avantelingerie.com.br/imagens/qr.png?t=${qrTimestamp}`} 
+                        alt="QR Code WhatsApp"
+                        className="w-56 h-56 object-contain"
+                      />
+                    </div>
+                    <div className="space-y-1 mt-2">
+                      <h4 className="text-sm font-bold text-white flex items-center justify-center gap-1.5">
+                        <Smartphone className="w-4 h-4 text-[#c59b5f]" />
+                        Aponte a Câmera do WhatsApp
+                      </h4>
+                      <p className="text-xs text-zinc-400 max-w-xs leading-relaxed">
+                        No WhatsApp oficial: <strong>Menu (⋮) &gt; Aparelhos Conectados &gt; Conectar um Aparelho</strong>.
+                      </p>
+                    </div>
+                  </div>
+                ) : (
+                  <div className="flex flex-col items-center justify-center p-6 space-y-4 text-center w-full min-h-[260px]">
+                    <div className="w-16 h-16 bg-zinc-900 rounded-full flex items-center justify-center border border-[#c59b5f]/30">
+                      <RefreshCw className="w-8 h-8 text-[#c59b5f] animate-spin" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-base text-white mb-1">
+                        {isDisconnecting ? "Reiniciando Sessão..." : "Gerando QR Code..."}
+                      </h3>
+                      <p className="text-xs text-zinc-400 max-w-xs leading-relaxed">
+                        O motor do WhatsApp está inicializando na VPS para gerar o QR Code oficial de conexão.
+                      </p>
+                      <Button 
+                        variant="ghost" 
+                        size="sm" 
+                        onClick={checkBotStatus}
+                        disabled={isCheckingBot}
+                        className="text-xs text-[#c59b5f] hover:text-[#b58825] mt-3 gap-1"
+                      >
+                        <RefreshCw className={`w-3.5 h-3.5 ${isCheckingBot ? 'animate-spin' : ''}`} />
+                        Atualizar status
+                      </Button>
                     </div>
                   </div>
                 )}
               </div>
               
-              {showQrCode && (
-                <p className="text-[11px] text-zinc-500 mt-4 text-center max-w-sm">
-                  Se o QR Code não aparecer e o WhatsApp não responder, aguarde alguns segundos enquanto o robô inicializa na VPS.
-                </p>
-              )}
-              
               <div className="mt-6 flex justify-center w-full">
                 <Button 
                   variant="outline" 
-                  onClick={async () => {
-                    await handleDisconnect();
-                    setShowQrCode(true);
-                  }} 
+                  onClick={handleDisconnect} 
                   disabled={isDisconnecting}
                   className="border-red-900/60 bg-red-950/20 text-red-400 hover:bg-red-900/40 hover:text-red-300 rounded-xl text-xs font-semibold"
                 >
