@@ -5,27 +5,34 @@ import { Skeleton } from '@/components/ui/skeleton.jsx';
 import { cn } from '@/lib/utils.js';
 import apiServerClient from '@/lib/apiServerClient.js';
 
-export default function KPIsSection() {
+export default function KPIsSection({ refreshKey = 0 }) {
   const [kpis, setKpis] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
+    let isMounted = true;
     const fetchKpis = async () => {
       try {
         const res = await apiServerClient.fetch('/dashboard/kpis');
-        if (res.ok) {
+        if (res.ok && isMounted) {
           const data = await res.json();
           setKpis(data);
         }
       } catch (error) {
         console.error('Erro ao buscar KPIs:', error);
       } finally {
-        setIsLoading(false);
+        if (isMounted) {
+          setIsLoading(false);
+        }
       }
     };
     
     fetchKpis();
-  }, []);
+
+    return () => {
+      isMounted = false;
+    };
+  }, [refreshKey]);
 
   const formatCurrency = (val) => new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(val || 0);
   const formatNumber = (val) => new Intl.NumberFormat('pt-BR').format(val || 0);
@@ -34,7 +41,7 @@ export default function KPIsSection() {
   const getValue = (keys) => {
     if (!kpis) return 0;
     for (const key of keys) {
-      if (kpis[key] !== undefined) return kpis[key];
+      if (kpis[key] !== undefined && kpis[key] !== null) return kpis[key];
     }
     return 0;
   };
@@ -52,7 +59,7 @@ export default function KPIsSection() {
 
   const pendingActionCount = getValue(['aguardando_acao', 'pedidosAguardando', 'pending_actions']);
 
-  if (isLoading) {
+  if (isLoading && !kpis) {
     return (
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
         {Array.from({ length: 9 }).map((_, i) => (
@@ -89,7 +96,7 @@ export default function KPIsSection() {
       
       {/* 9th Card - Pedidos Aguardando Ação (Alert highlighted) */}
       <Card className={cn(
-        "shadow-sm border-border/50",
+        "shadow-sm border-border/50 transition-colors",
         pendingActionCount > 0 ? "bg-amber-500/10 border-amber-500/30 text-amber-900 dark:text-amber-400" : "bg-card text-card-foreground"
       )}>
         <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">

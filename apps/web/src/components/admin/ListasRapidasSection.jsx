@@ -9,13 +9,14 @@ import { Skeleton } from '@/components/ui/skeleton.jsx';
 import apiServerClient from '@/lib/apiServerClient.js';
 import { cn } from '@/lib/utils.js';
 
-export default function ListasRapidasSection() {
+export default function ListasRapidasSection({ refreshKey = 0 }) {
   const [ultimosPedidos, setUltimosPedidos] = useState([]);
   const [estoqueCritico, setEstoqueCritico] = useState([]);
   const [pedidosAguardando, setPedidosAguardando] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
+    let isMounted = true;
     const fetchListas = async () => {
       try {
         const [resPedidos, resEstoque, resAguardando] = await Promise.all([
@@ -24,27 +25,33 @@ export default function ListasRapidasSection() {
           apiServerClient.fetch('/dashboard/pedidos-aguardando')
         ]);
 
-        if (resPedidos.ok) {
+        if (resPedidos.ok && isMounted) {
           const data = await resPedidos.json();
           setUltimosPedidos(Array.isArray(data) ? data : data.items || []);
         }
-        if (resEstoque.ok) {
+        if (resEstoque.ok && isMounted) {
           const data = await resEstoque.json();
           setEstoqueCritico(Array.isArray(data) ? data : data.items || []);
         }
-        if (resAguardando.ok) {
+        if (resAguardando.ok && isMounted) {
           const data = await resAguardando.json();
           setPedidosAguardando(Array.isArray(data) ? data : data.items || []);
         }
       } catch (error) {
         console.error('Erro ao buscar listas rápidas:', error);
       } finally {
-        setIsLoading(false);
+        if (isMounted) {
+          setIsLoading(false);
+        }
       }
     };
 
     fetchListas();
-  }, []);
+
+    return () => {
+      isMounted = false;
+    };
+  }, [refreshKey]);
 
   const formatCurrency = (val) => new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(val || 0);
 
