@@ -204,10 +204,11 @@ router.post('/chat', chatLimiter, async (req, res) => {
 
     // Atualiza histórico localmente
     const historico = conversa.mensagens || [];
+    const nowIso = new Date().toISOString();
     
     if (conversa.assumida_por_humano) {
       // Salva a mensagem da cliente mesmo com a IA pausada, pra vendedora ler
-      historico.push({ role: 'user', content: mensagem });
+      historico.push({ role: 'user', content: mensagem, timestamp: nowIso });
       await pb.collection('lia_conversas').update(conversa.id, { mensagens: historico });
       
       return res.json({
@@ -217,7 +218,7 @@ router.post('/chat', chatLimiter, async (req, res) => {
       });
     }
 
-    historico.push({ role: 'user', content: mensagem });
+    historico.push({ role: 'user', content: mensagem, timestamp: nowIso });
 
     // 2. Monta o contexto dinâmico, conhecimento, catálogo e regras comerciais do Admin
     const knowledgeContext = await getLiaKnowledge();
@@ -425,7 +426,7 @@ ${knowledgeContext}
     }
 
     // 5. Salvar a resposta no banco de dados
-    historico.push({ role: 'assistant', content: respostaLia });
+    historico.push({ role: 'assistant', content: respostaLia, timestamp: new Date().toISOString() });
     
     // Verifica se a Lia usou alguma palavra que indique conversão
     let converteu = conversa.converteu;
@@ -481,10 +482,17 @@ router.post('/whatsapp-webhook', async (req, res) => {
       });
       if (records.length > 0) {
         conversa = records[0];
+        if (nome_cliente && nome_cliente !== 'Cliente' && conversa.cliente_nome !== nome_cliente) {
+          try {
+            await pb.collection('lia_conversas').update(conversa.id, { cliente_nome: nome_cliente });
+            conversa.cliente_nome = nome_cliente;
+          } catch (e) {}
+        }
       } else {
         conversa = await pb.collection('lia_conversas').create({
           session_id: telefone,
           canal: 'whatsapp',
+          cliente_nome: (nome_cliente && nome_cliente !== 'Cliente') ? nome_cliente : '',
           mensagens: [],
           converteu: false
         });
@@ -495,15 +503,16 @@ router.post('/whatsapp-webhook', async (req, res) => {
     }
 
     const historico = conversa.mensagens || [];
+    const nowIso = new Date().toISOString();
     
     // Se o humano assumiu a conversa, grava a mensagem mas diz pro bot ignorar (ficar mudo)
     if (conversa.assumida_por_humano) {
-      historico.push({ role: 'user', content: mensagem });
+      historico.push({ role: 'user', content: mensagem, timestamp: nowIso });
       await pb.collection('lia_conversas').update(conversa.id, { mensagens: historico });
       return res.json({ sucesso: true, ignorar: true });
     }
 
-    historico.push({ role: 'user', content: mensagem });
+    historico.push({ role: 'user', content: mensagem, timestamp: nowIso });
 
     // 2. Monta o contexto dinâmico sincronizado com o Admin da loja
     const knowledgeContext = await getLiaKnowledge();
@@ -560,7 +569,7 @@ ${knowledgeContext}
 
     const respostaLia = anthropicResponse.data.content[0].text;
 
-    historico.push({ role: 'assistant', content: respostaLia });
+    historico.push({ role: 'assistant', content: respostaLia, timestamp: new Date().toISOString() });
     
     await pb.collection('lia_conversas').update(conversa.id, {
       mensagens: historico

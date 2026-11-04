@@ -81,4 +81,36 @@ router.post('/disconnect', async (req, res) => {
   }
 });
 
+/**
+ * Endpoint para envio de mensagem do operador humano ou notificação via bot do WhatsApp
+ */
+router.post('/send', async (req, res) => {
+  try {
+    const { phone, message } = req.body;
+    if (!phone || !message) {
+      return res.status(400).json({ erro: 'Telefone e mensagem são obrigatórios' });
+    }
+
+    logger.info(`[WhatsApp API] Encaminhando mensagem humana para ${phone}...`);
+
+    const botResponse = await axios.post('http://whatsapp-bot:3000/send', {
+      phone,
+      message
+    }, { timeout: 10000 });
+
+    return res.status(200).json({
+      sucesso: true,
+      mensagem: 'Mensagem enviada com sucesso ao WhatsApp',
+      detalhes: botResponse.data
+    });
+  } catch (error) {
+    logger.warn(`[WhatsApp API] Aviso ao despachar mensagem pelo bot: ${error.message}`);
+    return res.status(502).json({
+      sucesso: false,
+      erro: 'Bot de WhatsApp temporariamente inacessível. O registro foi gravado no CRM.',
+      detalhe: error.message
+    });
+  }
+});
+
 export default router;

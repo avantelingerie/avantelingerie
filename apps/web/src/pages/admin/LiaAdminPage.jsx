@@ -17,7 +17,7 @@ import {
 } from 'lucide-react';
 
 // Helper inteligente para formatar título, telefone e canal da conversa
-function formatSessionDisplay(session_id, canal) {
+function formatSessionDisplay(session_id, canal, cliente_nome) {
   if (!session_id) {
     return {
       title: 'Cliente Anônimo',
@@ -26,6 +26,28 @@ function formatSessionDisplay(session_id, canal) {
       rawPhone: '',
       formattedPhone: '',
       badgeType: 'site'
+    };
+  }
+
+  // Se o cliente possui nome identificado e válido
+  if (cliente_nome && cliente_nome !== 'Cliente' && String(cliente_nome).trim()) {
+    const isPhone = session_id.includes('@c.us') || /^\d{10,15}$/.test(session_id);
+    const cleanDigits = session_id.replace(/\D/g, '');
+    let formatted = cleanDigits;
+    if (cleanDigits.startsWith('55') && cleanDigits.length >= 12) {
+      const ddd = cleanDigits.substring(2, 4);
+      const num = cleanDigits.substring(4);
+      if (num.length === 9) formatted = `+55 (${ddd}) ${num.substring(0, 5)}-${num.substring(5)}`;
+      else if (num.length === 8) formatted = `+55 (${ddd}) ${num.substring(0, 4)}-${num.substring(4)}`;
+    }
+
+    return {
+      title: cliente_nome,
+      subtitle: canal === 'whatsapp' ? (isPhone ? formatted : 'WhatsApp Oficial') : 'Loja Virtual',
+      isPhone,
+      rawPhone: cleanDigits,
+      formattedPhone: formatted,
+      badgeType: canal === 'whatsapp' ? 'whatsapp' : 'site'
     };
   }
 
@@ -151,10 +173,9 @@ export default function LiaAdminPage() {
     return () => clearInterval(interval);
   }, []);
 
-  const fetchConversas = async () => {
+  const fetchConversas = async (isBackground = false) => {
     try {
-      setIsLoadingConversas(true);
-      // Busca otimizada e paginada: últimas 50 conversas mais ativas/recentes
+      if (!isBackground) setIsLoadingConversas(true);
       let records = [];
       try {
         const paged = await pb.collection('lia_conversas').getList(1, 50, {
@@ -162,9 +183,12 @@ export default function LiaAdminPage() {
         });
         records = paged.items;
       } catch (errSort) {
-        // Fallback caso sort no SQLite não tenha índice ou dê erro
         const all = await pb.collection('lia_conversas').getFullList();
-        records = all.slice(-50).reverse();
+        records = all.sort((a, b) => {
+          const timeA = a.updated ? new Date(a.updated).getTime() : 0;
+          const timeB = b.updated ? new Date(b.updated).getTime() : 0;
+          return timeB - timeA;
+        });
       }
       setConversas(records);
       if (records.length > 0 && !selectedSessionId) {
@@ -172,9 +196,9 @@ export default function LiaAdminPage() {
       }
     } catch (error) {
       console.error('Erro ao buscar conversas:', error);
-      toast.error('Não foi possível carregar as conversas.');
+      if (!isBackground) toast.error('Não foi possível carregar as conversas.');
     } finally {
-      setIsLoadingConversas(false);
+      if (!isBackground) setIsLoadingConversas(false);
     }
   };
 
@@ -194,6 +218,55 @@ export default function LiaAdminPage() {
   useEffect(() => {
     fetchConversas();
     fetchKnowledge();
+
+    // Inscrição em tempo real nativa via PocketBase Realtime (WebSocket)
+    let unsubscribe = null;
+    try {
+      pb.collection('lia_conversas').subscribe('*', (e) => {
+        const record = e.record;
+        if (!record) return;
+
+        setConversas((prev) => {
+          let updatedList;
+          if (e.action === 'delete') {
+            updatedList = prev.filter(c => c.id !== record.id);
+          } else {
+            const exists = prev.some(c => c.id === record.id);
+            if (exists) {
+              updatedList = prev.map(c => c.id === record.id ? record : c);
+            } else {
+              updatedList = [record, ...prev];
+            }
+          }
+
+          return [...updatedList].sort((a, b) => {
+            const timeA = a.updated ? new Date(a.updated).getTime() : 0;
+            const timeB = b.updated ? new Date(b.updated).getTime() : 0;
+            return timeB - timeA;
+          });
+        });
+      }).then(unsub => {
+        unsubscribe = unsub;
+      }).catch(err => {
+        console.warn('Aviso subscription realtime:', err);
+      });
+    } catch (e) {
+      console.warn('Falha ao iniciar subscription:', e);
+    }
+
+    // Polling silencioso a cada 4 segundos (redundância resiliente)
+    const syncInterval = setInterval(() => {
+      fetchConversas(true);
+    }, 4000);
+
+    return () => {
+      if (unsubscribe) {
+        unsubscribe();
+      } else {
+        try { pb.collection('lia_conversas').unsubscribe('*'); } catch (e) {}
+      }
+      clearInterval(syncInterval);
+    };
   }, []);
 
   useEffect(() => {
@@ -246,10 +319,28 @@ export default function LiaAdminPage() {
     const historicoAtualizado = [...(selectedConversa.mensagens || []), novaMsg];
 
     try {
+      // 1. Grava no banco de dados PocketBase
       await pb.collection('lia_conversas').update(selectedConversa.id, {
         mensagens: historicoAtualizado,
         assumida_por_humano: true
       });
+
+      // 2. Se for WhatsApp, despacha via API para o cliente receber no celular
+      if (selectedConversa.canal === 'whatsapp') {
+        try {
+          const baseUrl = import.meta.env.VITE_API_URL || 'https://avantelingerie.com.br/hcgi/api';
+          await fetch(`${baseUrl}/whatsapp/send`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              phone: selectedConversa.session_id,
+              message: texto
+            })
+          });
+        } catch (botErr) {
+          console.warn('Aviso ao enviar via bot WhatsApp:', botErr);
+        }
+      }
 
       setConversas(prev => prev.map(c => c.id === selectedConversa.id ? {
         ...c,
@@ -362,13 +453,26 @@ export default function LiaAdminPage() {
       if (!searchTerm) return true;
       const term = searchTerm.toLowerCase();
       const matchSession = c.session_id?.toLowerCase().includes(term);
+      const matchName = c.cliente_nome?.toLowerCase().includes(term);
       const matchMessage = c.mensagens?.some(m => m.content?.toLowerCase().includes(term));
-      return matchSession || matchMessage;
+      return matchSession || matchName || matchMessage;
     });
   }, [conversas, channelFilter, searchTerm]);
 
+  // Sincroniza automaticamente a conversa ativa ao mudar de filtro (evita mostrar chat da Loja ao clicar no WhatsApp)
+  useEffect(() => {
+    if (filteredConversas.length > 0) {
+      const isCurrentInFiltered = filteredConversas.some(c => c.session_id === selectedSessionId);
+      if (!isCurrentInFiltered) {
+        setSelectedSessionId(filteredConversas[0].session_id);
+      }
+    }
+  }, [channelFilter, filteredConversas, selectedSessionId]);
+
   const selectedConversa = conversas.find(c => c.session_id === selectedSessionId);
-  const selectedDisplay = selectedConversa ? formatSessionDisplay(selectedConversa.session_id, selectedConversa.canal) : null;
+  const selectedDisplay = selectedConversa 
+    ? formatSessionDisplay(selectedConversa.session_id, selectedConversa.canal, selectedConversa.cliente_nome) 
+    : null;
 
   return (
     <div className="w-full space-y-6 text-zinc-100 font-sans pb-12">
@@ -387,6 +491,10 @@ export default function LiaAdminPage() {
               <span className="inline-flex items-center gap-1.5 text-[10px] font-semibold text-emerald-400 bg-emerald-950/80 border border-emerald-800/50 px-2.5 py-0.5 rounded-full">
                 <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
                 (22) 98122-5010
+              </span>
+              <span className="inline-flex items-center gap-1 text-[10px] font-medium text-emerald-300/90 bg-emerald-950/40 border border-emerald-800/30 px-2 py-0.5 rounded-full">
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+                Tempo Real Ativo
               </span>
             </div>
             <p className="text-xs text-zinc-400 mt-0.5">
@@ -560,8 +668,8 @@ export default function LiaAdminPage() {
                       const ultimaMsgObj = conversa.mensagens?.[msgCount - 1];
                       const ultimaMsg = ultimaMsgObj?.content || 'Iniciou conversa';
                       const isSelected = selectedSessionId === conversa.session_id;
-                      const display = formatSessionDisplay(conversa.session_id, conversa.canal);
-                      const timeDisplay = formatMessageTime(conversa.updated, conversa.local_updated);
+                      const display = formatSessionDisplay(conversa.session_id, conversa.canal, conversa.cliente_nome);
+                      const timeDisplay = formatMessageTime(conversa.updated, ultimaMsgObj?.timestamp || conversa.local_updated);
 
                       return (
                         <div 

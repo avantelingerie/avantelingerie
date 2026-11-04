@@ -2016,3 +2016,61 @@ Planejamento comercial e técnico estruturado pela Ada e Vértice para alavancar
 - **Validações Automatizadas:**
   - Build de Produção Vite: 3.115 módulos transformados com 0 erros.
   - Suíte de Testes Automatizada (`test_google_ads_tag_suite.cjs`): 4 testes aprovados (index.html, marketingPixels.js, TrackingPixelsTab.jsx e simulação de payload de compra).
+
+---
+
+### [2026-11-04 16:15] OTIMIZAÇÃO AVANÇADA GOOGLE ADS (MINERAÇÃO/NEGATIVAÇÕES) E BLINDAGEM DE FATURAMENTO META ADS (RECARGA AUTOMÁTICA & PONTE MERCADO PAGO ELO)
+- **Agentes:** Ada (Líder/Arquiteta), Forge (Backend/Integrações), Vértice (Comércio/Estratégia), Sentinel (Auditoria QA)
+- **Contexto e Ações Estratégicas:**
+  1. **Mineração e Otimização de Palavras-Chave no Google Ads:**
+     - Analisados 68 termos de pesquisa das campanhas B2C (Varejo) e B2B (Atacado).
+     - **Negativações Cirúrgicas com Colchetes [ ... ]:** Excluídos termos com intenção física em praças distantes sem prejudicar a segmentação geográfica geral da conta: `[fábrica de lingerie em guarulhos]`, `[juruaia lojas preços atacado]`, `[fábrica de baby doll em feira de santana]`, `[fábrica de lingerie juruaia]` e `[fábrica de lingerie em fortaleza]`.
+     - **Promoção do Termo Campeão para Palavra-Chave Oficial:** O termo `roupas íntimas para revender direto da fábrica nova friburgo` (que teve 40% CTR a R$ 0,43/clique) foi alocado estrategicamente na campanha de Atacado (`[GOOGLE] B2B - Atacado | Fábrica Friburgo Mínimo R$ 69,90` -> Grupo 02 Lingerie Atacado) nas correspondências:
+       - `[roupas íntimas para revender direto da fábrica nova friburgo]` (Correspondência Exata - Criterion ID `2186807936531` - Status: ENABLED).
+       - `"roupas íntimas para revender direto da fábrica"` (Correspondência de Frase - Criterion ID `844591881009` - Status: ENABLED).
+     - **Diretriz Estratégica sobre Polos Concorrentes (Brás / Bom Retiro / 25 de Março):** Definido que termos relacionados ao Brás e Bom Retiro NÃO devem ser negativados cegamente. Motivo: Interceptação (Conquesting) de revendedoras do estado do Rio de Janeiro que viajam a São Paulo por hábito, ignorando que o polo fabricante de Nova Friburgo oferece produtos superiores com menor frete e pedido mínimo acessível (R$ 69,90).
+  2. **Diagnóstico da Interrupção de Veiculação no Meta Ads:**
+     - Comprovado via API da Meta que as campanhas começaram a veicular no dia **29/10/2026** e rodaram ativamente até o dia **02/11/2026** (5 dias de gasto, totalizando R$ 203,15 investidos).
+     - A campanha B2C gerou 6 checkouts e a venda de R$ 127,77 no domingo (01/11) através do anúncio campeão `AD 02 - Conjunto Romântico Cropped Renda R$ 28,28` (CTR 3,24%).
+     - A interrupção nos dias 03/11 e 04/11 ocorreu devido ao esgotamento do saldo pré-pago quando o gasto bateu R$ 203,15 e a recarga automática falhou devido à trava anti-duplicidade do Nubank PJ para cobranças com valores idênticos no mesmo dia.
+  3. **Reativação e Blindagem de Pagamento na Meta:**
+     - Realizada recarga de **R$ 100,00** aprovada instantaneamente no cartão MasterCard PJ final 2855 (que possui R$ 600,00 de limite livre), restabelecendo o saldo para R$ 100,00 positivo e limpando todos os alertas vermelhos.
+     - Reativada a **Recarga Automática** na Meta: valor de disparo configurado para R$ 100,00 sempre que o saldo cair abaixo de R$ 7,00.
+     - **Ponte de Contingência via Mercado Pago com Cartão Elo Bradesco (1285):** Cadastrado o cartão Elo final 1285 (com alto limite) no Mercado Pago da empresa (LHA Têxtil / `avantelingerie@gmail.com`) e iniciada a conexão direta de débito e recarga via gateway dLocal/Mercado Pago, permitindo contornar a limitação da Meta contra a bandeira Elo e garantindo redundância total de abastecimento.
+- **Status Operacional dos Anúncios:** Todas as campanhas e anúncios no Google Ads e Meta Ads confirmados com status **ACTIVE** e entregando tráfego qualificado para a loja.
+
+---
+
+### [2026-11-04 18:15] SINCRONIZAÇÃO EM TEMPO REAL E REATIVIDADE DINÂMICA DO CRM LIA (WHATSAPP & CHAT DA LOJA VIRTUAL)
+- **Agentes:** Ada (Líder/Arquiteta), Atlas (Diagnóstico), Forge (Backend/Dados/PocketBase), Lumi (Frontend/UX), Sentinel (Auditoria QA)
+- **Portão Nemotron (Terminal):** Submetida arquitetura ao Nemotron (nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free) com veredito formal de **APROVADO** em todos os quesitos (segurança, integridade, ausência de efeitos colaterais ao checkout e pagamentos, resiliência do modelo híbrido de reatividade e migração segura do schema).
+- **Diagnóstico e Causas Raiz Identificadas:**
+  1. **Schema do PocketBase desprovido de autodates:** A coleção `lia_conversas` não possuía os campos de sistema `created` e `updated` do tipo `autodate`. Em decorrência disso, requisições com ordenação `sort: '-updated'` falhavam com erro HTTP 400 Bad Request, forçando o frontend a cair em fallback de `getFullList()` revertido por ID de inserção no SQLite. Conversas existentes que recebiam novas falas (como os testes no WhatsApp de Luiz Machado) ficavam presas em posições inferiores e não subiam para o topo.
+  2. **Ausência de Reatividade no Frontend:** O arquivo `LiaAdminPage.jsx` realizava a busca de conversas exclusivamente no `useEffect` inicial de montagem da tela. Não existia inscrição em tempo real via WebSocket (`pb.collection('lia_conversas').subscribe('*')`) nem rotina de polling, obrigando o operador a teclar F5 ou clicar em "Atualizar" a cada fala trocada.
+  3. **Dessincronia de Seleção ao Filtrar Canais:** Ao clicar no filtro "WhatsApp", a lista à esquerda filtrava os contatos, porém o estado `selectedSessionId` permanecia vinculado ao visitante da loja virtual selecionado no boot (`Visitante Loja #81CE78`), gerando grave confusão visual onde o painel direito exibia o chat do site mesmo com a aba de WhatsApp ativa.
+  4. **Metadados Ausentes:** As rotas `/lia/chat` e `/lia/whatsapp-webhook` não gravavam timestamp nos objetos das mensagens e não persistiam o campo `cliente_nome`, ocultando horários nos balões e gerando rótulos genéricos como `WhatsApp • Contato #218021`.
+- **Implementações e Soluções Aplicadas:**
+  1. **Migração Não-Destrutiva do Schema no PocketBase:**
+     - Realizado backup prévio completo dos 37 registros (`scratch/backup_lia_conversas.json`).
+     - Adicionados os campos `created` (`autodate`, onCreate: true), `updated` (`autodate`, onCreate: true, onUpdate: true) e `cliente_nome` (`text`).
+     - Executado backfill de timestamps e normalização para garantir que `sort: '-updated'` funcione nativamente no banco.
+  2. **Backend API (`apps/api/src/routes/lia.js` e `whatsapp.js`):**
+     - Injetado timestamp ISO em todas as mensagens (`new Date().toISOString()`) nas rotas `/lia/chat` e `/lia/whatsapp-webhook`.
+     - Atualização automática de `cliente_nome` a partir do identificador (`notifyName`) recebido pelo WhatsApp.
+     - Criado endpoint `POST /whatsapp/send` em `whatsapp.js` que faz a ponte com o container do bot na porta 3000.
+  3. **WhatsApp Bot (`apps/whatsapp-bot/index.js`):**
+     - Blindado o endpoint `/send` para tratar identidades `@lid`, `@c.us` e números com DDD sem corromper o identificador.
+  4. **Frontend CRM (`apps/web/src/pages/admin/LiaAdminPage.jsx`):**
+     - **Reatividade Híbrida Dupla:** Inscrição em tempo real com `pb.collection('lia_conversas').subscribe('*')` + Polling silencioso de contingência a cada 4 segundos com cleanup no `useEffect` para evitar memory leaks.
+     - **Sincronização Automática de Filtros:** Se o operador mudar o filtro (ex: clicar em "WhatsApp") e a conversa ativa pertencer a outro canal, o sistema seleciona automaticamente a conversa mais recente daquele filtro.
+     - **Exibição do Nome Real:** Priorização do `cliente_nome` no card e no cabeçalho do chat quando disponível.
+     - **Horários Reais nos Balões:** Renderização do horário exato de cada fala (`msg.timestamp`).
+     - **Despacho Humano para WhatsApp:** Ao responder uma conversa de WhatsApp no formulário do CRM, a mensagem é salva no banco e enviada diretamente para o celular do cliente.
+     - **Badge de Status:** Adicionado indicador visual "Tempo Real Ativo" no topo da página.
+- **Validação e Comprovação Prática (Testes Automatizados):**
+  - `npm --prefix apps/web run build`: Compilado com sucesso absoluto em 1m 17s (0 erros de TypeScript/JSX/Vite).
+  - `node --check` no backend: Verificação de sintaxe aprovada com código 0.
+  - Script E2E (`scratch/test_crm_e2e_realtime.mjs`):
+    - Consulta `sort: '-updated'` retornou com status 200 OK sem erro 400.
+    - Teste de recência comprovou que nova mensagem faz a conversa saltar instantaneamente para a posição #1 do CRM.
+    - Teste de lógica de filtro comprovou alternância de seleção automática sem travamentos.
