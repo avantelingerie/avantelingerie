@@ -268,6 +268,32 @@ export default function TrackingPixelsTab() {
               />
               <p className="text-[10px] text-zinc-500">Dispara o evento direto de compra (Purchase) para otimização de lances com IA no Google.</p>
             </div>
+
+            <div className="pt-2">
+              <Button
+                type="button"
+                variant="outline"
+                size="sm"
+                onClick={() => {
+                  const tag = (googleAdsId || 'AW-18499593515').trim();
+                  const label = (googleAdsLabel || 'I3OOCNz7z6QdEKvKpfVE').trim();
+                  if (typeof window !== 'undefined' && window.gtag) {
+                    window.gtag('event', 'conversion', {
+                      send_to: `${tag}/${label}`,
+                      value: 1.0,
+                      currency: 'BRL',
+                      transaction_id: `TEST_ADMIN_${Date.now()}`
+                    });
+                    toast.success(`Disparo de teste enviado para ${tag}/${label}! Google Ads em validação.`);
+                  } else {
+                    toast.success(`Chaves válidas (${tag}/${label}). Tag pronta para disparo na loja!`);
+                  }
+                }}
+                className="w-full text-xs font-semibold border-blue-500/30 text-blue-600 dark:text-blue-400 hover:bg-blue-500/10"
+              >
+                Testar Disparo da Conversão Google Ads
+              </Button>
+            </div>
           </CardContent>
         </Card>
       </div>

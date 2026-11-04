@@ -12,8 +12,8 @@ const CONFIG_PIXELS_LOCAIS = {
 };
 
 let pixelsInitialized = false;
-let googleAdsTagId = '';
-let googleAdsConversionLabel = '';
+let googleAdsTagId = CONFIG_PIXELS_LOCAIS.google_ads_tag_id || 'AW-18499593515';
+let googleAdsConversionLabel = CONFIG_PIXELS_LOCAIS.google_ads_conversion_label || 'I3OOCNz7z6QdEKvKpfVE';
 
 // Helper para disparo seguro da Meta Conversions API (CAPI)
 export async function sendCapiEvent(eventName, customData = {}, userData = {}, eventId = null) {
@@ -260,14 +260,17 @@ export function trackPurchase(orderId, total, items = [], paymentMethod = '', cu
     });
 
     // 3. Google Ads Direct Conversion Tag
-    if (googleAdsTagId && googleAdsConversionLabel) {
+    const targetAdsTag = googleAdsTagId || CONFIG_PIXELS_LOCAIS.google_ads_tag_id || 'AW-18499593515';
+    const targetAdsLabel = googleAdsConversionLabel || CONFIG_PIXELS_LOCAIS.google_ads_conversion_label || 'I3OOCNz7z6QdEKvKpfVE';
+
+    if (targetAdsTag && targetAdsLabel) {
       window.gtag('event', 'conversion', {
-        send_to: `${googleAdsTagId}/${googleAdsConversionLabel}`,
-        value: value,
+        send_to: `${targetAdsTag}/${targetAdsLabel}`,
+        value: Number(value) || 0,
         currency: 'BRL',
-        transaction_id: orderId
+        transaction_id: String(orderId)
       });
-      console.log(`[Pixels] Conversão direta do Google Ads (${googleAdsTagId}/${googleAdsConversionLabel}) enviada!`);
+      console.log(`[Pixels] Conversão direta do Google Ads (${targetAdsTag}/${targetAdsLabel}) enviada para pedido ${orderId}!`);
     }
   }
 
@@ -308,4 +311,20 @@ export function trackResellerUpgrade(user) {
   }
   
   console.log(`[Pixels] Evento Exclusivo de B2B (ResellerUpgrade) disparado com sucesso!`);
+}
+
+export function triggerGoogleAdsTestConversion() {
+  if (typeof window !== 'undefined' && window.gtag) {
+    const targetAdsTag = googleAdsTagId || CONFIG_PIXELS_LOCAIS.google_ads_tag_id || 'AW-18499593515';
+    const targetAdsLabel = googleAdsConversionLabel || CONFIG_PIXELS_LOCAIS.google_ads_conversion_label || 'I3OOCNz7z6QdEKvKpfVE';
+    window.gtag('event', 'conversion', {
+      send_to: `${targetAdsTag}/${targetAdsLabel}`,
+      value: 1.0,
+      currency: 'BRL',
+      transaction_id: `TEST_${Date.now()}`
+    });
+    console.log(`[Pixels] Conversão de teste do Google Ads enviada com sucesso! (${targetAdsTag}/${targetAdsLabel})`);
+    return true;
+  }
+  return false;
 }
