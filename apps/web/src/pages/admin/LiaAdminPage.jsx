@@ -161,6 +161,7 @@ export default function LiaAdminPage() {
 
   const [novaRegra, setNovaRegra] = useState({ titulo: '', conteudo: '', data_expiracao: '' });
   const [activeTab, setActiveTab] = useState('chats');
+  const [showQrBox, setShowQrBox] = useState(false);
   const [qrTimestamp, setQrTimestamp] = useState(Date.now());
   const [isDisconnecting, setIsDisconnecting] = useState(false);
   const [botStatus, setBotStatus] = useState({ state: 'CHECKING', connected: false, hasQr: false });
@@ -204,7 +205,10 @@ export default function LiaAdminPage() {
   useEffect(() => {
     if (activeTab === 'whatsapp') {
       checkBotStatus();
-      const interval = setInterval(checkBotStatus, 3000);
+      const interval = setInterval(() => {
+        checkBotStatus();
+        setQrTimestamp(Date.now());
+      }, 8000);
       return () => clearInterval(interval);
     }
   }, [activeTab]);
@@ -1160,6 +1164,29 @@ export default function LiaAdminPage() {
                       </p>
                     </div>
                   </div>
+                ) : !showQrBox ? (
+                  <div className="flex flex-col items-center justify-center p-6 space-y-4 text-center w-full min-h-[260px]">
+                    <div className="w-16 h-16 bg-zinc-900 rounded-full flex items-center justify-center border border-[#c59b5f]/30">
+                      <Smartphone className="w-8 h-8 text-[#c59b5f]" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-base text-white mb-2">Conectar WhatsApp da Fábrica</h3>
+                      <p className="text-xs text-zinc-400 mb-4 leading-relaxed">
+                        Número cadastrado: <strong>(22) 98122-5010</strong><br />
+                        Abra o WhatsApp no celular e clique abaixo para exibir o QR Code em tempo real.
+                      </p>
+                      <Button 
+                        onClick={() => {
+                          setShowQrBox(true);
+                          setQrTimestamp(Date.now());
+                          checkBotStatus();
+                        }} 
+                        className="bg-[#c59b5f] hover:bg-[#b58825] text-zinc-950 font-bold rounded-xl text-xs px-5 py-2.5 shadow-md shadow-[#c59b5f]/20"
+                      >
+                        Exibir QR Code
+                      </Button>
+                    </div>
+                  </div>
                 ) : botStatus.hasQr ? (
                   <div className="flex flex-col items-center justify-center space-y-3 text-center w-full">
                     <div className="bg-white p-3 rounded-2xl shadow-xl border border-zinc-200">
@@ -1177,6 +1204,19 @@ export default function LiaAdminPage() {
                       <p className="text-xs text-zinc-400 max-w-xs leading-relaxed">
                         No WhatsApp oficial: <strong>Menu (⋮) &gt; Aparelhos Conectados &gt; Conectar um Aparelho</strong>.
                       </p>
+                      <div className="pt-2 flex items-center justify-center gap-2">
+                        <span className="inline-flex items-center gap-1 text-[10px] text-emerald-400 bg-emerald-950/60 border border-emerald-800/40 px-2 py-0.5 rounded-full">
+                          <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                          Atualizando a cada 8s
+                        </span>
+                        <button
+                          type="button"
+                          onClick={() => setQrTimestamp(Date.now())}
+                          className="text-[10px] text-zinc-400 hover:text-white underline cursor-pointer"
+                        >
+                          ↻ Atualizar agora
+                        </button>
+                      </div>
                     </div>
                   </div>
                 ) : (
@@ -1194,7 +1234,10 @@ export default function LiaAdminPage() {
                       <Button 
                         variant="ghost" 
                         size="sm" 
-                        onClick={checkBotStatus}
+                        onClick={() => {
+                          checkBotStatus();
+                          setQrTimestamp(Date.now());
+                        }}
                         disabled={isCheckingBot}
                         className="text-xs text-[#c59b5f] hover:text-[#b58825] mt-3 gap-1"
                       >
@@ -1209,7 +1252,10 @@ export default function LiaAdminPage() {
               <div className="mt-6 flex justify-center w-full">
                 <Button 
                   variant="outline" 
-                  onClick={handleDisconnect} 
+                  onClick={async () => {
+                    await handleDisconnect();
+                    setShowQrBox(true);
+                  }} 
                   disabled={isDisconnecting}
                   className="border-red-900/60 bg-red-950/20 text-red-400 hover:bg-red-900/40 hover:text-red-300 rounded-xl text-xs font-semibold"
                 >
