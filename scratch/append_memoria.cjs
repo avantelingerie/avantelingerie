@@ -1,21 +1,38 @@
 const fs = require('fs');
 
 const entry = `
-- **03/11/2026 — Rastreamento Real em Tempo Real (Melhor Rastreio GraphQL), Resolução Definitiva dos Emojis no WhatsApp e Especificação de Etiquetas 1-Clique:**
-  1. **Auditoria Prévia Nemotron (Portão Terminal):**
-     - Submetida a arquitetura completa ao Nemotron (nvidia/nemotron-3-nano-omni-30b-a3b-reasoning), com parecer formal de APROVADO, validando segurança, integridade, ausência de efeitos colaterais e blindagem de fallbacks.
-  2. **Causa Raiz & Resolução do Rastreamento Discrepante (Print 3 vs Print 4):**
-     - Identificado que o endpoint REST anterior do Melhor Envio exigia UUID de 36 caracteres do pedido e falhava com 422 para códigos de rastreio de 15 caracteres (J&T Express), caindo no mock simulado.
-     - Implementada consulta direta à GraphQL API oficial do Melhor Rastreio (https://api.melhorrastreio.com.br/graphql) via query findByTrackingCode, obtendo o status real (Pacote postado), previsão precisa (06/11/2026), nome da transportadora (J&T Express) e todos os checkpoints reais com títulos e descrições oficiais humanizadas (findAllTranslatedTrackingEvents).
-     - No frontend (RastreioPage.jsx), removido o texto estático Avante Cargo Premium e substituído por {orderData.carrier || orderData.carrierName || orderData.shipmentMethod}.
-  3. **Causa Raiz & Resolução dos Emojis no WhatsApp (Print 2):**
-     - Identificado que a URL api.whatsapp.com/send é uma página intermediária PHP da Meta com charset incompatível com 4-byte UTF-8, corrompendo emojis em sinais estranhos na pré-visualização.
-     - Substituído o link para web.whatsapp.com/send?phone=...&text=... que abre direto a conversa no WhatsApp Web sem página intermediária, garantindo emojis decodificados com 100% de perfeição.
-     - Implementado e destacado o botão [ 📋 Copiar Mensagem Completa (Zap) ] que grava os dados puros com emojis diretamente no clipboard via navigator.clipboard.writeText.
-  4. **Especificação de Etiquetas com 1 Clique:**
-     - Criado documento oficial em docs/features/geracao-etiquetas-melhor-envio.md detalhando endpoints, fluxos de API, requisitos e telas para geração e impressão térmica de etiquetas direto no admin da loja.
+
+---
+
+## [04/11/2026] - Reestruturação e Reatividade do Dashboard Admin (Visão Geral)
+
+### Contexto e Diagnóstico
+O lojista identificou que os cards de indicadores de topo e gráficos do Dashboard Admin não refletiam as vendas realizadas de teste (Ísis Santos - PED-003, R$ 127,77 e Dooner - PED-002, R$ 73,99), apresentando valores zerados (0 e R$ 0,00) e mensagem "Sem dados suficientes para o período" nos gráficos.
+
+### Causas Raiz Confirmadas
+1. **Bug Lexicográfico no SQLite/PocketBase:** PocketBase grava campos de timestamp como \`YYYY-MM-DD HH:mm:ss.sssZ\` (com espaço). O endpoint original utilizava \`.toISOString()\` (\`YYYY-MM-DDTHH:mm:ss.sssZ\`). Em comparação ASCII no SQLite, espaço (ASCII 32) é menor que 'T' (ASCII 84), fazendo com que pedidos criados no início do mês fossem descartados.
+2. **Campos Omitidos no Endpoint /dashboard/kpis:** \`receita_liquida_mes\`, \`ticket_medio\`, \`clientes_novos\`, \`clientes_recorrentes\` e \`aguardando_acao\` não eram calculados nem enviados pelo backend.
+3. **Incompatibilidade de Formato para Recharts:** Endpoints \`/dashboard/vendas-por-dia\`, \`/dashboard/receita-por-semana\` e \`/dashboard/produtos-mais-vendidos\` retornavam dicionários de objetos ou dados sem campos \`nome\` e \`quantidade\`, falhando a validação de array do frontend.
+4. **Ausência de Reatividade:** Dashboard só carregava dados no mount inicial, sem escuta em tempo real, sem polling e sem botão de atualizar.
+
+### Soluções Implementadas
+1. **Backend (\`apps/api/src/routes/dashboard.js\`):**
+   - Agregação e filtragem de pedidos em memória via \`Date\` nativo em JavaScript, 100% imune a divergências de string ou fuso.
+   - Cálculo preciso de todas as métricas financeiras e operacionais (\`pedidos_hoje\`, \`pedidos_semana\`, \`pedidos_mes\`, \`receita_hoje\`, \`receita_semana\`, \`receita_mes\`, \`receita_liquida_mes\`, \`ticket_medio\`, \`clientes_novos\`, \`clientes_recorrentes\`, \`aguardando_acao\`), desconsiderando pedidos cancelados.
+   - Geração de arrays cronológicos ordenados para os últimos 30 dias (\`/vendas-por-dia\`) e últimas 8 semanas (\`/receita-por-semana\`).
+   - Consolidação de itens por nome de produto para o Top 5 mais vendidos (\`/produtos-mais-vendidos\`).
+   - Tratamento completo de erros e try/catch em todos os endpoints.
+2. **Frontend (\`DashboardPage.jsx\`, \`KPIsSection.jsx\`, \`GraficosSection.jsx\`, \`ListasRapidasSection.jsx\`):**
+   - Adicionado botão manual "Atualizar" com spinner no cabeçalho.
+   - Adicionada inscrição em tempo real nativa (\`pb.collection('pedidos').subscribe('*')\`) com auto-refresh instantâneo em qualquer venda ou alteração de pedido.
+   - Polling silencioso de contingência a cada 60s com cleanup garantido na desmontagem do componente.
+   - Formatação e tooltips informativos em todos os gráficos do Recharts.
+
+### Auditoria e Validação
+- **Portão Nemotron (OpenRouter):** Parecer formal emitido e aprovado (recomendações de cleanup e ordenação cronológica estrita aplicadas).
+- **Testes de Integração de Rotas:** Validados com dados reais do PocketBase (Ísis R$ 127,77 capturada com sucesso no mês; 30 dias e 8 semanas gerados; top produtos consolidados).
+- **Compilação do Frontend:** \`npm --prefix apps/web run build\` executado com sucesso (3115 módulos transformados, 0 erros).
 `;
 
 fs.appendFileSync('MEMORIA_TECNICA.md', entry, 'utf8');
-console.log('Appended to MEMORIA_TECNICA.md successfully');
-
+console.log('MEMORIA_TECNICA.md atualizada com sucesso!');
