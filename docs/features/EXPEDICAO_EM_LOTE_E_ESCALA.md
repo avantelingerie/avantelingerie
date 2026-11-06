@@ -122,3 +122,4 @@ A estrutura atual implementada em 06/11/2026 já comporta essa esteira sem neces
 
 ---
 *Documento guardado e pronto para servir de base executiva no momento em que as vendas exigirem a esteira em lote.*
+

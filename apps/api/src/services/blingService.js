@@ -3,6 +3,47 @@ import pb from '../utils/pocketbaseClient.js';
 import logger from '../utils/logger.js';
 import { getBlingToken } from '../utils/blingTokenManager.js';
 
+function isValidCPF(cpf) {
+  cpf = (cpf || '').replace(/\D/g, '');
+  if (cpf.length !== 11 || /^(\d)\1{10}$/.test(cpf)) return false;
+  let sum = 0, rest;
+  for (let i = 1; i <= 9; i++) sum += parseInt(cpf.substring(i - 1, i), 10) * (11 - i);
+  rest = (sum * 10) % 11;
+  if (rest === 10 || rest === 11) rest = 0;
+  if (rest !== parseInt(cpf.substring(9, 10), 10)) return false;
+  sum = 0;
+  for (let i = 1; i <= 10; i++) sum += parseInt(cpf.substring(i - 1, i), 10) * (12 - i);
+  rest = (sum * 10) % 11;
+  if (rest === 10 || rest === 11) rest = 0;
+  if (rest !== parseInt(cpf.substring(10, 11), 10)) return false;
+  return true;
+}
+
+function isValidCNPJ(cnpj) {
+  cnpj = (cnpj || '').replace(/\D/g, '');
+  if (cnpj.length !== 14 || /^(\d)\1{13}$/.test(cnpj)) return false;
+  let size = cnpj.length - 2;
+  let numbers = cnpj.substring(0, size);
+  let digits = cnpj.substring(size);
+  let sum = 0, pos = size - 7;
+  for (let i = size; i >= 1; i--) {
+    sum += parseInt(numbers.charAt(size - i), 10) * pos--;
+    if (pos < 2) pos = 9;
+  }
+  let result = sum % 11 < 2 ? 0 : 11 - (sum % 11);
+  if (result !== parseInt(digits.charAt(0), 10)) return false;
+  size = size + 1;
+  numbers = cnpj.substring(0, size);
+  sum = 0; pos = size - 7;
+  for (let i = size; i >= 1; i--) {
+    sum += parseInt(numbers.charAt(size - i), 10) * pos--;
+    if (pos < 2) pos = 9;
+  }
+  result = sum % 11 < 2 ? 0 : 11 - (sum % 11);
+  if (result !== parseInt(digits.charAt(1), 10)) return false;
+  return true;
+}
+
 const getBlingErrorMessage = (error) => {
   if (error.response?.data?.error) {
     const err = error.response.data.error;
@@ -156,15 +197,35 @@ export const blingService = {
       const contatoInfo = formattedPedido.contato;
 
       const rawCpfCnpj = (contatoInfo.numeroDocumento || '').replace(/[^\d]/g, '');
-      const isCpfCnpjValid = rawCpfCnpj && (rawCpfCnpj.length === 11 || rawCpfCnpj.length === 14);
+      const isCpfCnpjValid = (rawCpfCnpj.length === 11 && isValidCPF(rawCpfCnpj)) ||
+                             (rawCpfCnpj.length === 14 && isValidCNPJ(rawCpfCnpj));
       const cpfCnpj = isCpfCnpjValid ? rawCpfCnpj : null;
+
+      if (!isCpfCnpjValid && rawCpfCnpj) {
+        logger.warn(`[BlingService] Documento '${rawCpfCnpj}' no pedido ${pedido.numero_pedido} possui erro de digitação/dígitos verificadores. Criando contato no Bling sem documento para não travar a venda.`);
+        formattedPedido.observacoes = (formattedPedido.observacoes || '') + ` [ATENÇÃO: CPF informado no checkout (${rawCpfCnpj}) continha erro de dígitos verificadores. Confirmar com o cliente antes de emitir a NF-e.]`;
+      }
+
       let blingClienteId;
 
       if (cpfCnpj) {
-        const searchContact = await axios.get(`https://api.bling.com.br/Api/v3/contatos?numeroDocumento=${cpfCnpj}`, {
-          headers: { 'Authorization': `Bearer ${blingApiToken}`, 'Accept': 'application/json' },
-        });
-        if (searchContact.data?.data?.length > 0) blingClienteId = searchContact.data.data[0].id;
+        try {
+          const searchContact = await axios.get(`https://api.bling.com.br/Api/v3/contatos?numeroDocumento=${cpfCnpj}`, {
+            headers: { 'Authorization': `Bearer ${blingApiToken}`, 'Accept': 'application/json' },
+          });
+          if (searchContact.data?.data?.length > 0) blingClienteId = searchContact.data.data[0].id;
+        } catch (errDocSearch) {
+          logger.warn(`[BlingService] Erro ao pesquisar contato por documento: ${errDocSearch.message}`);
+        }
+      } else if (contatoInfo.nome) {
+        try {
+          const searchContact = await axios.get(`https://api.bling.com.br/Api/v3/contatos?pesquisa=${encodeURIComponent(contatoInfo.nome)}`, {
+            headers: { 'Authorization': `Bearer ${blingApiToken}`, 'Accept': 'application/json' },
+          });
+          if (searchContact.data?.data?.length > 0) blingClienteId = searchContact.data.data[0].id;
+        } catch (errNameSearch) {
+          logger.warn(`[BlingService] Erro ao pesquisar contato por nome: ${errNameSearch.message}`);
+        }
       }
 
       if (!blingClienteId) {
@@ -195,9 +256,11 @@ export const blingService = {
       if (!blingClienteId) throw new Error('Falha ao identificar ou cadastrar cliente no Bling');
 
       formattedPedido.contato = { 
-        id: blingClienteId,
-        numeroDocumento: cpfCnpj || undefined
+        id: blingClienteId
       };
+      if (cpfCnpj) {
+        formattedPedido.contato.numeroDocumento = cpfCnpj;
+      }
 
       for (const item of formattedPedido.itens) {
         item.valor = Number(item.valor || 0);

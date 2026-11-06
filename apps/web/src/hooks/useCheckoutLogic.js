@@ -7,6 +7,7 @@ import { descontosService } from '@/services/descontosService.js';
 import apiServerClient from '@/lib/apiServerClient.js';
 import { pedidosService } from '@/services/pedidosService.js';
 import { clientesService } from '@/services/clientesService.js';
+import { isValidCPF, isValidCNPJ } from '@/utils/documentValidators.js';
 
 // Exponential retry helper for network instability (High #29)
 const withRetry = async (fn, retries = 3, delay = 1000) => {
@@ -508,8 +509,22 @@ export function useCheckoutLogic() {
       return null;
     }
     const cleanCpf = (personalInfo.cpf || '').replace(/\D/g, '');
-    if (!cleanCpf || (cleanCpf.length !== 11 && cleanCpf.length !== 14)) {
-      toast.error('Por favor, informe um CPF ou CNPJ válido.');
+    if (!cleanCpf) {
+      toast.error('Por favor, informe seu CPF para emissão da Nota Fiscal.');
+      return null;
+    }
+    if (cleanCpf.length === 11) {
+      if (!isValidCPF(cleanCpf)) {
+        toast.error('O CPF informado é inválido. Por favor, confira os números digitados.');
+        return null;
+      }
+    } else if (cleanCpf.length === 14) {
+      if (!isValidCNPJ(cleanCpf)) {
+        toast.error('O CNPJ informado é inválido. Por favor, confira os números digitados.');
+        return null;
+      }
+    } else {
+      toast.error('Por favor, informe um CPF (11 dígitos) ou CNPJ (14 dígitos) válido.');
       return null;
     }
 
