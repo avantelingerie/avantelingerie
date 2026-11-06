@@ -42,3 +42,4 @@ export function isValidCNPJ(cnpj) {
   if (result !== parseInt(digits.charAt(1), 10)) return false;
   return true;
 }
+
