@@ -127,6 +127,19 @@ export default function PedidoDetalhePage() {
     }
   };
 
+  const handleSalvarChaveNfe = async (chave) => {
+    const cleanChave = (chave || chaveNfeInput || '').replace(/\D/g, '');
+    if (cleanChave.length === 44 && cleanChave !== pedido?.chave_nfe) {
+      try {
+        await pb.collection('pedidos').update(pedido.id, { chave_nfe: cleanChave }, { $autoCancel: false });
+        toast.success('Chave da NF-e vinculada e salva no pedido!');
+        await fetchPedido();
+      } catch (e) {
+        console.warn('Erro ao salvar chave nfe:', e);
+      }
+    }
+  };
+
   const handleBuscarNfeBling = async () => {
     setIsCheckingNfe(true);
     try {
@@ -154,7 +167,11 @@ export default function PedidoDetalhePage() {
         transportadora: transportadoraInput
       });
 
-      toast.success('Etiqueta unificada gerada com sucesso no Melhor Envio!');
+      if (res.jaGerada) {
+        toast.info('Etiqueta já contratada no Melhor Envio. Abrindo para visualização...');
+      } else {
+        toast.success('Etiqueta unificada gerada com sucesso no Melhor Envio!');
+      }
       
       // Abre a etiqueta unificada 100x150mm pronta para a Gainscha GS-2406T
       const rawUrl = res.thermalUrl || pedidosService.getEtiquetaUnificadaUrl(pedido.id, true);
@@ -307,6 +324,30 @@ export default function PedidoDetalhePage() {
               </div>
             </div>
 
+            {/* INFORMAÇÕES DE FRETE E ESCOLHA DA CLIENTE */}
+            <div className="bg-amber-500/10 border border-amber-500/20 rounded-lg p-3.5 flex flex-wrap items-center justify-between gap-3 text-xs">
+              <div className="flex items-center gap-2.5">
+                <Truck className="w-4 h-4 text-amber-500 flex-shrink-0" />
+                <div>
+                  <span className="text-muted-foreground mr-1.5">Opção Escolhida no Checkout:</span>
+                  <strong className="text-foreground font-semibold">
+                    {pedido.forma_envio || pedido.transportadora || 'Entrega Regular'}
+                  </strong>
+                  {pedido.prazo_envio && (
+                    <Badge variant="outline" className="ml-2 text-[10px] border-amber-500/30 text-amber-400 py-0">
+                      Prazo: {pedido.prazo_envio}
+                    </Badge>
+                  )}
+                </div>
+              </div>
+              <div className="text-right">
+                <span className="text-muted-foreground">Valor pago de frete: </span>
+                <strong className="text-foreground font-semibold">
+                  {Number(pedido.valor_frete) > 0 ? `R$ ${Number(pedido.valor_frete).toFixed(2).replace('.', ',')}` : 'Frete Grátis'}
+                </strong>
+              </div>
+            </div>
+
             {/* BLOCO PREMIUM: GERAÇÃO & IMPRESSÃO TÉRMICA UNIFICADA (GAINSCHA GS-2406T 100x150mm) */}
             <div className="bg-background/60 border border-amber-500/30 rounded-lg p-4 space-y-3.5">
               <div className="flex flex-wrap items-center justify-between gap-2 border-b border-border/50 pb-2.5">
@@ -354,31 +395,45 @@ export default function PedidoDetalhePage() {
                   <Input
                     value={chaveNfeInput}
                     onChange={(e) => setChaveNfeInput(e.target.value.replace(/\D/g, ''))}
-                    placeholder="Ex: 33261154615037000153550010000000151801150819"
+                    onBlur={(e) => handleSalvarChaveNfe(e.target.value)}
+                    placeholder="Ex: 33261154615037000153550010000000161206888561"
                     className="font-mono text-xs tracking-wider"
                     maxLength={44}
                   />
                 </div>
 
                 <div className="md:col-span-5 flex flex-wrap gap-2">
-                  <Button
-                    type="button"
-                    onClick={handleGerarEtiquetaUnificada}
-                    disabled={isGeneratingLabel}
-                    className="flex-1 bg-amber-500 hover:bg-amber-600 text-black font-bold text-xs h-9 shadow-sm"
-                  >
-                    {isGeneratingLabel ? (
-                      <>
-                        <Loader2 className="w-3.5 h-3.5 mr-1.5 animate-spin" />
-                        Gerando...
-                      </>
-                    ) : (
-                      <>
-                        <Tag className="w-3.5 h-3.5 mr-1.5" />
-                        Gerar no Melhor Envio
-                      </>
-                    )}
-                  </Button>
+                  {pedido.etiqueta_url ? (
+                    <Button
+                      type="button"
+                      variant="outline"
+                      onClick={() => window.open(pedido.etiqueta_url, '_blank')}
+                      className="flex-1 bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 border-emerald-500/30 font-bold text-xs h-9"
+                      title="Abrir PDF oficial já contratado no Melhor Envio"
+                    >
+                      <CheckCircle2 className="w-3.5 h-3.5 mr-1.5 text-emerald-500" />
+                      PDF Oficial Melhor Envio
+                    </Button>
+                  ) : (
+                    <Button
+                      type="button"
+                      onClick={handleGerarEtiquetaUnificada}
+                      disabled={isGeneratingLabel}
+                      className="flex-1 bg-amber-500 hover:bg-amber-600 text-black font-bold text-xs h-9 shadow-sm"
+                    >
+                      {isGeneratingLabel ? (
+                        <>
+                          <Loader2 className="w-3.5 h-3.5 mr-1.5 animate-spin" />
+                          Gerando...
+                        </>
+                      ) : (
+                        <>
+                          <Tag className="w-3.5 h-3.5 mr-1.5" />
+                          Gerar no Melhor Envio
+                        </>
+                      )}
+                    </Button>
+                  )}
 
                   <Button
                     type="button"
@@ -430,12 +485,13 @@ export default function PedidoDetalhePage() {
                     <SelectValue placeholder="Selecione" />
                   </SelectTrigger>
                   <SelectContent>
+                    <SelectItem value="Loggi">Loggi (Express / Ponto)</SelectItem>
                     <SelectItem value="J&T Express">J&T Express</SelectItem>
-                    <SelectItem value="Jadlog">Jadlog (.Package)</SelectItem>
                     <SelectItem value="Correios PAC">Correios PAC</SelectItem>
                     <SelectItem value="Correios SEDEX">Correios SEDEX</SelectItem>
+                    <SelectItem value="Jadlog">Jadlog (.Package / .Com)</SelectItem>
                     <SelectItem value="Azul Cargo Express">Azul Cargo Express</SelectItem>
-                    <SelectItem value="Loggi">Loggi</SelectItem>
+                    <SelectItem value="Total Express">Total Express</SelectItem>
                     <SelectItem value="Outra">Outra Transportadora</SelectItem>
                   </SelectContent>
                 </Select>

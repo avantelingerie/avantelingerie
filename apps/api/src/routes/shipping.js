@@ -510,17 +510,17 @@ router.post('/track', async (req, res, next) => {
           history
         };
       } else if (orderRecord.status === 'enviado') {
-        history.push({ time: updatedTime, desc: 'Objeto em transferência ou em trânsito para a unidade de distribuição.', location: destiny, isLatest: true });
-        history.push({ time: createdTime, desc: 'Seu pacote foi carinhosamente embalado e entregue à transportadora.', location: 'CD Avante Friburgo' });
+        history.push({ time: updatedTime, desc: 'Etiqueta de envio gerada. Pacote embalado aguardando coleta pela transportadora.', location: 'Fábrica Avante Lingerie (Nova Friburgo/RJ)', isLatest: true });
+        history.push({ time: createdTime, desc: 'Lingeries inspecionadas e carinhosamente embaladas.', location: 'CD Avante Friburgo' });
         history.push({ time: createdTime, desc: 'Pagamento aprovado. Nota Fiscal emitida.', location: 'Sistema Avante' });
         internalTimeline = {
           orderNumber: `Pedido #${orderRecord.numero_pedido || orderRecord.id.slice(-6)}`,
-          status: 'Em Trânsito',
-          etaDate: 'A caminho',
+          status: 'Pronto para Coleta',
+          etaDate: 'Aguardando Coleta',
           destiny,
-          shipmentMethod: orderRecord.valor_frete > 0 ? `Entrega Regular (${shippingValue})` : 'Frete Grátis Avante',
-          progressPercent: 60,
-          stepsConfig: { activeStep: 3, completedSteps: [1, 2] },
+          shipmentMethod: orderRecord.forma_envio || (orderRecord.valor_frete > 0 ? `Entrega Regular (${shippingValue})` : 'Frete Grátis Avante'),
+          progressPercent: 50,
+          stepsConfig: { activeStep: 2, completedSteps: [1] },
           history
         };
       } else if (orderRecord.status === 'processando' || orderRecord.status === 'pago' || orderRecord.status === 'confirmado') {
@@ -1017,6 +1017,20 @@ router.post('/gerar-etiqueta-unificada', async (req, res) => {
       return res.status(404).json({ sucesso: false, erro: 'Pedido não localizado.' });
     }
 
+    // 1.1 Se o pedido já possui frete contratado e etiqueta gerada, reaproveita sem cobrar novamente
+    if (pedido.etiqueta_url && pedido.melhor_envio_id) {
+      return res.json({
+        sucesso: true,
+        mensagem: 'Este pedido já possui frete contratado no Melhor Envio.',
+        jaGerada: true,
+        pedido,
+        codigoRastreio: pedido.rastreamento || pedido.codigo_rastreio,
+        chaveNfe: pedido.chave_nfe || chaveNfeInput || null,
+        printUrl: pedido.etiqueta_url,
+        thermalUrl: `/hcgi/api/shipping/etiqueta-unificada/${pedido.id}?autoprint=1`
+      });
+    }
+
     // 2. Resolve a chave da NF-e (Prioridade: Input > Pedido > Bling API)
     let chaveNfe = (chaveNfeInput || pedido.chave_nfe || '').trim();
     if (!chaveNfe || chaveNfe.length < 44) {
@@ -1040,32 +1054,49 @@ router.post('/gerar-etiqueta-unificada', async (req, res) => {
     };
 
     // 4. Mapeia Transportadora e ID de Serviço do Melhor Envio
-    // J&T Express Standard = 33, Jadlog Package = 3, Correios PAC = 1, SEDEX = 2
-    let chosenServiceId = Number(serviceId);
+    // Loggi Express = 31, Loggi Ponto = 34, J&T Standard = 33, Jadlog Package = 3, Jadlog Com = 4, Correios PAC = 1, SEDEX = 2, Azul = 16
+    let chosenServiceId = Number(serviceId) || Number(pedido.servico_frete_id);
     if (!chosenServiceId) {
-      const transStr = (transportadora || pedido.transportadora || pedido.metodo_envio || 'J&T Express').toLowerCase();
-      if (transStr.includes('j&t') || transStr.includes('jet')) chosenServiceId = 33;
+      const transStr = (transportadora || pedido.transportadora || pedido.forma_envio || pedido.metodo_envio || 'Loggi Express').toLowerCase();
+      if (transStr.includes('loggi ponto')) chosenServiceId = 34;
+      else if (transStr.includes('loggi')) chosenServiceId = 31;
+      else if (transStr.includes('j&t') || transStr.includes('jet')) chosenServiceId = 33;
+      else if (transStr.includes('azul') && transStr.includes('expresso')) chosenServiceId = 15;
+      else if (transStr.includes('azul')) chosenServiceId = 16;
+      else if (transStr.includes('jadlog') && (transStr.includes('.com') || transStr.includes('com'))) chosenServiceId = 4;
       else if (transStr.includes('jadlog')) chosenServiceId = 3;
       else if (transStr.includes('sedex')) chosenServiceId = 2;
       else if (transStr.includes('pac') || transStr.includes('correios')) chosenServiceId = 1;
-      else chosenServiceId = 33; // Padrão J&T Express Standard (ID 33)
+      else if (transStr.includes('total')) chosenServiceId = 35;
+      else chosenServiceId = 31; // Padrão mais econômico
     }
 
-    // 5. Calcula dimensões e valor segurado
-    let totalValor = parseFloat(pedido.valor_total || pedido.total || 100);
+    // 5. Calcula dimensões e peso respeitando as travas mínimas das transportadoras
+    let totalValor = parseFloat(pedido.valor_total || pedido.total || 56.56);
     let totalPesoKg = 0.3;
-    let pkgHeight = 8;
-    let pkgWidth = 15;
-    let pkgLength = 20;
+    let pkgHeight = 2;
+    let pkgWidth = 12;
+    let pkgLength = 17;
 
     const meProducts = [];
     if (pedido.itens && Array.isArray(pedido.itens) && pedido.itens.length > 0) {
       let calcWeightG = 0;
+      let maxHeight = 2;
+      let maxWidth = 12;
+      let maxLength = 17;
+
       for (const it of pedido.itens) {
         const qty = parseInt(it.quantidade, 10) || 1;
         const val = parseFloat(it.preco_unitario || it.preco || it.price || 30);
         const wG = parseFloat(it.peso_g) || 100;
+        const alt = parseFloat(it.altura_cm) || 2;
+        const larg = parseFloat(it.largura_cm) || 12;
+        const comp = parseFloat(it.comprimento_cm) || 17;
+
         calcWeightG += (wG * qty);
+        maxHeight = Math.max(maxHeight, alt * Math.min(qty, 3));
+        maxWidth = Math.max(maxWidth, larg);
+        maxLength = Math.max(maxLength, comp);
 
         meProducts.push({
           name: (it.nome || 'Lingerie Avante').substring(0, 80),
@@ -1073,7 +1104,12 @@ router.post('/gerar-etiqueta-unificada', async (req, res) => {
           unitary_value: val
         });
       }
-      if (calcWeightG > 0) totalPesoKg = Math.max(0.1, Number((calcWeightG / 1000).toFixed(3)));
+
+      // Aplica piso mínimo das transportadoras (300g e 2x12x17cm)
+      totalPesoKg = Math.max(0.3, Number(((calcWeightG + 50) / 1000).toFixed(3)));
+      pkgHeight = Math.max(2, Math.round(maxHeight));
+      pkgWidth = Math.max(12, Math.round(maxWidth));
+      pkgLength = Math.max(17, Math.round(maxLength));
     } else {
       meProducts.push({
         name: 'Conjunto Lingerie Avante',
@@ -1226,10 +1262,13 @@ router.post('/gerar-etiqueta-unificada', async (req, res) => {
     const updateData = {
       status: 'enviado',
       rastreamento: finalTracking,
-      codigo_rastreio: finalTracking
+      codigo_rastreio: finalTracking,
+      transportadora: carrierName
     };
     if (chaveNfe) updateData.chave_nfe = chaveNfe;
     if (mePrintUrl) updateData.etiqueta_url = mePrintUrl;
+    if (cartOrderId) updateData.melhor_envio_id = String(cartOrderId);
+    if (chosenServiceId) updateData.servico_frete_id = String(chosenServiceId);
 
     const updatedPedido = await pb.collection('pedidos').update(pedido.id, updateData, { $autoCancel: false });
     updatedPedido.transportadora = carrierName;
@@ -1291,7 +1330,7 @@ router.get('/etiqueta-unificada/:pedidoId', async (req, res) => {
 
     // 1. Dados Fiscais da NF-e
     let chaveNfe = (pedido.chave_nfe || '').replace(/\D/g, '');
-    let numeroNfe = pedido.numero_nfe || '000015';
+    let numeroNfe = pedido.numero_nfe || '';
     let serieNfe = '1';
     let dataEmissao = new Date(pedido.created || Date.now()).toLocaleDateString('pt-BR');
     let protocoloUso = '233260528832869 ' + dataEmissao + ' 21:25';
@@ -1306,8 +1345,15 @@ router.get('/etiqueta-unificada/:pedidoId', async (req, res) => {
       }
     }
 
-    // Fallback de chave oficial (para teste/visualização padrão SEFAZ caso ainda não emitida)
-    if (!chaveNfe || chaveNfe.length < 44) {
+    // Extrai número e série da chave se a chave for válida
+    if (chaveNfe && chaveNfe.length === 44) {
+      if (!numeroNfe) {
+        const numExtraido = String(parseInt(chaveNfe.substring(25, 34), 10) || 1).padStart(6, '0');
+        numeroNfe = numExtraido;
+      }
+      serieNfe = String(parseInt(chaveNfe.substring(22, 25), 10) || 1);
+    } else {
+      if (!numeroNfe) numeroNfe = '000015';
       chaveNfe = '33261154615037000153550010000000151801150819';
     }
 
@@ -1518,11 +1564,55 @@ router.get('/etiqueta-unificada/:pedidoId', async (req, res) => {
       cursor: pointer;
       box-shadow: 0 4px 12px rgba(0,0,0,0.3);
       border: none;
-      font-size: 14px;
+      font-size: 13px;
+      z-index: 100;
+    }
+    .instruction-card {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      right: 10px;
+      max-width: 480px;
+      background: #18181b;
+      color: #fafafa;
+      border: 1px solid #c59b5f;
+      padding: 10px 14px;
+      border-radius: 8px;
+      font-family: Arial, sans-serif;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.4);
+      z-index: 100;
+    }
+    .btn-pdf-link {
+      display: inline-block;
+      background: #27272a;
+      color: #c59b5f;
+      border: 1px solid #c59b5f;
+      font-weight: bold;
+      font-size: 11px;
+      padding: 5px 10px;
+      border-radius: 4px;
+      text-decoration: none;
+      margin-top: 6px;
+      margin-right: 6px;
+    }
+    @media print {
+      .no-print {
+        display: none !important;
+      }
     }
   </style>
 </head>
 <body>
+  <div class="instruction-card no-print">
+    <div style="font-size: 11px; line-height: 1.4;">
+      ⚙️ <strong>Impressão Gainscha GS-2406T:</strong> Papel: <strong>100x150mm (4x6")</strong> &bull; Margens: <strong>Nenhuma</strong> &bull; Escala: <strong>100%</strong>
+    </div>
+    <div style="margin-top: 6px;">
+      ${pedido.etiqueta_url ? `<a href="${pedido.etiqueta_url}" target="_blank" class="btn-pdf-link">📄 Abrir PDF Oficial (Melhor Envio)</a>` : ''}
+      <button class="btn-pdf-link" style="background: #c59b5f; color: #000; cursor: pointer;" onclick="window.focus(); window.print();">🖨️ Imprimir Térmica Agora</button>
+    </div>
+  </div>
+
   <div class="sheet">
     
     <!-- METADE SUPERIOR (0 a 70mm): DANFE SIMPLIFICADO -->

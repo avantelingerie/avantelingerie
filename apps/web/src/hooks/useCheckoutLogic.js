@@ -277,6 +277,9 @@ export function useCheckoutLogic() {
           setShippingOption({
             cost: defaultOpt.price,
             method: `${defaultOpt.company} ${defaultOpt.name}`,
+            company: defaultOpt.company || 'Melhor Envio',
+            serviceName: defaultOpt.name || '',
+            deliveryTime: defaultOpt.delivery_time ? `${defaultOpt.delivery_time} dias úteis` : '',
             id: defaultOpt.id
           });
           setSelectedShippingId(defaultOpt.id);
@@ -313,6 +316,9 @@ export function useCheckoutLogic() {
       setShippingOption({
         cost: option.price,
         method: `${option.company} ${option.name}`,
+        company: option.company || 'Melhor Envio',
+        serviceName: option.name || '',
+        deliveryTime: option.delivery_time ? `${option.delivery_time} dias úteis` : '',
         id: option.id
       });
       setSelectedShippingId(option.id);

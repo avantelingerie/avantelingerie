@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { ArrowLeft, Save, X, Plus, Trash2, Loader2, Image as ImageIcon, Sparkles, RefreshCw, Calculator } from 'lucide-react';
+import { ArrowLeft, Save, X, Plus, Trash2, Loader2, Image as ImageIcon, Sparkles, RefreshCw, Calculator, Ruler, PackageCheck } from 'lucide-react';
 import { Button } from '@/components/ui/button.jsx';
 import { Input } from '@/components/ui/input.jsx';
 import { Textarea } from '@/components/ui/textarea.jsx';
 import { Switch } from '@/components/ui/switch.jsx';
+import { Badge } from '@/components/ui/badge.jsx';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select.jsx';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion.jsx';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger, DialogDescription, DialogClose } from '@/components/ui/dialog.jsx';
 import { toast } from 'sonner';
@@ -13,6 +15,22 @@ import apiServerClient from '@/lib/apiServerClient.js';
 import VariacoesTable from '@/components/admin/VariacoesTable.jsx';
 import CalculadoraPrecoModal from '@/components/admin/CalculadoraPrecoModal.jsx';
 import { guessNcm } from '../../utils/guessNcm.js';
+
+// Padrões Oficiais de Medidas e Pesos da Avante Lingerie para fretes calibrados no Melhor Envio
+export const PADROES_MEDIDAS_AVANTE = [
+  { id: 'calcinha', label: '🩲 Calcinhas (Tanga / Fio / Biquíni / Cós Alto)', peso_g: 60, altura_cm: 2, largura_cm: 12, comprimento_cm: 17 },
+  { id: 'sutia_sem_bojo', label: '👙 Sutiã sem bojo (Renda / Tule / Sem Aro)', peso_g: 80, altura_cm: 3, largura_cm: 15, comprimento_cm: 20 },
+  { id: 'sutia_com_bojo', label: '🎀 Sutiã com bojo estruturado', peso_g: 120, altura_cm: 8, largura_cm: 15, comprimento_cm: 20 },
+  { id: 'conjunto_sem_bojo', label: '👙 Conjunto s/ bojo (Cropped + Calcinha)', peso_g: 150, altura_cm: 4, largura_cm: 15, comprimento_cm: 20 },
+  { id: 'conjunto_com_bojo', label: '🎀 Conjunto c/ bojo tradicional', peso_g: 180, altura_cm: 8, largura_cm: 16, comprimento_cm: 22 },
+  { id: 'cropped', label: '👚 Cropped regata (com e sem gola)', peso_g: 150, altura_cm: 3, largura_cm: 15, comprimento_cm: 20 },
+  { id: 'pijama_leve', label: '👗 Pijama, Camisola, Short Doll, Baby Doll', peso_g: 200, altura_cm: 4, largura_cm: 16, comprimento_cm: 22 },
+  { id: 'pijama_suede', label: '🧥 Pijama Suede Aveludado', peso_g: 320, altura_cm: 5, largura_cm: 20, comprimento_cm: 25 },
+  { id: 'fitness_short', label: '🏋️‍♀️ Conjunto Fitness (Top e Short)', peso_g: 250, altura_cm: 4, largura_cm: 18, comprimento_cm: 22 },
+  { id: 'fitness_legging', label: '🏃‍♀️ Conjunto Fitness (Top e Calça Legging)', peso_g: 420, altura_cm: 6, largura_cm: 20, comprimento_cm: 25 },
+  { id: 'short_fitness', label: '🩳 Short fitness avulso', peso_g: 140, altura_cm: 3, largura_cm: 15, comprimento_cm: 20 },
+  { id: 'cinta_fitness', label: '⏳ Calcinha cinta Fitness / Modeladora', peso_g: 150, altura_cm: 3, largura_cm: 15, comprimento_cm: 20 }
+];
 
 export default function ProdutoForm() {
   const { id } = useParams();
@@ -240,11 +258,57 @@ export default function ProdutoForm() {
         }
       }
 
+      // Sugere dimensões e peso da fábrica se os campos ainda estiverem vazios
+      if ((field === 'name' || field === 'categoria_id') && (!prev.peso_g || prev.peso_g === '')) {
+        const currentName = (field === 'name' ? value : prev.name || '').toLowerCase();
+        const currentCatId = field === 'categoria_id' ? value : prev.categoria_id;
+        const catObj = categorias.find(c => c.id === currentCatId);
+        const catName = (catObj?.nome || '').toLowerCase();
+        const fullText = `${currentName} ${catName}`;
+
+        let autoPadrao = null;
+        if (fullText.includes('calcinha') || fullText.includes('fio') || fullText.includes('tanga') || fullText.includes('calçola')) {
+          autoPadrao = PADROES_MEDIDAS_AVANTE.find(p => p.id === 'calcinha');
+        } else if (fullText.includes('bojo') && (fullText.includes('conjunto') || fullText.includes('sutiã'))) {
+          autoPadrao = PADROES_MEDIDAS_AVANTE.find(p => p.id === 'conjunto_com_bojo');
+        } else if (fullText.includes('sem bojo') || fullText.includes('cropped') || fullText.includes('body')) {
+          autoPadrao = PADROES_MEDIDAS_AVANTE.find(p => p.id === 'conjunto_sem_bojo');
+        } else if (fullText.includes('suede')) {
+          autoPadrao = PADROES_MEDIDAS_AVANTE.find(p => p.id === 'pijama_suede');
+        } else if (fullText.includes('pijama') || fullText.includes('camisola') || fullText.includes('short doll') || fullText.includes('baby doll')) {
+          autoPadrao = PADROES_MEDIDAS_AVANTE.find(p => p.id === 'pijama_leve');
+        } else if (fullText.includes('legging') || fullText.includes('leggi')) {
+          autoPadrao = PADROES_MEDIDAS_AVANTE.find(p => p.id === 'fitness_legging');
+        } else if (fullText.includes('fitness')) {
+          autoPadrao = PADROES_MEDIDAS_AVANTE.find(p => p.id === 'fitness_short');
+        }
+
+        if (autoPadrao) {
+          updated.peso_g = autoPadrao.peso_g;
+          updated.altura_cm = autoPadrao.altura_cm;
+          updated.largura_cm = autoPadrao.largura_cm;
+          updated.comprimento_cm = autoPadrao.comprimento_cm;
+        }
+      }
+
       if (field === 'name' && !isEdit && !prev.reference) {
         updated.reference = generateReference(value);
       }
       return updated;
     });
+  };
+
+  const aplicarPadraoMedidas = (padraoId) => {
+    const padrao = PADROES_MEDIDAS_AVANTE.find(p => p.id === padraoId);
+    if (!padrao) return;
+    setFormData(prev => ({
+      ...prev,
+      peso_g: padrao.peso_g,
+      altura_cm: padrao.altura_cm,
+      largura_cm: padrao.largura_cm,
+      comprimento_cm: padrao.comprimento_cm
+    }));
+    toast.success(`Medidas aplicadas: ${padrao.label.split('(')[0].trim()}`);
   };
 
   const handleTriggerAutoNcm = () => {
@@ -983,23 +1047,142 @@ export default function ProdutoForm() {
               }}
             />
             
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pt-2">
-              <div>
-                <label className="text-sm font-medium mb-1.5 block text-zinc-700 dark:text-gray-300">Peso (g)</label>
-                <Input type="number" value={formData.peso_g} onChange={(e) => handleInputChange('peso_g', e.target.value)} placeholder="Ex: 150" className="bg-white dark:bg-[#121212] border-zinc-300 dark:border-[#c59b5f]/20 text-zinc-900 dark:text-white" />
+            {/* Bloco de Dimensões e Frete Calibrado para o Melhor Envio */}
+            <div className="pt-4 border-t border-zinc-200 dark:border-zinc-800 space-y-3">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                <div className="flex items-center gap-2">
+                  <Ruler className="w-4 h-4 text-[#c59b5f]" />
+                  <span className="text-sm font-semibold text-zinc-900 dark:text-white">
+                    Dimensões e Peso para Frete (Melhor Envio)
+                  </span>
+                  <Badge variant="outline" className="text-[10px] border-amber-500/40 text-amber-500 py-0">
+                    100% Calibrado
+                  </Badge>
+                </div>
+                
+                {/* Dropdown com os 12 Padrões Oficiais da Fábrica */}
+                <div className="w-full sm:w-80">
+                  <Select onValueChange={aplicarPadraoMedidas}>
+                    <SelectTrigger className="h-8 text-xs bg-zinc-50 dark:bg-zinc-900 border-zinc-300 dark:border-amber-500/30">
+                      <SelectValue placeholder="⚡ Padrão da Fábrica (12 categorias)..." />
+                    </SelectTrigger>
+                    <SelectContent className="max-h-72">
+                      {PADROES_MEDIDAS_AVANTE.map(p => (
+                        <SelectItem key={p.id} value={p.id} className="text-xs">
+                          {p.label} &bull; {p.peso_g}g ({p.altura_cm}x{p.largura_cm}x{p.comprimento_cm}cm)
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                </div>
               </div>
-              <div>
-                <label className="text-sm font-medium mb-1.5 block text-zinc-700 dark:text-gray-300">Altura (cm)</label>
-                <Input type="number" value={formData.altura_cm} onChange={(e) => handleInputChange('altura_cm', e.target.value)} placeholder="Ex: 5" className="bg-white dark:bg-[#121212] border-zinc-300 dark:border-[#c59b5f]/20 text-zinc-900 dark:text-white" />
+
+              {/* 4 Botões de Atalho Rápido (1 Clique) - Os Mais Usados */}
+              <div className="flex items-center gap-1.5 flex-wrap">
+                <span className="text-[11px] font-medium text-zinc-500 dark:text-zinc-400 mr-1 flex items-center gap-1">
+                  <Sparkles className="w-3 h-3 text-amber-500" />
+                  Atalhos 1-Clique:
+                </span>
+                <Button
+                  type="button"
+                  variant="outline"
+                  size="sm"
+                  onClick={() => aplicarPadraoMedidas('calcinha')}
+                  className="h-7 text-xs px-2.5 bg-zinc-50 hover:bg-amber-500/10 hover:border-amber-500/50 dark:bg-zinc-900 dark:hover:bg-amber-500/15"
+                  title="Calcinha: 60g | 2 x 12 x 17 cm"
+                >
+                  🩲 Calcinha (60g)
+                </Button>
+                <Button
+                  type="button"
+                  variant="outline"
+                  size="sm"
+                  onClick={() => aplicarPadraoMedidas('conjunto_sem_bojo')}
+                  className="h-7 text-xs px-2.5 bg-zinc-50 hover:bg-amber-500/10 hover:border-amber-500/50 dark:bg-zinc-900 dark:hover:bg-amber-500/15"
+                  title="Conjunto sem bojo: 150g | 4 x 15 x 20 cm"
+                >
+                  👙 Conjunto s/ Bojo (150g)
+                </Button>
+                <Button
+                  type="button"
+                  variant="outline"
+                  size="sm"
+                  onClick={() => aplicarPadraoMedidas('sutia_com_bojo')}
+                  className="h-7 text-xs px-2.5 bg-zinc-50 hover:bg-amber-500/10 hover:border-amber-500/50 dark:bg-zinc-900 dark:hover:bg-amber-500/15"
+                  title="Sutiã com bojo: 120g | 8 x 15 x 20 cm"
+                >
+                  🎀 Sutiã c/ Bojo (120g)
+                </Button>
+                <Button
+                  type="button"
+                  variant="outline"
+                  size="sm"
+                  onClick={() => aplicarPadraoMedidas('pijama_leve')}
+                  className="h-7 text-xs px-2.5 bg-zinc-50 hover:bg-amber-500/10 hover:border-amber-500/50 dark:bg-zinc-900 dark:hover:bg-amber-500/15"
+                  title="Pijama leve: 200g | 4 x 16 x 22 cm"
+                >
+                  👗 Pijama / Camisola (200g)
+                </Button>
               </div>
-              <div>
-                <label className="text-sm font-medium mb-1.5 block text-zinc-700 dark:text-gray-300">Largura (cm)</label>
-                <Input type="number" value={formData.largura_cm} onChange={(e) => handleInputChange('largura_cm', e.target.value)} placeholder="Ex: 11" className="bg-white dark:bg-[#121212] border-zinc-300 dark:border-[#c59b5f]/20 text-zinc-900 dark:text-white" />
+
+              {/* Grid com os 4 Campos Editáveis */}
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-3 pt-1">
+                <div>
+                  <label className="text-xs font-medium mb-1 flex items-center justify-between text-zinc-700 dark:text-gray-300">
+                    <span>Peso (g)</span>
+                    <span className="text-[10px] text-muted-foreground">Mín. 60g</span>
+                  </label>
+                  <Input 
+                    type="number" 
+                    value={formData.peso_g} 
+                    onChange={(e) => handleInputChange('peso_g', e.target.value)} 
+                    placeholder="Ex: 150" 
+                    className="bg-white dark:bg-[#121212] border-zinc-300 dark:border-[#c59b5f]/20 text-zinc-900 dark:text-white h-9 text-xs" 
+                  />
+                </div>
+                <div>
+                  <label className="text-xs font-medium mb-1 flex items-center justify-between text-zinc-700 dark:text-gray-300">
+                    <span>Altura (cm)</span>
+                    <span className="text-[10px] text-muted-foreground">Mín. 2cm</span>
+                  </label>
+                  <Input 
+                    type="number" 
+                    value={formData.altura_cm} 
+                    onChange={(e) => handleInputChange('altura_cm', e.target.value)} 
+                    placeholder="Ex: 4" 
+                    className="bg-white dark:bg-[#121212] border-zinc-300 dark:border-[#c59b5f]/20 text-zinc-900 dark:text-white h-9 text-xs" 
+                  />
+                </div>
+                <div>
+                  <label className="text-xs font-medium mb-1 flex items-center justify-between text-zinc-700 dark:text-gray-300">
+                    <span>Largura (cm)</span>
+                    <span className="text-[10px] text-muted-foreground">Mín. 12cm</span>
+                  </label>
+                  <Input 
+                    type="number" 
+                    value={formData.largura_cm} 
+                    onChange={(e) => handleInputChange('largura_cm', e.target.value)} 
+                    placeholder="Ex: 15" 
+                    className="bg-white dark:bg-[#121212] border-zinc-300 dark:border-[#c59b5f]/20 text-zinc-900 dark:text-white h-9 text-xs" 
+                  />
+                </div>
+                <div>
+                  <label className="text-xs font-medium mb-1 flex items-center justify-between text-zinc-700 dark:text-gray-300">
+                    <span>Comprimento (cm)</span>
+                    <span className="text-[10px] text-muted-foreground">Mín. 17cm</span>
+                  </label>
+                  <Input 
+                    type="number" 
+                    value={formData.comprimento_cm} 
+                    onChange={(e) => handleInputChange('comprimento_cm', e.target.value)} 
+                    placeholder="Ex: 20" 
+                    className="bg-white dark:bg-[#121212] border-zinc-300 dark:border-[#c59b5f]/20 text-zinc-900 dark:text-white h-9 text-xs" 
+                  />
+                </div>
               </div>
-              <div>
-                <label className="text-sm font-medium mb-1.5 block text-zinc-700 dark:text-gray-300">Profundidade (cm)</label>
-                <Input type="number" value={formData.comprimento_cm} onChange={(e) => handleInputChange('comprimento_cm', e.target.value)} placeholder="Ex: 20" className="bg-white dark:bg-[#121212] border-zinc-300 dark:border-[#c59b5f]/20 text-zinc-900 dark:text-white" />
-              </div>
+              <p className="text-[11px] text-zinc-500 dark:text-zinc-400">
+                💡 <span className="font-medium text-zinc-700 dark:text-zinc-300">Dica de Frete Econômico:</span> As transportadoras do Melhor Envio cobram por faixas até 500g e exigem no mínimo 2x12x17cm. Ao selecionar uma opção acima, as medidas são preenchidas automaticamente. Você é livre para alterar qualquer número.
+              </p>
             </div>
           </section>
 
