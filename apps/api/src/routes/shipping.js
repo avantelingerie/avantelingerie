@@ -1040,15 +1040,15 @@ router.post('/gerar-etiqueta-unificada', async (req, res) => {
     };
 
     // 4. Mapeia Transportadora e ID de Serviço do Melhor Envio
-    // J&T Express Standard = 17, Jadlog Package = 3, Correios PAC = 1, SEDEX = 2
+    // J&T Express Standard = 33, Jadlog Package = 3, Correios PAC = 1, SEDEX = 2
     let chosenServiceId = Number(serviceId);
     if (!chosenServiceId) {
       const transStr = (transportadora || pedido.transportadora || pedido.metodo_envio || 'J&T Express').toLowerCase();
-      if (transStr.includes('j&t') || transStr.includes('jet')) chosenServiceId = 17;
+      if (transStr.includes('j&t') || transStr.includes('jet')) chosenServiceId = 33;
       else if (transStr.includes('jadlog')) chosenServiceId = 3;
       else if (transStr.includes('sedex')) chosenServiceId = 2;
       else if (transStr.includes('pac') || transStr.includes('correios')) chosenServiceId = 1;
-      else chosenServiceId = 17; // Padrão J&T Express
+      else chosenServiceId = 33; // Padrão J&T Express Standard (ID 33)
     }
 
     // 5. Calcula dimensões e valor segurado
@@ -1109,15 +1109,15 @@ router.post('/gerar-etiqueta-unificada', async (req, res) => {
       agency: null,
       from: {
         name: 'Avante Lingerie LTDA',
-        phone: '22992869051',
+        phone: '22981124281',
         email: 'contato@avantelingerie.com.br',
-        document: '54615037000153',
-        company_document: '54615037000153',
+        document: '01065648707', // CPF do titular no Melhor Envio (obrigatório para PJ)
+        company_document: '54615037000153', // CNPJ da Avante Lingerie
         state_register: '14568603',
         address: 'Rua Odenir Pinheiro',
         number: '20',
         complement: '3 Andar',
-        district: 'Olaria',
+        district: 'Loteamento Nosso Sonho',
         city: 'Nova Friburgo',
         state_abbreviation: 'RJ',
         postal_code: '28623620'

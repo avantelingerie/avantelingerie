@@ -27,6 +27,12 @@ const getBlingFormaPagamentoId = (metodo) => {
   return null;
 };
 
+// Formata a data garantindo o fuso horário oficial de Brasília (evita que compras após as 21h fiquem com data de amanhã no Bling)
+const getBrazilDateString = (dateInput) => {
+  const d = dateInput ? new Date(dateInput) : new Date();
+  return d.toLocaleDateString('en-CA', { timeZone: 'America/Sao_Paulo' });
+};
+
 const formatPedidoForBling = (pedido, userCpf = '') => {
   const itens = (pedido.itens || []).map(item => ({
     codigo: item.sku,
@@ -68,9 +74,11 @@ const formatPedidoForBling = (pedido, userCpf = '') => {
   const finalPeso = calcPeso > 0 ? calcPeso : 0.3;
   const transportName = pedido.metodo_envio || pedido.forma_envio || 'Envios por Melhor Envio';
 
+  const dataPedidoBR = getBrazilDateString(pedido.created);
+
   return {
     numeroLoja: pedido.numero_pedido,
-    data: new Date(pedido.created).toISOString().split('T')[0],
+    data: dataPedidoBR,
     contato: {
       nome: pedido.cliente_nome || 'Cliente Consumidor',
       numeroDocumento: pedido.cpf || userCpf || pedido.cliente_cpf || '',
@@ -90,7 +98,7 @@ const formatPedidoForBling = (pedido, userCpf = '') => {
       const formaPagamentoId = getBlingFormaPagamentoId(pedido.metodo_pagamento);
       const obj = {
         valor: totalParaParcelas,
-        dataVencimento: new Date(pedido.created || Date.now()).toISOString().split('T')[0]
+        dataVencimento: dataPedidoBR
       };
       if (formaPagamentoId) {
         obj.formaPagamento = { id: formaPagamentoId };
