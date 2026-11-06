@@ -173,12 +173,12 @@ export default function PedidoDetalhePage() {
         toast.success('Etiqueta unificada gerada com sucesso no Melhor Envio!');
       }
       
-      // Abre a etiqueta unificada 100x150mm pronta para a Gainscha GS-2406T
+      // Abre a etiqueta unificada 100x150mm pronta para a Gainscha GS-2406T em nova aba completa
       const rawUrl = res.thermalUrl || pedidosService.getEtiquetaUnificadaUrl(pedido.id, true);
       const printUrl = (rawUrl.startsWith('/hcgi/api') || rawUrl.startsWith('http'))
         ? rawUrl
         : `/hcgi/api${rawUrl.startsWith('/') ? '' : '/'}${rawUrl}`;
-      window.open(printUrl, '_blank', 'width=520,height=780,toolbar=0,menubar=0,location=0');
+      window.open(printUrl, '_blank');
 
       await fetchPedido();
     } catch (err) {
@@ -189,8 +189,11 @@ export default function PedidoDetalhePage() {
   };
 
   const handleImprimirEtiquetaGainscha = () => {
-    const printUrl = pedidosService.getEtiquetaUnificadaUrl(pedido.id, true);
-    window.open(printUrl, '_blank', 'width=520,height=780,toolbar=0,menubar=0,location=0');
+    const rawUrl = pedidosService.getEtiquetaUnificadaUrl(pedido.id, true);
+    const printUrl = (rawUrl.startsWith('/hcgi/api') || rawUrl.startsWith('http'))
+      ? rawUrl
+      : `/hcgi/api${rawUrl.startsWith('/') ? '' : '/'}${rawUrl}`;
+    window.open(printUrl, '_blank');
   };
 
   const getWhatsAppMessageText = () => {
@@ -363,9 +366,22 @@ export default function PedidoDetalhePage() {
                 
                 <div className="flex items-center gap-2">
                   {pedido.chave_nfe ? (
-                    <Badge className="bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 border border-emerald-500/30 text-xs gap-1">
-                      <Check className="w-3 h-3" /> NF-e Vinculada
-                    </Badge>
+                    <div className="flex items-center gap-1.5">
+                      <Badge className="bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 border border-emerald-500/30 text-xs gap-1">
+                        <Check className="w-3 h-3" /> NF-e Vinculada
+                      </Badge>
+                      <Button
+                        type="button"
+                        variant="ghost"
+                        size="icon"
+                        onClick={handleBuscarNfeBling}
+                        disabled={isCheckingNfe}
+                        className="h-7 w-7 text-muted-foreground hover:text-amber-500 hover:bg-amber-500/10"
+                        title="Reconsultar / Sincronizar NF-e do Bling"
+                      >
+                        {isCheckingNfe ? <Loader2 className="w-3.5 h-3.5 animate-spin" /> : <RotateCw className="w-3.5 h-3.5" />}
+                      </Button>
+                    </div>
                   ) : (
                     <Button
                       type="button"
@@ -404,47 +420,62 @@ export default function PedidoDetalhePage() {
 
                 <div className="md:col-span-5 flex flex-wrap gap-2">
                   {pedido.etiqueta_url ? (
-                    <Button
-                      type="button"
-                      variant="outline"
-                      onClick={() => window.open(pedido.etiqueta_url, '_blank')}
-                      className="flex-1 bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 border-emerald-500/30 font-bold text-xs h-9"
-                      title="Abrir PDF oficial já contratado no Melhor Envio"
-                    >
-                      <CheckCircle2 className="w-3.5 h-3.5 mr-1.5 text-emerald-500" />
-                      PDF Oficial Melhor Envio
-                    </Button>
-                  ) : (
-                    <Button
-                      type="button"
-                      onClick={handleGerarEtiquetaUnificada}
-                      disabled={isGeneratingLabel}
-                      className="flex-1 bg-amber-500 hover:bg-amber-600 text-black font-bold text-xs h-9 shadow-sm"
-                    >
-                      {isGeneratingLabel ? (
-                        <>
-                          <Loader2 className="w-3.5 h-3.5 mr-1.5 animate-spin" />
-                          Gerando...
-                        </>
-                      ) : (
-                        <>
-                          <Tag className="w-3.5 h-3.5 mr-1.5" />
-                          Gerar no Melhor Envio
-                        </>
-                      )}
-                    </Button>
-                  )}
+                    <>
+                      <Button
+                        type="button"
+                        variant="outline"
+                        onClick={() => window.open(pedido.etiqueta_url, '_blank')}
+                        className="flex-1 bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 border-emerald-500/30 font-bold text-xs h-9"
+                        title="Abrir PDF oficial já contratado no Melhor Envio"
+                      >
+                        <CheckCircle2 className="w-3.5 h-3.5 mr-1.5 text-emerald-500" />
+                        PDF Oficial Melhor Envio
+                      </Button>
 
-                  <Button
-                    type="button"
-                    variant="outline"
-                    onClick={handleImprimirEtiquetaGainscha}
-                    className="border-amber-500/50 hover:bg-amber-500/10 text-amber-500 font-semibold text-xs h-9 px-3"
-                    title="Imprimir formato térmico 100x150mm"
-                  >
-                    <Printer className="w-3.5 h-3.5 mr-1.5" />
-                    Imprimir na Gainscha (100x150)
-                  </Button>
+                      <Button
+                        type="button"
+                        variant="outline"
+                        onClick={handleImprimirEtiquetaGainscha}
+                        className="bg-amber-500/15 hover:bg-amber-500/25 border-amber-500/50 text-amber-500 font-bold text-xs h-9 px-3"
+                        title="Imprimir formato térmico 100x150mm (DANFE + Envio)"
+                      >
+                        <Printer className="w-3.5 h-3.5 mr-1.5" />
+                        Imprimir na Gainscha (100x150)
+                      </Button>
+                    </>
+                  ) : (
+                    <>
+                      <Button
+                        type="button"
+                        onClick={handleGerarEtiquetaUnificada}
+                        disabled={isGeneratingLabel}
+                        className="flex-1 bg-amber-500 hover:bg-amber-600 text-black font-bold text-xs h-9 shadow-sm"
+                      >
+                        {isGeneratingLabel ? (
+                          <>
+                            <Loader2 className="w-3.5 h-3.5 mr-1.5 animate-spin" />
+                            Gerando...
+                          </>
+                        ) : (
+                          <>
+                            <Tag className="w-3.5 h-3.5 mr-1.5" />
+                            Gerar no Melhor Envio
+                          </>
+                        )}
+                      </Button>
+
+                      <Button
+                        type="button"
+                        variant="outline"
+                        onClick={handleImprimirEtiquetaGainscha}
+                        className="border-amber-500/50 hover:bg-amber-500/10 text-amber-500 font-semibold text-xs h-9 px-3"
+                        title="Imprimir formato térmico 100x150mm"
+                      >
+                        <Printer className="w-3.5 h-3.5 mr-1.5" />
+                        Imprimir na Gainscha (100x150)
+                      </Button>
+                    </>
+                  )}
                 </div>
               </div>
             </div>

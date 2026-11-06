@@ -823,7 +823,7 @@ const consultarNfeBlingPorPedido = async (numeroPedido, pedido = null) => {
       }
     }
 
-    // 2. ESTRATÉGIA B: Buscar pedidos de vendas no Bling pelo número da loja
+    // 2. ESTRATÉGIA B: Buscar pedidos de vendas ou NF-e no Bling pelo número da loja
     const cleanNum = String(numeroPedido || '').trim();
     const cleanDigits = cleanNum.replace(/\D/g, '');
     const numSemPrefixo = cleanNum.replace(/^PED[-_\s]*/i, '').trim();
@@ -833,6 +833,24 @@ const consultarNfeBlingPorPedido = async (numeroPedido, pedido = null) => {
     if (cleanDigits && !variants.includes(cleanDigits)) variants.push(cleanDigits);
 
     for (const v of variants) {
+      // 2.1 Consulta direta na API de NF-e do Bling v3 por numeroLoja
+      try {
+        const nfeDirectRes = await axios.get(`https://api.bling.com.br/Api/v3/nfe?numeroLoja=${encodeURIComponent(v)}`, { headers, timeout: 8000 });
+        const nfeDirectList = nfeDirectRes.data?.data;
+        if (Array.isArray(nfeDirectList) && nfeDirectList.length > 0) {
+          for (const item of nfeDirectList) {
+            const fullNfe = item.chaveAcesso ? item : await fetchNfeDetail(item.id);
+            if (fullNfe?.chaveAcesso) {
+              logger.info(`[ShippingAPI] NF-e #${fullNfe.numero} localizada com sucesso via busca direta /nfe?numeroLoja=${v}.`);
+              return fullNfe;
+            }
+          }
+        }
+      } catch (e) {
+        logger.warn(`[ShippingAPI] Busca direta de NF-e por numeroLoja=${v} falhou:`, e.message);
+      }
+
+      // 2.2 Fallback: Busca em pedidos de vendas no Bling por numeroLoja
       try {
         const orderSearch = await axios.get(`https://api.bling.com.br/Api/v3/pedidos/vendas?numeroLoja=${encodeURIComponent(v)}`, { headers, timeout: 8000 });
         const orders = orderSearch.data?.data;
@@ -1414,6 +1432,24 @@ router.get('/etiqueta-unificada/:pedidoId', async (req, res) => {
   <meta charset="UTF-8">
   <title>Etiqueta Unificada Avante Lingerie - ${numPedido}</title>
   <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background: #141416;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #000;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 18px 12px 60px 12px;
+      margin: 0;
+      min-height: 100vh;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
     @page {
       size: 100mm 150mm;
       margin: 0;
@@ -1424,27 +1460,80 @@ router.get('/etiqueta-unificada/:pedidoId', async (req, res) => {
         height: 150mm !important;
         margin: 0 !important;
         padding: 0 !important;
+        background: #fff !important;
       }
       .no-print { display: none !important; }
+      .sheet-wrapper {
+        box-shadow: none !important;
+        margin: 0 !important;
+        border: none !important;
+        width: 100mm !important;
+        height: 150mm !important;
+        padding: 3mm 3.5mm !important;
+      }
     }
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
+    .controls-panel {
+      max-width: 580px;
+      width: 100%;
+      margin-bottom: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
     }
-    body {
+    .btn-gainscha-print {
+      background: linear-gradient(135deg, #c59b5f, #dfb775);
+      color: #000;
+      font-weight: 900;
+      font-size: 14px;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 4px 18px rgba(197, 155, 95, 0.4);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: all 0.2s ease;
+    }
+    .btn-gainscha-print:hover {
+      background: linear-gradient(135deg, #dfb775, #f3cb8b);
+      transform: translateY(-1px);
+    }
+    .btn-melhor-envio-pdf {
+      background: #27272a;
+      color: #dfb775;
+      border: 1px solid #c59b5f;
+      font-weight: bold;
+      font-size: 12px;
+      padding: 11px 18px;
+      border-radius: 8px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+    .config-guide-box {
+      background: #18181b;
+      border: 1px solid rgba(197, 155, 95, 0.4);
+      border-radius: 8px;
+      padding: 12px 16px;
+      color: #e4e4e7;
+      font-size: 11.5px;
+      line-height: 1.6;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.5);
+    }
+    .sheet-wrapper {
       width: 100mm;
       height: 150mm;
-      max-width: 100mm;
-      max-height: 150mm;
-      font-family: Arial, Helvetica, sans-serif;
-      color: #000;
       background: #fff;
       padding: 3mm 3.5mm;
-      font-size: 7.5pt;
-      line-height: 1.15;
-      -webkit-print-color-adjust: exact;
-      print-color-adjust: exact;
+      box-shadow: 0 16px 40px rgba(0,0,0,0.7);
+      border-radius: 3px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
       overflow: hidden;
     }
     .sheet {
@@ -1603,16 +1692,27 @@ router.get('/etiqueta-unificada/:pedidoId', async (req, res) => {
   </style>
 </head>
 <body>
-  <div class="instruction-card no-print">
-    <div style="font-size: 11px; line-height: 1.4;">
-      ⚙️ <strong>Impressão Gainscha GS-2406T:</strong> Papel: <strong>100x150mm (4x6")</strong> &bull; Margens: <strong>Nenhuma</strong> &bull; Escala: <strong>100%</strong>
+  <div class="controls-panel no-print">
+    <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; align-items: center;">
+      <button class="btn-gainscha-print" onclick="window.focus(); window.print();">
+        🖨️ IMPRIMIR NA GAINSCHA GS-2406T (100x150mm)
+      </button>
+      ${pedido.etiqueta_url ? `
+      <a href="${pedido.etiqueta_url}" target="_blank" class="btn-melhor-envio-pdf">
+        📄 Abrir PDF Oficial (Melhor Envio)
+      </a>` : ''}
     </div>
-    <div style="margin-top: 6px;">
-      ${pedido.etiqueta_url ? `<a href="${pedido.etiqueta_url}" target="_blank" class="btn-pdf-link">📄 Abrir PDF Oficial (Melhor Envio)</a>` : ''}
-      <button class="btn-pdf-link" style="background: #c59b5f; color: #000; cursor: pointer;" onclick="window.focus(); window.print();">🖨️ Imprimir Térmica Agora</button>
+
+    <div class="config-guide-box">
+      <strong style="color: #dfb775; display: block; margin-bottom: 3px; font-size: 12px;">⚙️ Configurações Recomendadas no Diálogo de Impressão:</strong>
+      • <strong>Destino/Impressora:</strong> Selecione <em>Gainscha GS-2406T</em><br>
+      • <strong>Tamanho do Papel:</strong> <em>100x150mm</em> (ou <em>4x6 polegadas</em>)<br>
+      • <strong>Margens:</strong> <em>Nenhuma</em> (ou <em>Padrão</em>)<br>
+      • <strong>Escala:</strong> <em>Ajustar à área de impressão</em> (ou <em>100%</em>)
     </div>
   </div>
 
+  <div class="sheet-wrapper">
   <div class="sheet">
     
     <!-- METADE SUPERIOR (0 a 70mm): DANFE SIMPLIFICADO -->
@@ -1719,22 +1819,20 @@ router.get('/etiqueta-unificada/:pedidoId', async (req, res) => {
         </div>
       </div>
     </div>
-
   </div>
-
-  <button class="print-bar no-print" onclick="window.focus(); window.print();">🖨️ Imprimir Térmica (100x150)</button>
+  </div>
 
   ${autoprint ? `
   <script>
     window.addEventListener('load', function() {
-      window.focus();
       setTimeout(function() {
         try {
+          window.focus();
           window.print();
         } catch (e) {
-          console.warn('Falha no acionamento automático de impressão:', e);
+          console.warn('Acione a impressão manualmente pelo botão principal.', e);
         }
-      }, 450);
+      }, 350);
     });
   </script>` : ''}
 </body>
