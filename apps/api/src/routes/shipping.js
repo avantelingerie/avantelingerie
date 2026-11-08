@@ -1403,11 +1403,15 @@ router.get('/etiqueta-unificada/:pedidoId', async (req, res) => {
 
     // Se a chave não estava salva, tenta buscar no Bling
     if (!chaveNfe || chaveNfe.length < 44) {
-      const nfeBling = await consultarNfeBlingPorPedido(pedido.numero_pedido, pedido);
-      if (nfeBling?.chaveAcesso) {
-        chaveNfe = nfeBling.chaveAcesso.replace(/\D/g, '');
-        if (nfeBling.numero) numeroNfe = nfeBling.numero;
-        if (nfeBling.serie) serieNfe = String(nfeBling.serie);
+      try {
+        const nfeBling = await consultarNfeBlingPorPedido(pedido.numero_pedido, pedido);
+        if (nfeBling?.chaveAcesso) {
+          chaveNfe = nfeBling.chaveAcesso.replace(/\D/g, '');
+          if (nfeBling.numero) numeroNfe = nfeBling.numero;
+          if (nfeBling.serie) serieNfe = String(nfeBling.serie);
+        }
+      } catch (errBling) {
+        logger.warn('[ShippingAPI] Falha ao consultar NF-e no Bling:', errBling.message);
       }
     }
 
@@ -1450,7 +1454,10 @@ router.get('/etiqueta-unificada/:pedidoId', async (req, res) => {
       if (p.length > 1) {
         const sub = p[1].split(' - ');
         destNumber = sub[0] || 'S/N';
-        destDistrict = p[2] || sub[1] || '';
+        if (sub.length > 1) {
+          destComp = sub.slice(1).join(' - ');
+        }
+        destDistrict = p[2] || '';
       }
     }
 
@@ -1463,14 +1470,17 @@ router.get('/etiqueta-unificada/:pedidoId', async (req, res) => {
     if (!cleanTracking) {
       cleanTracking = 'ME262FS47I1BR';
     }
-    const nfeBarcodeSvg = generateCode128CSvg(chaveNfe);
-    const trackingBarcodeSvg = generateCode128BSvg(cleanTracking);
+    const sefazBarcodeSvg = generateCode128CSvg(chaveNfe);
+    const carrierBarcodeSvg = generateCode128BSvg(cleanTracking);
+    const nfeBarcodeSvg = sefazBarcodeSvg;
+    const trackingBarcodeSvg = carrierBarcodeSvg;
 
     // 5. Gera QR Code de Alta Resolução apontando para o rastreio da loja (Indestrutível na Impressão Térmica)
     const trackingUrl = `https://avantelingerie.com.br/rastreio?codigo=${encodeURIComponent(cleanTracking)}`;
     let qrDataUrl = '';
     try {
-      const QRCode = (await import('qrcode')).default;
+      const QRCodeModule = await import('qrcode');
+      const QRCode = QRCodeModule.default || QRCodeModule;
       qrDataUrl = await QRCode.toDataURL(trackingUrl, {
         margin: 1,
         width: 320,
@@ -2106,7 +2116,7 @@ router.get('/etiqueta-unificada/:pedidoId', async (req, res) => {
 
   } catch (error) {
     logger.error('[ShippingAPI] Erro ao renderizar etiqueta unificada térmica:', error);
-    res.status(500).send('<h2>Erro ao gerar etiqueta unificada.</h2>');
+    res.status(500).send(`<h2>Erro ao gerar etiqueta unificada: ${error.message}</h2>`);
   }
 });
 
