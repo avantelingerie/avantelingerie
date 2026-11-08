@@ -199,10 +199,10 @@ export default function PedidoDetalhePage() {
   const getWhatsAppMessageText = () => {
     const firstName = (pedido?.cliente_nome || 'Cliente').trim().split(' ')[0];
     const numPedido = pedido?.numero_pedido || pedido?.id?.slice(-6) || 'PED';
-    const tracking = codigoRastreioInput || pedido?.rastreamento || pedido?.codigo_rastreio || '888031017960740';
-    const carrier = transportadoraInput || 'J&T Express';
-    const dest = pedido?.cidade && pedido?.estado ? `${pedido.cidade} / ${pedido.estado}` : 'Contagem / MG';
-    const url = `https://avantelingerie.com.br/rastreio?codigo=${encodeURIComponent(tracking)}`;
+    const tracking = codigoRastreioInput || pedido?.rastreamento || pedido?.codigo_rastreio || '';
+    const carrier = transportadoraInput || pedido?.transportadora || 'Loggi';
+    const dest = pedido?.cidade && pedido?.estado ? `${pedido.cidade} / ${pedido.estado}` : '';
+    const url = tracking ? `https://avantelingerie.com.br/rastreio?codigo=${encodeURIComponent(tracking)}` : 'https://avantelingerie.com.br/rastreio';
 
     return [
       `Olá, ${firstName}! Tudo bem? Aqui é a Lia, consultora da Avante Lingerie, direto da nossa fábrica em Nova Friburgo/RJ! 🌸✨`,
@@ -490,7 +490,7 @@ export default function PedidoDetalhePage() {
                   <Input 
                     value={codigoRastreioInput}
                     onChange={(e) => setCodigoRastreioInput(e.target.value.toUpperCase())}
-                    placeholder="Ex: 888031017960740"
+                    placeholder="Ex: LGI-ME262FS47I1BR"
                     className="font-mono font-medium tracking-wide uppercase pr-10"
                   />
                   {codigoRastreioInput && (

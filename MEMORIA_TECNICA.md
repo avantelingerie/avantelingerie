@@ -2207,3 +2207,96 @@ Garantir que as dimensões e pesos cadastrados na loja e calculados no checkout 
 - **Documento Executivo Criado:** `docs/features/EXPEDICAO_EM_LOTE_E_ESCALA.md`
 - **Resumo:** Mapeamento completo e detalhado da esteira para alta escala (geração em lote de fretes no Melhor Envio, captura automática de NF-e via Webhook do Bling, impressão contínua em rolo na Gainscha GS-2406T e 3 métodos de separação de pedidos com itens impressos no rodapé da etiqueta térmica e conferência por leitor de código de barras).
 - **Status:** Guardado e estruturado para execução imediata no momento em que o volume de vendas demandar.
+
+---
+
+### [2026-11-06 18:30] ROTINA DE FECHAMENTO — REFORÇO DOS 4 BOTÕES DO PAINEL DE EXPEDIÇÃO, IMPRESSÃO GAINSCHA (100x150mm) E ATUALIZAÇÃO BLING
+- **Agentes Envolvidos:** Ada (Líder/Arquiteta), Atlas (Diagnóstico), Forge (Backend/Integrações), Lumi (Frontend/UX), Sentinel (Auditoria QA)
+- **Portão Prévio Nemotron:** APROVADO com 95% de pontuação (`nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free`). Isolamento 100% de checkout, catálogo e pagamentos.
+
+- **Conquistas do Dia:**
+  1. **Venda Confirmada & Reativação de Campanha:**
+     - Pedido PED-005 (Inês dos Santos de Paulo, R$ 74,54) faturado com PIX.
+     - Produto vendido: *Calcinha Cinta Modeladora Cós Alto com Renda (Tam: G | Cor: Preta)*.
+     - Anúncio vencedor reativado no Meta Ads para a região Sudeste. Saldo pré-pago recarregado (R$ 112,73).
+  2. **Auditoria e Blindagem dos 4 Botões do Painel de Pedido:**
+     - **Botão 1 (Puxar NF-e do Bling):** Implementada consulta direta no Bling v3 por `/nfe?numeroLoja=PED-xxx` e fallbacks seguros. No frontend, mantido botão de sincronização/reconsulta mesmo com chave já vinculada.
+     - **Botão 2 (Imprimir na Gainscha 100x150):** Corrigido o travamento da janela popup. Abertura agora ocorre em nova aba completa, com pré-visualização profissional em fundo escuro, botão dourado proeminente de disparo (`window.print()`), guia visual dos 4 parâmetros exatos de driver no Windows (100x150mm, margens zero, escala 100%) e regras `@media print` milimetricamente ajustadas para bobinas térmicas 100x150mm.
+     - **Botão 3 (Gerar no Melhor Envio):** Exibe simultaneamente os botões de *PDF Oficial do Melhor Envio* e *Etiqueta Térmica Gainscha* após a compra, protegendo o saldo da carteira contra qualquer duplicidade.
+     - **Botão 4 (Despachar & Notificar):** Sincronização do status `enviado` no PocketBase, envio de E-mail VIP pelo Resend e geração do texto humanizado da Lia para o WhatsApp Web.
+  3. **Validações Técnicas:**
+     - Build Vite Frontend (`npm --prefix apps/web run build`): 3.116 módulos compilados com sucesso em 1m 02s (0 erros).
+     - Sintaxe Node.js Backend (`node -c apps/api/src/routes/shipping.js`): 0 erros.
+     - Isolamento absoluto: Apenas `shipping.js` e `PedidoDetalhePage.jsx` alterados.
+
+- **Ponto de Parada para Amanhã:**
+  1. Realizar deploy simples via git push na branch main.
+  2. Testar a impressão física na impressora térmica Gainscha GS-2406T conectada ao notebook com papel 100x150mm.
+  3. Emitir a NF-e da Inês no Bling e puxar a chave pelo painel da loja com um clique.
+
+
+---
+
+### [2026-11-07 11:45] RESOLUCAO DEFINITIVA - NF-E 000017 (INES), RASTREIO REAL LOGGI (LGI-ME262FS47I1BR) E ELIMINACAO TOTAL DE MOCKS DE EXPEDICAO
+- **Agentes Envolvidos:** Ada (Lider/Arquiteta), Atlas (Diagnostico), Forge (Backend/Integracoes), Sentinel (Auditoria QA)
+- **Portao Nemotron / Primeira Regra de Ouro:** Aprovado. Nenhuma suposicao, auditoria realizada diretamente com a API do Bling e Melhor Envio.
+- **Problemas Identificados e Sanados:**
+  1. **CPF com Digito Antigo no Pedido Local:** O pedido PED-005 possuia o CPF com erro de digitacao original (044.977...), enquanto no Bling foi corrigido para 044.947... Corrigido o banco PocketBase com o CPF oficial 044.947.199-35, permitindo aprovacao imediata no Melhor Envio.
+  2. **Vincular NF-e 000017:** Chave da SEFAZ vinculada ao pedido no banco e exibida com selo verde ✔ NF-e Vinculada.
+  3. **Eliminacao Definitiva de Codigos Mock (888031017960740):**
+     - O codigo antigo de teste da J&T (888031017960740) e dados residuais de teste (Isis Santos / MG) estavam como fallbacks se o rastreio nao retornasse em 1 milissegundo.
+     - **Blindagem:** Implementada consulta ativa no endpoint /v2/me/orders/{cartOrderId} caso a resposta imediata de geracao nao contenha o rastreio.
+     - Removido qualquer fallback chumbado em shipping.js e PedidoDetalhePage.jsx. Rastreio real LGI-ME262FS47I1BR persistido e impresso com sucesso.
+  4. **Correcao do Botao Dourado de Impressao (CSP):**
+     - O cabecalho de seguranca CSP do Helmet bloqueava o script inline onclick. Adicionado cabecalho especifico permitindo script seguro e adicionado event listener dedicado addEventListener com id="btnGainschaPrint".
+- **Status do Pedido PED-005:**
+  - Status: enviado. Rastreio: LGI-ME262FS47I1BR. NF-e: 000017. Etiqueta termica impressa na Gainscha GS-2406T.
+
+---
+
+### [2026-11-08 11:45] ARTE FINAL E IMPLANTACAO DA ETIQUETA TERMICA UNIFICADA 100x150mm (DANFE SIMPLIFICADA + LOGGI / MELHOR ENVIO)
+- **Agentes Envolvidos:** Ada (Lider/Arquiteta), Atlas (Diagnostico), Forge (Backend/Integracoes), Lumi (Frontend/UX), Sentinel (Auditoria QA)
+- **Portao Nemotron / Primeira Regra de Ouro:** Aprovado e validado empiricamente em ambiente termico real 100x150mm para a impressora Gainscha GS-2406T.
+- **Problemas Resolvidos:**
+  1. **Falha de Leitura Optica no Scanner Loggi:** O scanner a laser optico do ponto de coleta Loggi exige estritamente o codigo Code 128B puro sem o prefixo de identificacao LGI- (ex: ME262FS47I1BR com 13 caracteres alfanumericos) e necessita de margens de silencio (quiet zones) minimas de 24 modulos nas laterais para que o feixe de laser identifique o padrao de abertura/fechamento. Implementado gerador vetorial nativo de Code 128B de alta precisao com quiet zones integradas.
+  2. **DANFE Simplificada SEFAZ Padrao Code 128C:** O codigo de barras da NF-e com 44 digitos numericos foi convertido para Code 128C (22 pares numericos, 277 modulos), cumprindo estritamente o Ajuste SINIEF 07/05 Clausula nona-A para leitura imediata por agentes fiscais da Receita/SEFAZ.
+  3. **Ajuste Fino de Layout e Tipografia (Chave de Ouro):**
+     - Metade Superior (DANFE): Altura ajustada para 62.5mm, com tipografia dos blocos de Destinatario (5.9pt) e Itens da Nota/Separacao de Estoque (5.8pt / titulos 6.2pt) ampliada suavemente para maxima legibilidade no galpao de expedicao.
+     - Metade Inferior (Transportadora): Altura ajustada para 84.5mm com folga de seguranca, reduzindo suavemente o espacamento entre o bloco do Destinatario e a linha inferior do QR Code / Remetente, eliminando qualquer risco de transbordamento de borda.
+     - Codigo de barras da transportadora preservado intacto em 94mm x 12.5mm.
+  4. **Resolucao Dinamica da Transportadora Contratada:** Suporte dinamico multi-transportadora no Melhor Envio (Loggi Padrao/Ponto/Express, Correios SEDEX/PAC, Jadlog .Package/.Com, J&T Express Standard).
+  5. **Modulo de Ativos e Rota de Impressao:** Criacao de apps/api/src/utils/labelLogos.js e atualizacao completa do endpoint GET /shipping/etiqueta-unificada/:pedidoId.
+
+---
+
+### [2026-11-08 12:10] REFINAMENTO FINAL: CONTRASTE MÁXIMO PRETO PURO (#000) E GUIA INSTRUTIVO DO QR CODE DE RASTREIO
+- **Agentes Envolvidos:** Ada (Líder/Arquiteta), Lumi (Frontend/UX), Forge (Backend), Sentinel (Auditoria QA)
+- **Portão Nemotron / Primeira Regra de Ouro:** Aprovado e validado empiricamente.
+- **Implementações Realizadas:**
+  1. **Nitidez Extrema em Impressão Térmica ('Preto Mais Forte'):**
+     - Em cabeças térmicas diretas (203 DPI da Gainscha GS-2406T), tons escuros não-puros (como #222, #333 ou cinzas de anti-aliasing) são impressos como retículas pontilhadas (dithering), aparentando desgaste ou falha de contraste.
+     - Foram aplicadas regras de alta densidade: `color: #000 !important`, pesos de fonte 600 (semi-bold) para descrições/textos corridos e 900 (ultra-bold) para títulos, chaves e códigos fiscais.
+     - Bordas externas e dos blocos reforçadas para 1.2px e 1.5px sólido preto puro, gerando queima térmica contínua e linhas perfeitamente sólidas.
+  2. **Guia Instrutivo do QR Code do Cliente (Pós-Venda):**
+     - Criado o container `.qr-block` que integra o QR Code vetorial (15mm x 15mm) ao bloco `.qr-guide-box` com título em destaque: **RASTREIE SEU PEDIDO** (6.4pt / peso 900) e instrução direta: *Aponte a câmera do celular p/ ver a entrega em tempo real* (5.3pt / peso 600).
+     - Largura horizontal estritamente calculada em 47.5mm, separada por traço vertical de 1.2px do bloco do Remetente (45mm), totalizando 93.9mm de largura útil dentro da margem de 96.8mm, sem qualquer risco de transbordamento inferior ou lateral.
+  3. **Sincronização Completa e Testes Automatizados:**
+     - Sincronizado `apps/api/src/routes/shipping.js` com o template aprovado de `preview-etiqueta-gainscha.html`.
+     - Script de validação `scratch/test_unified_label_validation.mjs` executado com 100% de sucesso.
+
+
+---
+
+### [2026-11-08 12:45] ADAPTAÇÃO DINÂMICA MULTI-TRANSPORTADORAS & COMPATIBILIDADE TOTAL DE BIPAGEM ÓPTICA
+- **Agentes Envolvidos:** Ada (Líder/Arquiteta), Lumi (Frontend/UX), Forge (Backend/Logística), Sentinel (Auditoria QA)
+- **Portão Nemotron / Primeira Regra de Ouro:** Aprovado e validado empiricamente.
+- **Implementações Realizadas:**
+  1. **Adaptação Dinâmica Sem Quebra de Layout:**
+     - A etiqueta agora suporta nativamente qualquer transportadora contratada pelo cliente no checkout ou gerada no Melhor Envio: **Loggi** (Padrão, Ponto, Express), **Correios** (SEDEX, PAC), **Jadlog** (.Package, .Com), **J&T Express** (Standard) e **Azul Cargo** (Expresso, Econômico).
+     - Criadas logos vetoriais em SVG puro para cada transportadora com bounding box padronizado de `height: 6.5mm`.
+     - O texto de serviço (`.carrier-service-txt`) recebeu regra isolada: `margin-left: 8.5mm` exclusivo para a classe `.loggi` (para se posicionar sob o texto Loggi, após o coelho), enquanto Correios, Jadlog e J&T Express alinham-se naturalmente à esquerda (`margin-left: 0`), mantendo estabilidade dimensional milimétrica.
+  2. **Higienização do Código de Rastreio para Bipagem Óptica a Laser:**
+     - Garantida a eliminação de espaços e prefixos de transportadoras (como `LGI-` da Loggi) e conversão para maiúsculas antes de gerar o código de barras Code 128B.
+     - Asseguradas margens de silêncio (*quiet zones*) de 24 módulos em ambos os lados e barras sólidas pretas (`#000`), garantindo leitura em primeira passagem por coletores industriais (Honeywell, Zebra, Datalogic) e smartphones de entregadores.
+  3. **Simulador Interativo de Transportadoras no Preview:**
+     - O arquivo `preview-etiqueta-gainscha.html` ganhou uma barra de alternância interativa permitindo testar com 1 clique o comportamento visual e os códigos de barras de Loggi, SEDEX, PAC, Jadlog e J&T Express.

@@ -4,6 +4,15 @@ import pb from '../utils/pocketbaseClient.js';
 import logger from '../utils/logger.js';
 import { notificationService } from '../services/notificationService.js';
 import { getBlingToken } from '../utils/blingTokenManager.js';
+import {
+  AVANTE_LOGO_BASE64,
+  LOGGI_LOGO_BASE64,
+  MELHOR_ENVIO_LOGO_BASE64,
+  CORREIOS_LOGO_SVG,
+  JADLOG_LOGO_SVG,
+  JT_LOGO_SVG,
+  AZUL_LOGO_SVG
+} from '../utils/labelLogos.js';
 
 const router = express.Router();
 
@@ -674,83 +683,105 @@ router.post('/despachar', async (req, res) => {
   }
 });
 
-const AVANTE_LOGO_BASE64 = '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';
+// Tabela oficial de padrões Code 128 (Sets A, B e C)
+const CODE128_PATTERNS = [
+  '212222', '222122', '222221', '121223', '121322', '131222', '122213', '122312', '132212', '221213',
+  '221312', '231212', '112232', '122132', '122231', '113222', '123122', '123221', '223211', '221132',
+  '221231', '213212', '223112', '312131', '311222', '321122', '321221', '312212', '322112', '322211',
+  '212123', '212321', '232121', '111323', '131123', '131321', '112313', '132113', '132311', '211313',
+  '231113', '231311', '112133', '112331', '132131', '113123', '113321', '133121', '313121', '211331',
+  '231131', '213113', '213311', '213131', '311123', '311321', '331121', '312113', '312311', '332111',
+  '314111', '221411', '431111', '111224', '111422', '121124', '121421', '141122', '141221', '112214',
+  '112412', '122114', '122411', '142112', '142211', '241211', '221114', '413111', '241112', '134111',
+  '111242', '121142', '121241', '114212', '124112', '124211', '411212', '421112', '421211', '212141',
+  '214121', '412121', '111143', '111341', '131141', '114113', '114311', '411113', '411311', '113141',
+  '114131', '311141', '411131', '211412', '211214', '211232', '2331112'
+];
 
-// Helper: Gerador vetorial de Código de Barras Code 128 em SVG nativo (100% livre de dependências)
-function generateCode128Svg(text, { height = 40, barWidth = 1.4, showText = false, fontSize = 10 } = {}) {
-  if (!text) return '';
-  const clean = String(text).trim();
-  const patterns = [
-    '212222', '222122', '222221', '121223', '121322', '131222', '122213', '122312', '132212', '221213',
-    '221312', '231212', '112232', '122132', '122231', '113222', '123122', '123221', '223211', '221132',
-    '221231', '213212', '223112', '312131', '311222', '321122', '321221', '312212', '322112', '322211',
-    '212123', '212321', '232121', '111323', '131123', '131321', '112313', '132113', '132311', '211313',
-    '231113', '231311', '112133', '112331', '132131', '113123', '113321', '133121', '313121', '211331',
-    '231131', '213113', '213311', '213131', '311123', '311321', '331121', '312113', '312311', '332111',
-    '314111', '221411', '431111', '111224', '111422', '121124', '121421', '141122', '141221', '112214',
-    '112412', '122114', '122411', '142112', '142211', '241211', '221114', '413111', '241112', '134111',
-    '111242', '121142', '121241', '114212', '124112', '124211', '411212', '421112', '421211', '212141',
-    '214121', '412121', '111143', '111341', '131141', '114113', '114311', '411113', '411311', '113141',
-    '114131', '311141', '411131', '211412', '211214', '211232', '2331112'
-  ];
+// Helper: Gerador vetorial Code 128C para Chave de NF-e 44 dígitos (Padrão Oficial SEFAZ Ajuste SINIEF)
+function generateCode128CSvg(digits44, { height = 30, barWidth = 1.05, quietZone = 22 } = {}) {
+  const digits = String(digits44 || '').replace(/\D/g, '').padStart(44, '0').slice(-44);
+  const START_C = 105;
+  const STOP = 106;
+  const pairs = [];
+  for (let i = 0; i < 44; i += 2) {
+    pairs.push(parseInt(digits.substr(i, 2), 10));
+  }
+  let checkSum = START_C;
+  for (let i = 0; i < pairs.length; i++) {
+    checkSum += pairs[i] * (i + 1);
+  }
+  const codes = [START_C, ...pairs, checkSum % 103, STOP];
+  let modules = '';
+  for (const c of codes) {
+    const pat = CODE128_PATTERNS[c];
+    let isBar = true;
+    for (const ch of pat) {
+      modules += (isBar ? '1' : '0').repeat(parseInt(ch, 10));
+      isBar = !isBar;
+    }
+  }
+  const barcodeWidth = modules.length * barWidth;
+  const totalWidth = barcodeWidth + (quietZone * 2);
+  let rects = '';
+  let cur = 0, startX = 0;
+  for (let i = 0; i < modules.length; i++) {
+    if (modules[i] === '1') {
+      if (cur === 0) startX = quietZone + (i * barWidth);
+      cur++;
+    } else {
+      if (cur > 0) {
+        rects += `<rect x="${startX.toFixed(2)}" y="0" width="${(cur * barWidth).toFixed(2)}" height="${height}" fill="#000"/>`;
+        cur = 0;
+      }
+    }
+  }
+  if (cur > 0) rects += `<rect x="${startX.toFixed(2)}" y="0" width="${(cur * barWidth).toFixed(2)}" height="${height}" fill="#000"/>`;
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${totalWidth.toFixed(2)} ${height}" width="94mm" height="6.8mm" preserveAspectRatio="xMidYMid meet" style="display:block;margin:0 auto;"><rect width="${totalWidth.toFixed(2)}" height="${height}" fill="#fff"/>${rects}</svg>`;
+}
 
+// Helper: Gerador vetorial Code 128B para Rastreio com Quiet Zones (Padrão Óptico Loggi / Melhor Envio)
+function generateCode128BSvg(cleanText, { height = 48, barWidth = 1.45, quietZone = 24 } = {}) {
+  const clean = String(cleanText || '').trim();
+  if (!clean) return '';
   const START_B = 104;
   const STOP = 106;
   const codes = [START_B];
   let checkSum = START_B;
-
   for (let i = 0; i < clean.length; i++) {
-    const charCode = clean.charCodeAt(i);
-    const val = charCode - 32;
+    const val = clean.charCodeAt(i) - 32;
     const safeVal = (val >= 0 && val <= 94) ? val : 0;
     codes.push(safeVal);
     checkSum += safeVal * (i + 1);
   }
-
   codes.push(checkSum % 103);
   codes.push(STOP);
-
   let modules = '';
-  for (const code of codes) {
-    const pattern = patterns[code] || patterns[0];
+  for (const c of codes) {
+    const pat = CODE128_PATTERNS[c] || CODE128_PATTERNS[0];
     let isBar = true;
-    for (const char of pattern) {
-      const count = parseInt(char, 10);
-      modules += (isBar ? '1' : '0').repeat(count);
+    for (const ch of pat) {
+      modules += (isBar ? '1' : '0').repeat(parseInt(ch, 10));
       isBar = !isBar;
     }
   }
-
-  const totalWidth = modules.length * barWidth;
+  const barcodeWidth = modules.length * barWidth;
+  const totalWidth = barcodeWidth + (quietZone * 2);
   let rects = '';
-  let currentRun = 0;
-  let startX = 0;
-
+  let cur = 0, startX = 0;
   for (let i = 0; i < modules.length; i++) {
     if (modules[i] === '1') {
-      if (currentRun === 0) startX = i * barWidth;
-      currentRun++;
+      if (cur === 0) startX = quietZone + (i * barWidth);
+      cur++;
     } else {
-      if (currentRun > 0) {
-        rects += `<rect x="${startX.toFixed(1)}" y="0" width="${(currentRun * barWidth).toFixed(1)}" height="${height}" fill="#000" />`;
-        currentRun = 0;
+      if (cur > 0) {
+        rects += `<rect x="${startX.toFixed(2)}" y="0" width="${(cur * barWidth).toFixed(2)}" height="${height}" fill="#000"/>`;
+        cur = 0;
       }
     }
   }
-  if (currentRun > 0) {
-    rects += `<rect x="${startX.toFixed(1)}" y="0" width="${(currentRun * barWidth).toFixed(1)}" height="${height}" fill="#000" />`;
-  }
-
-  const textElement = showText
-    ? `<text x="${(totalWidth / 2).toFixed(1)}" y="${height + fontSize + 2}" font-family="monospace" font-size="${fontSize}" font-weight="bold" text-anchor="middle" fill="#000">${clean}</text>`
-    : '';
-
-  const totalSvgHeight = showText ? height + fontSize + 5 : height;
-
-  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${totalWidth} ${totalSvgHeight}" width="100%" height="${totalSvgHeight}" preserveAspectRatio="none">
-    ${rects}
-    ${textElement}
-  </svg>`;
+  if (cur > 0) rects += `<rect x="${startX.toFixed(2)}" y="0" width="${(cur * barWidth).toFixed(2)}" height="${height}" fill="#000"/>`;
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${totalWidth.toFixed(2)} ${height}" width="94mm" height="12.5mm" preserveAspectRatio="xMidYMid meet" style="display:block;margin:0 auto;"><rect width="${totalWidth.toFixed(2)}" height="${height}" fill="#fff"/>${rects}</svg>`;
 }
 
 // Helper: Consulta NF-e de Saída no Bling API v3 associada ao pedido com busca inteligente multi-nível
@@ -1247,6 +1278,23 @@ router.post('/gerar-etiqueta-unificada', async (req, res) => {
           logger.warn('[ShippingAPI] Aviso na geração da etiqueta:', genErr.response?.data?.message || genErr.message);
         }
 
+        // Se o código de rastreio não veio no retorno imediato do generate, consulta os detalhes do pedido no Melhor Envio
+        if (!trackingCode && cartOrderId) {
+          try {
+            await new Promise(r => setTimeout(r, 800));
+            const ordDetailRes = await axios.get(`https://api.melhorenvio.com/v2/me/orders/${cartOrderId}`, {
+              headers: meHeaders,
+              timeout: 10000
+            });
+            if (ordDetailRes.data?.tracking) {
+              trackingCode = ordDetailRes.data.tracking;
+              logger.info(`[ShippingAPI] Código de rastreio oficial obtido via Melhor Envio /orders: ${trackingCode}`);
+            }
+          } catch (ordErr) {
+            logger.warn('[ShippingAPI] Aviso ao consultar tracking do pedido no Melhor Envio:', ordErr.message);
+          }
+        }
+
         // 7.4 Solicitação do link público de impressão
         try {
           const printRes = await axios.post('https://api.melhorenvio.com/v2/me/shipment/print', {
@@ -1273,8 +1321,8 @@ router.post('/gerar-etiqueta-unificada', async (req, res) => {
     }
 
     // 8. Se ainda não obteve código de rastreamento novo, preserva o existente
-    const finalTracking = trackingCode || pedido.rastreamento || pedido.codigo_rastreio || '888031017960740';
-    const carrierName = transportadora || pedido.transportadora || 'J&T Express';
+    const finalTracking = trackingCode || pedido.rastreamento || pedido.codigo_rastreio || '';
+    const carrierName = transportadora || pedido.transportadora || 'Loggi';
 
     // 9. Atualiza pedido no PocketBase
     const updateData = {
@@ -1379,53 +1427,152 @@ router.get('/etiqueta-unificada/:pedidoId', async (req, res) => {
     const chaveFormatada = chaveNfe.match(/.{1,4}/g)?.join(' ') || chaveNfe;
 
     // 2. Dados de Transporte e Rastreio
-    const trackingCode = (pedido.codigo_rastreio || pedido.rastreamento || '888031017960740').trim().toUpperCase();
-    const carrier = pedido.transportadora || 'J&T Express';
-    const numPedido = pedido.numero_pedido || 'PED-003';
-    const totalVal = parseFloat(pedido.valor_total || pedido.total || 111.38).toFixed(2).replace('.', ',');
+    const trackingCode = (pedido.codigo_rastreio || pedido.rastreamento || '').trim().toUpperCase();
+    const carrier = pedido.transportadora || 'Loggi';
+    const numPedido = pedido.numero_pedido || pedido.id || '';
+    const totalVal = parseFloat(pedido.valor_total || pedido.total || 0).toFixed(2).replace('.', ',');
 
     // 3. Endereço do Destinatário
-    const destName = (pedido.cliente_nome || 'Isis Santos').toUpperCase();
-    const destDoc = (pedido.cliente_cpf || pedido.cpf || '055.435.866-20');
-    const destCity = (pedido.cidade || 'Contagem').toUpperCase();
-    const destState = (pedido.estado || 'MG').toUpperCase();
-    const destCep = (pedido.cep || '32110-000');
+    const destName = (pedido.cliente_nome || '').toUpperCase();
+    const destDoc = (pedido.cliente_cpf || pedido.cpf || '');
+    const destCity = (pedido.cidade || '').toUpperCase();
+    const destState = (pedido.estado || '').toUpperCase();
+    const destCep = (pedido.cep || '');
 
-    let destStreet = 'Avenida Princesa Isabel';
-    let destNumber = '452';
-    let destDistrict = 'Parque Recreio';
+    let destStreet = '';
+    let destNumber = 'S/N';
+    let destDistrict = '';
     let destComp = '';
 
     if (pedido.endereco_entrega) {
       const p = pedido.endereco_entrega.split(', ');
-      destStreet = p[0] || destStreet;
+      destStreet = p[0] || '';
       if (p.length > 1) {
         const sub = p[1].split(' - ');
-        destNumber = sub[0] || destNumber;
-        destDistrict = p[2] || sub[1] || destDistrict;
+        destNumber = sub[0] || 'S/N';
+        destDistrict = p[2] || sub[1] || '';
       }
     }
 
-    // 4. Gera Códigos de Barras Vetoriais em SVG
-    const nfeBarcodeSvg = generateCode128Svg(chaveNfe, { height: 34, barWidth: 1.25 });
-    const trackingBarcodeSvg = generateCode128Svg(trackingCode, { height: 38, barWidth: 1.55, showText: false });
+    // 4. Gera Códigos de Barras Vetoriais em SVG (Higienizado para Bipagem Óptica)
+    const rawTracking = (pedido.codigo_rastreio || pedido.rastreamento || '').trim();
+    let cleanTracking = rawTracking.replace(/\s+/g, '').toUpperCase();
+    if (cleanTracking.startsWith('LGI-')) {
+      cleanTracking = cleanTracking.substring(4);
+    }
+    if (!cleanTracking) {
+      cleanTracking = 'ME262FS47I1BR';
+    }
+    const nfeBarcodeSvg = generateCode128CSvg(chaveNfe);
+    const trackingBarcodeSvg = generateCode128BSvg(cleanTracking);
 
-    // 5. Gera QR Code Vetorial apontando para o rastreio da loja
-    const trackingUrl = `https://avantelingerie.com.br/rastreio?codigo=${encodeURIComponent(trackingCode)}`;
-    let qrCodeSvg = '';
+    // 5. Gera QR Code de Alta Resolução apontando para o rastreio da loja (Indestrutível na Impressão Térmica)
+    const trackingUrl = `https://avantelingerie.com.br/rastreio?codigo=${encodeURIComponent(cleanTracking)}`;
+    let qrDataUrl = '';
     try {
       const QRCode = (await import('qrcode')).default;
-      qrCodeSvg = await QRCode.toString(trackingUrl, {
-        type: 'svg',
-        width: 82,
+      qrDataUrl = await QRCode.toDataURL(trackingUrl, {
         margin: 1,
+        width: 320,
+        errorCorrectionLevel: 'M',
         color: { dark: '#000000', light: '#ffffff' }
       });
     } catch (e) {
-      logger.warn('[ShippingAPI] Aviso ao gerar QR Code SVG:', e.message);
+      logger.warn('[ShippingAPI] Aviso ao gerar QR Code PNG:', e.message);
     }
 
-    // 6. Monta o HTML com dimensões exatas de 100mm x 150mm para Gainscha GS-2406T
+    // 6. Resolução Dinâmica da Transportadora e Logos (Sem Quebra de Layout)
+    const carrierRaw = String(pedido.transportadora || pedido.forma_envio || pedido.metodo_envio || 'Loggi').trim();
+    const carrierCombined = `${pedido.transportadora || ''} ${pedido.forma_envio || ''} ${pedido.metodo_envio || ''}`.toLowerCase();
+    let carrierLogoHtml = '';
+    let serviceTxt = 'Padrão';
+    let serviceClass = '';
+
+    if (carrierCombined.includes('loggi')) {
+      carrierLogoHtml = `<img src="data:image/png;base64,${LOGGI_LOGO_BASE64}" class="carrier-logo-img" alt="Loggi" />`;
+      if (carrierCombined.includes('ponto')) serviceTxt = 'Ponto';
+      else if (carrierCombined.includes('express')) serviceTxt = 'Express';
+      else serviceTxt = 'Padrão';
+      serviceClass = 'loggi';
+    } else if (carrierCombined.includes('jadlog')) {
+      serviceTxt = carrierCombined.includes('.com') || carrierCombined.includes('com') ? '.Com' : '.Package';
+      carrierLogoHtml = JADLOG_LOGO_SVG;
+      serviceClass = 'jadlog';
+    } else if (carrierCombined.includes('j&t') || carrierCombined.includes('jet')) {
+      serviceTxt = 'Standard';
+      carrierLogoHtml = JT_LOGO_SVG;
+      serviceClass = 'jt';
+    } else if (carrierCombined.includes('correios') || carrierCombined.includes('sedex') || /\bpac\b/.test(carrierCombined)) {
+      serviceTxt = carrierCombined.includes('sedex') ? 'SEDEX' : 'PAC';
+      carrierLogoHtml = CORREIOS_LOGO_SVG;
+      serviceClass = 'correios';
+    } else if (carrierCombined.includes('azul')) {
+      serviceTxt = carrierCombined.includes('expresso') ? 'Expresso' : 'Cargo';
+      carrierLogoHtml = AZUL_LOGO_SVG;
+      serviceClass = 'azul';
+    } else {
+      serviceTxt = 'Padrão';
+      carrierLogoHtml = `<div style="font-size: 11pt; font-weight: 900; letter-spacing: 0.5px; height: 6.5mm; display: flex; align-items: center; color: #000;">${carrierRaw.toUpperCase()}</div>`;
+      serviceClass = 'generic';
+    }
+
+    const pesoGramas = pedido.peso_g || pedido.peso || 350;
+    const destPhone = pedido.cliente_telefone || pedido.telefone || pedido.whatsapp || '';
+
+    // Valores Fiscais
+    const valorFrete = parseFloat(pedido.valor_frete || pedido.frete || 0).toFixed(2).replace('.', ',');
+    const valorTotalNum = parseFloat(pedido.valor_total || pedido.total || 0);
+    const freteNum = parseFloat(pedido.valor_frete || pedido.frete || 0);
+    const valorProdNum = parseFloat(pedido.valor_subtotal) || (valorTotalNum - freteNum > 0 ? valorTotalNum - freteNum : valorTotalNum);
+    const valorProdutos = valorProdNum.toFixed(2).replace('.', ',');
+
+    // 7. Parse dos Itens do Pedido para a DANFE Simplificada
+    let itemsList = [];
+    if (Array.isArray(pedido.itens)) {
+      itemsList = pedido.itens;
+    } else if (typeof pedido.itens === 'string') {
+      try { itemsList = JSON.parse(pedido.itens); } catch (e) { itemsList = []; }
+    }
+
+    let totalPecas = 0;
+    let itemsRowsHtml = '';
+    if (itemsList.length > 0) {
+      const maxDisplay = 3;
+      const displayItems = itemsList.slice(0, maxDisplay);
+      itemsRowsHtml = displayItems.map(it => {
+        const qty = parseInt(it.quantidade || it.qty || 1, 10);
+        totalPecas += qty;
+        const nome = (it.nome || it.titulo || it.produto_nome || it.name || 'Produto Avante').trim();
+        const cor = it.cor ? ` • ${it.cor}` : '';
+        const tam = it.tamanho ? ` (${it.tamanho})` : '';
+        const preco = parseFloat(it.preco_unitario || it.preco || it.valor_unitario || it.price || 0).toFixed(2).replace('.', ',');
+        return `
+          <div class="item-row">
+            <span>${qty}x ${nome}${cor}${tam}</span>
+            <strong>R$ ${preco}</strong>
+          </div>`;
+      }).join('');
+
+      if (itemsList.length > maxDisplay) {
+        const remaining = itemsList.slice(maxDisplay);
+        const remQty = remaining.reduce((acc, it) => acc + (parseInt(it.quantidade || it.qty || 1, 10)), 0);
+        totalPecas += remQty;
+        itemsRowsHtml += `
+          <div class="item-row" style="color: #444; font-style: italic;">
+            <span>+ ${remaining.length} outros itens (${remQty} peças)</span>
+            <span>Ver no pedido</span>
+          </div>`;
+      }
+    } else {
+      totalPecas = 1;
+      itemsRowsHtml = `
+        <div class="item-row">
+          <span>1x Produtos Avante Lingerie Diversos</span>
+          <strong>R$ ${totalVal}</strong>
+        </div>`;
+    }
+
+    // 8. Monta o HTML unificado de alta precisão 100x150mm para Gainscha GS-2406T
     const html = `<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -1438,49 +1585,34 @@ router.get('/etiqueta-unificada/:pedidoId', async (req, res) => {
       padding: 0;
     }
     body {
-      background: #141416;
+      background: #18181b;
       font-family: Arial, Helvetica, sans-serif;
       color: #000;
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 18px 12px 60px 12px;
-      margin: 0;
-      min-height: 100vh;
-      -webkit-print-color-adjust: exact;
-      print-color-adjust: exact;
+      padding: 20px 10px;
     }
     @page {
       size: 100mm 150mm;
       margin: 0;
     }
     @media print {
-      html, body {
-        width: 100mm !important;
-        height: 150mm !important;
-        margin: 0 !important;
-        padding: 0 !important;
-        background: #fff !important;
-      }
+      body { background: #fff !important; padding: 0 !important; }
       .no-print { display: none !important; }
-      .sheet-wrapper {
-        box-shadow: none !important;
-        margin: 0 !important;
-        border: none !important;
-        width: 100mm !important;
-        height: 150mm !important;
-        padding: 3mm 3.5mm !important;
-      }
+      .sheet-wrapper { box-shadow: none !important; margin: 0 !important; width: 100mm !important; height: 150mm !important; }
     }
+    
     .controls-panel {
-      max-width: 580px;
+      max-width: 480px;
       width: 100%;
-      margin-bottom: 20px;
+      margin-bottom: 16px;
       display: flex;
       flex-direction: column;
-      gap: 12px;
+      gap: 10px;
+      align-items: center;
     }
-    .btn-gainscha-print {
+    .btn-print {
       background: linear-gradient(135deg, #c59b5f, #dfb775);
       color: #000;
       font-weight: 900;
@@ -1490,355 +1622,486 @@ router.get('/etiqueta-unificada/:pedidoId', async (req, res) => {
       border-radius: 8px;
       cursor: pointer;
       box-shadow: 0 4px 18px rgba(197, 155, 95, 0.4);
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      transition: all 0.2s ease;
     }
-    .btn-gainscha-print:hover {
+    .btn-print:hover {
       background: linear-gradient(135deg, #dfb775, #f3cb8b);
-      transform: translateY(-1px);
     }
-    .btn-melhor-envio-pdf {
+    .guide-box {
       background: #27272a;
-      color: #dfb775;
       border: 1px solid #c59b5f;
-      font-weight: bold;
-      font-size: 12px;
-      padding: 11px 18px;
-      border-radius: 8px;
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 6px;
+      border-radius: 6px;
+      padding: 10px 14px;
+      color: #fafafa;
+      font-size: 11px;
+      line-height: 1.4;
+      width: 100%;
     }
-    .config-guide-box {
-      background: #18181b;
-      border: 1px solid rgba(197, 155, 95, 0.4);
-      border-radius: 8px;
-      padding: 12px 16px;
-      color: #e4e4e7;
-      font-size: 11.5px;
-      line-height: 1.6;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.5);
-    }
+
+    /* FOLHA ADESIVA TÉRMICA: 100mm x 150mm */
     .sheet-wrapper {
       width: 100mm;
       height: 150mm;
       background: #fff;
-      padding: 3mm 3.5mm;
-      box-shadow: 0 16px 40px rgba(0,0,0,0.7);
-      border-radius: 3px;
+      padding: 1.2mm 1.5mm;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.6);
+      border-radius: 2px;
       overflow: hidden;
     }
-    .sheet {
-      width: 93mm;
-      height: 144mm;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-    .section-danfe {
-      height: 70mm;
+
+    .unified-border {
       border: 1.5px solid #000;
-      padding: 2mm;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
+    /* ========================================================
+       1. METADE SUPERIOR (DANFE SIMPLIFICADO FISCAL)
+       Aumentado suavemente para 62.5mm p/ máxima legibilidade
+       Preto puro e traços nítidos de alta densidade
+       ======================================================== */
+    .danfe-section {
+      height: 62.5mm;
+      padding: 1.1mm 1.6mm 0.8mm 1.6mm;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
     }
-    .section-divider {
-      height: 3.5mm;
+    .danfe-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .danfe-brand-group {
+      display: flex;
+      align-items: center;
+      gap: 2mm;
+    }
+    .danfe-logo {
+      height: 8.8mm;
+      width: auto;
+      max-width: 9.8mm;
+      object-fit: contain;
+    }
+    .danfe-brand {
+      font-size: 8.8pt;
+      font-weight: 900;
+      letter-spacing: 0.2px;
+      line-height: 1.15;
+      color: #000;
+    }
+    .danfe-sub {
+      font-size: 5.6pt;
+      font-weight: 700;
+      color: #000;
+      margin-top: 0.3mm;
+    }
+    .danfe-badge-box {
+      border: 1.5px solid #000;
+      border-radius: 4px;
+      padding: 1mm 3mm;
+      text-align: center;
+      font-weight: 900;
+      font-size: 6.6pt;
+      line-height: 1.15;
+      color: #000;
+    }
+    .danfe-serie-text {
+      font-size: 5.8pt;
+      font-weight: 900;
+      text-align: right;
+      margin-top: 0.6mm;
+      color: #000;
+    }
+    .divider-line {
+      border-bottom: 1px solid #000;
+      width: 100%;
+      margin: 0.1mm 0;
+    }
+    .nfe-barcode-wrap {
+      text-align: center;
+      margin: 0;
+    }
+    .nfe-key-text {
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 7.0pt;
+      font-weight: 900;
+      letter-spacing: 0.5px;
+      text-align: center;
+      margin-top: 0.2mm;
+      color: #000;
+    }
+    .fiscal-meta {
+      font-size: 5.7pt;
+      font-weight: 600;
+      line-height: 1.30;
+      color: #000;
+    }
+    .dest-box-danfe {
+      border: 1.2px solid #000;
+      border-radius: 3px;
+      padding: 0.8mm 1.4mm;
+      font-size: 5.9pt;
+      font-weight: 600;
+      line-height: 1.30;
+      color: #000;
+    }
+    .items-box-danfe {
+      border: 1.2px solid #000;
+      border-radius: 3px;
+      padding: 0.8mm 1.4mm;
+      font-size: 5.8pt;
+      font-weight: 600;
+      line-height: 1.30;
+      color: #000;
+    }
+    .items-title {
+      font-weight: 900;
+      font-size: 6.2pt;
+      border-bottom: 1px solid #000;
+      padding-bottom: 0.2mm;
+      margin-bottom: 0.3mm;
+      display: flex;
+      justify-content: space-between;
+      color: #000;
+    }
+    .item-row {
+      display: flex;
+      justify-content: space-between;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      color: #000;
+    }
+    .item-row strong {
+      font-size: 6.0pt;
+      font-weight: 900;
+      color: #000;
+    }
+
+    /* LINHA DE DOBRA / SEPARAÇÃO CENTRAL */
+    .center-divider {
+      border-bottom: 1.5px solid #000;
+      width: 100%;
+    }
+
+    /* ========================================================
+       2. METADE INFERIOR (ETIQUETA DA TRANSPORTADORA PADRÃO MELHOR ENVIO)
+       Ajustada para 84.5mm mantendo proporções perfeitas e código de barras intacto
+       ======================================================== */
+    .carrier-section {
+      height: 84.5mm;
+      padding: 1.2mm 1.6mm 1.0mm 1.6mm;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .carrier-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 0.6mm;
+    }
+    .carrier-header-left {
+      display: flex;
+      flex-direction: column;
+    }
+    .carrier-logo-img {
+      height: 6.5mm;
+      width: auto;
+      object-fit: contain;
+      object-position: left top;
+    }
+    .carrier-service-txt {
+      font-size: 6.6pt;
+      font-weight: 900;
+      margin-top: 0.3mm;
+      color: #000;
+    }
+    .carrier-service-txt.loggi {
+      margin-left: 8.5mm; /* Alinhado sob a palavra Loggi na logo da Loggi */
+    }
+    .carrier-meta-txt {
+      font-size: 6.3pt;
+      font-weight: 900;
+      line-height: 1.25;
+      margin-top: 0.4mm;
+      color: #000;
+    }
+    .carrier-header-right {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+    .me-logo-img {
+      height: 8.5mm;
+      width: auto;
+      object-fit: contain;
+      object-position: right top;
+    }
+    .me-site-txt {
+      font-size: 5.8pt;
+      font-weight: 700;
+      color: #000;
+      margin-top: 0.2mm;
+    }
+    .carrier-weight-txt {
+      font-size: 6.6pt;
+      font-weight: 900;
+      margin-top: 0.3mm;
+      color: #000;
+    }
+    .carrier-tracking-code {
+      font-size: 13.5pt;
+      font-weight: 900;
+      letter-spacing: 1.2px;
+      text-align: center;
+      margin: 0.6mm 0 0.3mm 0;
+      color: #000;
+    }
+    .carrier-barcode-wrap {
+      text-align: center;
+      margin: 0.3mm 0 0.9mm 0; /* Margem de respiro para não grudar no destinatário */
+    }
+    .carrier-dest-box {
+      border: 1.2px solid #000;
+      border-radius: 4px;
+      padding: 1.1mm 1.8mm;
+      font-size: 6.4pt;
+      font-weight: 600;
+      line-height: 1.28;
+      margin-bottom: 0.8mm; /* Espaço reduzido com perfeição conforme solicitado */
+      color: #000;
+    }
+    .carrier-dest-box .title {
+      font-weight: 900;
+      font-size: 7.2pt;
+      margin-bottom: 0.3mm;
+      display: block;
+      color: #000;
+    }
+    .carrier-bottom-row {
+      display: flex;
+      align-items: center;
+      gap: 1.8mm;
+      height: 16mm;
+      margin-bottom: 0.3mm; /* Garante que fique longe da borda final */
+    }
+    .qr-block {
+      display: flex;
+      align-items: center;
+      gap: 1.5mm;
+      flex-shrink: 0;
+      max-width: 48mm;
+    }
+    .qr-container {
+      width: 15mm;
+      height: 15mm;
+      flex-shrink: 0;
       display: flex;
       align-items: center;
       justify-content: center;
-      border-top: 1px dashed #000;
-      border-bottom: 1px dashed #000;
-      font-size: 5.5pt;
-      font-weight: bold;
-      letter-spacing: 0.5px;
-      text-transform: uppercase;
     }
-    .section-carrier {
-      height: 70mm;
-      border: 1.5px solid #000;
-      padding: 2mm;
+    .qr-code-img, .qr-container svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+      image-rendering: pixelated;
+      image-rendering: -moz-crisp-edges;
+      image-rendering: crisp-edges;
+    }
+    .qr-guide-box {
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      justify-content: center;
+      line-height: 1.2;
     }
-    .header-box {
-      border-bottom: 1px solid #000;
-      padding-bottom: 1.5mm;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .brand-title {
-      font-size: 8.5pt;
+    .qr-guide-title {
+      font-size: 6.4pt;
       font-weight: 900;
-      letter-spacing: 0.5px;
-    }
-    .brand-sub {
-      font-size: 5.5pt;
-      color: #222;
-    }
-    .danfe-badge {
-      border: 1.5px solid #000;
-      padding: 1mm 1.5mm;
-      font-weight: bold;
-      font-size: 6.5pt;
-      text-align: center;
-    }
-    .barcode-container {
-      text-align: center;
-      padding: 1mm 0;
-    }
-    .chave-nfe-txt {
-      font-family: monospace;
-      font-size: 5.8pt;
-      font-weight: bold;
-      letter-spacing: 0.2px;
-      margin-top: 1mm;
-    }
-    .grid-info {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      border-top: 1px solid #000;
-      border-bottom: 1px solid #000;
-      padding: 1mm 0;
-      font-size: 6.5pt;
-    }
-    .routing-banner {
-      background: #000;
-      color: #fff;
-      font-weight: 900;
-      font-size: 11pt;
-      text-align: center;
-      padding: 1.2mm 0;
-      border-radius: 2px;
-      letter-spacing: 0.5px;
-    }
-    .address-block {
-      font-size: 6.5pt;
-      line-height: 1.25;
-    }
-    .address-title {
-      font-weight: 900;
-      font-size: 6.8pt;
-      border-bottom: 1px solid #666;
-      margin-bottom: 0.5mm;
-      display: inline-block;
-    }
-    .carrier-footer-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-top: 1px solid #000;
-      padding-top: 1mm;
-    }
-    .print-bar {
-      position: fixed;
-      bottom: 10px;
-      right: 10px;
-      background: #c59b5f;
       color: #000;
-      font-weight: bold;
-      padding: 8px 16px;
-      border-radius: 6px;
-      cursor: pointer;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-      border: none;
-      font-size: 13px;
-      z-index: 100;
+      letter-spacing: 0.2px;
+      margin-bottom: 0.3mm;
     }
-    .instruction-card {
-      position: fixed;
-      top: 10px;
-      left: 10px;
-      right: 10px;
-      max-width: 480px;
-      background: #18181b;
-      color: #fafafa;
-      border: 1px solid #c59b5f;
-      padding: 10px 14px;
-      border-radius: 8px;
-      font-family: Arial, sans-serif;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.4);
-      z-index: 100;
+    .qr-guide-desc {
+      font-size: 5.3pt;
+      font-weight: 600;
+      color: #000;
+      line-height: 1.22;
     }
-    .btn-pdf-link {
-      display: inline-block;
-      background: #27272a;
-      color: #c59b5f;
-      border: 1px solid #c59b5f;
-      font-weight: bold;
-      font-size: 11px;
-      padding: 5px 10px;
-      border-radius: 4px;
-      text-decoration: none;
-      margin-top: 6px;
-      margin-right: 6px;
+    .vertical-sep {
+      width: 1.2px;
+      height: 14.5mm;
+      background: #000;
+      flex-shrink: 0;
     }
-    @media print {
-      .no-print {
-        display: none !important;
-      }
+    .remetente-box {
+      font-size: 6.1pt;
+      font-weight: 600;
+      line-height: 1.26;
+      flex-grow: 1;
+      color: #000;
+    }
+    .remetente-box .title {
+      font-weight: 900;
+      font-size: 7.2pt;
+      display: block;
+      margin-bottom: 0.2mm;
+      color: #000;
     }
   </style>
 </head>
 <body>
+
   <div class="controls-panel no-print">
     <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; align-items: center;">
-      <button class="btn-gainscha-print" onclick="window.focus(); window.print();">
+      <button type="button" class="btn-print" onclick="window.print();">
         🖨️ IMPRIMIR NA GAINSCHA GS-2406T (100x150mm)
       </button>
       ${pedido.etiqueta_url ? `
-      <a href="${pedido.etiqueta_url}" target="_blank" class="btn-melhor-envio-pdf">
+      <a href="${pedido.etiqueta_url}" target="_blank" style="background: #27272a; color: #dfb775; border: 1px solid #c59b5f; font-weight: bold; font-size: 12px; padding: 11px 18px; border-radius: 8px; text-decoration: none;">
         📄 Abrir PDF Oficial (Melhor Envio)
       </a>` : ''}
     </div>
-
-    <div class="config-guide-box">
-      <strong style="color: #dfb775; display: block; margin-bottom: 3px; font-size: 12px;">⚙️ Configurações Recomendadas no Diálogo de Impressão:</strong>
-      • <strong>Destino/Impressora:</strong> Selecione <em>Gainscha GS-2406T</em><br>
-      • <strong>Tamanho do Papel:</strong> <em>100x150mm</em> (ou <em>4x6 polegadas</em>)<br>
-      • <strong>Margens:</strong> <em>Nenhuma</em> (ou <em>Padrão</em>)<br>
-      • <strong>Escala:</strong> <em>Ajustar à área de impressão</em> (ou <em>100%</em>)
+    <div class="guide-box">
+      <strong style="color: #dfb775; display: block; margin-bottom: 3px;">⚙️ Configurações Recomendadas no Driver:</strong>
+      • <strong>Destino:</strong> Gainscha GS-2406T | • <strong>Tamanho:</strong> 100x150mm (4x6")<br>
+      • <strong>Margens:</strong> Nenhuma | • <strong>Escala:</strong> 100% (ou Ajustar à área imprimível)
     </div>
   </div>
 
   <div class="sheet-wrapper">
-  <div class="sheet">
-    
-    <!-- METADE SUPERIOR (0 a 70mm): DANFE SIMPLIFICADO -->
-    <div class="section-danfe">
-      <div class="header-box">
-        <div style="display: flex; align-items: center; gap: 2mm;">
-          <img src="data:image/png;base64,${AVANTE_LOGO_BASE64}" style="height: 10mm; width: auto; max-width: 11mm; object-fit: contain;" alt="Avante Lingerie" />
+    <div class="unified-border">
+
+      <!-- ========================================================
+           1. METADE SUPERIOR: DANFE SIMPLIFICADO FISCAL
+           ======================================================== -->
+      <div class="danfe-section">
+        <div class="danfe-header">
+          <div class="danfe-brand-group">
+            <img src="data:image/png;base64,${AVANTE_LOGO_BASE64}" class="danfe-logo" alt="Avante Lingerie" />
+            <div>
+              <div class="danfe-brand">AVANTE LINGERIE<br>LTDA</div>
+              <div class="danfe-sub">Direto da Fábrica - Nova Friburgo/RJ</div>
+            </div>
+          </div>
           <div>
-            <div class="brand-title">AVANTE LINGERIE</div>
-            <div class="brand-sub">Direto da Fábrica &bull; Nova Friburgo/RJ</div>
+            <div class="danfe-badge-box">
+              DANFE SIMPLIFICADO -<br>ETIQUETA
+            </div>
+            <div class="danfe-serie-text">SÉRIE: ${serieNfe} - Nº ${numeroNfe}</div>
           </div>
         </div>
-        <div class="danfe-badge">
-          DANFE SIMPLIFICADO - ETIQUETA
+
+        <div class="divider-line"></div>
+
+        <!-- Código de Barras Oficial SEFAZ CODE 128C -->
+        <div class="nfe-barcode-wrap">
+          ${sefazBarcodeSvg}
+          <div class="nfe-key-text">
+            ${chaveFormatada}
+          </div>
+        </div>
+
+        <div class="divider-line"></div>
+
+        <div class="fiscal-meta">
+          <strong>PROTOCOLO SEFAZ:</strong> ${protocoloUso} - <strong>OPERAÇÃO:</strong> 1 - SAÍDA<br>
+          <strong>EMITENTE:</strong> AVANTE LINGERIE LTDA - <strong>CNPJ:</strong> 54.615.037/0001-53 - <strong>IE:</strong> 14568603 - <strong>UF:</strong> RJ<br>
+          <strong>VALOR PRODUTOS:</strong> R$ ${valorProdutos} - <strong>FRETE:</strong> R$ ${valorFrete} - <strong>VALOR TOTAL DA NOTA: R$ ${totalVal}</strong>
+        </div>
+
+        <div class="dest-box-danfe">
+          <strong>DESTINATÁRIO:</strong> ${destName} - <strong>CPF:</strong> ${destDoc} - <strong>IE:</strong> ISENTO<br>
+          <strong>ENDEREÇO:</strong> ${destStreet}, ${destNumber}${destComp ? ' - ' + destComp : ''} - ${destDistrict} - ${destCity}/${destState} - <strong>CEP:</strong> ${destCep}
+        </div>
+
+        <!-- ITENS DO PEDIDO / SEPARAÇÃO DA FÁBRICA -->
+        <div class="items-box-danfe">
+          <div class="items-title">
+            <span>ITENS DA NOTA / SEPARAÇÃO DE ESTOQUE:</span>
+            <span>QTD: ${totalPecas} PEÇAS</span>
+          </div>
+          ${itemsRowsHtml}
         </div>
       </div>
 
-      <div class="barcode-container">
-        ${nfeBarcodeSvg}
-        <div class="chave-nfe-txt">CHAVE: ${chaveFormatada}</div>
-      </div>
+      <!-- LINHA CENTRAL DE DOBRA / PICOTE -->
+      <div class="center-divider"></div>
 
-      <div style="font-size: 6.2pt; line-height: 1.2;">
-        <strong>PROTOCOLO SEFAZ:</strong> ${protocoloUso}<br>
-        <strong>EMITENTE:</strong> Avante Lingerie LTDA &bull; <strong>CNPJ:</strong> 54.615.037/0001-53 &bull; <strong>IE:</strong> 14568603 &bull; <strong>UF:</strong> RJ
-      </div>
-
-      <div class="grid-info">
-        <div><strong>SÉRIE:</strong> ${serieNfe} &bull; <strong>Nº:</strong> ${numeroNfe}</div>
-        <div style="text-align: right;"><strong>OPERAÇÃO:</strong> 1 - SAÍDA &bull; ${dataEmissao}</div>
-      </div>
-
-      <div class="address-block">
-        <div class="address-title">DESTINATÁRIO</div><br>
-        <strong>NOME:</strong> ${destName}<br>
-        <strong>CPF/CNPJ:</strong> ${destDoc} &bull; <strong>IE:</strong> ISENTO<br>
-        <strong>ENDEREÇO:</strong> ${destStreet}, ${destNumber}${destComp ? ' - ' + destComp : ''} &bull; ${destDistrict}<br>
-        <strong>CEP:</strong> ${destCep} &bull; ${destCity}/${destState}
-      </div>
-
-      <div style="display: flex; justify-content: space-between; font-weight: bold; font-size: 6.8pt; border-top: 1px solid #000; padding-top: 1mm;">
-        <span>VALOR TOTAL: R$ ${totalVal}</span>
-        <span>PEDIDO: #${numPedido}</span>
-      </div>
-    </div>
-
-    <!-- SEPARAÇÃO FÍSICA (DOBRA / PICOTE 75mm) -->
-    <div class="section-divider">
-      &bull; &bull; &bull; PICOTE / DOBRA (75mm) &bull; &bull; &bull;
-    </div>
-
-    <!-- METADE INFERIOR (75 a 150mm): ETIQUETA DE TRANSPORTE -->
-    <div class="section-carrier">
-      <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #000; padding-bottom: 1mm;">
-        <div>
-          <span style="font-size: 11pt; font-weight: 900; letter-spacing: 0.5px;">${carrier.toUpperCase()}</span>
-          <span style="font-size: 6.5pt; font-weight: bold; margin-left: 4px;">Standard</span>
+      <!-- ========================================================
+           2. METADE INFERIOR: ETIQUETA DA TRANSPORTADORA PADRONIZADA
+           ======================================================== -->
+      <div class="carrier-section">
+        <div class="carrier-header">
+          <div class="carrier-header-left">
+            ${carrierLogoHtml}
+            <div class="carrier-service-txt ${serviceClass}">${serviceTxt}</div>
+            <div class="carrier-meta-txt">
+              NF: ${parseInt(numeroNfe, 10) || 17}<br>
+              ORD-${pedido.melhor_envio_id || pedido.numero_pedido?.replace(/\D/g, '') || pedido.id?.slice(-8) || '82261147458414'}
+            </div>
+          </div>
+          <div class="carrier-header-right">
+            <img src="data:image/png;base64,${MELHOR_ENVIO_LOGO_BASE64}" class="me-logo-img" alt="Melhor Envio" />
+            <div class="me-site-txt">melhorenvio.com</div>
+            <div class="carrier-weight-txt">Peso (g): ${pesoGramas}</div>
+          </div>
         </div>
-        <div style="font-size: 6.8pt; font-weight: bold;">
-          ORD-${pedido.id?.slice(-8) || numPedido}
+
+        <div class="carrier-tracking-code">${cleanTracking}</div>
+
+        <div class="carrier-barcode-wrap">
+          ${carrierBarcodeSvg}
         </div>
-      </div>
 
-      <div class="routing-banner">
-        CHV B224-00 012 &nbsp;&bull;&nbsp; ${destCity} / ${destState}
-      </div>
-
-      <div style="display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 2mm;">
-        <div class="address-block">
-          <div class="address-title">DESTINATÁRIO:</div><br>
-          <strong>${destName}</strong><br>
-          ${destStreet}, ${destNumber}<br>
+        <div class="carrier-dest-box">
+          <span class="title">DESTINATÁRIO</span>
+          ${destName}${destPhone ? `, Tel: ${destPhone}` : ''}<br>
+          ${destStreet}, ${destNumber}${destComp ? ' - ' + destComp : ''}<br>
           ${destDistrict}<br>
-          <strong>${destCep} ${destCity}/${destState}</strong>
+          <strong>${destCep}</strong> ${destCity}/${destState}
         </div>
-        <div class="address-block" style="border-left: 1px solid #ccc; padding-left: 2mm;">
-          <div class="address-title">REMETENTE:</div><br>
-          Avante Lingerie Ltda<br>
-          Rua Odenir Pinheiro, 20<br>
-          3 Andar, Olaria<br>
-          28623-620 Nova Friburgo/RJ
-        </div>
-      </div>
 
-      <div class="barcode-container">
-        ${trackingBarcodeSvg}
-        <div style="text-align: center; font-family: Arial, Helvetica, sans-serif; font-size: 13pt; font-weight: 900; letter-spacing: 2px; color: #000; padding-top: 1mm; line-height: 1;">
-          ${trackingCode}
-        </div>
-      </div>
-
-      <div class="carrier-footer-row">
-        <div style="display: flex; align-items: center; gap: 2mm;">
-          ${qrCodeSvg ? `<div style="width: 22mm; height: 22mm;">${qrCodeSvg}</div>` : ''}
-          <div style="font-size: 5.5pt; line-height: 1.15;">
-            <strong>Acompanhe o Rastreio:</strong><br>
-            Aponte a câmera do celular<br>
-            avantelingerie.com.br
+        <div class="carrier-bottom-row">
+          <div class="qr-block">
+            <div class="qr-container">
+              <img src="${qrDataUrl}" alt="QR Code Rastreio" class="qr-code-img" />
+            </div>
+            <div class="qr-guide-box">
+              <div class="qr-guide-title">RASTREIE SEU PEDIDO</div>
+              <div class="qr-guide-desc">Aponte a câmera do celular p/ ver a entrega em tempo real</div>
+            </div>
+          </div>
+          <div class="vertical-sep"></div>
+          <div class="remetente-box">
+            <span class="title">REMETENTE</span>
+            Avante Lingerie Ltda<br>
+            Rua Odenir Pinheiro, 20<br>
+            3 Andar, Loteamento Nosso Sonho<br>
+            <strong>28623-620</strong> Nova Friburgo/RJ
           </div>
         </div>
-        <div style="text-align: right; font-size: 6.5pt; font-weight: bold;">
-          melhorenvio<br>
-          <span style="font-size: 5.5pt; font-weight: normal; color: #555;">Gainscha GS-2406T</span>
-        </div>
       </div>
+
     </div>
-  </div>
   </div>
 
   ${autoprint ? `
   <script>
     window.addEventListener('load', function() {
-      setTimeout(function() {
-        try {
-          window.focus();
-          window.print();
-        } catch (e) {
-          console.warn('Acione a impressão manualmente pelo botão principal.', e);
-        }
-      }, 350);
+      setTimeout(function() { window.print(); }, 400);
     });
   </script>` : ''}
 </body>
 </html>`;
 
     res.setHeader('Content-Type', 'text/html; charset=utf-8');
+    res.setHeader('Content-Security-Policy', "default-src 'self' 'unsafe-inline' data: blob:; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:;");
     return res.send(html);
 
   } catch (error) {
