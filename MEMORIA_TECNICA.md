@@ -2338,3 +2338,21 @@ Garantir que as dimensﾃｵes e pesos cadastrados na loja e calculados no check
   - Destravamento com pedido mínimo acessível de R$ 69,90.
   - Catálogo em crescimento constante (fitness, camisolas, conjuntos) + **capacidade de confecção e produção sob demanda** como indústria própria.
   - Rodapé institucional elegante com nome, CNPJ e endereço em todas as mensagens.
+
+
+---
+
+### [09/11/2026 - 11:20] Potencialização da IA Lia (Inteligência de Vendas, B2B & Confecção Sob Demanda)
+
+- **Diagnóstico Panorâmico:**
+  - Identificado que o cérebro da Lia (\`liaKnowledgeBase.js\` e \`seed_knowledge.mjs\`) possuía regras herdadas do início do projeto (gatilho de atacado antigo de R$ 500,00, referência ao Stripe em vez de Mercado Pago, e ausência das novas diretrizes industriais e logísticas).
+  - A Lia não possuía regras explícitas para orientar revendedoras aprovadas sobre como destravar seus preços no site (\`/login\`, e-mail, senha = WhatsApp com DDD).
+  - A Lia não destacava o grande diferencial da marca: a **confecção sob demanda** e as novas linhas em expansão (**Fitness**, **Camisolas**).
+- **Atualizações Implementadas:**
+  - \`apps/api/src/utils/liaKnowledgeBase.js\`: Reestruturação completa do conhecimento permanente com dados cadastrais unificados (\`AVANTE LINGERIE LTDA - ME | CNPJ: 54.615.037/0001-53\`), fluxo de login B2B e proteção de margem, confecção sob demanda, transportadoras ativas via Melhor Envio (Loggi, Jadlog, Correios, J&T Express), retirada na fábrica e regras sanitárias da Anvisa para peças íntimas.
+  - \`apps/api/src/routes/lia.js\`: Inclusão das regras 10 e 11 no System Prompt do chat web e sincronização do prompt de WhatsApp com link de login de revenda e canal de confecção sob demanda.
+  - \`apps/api/seed_knowledge.mjs\`: Atualização das regras para o PocketBase, alinhando gatilho de atacado para R$ 69,90, Mercado Pago em até 6x, PIX +5% e rastreio em \`/rastreio\`.
+- **Validação Empírica:**
+  - Sintaxe de todos os arquivos JS validada via \`node -c\` (0 erros).
+  - Teste de integridade de 13 vetores de conhecimento executado com 100% de aprovação.
+  - Build do frontend Vite compilado com sucesso em 1m 36s sem quebras.
