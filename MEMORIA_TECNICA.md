@@ -2317,3 +2317,24 @@ Garantir que as dimensﾃｵes e pesos cadastrados na loja e calculados no check
   - **Local:** Simulação com dados reais de `PED-005` gerando 79.878 caracteres de HTML vetorial puro sem erros.
   - **Online:** Endpoint de produção consultado diretamente via requisição HTTP GET retornando `Status 200 OK`, com chave SEFAZ, código de barras Code 128C, código da transportadora Loggi `ME262FS47I1BR`, dados da cliente Inês dos Santos de Paulo e QR Code de alta densidade em base64.
   - **Lojista:** Impressão confirmada e gerada com sucesso para a Gainscha GS-2406T.
+
+
+---
+
+### [09/11/2026 - 10:15] Harmonização Institucional e Atualização das Notificações B2B (Atacado)
+
+- **Decisão Estratégica do Lojista:**
+  - Unificação de todos os dados institucionais da loja e comunicações com a Razão Social e CNPJ ativos no Bling e Melhor Envio: **AVANTE LINGERIE LTDA - ME | CNPJ: 54.615.037/0001-53**.
+  - Endereço oficial da fábrica atualizado para: **Rua Odenir Pinheiro, 20 - 3º Andar, Loteamento Nosso Sonho - Nova Friburgo/RJ • CEP: 28623-620**.
+  - Remoção de qualquer menção legada à LHA/LHE ou CNPJs anteriores para eliminar divergências com clientes e transportadoras.
+- **Arquivos Harmonizados no Site:**
+  - `apps/web/src/components/Footer.jsx`: Rodapé oficial do site atualizado com a Razão Social, CNPJ e endereço oficial da fábrica.
+  - `apps/web/src/pages/SobrePage.jsx`: Box de dados legais ("Razão Social" e "CNPJ") 100% alinhado com a Avante Lingerie Ltda - ME.
+  - `apps/api/src/utils/liaKnowledgeBase.js`: Base de conhecimento da Lia ajustada para fornecer o CNPJ 54.615.037/0001-53 e sede oficial no chat e WhatsApp.
+  - `apps/api/seed_knowledge.mjs`: Script de sementes alinhado.
+- **Novas Mensagens de Onboarding B2B (Resend & Lia):**
+  - Instruções de login cristalinas: `avantelingerie.com.br/login`, e-mail cadastrado e senha sendo o número do WhatsApp com DDD (apenas números).
+  - Explicação comercial do porquê o login é necessário: a vitrine aberta exibe preços de varejo para proteger a margem do revendedor perante o consumidor final; ao logar, o sistema libera os preços de custo de atacado.
+  - Destravamento com pedido mínimo acessível de R$ 69,90.
+  - Catálogo em crescimento constante (fitness, camisolas, conjuntos) + **capacidade de confecção e produção sob demanda** como indústria própria.
+  - Rodapé institucional elegante com nome, CNPJ e endereço em todas as mensagens.
