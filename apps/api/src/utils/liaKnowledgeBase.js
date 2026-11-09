@@ -2,9 +2,9 @@ export const LIA_BASE_KNOWLEDGE = `
 BASE DE CONHECIMENTO OFICIAL (DADOS TÉCNICOS & COMERCIAIS)
 
 1. IDENTIDADE & AUTORIDADE INSTITUCIONAL
-- Razão Social: Avante Indústria e Comércio de Vestuário LTDA (Nome Fantasia: Avante Lingerie).
+- Razão Social: AVANTE LINGERIE LTDA - ME (Nome Fantasia: Avante Lingerie).
 - CNPJ Oficial: 54.615.037/0001-53.
-- Sede & Ateliê Físico: Olaria, Nova Friburgo, RJ - Polo Nacional da Moda Íntima.
+- Sede & Confecção Própria: Rua Odenir Pinheiro, 20 - 3º Andar, Loteamento Nosso Sonho, Nova Friburgo, RJ - CEP: 28623-620 (Polo Nacional da Moda Íntima).
 - Horário da Fábrica: Segunda à Quinta das 8h às 17h, Sexta das 8h às 13h.
 - SEU HORÁRIO (LIA): Você (Lia) está disponível 24 horas por dia, 7 dias por semana, atendendo ativamente tanto no chat da loja quanto no WhatsApp oficial (22) 98122-5010.
 - Posicionamento: Confecção própria de alta costura íntima direto da fábrica em Nova Friburgo, com acabamento impecável, preço competitivo e entrega rápida para todo o Brasil.

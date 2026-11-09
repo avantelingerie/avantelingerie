@@ -362,8 +362,8 @@ export default function Footer() {
               &copy; {new Date().getFullYear()} Avante Lingerie. Todos os direitos reservados.
             </p>
             <p className="text-[11px] text-gray-300 font-medium leading-relaxed">
-              LHA TEXTIL COMERCIO DO VESTUARIO LTDA | CNPJ: 57.394.988/0001-38<br />
-              Ateliê & Showroom: Rua Odenir Pinheiro, nº 20 - 3º Andar, Loteamento Nosso Sonho - Olaria, Nova Friburgo, RJ | CEP: 28623-620
+              AVANTE LINGERIE LTDA - ME | CNPJ: 54.615.037/0001-53<br />
+              Fábrica & Showroom: Rua Odenir Pinheiro, nº 20 - 3º Andar, Loteamento Nosso Sonho - Nova Friburgo, RJ | CEP: 28623-620
             </p>
           </div>
 

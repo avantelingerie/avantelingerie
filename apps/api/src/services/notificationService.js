@@ -140,8 +140,9 @@ class NotificationService {
             cleanPhone = '55' + cleanPhone;
         }
 
-        // 3. Cópia oficial persuasiva da Lia para WhatsApp (com gênero dinâmico)
-        const messageWa = `Olá, ${firstName}! Tudo bem? Aqui é a Lia, consultora de revenda da *Avante Lingerie*, direto da nossa fábrica em Nova Friburgo/RJ! 🌸✨\n\nPassando para te dar as *boas-vindas oficiais ao nosso ${genderTerms.clubeRevendedores}!* 👑\n\nSeu cadastro foi ativado com sucesso e eu tenho uma notícia espetacular para te dar:\n\n🚨 *ESPECIAL BLACK FRIDAY & FIM DE ANO:*\nPara você já começar lucrando alto na melhor época de vendas do ano, nossa confecção liberou o *Acesso Direto de Fábrica com Pedido Mínimo de apenas R$ 69,90!*\n\n❌ Nada de pedidos de R$ 500 ou R$ 1.000 para começar.\n✅ Com apenas *R$ 69,90* no carrinho, toda a nossa tabela de atacado destrava automaticamente para você!\n\n💎 *Por que lucrar com a Avante neste fim de ano?*\n- *Margem de 100% a 150% de lucro líquido* no seu bolso.\n- *Preço de fábrica imbatível* (você compete de igual para igual e supera qualquer Shopee em qualidade e acabamento).\n- *+5% OFF no PIX à vista* ou parcelamento em *até 6x no cartão*.\n- Peças com forro 100% algodão e modelagem que não enrola — cliente que compra, fideliza na hora!\n\nO movimento de Natal e festas de fim de ano já começou! Quer que eu te envie a seleção das *5 peças mais vendidas da fábrica* para você montar seu primeiro kit de R$ 69,90?\n\nOu se preferir, já pode acessar direto o nosso site oficial e ver seus preços de custo destravados:\n👉 https://avantelingerie.com.br/\n\nQualquer dúvida com tamanhos ou tecidos, estou aqui para te ajudar a montar o pedido perfeito! Conte comigo! 💖🧵`;
+        // 3. Cópia oficial persuasiva da Lia para WhatsApp (com gênero dinâmico e credenciais claras)
+        const cleanDigitsPhone = cleanPhone.replace(/^55/, '');
+        const messageWa = `Olá, ${firstName}! Tudo bem? Aqui é a Lia, consultora de revenda da *Avante Lingerie*, direto da nossa confecção em Nova Friburgo/RJ! 🌸✨\n\nPassando para te dar as *boas-vindas oficiais ao nosso ${genderTerms.clubeRevendedores}!* 👑\n\nSeu cadastro foi ativado com sucesso e agora você tem acesso direto de fábrica com preços de atacado!\n\n🔐 *Como destravar seus Preços de Atacado no site:*\nComo nossa loja também atende consumidor final, quem entra sem login vê os preços normais de varejo. Para o sistema te reconhecer e liberar a tabela de atacado, basta fazer seu login rápido:\n\n👉 Acesse: https://avantelingerie.com.br/login\n✉️ *Seu E-mail:* ${email || 'Seu e-mail cadastrado'}\n🔑 *Sua Senha:* O seu número de WhatsApp com DDD (apenas números, ex: ${cleanDigitsPhone || 'Seu WhatsApp'})\n_(Se quiser alterar depois, basta clicar em "Esqueceu a senha?")_\n\n🚨 *Vantagens Especiais de Fábrica:*\n• *Pedido Mínimo de apenas R$ 69,90:* Sem travas de R$ 500 ou R$ 1.000 para começar a lucrar.\n• *Margem de 100% a 150% de lucro líquido* no seu bolso.\n• *+5% OFF no PIX à vista* ou até 6x no cartão.\n\n🧵 *Catálogo em Expansão & Produção Sob Demanda:*\nNosso catálogo está em constante crescimento, recebendo novidades toda semana em conjuntos, camisolas, calcinhas e nossa linha *Fitness*.\nE o nosso grande diferencial: *como somos fabricantes próprios*, se você precisar de uma grade específica, modelo ou quantidade que não encontrou na vitrine, fale comigo! Nós podemos avaliar e fazer a *produção sob demanda* para a sua necessidade!\n\nAcesse agora e veja seus custos de fábrica liberados:\n👉 https://avantelingerie.com.br/login\n\nQualquer dúvida com tecidos ou tamanhos, é só me responder aqui! Conte comigo para abastecer sua revenda! 💖🧵\n\n🏢 *AVANTE LINGERIE LTDA - ME* • CNPJ: 54.615.037/0001-53\n📍 Rua Odenir Pinheiro, 20 - 3º Andar, Loteamento Nosso Sonho - Nova Friburgo/RJ • CEP 28623-620\n🌐 avantelingerie.com.br`;
 
         const waLink = cleanPhone.length >= 12 
             ? `https://web.whatsapp.com/send?phone=${cleanPhone}&text=${encodeURIComponent(messageWa)}`
@@ -234,17 +235,46 @@ class NotificationService {
                             </tr>
                           </table>
 
-                          <!-- Instruções de Login -->
-                          <div style="background-color: #fffbeb; border-left: 4px solid #c59b5f; padding: 14px 16px; border-radius: 4px; margin-bottom: 30px;">
-                            <p style="margin: 0; color: #92400e; font-size: 13px; line-height: 1.5;">
-                              <strong>Como acessar seus preços de fábrica:</strong><br>
-                              Basta entrar em <a href="https://avantelingerie.com.br" style="color: #b45309; font-weight: 700;">avantelingerie.com.br</a> e fazer login com seu e-mail: <strong>${email}</strong>. A vitrine inteira exibirá na hora a badge <em>"Seu Custo de Fábrica"</em>!
+                          <!-- Instruções de Login Detalhadas -->
+                          <div style="background-color: #fffbeb; border-left: 4px solid #c59b5f; padding: 18px 20px; border-radius: 8px; margin: 25px 0;">
+                            <h4 style="margin: 0 0 8px; color: #92400e; font-size: 15px; font-weight: 700;">
+                              🔐 Como acessar seus preços de fábrica na loja:
+                            </h4>
+                            <p style="margin: 0 0 12px; color: #78350f; font-size: 13px; line-height: 1.5;">
+                              Nossa vitrine pública exibe preços de varejo para proteger a sua margem de revenda perante o cliente final. Para o sistema liberar a sua tabela de custo de fábrica, basta conectar sua conta:
+                            </p>
+                            <table width="100%" border="0" cellspacing="0" cellpadding="8" style="background-color: #ffffff; border-radius: 6px; font-size: 13px; border: 1px solid #fde68a;">
+                              <tr style="border-bottom: 1px solid #fef3c7;">
+                                <td style="color: #92400e; font-weight: 600; width: 85px;">Página:</td>
+                                <td><a href="https://avantelingerie.com.br/login" style="color: #b45309; font-weight: 700; text-decoration: none;">avantelingerie.com.br/login</a></td>
+                              </tr>
+                              <tr style="border-bottom: 1px solid #fef3c7;">
+                                <td style="color: #92400e; font-weight: 600;">E-mail:</td>
+                                <td style="font-family: monospace; font-weight: 700; color: #18181b;">${email}</td>
+                              </tr>
+                              <tr>
+                                <td style="color: #92400e; font-weight: 600;">Senha:</td>
+                                <td style="font-family: monospace; font-weight: 700; color: #18181b;">Seu WhatsApp com DDD (apenas números)</td>
+                              </tr>
+                            </table>
+                            <p style="margin: 10px 0 0; color: #a16207; font-size: 11px;">
+                              <em>*Você pode redefinir sua senha a qualquer momento clicando em "Esqueceu a senha?".</em>
+                            </p>
+                          </div>
+
+                          <!-- Catálogo em Expansão & Confecção Sob Demanda -->
+                          <div style="background-color: #fafafa; border: 1px solid #e4e4e7; border-radius: 12px; padding: 20px; margin: 25px 0;">
+                            <h4 style="margin: 0 0 8px; color: #18181b; font-size: 14px; font-weight: 700;">
+                              🧵 Catálogo em Expansão & Confecção Sob Demanda
+                            </h4>
+                            <p style="margin: 0; color: #52525b; font-size: 13px; line-height: 1.6;">
+                              Nosso catálogo está em constante crescimento, com a inclusão de novas linhas como <strong>fitness, camisolas, conjuntos e novidades semanais</strong>. E se você não encontrar exatamente o que procura, fale conosco: <strong>como fabricantes próprios, podemos estudar a produção sob demanda para atender sua necessidade!</strong>
                             </p>
                           </div>
 
                           <!-- Botão CTA -->
                           <div style="text-align: center; margin: 30px 0;">
-                            <a href="https://avantelingerie.com.br" style="background-color: #c59b5f; color: #121212; padding: 16px 36px; border-radius: 30px; font-weight: 700; font-size: 14px; text-decoration: none; display: inline-block; letter-spacing: 0.5px; box-shadow: 0 4px 12px rgba(197,155,95,0.3);">
+                            <a href="https://avantelingerie.com.br/login" style="background-color: #c59b5f; color: #121212; padding: 16px 36px; border-radius: 30px; font-weight: 700; font-size: 14px; text-decoration: none; display: inline-block; letter-spacing: 0.5px; box-shadow: 0 4px 12px rgba(197,155,95,0.3);">
                               ACESSAR CATÁLOGO DE ATACADO ➜
                             </a>
                           </div>
@@ -257,11 +287,19 @@ class NotificationService {
                         </td>
                       </tr>
 
-                      <!-- Footer -->
+                      <!-- Footer Corporativo Oficial -->
                       <tr>
-                        <td style="background-color: #fafafa; padding: 20px 30px; text-align: center; border-top: 1px solid #e4e4e7;">
-                          <p style="margin: 0; color: #a1a1aa; font-size: 11px;">
-                            Avante Lingerie • Nova Friburgo / RJ • Todos os direitos reservados.
+                        <td style="background-color: #fafafa; padding: 25px 30px; text-align: center; border-top: 1px solid #e4e4e7;">
+                          <p style="margin: 0 0 6px; color: #18181b; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">
+                            AVANTE LINGERIE LTDA - ME
+                          </p>
+                          <p style="margin: 0 0 4px; color: #71717a; font-size: 11px; line-height: 1.5;">
+                            CNPJ: 54.615.037/0001-53 • IE: 14568603<br>
+                            Rua Odenir Pinheiro, 20 - 3º Andar, Loteamento Nosso Sonho<br>
+                            Nova Friburgo / RJ — CEP 28623-620
+                          </p>
+                          <p style="margin: 6px 0 0; color: #c59b5f; font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px;">
+                            Direto da Capital Nacional da Moda Íntima • Todos os direitos reservados.
                           </p>
                         </td>
                       </tr>
@@ -512,11 +550,19 @@ class NotificationService {
                         </td>
                       </tr>
 
-                      <!-- Footer -->
+                      <!-- Footer Corporativo Oficial -->
                       <tr>
-                        <td style="background-color: #fafafa; padding: 20px 30px; text-align: center; border-top: 1px solid #e4e4e7;">
-                          <p style="margin: 0; color: #a1a1aa; font-size: 11px;">
-                            Avante Lingerie • Nova Friburgo / RJ • Todos os direitos reservados.
+                        <td style="background-color: #fafafa; padding: 25px 30px; text-align: center; border-top: 1px solid #e4e4e7;">
+                          <p style="margin: 0 0 6px; color: #18181b; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">
+                            AVANTE LINGERIE LTDA - ME
+                          </p>
+                          <p style="margin: 0 0 4px; color: #71717a; font-size: 11px; line-height: 1.5;">
+                            CNPJ: 54.615.037/0001-53 • IE: 14568603<br>
+                            Rua Odenir Pinheiro, 20 - 3º Andar, Loteamento Nosso Sonho<br>
+                            Nova Friburgo / RJ — CEP 28623-620
+                          </p>
+                          <p style="margin: 6px 0 0; color: #c59b5f; font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px;">
+                            Direto da Capital Nacional da Moda Íntima • Todos os direitos reservados.
                           </p>
                         </td>
                       </tr>
