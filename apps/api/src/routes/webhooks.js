@@ -647,4 +647,137 @@ router.post('/mercadopago', async (req, res) => {
   }
 });
 
+// ==========================================
+// WEBHOOK INSTAGRAM DIRECT (LIA AI ASSISTANT)
+// ==========================================
+
+// Helper para buscar o token de acesso do Instagram (PocketBase com fallback para process.env)
+async function getInstagramAccessToken() {
+  try {
+    const configs = await pb.collection('integracoes_config').getFullList({
+      filter: 'servico = "instagram" && chave_nome = "access_token" && ativo = true',
+      $autoCancel: false,
+    });
+    if (configs.length > 0 && configs[0].chave_valor) {
+      return configs[0].chave_valor;
+    }
+  } catch (err) {
+    // fallback silencioso
+  }
+  return process.env.INSTAGRAM_PAGE_ACCESS_TOKEN || null;
+}
+
+// GET /webhooks/instagram - Verificação do Webhook (Meta Handshake)
+router.get('/instagram', (req, res) => {
+  try {
+    const mode = req.query['hub.mode'];
+    const token = req.query['hub.verify_token'];
+    const challenge = req.query['hub.challenge'];
+
+    const expectedToken = process.env.INSTAGRAM_VERIFY_TOKEN || 'avante_lia_instagram_webhook_2026';
+
+    if (mode === 'subscribe' && token === expectedToken) {
+      logger.info('[Instagram Webhook] Handshake da Meta verificado com sucesso!');
+      return res.status(200).send(challenge);
+    }
+
+    logger.warn(`[Instagram Webhook] Falha de autenticação do handshake. Token recebido: "${token}"`);
+    return res.status(403).send('Forbidden');
+  } catch (err) {
+    logger.error(`[Instagram Webhook] Erro no handshake: ${err.message}`);
+    return res.status(500).send('Internal Server Error');
+  }
+});
+
+// POST /webhooks/instagram - Recebimento de mensagens do Direct e acionamento da Lia
+router.post('/instagram', async (req, res) => {
+  // 1. A Meta exige resposta 200 imediata para não considerar o webhook instável
+  res.status(200).send('EVENT_RECEIVED');
+
+  try {
+    const body = req.body;
+    if (body.object !== 'instagram' && body.object !== 'page') {
+      return;
+    }
+
+    const entries = body.entry || [];
+    for (const entry of entries) {
+      const messagingEvents = entry.messaging || [];
+      for (const event of messagingEvents) {
+        const senderId = event.sender?.id;
+        const message = event.message;
+
+        // Ignorar se não for mensagem ou se for mensagem de eco (enviada por nós mesmos)
+        if (!message || message.is_echo) {
+          continue;
+        }
+
+        const userText = message.text;
+        if (!userText || !senderId) {
+          continue;
+        }
+
+        // Ignorar loop se o remetente for a própria conta da Avante
+        const instagramAccountId = process.env.INSTAGRAM_ACCOUNT_ID || '17841421480843011';
+        if (senderId === instagramAccountId) {
+          continue;
+        }
+
+        logger.info(`[Instagram Direct] Mensagem recebida de ${senderId}: "${userText}"`);
+
+        // Processar de forma assíncrona com o cérebro da Lia
+        (async () => {
+          try {
+            // Porta local da API
+            const port = process.env.PORT || 3001;
+            const liaResponse = await axios.post(`http://127.0.0.1:${port}/lia/chat`, {
+              session_id: `ig_${senderId}`,
+              mensagem: userText,
+              canal: 'instagram',
+              contexto: {
+                canal: 'instagram',
+                instagram_user_id: senderId
+              }
+            }, { timeout: 25000 });
+
+            const respostaLia = liaResponse.data?.resposta;
+            if (!respostaLia) {
+              logger.warn(`[Instagram Direct] Lia retornou resposta vazia para ${senderId}`);
+              return;
+            }
+
+            const token = await getInstagramAccessToken();
+            if (!token) {
+              logger.error('[Instagram Direct] Token de acesso do Instagram não encontrado no PB nem no .env');
+              return;
+            }
+
+            // Enviar resposta no Direct via Meta Graph API
+            await axios.post(
+              'https://graph.facebook.com/v21.0/me/messages',
+              {
+                recipient: { id: senderId },
+                message: { text: respostaLia }
+              },
+              {
+                headers: {
+                  'Authorization': `Bearer ${token}`,
+                  'Content-Type': 'application/json'
+                },
+                timeout: 15000
+              }
+            );
+
+            logger.info(`[Instagram Direct] Resposta enviada com sucesso para ${senderId}: "${respostaLia.substring(0, 60)}..."`);
+          } catch (liaErr) {
+            logger.error(`[Instagram Direct] Erro ao responder via Lia: ${liaErr.response?.data?.error?.message || liaErr.message}`);
+          }
+        })();
+      }
+    }
+  } catch (err) {
+    logger.error(`[Instagram Webhook] Erro crítico: ${err.message}`);
+  }
+});
+
 export default router;
