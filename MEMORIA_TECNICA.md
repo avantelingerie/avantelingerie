@@ -2376,3 +2376,30 @@ Garantir que as dimensï¾ƒï½µes e pesos cadastrados na loja e calculados no check
      - Saldo prÃ©-pago ativo verificado: R$ 187,00 (garante a veiculaÃ§Ã£o ininterrupta dos anÃºncios).
      - Quando o saldo atingir o limite mÃ­nimo configurado (ou na transiÃ§Ã£o para cobranÃ§a pÃ³s-paga por limite de faturamento), o sistema da Meta puxarÃ¡ o dÃ©bito automaticamente do **Elo final 1285**.
 - **Diretriz Registrada:** Nunca alterar o cartÃ£o Elo 1285 da posiÃ§Ã£o de principal sem autorizaÃ§Ã£o expressa do usuÃ¡rio.
+
+## 2026-11-09 (Noite) — Conexão Oficial da Lia no Instagram Direct & Fechamento Diário
+
+### 1. Conquistas Realizadas Hoje
+- **Otimização Meta Ads:** Elo 1285 recarga automática ativada (saldo R$ 185,84+). Públicos Varejo (22-54 anos, interesses enriquecidos de moda íntima) e Atacado (Pequenas empresas, revenda, venda direta) ativos e operando sem ruídos.
+- **Instagram Bio & Conversão:** Bio atualizada para 148 caracteres com cupom AVANTELIA10 e link oficial. Feed XML dinâmico ativo.
+- **Resposta Automática no Direct (Meta Business Suite):** Configurada com vídeo da confecção fabril, cupom AVANTELIA10, links da loja, atacado e Lia no WhatsApp.
+- **Permissão de Mensagens no Celular:** Ativada chave 'Permitir acesso às mensagens' em Pedidos de Contato / Ferramentas Conectadas no app do Instagram.
+- **Meta Graph API para a Lia (Instagram Direct):**
+  * App: Hub de anúncios da Avante (ID 1987006575274084).
+  * Casos de uso adicionados: Gerenciar mensagens/conteúdo Instagram, Messenger e WhatsApp.
+  * Papel de Instagram Tester aceito e autorizado para @avante.lingerie.
+  * Token de acesso permanente (SUAT) gerado e salvo em integracoes_config no PocketBase e .env local.
+  * Webhook verificado e aprovado com sucesso: https://avantelingerie.com.br/hcgi/api/webhooks/instagram.
+  * Inscrição em 'mensagens' e 'comentários' ativada (Subscribed) e assinatura ligada.
+
+### 2. Status do Cupom AVANTELIA10
+- **Código:** AVANTELIA10
+- **Desconto:** 10% OFF direto no subtotal.
+- **Piso Mínimo:** R$ 59,90 de compra.
+- **Público:** Varejo (B2C) em primeira compra.
+- **Regra Anticumulação:** Não acumula com 5% do PIX nem desconto progressivo.
+
+### 3. Frentes de Teste para Amanhã
+1. Teste de Direct no Instagram com perfil externo (resposta de boas-vindas com vídeo + raciocínio dinâmico da Lia).
+2. Validação do cupom AVANTELIA10 no checkout do site.
+3. Ingestão da Nova Coleção Fitness (9 pastas de produtos) no PocketBase.
