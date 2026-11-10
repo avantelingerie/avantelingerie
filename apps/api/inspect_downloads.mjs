@@ -21,3 +21,4 @@ inspectDir('C:\\Users\\comer\\Downloads\\Fitness tudo');
 
 console.log('\n=== INSPEÇÃO CAMISOLA RENDA ===');
 inspectDir('C:\\Users\\comer\\Downloads\\camisola_renda');
+
