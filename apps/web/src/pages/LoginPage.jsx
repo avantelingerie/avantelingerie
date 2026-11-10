@@ -84,9 +84,38 @@ export default function LoginPage() {
     }
 
     try {
-      await signup(signupData.email, signupData.password, signupData.name, signupData.tipo_cliente);
-      toast.success('Conta criada com sucesso!');
-      navigate('/cart', { replace: true });
+      const authData = await signup(signupData.email, signupData.password, signupData.name, signupData.tipo_cliente);
+
+      if (signupData.tipo_cliente === 'revendedor') {
+        try {
+          const userRec = authData?.record || pb.authStore.model;
+          if (userRec?.id) {
+            await pb.collection('users').update(userRec.id, {
+              commercial_profile: 'reseller',
+              account_level: 'basic',
+              tipo_cliente: 'revendedor'
+            }, { $autoCancel: false });
+
+            await pb.collection('solicitacoes_revendedor').create({
+              user_id: userRec.id,
+              nome: signupData.name.trim(),
+              whatsapp: 'Cadastro via Login',
+              cpf_cnpj: 'Pendente em Minha Conta',
+              cidade_estado: 'Pendente em Minha Conta',
+              ja_revende: 'sim',
+              status: 'pendente'
+            }, { $autoCancel: false });
+          }
+        } catch (subErr) {
+          console.warn('[LoginPage] Aviso ao registrar solicitação inicial B2B:', subErr);
+        }
+      }
+
+      toast.success(signupData.tipo_cliente === 'revendedor' 
+        ? '👑 Conta de revendedora criada! Complete seu WhatsApp no perfil para liberar descontos.'
+        : 'Conta criada com sucesso!');
+      const destination = signupData.tipo_cliente === 'revendedor' ? '/minha-conta' : '/cart';
+      navigate(destination, { replace: true });
     } catch (err) {
       console.error(err);
       setError(err.response?.message || 'Ocorreu um erro ao criar a conta. Tente outro e-mail.');

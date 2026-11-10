@@ -183,15 +183,15 @@ export default function QueroRevenderPage() {
       }
 
       // 1. Sign up as reseller
-      const authData = await signup(formData.email, numericWhatsapp, 'revendedor');
+      const authData = await signup(formData.email.trim().toLowerCase(), numericWhatsapp, formData.nome.trim(), 'revendedor');
 
       // 2. Complete name and whatsapp details
       const updated = await pb.collection('users').update(authData.record.id, {
-        name: formData.nome,
-        whatsapp: formData.whatsapp,
+        name: formData.nome.trim(),
+        whatsapp: numericWhatsapp,
         commercial_profile: 'reseller',
         account_level: 'basic',
-        cadastro_completo: false // Document completion pending
+        tipo_cliente: 'revendedor'
       }, { $autoCancel: false });
 
       updateUser(updated);
@@ -200,8 +200,8 @@ export default function QueroRevenderPage() {
       try {
         await pb.collection('solicitacoes_revendedor').create({
           user_id: updated.id,
-          nome: formData.nome,
-          whatsapp: formData.whatsapp,
+          nome: formData.nome.trim(),
+          whatsapp: numericWhatsapp,
           cpf_cnpj: 'Apenas Cadastro Inicial',
           cidade_estado: 'Apenas Cadastro Inicial',
           ja_revende: 'sim',

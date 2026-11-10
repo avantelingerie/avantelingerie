@@ -88,28 +88,45 @@ export function AuthProvider({ children }) {
   }, []);
 
   const login = async (email, password) => {
+    const cleanEmail = (email || '').trim().toLowerCase();
+    const cleanPassword = (password || '').trim();
+
     try {
-      const authData = await pb.collection('users').authWithPassword(email, password, { $autoCancel: false });
+      const authData = await pb.collection('users').authWithPassword(cleanEmail, cleanPassword, { $autoCancel: false });
       return authData;
-    } catch (error) {
-      throw error;
+    } catch (primaryError) {
+      // Fallback inteligente para revendedoras: se digitou telefone formatado (ex: (99) 99217-7332, 99 99217-7332 ou +5599...)
+      const numericPwd = cleanPassword.replace(/\D/g, '').replace(/^55/, '');
+      if (numericPwd.length >= 10 && numericPwd !== cleanPassword) {
+        try {
+          const authData = await pb.collection('users').authWithPassword(cleanEmail, numericPwd, { $autoCancel: false });
+          return authData;
+        } catch {
+          // Se o fallback também falhar, propaga o erro original
+        }
+      }
+      throw primaryError;
     }
   };
 
   const signup = async (email, password, name, tipo_cliente) => {
+    const cleanEmail = (email || '').trim().toLowerCase();
+    const cleanPassword = (password || '').trim();
+    const cleanName = (name || '').trim();
+
     try {
       // Create the user with role/type distinction
       await pb.collection('users').create({
-        name,
-        email,
-        password,
-        passwordConfirm: password,
+        name: cleanName,
+        email: cleanEmail,
+        password: cleanPassword,
+        passwordConfirm: cleanPassword,
         tipo_cliente: tipo_cliente || 'varejo',
         emailVisibility: true
       }, { $autoCancel: false });
       
       // Automatically log them in after successful creation
-      return await login(email, password);
+      return await login(cleanEmail, cleanPassword);
     } catch (error) {
       throw error;
     }

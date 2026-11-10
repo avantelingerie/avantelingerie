@@ -128,6 +128,31 @@ router.post('/boas-vindas-revendedor', async (req, res) => {
       return res.status(400).json({ erro: 'Dados insuficientes para envio de notificação' });
     }
 
+    // Sincronização Ativa de Senha de Fábrica (Regra Suprema Avante Lingerie):
+    // Garante que a senha no PocketBase corresponda rigorosamente ao WhatsApp informado na notificação oficial
+    const cleanPhoneDigits = (whatsapp || '').replace(/\D/g, '').replace(/^55/, '');
+    if (cleanPhoneDigits.length >= 10) {
+      try {
+        let targetUserId = userId;
+        if (!targetUserId && email) {
+          const userRec = await pb.collection('users').getFirstListItem(`email = "${(email || '').trim().toLowerCase()}"`, { $autoCancel: false });
+          targetUserId = userRec.id;
+        }
+        if (targetUserId) {
+          await pb.collection('users').update(targetUserId, {
+            password: cleanPhoneDigits,
+            passwordConfirm: cleanPhoneDigits,
+            tipo_cliente: 'revendedor',
+            commercial_profile: 'reseller',
+            account_level: 'verified'
+          }, { $autoCancel: false });
+          logger.info(`[notificacoes] Senha e perfil de atacado sincronizados com sucesso para usuário ${targetUserId} (${cleanPhoneDigits})`);
+        }
+      } catch (errSync) {
+        logger.warn(`[notificacoes] Aviso ao sincronizar senha de revendedora para ${email}: ${errSync.message}`);
+      }
+    }
+
     const result = await notificationService.sendResellerWelcomeNotification({
       name,
       email,

@@ -10,3 +10,4 @@ apps/web/node_modules/
 .wwebjs_auth/
 apps/whatsapp-bot/.wwebjs_auth/
 apps/whatsapp-bot/.reset_flag
+scratch/
