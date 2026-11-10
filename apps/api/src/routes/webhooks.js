@@ -648,12 +648,40 @@ router.post('/mercadopago', async (req, res) => {
 });
 
 // ==========================================
-// WEBHOOK INSTAGRAM DIRECT (LIA AI ASSISTANT)
+// WEBHOOK META (INSTAGRAM DIRECT & FACEBOOK MESSENGER - LIA AI)
 // ==========================================
 
-// Helper para buscar o token de acesso do Instagram (PocketBase com fallback para process.env)
-async function getInstagramAccessToken() {
+// Cache em memória para evitar duplicações de mensagens reenviadas pela Meta
+const processedMetaMessageIds = new Set();
+function isMetaMessageDuplicated(mid) {
+  if (!mid) return false;
+  if (processedMetaMessageIds.has(mid)) return true;
+  processedMetaMessageIds.add(mid);
+  if (processedMetaMessageIds.size > 2000) {
+    const it = processedMetaMessageIds.values();
+    for (let i = 0; i < 500; i++) {
+      processedMetaMessageIds.delete(it.next().value);
+    }
+  }
+  return false;
+}
+
+// Helper para buscar o token de acesso da Meta (PocketBase com fallback para process.env)
+async function getMetaAccessToken(channel = 'instagram') {
   try {
+    if (channel === 'messenger' || channel === 'facebook') {
+      const fbConfigs = await pb.collection('integracoes_config').getFullList({
+        filter: '(servico = "facebook" || servico = "messenger") && chave_nome = "access_token" && ativo = true',
+        $autoCancel: false,
+      });
+      if (fbConfigs.length > 0 && fbConfigs[0].chave_valor) {
+        return fbConfigs[0].chave_valor;
+      }
+      if (process.env.FACEBOOK_PAGE_ACCESS_TOKEN) {
+        return process.env.FACEBOOK_PAGE_ACCESS_TOKEN;
+      }
+    }
+
     const configs = await pb.collection('integracoes_config').getFullList({
       filter: 'servico = "instagram" && chave_nome = "access_token" && ativo = true',
       $autoCancel: false,
@@ -664,120 +692,196 @@ async function getInstagramAccessToken() {
   } catch (err) {
     // fallback silencioso
   }
-  return process.env.INSTAGRAM_PAGE_ACCESS_TOKEN || null;
+  return process.env.INSTAGRAM_PAGE_ACCESS_TOKEN || process.env.META_ACCESS_TOKEN || null;
 }
 
-// GET /webhooks/instagram - Verificação do Webhook (Meta Handshake)
-router.get('/instagram', (req, res) => {
+// Helper para buscar o verify_token configurado
+async function getMetaExpectedVerifyToken() {
+  try {
+    const configs = await pb.collection('integracoes_config').getFullList({
+      filter: 'servico = "instagram" && chave_nome = "verify_token" && ativo = true',
+      $autoCancel: false,
+    });
+    if (configs.length > 0 && configs[0].chave_valor) {
+      return configs[0].chave_valor;
+    }
+  } catch (err) {}
+  return process.env.INSTAGRAM_VERIFY_TOKEN || 'avante_lia_instagram_webhook_2026';
+}
+
+// Formata links e URLs no texto da resposta para o formato ideal das redes sociais Meta
+function formatResponseForMeta(text) {
+  if (!text) return text;
+  // 1. Substitui links markdown relativos [Texto](/rota) por URL completa
+  let formatted = text.replace(/\[([^\]]+)\]\(\/([^\)]+)\)/g, '$1: https://avantelingerie.com.br/$2');
+  // 2. Substitui links markdown absolutos [Texto](https://...) por Texto: URL
+  formatted = formatted.replace(/\[([^\]]+)\]\((https?:\/\/[^\)]+)\)/g, '$1: $2');
+  return formatted;
+}
+
+// Handshake unificado para Instagram e Messenger
+const handleMetaHandshake = async (req, res, platformName) => {
   try {
     const mode = req.query['hub.mode'];
     const token = req.query['hub.verify_token'];
     const challenge = req.query['hub.challenge'];
 
-    const expectedToken = process.env.INSTAGRAM_VERIFY_TOKEN || 'avante_lia_instagram_webhook_2026';
+    const expectedToken = await getMetaExpectedVerifyToken();
 
     if (mode === 'subscribe' && token === expectedToken) {
-      logger.info('[Instagram Webhook] Handshake da Meta verificado com sucesso!');
+      logger.info(`[${platformName} Webhook] Handshake da Meta verificado com sucesso!`);
       return res.status(200).send(challenge);
     }
 
-    logger.warn(`[Instagram Webhook] Falha de autenticação do handshake. Token recebido: "${token}"`);
+    logger.warn(`[${platformName} Webhook] Falha de autenticação do handshake. Token recebido: "${token}"`);
     return res.status(403).send('Forbidden');
   } catch (err) {
-    logger.error(`[Instagram Webhook] Erro no handshake: ${err.message}`);
+    logger.error(`[${platformName} Webhook] Erro no handshake: ${err.message}`);
     return res.status(500).send('Internal Server Error');
   }
-});
+};
 
-// POST /webhooks/instagram - Recebimento de mensagens do Direct e acionamento da Lia
-router.post('/instagram', async (req, res) => {
+// Processamento unificado de mensagens recebidas (Direct e Messenger)
+const handleMetaIncomingMessages = async (req, res, defaultPlatform) => {
   // 1. A Meta exige resposta 200 imediata para não considerar o webhook instável
   res.status(200).send('EVENT_RECEIVED');
 
   try {
     const body = req.body;
-    if (body.object !== 'instagram' && body.object !== 'page') {
+    if (!body || (body.object !== 'instagram' && body.object !== 'page')) {
       return;
     }
 
+    const isFacebookPage = body.object === 'page';
+    const channelName = isFacebookPage ? 'messenger' : 'instagram';
+    const sessionPrefix = isFacebookPage ? 'fb_' : 'ig_';
+    const tagLog = isFacebookPage ? '[Facebook Messenger]' : '[Instagram Direct]';
+
     const entries = body.entry || [];
     for (const entry of entries) {
+      const ownId = entry.id;
       const messagingEvents = entry.messaging || [];
+
       for (const event of messagingEvents) {
         const senderId = event.sender?.id;
         const message = event.message;
+        const postback = event.postback;
 
-        // Ignorar se não for mensagem ou se for mensagem de eco (enviada por nós mesmos)
-        if (!message || message.is_echo) {
+        // Ignorar se for mensagem de eco (enviada por nós mesmos)
+        if (message && message.is_echo) {
           continue;
         }
 
-        const userText = message.text;
+        // Ignorar duplicações enviadas pela Meta
+        if (message?.mid && isMetaMessageDuplicated(message.mid)) {
+          logger.info(`${tagLog} Mensagem ${message.mid} já processada anteriormente. Ignorando.`);
+          continue;
+        }
+
+        // Extrai o texto da mensagem ou do postback (ex: botão Começar / Get Started)
+        const userText = message?.text || message?.quick_reply?.payload || postback?.payload || postback?.title;
         if (!userText || !senderId) {
           continue;
         }
 
-        // Ignorar loop se o remetente for a própria conta da Avante
+        // Ignorar loop se o remetente for a própria conta da Avante ou ID da página
         const instagramAccountId = process.env.INSTAGRAM_ACCOUNT_ID || '17841421480843011';
-        if (senderId === instagramAccountId) {
+        if (senderId === ownId || senderId === instagramAccountId) {
           continue;
         }
 
-        logger.info(`[Instagram Direct] Mensagem recebida de ${senderId}: "${userText}"`);
+        logger.info(`${tagLog} Mensagem recebida de ${senderId}: "${userText}"`);
 
         // Processar de forma assíncrona com o cérebro da Lia
         (async () => {
           try {
-            // Porta local da API
             const port = process.env.PORT || 3001;
             const liaResponse = await axios.post(`http://127.0.0.1:${port}/lia/chat`, {
-              session_id: `ig_${senderId}`,
+              session_id: `${sessionPrefix}${senderId}`,
               mensagem: userText,
-              canal: 'instagram',
+              canal: channelName,
               contexto: {
-                canal: 'instagram',
-                instagram_user_id: senderId
+                canal: channelName,
+                meta_user_id: senderId,
+                plataforma: channelName
               }
             }, { timeout: 25000 });
 
-            const respostaLia = liaResponse.data?.resposta;
-            if (!respostaLia) {
-              logger.warn(`[Instagram Direct] Lia retornou resposta vazia para ${senderId}`);
+            const rawRespostaLia = liaResponse.data?.resposta;
+            if (!rawRespostaLia) {
+              logger.warn(`${tagLog} Lia retornou resposta vazia ou atendimento pausado para ${senderId}`);
               return;
             }
 
-            const token = await getInstagramAccessToken();
+            const respostaFormatada = formatResponseForMeta(rawRespostaLia);
+
+            const token = await getMetaAccessToken(channelName);
             if (!token) {
-              logger.error('[Instagram Direct] Token de acesso do Instagram não encontrado no PB nem no .env');
+              logger.error(`${tagLog} Token de acesso da Meta não encontrado no PB nem no .env`);
               return;
             }
 
-            // Enviar resposta no Direct via Meta Graph API
-            await axios.post(
-              'https://graph.facebook.com/v21.0/me/messages',
-              {
-                recipient: { id: senderId },
-                message: { text: respostaLia }
-              },
-              {
-                headers: {
-                  'Authorization': `Bearer ${token}`,
-                  'Content-Type': 'application/json'
-                },
-                timeout: 15000
-              }
-            );
+            // O endpoint padrão da Meta Graph API para envio utiliza o ID da conta/página de origem
+            const targetAccountId = ownId || (channelName === 'instagram' ? instagramAccountId : 'me');
 
-            logger.info(`[Instagram Direct] Resposta enviada com sucesso para ${senderId}: "${respostaLia.substring(0, 60)}..."`);
+            try {
+              await axios.post(
+                `https://graph.facebook.com/v21.0/${targetAccountId}/messages`,
+                {
+                  recipient: { id: senderId },
+                  message: { text: respostaFormatada }
+                },
+                {
+                  headers: {
+                    'Authorization': `Bearer ${token}`,
+                    'Content-Type': 'application/json'
+                  },
+                  timeout: 15000
+                }
+              );
+              logger.info(`${tagLog} Resposta enviada com sucesso para ${senderId}: "${respostaFormatada.substring(0, 60)}..."`);
+            } catch (sendErr) {
+              // Fallback para /me/messages caso o ID específico falhe em contas vinculadas
+              if (targetAccountId !== 'me') {
+                logger.warn(`${tagLog} Tentativa com ${targetAccountId} falhou (${sendErr.message}), tentando fallback para /me/messages...`);
+                await axios.post(
+                  'https://graph.facebook.com/v21.0/me/messages',
+                  {
+                    recipient: { id: senderId },
+                    message: { text: respostaFormatada }
+                  },
+                  {
+                    headers: {
+                      'Authorization': `Bearer ${token}`,
+                      'Content-Type': 'application/json'
+                    },
+                    timeout: 15000
+                  }
+                );
+                logger.info(`${tagLog} Resposta enviada com sucesso via fallback /me/messages para ${senderId}`);
+              } else {
+                throw sendErr;
+              }
+            }
           } catch (liaErr) {
-            logger.error(`[Instagram Direct] Erro ao responder via Lia: ${liaErr.response?.data?.error?.message || liaErr.message}`);
+            logger.error(`${tagLog} Erro ao responder via Lia: ${liaErr.response?.data?.error?.message || liaErr.message}`);
           }
         })();
       }
     }
   } catch (err) {
-    logger.error(`[Instagram Webhook] Erro crítico: ${err.message}`);
+    logger.error(`[Meta Webhook] Erro crítico no processamento: ${err.message}`);
   }
-});
+};
+
+// Rotas do Instagram Direct
+router.get('/instagram', (req, res) => handleMetaHandshake(req, res, 'Instagram'));
+router.post('/instagram', (req, res) => handleMetaIncomingMessages(req, res, 'instagram'));
+
+// Rotas do Facebook Messenger
+router.get('/facebook', (req, res) => handleMetaHandshake(req, res, 'Facebook'));
+router.post('/facebook', (req, res) => handleMetaIncomingMessages(req, res, 'messenger'));
+router.get('/messenger', (req, res) => handleMetaHandshake(req, res, 'Messenger'));
+router.post('/messenger', (req, res) => handleMetaIncomingMessages(req, res, 'messenger'));
 
 export default router;

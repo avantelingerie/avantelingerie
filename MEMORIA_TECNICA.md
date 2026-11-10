@@ -2439,3 +2439,25 @@ Garantir que as dimensﾃｵes e pesos cadastrados na loja e calculados no check
   * **AuthContext.jsx:** Adicionado método equestPasswordReset(email) com sanitização de e-mail integrado à coleção users do PocketBase.
   * **Template de E-mail de Recuperação (PocketBase):** Atualizado o esetPasswordTemplate no PocketBase em produção para layout corporativo em português ("🔐 Redefinição de Senha — Avante Lingerie"), com botão dourado de alta conversão apontando para o link seguro.
   * **Comprovação Prática (Regra de Ouro):** Testado e validado disparo real via API (pb.collection('users').requestPasswordReset('mariarillarylacerda@gmail.com')), retornando 	rue via SMTP Resend ativo.
+
+### 4. Expansão Omnichannel: Lia AI no Instagram Direct e Facebook Messenger (Meta Graph API)
+- **Data:** 10 de Novembro de 2026
+- **Objetivo:** Unificar e ativar a Lia (IA de vendas e atendimento) no Instagram Direct (@avante.lingerie) e no Facebook Messenger, permitindo conversação contínua (bate-papo ping-pong persuasivo), resolução de dúvidas de atacado/varejo, consulta de produtos e rastreio de pedidos.
+- **Diagnóstico e Descoberta Crítica de Arquitetura (Nemotron / Visão Panorâmica):**
+  * Ao auditar a Meta Graph API, identificou-se que o token ativo no PocketBase (integracoes_config) é um **System User Token** (Avante Ads Hub System User - ID 122098239363546483) com permissões ativas instagram_basic, instagram_manage_comments, instagram_content_publish, instagram_manage_messages, public_profile.
+  * **Pegadinha da Meta resolvida:** Requisições para POST /me/messages falhavam com erro GraphMethodException: Object with ID 'me' does not exist... porque usuários de sistema não são contas de página. A chamada oficial correta na Graph API para usuários de sistema é POST https://graph.facebook.com/v21.0/${targetAccountId}/messages (onde targetAccountId = 17841421480843011 para Instagram ou ID da Página para Messenger). Foi implementado fallback resiliente caso o token seja migrado para Page Token no futuro.
+  * **Formatação de Links para Redes Sociais:** Links relativos do markdown do site (ex: [Entrar na Conta](/login)) foram convertidos pela função ormatResponseForMeta para URLs absolutas no formato direto Entrar na Conta: https://avantelingerie.com.br/login, permitindo que os apps do Instagram e Messenger gerem cards e links clicáveis nativos na tela do celular do cliente.
+  * **Prevenção de Loops e Deduplicação:** Adicionado cache processedMetaMessageIds para ignorar reenvios automáticos da Meta (mid), ignorar mensagens de eco (is_echo: true) e mensagens enviadas pela própria conta da fábrica.
+  * **Consciência de Canal na Lia (apps/api/src/routes/lia.js):** Adicionada regra 14 no cérebro da Lia orientando que quando o atendimento for via Instagram ou Messenger, a IA nunca deve sugerir "mande um direct" (pois o cliente já está no Direct), conduzindo a conversa com frases curtas de WhatsApp e enviando links completos do site.
+- **Arquivos Alterados:**
+  * pps/api/src/routes/webhooks.js: Handshakes e endpoints unificados /webhooks/instagram, /webhooks/facebook e /webhooks/messenger, deduplicação, formatação de links e disparo via Graph API v21.0.
+  * pps/api/src/routes/lia.js: Consciência situacional de canal (instagram, messenger, whatsapp, site) e blindagem de comunicação nas redes sociais.
+- **Validação Empírica (Regra de Ouro):**
+  * pps/api/test_omnichannel.mjs: 7/7 testes executados com 100% de sucesso:
+    1. Formatação de Links Relativos para URL absoluta do Meta: Aprovado
+    2. Formatação de Links Absolutos: Aprovado
+    3. Deduplicação de Mensagens (isMetaMessageDuplicated): Aprovado
+    4. Handshake Meta no Endpoint Real de Produção (200 OK + challenge): Aprovado
+    5. Validação de Token Meta no PocketBase: Aprovado
+    6. Processamento Real da Lia no canal Instagram (Anthropic): Aprovado
+    7. Processamento Real da Lia no canal Messenger (Anthropic): Aprovado
