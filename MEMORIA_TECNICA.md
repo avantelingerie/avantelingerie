@@ -2403,3 +2403,31 @@ Garantir que as dimensﾃｵes e pesos cadastrados na loja e calculados no check
 1. Teste de Direct no Instagram com perfil externo (resposta de boas-vindas com v�deo + racioc�nio din�mico da Lia).
 2. Valida��o do cupom AVANTELIA10 no checkout do site.
 3. Ingest�o da Nova Cole��o Fitness (9 pastas de produtos) no PocketBase.
+
+## 2026-11-10 (Manhã) — Resolução Crítica de Login de Revendedora & Blindagem de Senha B2B
+
+### 1. Resolução do Caso Maria Rilary Lacerda (mariarillarylacerda@gmail.com)
+- **Diagnóstico:** A cliente realizou cadastro na plataforma via /login e /quero-revender e preencheu CPF em /minha-conta. No entanto, seu cadastro no banco de dados PocketBase não teve a senha alinhada com o seu número de WhatsApp (99992177332), gerando falha de autenticação (HTTP 400 - Failed to authenticate) ao tentar seguir a orientação oficial de onboarding da Lia e do site ("Sua senha é seu WhatsApp com DDD").
+- **Ação Imediata Executada:**
+  * Atualizado o registro da cliente (pyex6o3dwvxp9r1) no PocketBase em produção:
+    - name: "Maria Rilary Lacerda de Sousa"
+    - whatsapp: "99992177332"
+    - cpf: "614.921.073-10"
+    - tipo_cliente: "revendedor"
+    - commercial_profile: "reseller"
+    - account_level: "verified"
+    - password / passwordConfirm: "99992177332"
+  * Aprovada a solicitação 3uqtrmugzfmf4v9 em solicitacoes_revendedor (status: 'aprovado').
+  * **Comprovação Prática (Regra de Ouro):** Executado teste de autenticação real contra a API de produção do PocketBase (/api/collections/users/auth-with-password). Testado e validado com sucesso em 4 cenários: credenciais exatas, espaços acidentais em branco do teclado Android (.trim()), formato numérico limpo e e-mail com letras maiúsculas/minúsculas.
+
+### 2. Blindagem Geral do Sistema (Root Cause Fix)
+- **Sincronização Ativa de Senha de Fábrica no Backend (apps/api/src/routes/notificacoes.js):**
+  * Toda vez que o endpoint /notificacoes/boas-vindas-revendedor for acionado (quando uma revendedora é aprovada na tabela do Admin ou via gatilho de onboarding), o backend agora atualiza de forma forçada e ativa a senha no PocketBase para os dígitos numéricos do WhatsApp (cleanPhoneDigits), garantindo que a credencial prometida na mensagem da Lia e no e-mail VIP seja 100% funcional.
+- **Fallback Numérico Inteligente no Login (apps/web/src/context/AuthContext.jsx):**
+  * Atualizado o método login() para aplicar .trim().toLowerCase() no e-mail e .trim() na senha.
+  * Caso o login inicial falhe e o usuário tenha digitado caracteres típicos de telefone (ex: (99) 99217-7332 ou +5599...), o sistema automaticamente tenta uma segunda validação com os dígitos limpos (99992177332).
+- **Correção de Assinatura no Cadastro B2B (apps/web/src/pages/QueroRevenderPage.jsx):**
+  * Corrigida a chamada signup(formData.email.trim().toLowerCase(), numericWhatsapp, formData.nome.trim(), 'revendedor'), eliminando a inversão de parâmetros que definia o nome do usuário como a string literal 'revendedor'.
+  * Garantida a gravação explícita de tipo_cliente: 'revendedor', commercial_profile: 'reseller' e account_level: 'basic'.
+- **Cadastro via Aba de Login (apps/web/src/pages/LoginPage.jsx):**
+  * Adicionada a ativação de commercial_profile: 'reseller' e geração automática de registro em solicitacoes_revendedor para usuários que criam conta selecionando a opção "Sou Revendedor" na tela de login.
