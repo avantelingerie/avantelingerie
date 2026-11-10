@@ -2461,3 +2461,22 @@ Garantir que as dimensﾃｵes e pesos cadastrados na loja e calculados no check
     5. Validação de Token Meta no PocketBase: Aprovado
     6. Processamento Real da Lia no canal Instagram (Anthropic): Aprovado
     7. Processamento Real da Lia no canal Messenger (Anthropic): Aprovado
+
+### 5. Cadastro Completo: Linha Fitness & Camisola em Renda (PocketBase)
+- **Data:** 10 de Novembro de 2026
+- **Objetivo:** Cadastrar todos os produtos das pastas 'Fitness tudo' e 'camisola_renda' no PocketBase em produção, com fotos de alta resolução, títulos comerciais persuasivos de alta conversão, SKUs padronizados, NCMs fiscais, variações completas (cores x tamanhos) e status inicial travado/inativo (status: false) para posterior precificação pelo gestor.
+- **Estrutura Criada:**
+  1. **Categoria Criada:** 'Fitness' (slug: 'fitness', id: 'l7kv65taa8e9emo', NCM padrão: 6104.63.00), conectando perfeitamente com o Carrossel do Frontend.
+  2. **Produtos Cadastrados (10 produtos no total):**
+     - Camisola Sensual em Renda com Decote V e Detalhes Sofisticados Feminina (Ref: AVL-CAM-7420 | NCM: 6208.21.00 | 20 variações | Capa Preto Frente / Verso Preto)
+     - Calcinha Cinta Modeladora Cintura Alta Compressão Anatômica Efeito Invisível (Ref: AVL-CIN-1080 | NCM: 6212.90.00 | 4 variações | Capa Preta / Verso Preta)
+     - Conjunto Fitness Element em Poliamida Top Nadador e Bermuda Ciclista Zero Transparência (Ref: AVL-FIT-ELEM | NCM: 6112.12.00 | 20 variações | Capa Preto / Verso Preto)
+     - Conjunto Fitness Ref. 0182 Poliamida Premium Alta Compressão Confortável (Ref: AVL-FIT-0182 | NCM: 6112.12.00 | 8 variações | Capa Cinza / Verso Cinza)
+     - Conjunto Fitness Canelado em Poliamida Alta Sustentação e Conforto Térmico (Ref: AVL-FIT-CAN | NCM: 6112.12.00 | 16 variações | Capa Preto / Verso Preto)
+     - Conjunto Fitness Ref. 2193 Poliamida com Top Alças Largas e Cós Anatômico (Ref: AVL-FIT-2193 | NCM: 6112.12.00 | 6 variações | Capa Preto / Verso Preto)
+     - Conjunto Fitness Wave Poliamida Texturizada Efeito Modelador Anti-Celulite (Ref: AVL-FIT-WAVE | NCM: 6112.12.00 | 20 variações | Capa Preto / Verso Preto)
+     - Calça Legging Fitness Ref. 0109 Poliamida Cós Alto Chapa Barriga Zero Transparência (Ref: AVL-LEG-0109 | NCM: 6104.63.00 | 16 variações | Capa Cinza / Verso Cinza)
+     - Calça Legging Fitness Canelada em Poliamida Cós Anatômico Alta Elasticidade (Ref: AVL-LEG-CAN | NCM: 6104.63.00 | 12 variações | Capa Azul Marinho / Verso Azul Marinho)
+     - Short Fitness Ref. 0184 Poliamida Meia Coxa com Cós Duplo Anatômico Anti-Enrolamento (Ref: AVL-SHO-0184 | NCM: 6104.63.00 | 16 variações | Capa Preta / Verso Preta)
+  3. **Total de Variações Cadastradas:** 138 variações em 'variacoes' com estoque inicial de 50 un/var e imagens associadas por cor.
+  4. **Status:** Todos os produtos e variações salvos com status: false (inativo/travado), aguardando precificação no painel de administração da loja.
