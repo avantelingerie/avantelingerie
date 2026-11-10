@@ -183,6 +183,56 @@ async function runOmnichannelTests() {
     failed++;
   }
 
+  // Teste 7: Parser de Payload Unificado (Instagram entry.changes vs Facebook entry.messaging)
+  console.log('\n--- TESTE 7: Parser de Payloads Híbridos (entry.messaging + entry.changes) ---');
+  function extractEventsFromEntry(entry) {
+    let messagingEvents = [];
+    if (Array.isArray(entry.messaging) && entry.messaging.length > 0) {
+      messagingEvents = entry.messaging;
+    } else if (Array.isArray(entry.changes) && entry.changes.length > 0) {
+      for (const change of entry.changes) {
+        if (change.value) {
+          messagingEvents.push(change.value);
+        }
+      }
+    }
+    return messagingEvents;
+  }
+
+  // Simulação Facebook
+  const fbEntry = { id: 'fb_page_123', messaging: [{ sender: { id: 'user_fb_1' }, message: { text: 'Oi pelo Messenger' } }] };
+  const fbEvents = extractEventsFromEntry(fbEntry);
+  if (fbEvents.length === 1 && fbEvents[0].message.text === 'Oi pelo Messenger') {
+    console.log('✅ Teste 7.1 (Formato Facebook messaging): Extraído com sucesso!');
+    passed++;
+  } else {
+    console.error('❌ Teste 7.1 Falhou:', fbEvents);
+    failed++;
+  }
+
+  // Simulação Instagram Graph API
+  const igEntry = {
+    id: '17841421480843011',
+    changes: [
+      {
+        field: 'messages',
+        value: {
+          sender: { id: 'user_ig_esposa_1' },
+          recipient: { id: '17841421480843011' },
+          message: { mid: 'mid.ig.esposa.1', text: 'Boa tarde Lia!' }
+        }
+      }
+    ]
+  };
+  const igEvents = extractEventsFromEntry(igEntry);
+  if (igEvents.length === 1 && igEvents[0].message.text === 'Boa tarde Lia!') {
+    console.log('✅ Teste 7.2 (Formato Instagram changes): Extraído com sucesso!');
+    passed++;
+  } else {
+    console.error('❌ Teste 7.2 Falhou:', igEvents);
+    failed++;
+  }
+
   console.log('\n====================================================');
   console.log(`📊 RESUMO DOS TESTES: ${passed} PASSARAM / ${failed} FALHARAM`);
   console.log('====================================================');

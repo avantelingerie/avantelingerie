@@ -758,9 +758,24 @@ const handleMetaIncomingMessages = async (req, res, defaultPlatform) => {
     const tagLog = isFacebookPage ? '[Facebook Messenger]' : '[Instagram Direct]';
 
     const entries = body.entry || [];
+    logger.info(`${tagLog} Webhook acionado: object=${body.object}, total_entries=${entries.length}`);
+
     for (const entry of entries) {
       const ownId = entry.id;
-      const messagingEvents = entry.messaging || [];
+      
+      // Suporta formato clássico (entry.messaging) E formato do Instagram Graph API (entry.changes)
+      let messagingEvents = [];
+      if (Array.isArray(entry.messaging) && entry.messaging.length > 0) {
+        messagingEvents = entry.messaging;
+      } else if (Array.isArray(entry.changes) && entry.changes.length > 0) {
+        for (const change of entry.changes) {
+          if (change.value) {
+            messagingEvents.push(change.value);
+          }
+        }
+      }
+
+      logger.info(`${tagLog} Processando entry ${ownId}: ${messagingEvents.length} evento(s) encontrado(s)`);
 
       for (const event of messagingEvents) {
         const senderId = event.sender?.id;
@@ -773,13 +788,14 @@ const handleMetaIncomingMessages = async (req, res, defaultPlatform) => {
         }
 
         // Ignorar duplicações enviadas pela Meta
-        if (message?.mid && isMetaMessageDuplicated(message.mid)) {
-          logger.info(`${tagLog} Mensagem ${message.mid} já processada anteriormente. Ignorando.`);
+        const messageId = message?.mid || postback?.mid || event.mid;
+        if (messageId && isMetaMessageDuplicated(messageId)) {
+          logger.info(`${tagLog} Mensagem ${messageId} já processada anteriormente. Ignorando.`);
           continue;
         }
 
         // Extrai o texto da mensagem ou do postback (ex: botão Começar / Get Started)
-        const userText = message?.text || message?.quick_reply?.payload || postback?.payload || postback?.title;
+        const userText = message?.text || message?.quick_reply?.payload || postback?.payload || postback?.title || event.text;
         if (!userText || !senderId) {
           continue;
         }
