@@ -2431,3 +2431,11 @@ Garantir que as dimensﾃｵes e pesos cadastrados na loja e calculados no check
   * Garantida a gravação explícita de tipo_cliente: 'revendedor', commercial_profile: 'reseller' e account_level: 'basic'.
 - **Cadastro via Aba de Login (apps/web/src/pages/LoginPage.jsx):**
   * Adicionada a ativação de commercial_profile: 'reseller' e geração automática de registro em solicitacoes_revendedor para usuários que criam conta selecionando a opção "Sou Revendedor" na tela de login.
+
+### 3. Implementação e Ativação do Fluxo "Esqueceu a senha?"
+- **Diagnóstico:** O botão "Esqueceu a senha?" na tela de login era apenas um elemento estático sem evento de clique (não disparava nenhuma ação), e o template de e-mail de redefinição de senha no PocketBase estava no padrão genérico em inglês.
+- **Implementação Realizada:**
+  * **Modal Interativo em LoginPage.jsx:** Criado modal com Dialog (Radix UI) que abre ao clicar em "Esqueceu a senha?", pré-preenche o e-mail digitado no login, inclui caixa explicativa com lembrete VIP para revendedoras (lembrando que a senha inicial é o WhatsApp) e botão de envio com estado de loading e feedback de sucesso.
+  * **AuthContext.jsx:** Adicionado método equestPasswordReset(email) com sanitização de e-mail integrado à coleção users do PocketBase.
+  * **Template de E-mail de Recuperação (PocketBase):** Atualizado o esetPasswordTemplate no PocketBase em produção para layout corporativo em português ("🔐 Redefinição de Senha — Avante Lingerie"), com botão dourado de alta conversão apontando para o link seguro.
+  * **Comprovação Prática (Regra de Ouro):** Testado e validado disparo real via API (pb.collection('users').requestPasswordReset('mariarillarylacerda@gmail.com')), retornando 	rue via SMTP Resend ativo.
