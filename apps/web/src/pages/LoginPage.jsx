@@ -2,16 +2,17 @@ import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { toast } from 'sonner';
-import { Loader2, UserCircle2, Sparkles, ChevronRight, Eye, EyeOff } from 'lucide-react';
+import { Loader2, UserCircle2, Sparkles, ChevronRight, Eye, EyeOff, KeyRound, Mail, CheckCircle2 } from 'lucide-react';
 import { useAuth } from '@/context/AuthContext.jsx';
 
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs.jsx";
 import { Input } from "@/components/ui/input.jsx";
 import { Label } from "@/components/ui/label.jsx";
 import { Button } from "@/components/ui/button.jsx";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog.jsx";
 
 export default function LoginPage() {
-  const { login, signup, isAuthenticated } = useAuth();
+  const { login, signup, isAuthenticated, requestPasswordReset } = useAuth();
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -36,6 +37,39 @@ export default function LoginPage() {
   });
   const [showSignupPassword, setShowSignupPassword] = useState(false);
   const [showSignupConfirmPassword, setShowSignupConfirmPassword] = useState(false);
+
+  // Forgot password modal state
+  const [isForgotModalOpen, setIsForgotModalOpen] = useState(false);
+  const [forgotEmail, setForgotEmail] = useState('');
+  const [isSendingReset, setIsSendingReset] = useState(false);
+  const [resetSentSuccess, setResetSentSuccess] = useState(false);
+
+  const handleOpenForgotPassword = () => {
+    setForgotEmail(loginData.email?.trim() || '');
+    setResetSentSuccess(false);
+    setIsForgotModalOpen(true);
+  };
+
+  const handleForgotPasswordSubmit = async (e) => {
+    e.preventDefault();
+    const cleanEmail = (forgotEmail || '').trim().toLowerCase();
+    if (!cleanEmail || !cleanEmail.includes('@')) {
+      toast.error('Informe um e-mail válido para redefinição.');
+      return;
+    }
+
+    setIsSendingReset(true);
+    try {
+      await requestPasswordReset(cleanEmail);
+      setResetSentSuccess(true);
+      toast.success('Link de recuperação enviado com sucesso!');
+    } catch (err) {
+      console.error('[LoginPage] Erro ao solicitar recuperação de senha:', err);
+      toast.error('Não foi possível enviar o link. Verifique o e-mail informado.');
+    } finally {
+      setIsSendingReset(false);
+    }
+  };
 
   // Redirect if already authenticated
   useEffect(() => {
@@ -435,7 +469,12 @@ export default function LoginPage() {
                 <div className="form-group">
                   <div className="flex items-center justify-between mb-2">
                     <Label htmlFor="login-password" style={{ marginBottom: 0 }}>Senha</Label>
-                    <button type="button" className="text-xs font-semibold hover:underline" style={{ color: 'var(--color-gold-dark)' }}>
+                    <button 
+                      type="button" 
+                      onClick={handleOpenForgotPassword}
+                      className="text-xs font-semibold hover:underline cursor-pointer transition-colors" 
+                      style={{ color: 'var(--color-gold-dark)' }}
+                    >
                       Esqueceu a senha?
                     </button>
                   </div>
@@ -610,6 +649,96 @@ export default function LoginPage() {
           </p>
         </div>
       </div>
+
+      {/* MODAL ESQUECEU A SENHA */}
+      <Dialog open={isForgotModalOpen} onOpenChange={setIsForgotModalOpen}>
+        <DialogContent className="sm:max-w-md bg-white border border-[#c59b5f]/30 rounded-3xl p-6 sm:p-8 shadow-2xl">
+          <DialogHeader className="text-left mb-4">
+            <div className="w-12 h-12 rounded-2xl bg-[#FCF9F5] border border-[#c59b5f]/30 flex items-center justify-center mb-3">
+              <KeyRound className="w-6 h-6 text-[#c59b5f]" />
+            </div>
+            <DialogTitle className="text-2xl font-serif font-bold text-[#121212]">
+              Recuperar Senha
+            </DialogTitle>
+            <DialogDescription className="text-gray-600 text-sm mt-1 leading-relaxed">
+              Informe seu e-mail cadastrado para receber o link seguro de redefinição de senha.
+            </DialogDescription>
+          </DialogHeader>
+
+          {/* Dica de Ouro para Revendedoras */}
+          <div className="bg-[#FCF9F5] border border-[#c59b5f]/25 rounded-2xl p-4 text-xs text-gray-700 leading-relaxed mb-4">
+            <p className="font-bold text-[#92400e] mb-1 flex items-center gap-1.5">
+              <span>💡</span> Dica para Revendedoras:
+            </p>
+            <p>
+              Se você é revendedora e nunca alterou sua senha, sua senha inicial de fábrica é o seu <strong>número de WhatsApp com DDD</strong> (apenas números). Se mesmo assim preferir cadastrar uma nova senha, continue abaixo:
+            </p>
+          </div>
+
+          {resetSentSuccess ? (
+            <div className="text-center py-6 space-y-4">
+              <div className="w-16 h-16 rounded-full bg-green-50 border border-green-200 flex items-center justify-center mx-auto text-green-600">
+                <CheckCircle2 className="w-8 h-8" />
+              </div>
+              <div className="space-y-1">
+                <h4 className="font-bold text-gray-900 text-base">E-mail Enviado com Sucesso!</h4>
+                <p className="text-xs text-gray-600 max-w-xs mx-auto">
+                  Enviamos um link de redefinição para <strong>{forgotEmail}</strong>. Verifique sua caixa de entrada e a pasta de spam.
+                </p>
+              </div>
+              <Button
+                type="button"
+                onClick={() => setIsForgotModalOpen(false)}
+                className="w-full mt-4 bg-[#121212] hover:bg-[#c59b5f] text-white hover:text-black rounded-xl font-bold transition-all shadow-md"
+              >
+                VOLTAR AO LOGIN
+              </Button>
+            </div>
+          ) : (
+            <form onSubmit={handleForgotPasswordSubmit} className="space-y-4">
+              <div className="space-y-2">
+                <Label htmlFor="forgot-email" className="text-xs font-bold text-gray-700 uppercase tracking-wider">
+                  Seu E-mail Cadastrado
+                </Label>
+                <div className="relative">
+                  <Input
+                    id="forgot-email"
+                    type="email"
+                    required
+                    placeholder="seuemail@exemplo.com"
+                    value={forgotEmail}
+                    onChange={(e) => setForgotEmail(e.target.value)}
+                    className="pl-10 h-12 rounded-xl border-gray-300 focus:border-[#c59b5f]"
+                  />
+                  <Mail className="w-4 h-4 text-gray-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
+                </div>
+              </div>
+
+              <div className="flex gap-3 pt-2">
+                <Button
+                  type="button"
+                  variant="outline"
+                  onClick={() => setIsForgotModalOpen(false)}
+                  className="w-1/3 rounded-xl border-gray-200 text-gray-600 font-semibold"
+                >
+                  Cancelar
+                </Button>
+                <Button
+                  type="submit"
+                  disabled={isSendingReset}
+                  className="w-2/3 bg-[#121212] hover:bg-[#c59b5f] text-white hover:text-black rounded-xl font-bold transition-all shadow-md"
+                >
+                  {isSendingReset ? (
+                    <Loader2 className="w-4 h-4 animate-spin mx-auto" />
+                  ) : (
+                    'ENVIAR LINK'
+                  )}
+                </Button>
+              </div>
+            </form>
+          )}
+        </DialogContent>
+      </Dialog>
     </div>
   );
 }

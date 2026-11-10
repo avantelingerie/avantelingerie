@@ -146,6 +146,15 @@ export function AuthProvider({ children }) {
     localStorage.removeItem('pocketbase_auth_logout_trigger');
   };
 
+  const requestPasswordReset = async (email) => {
+    const cleanEmail = (email || '').trim().toLowerCase();
+    try {
+      return await pb.collection('users').requestPasswordReset(cleanEmail);
+    } catch (error) {
+      throw error;
+    }
+  };
+
   const updateUser = (userData) => {
     if (userData && pb.authStore.isValid) {
       pb.authStore.save(pb.authStore.token, userData);
@@ -154,7 +163,7 @@ export function AuthProvider({ children }) {
   };
 
   return (
-    <AuthContext.Provider value={{ currentUser, isAuthenticated, isLoading, login, signup, logout, updateUser }}>
+    <AuthContext.Provider value={{ currentUser, isAuthenticated, isLoading, login, signup, logout, updateUser, requestPasswordReset }}>
       {children}
     </AuthContext.Provider>
   );
