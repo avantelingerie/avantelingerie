@@ -52,7 +52,7 @@ Este documento consolida os identificadores definitivos, credenciais, configura�
 * **URL Oficial de Atacado:** `https://avantelingerie.com.br/categoria/todas?modo=atacado`
 * **Mídia Hero:** Vídeo de alta costura da fábrica `https://avantelingerie.com.br/video/hero_2.mp4` (loop, muted).
 * **Copywriting:** *"Confeccionamos nossas próprias peças com padrão de alta costura em Nova Friburgo. Venda direta da fábrica no Varejo e Atacado."*
-* **Atendimento Humano:** Botão direto para o WhatsApp oficial da fábrica (`https://wa.me/5522998634547`).
+* **Atendimento Humano no Atacado:** Botão direto para o WhatsApp pessoal e administrativo do Sr. Luiz Machado (`https://wa.me/5522981124281` - `(22) 98112-4281`).
 * **Regra de Exibição:** Quando em `?modo=atacado`, os cards exibem o preço de atacado como custo principal (`Seu Custo de Fábrica`), com preço de varejo riscado e margem de lucro. A ordenação padrão é pelo Menor Preço (`price`).
 * **Trava no Carrinho / Checkout:** Pedidos no modo atacado exigem o valor mínimo de **R$ 69,90** em produtos para liberar a finalização.
 * **Promoção Automática B2B no Banco:**
@@ -60,5 +60,13 @@ Este documento consolida os identificadores definitivos, credenciais, configura�
   * Isso faz a cliente aparecer imediatamente com a **Tag Laranja [Aprovado B2B]** no painel administrativo (`Base de Clientes`).
   * Se houver solicitação pendente em `solicitacoes_revendedor`, ela é aprovada automaticamente.
   * O sistema despacha o e-mail VIP de boas-vindas com o acesso ao Portal de Fotos/Vídeos para revenda.
+
+## 5. Protocolo de Transbordo e Atendimento Humano (Sr. Luiz Machado) (11/11/2026)
+
+* **Princípio:** A Lia AI continua atendendo 100% no automático como consultora virtual da loja e no WhatsApp oficial (`(22) 98122-5010`).
+* **Condição de Transbordo (MANDATÓRIA):** SE E SOMENTE SE o cliente pedir explicitamente para falar com uma pessoa, um atendente humano, gerência ou administrativo (ex: "quero falar com um humano", "falar com atendente", "falar com o Luiz"):
+  * A Lia responde: *"Vou passar para o administrativo Sr. Luiz Machado."*
+  * Contato direto: WhatsApp `(22) 98112-4281` (`https://wa.me/5522981124281`).
+* **Botão na Vitrine de Atacado (`/categoria/todas?modo=atacado`):** Aponta diretamente para o WhatsApp do Sr. Luiz Machado (`https://wa.me/5522981124281`) para fechar vendas de grandes revendedoras e lojistas.
 
 
