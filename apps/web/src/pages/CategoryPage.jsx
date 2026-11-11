@@ -415,13 +415,13 @@ export default function CategoryPage() {
               </div>
             </div>
           ) : (
-            <div className="w-full md:w-1/2 h-[220px] md:h-[300px] relative rounded-3xl overflow-hidden border border-[#c59b5f]/20 shadow-2xl">
+            <div className="w-full md:w-1/2 h-[220px] md:h-[320px] relative rounded-3xl overflow-hidden border border-[#c59b5f]/30 shadow-2xl bg-black flex items-center justify-center group">
               <img
-                src="https://images.unsplash.com/photo-1701017718943-996aa586e955?w=800&q=80"
-                alt={formattedCategoryName}
-                className="w-full h-full object-cover object-center"
+                src="/banner-avante-institucional.jpg"
+                alt="Avante Lingerie — Fábrica em Nova Friburgo RJ"
+                className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-r from-[#121212] via-transparent to-transparent opacity-85 md:opacity-100"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent pointer-events-none"></div>
             </div>
           )}
 
