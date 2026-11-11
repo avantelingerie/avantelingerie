@@ -2490,3 +2490,34 @@ Garantir que as dimensﾃｵes e pesos cadastrados na loja e calculados no check
   4. **Pauta Prioritária para a Manhã Seguinte:**
      - **Etapa A:** Concluir o vínculo da Página do Facebook no Meta Business Suite com permissão de mensagens para o gatilho automático de entrada do Direct.
      - **Etapa B:** Desenvolver e ativar a **Etapa 3: Auto-Poster de Fotos, Carrosséis e Reels** no perfil do Instagram '@avante.lingerie' utilizando a permissão 'instagram_content_publish' já concedida no token da Meta.
+
+
+### 7. Google Ads & Google Merchant Center: Integração MCP, Auditoria Sênior e Blindagem de Políticas de Catálogo
+- **Data:** 11 de Novembro de 2026
+- **Contas e Identificadores Oficiais (NÃO ESQUECER / MEMÓRIA PERMANENTE):**
+  1. **Google Ads:** ID da Conta: `139-429-2049` (Customer ID: `1394292049`) | Nome: Avante Lingerie.
+  2. **Google Merchant Center:** ID da Conta: `5860101191` | Nome: Avante Lingerie 5860101191.
+  3. **Feed XML Dinâmico da Loja:** `https://avantelingerie.com.br/hcgi/api/marketing/feed.xml` (especificação RSS 2.0 / Google Base).
+  4. **Servidor MCP na IDE:** `google-ads` em `C:\Users\comer\.gemini\config\mcp\google-ads\server.js` (atua como conector unificado 2-em-1: Google Ads API v25 + Google Content API for Shopping).
+  5. **Configuração .env do MCP:** `C:\Users\comer\.gemini\config\mcp\google-ads\.env` contendo `GOOGLE_ADS_DEFAULT_CUSTOMER_ID=1394292049` e `GOOGLE_MERCHANT_CENTER_ID=5860101191`.
+  6. **Escopos OAuth 2.0 Autorizados:** `https://www.googleapis.com/auth/adwords` e `https://www.googleapis.com/auth/content` (autorizados via e-mail oficial `avantelingerie@gmail.com`).
+
+- **Diagnóstico da Auditoria Sênior de Tráfego:**
+  * **Investimento Recente (30 dias):** R$ 251,58 (R$ 218,10 no B2B + R$ 33,48 no B2C).
+  * **Cliques Totais:** 141 cliques (95 B2B a R$ 2,30/clique | 46 B2C a R$ 0,73/clique).
+  * **CTR:** B2B = 10,82% | B2C = 12,37% (Textos dos anúncios de alta atratividade).
+  * **Gargalos Identificados para Ausência de Vendas:**
+    1. *Mismatch de Intenção no B2B:* Revendedoras buscando atacado/fábrica (95 cliques) sendo direcionadas para a Home de varejo em vez de uma landing page ou WhatsApp de revenda com pedido mínimo de R$ 69,90.
+    2. *Ausência de Google Shopping:* Anúncios eram 100% texto (Search). Moda íntima exige vitrine visual (Google Shopping / PMax com foto e preço no topo da busca).
+    3. *Falsos Positivos de Política no Merchant Center:* 2 produtos (14,3%) estavam com status `Limitado` por 'conteúdo adulto restrito / interesses sexuais' devido a termos nos títulos (marido apressado, abertura, sexy, sensual).
+
+- **Solução Implementada e Validada (Primeira Regra de Ouro):**
+  1. *Higienização no Banco de Dados (PocketBase):*
+     - `h4otfay091lfexc`: Atualizado de 'Body rendado com abertura marido apressado Langerie Sexy' para `Body Feminino Rendado em Renda Floral Premium com Alças Reguláveis`.
+     - `zy5jl9jtjcez1wo`: Atualizado de 'Conjunto Marido Apressado: Sedução e Praticidade em Renda Premium' para `Conjunto Lingerie em Renda Cropped Especial Bicolor`.
+     - `yrdej6o0ghj8tej`: Higienizado o termo 'Sensual' para `Elegante`.
+  2. *Sanitizador Automático no Backend:* Adicionada a função `sanitizeForGoogleShopping` em `apps/api/src/routes/marketing.js`, blindando o Feed XML contra qualquer termo proibido de entrar no catálogo do Google.
+  3. *Validação Empírica:* Script local `verify_feed_compliance.mjs` comprovou 0 violações em todos os 14 produtos.
+  4. *Deploy em Produção:* Commit `45d0528` enviado para a branch `main`, deploy executado pelo GitHub Actions (Workflow #158).
+  5. *Teste Real na VPS:* Requisição HTTP direta em `https://avantelingerie.com.br/hcgi/api/marketing/feed.xml` retornou Status 200 OK, 38.787 bytes e confirmação de ZERO termos proibidos online.
+  6. *Sincronização no Merchant Center:* Disparada a atualização manual (`↻ Atualizar`) às 07:53 (11/11/2026), processando os novos títulos para liberação total no Google Shopping.
