@@ -2480,3 +2480,13 @@ Garantir que as dimensﾃｵes e pesos cadastrados na loja e calculados no check
      - Short Fitness Ref. 0184 Poliamida Meia Coxa com Cós Duplo Anatômico Anti-Enrolamento (Ref: AVL-SHO-0184 | NCM: 6104.63.00 | 16 variações | Capa Preta / Verso Preta)
   3. **Total de Variações Cadastradas:** 138 variações em 'variacoes' com estoque inicial de 50 un/var e imagens associadas por cor.
   4. **Status:** Todos os produtos e variações salvos com status: false (inativo/travado), aguardando precificação no painel de administração da loja.
+
+### 6. Validação Omnichannel da Lia no Instagram Direct & Próximas Etapas
+- **Data:** 10 de Novembro de 2026 (Fechamento Noturno)
+- **Status do Canal Instagram Direct:**
+  1. **Envio via Graph API (Validado & Comprovado na Prática):** Testado e homologado o envio de mensagem direta da Lia via Graph API (POST /17841421480843011/messages) para o perfil testador @roseli.trajano.9 (ID: 1545913480906021). A Meta confirmou a entrega com message_id oficial e o print do celular comprovou o recebimento da mensagem no Direct.
+  2. **Parser Híbrido de Webhooks no Backend:** Atualizado 'apps/api/src/routes/webhooks.js' para suportar tanto 'entry.messaging' (Facebook Messenger) quanto 'entry.changes' (Instagram Graph API). Bateria ampliada para 9/9 testes automatizados aprovados ('test_omnichannel.mjs'). Deploy em produção na VPS ativo e verificado via GitHub Actions (Workflow #157 / Commit 5ad02c9).
+  3. **Diagnóstico do Gatilho de Entrada (Inbound):** Mapeado que a Meta exige que a Página do Facebook vinculada ao Instagram (@avante.lingerie) execute o vínculo via edge 'subscribed_apps' com permissões de 'pages_manage_metadata' no System User para o repasse contínuo dos eventos de DMs recebidas.
+  4. **Pauta Prioritária para a Manhã Seguinte:**
+     - **Etapa A:** Concluir o vínculo da Página do Facebook no Meta Business Suite com permissão de mensagens para o gatilho automático de entrada do Direct.
+     - **Etapa B:** Desenvolver e ativar a **Etapa 3: Auto-Poster de Fotos, Carrosséis e Reels** no perfil do Instagram '@avante.lingerie' utilizando a permissão 'instagram_content_publish' já concedida no token da Meta.
