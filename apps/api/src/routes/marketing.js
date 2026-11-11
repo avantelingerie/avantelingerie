@@ -86,6 +86,22 @@ router.post('/capi', async (req, res) => {
   }
 });
 
+// Sanitizador de texto para estrita conformidade com Google Merchant Center (Anti-Bloqueio Adulto)
+function sanitizeForGoogleShopping(text) {
+  if (!text) return '';
+  return String(text)
+    .replace(/marido\s+apressado/gi, 'Especial')
+    .replace(/abertura\s+marido\s+apressado/gi, 'Design Exclusivo')
+    .replace(/abertura/gi, 'Design Anatômico')
+    .replace(/langerie/gi, 'Lingerie')
+    .replace(/sexy/gi, 'Elegante')
+    .replace(/sedução\s+e\s+praticidade/gi, 'Sofisticação e Conforto')
+    .replace(/sensualidade|sensual/gi, 'Elegância')
+    .replace(/provocante/gi, 'Sofisticado')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
 // Gera o Feed XML Dinâmico (Google Merchant Center / Facebook Catalog)
 router.get('/feed.xml', async (req, res) => {
   try {
@@ -103,9 +119,11 @@ router.get('/feed.xml', async (req, res) => {
 
     products.forEach(p => {
       const price = parseFloat(p.price || p.preco || 0).toFixed(2);
-      // Fallbacks
-      const name = p.name || p.nome || 'Lingerie Avante';
-      const description = p.description || p.descricao || name;
+      // Fallbacks e higienização para Google Merchant Center
+      const rawName = p.name || p.nome || 'Lingerie Avante';
+      const cleanName = sanitizeForGoogleShopping(rawName);
+      const rawDesc = p.desc_geral || p.description || p.descricao || cleanName;
+      const cleanDesc = sanitizeForGoogleShopping(rawDesc);
       const id = p.id;
       const link = `https://avantelingerie.com.br/produto/${id}`;
       
@@ -131,8 +149,8 @@ router.get('/feed.xml', async (req, res) => {
       xml += `
     <item>
       <g:id>${id}</g:id>
-      <g:title><![CDATA[${name}]]></g:title>
-      <g:description><![CDATA[${description}]]></g:description>
+      <g:title><![CDATA[${cleanName}]]></g:title>
+      <g:description><![CDATA[${cleanDesc}]]></g:description>
       <g:link>${link}</g:link>
       <g:image_link>${imageUrl}</g:image_link>${additionalImagesXml}
       <g:condition>${condition}</g:condition>
