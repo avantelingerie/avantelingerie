@@ -617,6 +617,50 @@ router.post('/mercadopago', async (req, res) => {
         } catch (errBling) {
           logger.warn(`[MercadoPagoWebhook][${correlationId}] Falha não-bloqueante no Bling ERP: ${errBling.message}`);
         }
+
+        // Promoção automática B2B (Revendedora VIP - Tag Laranja) se for pedido de atacado ou >= R$ 69,90
+        try {
+          const isAtacadoOrder = (pedido.observacoes && pedido.observacoes.includes('ATACADO')) ||
+            (pedido.itens && pedido.itens.some(i => i.is_atacado || (Number(i.preco_atacado) > 0 && Number(pedido.valor_total) >= 69.90)));
+          
+          if (isAtacadoOrder && pedido.cliente_id) {
+            await pb.collection('users').update(pedido.cliente_id, {
+              tipo_cliente: 'revendedor',
+              commercial_profile: 'reseller',
+              account_level: 'verified'
+            }, { $autoCancel: false });
+            logger.info(`[MercadoPagoWebhook][${correlationId}] Cliente ${pedido.cliente_id} promovido automaticamente a Revendedora VIP (Tag Laranja Aprovado B2B).`);
+
+            // Se houver solicitacao de revenda pendente, marca como aprovado
+            try {
+              const sols = await pb.collection('solicitacoes_revendedor').getFullList({
+                filter: `user_id = "${pedido.cliente_id}" || cpf_cnpj = "${pedido.cpf}"`,
+                $autoCancel: false
+              });
+              for (const s of sols) {
+                if (s.status !== 'aprovado') {
+                  await pb.collection('solicitacoes_revendedor').update(s.id, { status: 'aprovado' }, { $autoCancel: false });
+                }
+              }
+            } catch (errSol) {
+              logger.warn(`[MercadoPagoWebhook][${correlationId}] Erro ao atualizar solicitacoes_revendedor: ${errSol.message}`);
+            }
+
+            // Dispara notificação VIP de boas-vindas com dados da revendedora
+            try {
+              await notificationService.sendResellerWelcomeNotification({
+                name: pedido.cliente_nome,
+                email: pedido.cliente_email,
+                phone: pedido.cliente_telefone
+              });
+              logger.info(`[MercadoPagoWebhook][${correlationId}] Notificação VIP de Revendedora despachada para ${pedido.cliente_email}.`);
+            } catch (errNotifVip) {
+              logger.warn(`[MercadoPagoWebhook][${correlationId}] Erro ao enviar notificação VIP de boas-vindas: ${errNotifVip.message}`);
+            }
+          }
+        } catch (errPromo) {
+          logger.warn(`[MercadoPagoWebhook][${correlationId}] Erro ao promover revendedora VIP: ${errPromo.message}`);
+        }
       })().catch(errSide => logger.error(`[MercadoPagoWebhook][${correlationId}] Erro em side-effects: ${errSide.message}`));
 
       return res.status(200).json({ status: 'approved_processed', orderId });

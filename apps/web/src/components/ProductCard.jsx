@@ -13,7 +13,8 @@ export default function ProductCard({
   onComprarAgora,
   onAddToCart,
   onFavorite,
-  isFavorited
+  isFavorited,
+  isAtacadoMode
 }) {
   const navigate = useNavigate();
   const { currentUser } = useAuth();
@@ -22,6 +23,8 @@ export default function ProductCard({
 
   const id = data.id || 'default-id';
   const name = data.nome_produto || data.name || 'Produto Exclusivo Avante';
+
+  const productUrl = `/produto/${id}${isAtacadoMode ? '?modo=atacado' : ''}`;
 
   const rawCategory = data.expand?.categoria_id?.nome || data.categoria || data.category || 'Lingerie';
   const category = typeof rawCategory === 'string'
@@ -33,7 +36,7 @@ export default function ProductCard({
   const price = data.preco_varejo || data.price || 0;
   const oldPrice = data.preco_antigo || data.original_price || data.oldPrice || (price * 1.3);
 
-  const isReseller = currentUser?.commercial_profile === 'reseller' || currentUser?.tipo_cliente === 'revendedor';
+  const isReseller = currentUser?.commercial_profile === 'reseller' || currentUser?.tipo_cliente === 'revendedor' || Boolean(isAtacadoMode);
   const wholesalePrice = data.preco_atacado || data.price_wholesale || (price * 0.6);
 
   const activePrice = isReseller ? wholesalePrice : price;
@@ -358,7 +361,7 @@ export default function ProductCard({
         });
       }
     } catch (_) {}
-    navigate(`/produto/${id}`);
+    navigate(productUrl);
   };
 
   return (
@@ -366,7 +369,7 @@ export default function ProductCard({
 
       {/* 1. Image Section */}
       <div className="relative aspect-[3/4] w-full overflow-hidden bg-white shrink-0">
-        <Link to={`/produto/${id}`} className="block w-full h-full">
+        <Link to={productUrl} className="block w-full h-full">
           <img
             src={mainImage}
             alt={name}
@@ -426,7 +429,7 @@ export default function ProductCard({
         </div>
 
         {/* 3. Product Name */}
-        <Link to={`/produto/${id}`} className="block mb-2 flex-shrink-0">
+        <Link to={productUrl} className="block mb-2 flex-shrink-0">
           <h3 className="text-gray-900 font-serif font-bold text-sm sm:text-base leading-snug line-clamp-2 hover:text-[#c59b5f] transition-colors min-h-[2.5rem]">
             {name}
           </h3>
@@ -461,7 +464,7 @@ export default function ProductCard({
             {colors.length > 4 && (
               <button
                 className="w-[18px] h-[18px] rounded-full border border-gray-200 flex items-center justify-center text-[8px] font-bold text-gray-400 hover:border-[#c59b5f] hover:text-[#c59b5f] transition-all bg-white"
-                onClick={(e) => { e.preventDefault(); navigate(`/produto/${id}`); }}
+                onClick={(e) => { e.preventDefault(); navigate(productUrl); }}
               >
                 +{colors.length - 4}
               </button>

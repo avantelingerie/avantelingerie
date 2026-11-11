@@ -1,6 +1,6 @@
 // Caminho do arquivo no Horizons: apps/web/src/pages/CategoryPage.jsx
 import React, { useState, useEffect, useCallback } from 'react';
-import { useParams, Link, useNavigate } from 'react-router-dom';
+import { useParams, Link, useNavigate, useSearchParams } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import {
   ChevronRight,
@@ -9,7 +9,10 @@ import {
   Grid2X2,
   X,
   Star,
-  Check
+  Check,
+  MessageCircle,
+  Sparkles,
+  Crown
 } from 'lucide-react';
 import { Button } from '@/components/ui/button.jsx';
 import { Slider } from '@/components/ui/slider.jsx';
@@ -45,6 +48,8 @@ const TYPES = ['Conjunto', 'Calcinha', 'Sutiã', 'Cropped', 'Body'];
 export default function CategoryPage() {
   const { categoryName } = useParams();
   const navigate = useNavigate();
+  const [searchParams, setSearchParams] = useSearchParams();
+  const isModoAtacado = searchParams.get('modo') === 'atacado';
 
   const [products, setProducts] = useState([]);
   const [totalItems, setTotalItems] = useState(0);
@@ -54,7 +59,7 @@ export default function CategoryPage() {
   const [hasMore, setHasMore] = useState(false);
 
   const [layout, setLayout] = useState(4); // 2 or 4 columns
-  const [sort, setSort] = useState('-vendidos_semana');
+  const [sort, setSort] = useState(isModoAtacado ? 'price' : '-vendidos_semana');
   const [filters, setFilters] = useState({
     sizes: [],
     colors: [],
@@ -69,6 +74,16 @@ export default function CategoryPage() {
   const formattedCategoryName = entityName || (categoryName
     ? categoryName.charAt(0).toUpperCase() + categoryName.slice(1).replace(/-/g, ' ')
     : 'Todas as Peças');
+
+  // Sincroniza modo atacado para ordenação pelo menor preço e memória de compras
+  useEffect(() => {
+    if (isModoAtacado) {
+      setSort('price');
+      try {
+        localStorage.setItem('avante_modo_compra', 'atacado');
+      } catch (e) {}
+    }
+  }, [isModoAtacado]);
 
   // Busca o ID da categoria ou coleção pelo slug assim que categoryName mudar
   useEffect(() => {
@@ -290,34 +305,125 @@ export default function CategoryPage() {
         <div className="max-w-7xl mx-auto relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
 
           <div className="flex flex-col items-start w-full md:w-1/2 z-20">
-            <div className="flex items-center gap-2 text-white/50 text-xs md:text-sm mb-6 font-medium tracking-wide">
+            <div className="flex items-center gap-2 text-white/50 text-xs md:text-sm mb-4 font-medium tracking-wide">
               <Link to="/" className="hover:text-[#c59b5f] transition-colors">Home</Link>
               <ChevronRight className="w-3.5 h-3.5" />
               <Link to="/categoria/todas" className="hover:text-[#c59b5f] transition-colors cursor-pointer">Categorias</Link>
               <ChevronRight className="w-3.5 h-3.5" />
-              <span className="text-[#c59b5f] font-bold">{formattedCategoryName}</span>
+              <span className="text-[#c59b5f] font-bold">
+                {isModoAtacado ? 'Atacado da Fábrica' : formattedCategoryName}
+              </span>
             </div>
 
-            <h1 className="text-4xl md:text-5.5xl lg:text-6.5xl font-serif font-bold text-[#c59b5f] mb-4 leading-tight drop-shadow-md">
-              {formattedCategoryName}
-            </h1>
-            <p className="text-gray-300 text-base md:text-lg mb-8 max-w-md font-light leading-relaxed">
-              Peças exclusivas de alta costura que abraçam e valorizam a beleza do seu corpo com conforto absoluto e o toque de ouro Avante.
-            </p>
-            <div className="inline-flex items-center bg-white/5 border border-[#c59b5f]/30 rounded-full px-5 py-2 text-white text-xs font-semibold backdrop-blur-sm shadow-md">
-              <span className="w-2 h-2 rounded-full bg-[#c59b5f] mr-2.5 animate-pulse"></span>
-              {totalItems} produtos encontrados
-            </div>
+            {isModoAtacado ? (
+              <>
+                <div className="inline-flex items-center bg-[#c59b5f]/15 border border-[#c59b5f]/40 rounded-full px-4 py-1.5 text-[#c59b5f] text-xs font-bold uppercase tracking-wider mb-4 shadow-sm">
+                  <span className="w-2 h-2 rounded-full bg-emerald-500 mr-2 animate-pulse"></span>
+                  Fábrica Própria em Nova Friburgo/RJ • Venda Direta
+                </div>
+
+                <h1 className="text-3xl md:text-5xl lg:text-5.5xl font-serif font-bold text-[#c59b5f] mb-3 leading-tight drop-shadow-md">
+                  Catálogo de Atacado da Fábrica
+                </h1>
+
+                <p className="text-gray-100 text-sm md:text-base mb-4 font-medium leading-relaxed max-w-xl">
+                  Confeccionamos nossas próprias peças com padrão de alta costura em Nova Friburgo. Venda direta da fábrica no Varejo e Atacado.
+                </p>
+
+                {/* Box de Condição Especial de Fábrica */}
+                <div className="bg-gradient-to-r from-black/70 to-[#1e1a14]/70 border border-[#c59b5f]/30 rounded-2xl p-4 mb-6 backdrop-blur-md max-w-xl shadow-lg">
+                  <div className="flex items-center gap-2 text-[#c59b5f] font-bold text-xs uppercase tracking-wider mb-1">
+                    <Sparkles className="w-4 h-4 text-[#c59b5f]" /> Condição Especial da Fábrica
+                  </div>
+                  <p className="text-gray-300 text-xs md:text-sm leading-relaxed">
+                    Pedido Mínimo de apenas <strong className="text-white">R$ 69,90</strong> na sacola para liberar o preço de atacado. Ao finalizar a compra, você é aprovada automaticamente como <strong className="text-[#c59b5f]">Revendedora Oficial VIP</strong>.
+                  </p>
+                </div>
+
+                {/* Ações Atacado: WhatsApp + Alternador para Varejo */}
+                <div className="flex flex-wrap items-center gap-3">
+                  <a
+                    href="https://wa.me/5522998634547?text=Ol%C3%A1!%20Vim%20pelo%20Cat%C3%A1logo%20de%20Atacado%20da%20Avante%20Lingerie%20e%20gostaria%20de%20atendimento%20da%20f%C3%A1brica."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#20ba59] text-white font-bold text-xs md:text-sm px-6 py-3.5 rounded-full shadow-lg transition-all duration-300 hover:scale-105 active:scale-95"
+                  >
+                    <MessageCircle className="w-4 h-4" /> Falar com a Fábrica no WhatsApp
+                  </a>
+
+                  <button
+                    onClick={() => {
+                      const p = new URLSearchParams(searchParams);
+                      p.delete('modo');
+                      setSearchParams(p);
+                      try { localStorage.removeItem('avante_modo_compra'); } catch (e) {}
+                    }}
+                    className="text-xs text-gray-400 hover:text-white underline transition-colors px-3 py-2"
+                  >
+                    Ver preços de Varejo (peças avulsas)
+                  </button>
+                </div>
+              </>
+            ) : (
+              <>
+                <h1 className="text-4xl md:text-5.5xl lg:text-6.5xl font-serif font-bold text-[#c59b5f] mb-4 leading-tight drop-shadow-md">
+                  {formattedCategoryName}
+                </h1>
+                <p className="text-gray-300 text-base md:text-lg mb-6 max-w-md font-light leading-relaxed">
+                  Peças exclusivas de alta costura que abraçam e valorizam a beleza do seu corpo com conforto absoluto e o toque de ouro Avante.
+                </p>
+
+                <div className="flex flex-wrap items-center gap-4 mb-4">
+                  <button
+                    onClick={() => {
+                      const p = new URLSearchParams(searchParams);
+                      p.set('modo', 'atacado');
+                      setSearchParams(p);
+                    }}
+                    className="inline-flex items-center gap-2 bg-gradient-to-r from-[#c59b5f] to-[#e5c595] text-black font-extrabold text-xs px-5 py-3 rounded-full shadow-md hover:brightness-110 transition-all active:scale-95"
+                  >
+                    <Sparkles className="w-4 h-4" /> 🏷️ Ver Preços de Atacado da Fábrica (Mínimo R$ 69,90)
+                  </button>
+
+                  <div className="inline-flex items-center bg-white/5 border border-[#c59b5f]/30 rounded-full px-5 py-2 text-white text-xs font-semibold backdrop-blur-sm shadow-md">
+                    <span className="w-2 h-2 rounded-full bg-[#c59b5f] mr-2.5 animate-pulse"></span>
+                    {totalItems} produtos encontrados
+                  </div>
+                </div>
+              </>
+            )}
           </div>
 
-          <div className="w-full md:w-1/2 h-[220px] md:h-[300px] relative rounded-3xl overflow-hidden border border-[#c59b5f]/20 shadow-2xl">
-            <img
-              src="https://images.unsplash.com/photo-1701017718943-996aa586e955?w=800&q=80"
-              alt={formattedCategoryName}
-              className="w-full h-full object-cover object-center"
-            />
-            <div className="absolute inset-0 bg-gradient-to-r from-[#121212] via-transparent to-transparent opacity-85 md:opacity-100"></div>
-          </div>
+          {/* MÍDIA DO BANNER: VÍDEO DA FÁBRICA NO MODO ATACADO OU IMAGEM NO VAREJO */}
+          {isModoAtacado ? (
+            <div className="w-full md:w-1/2 h-[260px] md:h-[350px] relative rounded-3xl overflow-hidden border border-[#c59b5f]/30 shadow-2xl bg-black">
+              <video
+                src="https://avantelingerie.com.br/video/hero_2.mp4"
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-full h-full object-cover object-center"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-black/20 pointer-events-none" />
+              <div className="absolute bottom-3 left-4 right-4 z-10 bg-black/60 backdrop-blur-md rounded-xl p-2.5 border border-[#c59b5f]/30 flex items-center justify-between">
+                <span className="text-[11px] font-bold text-white flex items-center gap-1.5">
+                  <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                  Confeccionado em Nova Friburgo — RJ
+                </span>
+                <span className="text-[10px] text-[#c59b5f] font-bold uppercase tracking-wider">Alta Costura</span>
+              </div>
+            </div>
+          ) : (
+            <div className="w-full md:w-1/2 h-[220px] md:h-[300px] relative rounded-3xl overflow-hidden border border-[#c59b5f]/20 shadow-2xl">
+              <img
+                src="https://images.unsplash.com/photo-1701017718943-996aa586e955?w=800&q=80"
+                alt={formattedCategoryName}
+                className="w-full h-full object-cover object-center"
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-[#121212] via-transparent to-transparent opacity-85 md:opacity-100"></div>
+            </div>
+          )}
 
         </div>
       </div>
@@ -475,7 +581,8 @@ export default function CategoryPage() {
               <React.Fragment key={product.id}>
                 <ProductCard
                   produto={product}
-                  onComprarAgora={(p) => navigate(`/produto/${p.id}`)}
+                  isAtacadoMode={isModoAtacado}
+                  onComprarAgora={(p) => navigate(`/produto/${p.id}${isModoAtacado ? '?modo=atacado' : ''}`)}
                 />
 
                 {/* INLINE LUXURY BANNER EVERY 8 PRODUCTS */}

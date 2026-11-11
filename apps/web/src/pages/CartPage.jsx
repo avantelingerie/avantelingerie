@@ -78,7 +78,8 @@ export default function CartPage() {
   
   const total = Math.max(0, subtotal - discountInfo.amount + shipping.cost);
 
-  const isReseller = currentUser?.commercial_profile === 'reseller' || currentUser?.tipo_cliente === 'revendedor';
+  const isAtacadoSession = typeof window !== 'undefined' && localStorage.getItem('avante_modo_compra') === 'atacado';
+  const isReseller = currentUser?.commercial_profile === 'reseller' || currentUser?.tipo_cliente === 'revendedor' || cart.some(i => i.is_atacado) || isAtacadoSession;
   const limiteUpgrade = descontosService.getLimiteUpgrade(configuracoes);
 
   // Calculate retail and wholesale subtotals for savings display

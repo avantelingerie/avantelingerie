@@ -190,7 +190,8 @@ export function useCart() {
   // High #11 & Medium #24: Align pricing fallback and B2B reseller pricing consistently
   const getItemPrice = useCallback((item) => {
     if (!item) return 0;
-    const isReseller = currentUser?.commercial_profile === 'reseller' || currentUser?.tipo_cliente === 'revendedor';
+    const isAtacadoSession = typeof window !== 'undefined' && localStorage.getItem('avante_modo_compra') === 'atacado';
+    const isReseller = currentUser?.commercial_profile === 'reseller' || currentUser?.tipo_cliente === 'revendedor' || Boolean(item.is_atacado) || isAtacadoSession;
     if (isReseller) {
       const valAtacado = item.preco_atacado || item.price_wholesale;
       if (valAtacado) {
@@ -218,7 +219,8 @@ export function useCart() {
 
   const getActiveDiscount = useCallback(() => {
     const total = getCartTotal();
-    const isReseller = currentUser?.commercial_profile === 'reseller' || currentUser?.tipo_cliente === 'revendedor';
+    const isAtacadoSession = typeof window !== 'undefined' && localStorage.getItem('avante_modo_compra') === 'atacado';
+    const isReseller = currentUser?.commercial_profile === 'reseller' || currentUser?.tipo_cliente === 'revendedor' || cart.some(i => i.is_atacado) || isAtacadoSession;
     const perfil = isReseller ? 'reseller' : 'retail';
     const faixas = descontosService.getFaixasPorPerfil(configuracoes, perfil);
 
@@ -300,7 +302,8 @@ export function useCart() {
 
   const getNextTierInfo = useCallback(() => {
     const total = getCartTotal();
-    const isReseller = currentUser?.commercial_profile === 'reseller' || currentUser?.tipo_cliente === 'revendedor';
+    const isAtacadoSession = typeof window !== 'undefined' && localStorage.getItem('avante_modo_compra') === 'atacado';
+    const isReseller = currentUser?.commercial_profile === 'reseller' || currentUser?.tipo_cliente === 'revendedor' || cart.some(i => i.is_atacado) || isAtacadoSession;
     const perfil = isReseller ? 'reseller' : 'retail';
     const faixas = descontosService.getFaixasPorPerfil(configuracoes, perfil);
     const faixasArr = Array.isArray(faixas) ? faixas.filter(Boolean) : [];

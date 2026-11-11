@@ -44,3 +44,21 @@ Este documento consolida os identificadores definitivos, credenciais, configura�
 * **Varejo (B2C):** Necessita de formato visual (Google Shopping / PMax) para converter compras individuais (1-2.5% CR).
 * **Atacado (B2B):** Buscas por *"atacado"*, *"revenda"* e *"fábrica"* não devem cair na Home de varejo; devem cair em página de revenda ou direto no WhatsApp da Lia com oferta de pedido mínimo (R$ 69,90 direto de Friburgo).
 * **Políticas de Conteúdo:** O gerador do Feed XML (`apps/api/src/routes/marketing.js`) possui a função permanente `sanitizeForGoogleShopping` para filtrar palavras que geram falsos positivos de "conteúdo adulto" no Google.
+
+---
+
+## 4. Arquitetura da Vitrine de Atacado da Fábrica & Promoção Automática B2B (Implementada em 11/11/2026)
+
+* **URL Oficial de Atacado:** `https://avantelingerie.com.br/categoria/todas?modo=atacado`
+* **Mídia Hero:** Vídeo de alta costura da fábrica `https://avantelingerie.com.br/video/hero_2.mp4` (loop, muted).
+* **Copywriting:** *"Confeccionamos nossas próprias peças com padrão de alta costura em Nova Friburgo. Venda direta da fábrica no Varejo e Atacado."*
+* **Atendimento Humano:** Botão direto para o WhatsApp oficial da fábrica (`https://wa.me/5522998634547`).
+* **Regra de Exibição:** Quando em `?modo=atacado`, os cards exibem o preço de atacado como custo principal (`Seu Custo de Fábrica`), com preço de varejo riscado e margem de lucro. A ordenação padrão é pelo Menor Preço (`price`).
+* **Trava no Carrinho / Checkout:** Pedidos no modo atacado exigem o valor mínimo de **R$ 69,90** em produtos para liberar a finalização.
+* **Promoção Automática B2B no Banco:**
+  * Ao criar o pedido e confirmar o pagamento, o cliente é atualizado para `tipo_cliente: 'revendedor'`, `commercial_profile: 'reseller'` e `account_level: 'verified'`.
+  * Isso faz a cliente aparecer imediatamente com a **Tag Laranja [Aprovado B2B]** no painel administrativo (`Base de Clientes`).
+  * Se houver solicitação pendente em `solicitacoes_revendedor`, ela é aprovada automaticamente.
+  * O sistema despacha o e-mail VIP de boas-vindas com o acesso ao Portal de Fotos/Vídeos para revenda.
+
+

@@ -489,9 +489,10 @@ export function useCheckoutLogic() {
       return null;
     }
 
-    const isReseller = currentUser?.commercial_profile === 'reseller' || currentUser?.tipo_cliente === 'revendedor';
+    const isAtacadoSession = typeof window !== 'undefined' && localStorage.getItem('avante_modo_compra') === 'atacado';
+    const isReseller = currentUser?.commercial_profile === 'reseller' || currentUser?.tipo_cliente === 'revendedor' || cart.some(i => i.is_atacado) || isAtacadoSession;
     if (isReseller && subtotal < limiteUpgrade) {
-      toast.error(`Atenção: O valor mínimo para pedidos de atacado é de R$ ${limiteUpgrade.toFixed(2)}. Seu pedido atual é de R$ ${subtotal.toFixed(2)}.`);
+      toast.error(`Atenção: O valor mínimo para pedidos de atacado direto de fábrica é de R$ ${limiteUpgrade.toFixed(2)}. Seu pedido atual é de R$ ${subtotal.toFixed(2)}.`);
       return null;
     }
 
@@ -557,6 +558,7 @@ export function useCheckoutLogic() {
       finalDiscountAmount,
       finalTotal,
       cupom_desconto: appliedCoupon ? appliedCoupon.code : null,
+      tipo_pedido: isReseller ? 'atacado' : 'varejo',
       cart: cart.map(item => ({
         id: item.id,
         variacao_id: item.variacao_id || '',
@@ -564,6 +566,7 @@ export function useCheckoutLogic() {
         quantity: item.quantity,
         price: getItemPrice(item),
         preco_atacado: item.preco_atacado || 0,
+        is_atacado: Boolean(item.is_atacado || isReseller),
         selectedSize: item.selectedSize || '',
         selectedColor: item.selectedColor || '',
         sku: item.sku || '',

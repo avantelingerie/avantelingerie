@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import { useParams, Link, useNavigate } from 'react-router-dom';
+import { useParams, Link, useNavigate, useSearchParams } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
@@ -44,6 +44,8 @@ import { generateProductJsonLd } from '../utils/schemaProduct.js';
 export default function ProductPage() {
   const { id } = useParams();
   const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
+  const isModoAtacadoParam = searchParams.get('modo') === 'atacado' || (typeof window !== 'undefined' && localStorage.getItem('avante_modo_compra') === 'atacado');
   const { cart, addToCart, getTotalPrice, getPixBenefitEligibility, getNextTierInfo } = useCart();
   const { currentUser } = useAuth();
 
@@ -569,7 +571,7 @@ export default function ProductPage() {
     }).format(value);
   };
 
-  const isReseller = currentUser?.commercial_profile === 'reseller' || currentUser?.tipo_cliente === 'revendedor';
+  const isReseller = currentUser?.commercial_profile === 'reseller' || currentUser?.tipo_cliente === 'revendedor' || isModoAtacadoParam;
 
   useEffect(() => {
     if (isReseller) return;
@@ -810,6 +812,7 @@ export default function ProductPage() {
       stock: asEncomenda ? 999 : maxPurchaseQuantity,
       preco_varejo: activeVarPrice,
       preco_atacado: activeVarWholesalePrice,
+      is_atacado: isReseller,
       sku: activeVariation?.sku || product?.sku || '',
       is_encomenda: asEncomenda,
       dias_producao: asEncomenda ? 5 : 0,

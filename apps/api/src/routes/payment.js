@@ -55,6 +55,8 @@ router.post('/create-order', async (req, res) => {
       }
     }
 
+    const isAtacadoOrder = req.body.tipo_pedido === 'atacado' || (cart || []).some(i => i.is_atacado) || (Number(finalTotal) >= 69.90 && (cart || []).some(i => Number(i.preco_atacado) > 0));
+
     // 1. Resolve or create user in 'users' collection using Superuser client
     if (!targetUserId) {
       try {
@@ -67,14 +69,21 @@ router.post('/create-order', async (req, res) => {
           targetUserId = existingUsers.items[0].id;
           logger.info(`[CreateOrder] Associando pedido ao usuário existente: ${existingUsers.items[0].email}`);
           // Se o usuário já existe mas não possui CPF salvo, salvamos o CPF fornecido na compra
+          const userUpdates = {};
           if (!existingUsers.items[0].cpf && personalInfo.cpf) {
+            userUpdates.cpf = personalInfo.cpf;
+          }
+          if (isAtacadoOrder) {
+            userUpdates.tipo_cliente = 'revendedor';
+            userUpdates.commercial_profile = 'reseller';
+            userUpdates.account_level = 'verified';
+          }
+          if (Object.keys(userUpdates).length > 0) {
             try {
-              await pb.collection('users').update(targetUserId, {
-                cpf: personalInfo.cpf
-              }, { $autoCancel: false });
-              logger.info(`[CreateOrder] CPF do usuário existente atualizado com sucesso.`);
-            } catch (errCpf) {
-              logger.warn(`[CreateOrder] Erro não-bloqueante ao atualizar CPF do usuário existente: ${errCpf.message}`);
+              await pb.collection('users').update(targetUserId, userUpdates, { $autoCancel: false });
+              logger.info(`[CreateOrder] Usuário ${targetUserId} atualizado com sucesso (Atacado: ${isAtacadoOrder}).`);
+            } catch (errUp) {
+              logger.warn(`[CreateOrder] Erro não-bloqueante ao atualizar usuário existente: ${errUp.message}`);
             }
           }
         } else {
@@ -87,17 +96,27 @@ router.post('/create-order', async (req, res) => {
             cpf: personalInfo.cpf || '',
             password: tempPassword,
             passwordConfirm: tempPassword,
-            tipo_cliente: 'varejo',
+            tipo_cliente: isAtacadoOrder ? 'revendedor' : 'varejo',
+            commercial_profile: isAtacadoOrder ? 'reseller' : 'retail',
+            account_level: isAtacadoOrder ? 'verified' : 'basic',
             emailVisibility: true
           }, { $autoCancel: false });
           
           targetUserId = newGuestUser.id;
-          logger.info(`[CreateOrder] Novo cliente convidado criado automaticamente: ${newGuestUser.email}`);
+          logger.info(`[CreateOrder] Novo cliente criado automaticamente: ${newGuestUser.email} (Atacado: ${isAtacadoOrder})`);
         }
       } catch (errUser) {
         logger.error(`[CreateOrder] Erro ao obter/criar usuário convidado: ${errUser.message}`);
         return res.status(500).json({ error: 'Erro ao registrar cliente no banco de dados.' });
       }
+    } else if (isAtacadoOrder) {
+      try {
+        await pb.collection('users').update(targetUserId, {
+          tipo_cliente: 'revendedor',
+          commercial_profile: 'reseller',
+          account_level: 'verified'
+        }, { $autoCancel: false });
+      } catch (errUp) {}
     }
 
     // 2. Generate sequential order number
@@ -210,6 +229,7 @@ router.post('/create-order', async (req, res) => {
       estado: actualDelivery.estado || '',
       cep: actualDelivery.cep,
       observacoes: [
+        isAtacadoOrder ? '[🏷️ PEDIDO ATACADO DIRETO DA FÁBRICA - MÍNIMO R$ 69,90 ATENDIDO]' : '',
         (cart || []).some(item => Boolean(item.is_encomenda)) ? '[🧵 PEDIDO SOB ENCOMENDA - CONFECÇÃO: 5 DIAS ÚTEIS]' : '',
         cupomDesconto ? `[CUPOM: ${cupomDesconto} - DESCONTO R$ ${Number(verifiedDiscount).toFixed(2)}]` : ''
       ].filter(Boolean).join(' | '),
@@ -222,6 +242,7 @@ router.post('/create-order', async (req, res) => {
         preco: Number(item.price || item.preco_varejo) || 0,
         preco_unitario: Number(item.price || item.preco_varejo) || 0,
         preco_atacado: Number(item.preco_atacado) || 0,
+        is_atacado: Boolean(item.is_atacado || isAtacadoOrder),
         tamanho: item.selectedSize || '',
         cor: item.selectedColor || '',
         nome: item.name || item.nome || '',
