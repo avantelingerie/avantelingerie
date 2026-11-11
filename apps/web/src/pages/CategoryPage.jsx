@@ -343,7 +343,7 @@ export default function CategoryPage() {
                 {/* Ações Atacado: WhatsApp + Alternador para Varejo */}
                 <div className="flex flex-wrap items-center gap-3">
                   <a
-                    href="https://wa.me/5522998634547?text=Ol%C3%A1!%20Vim%20pelo%20Cat%C3%A1logo%20de%20Atacado%20da%20Avante%20Lingerie%20e%20gostaria%20de%20atendimento%20da%20f%C3%A1brica."
+                    href="https://wa.me/5522981124281?text=Ol%C3%A1!%20Vim%20pelo%20Cat%C3%A1logo%20de%20Atacado%20da%20Avante%20Lingerie%20e%20gostaria%20de%20falar%20com%20o%20administrativo."
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#20ba59] text-white font-bold text-xs md:text-sm px-6 py-3.5 rounded-full shadow-lg transition-all duration-300 hover:scale-105 active:scale-95"

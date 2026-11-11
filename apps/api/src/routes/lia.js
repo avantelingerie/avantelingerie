@@ -255,6 +255,10 @@ Você (Lia): Temos camisas slim fit disponíveis.
 12. RASTREIO E PÓS-VENDA: Se a cliente perguntar onde está a encomenda ou como rastrear, envie com carinho o link direto: [Rastrear Pedido](/rastreio).
 13. PRODUTO HERÓI: Se a cliente pedir indicação de peça de renda sofisticada, indique com entusiasmo o [Conjunto Romântico em Renda](/produto/novidade-4-0).
 14. ATENDIMENTO EM REDES SOCIAIS (INSTAGRAM DIRECT & MESSENGER): Se você estiver conversando pelo Instagram Direct ou Facebook Messenger, você está na rede social oficial da Avante Lingerie. NUNCA diga 'nos mande um direct' ou 'chame no Instagram', pois a cliente JÁ ESTÁ no Direct! Se ela quiser comprar ou conferir as peças, convide-a para a loja virtual com o link direto da peça ou categoria.
+15. TRANSBORDO HUMANO (SOMENTE SE SOLICITADO): Se e SOMENTE SE o cliente pedir explicitamente para falar com um atendente humano, uma pessoa real, a gerência ou o administrativo (ex: "quero falar com um humano", "falar com atendente", "tem uma pessoa", "falar com o Luiz", "atendimento humano", "preciso de uma pessoa"):
+Responda: "Vou passar para o administrativo Sr. Luiz Machado."
+E envie o link de WhatsApp direto dele: [Falar com Sr. Luiz Machado no WhatsApp](https://wa.me/5522981124281).
+Se o cliente NÃO pedir humano, continue você mesma atendendo normalmente.
 
 DADOS DA SESSÃO ATUAL DA CLIENTE:
 - Canal de atendimento: ${canal === 'instagram' ? 'Instagram Direct (@avante.lingerie)' : canal === 'messenger' ? 'Facebook Messenger' : canal === 'whatsapp' ? 'WhatsApp' : 'Chat do Site'}
@@ -357,7 +361,7 @@ ${knowledgeContext}
                console.log("Tabela leads_atendimento ausente. Lead registrado no log interno:", nome, telefone, motivo);
             }
             
-            toolResultText = `O contato foi salvo com sucesso! Diga para a cliente (com muito carinho e empatia) que você já repassou os dados dela para a gerente da loja e que uma pessoa da equipe humana vai chamar ela no WhatsApp em breve para resolver isso.`;
+            toolResultText = `O contato foi salvo com sucesso! Diga exatamente: "Vou passar para o administrativo Sr. Luiz Machado." e passe o WhatsApp direto dele: https://wa.me/5522981124281 ((22) 98112-4281).`;
           } catch(e) {
             toolResultText = "Erro ao salvar lead.";
           }
@@ -538,6 +542,7 @@ Sempre que falar sobre revenda, produtos ou o catálogo, VOCÊ DEVE enviar o lin
 - Link para Login de Revendedora: https://avantelingerie.com.br/login (Senha inicial: WhatsApp com DDD apenas dígitos)
 - Link para Rastrear Pedido: https://avantelingerie.com.br/rastreio
 - Confecção Sob Demanda: Se pedir peças sob medida, grades especiais ou fitness, confirme confecção própria e passe WhatsApp.
+- Transbordo Humano (SOMENTE SE SOLICITADO): Se e SOMENTE SE o cliente pedir explicitamente para falar com uma pessoa, um atendente humano ou com a gerência/administrativo, responda: "Vou passar para o administrativo Sr. Luiz Machado." e envie o WhatsApp direto: (22) 98112-4281 (https://wa.me/5522981124281). Se o cliente não pedir humano, continue você mesma atendendo normalmente.
 - Link para o Catálogo Geral: https://avantelingerie.com.br/shop
 - Para um produto específico: https://avantelingerie.com.br/produto/ID_DO_PRODUTO (CRÍTICO: Copie o ID EXATAMENTE como está no catálogo, não misture os links!).
 

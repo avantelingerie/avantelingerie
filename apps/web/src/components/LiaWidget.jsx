@@ -245,16 +245,16 @@ export default function LiaWidget() {
                 }`}>
                   {renderMessageWithLinks(msg.content)}
                   
-                  {/* Renderiza o botão do WhatsApp se a Lia mencionar a palavra chave */}
-                  {msg.content.includes('botão abaixo') && msg.content.includes('WhatsApp') && (
+                  {/* Renderiza o botão do WhatsApp se a Lia transferir para atendimento humano */}
+                  {((msg.content.includes('botão abaixo') && msg.content.includes('WhatsApp')) || msg.content.includes('5522981124281') || msg.content.includes('Luiz Machado') || msg.content.includes('administrativo')) && (
                     <a 
-                      href="https://wa.me/5522981225010?text=Oi!%20Estava%20falando%20com%20a%20Lia%20no%20site%20e%20preciso%20de%20ajuda%20humana." 
+                      href="https://wa.me/5522981124281?text=Ol%C3%A1%20Sr.%20Luiz,%20estava%20conversando%20com%20a%20Lia%20no%20site%20e%20gostaria%20de%20falar%20com%20o%20administrativo." 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="mt-3 flex items-center justify-center gap-2 bg-[#25D366] text-white px-4 py-2 rounded-full font-medium text-xs hover:bg-[#20b858] transition-colors"
+                      className="mt-3 flex items-center justify-center gap-2 bg-[#25D366] text-white px-4 py-2.5 rounded-full font-bold text-xs hover:bg-[#20b858] transition-all hover:scale-102 active:scale-98 shadow-md"
                     >
                       <MessageSquare className="w-4 h-4" />
-                      Falar no WhatsApp
+                      Falar com Sr. Luiz Machado no WhatsApp
                     </a>
                   )}
                 </div>
