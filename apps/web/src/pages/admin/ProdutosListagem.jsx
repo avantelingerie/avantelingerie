@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { Plus, Search, Filter, Edit, Copy, Trash2, MoreVertical, Package, Loader2 } from 'lucide-react';
+import { Plus, Search, Filter, Edit, Copy, Trash2, MoreVertical, Package, Loader2, Instagram } from 'lucide-react';
 import { Button } from '@/components/ui/button.jsx';
 import { Input } from '@/components/ui/input.jsx';
 import { Switch } from '@/components/ui/switch.jsx';
@@ -8,6 +8,7 @@ import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigge
 import { Skeleton } from '@/components/ui/skeleton.jsx';
 import { toast } from 'sonner';
 import pb from '@/lib/pocketbaseClient.js';
+import PublicarSocialModal from '@/components/admin/PublicarSocialModal.jsx';
 
 export default function ProdutosListagem() {
   const navigate = useNavigate();
@@ -20,6 +21,9 @@ export default function ProdutosListagem() {
   const [filterCategory, setFilterCategory] = useState('');
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
+
+  const [socialModalOpen, setSocialModalOpen] = useState(false);
+  const [selectedSocialProduct, setSelectedSocialProduct] = useState(null);
 
   useEffect(() => {
     fetchCategorias();
@@ -279,9 +283,12 @@ export default function ProdutosListagem() {
                             <MoreVertical className="h-4 w-4" />
                           </Button>
                         </DropdownMenuTrigger>
-                        <DropdownMenuContent align="end" className="w-[160px]">
+                        <DropdownMenuContent align="end" className="w-[190px]">
                           <DropdownMenuItem onClick={() => navigate(`/admin/produtos/${produto.id}/editar`)}>
                             <Edit className="mr-2 h-4 w-4" /> Editar
+                          </DropdownMenuItem>
+                          <DropdownMenuItem onClick={() => { setSelectedSocialProduct(produto); setSocialModalOpen(true); }} className="text-pink-600 focus:text-pink-600 font-medium">
+                            <Instagram className="mr-2 h-4 w-4 text-pink-600" /> Publicar no Feed
                           </DropdownMenuItem>
                           <DropdownMenuItem onClick={() => handleDuplicate(produto)}>
                             <Copy className="mr-2 h-4 w-4" /> Duplicar
@@ -309,6 +316,12 @@ export default function ProdutosListagem() {
           </div>
         )}
       </div>
+
+      <PublicarSocialModal
+        produto={selectedSocialProduct}
+        open={socialModalOpen}
+        onOpenChange={setSocialModalOpen}
+      />
     </div>
   );
 }

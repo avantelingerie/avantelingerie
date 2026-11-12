@@ -346,4 +346,192 @@ router.get('/social-proof', async (req, res) => {
   }
 });
 
+// ============================================================================
+// PUBLICAÇÃO AUTOMÁTICA DE PRODUTOS NO FEED DO INSTAGRAM & FACEBOOK
+// ============================================================================
+
+// Helper para obter credenciais do Instagram
+async function getInstagramCredentials() {
+  let token = process.env.INSTAGRAM_PAGE_ACCESS_TOKEN || '';
+  let igId = process.env.INSTAGRAM_ACCOUNT_ID || '17841421480843011';
+
+  try {
+    const records = await pb.collection('integracoes_config').getFullList({
+      filter: 'servico = "instagram" && ativo = true',
+      requestKey: null
+    });
+    records.forEach(r => {
+      if (r.chave_nome === 'access_token') token = r.chave_valor;
+      if (r.chave_nome === 'account_id') igId = r.chave_valor;
+    });
+  } catch (e) {
+    console.warn('[Instagram Config] Usando credenciais de ambiente:', e.message);
+  }
+
+  return { token, igId };
+}
+
+// Gerador de Legenda Elegante e Comercial para Redes Sociais
+function generateSocialCaption(product) {
+  const name = product.name || product.nome || 'Peça Exclusiva Avante Lingerie';
+  const priceVarejo = Number(product.price || product.preco || 0).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+  const rawWholesale = product.price_wholesale || product.preco_atacado || (product.price ? product.price * 0.55 : 0);
+  const priceAtacado = Number(rawWholesale).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+  const productUrl = `https://avantelingerie.com.br/produto/${product.id}`;
+
+  return `✨ ${name} ✨
+
+Confeccionada com o padrão impecável de alta costura da Avante Lingerie, direto da nossa fábrica na Capital Nacional da Moda Íntima em Nova Friburgo/RJ.
+
+💎 Por que você vai se apaixonar:
+• Toque suave com acabamento nobre de ateliê
+• Forro 100% algodão para máximo conforto e respiração íntima
+• Modelagem anatômica que abraça e valoriza as curvas do seu corpo
+
+🏷️ No Varejo: ${priceVarejo} (com desconto progressivo na sacola!)
+💼 No Atacado de Fábrica: apenas ${priceAtacado} (mínimo de apenas R$ 69,90 para revender e lucrar de 100% a 150%)
+💳 +5% de desconto extra no PIX à vista
+📦 Enviamos para todo o Brasil com nota fiscal
+
+🛍️ Toque no link da nossa bio ou garanta direto no site:
+👉 ${productUrl}
+
+#avantelingerie #modaintima #lingerie #novafriburgo #lingerieatacado #renda #confeccaopropria #modafeminina #lingerieconfortavel #lingeriedeluxo`;
+}
+
+// Helper para extrair lista de imagens válidas do produto
+function getProductImages(product) {
+  const list = [];
+  if (product.imagem_principal && typeof product.imagem_principal === 'string') {
+    list.push(product.imagem_principal);
+  }
+  const extractFromArray = (arr) => {
+    if (Array.isArray(arr)) {
+      arr.forEach(img => {
+        if (img && typeof img === 'string' && !list.includes(img)) {
+          list.push(img);
+        }
+      });
+    }
+  };
+  extractFromArray(product.gallery);
+  extractFromArray(product.image);
+  extractFromArray(product.images);
+  extractFromArray(product.imagens);
+  return list;
+}
+
+// Endpoint para pré-visualizar post do produto
+router.get('/social/preview/:productId', async (req, res) => {
+  try {
+    const { productId } = req.params;
+    const product = await pb.collection('products').getOne(productId, { requestKey: null });
+
+    const images = getProductImages(product);
+    let imageUrl = 'https://avantelingerie.com.br/placeholder.png';
+    if (images.length > 0) {
+      imageUrl = `https://avantelingerie.com.br/hcgi/platform/api/files/products/${product.id}/${images[0]}`;
+    }
+
+    const caption = generateSocialCaption(product);
+
+    return res.json({
+      success: true,
+      product: {
+        id: product.id,
+        name: product.name || product.nome,
+        imageUrl,
+        allImages: images.map(img => `https://avantelingerie.com.br/hcgi/platform/api/files/products/${product.id}/${img}`),
+        caption
+      }
+    });
+  } catch (error) {
+    console.error('[Social Preview Error]', error.message);
+    return res.status(500).json({ success: false, error: error.message });
+  }
+});
+
+// Endpoint para publicar produto no Instagram & Facebook
+router.post('/social/publish-product', async (req, res) => {
+  try {
+    const { productId, customCaption, imageIndex = 0, selectedImageUrl } = req.body;
+    if (!productId) {
+      return res.status(400).json({ success: false, error: 'productId é obrigatório' });
+    }
+
+    const product = await pb.collection('products').getOne(productId, { requestKey: null });
+    const { token, igId } = await getInstagramCredentials();
+
+    if (!token || !igId) {
+      return res.status(400).json({ success: false, error: 'Credenciais do Instagram não configuradas' });
+    }
+
+    const images = getProductImages(product);
+    let imageUrl = selectedImageUrl;
+
+    if (!imageUrl) {
+      if (!images || images.length === 0) {
+        return res.status(400).json({ success: false, error: 'O produto não possui imagens cadastradas para publicação' });
+      }
+      const selectedImage = images[imageIndex] || images[0];
+      imageUrl = `https://avantelingerie.com.br/hcgi/platform/api/files/products/${product.id}/${selectedImage}`;
+    }
+
+    const caption = customCaption || generateSocialCaption(product);
+
+    console.log(`[Instagram Publish] Iniciando publicação do produto ${product.name} (${product.id})...`);
+
+    // 1. Criar container de mídia no Instagram Graph API
+    const containerRes = await axios.post(`https://graph.facebook.com/v19.0/${igId}/media`, {
+      image_url: imageUrl,
+      caption: caption,
+      access_token: token
+    }, { timeout: 30000 });
+
+    const creationId = containerRes.data?.id;
+    if (!creationId) {
+      throw new Error('Falha ao gerar o container de mídia no Instagram');
+    }
+
+    console.log(`[Instagram Publish] Container criado: ${creationId}. Publicando no feed...`);
+
+    // 2. Publicar o container no Feed
+    const publishRes = await axios.post(`https://graph.facebook.com/v19.0/${igId}/media_publish`, {
+      creation_id: creationId,
+      access_token: token
+    }, { timeout: 30000 });
+
+    const mediaId = publishRes.data?.id;
+
+    // 3. Obter o link permanente da publicação (permalink)
+    let permalink = `https://www.instagram.com/avante.lingerie`;
+    try {
+      const infoRes = await axios.get(`https://graph.facebook.com/v19.0/${mediaId}?fields=id,permalink&access_token=${token}`, { timeout: 10000 });
+      if (infoRes.data?.permalink) {
+        permalink = infoRes.data.permalink;
+      }
+    } catch (e) {
+      console.warn('[Instagram Publish] Falha ao obter permalink específico:', e.message);
+    }
+
+    console.log(`[Instagram Publish] Publicado com sucesso! Media ID: ${mediaId} | Link: ${permalink}`);
+
+    return res.json({
+      success: true,
+      message: 'Produto publicado com sucesso no feed do Instagram e Facebook!',
+      media_id: mediaId,
+      permalink: permalink,
+      caption: caption
+    });
+
+  } catch (error) {
+    const errorDetails = error.response?.data?.error?.message || error.message;
+    console.error('[Instagram Publish Error]', errorDetails);
+    return res.status(500).json({
+      success: false,
+      error: `Erro ao publicar no Instagram: ${errorDetails}`
+    });
+  }
+});
+
 export default router;

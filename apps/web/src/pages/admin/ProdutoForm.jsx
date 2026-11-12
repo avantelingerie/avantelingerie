@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { ArrowLeft, Save, X, Plus, Trash2, Loader2, Image as ImageIcon, Sparkles, RefreshCw, Calculator, Ruler, PackageCheck } from 'lucide-react';
+import { ArrowLeft, Save, X, Plus, Trash2, Loader2, Image as ImageIcon, Sparkles, RefreshCw, Calculator, Ruler, PackageCheck, Instagram } from 'lucide-react';
 import { Button } from '@/components/ui/button.jsx';
 import { Input } from '@/components/ui/input.jsx';
 import { Textarea } from '@/components/ui/textarea.jsx';
@@ -14,6 +14,7 @@ import pb from '@/lib/pocketbaseClient.js';
 import apiServerClient from '@/lib/apiServerClient.js';
 import VariacoesTable from '@/components/admin/VariacoesTable.jsx';
 import CalculadoraPrecoModal from '@/components/admin/CalculadoraPrecoModal.jsx';
+import PublicarSocialModal from '@/components/admin/PublicarSocialModal.jsx';
 import { guessNcm } from '../../utils/guessNcm.js';
 
 // Padrões Oficiais de Medidas e Pesos da Avante Lingerie para fretes calibrados no Melhor Envio
@@ -42,6 +43,7 @@ export default function ProdutoForm() {
   const [categorias, setCategorias] = useState([]);
   const [colecoes, setColecoes] = useState([]);
   const [allProducts, setAllProducts] = useState([]);
+  const [socialModalOpen, setSocialModalOpen] = useState(false);
 
   const [formData, setFormData] = useState({
     name: '',
@@ -783,6 +785,16 @@ export default function ProdutoForm() {
           </div>
         </div>
         <div className="flex items-center gap-3">
+          {isEdit && (
+            <Button
+              type="button"
+              variant="outline"
+              onClick={() => setSocialModalOpen(true)}
+              className="bg-white dark:bg-[#121212] border-pink-500/40 text-pink-600 hover:bg-pink-50 dark:hover:bg-pink-950/20 font-medium"
+            >
+              <Instagram className="w-4 h-4 mr-2 text-pink-600" /> Publicar no Instagram & Face
+            </Button>
+          )}
           <Button type="button" variant="outline" onClick={() => navigate('/admin/produtos')} disabled={saving} className="bg-white dark:bg-[#121212] border-zinc-300 dark:border-[#c59b5f]/25 text-zinc-700 dark:text-white hover:bg-zinc-50 dark:hover:bg-[#181818]">
             <X className="w-4 h-4 mr-2" /> Cancelar
           </Button>
@@ -1360,6 +1372,14 @@ export default function ProdutoForm() {
           </section>
         </div>
       </div>
+
+      {isEdit && (
+        <PublicarSocialModal
+          produto={{ id, ...formData }}
+          open={socialModalOpen}
+          onOpenChange={setSocialModalOpen}
+        />
+      )}
     </form>
   );
 }
