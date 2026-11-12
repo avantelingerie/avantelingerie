@@ -380,6 +380,7 @@ function generateSocialCaption(product) {
   const productUrl = `https://avantelingerie.com.br/produto/${product.id}`;
 
   return `✨ ${name} ✨
+💼 No Atacado de Fábrica: apenas ${priceAtacado} (Toque em "...mais" para detalhes 👇)
 
 Confeccionada com o padrão impecável de alta costura da Avante Lingerie, direto da nossa fábrica na Capital Nacional da Moda Íntima em Nova Friburgo/RJ.
 
@@ -393,8 +394,10 @@ Confeccionada com o padrão impecável de alta costura da Avante Lingerie, diret
 💳 +5% de desconto extra no PIX à vista
 📦 Enviamos para todo o Brasil com nota fiscal
 
-🛍️ Toque no link da nossa bio ou garanta direto no site:
-👉 ${productUrl}
+🛍️ COMO COMPRAR ESTA PEÇA:
+👉 Toque no nosso perfil @avante.lingerie e acesse o link oficial na bio!
+💬 Ou comente "EU QUERO" aqui embaixo que a Lia te envia o link direto no seu Direct!
+🌐 Link da Loja: ${productUrl}
 
 #avantelingerie #modaintima #lingerie #novafriburgo #lingerieatacado #renda #confeccaopropria #modafeminina #lingerieconfortavel #lingeriedeluxo`;
 }
