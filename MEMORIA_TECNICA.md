@@ -2521,3 +2521,26 @@ Garantir que as dimensﾃｵes e pesos cadastrados na loja e calculados no check
   4. *Deploy em Produção:* Commit `45d0528` enviado para a branch `main`, deploy executado pelo GitHub Actions (Workflow #158).
   5. *Teste Real na VPS:* Requisição HTTP direta em `https://avantelingerie.com.br/hcgi/api/marketing/feed.xml` retornou Status 200 OK, 38.787 bytes e confirmação de ZERO termos proibidos online.
   6. *Sincronização no Merchant Center:* Disparada a atualização manual (`↻ Atualizar`) às 07:53 (11/11/2026), processando os novos títulos para liberação total no Google Shopping.
+
+
+### 8. Vitrine Automática no Feed do Instagram/Facebook, Rastreio de Tráfego e Transbordo Qualificado da Lia
+- **Data:** 12 de Novembro de 2026 (Fechamento)
+- **Conquistas e Implementações Validadas (Primeira Regra de Ouro):**
+  1. **Publicador Automático de Produtos no Feed Social:**
+     - Desenvolvidos endpoints em 'apps/api/src/routes/marketing.js': 'GET /social/preview/:productId' e 'POST /social/publish-product' via Meta Graph API v19.0 em duas etapas (container de mídia + media_publish).
+     - Criado componente modal 'apps/web/src/components/admin/PublicarSocialModal.jsx' com seletor de fotos, pré-visualização, gerador de copy de ateliê e botão de disparo em 1 clique.
+     - Integrado botão no menu de cada produto em 'ProdutosListagem.jsx' e na barra de ações em 'ProdutoForm.jsx'.
+     - **Validação Empírica no Ar:** 3 peças campeãs publicadas com sucesso na grade do perfil oficial @avante.lingerie:
+       * Camisola Sensual Decote V: https://www.instagram.com/p/DfpGFfxoO3x/
+       * Conjunto Cropped Sem Bojo: https://www.instagram.com/p/DfpGMlpIK66/
+       * Calcinha Cinta Modeladora: https://www.instagram.com/p/DfpGOXUoA7H/
+  2. **Rastreio Forense de Lead (Michele Pedro - +55 21 97499-4380):**
+     - Rastreamento comprovou que a cliente veio da campanha Meta Ads B2B (120251762627320751), anúncio 'AD B2B 01 - Comece a Revender com R$ 69,90' (120251917232440751) veiculado no Instagram, acessou o Catálogo de Atacado da Fábrica e clicou no botão de contato.
+  3. **Filtro Inteligente & Transbordo Qualificado da Lia:**
+     - Botão do Catálogo de Atacado atualizado para o WhatsApp oficial da Lia ((22) 98122-5010), blindando o tempo do Sr. Luiz contra dúvidas rotineiras de varejo/básicas.
+     - Mapeados 4 gatilhos de transbordo no prompt da Lia ('lia.js' e 'liaKnowledgeBase.js'): Insegurança/receio de golpe online, confecção própria/sob encomenda, grande volume/lojistas e pedido explícito de humano.
+     - Passagem de bastão rica e contextualizada: a Lia coleta o nome da cliente e envia link direto para o WhatsApp do Sr. Luiz ((22) 98112-4281) já pré-preenchido com Nome, Canal de Origem e Motivo da negociação.
+  4. **Aprimoramento da Copy Social no Feed:**
+     - Copy atualizada com o preço de atacado logo na primeira linha, menção oficial clicável @avante.lingerie para levar à Bio e chamada para o Direct da Lia ('Comente EU QUERO'), onde os links são 100% clicáveis.
+  5. **Sincronização Nativa com a Página do Facebook:**
+     - Orientada ativação da sincronização automática nativa na Central de Contas Meta do Instagram (@avante.lingerie -> Página Avante Lingerie).
