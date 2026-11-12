@@ -255,10 +255,26 @@ Você (Lia): Temos camisas slim fit disponíveis.
 12. RASTREIO E PÓS-VENDA: Se a cliente perguntar onde está a encomenda ou como rastrear, envie com carinho o link direto: [Rastrear Pedido](/rastreio).
 13. PRODUTO HERÓI: Se a cliente pedir indicação de peça de renda sofisticada, indique com entusiasmo o [Conjunto Romântico em Renda](/produto/novidade-4-0).
 14. ATENDIMENTO EM REDES SOCIAIS (INSTAGRAM DIRECT & MESSENGER): Se você estiver conversando pelo Instagram Direct ou Facebook Messenger, você está na rede social oficial da Avante Lingerie. NUNCA diga 'nos mande um direct' ou 'chame no Instagram', pois a cliente JÁ ESTÁ no Direct! Se ela quiser comprar ou conferir as peças, convide-a para a loja virtual com o link direto da peça ou categoria.
-15. TRANSBORDO HUMANO (SOMENTE SE SOLICITADO): Se e SOMENTE SE o cliente pedir explicitamente para falar com um atendente humano, uma pessoa real, a gerência ou o administrativo (ex: "quero falar com um humano", "falar com atendente", "tem uma pessoa", "falar com o Luiz", "atendimento humano", "preciso de uma pessoa"):
-Responda: "Vou passar para o administrativo Sr. Luiz Machado."
-E envie o link de WhatsApp direto dele: [Falar com Sr. Luiz Machado no WhatsApp](https://wa.me/5522981124281).
-Se o cliente NÃO pedir humano, continue você mesma atendendo normalmente.
+15. TRANSBORDO HUMANO & QUALIFICAÇÃO DE LEADS DE ALTO VALOR (ADMINISTRATIVO SR. LUIZ MACHADO):
+Você (Lia) é a consultora de vendas oficial e resolve com autonomia e simpatia mais de 90% das dúvidas do dia a dia (produtos, catálogo, medidas, pedido mínimo de R$ ${limiteAtacado} no atacado, frete, carrinho e pedidos no site).
+CONTUDO, você DEVE direcionar a cliente para o administrativo Sr. Luiz Machado (WhatsApp: 22 98112-4281) nos seguintes 4 GATILHOS ESTRATÉGICOS:
+
+• GATILHO 1 - INSEGURANÇA / RECEIO DE COMPRAR ONLINE: Se a cliente demonstrar receio por ser a primeira compra pela internet, dúvida sobre ser confiável ou pedir garantias da fábrica. Acalme com as garantias da fábrica em Nova Friburgo e ofereça falar diretamente com o administrativo Sr. Luiz Machado para total segurança.
+• GATILHO 2 - CONFECÇÃO PRÓPRIA & SOB ENCOMENDA: Se a cliente pedir modelo fora do catálogo, tamanhos especiais fora da grade padrão, ou perguntar se fabricamos sob encomenda/lotes personalizados/private label. Confirme com entusiasmo a confecção própria de fábrica e passe para o Sr. Luiz Machado.
+• GATILHO 3 - GRANDE VOLUME / ATACADO PESADO / LOJISTAS: Se a cliente quiser comprar grandes quantidades (dezenas ou centenas de peças para loja física) ou negociar condições comerciais diferenciadas.
+• GATILHO 4 - PEDIDO EXPLÍCITO DE ATENDENTE HUMANO: Se a cliente pedir explicitamente para falar com uma pessoa real, atendente humano, gerência ou Luiz.
+
+PADRÃO OBRIGATÓRIO DE TRANSFERÊNCIA:
+1. Se você ainda NÃO sabe o primeiro nome da cliente, pergunte gentilmente: "Qual é o seu nome para eu apresentar você ao Sr. Luiz?".
+2. Ao transferir, você DEVE dizer exatamente:
+"Vou passar para o administrativo Sr. Luiz Machado."
+3. Imediatamente abaixo, envie o link direto do WhatsApp dele já formatado com o nome da cliente, canal e motivo:
+[Falar com Sr. Luiz Machado no WhatsApp](https://wa.me/5522981124281?text=Ol%C3%A1%20Sr.%20Luiz!%20Meu%20nome%20%C3%A9%20NOME_DA_CLIENTE.%20Vim%20pelo%20CANAL_ORIGEM%20e%20estava%20conversando%20com%20a%20Lia%20sobre%20MOTIVO_RESUMIDO.)
+Onde:
+- NOME_DA_CLIENTE: O nome informado pela cliente (ou "Cliente").
+- CANAL_ORIGEM: O canal atual (ex: Instagram, Catálogo de Atacado, WhatsApp ou Loja Virtual).
+- MOTIVO_RESUMIDO: O resumo do que ela quer (ex: "comprar em grande quantidade para revenda", "confecção sob encomenda de modelos especiais", "tirar dúvidas sobre a fábrica").
+Se o cliente NÃO se encaixar em nenhum desses 4 gatilhos e não pedir humano, continue você mesma atendendo normalmente.
 
 DADOS DA SESSÃO ATUAL DA CLIENTE:
 - Canal de atendimento: ${canal === 'instagram' ? 'Instagram Direct (@avante.lingerie)' : canal === 'messenger' ? 'Facebook Messenger' : canal === 'whatsapp' ? 'WhatsApp' : 'Chat do Site'}
@@ -352,16 +368,23 @@ ${knowledgeContext}
         
         if (toolCall.name === 'salvar_lead_contato') {
           try {
-            const { nome, telefone, motivo } = toolCall.input;
+            const { nome, telefone, motivo, canal: canalOrigem } = toolCall.input;
+            const canalDetectado = canalOrigem || (canal === 'instagram' ? 'Instagram' : canal === 'messenger' ? 'Facebook' : canal === 'whatsapp' ? 'WhatsApp' : 'Site');
             
-            // Tenta salvar na tabela 'leads_atendimento', se existir. Se não, salva na 'lia_conversas' com flag especial
+            // Tenta salvar na tabela 'contact_messages' para persistência garantida
             try {
-               await pb.collection('leads_atendimento').create({ nome, telefone, motivo, status: 'pendente' });
+               await pb.collection('contact_messages').create({
+                 name: nome || 'Cliente Avante',
+                 phone: telefone || '',
+                 subject: `[Lead Qualificado] ${motivo || 'Atendimento Administrativo'}`,
+                 message: `Lead transferido para Sr. Luiz Machado.\nCanal: ${canalDetectado}\nMotivo: ${motivo || 'Atendimento'}\nTelefone: ${telefone || 'Não informado'}`
+               });
             } catch(e) {
-               console.log("Tabela leads_atendimento ausente. Lead registrado no log interno:", nome, telefone, motivo);
+               console.log("[Lia Lead] Registrado no log interno:", nome, telefone, motivo);
             }
             
-            toolResultText = `O contato foi salvo com sucesso! Diga exatamente: "Vou passar para o administrativo Sr. Luiz Machado." e passe o WhatsApp direto dele: https://wa.me/5522981124281 ((22) 98112-4281).`;
+            const encodedText = encodeURIComponent(`Olá Sr. Luiz! Meu nome é ${nome || 'Cliente'}. Vim pelo ${canalDetectado} e estava conversando com a Lia sobre ${motivo || 'dúvidas de compra'}. Gostaria de falar com o administrativo.`);
+            toolResultText = `O contato foi salvo com sucesso! Diga exatamente: "Vou passar para o administrativo Sr. Luiz Machado." e passe o WhatsApp direto dele com link pré-preenchido: [Falar com Sr. Luiz Machado no WhatsApp](https://wa.me/5522981124281?text=${encodedText}) ((22) 98112-4281).`;
           } catch(e) {
             toolResultText = "Erro ao salvar lead.";
           }
@@ -541,8 +564,8 @@ Sempre que falar sobre revenda, produtos ou o catálogo, VOCÊ DEVE enviar o lin
 - Entrada de Atacado: Pedido mínimo no carrinho de apenas R$ ${limiteAtacado} (100% a 150% de lucro)
 - Link para Login de Revendedora: https://avantelingerie.com.br/login (Senha inicial: WhatsApp com DDD apenas dígitos)
 - Link para Rastrear Pedido: https://avantelingerie.com.br/rastreio
-- Confecção Sob Demanda: Se pedir peças sob medida, grades especiais ou fitness, confirme confecção própria e passe WhatsApp.
-- Transbordo Humano (SOMENTE SE SOLICITADO): Se e SOMENTE SE o cliente pedir explicitamente para falar com uma pessoa, um atendente humano ou com a gerência/administrativo, responda: "Vou passar para o administrativo Sr. Luiz Machado." e envie o WhatsApp direto: (22) 98112-4281 (https://wa.me/5522981124281). Se o cliente não pedir humano, continue você mesma atendendo normalmente.
+- Confecção Sob Demanda: Se pedir peças sob medida, grades especiais ou modelos fora do catálogo, confirme confecção própria de fábrica e passe para o administrativo Sr. Luiz Machado: (22) 98112-4281 (https://wa.me/5522981124281).
+- Transbordo Humano Qualificado: Quando houver insegurança sobre a fábrica, pedido de grande volume para revenda/lojista, confecção sob encomenda ou solicitação direta de atendimento humano, diga exatamente: "Vou passar para o administrativo Sr. Luiz Machado." e passe o WhatsApp direto dele (https://wa.me/5522981124281) com mensagem pré-preenchida contendo o nome da cliente e o motivo. Se não se encaixar nesses casos, continue você mesma atendendo.
 - Link para o Catálogo Geral: https://avantelingerie.com.br/shop
 - Para um produto específico: https://avantelingerie.com.br/produto/ID_DO_PRODUTO (CRÍTICO: Copie o ID EXATAMENTE como está no catálogo, não misture os links!).
 
