@@ -294,3 +294,4 @@ export default function PublicarSocialModal({ produto, open, onOpenChange, onSuc
     </Dialog>
   );
 }
+
