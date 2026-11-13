@@ -62,8 +62,38 @@ class RecoveryService {
           continue;
         }
 
-        // Monta a mensagem que a Lia vai atirar (apenas suporte/acolhimento, sem cupom por enquanto)
-        const mensagemAtiradora = `Oi ${nomeCliente}! Tudo bem? Sou a Lia, da Avante Lingerie ✨. Vi que você deixou um pedido quase finalizado por aqui. Tinha ficado alguma dúvida sobre o pagamento ou frete em que eu possa te ajudar?`;
+        // Monta a mensagem que o Administrativo/Lia vai enviar (alta credibilidade, provas e link da diretoria)
+        const mensagemAtiradora = `Olá, ${nomeCliente}! Tudo bem? 
+
+Aqui é do Administrativo da Avante Lingerie — Confecção Própria em Nova Friburgo/RJ ✨
+
+Notamos que você selecionou algumas peças no nosso site, mas não chegou a finalizar o seu pedido. Como prezamos pelo atendimento transparente de cada cliente da nossa fábrica, entramos em contato para que você tenha total segurança e tranquilidade com a nossa marca! ❤️
+
+Alguns pontos importantes sobre a nossa confecção:
+
+🏭 1. Fábrica Real em Nova Friburgo/RJ:
+Nossa confecção própria fica na Rua Odenir Pinheiro, nº 20 - Olaria. Você pode conferir nosso endereço e localização oficial direto no Google Maps:
+📍 https://maps.google.com/?q=Rua+Odenir+Pinheiro+20+Nova+Friburgo+RJ
+
+⭐ 2. Nossas Lojas Oficiais na Shopee:
+Além de abastecer lojistas pelo Brasil, nós operamos marcas consagradas com milhares de avaliações 5 estrelas na Shopee. Você pode conferir diretamente nos links oficiais:
+🛍️ Bella Íntima: https://shopee.com.br/bella_int#product_list
+🛍️ Jeito Feminino: https://shopee.com.br/search?keyword=jeitofeminino
+🛍️ Versátil Moda Íntima e Fitness: https://shopee.com.br/search?keyword=versatilmodaintimaefitness
+
+💡 3. Por que no nosso site oficial o valor é mais barato que na Shopee?
+Porque na Shopee as taxas e comissões da plataforma passam de 20%. No nosso site oficial (avantelingerie.com.br), você compra direto da nossa mesa de corte, sem intermediários e sem taxas embutidas!
+
+✂️ 4. Fabricação Sob Encomenda para Lojistas:
+Além do nosso catálogo à pronta-entrega, também fabricamos coleções personalizadas sob encomenda conforme o desejo de revenda para lojistas e revendedoras!
+
+📦 5. Garantia Total de Fábrica:
+Seu pedido sai com Nota Fiscal direto da linha de produção e garantia incondicional: se qualquer peça não vestir perfeitamente, realizamos a troca para você sem burocracia.
+
+Se você ficou com alguma dúvida sobre tecidos, tamanhos, cálculo de frete ou condições de fábrica, você pode falar diretamente com o nosso gestor, Luiz Machado, pelo WhatsApp exclusivo:
+👉 https://wa.me/5522981124281
+
+O que faltou para liberarmos o seu primeiro pacotinho direto da fábrica hoje? Estamos à disposição para te atender!`;
 
         try {
           // Injeta a conversa no Cérebro da Lia para que o histórico fique registrado e a IA consiga continuar o papo depois
