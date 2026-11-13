@@ -2544,3 +2544,13 @@ Garantir que as dimensﾃｵes e pesos cadastrados na loja e calculados no check
      - Copy atualizada com o preço de atacado logo na primeira linha, menção oficial clicável @avante.lingerie para levar à Bio e chamada para o Direct da Lia ('Comente EU QUERO'), onde os links são 100% clicáveis.
   5. **Sincronização Nativa com a Página do Facebook:**
      - Orientada ativação da sincronização automática nativa na Central de Contas Meta do Instagram (@avante.lingerie -> Página Avante Lingerie).
+
+
+### 9. Otimizacao de Lances e Blindagem de Palavras Negativas no Google Shopping
+- **Data:** 13 de Novembro de 2026
+- **Campanha Afetada:** '[GOOGLE] Shopping - Varejo | Pecas de Fabrica & Alta Costura' (ID: '24456151583') | Ad Group: '[SHOPPING] Catalogo de Produtos | Fabrica Avante' (ID: '199859430377').
+- **Diagnostico Previo:** Campanha travada no leilao (apenas 2 impressoes, 0 cliques e R$ 0 gastos) decorrente de lance manual de CPC (R$ 0,50) abaixo do ponto de corte competitivo para moda intima feminina no Brasil.
+- **Acoes Executadas e Validadas Empiricamente (Primeira Regra de Ouro):**
+  1. *Elevacao do Lance de CPC Maximo:* Atualizado de R$ 0,50 ('500000' micros) para R$ 1,10 ('1100000' micros) tanto no nivel de Ad Group quanto no criterio de Listing Group ('adGroupCriteria/199859430377~293946777986'). Validacao via GAQL confirmou 'cpcBidMicros: 1100000'.
+  2. *Blindagem Negativa Ampla (16 Novos Termos Adicionados):* Inseridas 16 novas palavras-chave negativas em correspondencia ampla (BROAD) para evitar queima de verba com moda masculina, infantil, tecidos brutos e termos erotizados: 'masculino', 'cueca', 'boxer', 'samba cancao', 'homem', 'menino', 'sex shop', 'sexshop', 'fetiche', 'erotico', 'erotica', 'fantasia erotica', 'papel', 'tecido por metro', 'renda por metro', 'maquina de costura'.
+  3. *Total de Negativas Ativas na Campanha:* 30 termos negativos confirmados ativos em producao via consulta direta a Google Ads API v25.
