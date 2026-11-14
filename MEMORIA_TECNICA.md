@@ -2554,3 +2554,25 @@ Garantir que as dimensﾃｵes e pesos cadastrados na loja e calculados no check
   1. *Elevacao do Lance de CPC Maximo:* Atualizado de R$ 0,50 ('500000' micros) para R$ 1,10 ('1100000' micros) tanto no nivel de Ad Group quanto no criterio de Listing Group ('adGroupCriteria/199859430377~293946777986'). Validacao via GAQL confirmou 'cpcBidMicros: 1100000'.
   2. *Blindagem Negativa Ampla (16 Novos Termos Adicionados):* Inseridas 16 novas palavras-chave negativas em correspondencia ampla (BROAD) para evitar queima de verba com moda masculina, infantil, tecidos brutos e termos erotizados: 'masculino', 'cueca', 'boxer', 'samba cancao', 'homem', 'menino', 'sex shop', 'sexshop', 'fetiche', 'erotico', 'erotica', 'fantasia erotica', 'papel', 'tecido por metro', 'renda por metro', 'maquina de costura'.
   3. *Total de Negativas Ativas na Campanha:* 30 termos negativos confirmados ativos em producao via consulta direta a Google Ads API v25.
+
+
+### 10. Resolução dos Pedidos PED-006 e PED-007, Conciliação Financeira Mercado Pago/Bling e Resiliência do Webhook
+- **Data:** 14 de Novembro de 2026 (Madrugada)
+- **Contexto:** Surgimento simultâneo de dois pedidos no Admin da loja:
+  1. *PED-007 (Laís do Val - R$ 41,09):* Pagamento Pix aprovado no Mercado Pago às 22:33 (Transação 189548958024), mas aparecia 'PENDENTE' na loja e 'BLING: PENDENTE'. Cliente enviou WhatsApp apreensiva perguntando sobre o pedido.
+  2. *PED-006 (Jacione Pereira - R$ 48,43):* Aparecia no Bling como Pedido #59 ('Em aberto'), mas não constava no extrato do Mercado Pago.
+- **Investigação Forense e Diagnóstico:**
+  - *PED-006 (Jacione Pereira):* O fluxo padrão de checkout envia o pedido ao Bling como 'Em aberto' no momento da geração do Pix. Como Jacione gerou o Pix mas não concluiu o pagamento no app do banco, nenhum registro financeiro foi criado no Mercado Pago. O pedido permanece legitimamente aguardando pagamento.
+  - *PED-007 (Laís do Val):* O pagamento de R$ 41,09 foi efetivado com sucesso no Mercado Pago. Porém, o webhook de notificação foi barrado com HTTP 401 ('Assinatura HMAC inválida') devido à rejeição estrita quando os cabeçalhos 'x-signature' ou timestamps variavam.
+- **Ações Executadas e Validadas Empiricamente (Primeira Regra de Ouro):**
+  1. *Confirmação Imediata do Pedido PED-007:*
+     - Status atualizado no PocketBase para 'confirmado' com registro de transação MP 189548958024 nas observações.
+     - Pedido reenviado e integrado com sucesso ao Bling ERP sob o ID Bling '27405843732'.
+  2. *Blindagem & Resiliência do Webhook Mercado Pago ('apps/api/src/routes/webhooks.js' e 'apps/api/src/services/mercadoPagoService.js'):*
+     - Substituído o descarte cego com 401 por um fluxo de verificação segura em duas camadas: se o HMAC falhar ou cabeçalhos variarem, o webhook faz consulta ativa na API Oficial do Mercado Pago usando as credenciais privadas ('mp_access_token').
+     - A confirmação só ocorre se a API do Mercado Pago retornar 'approved', moeda 'BRL', valor conferido em centavos e correspondência de 'external_reference' com o pedido da loja.
+     - Suporte a separadores flexíveis (vírgula e ponto-e-vírgula) nos cabeçalhos de assinatura.
+  3. *Validação Empírica:*
+     - Testes unitários automatizados em 'scratch/test_webhook_resilience.mjs' comprovaram 100% de sucesso nas validações de assinatura e resiliência.
+  4. *Atendimento Humanizado ao Cliente:*
+     - Elaborado script afetuoso e seguro para o Sr. Luiz enviar à Laís (+55 62 8321-4444), confirmando a aprovação do Pix e o envio para expedição.

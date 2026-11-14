@@ -328,8 +328,8 @@ class MercadoPagoService {
       return false;
     }
 
-    // Extrai 'ts' e 'v1' do header x-signature
-    const parts = xSignature.split(',');
+    // Extrai 'ts' e 'v1' do header x-signature (suporta vírgula ou ponto-e-vírgula)
+    const parts = xSignature.split(/[,;]/);
     let ts = null;
     let v1 = null;
 

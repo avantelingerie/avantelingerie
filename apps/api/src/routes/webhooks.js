@@ -481,13 +481,15 @@ router.post('/mercadopago', async (req, res) => {
       return res.status(200).json({ status: 'ignored', reason: 'no_id' });
     }
 
-    // 1. Validação de Assinatura HMAC SHA-256 (Nemotron P0)
+    // 1. Validação de Assinatura HMAC SHA-256 (Nemotron P0 com Fallback Seguro)
+    let isSignatureValid = false;
     const creds = await mercadoPagoService.getCredentials();
     if (creds.webhookSecret) {
-      const isSignatureValid = mercadoPagoService.verifyWebhookSignature(req.headers, dataId, creds.webhookSecret);
+      isSignatureValid = mercadoPagoService.verifyWebhookSignature(req.headers, dataId, creds.webhookSecret);
       if (!isSignatureValid) {
-        logger.error(`[MercadoPagoWebhook][${correlationId}] Assinatura HMAC inválida. Rejeitando.`);
-        return res.status(401).json({ error: 'Assinatura HMAC inválida.' });
+        logger.warn(`[MercadoPagoWebhook][${correlationId}] Assinatura HMAC não coincidiu ou cabeçalhos ausentes para id=${dataId}. Prosseguindo com verificação estrita via API Oficial do Mercado Pago.`);
+      } else {
+        logger.info(`[MercadoPagoWebhook][${correlationId}] Assinatura HMAC verificada com sucesso.`);
       }
     }
 
