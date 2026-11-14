@@ -175,16 +175,46 @@ app.post('/send', async (req, res) => {
         if (phone.includes('@lid') || phone.includes('@c.us')) {
             chatId = phone;
         } else {
-            let clean = phone.replace(/\D/g, '');
+            let clean = String(phone).replace(/\D/g, '');
             if (clean.length > 0 && !clean.startsWith('55')) {
                 clean = '55' + clean;
             }
-            chatId = `${clean}@c.us`;
+            
+            // Resolução inteligente de JID no WhatsApp (trata números brasileiros com e sem 9 dígitos)
+            try {
+                const numberId = await client.getNumberId(clean);
+                if (numberId) {
+                    chatId = numberId._serialized;
+                } else if (clean.startsWith('55') && clean.length === 13 && clean[4] === '9') {
+                    // Fallback para número brasileiro: tenta sem o 9 extra (ex: 55859xxxx -> 5585xxxx)
+                    const withoutNine = clean.slice(0, 4) + clean.slice(5);
+                    const numberIdWithoutNine = await client.getNumberId(withoutNine);
+                    if (numberIdWithoutNine) {
+                        chatId = numberIdWithoutNine._serialized;
+                    } else {
+                        chatId = `${clean}@c.us`;
+                    }
+                } else if (clean.startsWith('55') && clean.length === 12) {
+                    // Fallback para número brasileiro: tenta com o 9 extra
+                    const withNine = clean.slice(0, 4) + '9' + clean.slice(4);
+                    const numberIdWithNine = await client.getNumberId(withNine);
+                    if (numberIdWithNine) {
+                        chatId = numberIdWithNine._serialized;
+                    } else {
+                        chatId = `${clean}@c.us`;
+                    }
+                } else {
+                    chatId = `${clean}@c.us`;
+                }
+            } catch (errResolve) {
+                console.warn(`[Push] Aviso ao resolver getNumberId para ${clean}:`, errResolve.message);
+                chatId = `${clean}@c.us`;
+            }
         }
         const safeMessage = String(message).normalize('NFC');
         await client.sendMessage(chatId, safeMessage);
         console.log(`[Push] Mensagem enviada com sucesso para ${chatId}`);
-        res.json({ sucesso: true });
+        res.json({ sucesso: true, chatId });
     } catch (e) {
         console.error(`[Push] Erro ao enviar mensagem para ${phone}:`, e);
         res.status(500).json({ erro: 'Falha ao enviar mensagem', detalhe: e.message });

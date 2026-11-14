@@ -3,6 +3,23 @@ import axios from 'axios';
 import pb from '../utils/pocketbaseClient.js';
 import logger from '../utils/logger.js';
 
+const normalizePhone = (phone) => {
+  let clean = (phone || '').replace(/\D/g, '');
+  if (clean.length > 0 && !clean.startsWith('55')) {
+    clean = '55' + clean;
+  }
+  return clean;
+};
+
+const getWhatsAppHosts = () => {
+  const list = [];
+  if (process.env.WHATSAPP_API_URL) list.push(process.env.WHATSAPP_API_URL.replace(/\/$/, ''));
+  if (process.env.WHATSAPP_BOT_URL) list.push(process.env.WHATSAPP_BOT_URL.replace(/\/send$/, '').replace(/\/$/, ''));
+  list.push('http://whatsapp-bot:3000');
+  list.push('http://localhost:3000');
+  return [...new Set(list)];
+};
+
 class RecoveryService {
   constructor() {
     this.cronTask = null;
@@ -53,21 +70,30 @@ class RecoveryService {
       }
 
       for (const pedido of pedidosPendentes) {
-        const telefone = pedido.cliente_telefone;
+        const rawPhone = pedido.cliente_telefone;
+        const cleanPhone = normalizePhone(rawPhone);
         const nomeCliente = pedido.cliente_nome?.split(' ')[0] || 'Cliente';
 
-        if (!telefone) {
-          logger.warn(`[RecoveryService] Pedido ${pedido.id} não possui telefone. Marcando como enviado para ignorar.`);
+        if (!cleanPhone || cleanPhone.length < 10) {
+          logger.warn(`[RecoveryService] Pedido ${pedido.id} não possui telefone válido (${rawPhone}). Marcando como enviado para ignorar.`);
           await pb.collection('pedidos').update(pedido.id, { recuperacao_enviada: true }, { $autoCancel: false });
           continue;
         }
 
-        // Monta a mensagem que o Administrativo/Lia vai enviar (alta credibilidade, provas e link da diretoria)
+        const numPedido = pedido.numero_pedido || 'PED';
+        const valorFormatado = Number(pedido.valor_total || 0).toFixed(2).replace('.', ',');
+        const paymentUrl = `https://avantelingerie.com.br/checkout?order_id=${pedido.id}`;
+
+        // Monta a mensagem que o Administrativo/Lia vai enviar (alta credibilidade, facilidade de pagamento e link da diretoria)
         const mensagemAtiradora = `Olá, ${nomeCliente}! Tudo bem? 
 
 Aqui é do Administrativo da Avante Lingerie — Confecção Própria em Nova Friburgo/RJ ✨
 
-Notamos que você selecionou algumas peças no nosso site, mas não chegou a finalizar o seu pedido. Como prezamos pelo atendimento transparente de cada cliente da nossa fábrica, entramos em contato para que você tenha total segurança e tranquilidade com a nossa marca! ❤️
+Notamos que você selecionou algumas peças no nosso site (Pedido #${numPedido} no valor de R$ ${valorFormatado}), mas não chegou a finalizar o seu pagamento. Como prezamos pelo atendimento transparente de cada cliente da nossa fábrica, entramos em contato para que você tenha total segurança e tranquilidade com a nossa marca! ❤️
+
+💳 Como concluir seu pagamento com facilidade:
+Para facilitar para você finalizar seu pedido com total praticidade, preparamos o link seguro abaixo onde você pode pagar via PIX ou Cartão em até 6x:
+👉 ${paymentUrl}
 
 Alguns pontos importantes sobre a nossa confecção:
 
@@ -99,7 +125,7 @@ O que faltou para liberarmos o seu primeiro pacotinho direto da fábrica hoje? E
           // Injeta a conversa no Cérebro da Lia para que o histórico fique registrado e a IA consiga continuar o papo depois
           let conversaId;
           const records = await pb.collection('lia_conversas').getFullList({
-            filter: `session_id = "${telefone}" && canal = "whatsapp"`,
+            filter: `session_id = "${cleanPhone}" || session_id = "${rawPhone}"`,
             $autoCancel: false
           });
           
@@ -109,7 +135,7 @@ O que faltou para liberarmos o seu primeiro pacotinho direto da fábrica hoje? E
             historico = records[0].mensagens || [];
           } else {
             const novaConversa = await pb.collection('lia_conversas').create({
-              session_id: telefone,
+              session_id: cleanPhone,
               canal: 'whatsapp',
               mensagens: [],
               converteu: false
@@ -121,25 +147,38 @@ O que faltou para liberarmos o seu primeiro pacotinho direto da fábrica hoje? E
           historico.push({ role: 'assistant', content: mensagemAtiradora });
           await pb.collection('lia_conversas').update(conversaId, { mensagens: historico }, { $autoCancel: false });
 
-          // Dispara para o container do WhatsApp Bot para enviar de fato a mensagem pro celular
-          try {
-            // Em ambiente local, precisamos de um fallback para não dar crash se o container não existir
-            const botUrl = process.env.WHATSAPP_BOT_URL || 'http://whatsapp-bot:3000/send';
-            await axios.post(botUrl, {
-              phone: telefone,
-              message: mensagemAtiradora
-            });
-            logger.info(`[RecoveryService] Disparo de recuperação enviado via WhatsApp para ${telefone} (Pedido: ${pedido.id}).`);
-          } catch (whatsappErr) {
-            logger.warn(`[RecoveryService] Falha ao enviar pro WhatsApp (bot pode estar offline): ${whatsappErr.message}`);
+          // Dispara para o container do WhatsApp Bot testando hosts disponíveis
+          const safeMessage = String(mensagemAtiradora).normalize('NFC');
+          const hosts = getWhatsAppHosts();
+          let sent = false;
+
+          for (const host of hosts) {
+            try {
+              await axios.post(`${host}/send`, {
+                phone: cleanPhone,
+                message: safeMessage
+              }, { timeout: 10000 });
+              logger.info(`[RecoveryService] Disparo de recuperação enviado via WhatsApp para ${cleanPhone} via ${host} (Pedido: ${pedido.id}).`);
+              sent = true;
+              break;
+            } catch (errHost) {
+              logger.warn(`[RecoveryService] Falha ao enviar para ${cleanPhone} via ${host}: ${errHost.message}`);
+            }
+          }
+
+          if (!sent) {
+            logger.warn(`[RecoveryService] Todos os hosts falharam para ${cleanPhone}. Mantendo para próxima tentativa.`);
             // Removemos o histórico para tentar de novo
             historico.pop();
             await pb.collection('lia_conversas').update(conversaId, { mensagens: historico }, { $autoCancel: false });
-            continue; 
+            continue;
           }
 
           // Se chegou até aqui, sucesso total. Marca o pedido para não receber mais disparo
-          await pb.collection('pedidos').update(pedido.id, { recuperacao_enviada: true }, { $autoCancel: false });
+          await pb.collection('pedidos').update(pedido.id, {
+            recuperacao_enviada: true,
+            observacoes: (pedido.observacoes ? pedido.observacoes + '\n' : '') + `[LIA] Recuperação automática enviada via WhatsApp em ${new Date().toLocaleString('pt-BR')}`
+          }, { $autoCancel: false });
           
           // Espera 2 segundinhos entre cada envio pra não floodar o WhatsApp
           await new Promise(resolve => setTimeout(resolve, 2000));
