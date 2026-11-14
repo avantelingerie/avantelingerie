@@ -10,6 +10,7 @@ import { Input } from "@/components/ui/input.jsx";
 import { Label } from "@/components/ui/label.jsx";
 import { Button } from "@/components/ui/button.jsx";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog.jsx";
+import pb from '@/lib/pocketbaseClient.js';
 
 export default function LoginPage() {
   const { login, signup, isAuthenticated, requestPasswordReset } = useAuth();

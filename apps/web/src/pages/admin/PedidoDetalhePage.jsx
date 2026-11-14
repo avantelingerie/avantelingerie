@@ -9,6 +9,7 @@ import { Skeleton } from '@/components/ui/skeleton.jsx';
 import { toast } from 'sonner';
 import { pedidosService } from '@/services/pedidosService.js';
 import { blingService } from '@/services/blingService.js';
+import pb from '@/lib/pocketbaseClient.js';
 
 import PedidoDetalhes from '@/components/admin/PedidoDetalhes.jsx';
 import PedidoItens from '@/components/admin/PedidoItens.jsx';
