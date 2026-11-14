@@ -2576,3 +2576,38 @@ Garantir que as dimensﾃｵes e pesos cadastrados na loja e calculados no check
      - Testes unitários automatizados em 'scratch/test_webhook_resilience.mjs' comprovaram 100% de sucesso nas validações de assinatura e resiliência.
   4. *Atendimento Humanizado ao Cliente:*
      - Elaborado script afetuoso e seguro para o Sr. Luiz enviar à Laís (+55 62 8321-4444), confirmando a aprovação do Pix e o envio para expedição.
+
+
+### 11. Normalização Inteligente de Telefones e Disparo de Recuperação da Jacione (PED-006)
+- **Data:** 14 de Novembro de 2026 (Manhã)
+- **Contexto:**
+  1. *PED-007 (Laís do Val):* Etiqueta de frete unificada térmica gerada com sucesso via Melhor Envio e DANFE simplificada no Bling, impressa na Gainscha GS-2406T e pacote despachado na transportadora.
+  2. *PED-006 (Jacione Pereira - R$ 48,43):* Pedido pendente de pagamento via Pix. Disparo manual falhava devido à divergência de 9º dígito em contas legadas do WhatsApp no DDD 85 (Ceará).
+- **Ações e Correções:**
+  - Atualizado `apps/whatsapp-bot/index.js` com resolução dinâmica de JID usando `client.getNumberId` com fallback inteligente entre 8 e 9 dígitos.
+  - Atualizado `apps/api/src/services/recoveryService.js` com links diretos do Mercado Pago (Pix/Cartão até 6x, QR Code visual e Pix Copia e Cola) e WhatsApp da diretoria.
+  - Mensagem entregue com sucesso no WhatsApp da Jacione (`558592914805`).
+  - Deploy #167 aprovado e concluído na VPS da Hostinger.
+
+### 12. Auditoria e Alinhamento Dinâmico dos Painéis do Analytics (Deploy #168)
+- **Data:** 14 de Novembro de 2026 (Tarde)
+- **Contexto:** Solicitação da diretoria para revisão completa e eliminação de dados fictícios, estimativas indevidas e preenchimentos artificiais nos painéis "Desempenho Geral", "Demografia (GA4)" e "Jornadas ao Vivo".
+- **Ações Executadas (Primeira Regra de Ouro):**
+  1. *Painel Desempenho Geral:*
+     - Filtros temporais (`7d`, `30d`, `90d`) tornados 100% ativos, filtrando pedidos e tráfego.
+     - Variações percentuais matemáticas dinâmicas comparadas com o período anterior equivalente (eliminados números hardcoded como +18.4%, +12.1%, +5.6% e 3.7%).
+     - Mix de Negócios 100% real baseado no cruzamento de pedidos com o perfil de revenda/atacado dos clientes: Varejo B2C: R$ 235,37 (54%) e Atacado B2B: R$ 201,76 (46%), totalizando R$ 437,13.
+     - Canais UTM reconciliados centavo por centavo com a receita do período (removidos eventos de testes antigos).
+     - Exportador de Públicos (Meta e Google) reconstruído para extrair clientes compradores reais de `pedidos` e `users`, descartando nomes fictícios.
+  2. *Painel Demografia (GA4 / Base Real):*
+     - Gênero classificado a partir dos clientes cadastrados reais: 92% Feminino (46 clientes) e 8% Masculino/Outros (4 clientes).
+     - Densidade Demográfica por Estado extraída dos pedidos e DDDs reais: MG (22%), RJ (20%), SP (20%), PR (7%), CE (6%), RS (6%), demais estados (19%).
+     - Dispositivos instrumentados via `useMarketingTracker.js` com o novo campo `device_type` na coleção `analytics_events`: Mobile (82%), Desktop (15%), Tablets/Outros (3%).
+  3. *Painel Jornadas ao Vivo:*
+     - Eliminada a simulação artificial com `Math.random()` de usuários online. Contador reflete sessões com atividade real nos últimos 20 minutos.
+     - Filtro estrito descartando rotas administrativas (`/admin*`) e endpoints técnicos (`/apple-app-site-association`).
+     - Pontos Críticos de Abandono (Exit Pages) calculados a partir da última página visitada pelas sessões que não compraram, com taxas reais de evasão.
+  4. *Validação Técnica:*
+     - ESLint aprovado com 0 erros.
+     - Build de produção do Vite (`apps/web`) concluído com sucesso em 28.56s.
+     - Deploy #168 submetido ao GitHub Actions para atualização da VPS.
