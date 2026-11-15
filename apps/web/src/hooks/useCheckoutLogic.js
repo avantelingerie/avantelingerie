@@ -243,12 +243,14 @@ export function useCheckoutLogic() {
     setLoadingShipping(true);
     const actualDelivery = isSameAddress ? billingAddress : deliveryAddress;
     try {
+      const physicalItems = cart.filter(item => !item.is_digital && !item.is_mimo);
+      const shippingItems = physicalItems.length > 0 ? physicalItems : cart;
       const response = await apiServerClient.fetch('/shipping/calculate', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           toCep: cleanCep,
-          items: cart.map(item => ({ id: item.id, quantity: item.quantity })),
+          items: shippingItems.map(item => ({ id: item.id, quantity: item.quantity })),
           cidade: actualDelivery.cidade,
           estado: actualDelivery.estado
         })
@@ -580,7 +582,10 @@ export function useCheckoutLogic() {
         selectedSize: item.selectedSize || '',
         selectedColor: item.selectedColor || '',
         sku: item.sku || '',
-        image: item.image || item.imagem || ''
+        image: item.image || item.imagem || '',
+        is_digital: Boolean(item.is_digital),
+        is_mimo: Boolean(item.is_mimo),
+        is_combo_item: Boolean(item.is_combo_item)
       })),
       userId: currentUser?.id || ''
     };

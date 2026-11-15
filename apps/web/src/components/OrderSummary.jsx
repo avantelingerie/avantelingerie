@@ -2,6 +2,7 @@ import React from 'react';
 import { Button } from '@/components/ui/button.jsx';
 import { ShoppingBag, ArrowRight, Zap, Sparkles, Tag, Gift } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { MIMO_APPS } from '@/components/MimoRetentionModal.jsx';
 
 export default function OrderSummary({ 
   subtotal, 
@@ -38,36 +39,61 @@ export default function OrderSummary({
       {/* VIP Retention Gift Status Box */}
       <div className="mb-6">
         {chosenGift ? (
-          <div className="bg-gradient-to-r from-[#17140e] to-[#0e0c08] border border-[#D4AF37]/40 rounded-xl p-3.5 shadow-sm flex items-center justify-between gap-3 text-white">
-            <div className="flex items-center gap-3 min-w-0">
-              <div className="w-12 h-12 rounded-lg overflow-hidden shrink-0 border border-[#D4AF37]/30 bg-black/60 flex items-center justify-center">
-                <img 
-                  src={chosenGift.coverImage || '/assets/mimos/popup-brindes-transparente.png'} 
-                  alt={chosenGift.name} 
-                  className="w-full h-full object-cover" 
-                />
-              </div>
-              <div className="flex flex-col min-w-0">
-                <div className="flex items-center gap-1.5">
-                  <Gift className="w-3.5 h-3.5 text-[#D4AF37]" />
-                  <span className="text-[10px] font-extrabold uppercase tracking-wider text-[#D4AF37]">
-                    {chosenGift.is_combo ? 'Combo 3 Apps VIP' : 'Presente da Fábrica'}
-                  </span>
-                </div>
-                <span className="text-xs font-bold text-white line-clamp-1">{chosenGift.name}</span>
-                <span className="text-[10px] font-semibold text-[#34d399]">
-                  {chosenGift.is_combo ? '+R$ 9,90 no pedido' : 'GRÁTIS HOJE (R$ 0,00)'}
+          <div className="bg-gradient-to-r from-[#17140e] to-[#0e0c08] border border-[#D4AF37]/40 rounded-xl p-3.5 shadow-sm text-white">
+            <div className="flex items-center justify-between pb-2 mb-2.5 border-b border-[#D4AF37]/20">
+              <div className="flex items-center gap-1.5">
+                <Gift className="w-4 h-4 text-[#D4AF37]" />
+                <span className="text-[11px] font-extrabold uppercase tracking-wider text-[#D4AF37]">
+                  {chosenGift.is_combo ? 'Combo 3 Apps VIP Liberado' : 'Presente VIP da Fábrica'}
                 </span>
               </div>
+              {onOpenGiftModal && (
+                <button
+                  type="button"
+                  onClick={onOpenGiftModal}
+                  className="text-[11px] text-[#D4AF37] hover:text-[#FFF3B0] font-semibold underline shrink-0 cursor-pointer"
+                >
+                  Trocar
+                </button>
+              )}
             </div>
-            {onOpenGiftModal && (
-              <button
-                type="button"
-                onClick={onOpenGiftModal}
-                className="text-[11px] text-[#D4AF37] hover:text-[#FFF3B0] font-semibold underline shrink-0 cursor-pointer"
-              >
-                Trocar
-              </button>
+
+            {chosenGift.is_combo ? (
+              <div className="flex flex-col gap-2">
+                {MIMO_APPS.map((app) => (
+                  <div key={app.id} className="flex items-center gap-2.5 bg-black/50 border border-white/5 rounded-lg p-2">
+                    <div className="w-10 h-10 rounded-md overflow-hidden shrink-0 border border-[#D4AF37]/30 bg-black flex items-center justify-center">
+                      <img 
+                        src={app.coverImage} 
+                        alt={app.name} 
+                        className="w-full h-full object-contain" 
+                      />
+                    </div>
+                    <div className="flex flex-col min-w-0 flex-1">
+                      <span className="text-xs font-bold text-white line-clamp-1">{app.name}</span>
+                      <span className="text-[10px] font-semibold text-[#34d399]">
+                        Incluso no Combo (+R$ 9,90)
+                      </span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <div className="flex items-center gap-3">
+                <div className="w-12 h-12 rounded-lg overflow-hidden shrink-0 border border-[#D4AF37]/30 bg-black flex items-center justify-center">
+                  <img 
+                    src={chosenGift.coverImage || '/assets/mimos/capa-espelho-secreto-3d.jpg'} 
+                    alt={chosenGift.name} 
+                    className="w-full h-full object-contain" 
+                  />
+                </div>
+                <div className="flex flex-col min-w-0 flex-1">
+                  <span className="text-xs font-bold text-white line-clamp-1">{chosenGift.name}</span>
+                  <span className="text-[10px] font-semibold text-[#34d399]">
+                    GRÁTIS HOJE (R$ 0,00)
+                  </span>
+                </div>
+              </div>
             )}
           </div>
         ) : (
@@ -76,8 +102,12 @@ export default function OrderSummary({
             className="bg-gradient-to-r from-[#FFF8E1] to-[#FFF3E0] border border-[#D4AF37]/50 rounded-xl p-3.5 shadow-sm flex items-center justify-between gap-3 cursor-pointer hover:border-[#D4AF37] transition-all group"
           >
             <div className="flex items-center gap-2.5">
-              <div className="w-9 h-9 rounded-full bg-[#D4AF37]/20 flex items-center justify-center text-[#D4AF37] shrink-0 group-hover:scale-110 transition-transform">
-                <Gift className="w-4 h-4" />
+              <div className="w-10 h-10 rounded-lg overflow-hidden shrink-0 border border-[#D4AF37]/40 bg-white shadow-xs flex items-center justify-center">
+                <img 
+                  src="/assets/mimos/caixa-presente-laco-vermelho.jpg" 
+                  alt="Presente VIP" 
+                  className="w-full h-full object-contain p-0.5" 
+                />
               </div>
               <div className="flex flex-col text-left">
                 <span className="text-xs font-bold text-[#8B7355] flex items-center gap-1">

@@ -190,6 +190,9 @@ export function useCart() {
   // High #11 & Medium #24: Align pricing fallback and B2B reseller pricing consistently
   const getItemPrice = useCallback((item) => {
     if (!item) return 0;
+    if (item.is_mimo || item.is_digital) {
+      return Number(item.price) || 0;
+    }
     const isAtacadoSession = typeof window !== 'undefined' && localStorage.getItem('avante_modo_compra') === 'atacado';
     const isReseller = currentUser?.commercial_profile === 'reseller' || currentUser?.tipo_cliente === 'revendedor' || Boolean(item.is_atacado) || isAtacadoSession;
     if (isReseller) {

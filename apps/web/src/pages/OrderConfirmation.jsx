@@ -430,11 +430,11 @@ export default function OrderConfirmation() {
                 </div>
               ) : (
                 <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6 sm:gap-8">
-                  <div className="w-36 sm:w-44 aspect-square rounded-2xl overflow-hidden shrink-0 border-2 border-[#D4AF37]/40 shadow-[0_0_25px_rgba(212,175,55,0.3)] bg-black/50">
+                  <div className="w-36 sm:w-44 aspect-square rounded-2xl overflow-hidden shrink-0 border-2 border-[#D4AF37]/40 shadow-[0_0_25px_rgba(212,175,55,0.3)] bg-black">
                     <img 
-                      src={resolvedGift.coverImage || '/assets/mimos/popup-brindes-transparente.png'} 
+                      src={resolvedGift.coverImage || '/assets/mimos/caixa-presente-ganhouu.png'} 
                       alt={resolvedGift.name} 
-                      className="w-full h-full object-cover" 
+                      className="w-full h-full object-contain" 
                     />
                   </div>
 

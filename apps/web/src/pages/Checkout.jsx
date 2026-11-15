@@ -12,7 +12,7 @@ import { useCheckoutLogic } from '@/hooks/useCheckoutLogic.js';
 import CheckoutAddressForm from '@/components/CheckoutAddressForm.jsx';
 import CheckoutOrderSummary from '@/components/CheckoutOrderSummary.jsx';
 import CheckoutMicroOffer from '@/components/CheckoutMicroOffer.jsx';
-import MimoRetentionModal from '@/components/MimoRetentionModal.jsx';
+import MimoRetentionModal, { MIMO_APPS } from '@/components/MimoRetentionModal.jsx';
 import { useCart } from '@/hooks/useCart.js';
 import { trackInitiateCheckout } from '@/lib/marketingPixels.js';
 import { getGenderTerms } from '@/utils/genderHelper.js';
@@ -125,30 +125,73 @@ export default function Checkout() {
 
   const handleConfirmGift = (giftData) => {
     setChosenGift(giftData);
-    const comboCartItemId = 'combo-3-apps-vip-Digital-Acesso VIP';
+
+    // 1. Remove qualquer brinde/app anterior da sacola
+    const previousMimos = cart.filter(i => 
+      i.is_mimo || 
+      i.is_combo_item || 
+      i.id === 'combo-3-apps-vip' ||
+      (i.id && i.id.startsWith('app-mimo-'))
+    );
+    previousMimos.forEach(mi => removeFromCart(mi.cartItemId));
+
+    // 2. Se for combo, adiciona os 3 apps listados um abaixo do outro
     if (giftData.is_combo) {
-      const alreadyInCart = cart.some(i => i.cartItemId === comboCartItemId || i.id === 'combo-3-apps-vip');
-      if (!alreadyInCart) {
+      MIMO_APPS.forEach((app) => {
         addToCart({
-          id: 'combo-3-apps-vip',
-          name: 'Combo 3 Aplicativos VIP da Fábrica',
-          price: 9.90,
-          preco_varejo: 9.90,
-          preco_atacado: 9.90,
-          image: '/assets/mimos/popup-brindes-transparente.png',
-          selectedSize: 'Digital',
-          selectedColor: 'Acesso VIP',
+          id: `app-mimo-${app.id}`,
+          name: `App VIP: ${app.name}`,
+          price: 3.30,
+          preco_varejo: 3.30,
+          preco_atacado: 3.30,
+          image: app.coverImage,
+          selectedSize: 'App VIP',
+          selectedColor: 'Acesso Digital',
           quantity: 1,
           stock: 9999,
-          is_digital: true
+          is_digital: true,
+          is_mimo: true,
+          is_combo_item: true,
+          mimo_app_id: app.id
         });
-      }
+      });
     } else {
-      const existingCombo = cart.find(i => i.cartItemId === comboCartItemId || i.id === 'combo-3-apps-vip');
-      if (existingCombo) {
-        removeFromCart(existingCombo.cartItemId);
-      }
+      // Se for brinde individual, adiciona o App escolhido com preço 0
+      addToCart({
+        id: `app-mimo-${giftData.id}`,
+        name: `App VIP: ${giftData.name}`,
+        price: 0,
+        preco_varejo: 0,
+        preco_atacado: 0,
+        image: giftData.coverImage,
+        selectedSize: 'App VIP',
+        selectedColor: 'Acesso Digital',
+        quantity: 1,
+        stock: 9999,
+        is_digital: true,
+        is_mimo: true,
+        is_combo_item: false,
+        mimo_app_id: giftData.id
+      });
     }
+  };
+
+  const handleRemoveCartItem = (cartItemId) => {
+    const item = cart.find(i => i.cartItemId === cartItemId);
+    if (item?.is_mimo || item?.is_combo_item) {
+      const allMimoItems = cart.filter(i => 
+        i.is_mimo || 
+        i.is_combo_item || 
+        (i.id && i.id.startsWith('app-mimo-')) || 
+        i.id === 'combo-3-apps-vip'
+      );
+      allMimoItems.forEach(mi => removeFromCart(mi.cartItemId));
+      setChosenGift(null);
+      localStorage.removeItem('avante_brinde_escolhido');
+      toast.info('Presente VIP removido do pedido.');
+      return;
+    }
+    removeFromCart(cartItemId);
   };
 
   // Guests can purchase directly by filling in the personal data fields
@@ -676,7 +719,7 @@ export default function Checkout() {
                 activeBenefitMessage={activeBenefitMessage}
                 benefitType={benefitType}
                 shippingCost={shippingCost}
-                onRemove={removeFromCart}
+                onRemove={handleRemoveCartItem}
                 getItemPrice={getItemPrice}
                 couponCode={couponCode}
                 setCouponCode={setCouponCode}

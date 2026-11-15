@@ -2,6 +2,7 @@ import React from 'react';
 import { ShoppingBag, Tag, ShieldCheck, Trash2, Play, Gift } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card.jsx';
 import { isExternalVideo, getYoutubeThumbnail, isDirectVideo } from '@/lib/utils.js';
+import { MIMO_APPS } from '@/components/MimoRetentionModal.jsx';
 
 export default function CheckoutOrderSummary({
   cart,
@@ -39,36 +40,61 @@ export default function CheckoutOrderSummary({
       <CardContent className="p-5 flex flex-col gap-6">
         {/* VIP Gift Status in Checkout */}
         {chosenGift && (
-          <div className="bg-gradient-to-r from-[#17140e] to-[#0e0c08] border border-[#D4AF37]/40 rounded-xl p-3 shadow-sm flex items-center justify-between gap-3 text-white">
-            <div className="flex items-center gap-3 min-w-0">
-              <div className="w-12 h-12 rounded-lg overflow-hidden shrink-0 border border-[#D4AF37]/30 bg-black/60 flex items-center justify-center">
-                <img 
-                  src={chosenGift.coverImage || '/assets/mimos/popup-brindes-transparente.png'} 
-                  alt={chosenGift.name} 
-                  className="w-full h-full object-cover" 
-                />
-              </div>
-              <div className="flex flex-col min-w-0">
-                <div className="flex items-center gap-1.5">
-                  <Gift className="w-3.5 h-3.5 text-[#D4AF37]" />
-                  <span className="text-[10px] font-extrabold uppercase tracking-wider text-[#D4AF37]">
-                    {chosenGift.is_combo ? 'Combo 3 Apps VIP' : 'Presente VIP Garantido'}
-                  </span>
-                </div>
-                <span className="text-xs font-bold text-white line-clamp-1">{chosenGift.name}</span>
-                <span className="text-[10px] font-semibold text-[#34d399]">
-                  {chosenGift.is_combo ? '+R$ 9,90 no pedido' : 'GRÁTIS HOJE (R$ 0,00)'}
+          <div className="bg-gradient-to-r from-[#17140e] to-[#0e0c08] border border-[#D4AF37]/40 rounded-xl p-3.5 shadow-sm text-white">
+            <div className="flex items-center justify-between pb-2 mb-2.5 border-b border-[#D4AF37]/20">
+              <div className="flex items-center gap-1.5">
+                <Gift className="w-4 h-4 text-[#D4AF37]" />
+                <span className="text-[11px] font-extrabold uppercase tracking-wider text-[#D4AF37]">
+                  {chosenGift.is_combo ? 'Combo 3 Apps VIP Liberado' : 'Presente VIP Garantido'}
                 </span>
               </div>
+              {onOpenGiftModal && (
+                <button
+                  type="button"
+                  onClick={onOpenGiftModal}
+                  className="text-[11px] text-[#D4AF37] hover:text-[#FFF3B0] font-semibold underline shrink-0 cursor-pointer"
+                >
+                  Trocar
+                </button>
+              )}
             </div>
-            {onOpenGiftModal && (
-              <button
-                type="button"
-                onClick={onOpenGiftModal}
-                className="text-[11px] text-[#D4AF37] hover:text-[#FFF3B0] font-semibold underline shrink-0 cursor-pointer"
-              >
-                Trocar
-              </button>
+
+            {chosenGift.is_combo ? (
+              <div className="flex flex-col gap-2">
+                {MIMO_APPS.map((app) => (
+                  <div key={app.id} className="flex items-center gap-2.5 bg-black/50 border border-white/5 rounded-lg p-2">
+                    <div className="w-10 h-10 rounded-md overflow-hidden shrink-0 border border-[#D4AF37]/30 bg-black flex items-center justify-center">
+                      <img 
+                        src={app.coverImage} 
+                        alt={app.name} 
+                        className="w-full h-full object-contain" 
+                      />
+                    </div>
+                    <div className="flex flex-col min-w-0 flex-1">
+                      <span className="text-xs font-bold text-white line-clamp-1">{app.name}</span>
+                      <span className="text-[10px] font-semibold text-[#34d399]">
+                        Incluso no Combo (+R$ 9,90)
+                      </span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <div className="flex items-center gap-3">
+                <div className="w-12 h-12 rounded-lg overflow-hidden shrink-0 border border-[#D4AF37]/30 bg-black flex items-center justify-center">
+                  <img 
+                    src={chosenGift.coverImage || '/assets/mimos/capa-espelho-secreto-3d.jpg'} 
+                    alt={chosenGift.name} 
+                    className="w-full h-full object-contain" 
+                  />
+                </div>
+                <div className="flex flex-col min-w-0 flex-1">
+                  <span className="text-xs font-bold text-white line-clamp-1">{chosenGift.name}</span>
+                  <span className="text-[10px] font-semibold text-[#34d399]">
+                    GRÁTIS HOJE (R$ 0,00)
+                  </span>
+                </div>
+              </div>
             )}
           </div>
         )}
@@ -79,8 +105,10 @@ export default function CheckoutOrderSummary({
             const activeItemPrice = getItemPrice ? getItemPrice(item) : item.price;
             return (
               <div key={item.cartItemId} className="flex items-start gap-4 group">
-                <div className="w-16 h-16 rounded-lg bg-muted border border-primary/10 overflow-hidden shrink-0">
-                  {isDirectVideo(item.image) ? (
+                <div className={`w-16 h-16 rounded-lg ${item.is_mimo ? 'bg-black p-0.5' : 'bg-muted'} border border-primary/10 overflow-hidden shrink-0 flex items-center justify-center`}>
+                  {item.is_mimo ? (
+                    <img src={item.image} alt={item.name} className="w-full h-full object-contain" />
+                  ) : isDirectVideo(item.image) ? (
                     <div className="w-full h-full relative bg-[#1a1a1a] flex items-center justify-center">
                       <div className="w-6 h-6 rounded-full bg-[#c59b5f] flex items-center justify-center shadow-md">
                         <Play className="w-3 h-3 text-black fill-black ml-0.5" />
@@ -103,12 +131,29 @@ export default function CheckoutOrderSummary({
                       <Trash2 className="w-4 h-4" />
                     </button>
                   </div>
-                  <span className="text-xs text-muted-foreground mt-0.5">
-                    Tam: {item.selectedSize || 'Padrão'} | Cor: {item.selectedColor?.startsWith('#') ? 'Personalizada' : (item.selectedColor || 'Padrão')}
-                  </span>
+                  {item.is_mimo ? (
+                    <div className="flex items-center gap-1.5 mt-0.5">
+                      <span className="text-[10px] font-bold text-[#996515] dark:text-[#F3BA2F] bg-[#D4AF37]/15 px-2 py-0.5 rounded-md border border-[#D4AF37]/30">
+                        {item.is_combo_item ? 'Combo 3 Apps VIP' : '🎁 Presente da Fábrica'}
+                      </span>
+                      <span className="text-[10px] text-muted-foreground">Acesso Digital</span>
+                    </div>
+                  ) : (
+                    <span className="text-xs text-muted-foreground mt-0.5">
+                      Tam: {item.selectedSize || 'Padrão'} | Cor: {item.selectedColor?.startsWith('#') ? 'Personalizada' : (item.selectedColor || 'Padrão')}
+                    </span>
+                  )}
                   <div className="flex items-center justify-between mt-1">
-                    <span className="text-xs font-medium text-foreground">Qtd: {item.quantity}</span>
-                    <span className="text-sm font-bold text-primary">{formatPrice(activeItemPrice * item.quantity)}</span>
+                    <span className="text-xs font-medium text-foreground">
+                      {item.is_mimo ? '1 un (Digital)' : `Qtd: ${item.quantity}`}
+                    </span>
+                    <span className="text-sm font-bold text-primary">
+                      {item.is_mimo && activeItemPrice === 0 ? (
+                        <span className="text-[#10b981] font-extrabold text-xs">GRÁTIS HOJE</span>
+                      ) : (
+                        formatPrice(activeItemPrice * item.quantity)
+                      )}
+                    </span>
                   </div>
                 </div>
               </div>
