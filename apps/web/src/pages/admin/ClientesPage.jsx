@@ -81,15 +81,47 @@ export default function ClientesPage() {
       const targetName = res?.targetName || 'Revendedora';
       const targetEmail = res?.targetEmail || '';
       const targetPhone = res?.targetPhone || '';
-      const emailSent = notif?.emailSent;
+      const emailSent = Boolean(notif?.emailSent);
       const messageWa = notif?.messageWa;
 
       // Sanitiza telefone e constrói link nativo api.whatsapp.com que preserva 100% dos emojis UTF-8
       const rawDigits = targetPhone.replace(/\D/g, '');
       const cleanPhone = rawDigits.startsWith('55') ? rawDigits : (rawDigits.length > 0 ? `55${rawDigits}` : '');
-      const safeWaLink = (cleanPhone.length >= 12 && messageWa)
-        ? `https://api.whatsapp.com/send?phone=${cleanPhone}&text=${encodeURIComponent(messageWa)}`
-        : notif?.waLink;
+      const cleanDigitsPhone = cleanPhone.replace(/^55/, '');
+
+      // Mensagem oficial da Lia com garantia de nunca ficar vazia mesmo se a API falhar
+      const fallbackMessageWa = [
+        `Olá, ${targetName.split(' ')[0]}! Tudo bem? Aqui é a Lia, consultora de revenda da *Avante Lingerie*, direto da nossa confecção em Nova Friburgo/RJ! 🌸✨`,
+        ``,
+        `Passando para te dar as *boas-vindas oficiais ao nosso Clube de Revendedoras!* 👑`,
+        ``,
+        `Seu cadastro foi ativado com sucesso e agora você tem acesso direto de fábrica com preços de atacado!`,
+        ``,
+        `🔐 *Como destravar seus Preços de Atacado no site:*`,
+        `Como nossa loja também atende consumidor final, quem entra sem login vê os preços normais de varejo. Para o sistema te reconhecer e liberar a tabela de atacado, basta fazer seu login rápido:`,
+        ``,
+        `👉 Acesse: https://avantelingerie.com.br/login`,
+        `✉️ *Seu E-mail:* ${targetEmail || 'Seu e-mail cadastrado'}`,
+        `🔑 *Sua Senha:* O seu número de WhatsApp com DDD (apenas números, ex: ${cleanDigitsPhone || 'Seu WhatsApp'})`,
+        `_(Se quiser alterar depois, basta clicar em "Esqueceu a senha?")_`,
+        ``,
+        `🚨 *Vantagens Especiais de Fábrica:*`,
+        `• *Pedido Mínimo de apenas R$ 69,90:* Sem travas de R$ 500 ou R$ 1.000 para começar a lucrar.`,
+        `• *Margem de 100% a 150% de lucro líquido* no seu bolso.`,
+        `• *+5% OFF no PIX à vista* ou até 6x no cartão.`,
+        ``,
+        `Acesse agora e veja seus custos de fábrica liberados:`,
+        `👉 https://avantelingerie.com.br/login`,
+        ``,
+        `Qualquer dúvida com tecidos ou tamanhos, é só me responder aqui! Conte comigo para abastecer sua revenda! 💖🧵`,
+        ``,
+        `*Avante Lingerie • Nova Friburgo/RJ* 💕`
+      ].join('\n');
+
+      const finalMessageWa = messageWa || fallbackMessageWa;
+      const safeWaLink = cleanPhone.length >= 10
+        ? `https://api.whatsapp.com/send?phone=${cleanPhone}&text=${encodeURIComponent(finalMessageWa)}`
+        : (cleanDigitsPhone ? `https://api.whatsapp.com/send?phone=55${cleanDigitsPhone}&text=${encodeURIComponent(finalMessageWa)}` : `https://api.whatsapp.com/send?text=${encodeURIComponent(finalMessageWa)}`);
 
       if (emailSent) {
         toast.success(`👑 ${targetName} aprovada! E-mail VIP de boas-vindas enviado.`, {
@@ -108,8 +140,9 @@ export default function ClientesPage() {
         email: targetEmail,
         phone: targetPhone,
         emailSent,
+        waSent: Boolean(notif?.waSent),
         waLink: safeWaLink,
-        messageWa
+        messageWa: finalMessageWa
       });
 
       await Promise.all([
@@ -280,42 +313,51 @@ export default function ClientesPage() {
             <div className="flex items-start gap-2.5 bg-zinc-900/90 border border-zinc-800 p-3 rounded-xl">
               <MessageCircle className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
               <div className="flex-1">
-                <p className="font-semibold text-zinc-200">Mensagem da Lia no WhatsApp</p>
+                <p className="font-semibold text-zinc-200">
+                  {approvedModalData?.waSent ? 'WhatsApp da Lia Disparado Automaticamente' : 'Mensagem da Lia no WhatsApp'}
+                </p>
                 <p className="text-zinc-400 text-[11px]">
                   {approvedModalData?.phone ? approvedModalData.phone : 'Telefone não informado'}
                 </p>
               </div>
+              {approvedModalData?.waSent && (
+                <span className="text-[10px] bg-emerald-950 text-emerald-400 border border-emerald-500/30 px-1.5 py-0.5 rounded font-bold">
+                  Enviado
+                </span>
+              )}
             </div>
           </div>
 
           <DialogFooter className="flex flex-col sm:flex-row gap-2 mt-4">
-            {approvedModalData?.waLink && (
-              <Button
-                type="button"
-                className="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold gap-2 shadow-lg shadow-emerald-900/40"
-                onClick={() => {
+            <Button
+              type="button"
+              className="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold gap-2 shadow-lg shadow-emerald-900/40"
+              onClick={() => {
+                if (approvedModalData?.waLink) {
                   window.open(approvedModalData.waLink, '_blank');
-                }}
-              >
-                <MessageCircle className="w-4 h-4" />
-                Conversar no WhatsApp da Lia
-                <ExternalLink className="w-3.5 h-3.5 ml-1" />
-              </Button>
-            )}
-            {approvedModalData?.messageWa && (
-              <Button
-                type="button"
-                variant="outline"
-                className="w-full sm:w-auto border-zinc-700 text-zinc-300 hover:bg-zinc-900 gap-1.5"
-                onClick={() => {
+                } else {
+                  window.open('https://web.whatsapp.com', '_blank');
+                }
+              }}
+            >
+              <MessageCircle className="w-4 h-4" />
+              Conversar no WhatsApp da Lia
+              <ExternalLink className="w-3.5 h-3.5 ml-1" />
+            </Button>
+            <Button
+              type="button"
+              variant="outline"
+              className="w-full sm:w-auto border-zinc-700 text-zinc-300 hover:bg-zinc-900 gap-1.5"
+              onClick={() => {
+                if (approvedModalData?.messageWa) {
                   navigator.clipboard.writeText(approvedModalData.messageWa);
                   toast.success('Mensagem VIP copiada com todos os emojis!');
-                }}
-              >
-                <Copy className="w-3.5 h-3.5 text-[#c59b5f]" />
-                Copiar Texto
-              </Button>
-            )}
+                }
+              }}
+            >
+              <Copy className="w-3.5 h-3.5 text-[#c59b5f]" />
+              Copiar Texto
+            </Button>
             <Button
               type="button"
               variant="outline"

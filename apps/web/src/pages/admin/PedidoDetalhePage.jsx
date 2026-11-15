@@ -555,42 +555,42 @@ export default function PedidoDetalhePage() {
               </div>
             </div>
 
-            {/* Barra de Ações Rápidas (quando já possui rastreio ou foi despachado) */}
-            {(currentTracking || pedido.danfe_url) && (
+            {/* Barra de Ações Rápidas (Rastreio, WhatsApp, DANFE, Etiqueta) */}
+            {(currentTracking || pedido.danfe_url || waWebUrl) && (
               <div className="pt-2 border-t border-border/40 flex flex-wrap items-center gap-3">
                 {currentTracking && (
-                  <>
-                    <Button variant="outline" size="sm" asChild className="hover:border-amber-500/50 hover:text-amber-500">
-                      <a 
-                        href={`https://avantelingerie.com.br/rastreio?codigo=${encodeURIComponent(currentTracking)}`} 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                      >
-                        <ExternalLink className="w-4 h-4 mr-1.5 text-amber-500" />
-                        Ver Rastreio na Loja
-                      </a>
-                    </Button>
-
-                    {waWebUrl && (
-                      <Button variant="outline" size="sm" asChild className="border-emerald-500/30 text-emerald-600 dark:text-emerald-400 hover:bg-emerald-500/10">
-                        <a href={waWebUrl} target="_blank" rel="noopener noreferrer">
-                          <MessageCircle className="w-4 h-4 mr-1.5 text-emerald-500" />
-                          Abrir WhatsApp Web
-                        </a>
-                      </Button>
-                    )}
-
-                    <Button 
-                      type="button" 
-                      variant="outline" 
-                      size="sm" 
-                      onClick={copyWhatsAppMessage}
-                      className="border-amber-500/40 bg-amber-500/10 text-amber-600 dark:text-amber-400 hover:bg-amber-500/20 font-semibold"
+                  <Button variant="outline" size="sm" asChild className="hover:border-amber-500/50 hover:text-amber-500">
+                    <a 
+                      href={`https://avantelingerie.com.br/rastreio?codigo=${encodeURIComponent(currentTracking)}`} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
                     >
-                      {isMsgCopied ? <Check className="w-4 h-4 mr-1.5 text-emerald-500" /> : <Copy className="w-4 h-4 mr-1.5 text-amber-500" />}
-                      {isMsgCopied ? 'Texto Copiado!' : 'Copiar Mensagem (Zap)'}
-                    </Button>
-                  </>
+                      <ExternalLink className="w-4 h-4 mr-1.5 text-amber-500" />
+                      Ver Rastreio na Loja
+                    </a>
+                  </Button>
+                )}
+
+                {waWebUrl && (
+                  <Button variant="outline" size="sm" asChild className="border-emerald-500/30 text-emerald-600 dark:text-emerald-400 hover:bg-emerald-500/10">
+                    <a href={waWebUrl} target="_blank" rel="noopener noreferrer">
+                      <MessageCircle className="w-4 h-4 mr-1.5 text-emerald-500" />
+                      Abrir WhatsApp Web
+                    </a>
+                  </Button>
+                )}
+
+                {(waWebUrl || currentTracking) && (
+                  <Button 
+                    type="button" 
+                    variant="outline" 
+                    size="sm" 
+                    onClick={copyWhatsAppMessage}
+                    className="border-amber-500/40 bg-amber-500/10 text-amber-600 dark:text-amber-400 hover:bg-amber-500/20 font-semibold"
+                  >
+                    {isMsgCopied ? <Check className="w-4 h-4 mr-1.5 text-emerald-500" /> : <Copy className="w-4 h-4 mr-1.5 text-amber-500" />}
+                    {isMsgCopied ? 'Texto Copiado!' : 'Copiar Mensagem (Zap)'}
+                  </Button>
                 )}
 
                 {pedido.danfe_url && (
