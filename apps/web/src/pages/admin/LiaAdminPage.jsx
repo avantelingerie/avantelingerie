@@ -222,6 +222,11 @@ export default function LiaAdminPage() {
     selectedSessionIdRef.current = selectedSessionId;
   }, [selectedSessionId]);
 
+  // Conversa ativa selecionada (definida no topo para evitar Temporal Dead Zone nos effects)
+  const selectedConversa = useMemo(() => {
+    return conversas.find(c => c.session_id === selectedSessionId) || null;
+  }, [conversas, selectedSessionId]);
+
   const fetchConversas = async (isBackground = false) => {
     try {
       if (!isBackground) setIsLoadingConversas(true);
@@ -552,7 +557,6 @@ export default function LiaAdminPage() {
     }
   }, [channelFilter]);
 
-  const selectedConversa = conversas.find(c => c.session_id === selectedSessionId);
   const selectedDisplay = selectedConversa 
     ? formatSessionDisplay(selectedConversa.session_id, selectedConversa.canal, selectedConversa.cliente_nome) 
     : null;
