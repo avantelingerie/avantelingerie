@@ -28,12 +28,12 @@ class RecoveryService {
 
   start() {
     logger.info('[RecoveryService] Motor da Lia Atiradora inicializado (rodando a cada 5 minutos).');
-    
+
     // Executa a cada 5 minutos
     this.cronTask = cron.schedule('*/5 * * * *', async () => {
       if (this.isProcessing) return;
       this.isProcessing = true;
-      
+
       try {
         await this.processAbandonedOrders();
       } catch (error) {
@@ -59,7 +59,7 @@ class RecoveryService {
 
       // Busca pedidos pendentes criados antes desse threshold que ainda não receberam recuperação
       const queryFilter = `status = 'pendente' && recuperacao_enviada = false && created <= "${isoThreshold}"`;
-      
+
       const pedidosPendentes = await pb.collection('pedidos').getFullList({
         filter: queryFilter,
         $autoCancel: false
@@ -128,7 +128,7 @@ O que faltou para liberarmos o seu primeiro pacotinho direto da fábrica hoje? E
             filter: `session_id = "${cleanPhone}" || session_id = "${rawPhone}"`,
             $autoCancel: false
           });
-          
+
           let historico = [];
           if (records.length > 0) {
             conversaId = records[0].id;
@@ -179,7 +179,7 @@ O que faltou para liberarmos o seu primeiro pacotinho direto da fábrica hoje? E
             recuperacao_enviada: true,
             observacoes: (pedido.observacoes ? pedido.observacoes + '\n' : '') + `[LIA] Recuperação automática enviada via WhatsApp em ${new Date().toLocaleString('pt-BR')}`
           }, { $autoCancel: false });
-          
+
           // Espera 2 segundinhos entre cada envio pra não floodar o WhatsApp
           await new Promise(resolve => setTimeout(resolve, 2000));
 

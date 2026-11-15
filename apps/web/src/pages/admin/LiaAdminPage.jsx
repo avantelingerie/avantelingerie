@@ -213,7 +213,14 @@ export default function LiaAdminPage() {
     }
   }, [activeTab]);
 
-  const messagesEndRef = useRef(null);
+  const selectedSessionIdRef = useRef(selectedSessionId);
+  const chatScrollRef = useRef(null);
+  const prevMsgCountRef = useRef(0);
+
+  // Mantém a ref sempre sincronizada com o estado ativo (evita stale closure no polling)
+  useEffect(() => {
+    selectedSessionIdRef.current = selectedSessionId;
+  }, [selectedSessionId]);
 
   const fetchConversas = async (isBackground = false) => {
     try {
@@ -233,7 +240,8 @@ export default function LiaAdminPage() {
         });
       }
       setConversas(records);
-      if (records.length > 0 && !selectedSessionId) {
+      // Auto-seleciona apenas na carga inicial se nenhuma conversa estiver ativa
+      if (records.length > 0 && !selectedSessionIdRef.current) {
         setSelectedSessionId(records[0].session_id);
       }
     } catch (error) {
@@ -311,11 +319,37 @@ export default function LiaAdminPage() {
     };
   }, []);
 
-  useEffect(() => {
-    if (messagesEndRef.current) {
-      messagesEndRef.current.scrollIntoView({ behavior: 'smooth' });
+  // Rola para o final do chat internamente SEM afetar a rolagem da janela/painel
+  const scrollToChatBottom = (smooth = true) => {
+    if (!chatScrollRef.current) return;
+    const viewport = chatScrollRef.current.querySelector('[data-radix-scroll-area-viewport]') || chatScrollRef.current;
+    if (viewport) {
+      if (smooth) {
+        viewport.scrollTo({ top: viewport.scrollHeight, behavior: 'smooth' });
+      } else {
+        viewport.scrollTop = viewport.scrollHeight;
+      }
     }
-  }, [selectedSessionId, conversas]);
+  };
+
+  // Quando o usuário seleciona ou troca de conversa: rola imediatamente para o final das mensagens
+  useEffect(() => {
+    if (selectedSessionId) {
+      const t = setTimeout(() => {
+        scrollToChatBottom(false);
+      }, 50);
+      return () => clearTimeout(t);
+    }
+  }, [selectedSessionId]);
+
+  // Quando chegam novas mensagens na conversa ATIVA: rola suavemente
+  useEffect(() => {
+    const currentMsgs = selectedConversa?.mensagens?.length || 0;
+    if (currentMsgs > prevMsgCountRef.current) {
+      scrollToChatBottom(true);
+    }
+    prevMsgCountRef.current = currentMsgs;
+  }, [selectedConversa?.mensagens?.length]);
 
   const assumirConversa = async (conversaId) => {
     try {
@@ -508,15 +542,15 @@ export default function LiaAdminPage() {
     });
   }, [conversas, channelFilter, searchTerm]);
 
-  // Sincroniza automaticamente a conversa ativa ao mudar de filtro (evita mostrar chat da Loja ao clicar no WhatsApp)
+  // Sincroniza automaticamente a conversa ativa apenas ao mudar explicitamente de filtro de canal
   useEffect(() => {
     if (filteredConversas.length > 0) {
-      const isCurrentInFiltered = filteredConversas.some(c => c.session_id === selectedSessionId);
+      const isCurrentInFiltered = filteredConversas.some(c => c.session_id === selectedSessionIdRef.current);
       if (!isCurrentInFiltered) {
         setSelectedSessionId(filteredConversas[0].session_id);
       }
     }
-  }, [channelFilter, filteredConversas, selectedSessionId]);
+  }, [channelFilter]);
 
   const selectedConversa = conversas.find(c => c.session_id === selectedSessionId);
   const selectedDisplay = selectedConversa 
@@ -524,29 +558,29 @@ export default function LiaAdminPage() {
     : null;
 
   return (
-    <div className="w-full space-y-6 text-zinc-100 font-sans pb-12">
+    <div className="w-full space-y-6 text-zinc-900 dark:text-zinc-100 font-sans pb-12">
       
       {/* ================= BARRA SUPERIOR EXECUTIVA (HEADER CRM) ================= */}
-      <div className="bg-zinc-900/90 border border-zinc-800/80 p-4 sm:p-5 rounded-2xl shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-4">
+      <div className="bg-white dark:bg-zinc-900/90 border border-zinc-200/90 dark:border-zinc-800/80 p-4 sm:p-5 rounded-2xl shadow-xs dark:shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-4 transition-colors">
         <div className="flex items-center gap-3">
           <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#c59b5f]/30 to-[#c59b5f]/5 border border-[#c59b5f]/40 flex items-center justify-center text-[#c59b5f] shadow-sm shrink-0">
             <Sparkles className="w-5 h-5" />
           </div>
           <div>
             <div className="flex items-center gap-2 flex-wrap">
-              <h1 className="text-base sm:text-xl font-serif font-bold text-white tracking-wide">
+              <h1 className="text-base sm:text-xl font-serif font-bold text-zinc-900 dark:text-white tracking-wide">
                 Central de Atendimento & CRM Lia
               </h1>
-              <span className="inline-flex items-center gap-1.5 text-[10px] font-semibold text-emerald-400 bg-emerald-950/80 border border-emerald-800/50 px-2.5 py-0.5 rounded-full">
+              <span className="inline-flex items-center gap-1.5 text-[10px] font-semibold text-emerald-800 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/80 border border-emerald-200 dark:border-emerald-800/50 px-2.5 py-0.5 rounded-full">
                 <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
                 (22) 98122-5010
               </span>
-              <span className="inline-flex items-center gap-1 text-[10px] font-medium text-emerald-300/90 bg-emerald-950/40 border border-emerald-800/30 px-2 py-0.5 rounded-full">
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+              <span className="inline-flex items-center gap-1 text-[10px] font-medium text-emerald-800 dark:text-emerald-300/90 bg-emerald-50/80 dark:bg-emerald-950/40 border border-emerald-200/80 dark:border-emerald-800/30 px-2 py-0.5 rounded-full">
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 dark:bg-emerald-400"></span>
                 Tempo Real Ativo
               </span>
             </div>
-            <p className="text-xs text-zinc-400 mt-0.5">
+            <p className="text-xs text-zinc-500 dark:text-zinc-400 mt-0.5">
               Gestão omnicanal em tempo real de revendedoras e clientes do atacado e varejo.
             </p>
           </div>
@@ -555,18 +589,18 @@ export default function LiaAdminPage() {
         {/* KPIs na Barra Superior */}
         <div className="flex items-center gap-2 flex-wrap">
           <div className="flex items-center gap-1.5 text-xs">
-            <span className="px-2.5 py-1 rounded-lg bg-zinc-800/90 text-zinc-300 border border-zinc-700/50">
-              Total: <strong className="text-white ml-1">{metrics.total}</strong>
+            <span className="px-2.5 py-1 rounded-lg bg-zinc-100 dark:bg-zinc-800/90 text-zinc-700 dark:text-zinc-300 border border-zinc-200 dark:border-zinc-700/50">
+              Total: <strong className="text-zinc-900 dark:text-white ml-1">{metrics.total}</strong>
             </span>
-            <span className="px-2.5 py-1 rounded-lg bg-emerald-950/60 border border-emerald-800/40 text-emerald-300">
-              WhatsApp: <strong className="text-emerald-200 ml-1">{metrics.whatsapp}</strong>
+            <span className="px-2.5 py-1 rounded-lg bg-emerald-50 dark:bg-emerald-950/60 border border-emerald-200 dark:border-emerald-800/40 text-emerald-800 dark:text-emerald-300">
+              WhatsApp: <strong className="text-emerald-900 dark:text-emerald-200 ml-1">{metrics.whatsapp}</strong>
             </span>
-            <span className="px-2.5 py-1 rounded-lg bg-[#c59b5f]/15 border border-[#c59b5f]/30 text-[#c59b5f]">
-              Loja: <strong className="text-white ml-1">{metrics.site}</strong>
+            <span className="px-2.5 py-1 rounded-lg bg-[#c59b5f]/15 border border-[#c59b5f]/30 text-[#966e2d] dark:text-[#c59b5f]">
+              Loja: <strong className="text-zinc-900 dark:text-white ml-1">{metrics.site}</strong>
             </span>
             {metrics.paused > 0 && (
-              <span className="px-2.5 py-1 rounded-lg bg-amber-950/60 border border-amber-800/40 text-amber-300 animate-pulse">
-                Humano: <strong className="text-amber-200 ml-1">{metrics.paused}</strong>
+              <span className="px-2.5 py-1 rounded-lg bg-amber-50 dark:bg-amber-950/60 border border-amber-200 dark:border-amber-800/40 text-amber-800 dark:text-amber-300 animate-pulse">
+                Humano: <strong className="text-amber-900 dark:text-amber-200 ml-1">{metrics.paused}</strong>
               </span>
             )}
           </div>
@@ -576,7 +610,7 @@ export default function LiaAdminPage() {
             size="sm" 
             onClick={fetchConversas}
             disabled={isLoadingConversas}
-            className="border-zinc-700 bg-zinc-800/80 hover:bg-zinc-700 text-zinc-200 hover:text-white rounded-xl gap-1.5 text-xs h-8.5"
+            className="border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-800/80 hover:bg-zinc-100 dark:hover:bg-zinc-700 text-zinc-700 dark:text-zinc-200 hover:text-zinc-900 dark:hover:text-white rounded-xl gap-1.5 text-xs h-8.5"
           >
             <RefreshCw className={`w-3.5 h-3.5 ${isLoadingConversas ? 'animate-spin text-[#c59b5f]' : ''}`} />
             <span>Atualizar</span>
@@ -588,28 +622,28 @@ export default function LiaAdminPage() {
       <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full space-y-4">
         
         {/* Barra de Navegação das Abas */}
-        <div className="flex flex-wrap items-center justify-between gap-3 border-b border-zinc-800/80 pb-3">
-          <TabsList className="bg-zinc-900 border border-zinc-800 p-1 rounded-xl h-auto">
+        <div className="flex flex-wrap items-center justify-between gap-3 border-b border-zinc-200 dark:border-zinc-800/80 pb-3">
+          <TabsList className="bg-zinc-200/60 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 p-1 rounded-xl h-auto">
             <TabsTrigger 
               value="chats" 
-              className="flex items-center gap-2 px-4 py-2 rounded-lg text-xs font-semibold data-[state=active]:bg-[#c59b5f] data-[state=active]:text-zinc-950 data-[state=active]:font-bold data-[state=inactive]:text-zinc-400 transition-all"
+              className="flex items-center gap-2 px-4 py-2 rounded-lg text-xs font-semibold data-[state=active]:bg-[#c59b5f] data-[state=active]:text-zinc-950 data-[state=active]:font-bold data-[state=inactive]:text-zinc-600 dark:data-[state=inactive]:text-zinc-400 transition-all"
             >
               <MessageSquare className="w-3.5 h-3.5" />
               <span>Atendimentos & CRM</span>
-              <span className="ml-1 px-1.5 py-0.2 rounded-full text-[10px] bg-zinc-800 data-[state=active]:bg-zinc-950/25 data-[state=active]:text-zinc-950 text-zinc-300">
+              <span className="ml-1 px-1.5 py-0.2 rounded-full text-[10px] bg-zinc-300/80 dark:bg-zinc-800 data-[state=active]:bg-zinc-950/20 data-[state=active]:text-zinc-950 text-zinc-800 dark:text-zinc-300">
                 {metrics.total}
               </span>
             </TabsTrigger>
             <TabsTrigger 
               value="treinamento" 
-              className="flex items-center gap-2 px-4 py-2 rounded-lg text-xs font-medium data-[state=active]:bg-[#c59b5f] data-[state=active]:text-zinc-950 data-[state=active]:font-bold data-[state=inactive]:text-zinc-400 transition-all"
+              className="flex items-center gap-2 px-4 py-2 rounded-lg text-xs font-medium data-[state=active]:bg-[#c59b5f] data-[state=active]:text-zinc-950 data-[state=active]:font-bold data-[state=inactive]:text-zinc-600 dark:data-[state=inactive]:text-zinc-400 transition-all"
             >
               <Brain className="w-3.5 h-3.5" />
               <span>Treinamento & Regras</span>
             </TabsTrigger>
             <TabsTrigger 
               value="whatsapp" 
-              className="flex items-center gap-2 px-4 py-2 rounded-lg text-xs font-medium data-[state=active]:bg-[#c59b5f] data-[state=active]:text-zinc-950 data-[state=active]:font-bold data-[state=inactive]:text-zinc-400 transition-all"
+              className="flex items-center gap-2 px-4 py-2 rounded-lg text-xs font-medium data-[state=active]:bg-[#c59b5f] data-[state=active]:text-zinc-950 data-[state=active]:font-bold data-[state=inactive]:text-zinc-600 dark:data-[state=inactive]:text-zinc-400 transition-all"
             >
               <Smartphone className="w-3.5 h-3.5" />
               <span>Conexão WhatsApp</span>
@@ -624,27 +658,27 @@ export default function LiaAdminPage() {
         {/* ================= ABA 1: CHATS AO VIVO & CRM ================= */}
         <TabsContent value="chats" className="mt-0 focus-visible:outline-none">
           {/* Card Container com Altura Estável e Bordas Elegantes */}
-          <div className="w-full h-[calc(100vh-270px)] min-h-[640px] max-h-[880px] bg-zinc-900/95 border border-zinc-800 rounded-2xl overflow-hidden shadow-2xl flex flex-col lg:flex-row">
+          <div className="w-full h-[calc(100vh-270px)] min-h-[640px] max-h-[880px] bg-white dark:bg-zinc-900/95 border border-zinc-200 dark:border-zinc-800 rounded-2xl overflow-hidden shadow-md dark:shadow-2xl flex flex-col lg:flex-row transition-colors">
             
             {/* PAINEL ESQUERDO: LISTA DE CONTATOS (CRM PIPELINE) */}
-            <div className={`w-full lg:w-[380px] xl:w-[420px] bg-zinc-900/90 border-r border-zinc-800/80 flex flex-col shrink-0 ${
+            <div className={`w-full lg:w-[380px] xl:w-[420px] bg-zinc-50/60 dark:bg-zinc-900/90 border-r border-zinc-200 dark:border-zinc-800/80 flex flex-col shrink-0 ${
               showMobileChat ? 'hidden lg:flex' : 'flex'
             }`}>
               
               {/* Barra de Pesquisa */}
-              <div className="p-3 border-b border-zinc-800/80 space-y-2.5 bg-zinc-900/60 shrink-0">
+              <div className="p-3 border-b border-zinc-200 dark:border-zinc-800/80 space-y-2.5 bg-white dark:bg-zinc-900/60 shrink-0">
                 <div className="relative">
-                  <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-3.5 w-3.5 text-zinc-500" />
+                  <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-3.5 w-3.5 text-zinc-400 dark:text-zinc-500" />
                   <Input 
                     placeholder="Buscar por telefone, nome ou mensagem..." 
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
-                    className="pl-8 pr-7 bg-zinc-950 border-zinc-800 text-zinc-200 placeholder:text-zinc-500 focus-visible:ring-[#c59b5f] rounded-xl text-xs h-8.5" 
+                    className="pl-8 pr-7 bg-zinc-50 dark:bg-zinc-950 border-zinc-200 dark:border-zinc-800 text-zinc-900 dark:text-zinc-200 placeholder:text-zinc-400 dark:placeholder:text-zinc-500 focus-visible:ring-[#c59b5f] rounded-xl text-xs h-8.5" 
                   />
                   {searchTerm && (
                     <button 
                       onClick={() => setSearchTerm('')}
-                      className="absolute right-2.5 top-1/2 -translate-y-1/2 text-zinc-500 hover:text-zinc-300 text-xs"
+                      className="absolute right-2.5 top-1/2 -translate-y-1/2 text-zinc-400 hover:text-zinc-600 dark:text-zinc-500 dark:hover:text-zinc-300 text-xs"
                     >
                       ✕
                     </button>
@@ -657,8 +691,8 @@ export default function LiaAdminPage() {
                     onClick={() => setChannelFilter('all')}
                     className={`px-2.5 py-1 rounded-lg font-semibold transition-all whitespace-nowrap ${
                       channelFilter === 'all' 
-                        ? 'bg-[#c59b5f] text-zinc-950 shadow-sm' 
-                        : 'bg-zinc-800/90 text-zinc-400 hover:bg-zinc-800 hover:text-zinc-200'
+                        ? 'bg-[#c59b5f] text-zinc-950 shadow-xs font-bold' 
+                        : 'bg-zinc-100 dark:bg-zinc-800/90 text-zinc-600 dark:text-zinc-400 hover:bg-zinc-200 dark:hover:bg-zinc-800 hover:text-zinc-900 dark:hover:text-zinc-200 border border-zinc-200/80 dark:border-transparent'
                     }`}
                   >
                     Todos ({metrics.total})
@@ -668,8 +702,8 @@ export default function LiaAdminPage() {
                     onClick={() => setChannelFilter('whatsapp')}
                     className={`px-2.5 py-1 rounded-lg font-semibold transition-all whitespace-nowrap flex items-center gap-1 ${
                       channelFilter === 'whatsapp' 
-                        ? 'bg-emerald-600 text-white shadow-sm' 
-                        : 'bg-zinc-800/90 text-zinc-400 hover:bg-zinc-800 hover:text-emerald-400'
+                        ? 'bg-emerald-600 text-white shadow-xs font-bold' 
+                        : 'bg-zinc-100 dark:bg-zinc-800/90 text-zinc-600 dark:text-zinc-400 hover:bg-emerald-50 dark:hover:bg-zinc-800 hover:text-emerald-700 dark:hover:text-emerald-400 border border-zinc-200/80 dark:border-transparent'
                     }`}
                   >
                     <Smartphone className="w-3 h-3" /> WhatsApp ({metrics.whatsapp})
@@ -679,8 +713,8 @@ export default function LiaAdminPage() {
                     onClick={() => setChannelFilter('site')}
                     className={`px-2.5 py-1 rounded-lg font-semibold transition-all whitespace-nowrap flex items-center gap-1 ${
                       channelFilter === 'site' 
-                        ? 'bg-zinc-200 text-zinc-950 shadow-sm' 
-                        : 'bg-zinc-800/90 text-zinc-400 hover:bg-zinc-800 hover:text-zinc-200'
+                        ? 'bg-zinc-800 dark:bg-zinc-200 text-white dark:text-zinc-950 shadow-xs font-bold' 
+                        : 'bg-zinc-100 dark:bg-zinc-800/90 text-zinc-600 dark:text-zinc-400 hover:bg-zinc-200 dark:hover:bg-zinc-800 hover:text-zinc-900 dark:hover:text-zinc-200 border border-zinc-200/80 dark:border-transparent'
                     }`}
                   >
                     <Laptop className="w-3 h-3" /> Loja ({metrics.site})
@@ -690,8 +724,8 @@ export default function LiaAdminPage() {
                     onClick={() => setChannelFilter('paused')}
                     className={`px-2.5 py-1 rounded-lg font-semibold transition-all whitespace-nowrap flex items-center gap-1 ${
                       channelFilter === 'paused' 
-                        ? 'bg-amber-500 text-zinc-950 shadow-sm' 
-                        : 'bg-zinc-800/90 text-zinc-400 hover:bg-zinc-800 hover:text-amber-400'
+                        ? 'bg-amber-500 text-zinc-950 shadow-xs font-bold' 
+                        : 'bg-zinc-100 dark:bg-zinc-800/90 text-zinc-600 dark:text-zinc-400 hover:bg-amber-50 dark:hover:bg-zinc-800 hover:text-amber-700 dark:hover:text-amber-400 border border-zinc-200/80 dark:border-transparent'
                     }`}
                   >
                     <User className="w-3 h-3" /> Humano ({metrics.paused})
@@ -729,8 +763,8 @@ export default function LiaAdminPage() {
                           }}
                           className={`p-3 cursor-pointer transition-all duration-150 rounded-xl border flex gap-3 items-start relative ${
                             isSelected 
-                              ? 'bg-zinc-800/90 border-[#c59b5f] shadow-md shadow-[#c59b5f]/5' 
-                              : 'bg-zinc-950/40 border-zinc-800/50 hover:bg-zinc-850 hover:border-zinc-700/80'
+                              ? 'bg-[#c59b5f]/15 dark:bg-zinc-800/90 border-[#c59b5f] shadow-sm shadow-[#c59b5f]/10' 
+                              : 'bg-white dark:bg-zinc-950/40 border-zinc-200/90 dark:border-zinc-800/50 hover:bg-zinc-100/80 dark:hover:bg-zinc-850 hover:border-zinc-300 dark:hover:border-zinc-700/80 shadow-xs dark:shadow-none'
                           }`}
                         >
                           {isSelected && (
@@ -740,8 +774,8 @@ export default function LiaAdminPage() {
                           {/* Avatar */}
                           <div className={`w-10 h-10 rounded-full flex items-center justify-center shrink-0 border shadow-xs ${
                             conversa.canal === 'whatsapp'
-                              ? 'bg-emerald-950/80 border-emerald-500/50 text-emerald-400'
-                              : 'bg-[#c59b5f]/15 border-[#c59b5f]/40 text-[#c59b5f]'
+                              ? 'bg-emerald-50 dark:bg-emerald-950/80 border-emerald-200 dark:border-emerald-500/50 text-emerald-700 dark:text-emerald-400'
+                              : 'bg-[#c59b5f]/15 border-[#c59b5f]/40 text-[#966e2d] dark:text-[#c59b5f]'
                           }`}>
                             {conversa.canal === 'whatsapp' ? (
                               <Smartphone className="w-4 h-4" />
@@ -753,20 +787,20 @@ export default function LiaAdminPage() {
                           {/* Dados do Contato */}
                           <div className="flex-1 min-w-0">
                             <div className="flex items-center justify-between gap-1 mb-0.5">
-                              <span className="font-semibold text-xs text-white truncate max-w-[180px]" title={display.title}>
+                              <span className="font-semibold text-xs text-zinc-900 dark:text-white truncate max-w-[180px]" title={display.title}>
                                 {display.title}
                               </span>
-                              <span className={`text-[10px] shrink-0 font-medium ${isSelected ? 'text-[#c59b5f]' : 'text-zinc-500'}`}>
+                              <span className={`text-[10px] shrink-0 font-medium ${isSelected ? 'text-[#966e2d] dark:text-[#c59b5f]' : 'text-zinc-500 dark:text-zinc-500'}`}>
                                 {timeDisplay}
                               </span>
                             </div>
 
                             {/* Prévia da Mensagem */}
-                            <p className="text-[11px] text-zinc-400 truncate leading-relaxed">
+                            <p className="text-[11px] text-zinc-600 dark:text-zinc-400 truncate leading-relaxed">
                               {ultimaMsgObj?.role === 'user' ? (
-                                <span className="text-zinc-300">👤 </span>
+                                <span className="text-zinc-700 dark:text-zinc-300 font-medium">👤 </span>
                               ) : (
-                                <span className="text-[#c59b5f]">✨ Lia: </span>
+                                <span className="text-[#966e2d] dark:text-[#c59b5f] font-semibold">✨ Lia: </span>
                               )}
                               {ultimaMsg}
                             </p>
@@ -774,32 +808,32 @@ export default function LiaAdminPage() {
                             {/* Tags de Status */}
                             <div className="flex items-center gap-1.5 mt-2 flex-wrap">
                               {conversa.canal === 'whatsapp' ? (
-                                <span className="inline-flex items-center gap-1 text-[9px] font-bold text-emerald-400 bg-emerald-950/90 border border-emerald-800/40 px-1.5 py-0.5 rounded-md">
+                                <span className="inline-flex items-center gap-1 text-[9px] font-bold text-emerald-800 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/90 border border-emerald-200 dark:border-emerald-800/40 px-1.5 py-0.5 rounded-md">
                                   WhatsApp
                                 </span>
                               ) : (
-                                <span className="inline-flex items-center gap-1 text-[9px] font-bold text-[#c59b5f] bg-[#c59b5f]/10 border border-[#c59b5f]/30 px-1.5 py-0.5 rounded-md">
+                                <span className="inline-flex items-center gap-1 text-[9px] font-bold text-[#966e2d] dark:text-[#c59b5f] bg-[#c59b5f]/15 border border-[#c59b5f]/30 px-1.5 py-0.5 rounded-md">
                                   Loja Virtual
                                 </span>
                               )}
 
                               {conversa.converteu && (
-                                <span className="inline-flex items-center gap-1 text-[9px] font-bold text-emerald-300 bg-emerald-900/70 border border-emerald-700/60 px-1.5 py-0.5 rounded-md">
+                                <span className="inline-flex items-center gap-1 text-[9px] font-bold text-emerald-900 dark:text-emerald-300 bg-emerald-100 dark:bg-emerald-900/70 border border-emerald-300 dark:border-emerald-700/60 px-1.5 py-0.5 rounded-md">
                                   ✓ Compra Fechada
                                 </span>
                               )}
 
                               {conversa.assumida_por_humano ? (
-                                <span className="inline-flex items-center gap-1 text-[9px] font-bold text-amber-300 bg-amber-950/90 border border-amber-800/50 px-1.5 py-0.5 rounded-md">
+                                <span className="inline-flex items-center gap-1 text-[9px] font-bold text-amber-900 dark:text-amber-300 bg-amber-100 dark:bg-amber-950/90 border border-amber-300 dark:border-amber-800/50 px-1.5 py-0.5 rounded-md">
                                   👤 Humano
                                 </span>
                               ) : (
-                                <span className="inline-flex items-center gap-1 text-[9px] font-medium text-zinc-400 bg-zinc-800/70 px-1.5 py-0.5 rounded-md">
+                                <span className="inline-flex items-center gap-1 text-[9px] font-medium text-zinc-600 dark:text-zinc-400 bg-zinc-100 dark:bg-zinc-800/70 border border-zinc-200/80 dark:border-transparent px-1.5 py-0.5 rounded-md">
                                   🤖 Lia Ativa
                                 </span>
                               )}
 
-                              <span className="text-[9px] text-zinc-500 ml-auto font-mono">
+                              <span className="text-[9px] text-zinc-500 dark:text-zinc-500 ml-auto font-mono">
                                 {msgCount} msgs
                               </span>
                             </div>
@@ -814,26 +848,26 @@ export default function LiaAdminPage() {
             </div>
 
             {/* PAINEL DIREITO: CONVERSA COMPLETA & WORKSPACE DE ATENDIMENTO */}
-            <div className={`flex-1 flex flex-col bg-zinc-950 overflow-hidden relative ${
+            <div className={`flex-1 flex flex-col bg-white dark:bg-zinc-950 overflow-hidden relative ${
               !showMobileChat ? 'hidden lg:flex' : 'flex'
             }`}>
               {selectedConversa && selectedDisplay ? (
                 <>
                   {/* Header do Chat Aberto */}
-                  <div className="h-16 px-4 sm:px-6 border-b border-zinc-800/80 bg-zinc-900/90 flex items-center justify-between gap-3 shrink-0">
+                  <div className="h-16 px-4 sm:px-6 border-b border-zinc-200 dark:border-zinc-800/80 bg-white dark:bg-zinc-900/90 flex items-center justify-between gap-3 shrink-0">
                     <div className="flex items-center gap-3">
                       {/* Botão Voltar (Mobile) */}
                       <button 
                         onClick={() => setShowMobileChat(false)}
-                        className="lg:hidden p-2 text-zinc-400 hover:text-white hover:bg-zinc-800 rounded-lg -ml-2"
+                        className="lg:hidden p-2 text-zinc-500 hover:text-zinc-900 hover:bg-zinc-100 dark:text-zinc-400 dark:hover:text-white dark:hover:bg-zinc-800 rounded-lg -ml-2"
                       >
                         <ArrowLeft className="w-5 h-5" />
                       </button>
 
                       <div className={`w-10 h-10 rounded-full flex items-center justify-center shrink-0 border ${
                         selectedConversa.canal === 'whatsapp'
-                          ? 'bg-emerald-950 border-emerald-500/50 text-emerald-400'
-                          : 'bg-[#c59b5f]/20 border-[#c59b5f]/50 text-[#c59b5f]'
+                          ? 'bg-emerald-50 dark:bg-emerald-950 border-emerald-200 dark:border-emerald-500/50 text-emerald-700 dark:text-emerald-400'
+                          : 'bg-[#c59b5f]/15 border-[#c59b5f]/40 text-[#966e2d] dark:text-[#c59b5f]'
                       }`}>
                         {selectedConversa.canal === 'whatsapp' ? (
                           <Smartphone className="w-4 h-4" />
@@ -844,20 +878,20 @@ export default function LiaAdminPage() {
 
                       <div>
                         <div className="flex items-center gap-2 flex-wrap">
-                          <h2 className="font-bold text-sm sm:text-base text-white">
+                          <h2 className="font-bold text-sm sm:text-base text-zinc-900 dark:text-white">
                             {selectedDisplay.title}
                           </h2>
                           {selectedConversa.canal === 'whatsapp' ? (
-                            <Badge className="bg-emerald-950/80 border-emerald-600/50 text-emerald-400 text-[10px] py-0 px-2">
+                            <Badge className="bg-emerald-50 dark:bg-emerald-950/80 border-emerald-200 dark:border-emerald-600/50 text-emerald-800 dark:text-emerald-400 text-[10px] py-0 px-2 font-semibold">
                               WhatsApp
                             </Badge>
                           ) : (
-                            <Badge className="bg-[#c59b5f]/15 border-[#c59b5f]/40 text-[#c59b5f] text-[10px] py-0 px-2">
+                            <Badge className="bg-[#c59b5f]/15 border-[#c59b5f]/40 text-[#966e2d] dark:text-[#c59b5f] text-[10px] py-0 px-2 font-semibold">
                               Loja Virtual
                             </Badge>
                           )}
                         </div>
-                        <p className="text-[11px] text-zinc-400 flex items-center gap-2">
+                        <p className="text-[11px] text-zinc-500 dark:text-zinc-400 flex items-center gap-2">
                           <span>{selectedDisplay.subtitle}</span>
                           <span>•</span>
                           <span>{selectedConversa.mensagens?.length || 0} mensagens registradas</span>
@@ -873,7 +907,7 @@ export default function LiaAdminPage() {
                           href={`https://web.whatsapp.com/send?phone=${selectedDisplay.rawPhone}`}
                           target="_blank"
                           rel="noreferrer"
-                          className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold bg-emerald-600 hover:bg-emerald-500 text-white transition-all shadow-sm"
+                          className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold bg-emerald-600 hover:bg-emerald-500 text-white transition-all shadow-xs"
                           title="Abrir diretamente conversa no WhatsApp Web"
                         >
                           <ExternalLink className="w-3.5 h-3.5" />
@@ -887,7 +921,7 @@ export default function LiaAdminPage() {
                           variant="outline" 
                           size="sm" 
                           onClick={() => assumirConversa(selectedConversa.id)} 
-                          className="border-red-900/60 bg-red-950/30 text-red-300 hover:bg-red-900/50 hover:text-white rounded-xl text-xs font-semibold h-8"
+                          className="border-red-200 dark:border-red-900/60 bg-red-50 dark:bg-red-950/30 text-red-700 dark:text-red-300 hover:bg-red-100 dark:hover:bg-red-900/50 hover:text-red-800 dark:hover:text-white rounded-xl text-xs font-semibold h-8"
                         >
                           <Hand className="w-3.5 h-3.5 mr-1" />
                           <span className="hidden sm:inline">Pausar Lia (Assumir)</span>
@@ -909,32 +943,32 @@ export default function LiaAdminPage() {
 
                   {/* Banner de Estado (Humano vs Lia) */}
                   {selectedConversa.assumida_por_humano ? (
-                    <div className="bg-amber-950/70 border-b border-amber-800/50 px-4 py-2 flex items-center justify-between text-xs text-amber-200 shrink-0">
+                    <div className="bg-amber-50 dark:bg-amber-950/70 border-b border-amber-200 dark:border-amber-800/50 px-4 py-2 flex items-center justify-between text-xs text-amber-900 dark:text-amber-200 shrink-0">
                       <span className="flex items-center gap-2">
-                        <ShieldAlert className="w-4 h-4 text-amber-400 shrink-0" />
+                        <ShieldAlert className="w-4 h-4 text-amber-600 dark:text-amber-400 shrink-0" />
                         <span><strong>Atendimento Humano em Andamento:</strong> A Lia não responderá novas mensagens dessa cliente.</span>
                       </span>
-                      <span className="text-[11px] text-amber-300/80 hidden md:block">
+                      <span className="text-[11px] text-amber-700 dark:text-amber-300/80 hidden md:block">
                         Você pode responder pelo celular ou pelo formulário abaixo
                       </span>
                     </div>
                   ) : (
-                    <div className="bg-zinc-900/40 border-b border-zinc-800/70 px-4 py-1.5 flex items-center justify-between text-[11px] text-zinc-400 shrink-0">
+                    <div className="bg-zinc-100/70 dark:bg-zinc-900/40 border-b border-zinc-200 dark:border-zinc-800/70 px-4 py-1.5 flex items-center justify-between text-[11px] text-zinc-600 dark:text-zinc-400 shrink-0">
                       <span className="flex items-center gap-1.5">
-                        <Sparkles className="w-3.5 h-3.5 text-[#c59b5f]" />
+                        <Sparkles className="w-3.5 h-3.5 text-[#966e2d] dark:text-[#c59b5f]" />
                         <span><strong>Lia 100% Ativa:</strong> Atendendo automaticamente com base no catálogo de atacado e regras da fábrica.</span>
                       </span>
-                      <span className="text-[10px] text-zinc-500 hidden sm:block">
+                      <span className="text-[10px] text-zinc-400 dark:text-zinc-500 hidden sm:block">
                         ID: {selectedConversa.session_id}
                       </span>
                     </div>
                   )}
 
                   {/* Canvas de Mensagens (Estilo WhatsApp) */}
-                  <ScrollArea className="flex-1 p-4 sm:p-6 bg-[#0c0d0e]">
+                  <ScrollArea ref={chatScrollRef} className="flex-1 p-4 sm:p-6 bg-[#f8f6f2] dark:bg-[#0c0d0e]">
                     <div className="space-y-3.5 max-w-3xl mx-auto pb-4">
                       {(!selectedConversa.mensagens || selectedConversa.mensagens.length === 0) ? (
-                        <div className="text-center py-16 text-zinc-500 text-xs">
+                        <div className="text-center py-16 text-zinc-400 dark:text-zinc-500 text-xs">
                           Nenhuma mensagem registrada nesta sessão.
                         </div>
                       ) : (
@@ -947,17 +981,17 @@ export default function LiaAdminPage() {
                               key={idx} 
                               className={`flex ${isUser ? 'justify-start' : 'justify-end'}`}
                             >
-                              <div className={`max-w-[85%] sm:max-w-[70%] p-3.5 text-xs rounded-2xl shadow-sm ${
+                              <div className={`max-w-[85%] sm:max-w-[70%] p-3.5 text-xs rounded-2xl shadow-xs ${
                                 isUser 
-                                  ? 'bg-zinc-900 text-zinc-100 border border-zinc-800 rounded-tl-xs' 
+                                  ? 'bg-white dark:bg-zinc-900 text-zinc-900 dark:text-zinc-100 border border-zinc-200/90 dark:border-zinc-800 rounded-tl-xs' 
                                   : isHumanOperator
                                     ? 'bg-[#c59b5f] text-zinc-950 font-medium rounded-tr-xs shadow-md'
-                                    : 'bg-emerald-950/80 border border-emerald-600/40 text-emerald-50 rounded-tr-xs'
+                                    : 'bg-emerald-50 dark:bg-emerald-950/80 border border-emerald-200 dark:border-emerald-600/40 text-emerald-950 dark:text-emerald-50 rounded-tr-xs'
                               }`}>
                                 {/* Header do Balão */}
                                 <div className="flex items-center justify-between gap-3 mb-1 text-[10px]">
                                   {isUser ? (
-                                    <span className="font-semibold text-zinc-400 flex items-center gap-1">
+                                    <span className="font-semibold text-zinc-600 dark:text-zinc-400 flex items-center gap-1">
                                       <User className="w-3 h-3" /> Cliente
                                     </span>
                                   ) : isHumanOperator ? (
@@ -965,8 +999,8 @@ export default function LiaAdminPage() {
                                       <User className="w-3 h-3" /> Atendente Humano (Você)
                                     </span>
                                   ) : (
-                                    <span className="font-bold text-emerald-400 uppercase tracking-wider flex items-center gap-1">
-                                      <Sparkles className="w-3 h-3 text-emerald-400" /> Lia • Consultora Avante
+                                    <span className="font-bold text-emerald-800 dark:text-emerald-400 uppercase tracking-wider flex items-center gap-1">
+                                      <Sparkles className="w-3 h-3 text-emerald-600 dark:text-emerald-400" /> Lia • Consultora Avante
                                     </span>
                                   )}
                                 </div>
@@ -978,7 +1012,7 @@ export default function LiaAdminPage() {
 
                                 {/* Rodapé do Balão com Hora e Ticks */}
                                 <div className={`flex items-center justify-end gap-1 mt-1.5 text-[9px] ${
-                                  isUser ? 'text-zinc-500' : isHumanOperator ? 'text-zinc-800' : 'text-emerald-400/70'
+                                  isUser ? 'text-zinc-400 dark:text-zinc-500' : isHumanOperator ? 'text-zinc-800' : 'text-emerald-700/80 dark:text-emerald-400/70'
                                 }`}>
                                   <span>{msg.timestamp ? new Date(msg.timestamp).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) : ''}</span>
                                   {!isUser && <CheckCheck className="w-3 h-3 ml-0.5" />}
@@ -988,14 +1022,13 @@ export default function LiaAdminPage() {
                           );
                         })
                       )}
-                      <div ref={messagesEndRef} />
                     </div>
                   </ScrollArea>
 
                   {/* ================= BARRA DE DIGITAÇÃO HUMANA (RESPOSTA CRM) ================= */}
                   <form 
                     onSubmit={handleEnviarMensagemHumana}
-                    className="p-3.5 border-t border-zinc-800 bg-zinc-900/95 flex items-center gap-2 shrink-0"
+                    className="p-3.5 border-t border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900/95 flex items-center gap-2 shrink-0"
                   >
                     <Input 
                       placeholder={
@@ -1006,7 +1039,7 @@ export default function LiaAdminPage() {
                       value={respostaHumana}
                       onChange={(e) => setRespostaHumana(e.target.value)}
                       disabled={isEnviandoResposta}
-                      className="flex-1 bg-zinc-950 border-zinc-800 text-zinc-100 placeholder:text-zinc-500 text-xs rounded-xl focus-visible:ring-[#c59b5f] h-10"
+                      className="flex-1 bg-zinc-50 dark:bg-zinc-950 border-zinc-200 dark:border-zinc-800 text-zinc-900 dark:text-zinc-100 placeholder:text-zinc-400 dark:placeholder:text-zinc-500 text-xs rounded-xl focus-visible:ring-[#c59b5f] h-10"
                     />
                     
                     <Button 
@@ -1021,11 +1054,11 @@ export default function LiaAdminPage() {
 
                 </>
               ) : (
-                <div className="flex flex-col items-center justify-center h-full text-zinc-600 p-8 text-center">
-                  <div className="w-16 h-16 bg-zinc-900 border border-zinc-800 rounded-2xl flex items-center justify-center mb-3">
+                <div className="flex flex-col items-center justify-center h-full text-zinc-500 dark:text-zinc-600 p-8 text-center">
+                  <div className="w-16 h-16 bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl flex items-center justify-center mb-3">
                     <MessageCircle className="w-8 h-8 text-[#c59b5f]" />
                   </div>
-                  <h3 className="font-serif font-bold text-lg text-zinc-300">Nenhum Atendimento Selecionado</h3>
+                  <h3 className="font-serif font-bold text-lg text-zinc-800 dark:text-zinc-300">Nenhum Atendimento Selecionado</h3>
                   <p className="text-xs text-zinc-500 max-w-sm mt-1">
                     Selecione um cliente na lista à esquerda para carregar o histórico de mensagens e monitorar a conversa da Lia em tempo real.
                   </p>
@@ -1041,39 +1074,39 @@ export default function LiaAdminPage() {
           <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-6">
             
             {/* Adicionar Regra */}
-            <Card className="lg:col-span-1 h-fit bg-zinc-900/90 border-zinc-800 rounded-2xl">
+            <Card className="lg:col-span-1 h-fit bg-white dark:bg-zinc-900/90 border border-zinc-200 dark:border-zinc-800 rounded-2xl shadow-xs dark:shadow-none">
               <CardHeader>
-                <CardTitle className="text-xl font-serif text-white">Nova Regra / Promoção</CardTitle>
-                <CardDescription className="text-zinc-400 text-xs">Ensine a Lia a responder sobre novas campanhas, regras de frete ou avisos.</CardDescription>
+                <CardTitle className="text-xl font-serif text-zinc-900 dark:text-white">Nova Regra / Promoção</CardTitle>
+                <CardDescription className="text-zinc-500 dark:text-zinc-400 text-xs">Ensine a Lia a responder sobre novas campanhas, regras de frete ou avisos.</CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
                 <div className="space-y-1.5">
-                  <label className="text-xs font-semibold text-zinc-300">Título (Para organização)</label>
+                  <label className="text-xs font-semibold text-zinc-700 dark:text-zinc-300">Título (Para organização)</label>
                   <Input 
                     placeholder="Ex: Promoção Atacado Friburgo" 
                     value={novaRegra.titulo}
                     onChange={(e) => setNovaRegra({...novaRegra, titulo: e.target.value})}
-                    className="bg-zinc-950 border-zinc-800 text-white focus-visible:ring-[#c59b5f] rounded-xl text-xs"
+                    className="bg-zinc-50 dark:bg-zinc-950 border-zinc-200 dark:border-zinc-800 text-zinc-900 dark:text-white placeholder:text-zinc-400 dark:placeholder:text-zinc-500 focus-visible:ring-[#c59b5f] rounded-xl text-xs"
                   />
                 </div>
                 <div className="space-y-1.5">
-                  <label className="text-xs font-semibold text-zinc-300">Instrução para a IA</label>
+                  <label className="text-xs font-semibold text-zinc-700 dark:text-zinc-300">Instrução para a IA</label>
                   <Textarea 
                     placeholder="Ex: Informe que compras acima de R$ 69,90 já entram no preço de fábrica com 100% de margem."
-                    className="min-h-[120px] bg-zinc-950 border-zinc-800 text-white focus-visible:ring-[#c59b5f] rounded-xl text-xs"
+                    className="min-h-[120px] bg-zinc-50 dark:bg-zinc-950 border-zinc-200 dark:border-zinc-800 text-zinc-900 dark:text-white placeholder:text-zinc-400 dark:placeholder:text-zinc-500 focus-visible:ring-[#c59b5f] rounded-xl text-xs"
                     value={novaRegra.conteudo}
                     onChange={(e) => setNovaRegra({...novaRegra, conteudo: e.target.value})}
                   />
                 </div>
                 <div className="space-y-1.5">
-                  <label className="text-xs font-semibold text-zinc-300 flex items-center gap-1">
+                  <label className="text-xs font-semibold text-zinc-700 dark:text-zinc-300 flex items-center gap-1">
                     <Calendar className="w-3.5 h-3.5 text-[#c59b5f]" /> Data de Expiração (Opcional)
                   </label>
                   <Input 
                     type="date" 
                     value={novaRegra.data_expiracao}
                     onChange={(e) => setNovaRegra({...novaRegra, data_expiracao: e.target.value})}
-                    className="bg-zinc-950 border-zinc-800 text-white focus-visible:ring-[#c59b5f] rounded-xl text-xs [color-scheme:dark]"
+                    className="bg-zinc-50 dark:bg-zinc-950 border-zinc-200 dark:border-zinc-800 text-zinc-900 dark:text-white focus-visible:ring-[#c59b5f] rounded-xl text-xs dark:[color-scheme:dark]"
                   />
                   <p className="text-[10px] text-zinc-500">A Lia esquecerá essa regra automaticamente após essa data.</p>
                 </div>
@@ -1087,27 +1120,27 @@ export default function LiaAdminPage() {
             </Card>
 
             {/* Lista de Regras Ativas */}
-            <Card className="lg:col-span-2 bg-zinc-900/90 border-zinc-800 rounded-2xl">
+            <Card className="lg:col-span-2 bg-white dark:bg-zinc-900/90 border border-zinc-200 dark:border-zinc-800 rounded-2xl shadow-xs dark:shadow-none">
               <CardHeader>
-                <CardTitle className="text-xl font-serif text-white">Conhecimento Ativo da Lia</CardTitle>
-                <CardDescription className="text-zinc-400 text-xs">Todas as regras e instruções dinâmicas que a Lia lê antes de responder qualquer mensagem.</CardDescription>
+                <CardTitle className="text-xl font-serif text-zinc-900 dark:text-white">Conhecimento Ativo da Lia</CardTitle>
+                <CardDescription className="text-zinc-500 dark:text-zinc-400 text-xs">Todas as regras e instruções dinâmicas que a Lia lê antes de responder qualquer mensagem.</CardDescription>
               </CardHeader>
               <CardContent>
                 {isKnowledgeLoading ? (
                   <div className="text-center py-8 text-zinc-500 text-xs">Carregando cérebro da Lia...</div>
                 ) : knowledge.length === 0 ? (
-                  <div className="text-center py-8 text-zinc-500 border border-dashed border-zinc-800 rounded-xl text-xs">
+                  <div className="text-center py-8 text-zinc-500 border border-dashed border-zinc-200 dark:border-zinc-800 rounded-xl text-xs">
                     Nenhuma regra cadastrada. A Lia usará apenas o catálogo padrão.
                   </div>
                 ) : (
                   <div className="space-y-3">
                     {knowledge.map((k) => (
-                      <div key={k.id} className={`p-4 rounded-xl border transition-all ${k.ativo ? 'border-[#c59b5f]/40 bg-zinc-950/80 shadow-xs' : 'border-zinc-800 bg-zinc-950/30 opacity-60'}`}>
+                      <div key={k.id} className={`p-4 rounded-xl border transition-all ${k.ativo ? 'border-[#c59b5f]/50 bg-[#c59b5f]/5 dark:bg-zinc-950/80 shadow-xs' : 'border-zinc-200 dark:border-zinc-800 bg-zinc-50/50 dark:bg-zinc-950/30 opacity-60'}`}>
                         <div className="flex justify-between items-start gap-4 mb-2">
-                          <h4 className="font-semibold flex items-center gap-2 text-white text-sm">
+                          <h4 className="font-semibold flex items-center gap-2 text-zinc-900 dark:text-white text-sm">
                             {k.titulo}
                             {k.data_expiracao && (
-                              <Badge variant="outline" className="text-[10px] font-normal border-amber-600/40 bg-amber-950/30 text-amber-400">
+                              <Badge variant="outline" className="text-[10px] font-normal border-amber-600/40 bg-amber-50 dark:bg-amber-950/30 text-amber-800 dark:text-amber-400">
                                 Expira em {new Date(k.data_expiracao).toLocaleDateString('pt-BR')}
                               </Badge>
                             )}
@@ -1117,16 +1150,16 @@ export default function LiaAdminPage() {
                               variant={k.ativo ? "outline" : "secondary"} 
                               size="sm" 
                               onClick={() => toggleRegraAtiva(k.id, k.ativo)}
-                              className={`rounded-lg h-7 text-[11px] font-semibold border-0 ${k.ativo ? "text-zinc-950 bg-[#c59b5f] hover:bg-[#b58825]" : "text-zinc-400 bg-zinc-800 hover:bg-zinc-700"}`}
+                              className={`rounded-lg h-7 text-[11px] font-semibold border-0 ${k.ativo ? "text-zinc-950 bg-[#c59b5f] hover:bg-[#b58825]" : "text-zinc-600 dark:text-zinc-400 bg-zinc-100 dark:bg-zinc-800 hover:bg-zinc-200 dark:hover:bg-zinc-700"}`}
                             >
                               {k.ativo ? 'Desativar' : 'Ativar'}
                             </Button>
-                            <Button variant="ghost" size="icon" className="h-7 w-7 text-red-400 hover:text-red-300 hover:bg-red-950/40 rounded-lg" onClick={() => deleteRegra(k.id, k.titulo)}>
+                            <Button variant="ghost" size="icon" className="h-7 w-7 text-red-500 dark:text-red-400 hover:text-red-700 dark:hover:text-red-300 hover:bg-red-50 dark:hover:bg-red-950/40 rounded-lg" onClick={() => deleteRegra(k.id, k.titulo)}>
                               <Trash2 className="w-3.5 h-3.5" />
                             </Button>
                           </div>
                         </div>
-                        <p className="text-xs text-zinc-300 font-mono bg-zinc-900/90 p-3 rounded-lg border border-zinc-800/80 leading-relaxed">
+                        <p className="text-xs text-zinc-800 dark:text-zinc-300 font-mono bg-zinc-100/80 dark:bg-zinc-900/90 p-3 rounded-lg border border-zinc-200 dark:border-zinc-800/80 leading-relaxed">
                           "{k.conteudo}"
                         </p>
                       </div>
@@ -1141,37 +1174,37 @@ export default function LiaAdminPage() {
 
         {/* ================= ABA 3: CONEXÃO WHATSAPP ================= */}
         <TabsContent value="whatsapp" className="w-full mt-2 focus-visible:outline-none">
-          <Card className="max-w-2xl mx-auto bg-zinc-900/90 border-zinc-800 rounded-2xl shadow-xl">
+          <Card className="max-w-2xl mx-auto bg-white dark:bg-zinc-900/90 border border-zinc-200 dark:border-zinc-800 rounded-2xl shadow-sm dark:shadow-xl">
             <CardHeader className="text-center pb-2">
-              <CardTitle className="text-2xl font-serif text-white">Conexão Oficial do WhatsApp</CardTitle>
-              <CardDescription className="text-zinc-400 text-xs">Escaneie o QR Code abaixo com o número oficial de atendimento da Avante Lingerie `(22) 98122-5010`.</CardDescription>
+              <CardTitle className="text-2xl font-serif text-zinc-900 dark:text-white">Conexão Oficial do WhatsApp</CardTitle>
+              <CardDescription className="text-zinc-500 dark:text-zinc-400 text-xs">Escaneie o QR Code abaixo com o número oficial de atendimento da Avante Lingerie `(22) 98122-5010`.</CardDescription>
             </CardHeader>
             <CardContent className="flex flex-col items-center justify-center py-6">
-              <div className="bg-zinc-950 p-6 rounded-2xl border border-zinc-800 shadow-inner flex flex-col items-center relative overflow-hidden w-full max-w-sm">
+              <div className="bg-zinc-50 dark:bg-zinc-950 p-6 rounded-2xl border border-zinc-200 dark:border-zinc-800 shadow-inner flex flex-col items-center relative overflow-hidden w-full max-w-sm">
                 {botStatus.connected ? (
                   <div className="flex flex-col items-center justify-center p-6 space-y-3 text-center w-full min-h-[260px]">
-                    <div className="w-16 h-16 bg-emerald-600/20 border border-emerald-500/40 rounded-full flex items-center justify-center shadow-lg shadow-emerald-500/10">
-                      <CheckCircle2 className="w-8 h-8 text-emerald-400" />
+                    <div className="w-16 h-16 bg-emerald-100 dark:bg-emerald-600/20 border border-emerald-300 dark:border-emerald-500/40 rounded-full flex items-center justify-center shadow-lg shadow-emerald-500/10">
+                      <CheckCircle2 className="w-8 h-8 text-emerald-600 dark:text-emerald-400" />
                     </div>
                     <div>
-                      <h3 className="font-bold text-lg text-white">Lia Conectada!</h3>
-                      <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-emerald-400 bg-emerald-950/80 border border-emerald-800/50 px-2.5 py-0.5 rounded-full mt-2">
+                      <h3 className="font-bold text-lg text-zinc-900 dark:text-white">Lia Conectada!</h3>
+                      <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-emerald-800 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/80 border border-emerald-200 dark:border-emerald-800/50 px-2.5 py-0.5 rounded-full mt-2">
                         <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
                         (22) 98122-5010 Online
                       </span>
-                      <p className="text-xs text-zinc-400 mt-3 leading-relaxed">
+                      <p className="text-xs text-zinc-600 dark:text-zinc-400 mt-3 leading-relaxed">
                         O bot oficial do WhatsApp está online e ativo na VPS. As mensagens recebidas serão atendidas automaticamente.
                       </p>
                     </div>
                   </div>
                 ) : !showQrBox ? (
                   <div className="flex flex-col items-center justify-center p-6 space-y-4 text-center w-full min-h-[260px]">
-                    <div className="w-16 h-16 bg-zinc-900 rounded-full flex items-center justify-center border border-[#c59b5f]/30">
+                    <div className="w-16 h-16 bg-zinc-100 dark:bg-zinc-900 rounded-full flex items-center justify-center border border-[#c59b5f]/30">
                       <Smartphone className="w-8 h-8 text-[#c59b5f]" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-base text-white mb-2">Conectar WhatsApp da Fábrica</h3>
-                      <p className="text-xs text-zinc-400 mb-4 leading-relaxed">
+                      <h3 className="font-semibold text-base text-zinc-900 dark:text-white mb-2">Conectar WhatsApp da Fábrica</h3>
+                      <p className="text-xs text-zinc-600 dark:text-zinc-400 mb-4 leading-relaxed">
                         Número cadastrado: <strong>(22) 98122-5010</strong><br />
                         Abra o WhatsApp no celular e clique abaixo para exibir o QR Code em tempo real.
                       </p>
@@ -1197,22 +1230,22 @@ export default function LiaAdminPage() {
                       />
                     </div>
                     <div className="space-y-1 mt-2">
-                      <h4 className="text-sm font-bold text-white flex items-center justify-center gap-1.5">
+                      <h4 className="text-sm font-bold text-zinc-900 dark:text-white flex items-center justify-center gap-1.5">
                         <Smartphone className="w-4 h-4 text-[#c59b5f]" />
                         Aponte a Câmera do WhatsApp
                       </h4>
-                      <p className="text-xs text-zinc-400 max-w-xs leading-relaxed">
+                      <p className="text-xs text-zinc-600 dark:text-zinc-400 max-w-xs leading-relaxed">
                         No WhatsApp oficial: <strong>Menu (⋮) &gt; Aparelhos Conectados &gt; Conectar um Aparelho</strong>.
                       </p>
                       <div className="pt-2 flex items-center justify-center gap-2">
-                        <span className="inline-flex items-center gap-1 text-[10px] text-emerald-400 bg-emerald-950/60 border border-emerald-800/40 px-2 py-0.5 rounded-full">
+                        <span className="inline-flex items-center gap-1 text-[10px] text-emerald-800 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/60 border border-emerald-200 dark:border-emerald-800/40 px-2 py-0.5 rounded-full">
                           <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
                           Atualizando a cada 8s
                         </span>
                         <button
                           type="button"
                           onClick={() => setQrTimestamp(Date.now())}
-                          className="text-[10px] text-zinc-400 hover:text-white underline cursor-pointer"
+                          className="text-[10px] text-zinc-500 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white underline cursor-pointer"
                         >
                           ↻ Atualizar agora
                         </button>
@@ -1221,14 +1254,14 @@ export default function LiaAdminPage() {
                   </div>
                 ) : (
                   <div className="flex flex-col items-center justify-center p-6 space-y-4 text-center w-full min-h-[260px]">
-                    <div className="w-16 h-16 bg-zinc-900 rounded-full flex items-center justify-center border border-[#c59b5f]/30">
+                    <div className="w-16 h-16 bg-zinc-100 dark:bg-zinc-900 rounded-full flex items-center justify-center border border-[#c59b5f]/30">
                       <RefreshCw className="w-8 h-8 text-[#c59b5f] animate-spin" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-base text-white mb-1">
+                      <h3 className="font-semibold text-base text-zinc-900 dark:text-white mb-1">
                         {isDisconnecting ? "Reiniciando Sessão..." : "Gerando QR Code..."}
                       </h3>
-                      <p className="text-xs text-zinc-400 max-w-xs leading-relaxed">
+                      <p className="text-xs text-zinc-600 dark:text-zinc-400 max-w-xs leading-relaxed">
                         O motor do WhatsApp está inicializando na VPS para gerar o QR Code oficial de conexão.
                       </p>
                       <Button 
@@ -1239,7 +1272,7 @@ export default function LiaAdminPage() {
                           setQrTimestamp(Date.now());
                         }}
                         disabled={isCheckingBot}
-                        className="text-xs text-[#c59b5f] hover:text-[#b58825] mt-3 gap-1"
+                        className="text-xs text-[#966e2d] dark:text-[#c59b5f] hover:text-[#b58825] mt-3 gap-1"
                       >
                         <RefreshCw className={`w-3.5 h-3.5 ${isCheckingBot ? 'animate-spin' : ''}`} />
                         Atualizar status
@@ -1257,7 +1290,7 @@ export default function LiaAdminPage() {
                     setShowQrBox(true);
                   }} 
                   disabled={isDisconnecting}
-                  className="border-red-900/60 bg-red-950/20 text-red-400 hover:bg-red-900/40 hover:text-red-300 rounded-xl text-xs font-semibold"
+                  className="border-red-200 dark:border-red-900/60 bg-red-50 dark:bg-red-950/20 text-red-700 dark:text-red-400 hover:bg-red-100 dark:hover:bg-red-900/40 hover:text-red-800 dark:hover:text-red-300 rounded-xl text-xs font-semibold"
                 >
                   <PowerOff className="w-3.5 h-3.5 mr-2" />
                   {isDisconnecting ? 'Desconectando...' : 'Desconectar e Gerar Novo QR Code'}
