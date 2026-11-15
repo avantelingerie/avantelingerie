@@ -6054,3 +6054,1012 @@ e pb.files.getUrl() with pb.files.getURL()
 ## 2026-11-15 16:48:54.755Z console.error
 - text: Fetch error from : 
 
+## 2026-11-15 18:02:07.024Z load
+- url: http://localhost:3000/admin/lia
+- title: Avante Lingerie | Oficial
+
+## 2026-11-15 18:02:09.673Z network.error
+- method: POST
+- url: https://ad.doubleclick.net/ccm/s/collect?auid=314073967.1794765727&gtm=45be6bb1z8f_AW-18499593515za208xecxf1&fmt=8
+- status: 0
+- durationMs: 2230
+
+## 2026-11-15 18:02:09.673Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 18:02:07.672Z network.error
+- method: POST
+- url: https://www.google.com/ccm/collect?rcb=14&frm=0&apvc=1&auid=314073967.1794765727&dt=Avante%20Lingerie%20%7C%20Oficial&tid=AW-18499593515&en=page_view&dl=http%3A%2F%2Flocalhost%3A3000%2Fadmin%2Flia&scrsrc=www.googletagmanager.com&rnd=694479706.1794765727&navt=n&npa=0&gtm=45be6bb1z8f_AW-18499593515za208xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115938465~115938469~118897920~118897930~120385423~120412526~120420414~120469145~120469153~121191155~121246026~121246034~123785233~123988488&tft=1794765727442&tfd=2653&tids=AW-18499593515&fmt=8
+- status: 0
+- durationMs: 230
+
+## 2026-11-15 18:02:07.673Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 18:02:07.675Z network.error
+- method: POST
+- url: https://www.google.com/rmkt/collect/18499593515/?random=1794765727415&cv=11&fst=1794765727415&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be6bb1z8f_AW-18499593515za208xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115938465~115938469~118897920~118897930~120385423~120412526~120420414~120469145~120469153~121191155~121246026~121246034~123785233~123988488&u_w=1366&u_h=768&url=http%3A%2F%2Flocalhost%3A3000%2Fadmin%2Flia&rcb=14&frm=0&tiba=Avante%20Lingerie%20%7C%20Oficial&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=314073967.1794765727&uaa=x86&uab=64&uafvl=Not-A.Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B157.0.8103.51%7CChromium%3B157.0.8103.51&uamb=0&uam=&uap=Windows&uapv=19.0.0&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5
+- status: 0
+- durationMs: 235
+
+## 2026-11-15 18:02:07.675Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 18:02:19.344Z load
+- url: http://localhost:3000/admin/
+- title: Avante Lingerie | Oficial
+
+## 2026-11-15 18:02:20.065Z navigate
+- url: http://localhost:3000/admin/
+- via: replaceState
+
+## 2026-11-15 18:02:20.251Z network.error
+- method: POST
+- url: https://www.google.com/rmkt/collect/18499593515/?random=1794765740132&cv=11&fst=1794765740132&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be6bb1z8f_AW-18499593515za208xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=100940090~115938465~115938469~118897920~118897930~120385422~120412526~120420416~120469145~120469153~121191155~121246026~121246034~123630401&u_w=1366&u_h=768&url=http%3A%2F%2Flocalhost%3A3000%2Fadmin%2F&rcb=2&frm=0&tiba=Avante%20Lingerie%20%7C%20Oficial&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=314073967.1794765727&uaa=x86&uab=64&uafvl=Not-A.Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B157.0.8103.51%7CChromium%3B157.0.8103.51&uamb=0&uam=&uap=Windows&uapv=19.0.0&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5
+- status: 0
+- durationMs: 109
+
+## 2026-11-15 18:02:20.251Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 18:02:20.254Z network.error
+- method: POST
+- url: https://www.google.com/ccm/collect?rcb=2&frm=0&apvc=0&auid=314073967.1794765727&dt=Avante%20Lingerie%20%7C%20Oficial&tid=AW-18499593515&en=page_view&dl=http%3A%2F%2Flocalhost%3A3000%2Fadmin%2F&scrsrc=www.googletagmanager.com&rnd=874459812.1794765739&navt=n&npa=0&gtm=45be6bb1z8f_AW-18499593515za208xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=100940090~115938465~115938469~118897920~118897930~120385422~120412526~120420416~120469145~120469153~121191155~121246026~121246034~123630401&tft=1794765740149&tfd=3051&tids=AW-18499593515&fmt=8
+- status: 0
+- durationMs: 104
+
+## 2026-11-15 18:02:20.254Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 18:02:20.638Z navigate
+- url: http://localhost:3000/admin/login
+- via: replaceState
+
+## 2026-11-15 18:02:20.713Z network.error
+- method: POST
+- url: https://analytics.google.com/g/collect?v=2&tid=G-E2FS36FRG1&gtm=45je6bb1v9259987036za208xf1&_p=1794765738932&_gaz=1&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AAAAACAC&cid=187626561.1794765740&frm=0&ibt=1&ngs=1&pscdl=noapi&rcb=2&sr=1366x768&uaa=x86&uab=64&uafvl=Not-A.Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B157.0.8103.51%7CChromium%3B157.0.8103.51&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=pt-pt&_s=1&tag_exp=115616986~115938465~115938468~118897920~118897930~120213116~120385423~120412526~120420414~120469145~120469153~121246026~121246034~123785233&sid=1794765740&sct=1&seg=0&dl=http%3A%2F%2Flocalhost%2Fadmin%2F&dt=Avante%20Lingerie%20%7C%20Oficial&en=page_view&_fv=1&_nsi=1&_ss=1&_ee=1&tfd=3404
+- status: 0
+- durationMs: 210
+
+## 2026-11-15 18:02:20.713Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 18:02:22.499Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":"avante_admin_email","type":"email","id":null,"placeholder":"seu@email.com","label":"avante_admin_email","value":"","valueLength":0,"text":""}
+
+## 2026-11-15 18:02:22.716Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":"avante_admin_email","type":"email","id":null,"placeholder":"seu@email.com","label":"avante_admin_email","value":"","valueLength":0,"text":""}
+
+## 2026-11-15 18:02:25.708Z network.error
+- method: POST
+- url: https://analytics.google.com/g/collect?v=2&tid=G-E2FS36FRG1&gtm=45je6bb1v9259987036za200xf1&_p=1794765738932&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEAAACQC&ae=a&cid=187626561.1794765740&frm=0&ibt=1&ngs=1&pscdl=noapi&rcb=2&sr=1366x768&uaa=x86&uab=64&uafvl=Not-A.Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B157.0.8103.51%7CChromium%3B157.0.8103.51&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=pt-pt&tag_exp=115616986~115938465~115938468~118897920~118897930~120213116~120385423~120412526~120420414~120469145~120469153~121246026~121246034~123785233&sid=1794765740&sct=1&seg=0&dl=http%3A%2F%2Flocalhost%2Fadmin%2F&dt=Avante%20Lingerie%20%7C%20Oficial&_s=2&tfd=8428
+- status: 0
+- requestBody: 
+    en=scroll&epn.percent_scrolled=90&_et=10
+    en=page_view&_et=1182&dl=http%3A%2F%2Flocalhost%3A3000%2Fadmin%2Flogin&dr=http%3A%2F%2Flocalhost%3A3000%2Fadmin%2F&seg=1
+- durationMs: 181
+
+## 2026-11-15 18:02:25.709Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 18:02:27.703Z network.error
+- method: POST
+- url: https://v5-b75ccb2b73c54aa4a5098ab7f8533696.ecs.us-east-2.on.aws/events?cee=no
+- requestBody: {"event_name":"PageView","smart_setup":{"is_auto_web_details":"true"},"event_id":"ob3_plugin-set_83ccbf98a3d7d98cad9ae81ede17b7ba78187069b22481a46e8aa49bd1b6c66d","fb.pixel_id":"981595838258999","website_context":{"location":"http://localhost:3000/admin/login","referrer":"","isInIFrame":"false"},"fb.fbp":"fb.0.1794765741675.204687512634068409"}
+- message: signal is aborted without reason
+- durationMs: 6013
+
+## 2026-11-15 18:02:28.038Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":"avante_admin_email","type":"email","id":null,"placeholder":"seu@email.com","label":"avante_admin_email","value":"","valueLength":0,"text":""}
+
+## 2026-11-15 18:02:28.362Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":"avante_admin_email","type":"email","id":null,"placeholder":"seu@email.com","label":"avante_admin_email","value":"admin@avantelingerie.com.br","valueLength":27,"text":""}
+
+## 2026-11-15 18:02:28.387Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"password","id":null,"placeholder":"••••••••","label":"••••••••","value":"[redacted:length=0]","valueLength":0,"text":""}
+
+## 2026-11-15 18:02:28.389Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"password","id":null,"placeholder":"••••••••","label":"••••••••","value":"[redacted:length=12]","valueLength":12,"text":""}
+
+## 2026-11-15 18:02:28.391Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"password","id":null,"placeholder":"••••••••","label":"••••••••","value":"[redacted:length=12]","valueLength":12,"text":""}
+
+## 2026-11-15 18:02:29.365Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":"avante_admin_email","type":"email","id":null,"placeholder":"seu@email.com","label":"avante_admin_email","value":"admin@avantelingerie.com.br","valueLength":27,"text":""}
+
+## 2026-11-15 18:02:29.588Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"submit","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"ACESSAR PAINEL"}
+
+## 2026-11-15 18:02:29.631Z submit
+- action: http://localhost:3000/admin/login
+- fields: [{"label":"avante_admin_email","type":"email","value":"admin@avantelingerie.com.br","length":27,"redacted":false},{"label":"••••••••","type":"password","value":"[redacted:length=12]","length":12,"redacted":true},{"label":"Mostrar senha","type":"button","value":"","length":0,"redacted":false},{"label":"[submit]","type":"submit","value":"","length":0,"redacted":false}]
+
+## 2026-11-15 18:02:29.952Z navigate
+- url: http://localhost:3000/admin
+- via: pushState
+
+## 2026-11-15 18:02:31.054Z network.error
+- method: POST
+- url: https://analytics.google.com/g/collect?v=2&tid=G-E2FS36FRG1&gtm=45je6bb1v9259987036za200xf1&_p=1794765738932&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEEAACQC&ae=a&cid=187626561.1794765740&frm=0&ibt=1&ngs=1&pscdl=noapi&rcb=2&sr=1366x768&uaa=x86&uab=64&uafvl=Not-A.Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B157.0.8103.51%7CChromium%3B157.0.8103.51&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=pt-pt&_s=3&tag_exp=115616986~115938465~115938468~118897920~118897930~120213116~120385423~120412526~120420414~120469145~120469153~121246026~121246034~123785233&sid=1794765740&sct=1&seg=1&dl=http%3A%2F%2Flocalhost%2Fadmin%2Flogin&dr=http%3A%2F%2Flocalhost%3A3000%2Fadmin%2F&dt=Avante%20Lingerie%20%7C%20Oficial&en=form_start&ep.form_id=&ep.form_destination=http%3A%2F%2Flocalhost%3A3000%2Fadmin%2Flogin&epn.form_length=4&ep.first_field_id=&ep.first_field_name=avante_admin_email&ep.first_field_type=email&epn.first_field_position=1&_et=4054&tfd=13866
+- status: 0
+- durationMs: 89
+
+## 2026-11-15 18:02:31.054Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 18:02:34.648Z network.error
+- method: POST
+- url: https://www.facebook.com/tr/
+- status: 0
+- requestBody: id=981595838258999&ev=SubscribedButtonClick&dl=http%3A%2F%2Flocalhost%3A3000%2Fadmin%2Flogin&rl=&if=false&ts=1794765749606&iw=false&cd[buttonFeatures]=%7B%22classList%22%3A%22inline-flex%20items-center%20justify-center%20gap-2%20whitespace-nowrap%20rounded-md%20transition-colors%20focus-visible%3Aoutline-none%20focus-visible%3Aring-1%20focus-visible%3Aring-ring%20disabled%3Apointer-events-none%20disabled%3Aopacity-50%20%5B%26_svg%5D%3Apointer-events-none%20%5B%26_svg%5D%3Asize-4%20%5B%26_svg%5D%3Ashrink-0%20text-primary-foreground%20shadow%20px-4%20py-2%20w-full%20h-12%20text-base%20font-bold%20bg-primary%20hover%3Abg-primary%2F90%22%2C%22destination%22%3A%22http%3A%2F%2Flocalhost%3A3000%2Fadmin%2Flogin%22%2C%22id%22%3A%22%22%2C%22imageUrl%22%3A%22%22%2C%22innerText%22%3A%22ACESSAR%20PAINEL%22%2C%22numChildButtons%22%3A0%2C%22tag%22%3A%22button%22%2C%22type%22%3A%22submit%22%2C%22name%22%3A%22%22%2C%22value%22%3A%22%22%7D&cd[buttonText]=ACESSAR%20PAINEL&cd[formFeatures]=%5B%7B%22id%22%3A%22%22%2C%22name%22%3A%22avante_admin_email%22%2C%22tag%22%3A%22input%22%2C%22placeholder%22%3A%22seu%40email.com%22%2C%22inputType%22%3A%22email%22%7D%2C%7B%22id%22%3A%22%22%2C%22name%22%3A%22%22%2C%22tag%22%3A%22input%22%2C%22placeholder%22%3A%22%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%22%2C%22inputType%22%3A%22password%22%7D%2C%7B%22id%22%3A%22%22%2C%22name%22%3A%22%22%2C%22tag%22%3A%22button%22%7D%5D&cd[pageFeatures]=%7B%22title%22%3A%22Avante%20Lingerie%20%7C%20Oficial%22%7D&sw=1366&sh=768&v=2.9.439&r=stable&ec=1&o=4126&aems=0%3B0&fbp=fb.0.1794765741675.204687512634068409&eid=ob3_plugin-set_4d5a76033fb685f5dc4ec8569934babc8e4141698dee84e62cfe8a0d738152e0&ler=empty&cdl=API_unavailable&pmd[locale]=pt-BR&plt=2262.60000000149&iss=1&imft=1&tz=-180&it=1794765741270&coo=false&es=automatic&tm=3&expv2[0]=mr1&expv2[1]=pl1&expv2[2]=el3&expv2[3]=bc1&expv2[4]=ra2&expv2[5]=rp2&expv2[6]=im1&expv2[7]=hf1&expv2[8]=ot1&expv2[9]=hv1&expv2[10]=rh0&expv2[11]=ah0&expv2...
+- durationMs: 17
+
+## 2026-11-15 18:02:34.648Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 18:02:36.056Z network.error
+- method: POST
+- url: https://analytics.google.com/g/collect?v=2&tid=G-E2FS36FRG1&gtm=45je6bb1v9259987036za200xf1&_p=1794765738932&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEAAACQC&ae=a&cid=187626561.1794765740&frm=0&ibt=1&ngs=1&pscdl=noapi&rcb=2&sr=1366x768&uaa=x86&uab=64&uafvl=Not-A.Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B157.0.8103.51%7CChromium%3B157.0.8103.51&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=pt-pt&_s=4&tag_exp=115616986~115938465~115938468~118897920~118897930~120213116~120385423~120412526~120420414~120469145~120469153~121246026~121246034~123785233&dl=http%3A%2F%2Flocalhost%3A3000%2Fadmin&dr=http%3A%2F%2Flocalhost%3A3000%2Fadmin%2Flogin&sid=1794765740&sct=1&seg=1&dt=Avante%20Lingerie%20%7C%20Oficial&en=page_view&_et=2577&tfd=18884
+- status: 0
+- durationMs: 74
+
+## 2026-11-15 18:02:36.056Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 18:02:37.694Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Cérebro da Lia"}
+
+## 2026-11-15 18:02:37.703Z navigate
+- url: http://localhost:3000/admin/lia
+- via: pushState
+
+## 2026-11-15 18:02:43.812Z network.error
+- method: POST
+- url: https://analytics.google.com/g/collect?v=2&tid=G-E2FS36FRG1&gtm=45je6bb1v9259987036za200xf1&_p=1794765738932&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEAAACQC&ae=a&cid=187626561.1794765740&frm=0&ibt=1&ngs=1&pscdl=noapi&rcb=2&sr=1366x768&uaa=x86&uab=64&uafvl=Not-A.Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B157.0.8103.51%7CChromium%3B157.0.8103.51&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=pt-pt&_s=5&tag_exp=115616986~115938465~115938468~118897920~118897930~120213116~120385423~120412526~120420414~120469145~120469153~121246026~121246034~123785233&dl=http%3A%2F%2Flocalhost%3A3000%2Fadmin%2Flia&dr=http%3A%2F%2Flocalhost%3A3000%2Fadmin&sid=1794765740&sct=1&seg=1&dt=Avante%20Lingerie%20%7C%20Oficial&en=page_view&_et=7754&tfd=26635
+- status: 0
+- durationMs: 79
+
+## 2026-11-15 18:02:43.812Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 18:02:49.323Z click
+- element: {"tag":"p","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"✨ Lia: Não, não precisa! 🖤\n\nPode comprar com CPF mesmo. Qual seu interesse?"}
+
+## 2026-11-15 18:03:09.810Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":" WhatsApp (30)"}
+
+## 2026-11-15 18:03:13.289Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Loja (20)"}
+
+## 2026-11-15 18:03:28.016Z click
+- element: {"tag":"div","role":"tabpanel","ariaLabel":null,"name":null,"type":null,"id":"radix-:r6:-content-chats","placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Todos (50) WhatsApp (30) Loja (20) Humano (0)[data-radix-scroll-area-viewport]{scrollbar-width:none;-ms-overflow-style:none;-webkit-overflow-scrolling:touch;}[data-radix-scroll-area-viewport]::-webkit-scrollbar{display:none}Visitante Loja #AA9047Ontem às 20:25✨ Lia: Não, não precisa! 🖤\n\nPode comprar com CPF mesmo. Qual seu interesse?Loja Virtual🤖 Lia Ativa2 msgsVisitante Loja #1427E813/11 às 15:21✨ Lia: Seu contato foi salvo! ✨ Logo o Sr. Luiz entrará em contato. Até logo, Josiana! 🖤Loja Virtual🤖 Lia Ativa12 msgsVisitante Loja #6DE27713/11 às 10:06✨ Lia: Ótimas escolhas! ✨ Por qual você quer começar?\n\n- [Conjuntos](/categoria/conjunto)\n- [Camisolas](/categoria/camisola)\n- [Calcinhas](/categoria/calcinha)Loja Virtual🤖 Lia Ativa8 msgsVisitante Loja #IG_12310/11 às 20:58✨ Lia: Oi! 👋 Tudo bem? Posso ajudar com algo?Loja Virtual🤖 Lia Ativa2 msgsVisitante Loja #F3655E10/11 às 12:44✨ Lia: Perfeito! ✨ Agora você vê os preços de fábrica na vitrine!\n\nQuer começar por qual categoria: [Conjuntos](/categoria/conjunto), [Calcinhas](/categoria/calcinha) ou [Bodies](/categoria/body)?Loja Virtual🤖 Lia Ativa18 msgsVisitante Loja #9F1D3309/11 às 13:06✨ Lia: Perfeito! Acesse agora e cadastre-se: [Quero Revender](https://avantelingerie.com.br/quero-revender) ✨\n\nPrecisando de ajuda, é só chamar! 🖤Loja Virtual🤖 Lia Ativa12 msgsVisitante Loja #62515A09/11 às 11:12✨ Lia: Ótimo! 😊 Em que posso te ajudar agora?Loja Virtual🤖 Lia Ativa4 msgsVisitante Loja #4165ED09/11 às 00:51✨ Lia: You're welcome, Ruth! 😊 Qualquer coisa, é só chamar!Loja Virtual🤖 Lia Ativa8 msgsVisitante Loja #DA735807/11 às 23:40✨ Lia: Pronto, Odete! 🖤 Já repassei seus dados para a nossa gerente. Em breve uma consultora te chama no WhatsApp. Qualquer dúvida, estou aqui! ✨Loja Virtual🤖 Lia Ativa12 msgsVisitante Loja #8140BC07/11 às 15:40✨ Lia: Os queridinhos das revendedoras são:\n\n1. [Conjunto Marido Apressado](/produto/zy5jl9jtjcez1wo) 🖤\n2. [Body Rendado Marido Apressado](/produto/h4otfay091lfexc)\n3. [Conjunt..."}
+
+## 2026-11-15 18:03:54.615Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"☀️"}
+
+## 2026-11-15 18:04:03.766Z click
+- element: {"tag":"div","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Visitante Loja #41D3E204/11 às 18:32"}
+
+## 2026-11-15 18:04:22.900Z click
+- element: {"tag":"div","role":"tabpanel","ariaLabel":null,"name":null,"type":null,"id":"radix-:r6:-content-chats","placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Todos (50) WhatsApp (30) Loja (20) Humano (0)[data-radix-scroll-area-viewport]{scrollbar-width:none;-ms-overflow-style:none;-webkit-overflow-scrolling:touch;}[data-radix-scroll-area-viewport]::-webkit-scrollbar{display:none}Visitante Loja #AA9047Ontem às 20:25✨ Lia: Não, não precisa! 🖤\n\nPode comprar com CPF mesmo. Qual seu interesse?Loja Virtual🤖 Lia Ativa2 msgsVisitante Loja #1427E813/11 às 15:21✨ Lia: Seu contato foi salvo! ✨ Logo o Sr. Luiz entrará em contato. Até logo, Josiana! 🖤Loja Virtual🤖 Lia Ativa12 msgsVisitante Loja #6DE27713/11 às 10:06✨ Lia: Ótimas escolhas! ✨ Por qual você quer começar?\n\n- [Conjuntos](/categoria/conjunto)\n- [Camisolas](/categoria/camisola)\n- [Calcinhas](/categoria/calcinha)Loja Virtual🤖 Lia Ativa8 msgsVisitante Loja #IG_12310/11 às 20:58✨ Lia: Oi! 👋 Tudo bem? Posso ajudar com algo?Loja Virtual🤖 Lia Ativa2 msgsVisitante Loja #F3655E10/11 às 12:44✨ Lia: Perfeito! ✨ Agora você vê os preços de fábrica na vitrine!\n\nQuer começar por qual categoria: [Conjuntos](/categoria/conjunto), [Calcinhas](/categoria/calcinha) ou [Bodies](/categoria/body)?Loja Virtual🤖 Lia Ativa18 msgsVisitante Loja #9F1D3309/11 às 13:06✨ Lia: Perfeito! Acesse agora e cadastre-se: [Quero Revender](https://avantelingerie.com.br/quero-revender) ✨\n\nPrecisando de ajuda, é só chamar! 🖤Loja Virtual🤖 Lia Ativa12 msgsVisitante Loja #62515A09/11 às 11:12✨ Lia: Ótimo! 😊 Em que posso te ajudar agora?Loja Virtual🤖 Lia Ativa4 msgsVisitante Loja #4165ED09/11 às 00:51✨ Lia: You're welcome, Ruth! 😊 Qualquer coisa, é só chamar!Loja Virtual🤖 Lia Ativa8 msgsVisitante Loja #DA735807/11 às 23:40✨ Lia: Pronto, Odete! 🖤 Já repassei seus dados para a nossa gerente. Em breve uma consultora te chama no WhatsApp. Qualquer dúvida, estou aqui! ✨Loja Virtual🤖 Lia Ativa12 msgsVisitante Loja #8140BC07/11 às 15:40✨ Lia: Os queridinhos das revendedoras são:\n\n1. [Conjunto Marido Apressado](/produto/zy5jl9jtjcez1wo) 🖤\n2. [Body Rendado Marido Apressado](/produto/h4otfay091lfexc)\n3. [Conjunt..."}
+
+## 2026-11-15 18:06:18.116Z load
+- url: http://localhost:3000/
+- title: Avante Lingerie | Oficial
+
+## 2026-11-15 18:06:19.518Z navigate
+- url: http://localhost:3000/
+- via: replaceState
+
+## 2026-11-15 18:06:22.114Z console.error
+- text: 
+    `DialogContent` requires a `DialogTitle` for the component to be accessible for screen reader users.
+    
+    If you want to hide the `DialogTitle`, you can wrap it with our VisuallyHidden component.
+    
+    For more information, see https://radix-ui.com/primitives/docs/components/dialog
+
+## 2026-11-15 18:06:22.117Z console.warn
+- text: Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+
+## 2026-11-15 18:06:22.811Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:06:22.872Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:06:22.935Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:06:22.947Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:06:22.961Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:06:23.038Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:06:23.063Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:06:24.064Z click
+- element: {"tag":"div","role":"dialog","ariaLabel":null,"name":null,"type":null,"id":"radix-:r0:","placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Close"}
+
+## 2026-11-15 18:06:24.092Z navigate
+- url: http://localhost:3000/quero-revender
+- via: pushState
+
+## 2026-11-15 18:06:24.333Z network.error
+- method: POST
+- url: https://analytics.google.com/g/collect?v=2&tid=G-E2FS36FRG1&gtm=45je6bb1v9259987036za208xf1&_p=1794765977875&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AAAAACQC&cid=187626561.1794765740&frm=0&ibt=1&ngs=1&pscdl=noapi&rcb=4&sr=1366x768&uaa=x86&uab=64&uafvl=Not-A.Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B157.0.8103.51%7CChromium%3B157.0.8103.51&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=pt-pt&_s=1&tag_exp=115938466~115938469~118897920~118897930~120213116~120385423~120412528~120420414~120469145~120469153~121246026~121246034~123785232~123988486&sid=1794765740&sct=1&seg=1&dl=http%3A%2F%2Flocalhost%2F&dt=Avante%20Lingerie%20%7C%20Oficial&en=page_view&_ee=1&tfd=4155
+- status: 0
+- durationMs: 4237
+
+## 2026-11-15 18:06:24.335Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 18:06:25.406Z network.error
+- method: POST
+- url: https://analytics.google.com/g/collect?v=2&tid=G-E2FS36FRG1&gtm=45je6bb1v9259987036za200xf1&_p=1794765977875&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEAAACQC&ae=a&cid=187626561.1794765740&frm=0&ibt=1&ngs=1&pscdl=noapi&rcb=4&sr=1366x768&uaa=x86&uab=64&uafvl=Not-A.Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B157.0.8103.51%7CChromium%3B157.0.8103.51&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=pt-pt&tag_exp=115938466~115938469~118897920~118897930~120213116~120385423~120412528~120420414~120469145~120469153~121246026~121246034~123785232~123988486&sid=1794765740&sct=1&seg=1&dl=http%3A%2F%2Flocalhost%2F&dt=Avante%20Lingerie%20%7C%20Oficial&_s=2&tfd=9377
+- status: 0
+- requestBody: 
+    en=scroll&epn.percent_scrolled=90&_et=38
+    en=page_view&_et=5197&dl=http%3A%2F%2Flocalhost%3A3000%2Fquero-revender&dr=http%3A%2F%2Flocalhost%3A3000%2F&dt=Avante%20Lingerie%20%7C%20Sinta-se%20linda%2C%20confort%C3%A1vel%20e%20confiante
+- durationMs: 87
+
+## 2026-11-15 18:06:25.406Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 18:06:27.823Z network.error
+- method: POST
+- url: https://www.google.com/rmkt/collect/18499593515/?random=1794765979593&cv=11&fst=1794765979593&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be6bb1z8f_AW-18499593515za208xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115938466~115938468~118897920~118897930~120385423~120412526~120420414~120469145~120469153~121191155~121246026~121246034~123785234&u_w=1366&u_h=768&url=http%3A%2F%2Flocalhost%3A3000%2F&rcb=3&frm=0&tiba=Avante%20Lingerie%20%7C%20Oficial&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=314073967.1794765727&uaa=x86&uab=64&uafvl=Not-A.Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B157.0.8103.51%7CChromium%3B157.0.8103.51&uamb=0&uam=&uap=Windows&uapv=19.0.0&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5
+- status: 0
+- durationMs: 8218
+
+## 2026-11-15 18:06:27.823Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 18:06:27.830Z network.error
+- method: POST
+- url: https://www.google.com/ccm/collect?rcb=3&frm=0&apvc=0&auid=314073967.1794765727&dt=Avante%20Lingerie%20%7C%20Oficial&tid=AW-18499593515&en=page_view&dl=http%3A%2F%2Flocalhost%3A3000%2F&scrsrc=www.googletagmanager.com&rnd=543094634.1794765978&navt=n&npa=0&gtm=45be6bb1z8f_AW-18499593515za208xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115938466~115938468~118897920~118897930~120385423~120412526~120420414~120469145~120469153~121191155~121246026~121246034~123785234&tft=1794765979615&tfd=3674&tids=AW-18499593515&fmt=8
+- status: 0
+- durationMs: 8215
+
+## 2026-11-15 18:06:27.831Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 18:06:28.372Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Home"}
+
+## 2026-11-15 18:06:28.429Z navigate
+- url: http://localhost:3000/
+- via: pushState
+
+## 2026-11-15 18:06:30.793Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/products/records?page=1&perPage=1&filter=status%20%3D%20true%20%26%26%20categoria_id%20%3D%20%22gs0ae73j7zvp686%22%20%26%26%20imagem_principal%20!%3D%20%22%22&skipTotal=1&sort=-created
+- message: signal is aborted without reason
+- durationMs: 8506
+
+## 2026-11-15 18:06:31.167Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:06:31.577Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:06:31.622Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:06:31.667Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:06:31.728Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:06:32.181Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:06:32.795Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:06:32.950Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/testimonials/records?page=1&perPage=10&filter=status%20%3D%20true&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 2138
+
+## 2026-11-15 18:06:32.950Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/testimonials/records?page=1&perPage=10&filter=status%20%3D%20true&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-11-15 18:06:33.351Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:06:34.043Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/testimonials/records?page=1&perPage=10&filter=status%20%3D%20true&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 688
+
+## 2026-11-15 18:06:34.044Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/testimonials/records?page=1&perPage=10&filter=status%20%3D%20true&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-11-15 18:06:34.213Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:06:34.748Z network.error
+- method: POST
+- url: https://analytics.google.com/g/collect?v=2&tid=G-E2FS36FRG1&gtm=45je6bb1v9259987036za200xf1&_p=1794765977875&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEAAACQC&ae=a&cid=187626561.1794765740&frm=0&ibt=1&ngs=1&pscdl=noapi&rcb=4&sr=1366x768&uaa=x86&uab=64&uafvl=Not-A.Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B157.0.8103.51%7CChromium%3B157.0.8103.51&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=pt-pt&_s=3&tag_exp=115938466~115938469~118897920~118897930~120213116~120385423~120412528~120420414~120469145~120469153~121246026~121246034~123785232~123988486&dl=http%3A%2F%2Flocalhost%3A3000%2F&dr=http%3A%2F%2Flocalhost%3A3000%2Fquero-revender&sid=1794765740&sct=1&seg=1&dt=Avante%20Lingerie%20%7C%20Sinta-se%20linda%2C%20confort%C3%A1vel%20e%20confiante&en=page_view&_et=4204&tfd=18703
+- status: 0
+- durationMs: 103
+
+## 2026-11-15 18:06:34.748Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 18:06:40.390Z load
+- url: http://localhost:3000/
+- title: Avante Lingerie | Oficial
+
+## 2026-11-15 18:06:40.843Z network.error
+- method: POST
+- url: https://www.google.com/ccm/collect?rcb=7&frm=0&apvc=1&auid=314073967.1794765727&dt=Avante%20Lingerie%20%7C%20Oficial&tid=AW-18499593515&en=page_view&dl=http%3A%2F%2Flocalhost%3A3000%2F&scrsrc=www.googletagmanager.com&rnd=955603423.1794766001&navt=n&npa=0&gtm=45be6bb1z8f_AW-18499593515za208xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115616986~115938466~115938469~118897920~118897930~120385423~120412526~120420416~120469145~120469153~121191155~121246026~121246034~123988488&tft=1794766000685&tfd=1280&tids=AW-18499593515&fmt=8
+- status: 0
+- durationMs: 157
+
+## 2026-11-15 18:06:40.844Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 18:06:40.847Z network.error
+- method: POST
+- url: https://www.google.com/rmkt/collect/18499593515/?random=1794766000643&cv=11&fst=1794766000643&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be6bb1z8f_AW-18499593515za208xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115616986~115938466~115938469~118897920~118897930~120385423~120412526~120420416~120469145~120469153~121191155~121246026~121246034~123988488&u_w=1366&u_h=768&url=http%3A%2F%2Flocalhost%3A3000%2F&rcb=7&frm=0&tiba=Avante%20Lingerie%20%7C%20Oficial&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=314073967.1794765727&uaa=x86&uab=64&uafvl=Not-A.Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B157.0.8103.51%7CChromium%3B157.0.8103.51&uamb=0&uam=&uap=Windows&uapv=19.0.0&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5
+- status: 0
+- durationMs: 163
+
+## 2026-11-15 18:06:40.847Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 18:06:41.244Z network.error
+- method: POST
+- url: https://www.google.com/ccm/collect?rcb=7&frm=0&apvc=0&auid=314073967.1794765727&dt=Avante%20Lingerie%20%7C%20Oficial&tid=AW-18499593515&en=page_view&dl=http%3A%2F%2Flocalhost%3A3000%2F&scrsrc=www.googletagmanager.com&rnd=955603423.1794766001&navt=n&npa=0&gtm=45be6bb1z8f_AW-18499593515za208xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115616986~115938466~115938469~118897920~118897930~120385423~120412526~120420416~120469145~120469153~121191155~121246026~121246034~123988488&tft=1794766001159&tfd=1754&tids=AW-18499593515&fmt=8
+- status: 0
+- durationMs: 85
+
+## 2026-11-15 18:06:41.244Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 18:06:41.253Z network.error
+- method: POST
+- url: https://www.google.com/rmkt/collect/18499593515/?random=1794766001152&cv=11&fst=1794766001152&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be6bb1z8f_AW-18499593515za208xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115616986~115938466~115938469~118897920~118897930~120385423~120412526~120420416~120469145~120469153~121191155~121246026~121246034~123988488&u_w=1366&u_h=768&url=http%3A%2F%2Flocalhost%3A3000%2F&rcb=7&frm=0&tiba=Avante%20Lingerie%20%7C%20Oficial&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=314073967.1794765727&uaa=x86&uab=64&uafvl=Not-A.Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B157.0.8103.51%7CChromium%3B157.0.8103.51&uamb=0&uam=&uap=Windows&uapv=19.0.0&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5
+- status: 0
+- durationMs: 97
+
+## 2026-11-15 18:06:41.253Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 18:06:41.324Z network.error
+- method: POST
+- url: https://analytics.google.com/g/collect?v=2&tid=G-E2FS36FRG1&gtm=45je6bb1v9259987036za208xf1&_p=1794766000306&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AAAAACQC&cid=187626561.1794765740&frm=0&ibt=1&ngs=1&pscdl=noapi&rcb=2&sr=1366x768&uaa=x86&uab=64&uafvl=Not-A.Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B157.0.8103.51%7CChromium%3B157.0.8103.51&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=pt-pt&_s=1&tag_exp=115938466~115938468~118897920~118897930~120213116~120385422~120412528~120420414~120469145~120469153~121246026~121246034&sid=1794765740&sct=1&seg=1&dl=http%3A%2F%2Flocalhost%2F&dt=Avante%20Lingerie%20%7C%20Oficial&en=page_view&_ee=1&tfd=1843
+- status: 0
+- durationMs: 75
+
+## 2026-11-15 18:06:41.324Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 18:06:45.888Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:06:45.890Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:06:45.895Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:06:45.909Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:06:45.961Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:06:45.972Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:06:45.973Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:06:45.980Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:06:46.375Z network.error
+- method: POST
+- url: https://analytics.google.com/g/collect?v=2&tid=G-E2FS36FRG1&gtm=45je6bb1v9259987036za200xf1&_p=1794766000306&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEAAACQC&ae=a&cid=187626561.1794765740&frm=0&ibt=1&ngs=1&pscdl=noapi&rcb=2&sr=1366x768&uaa=x86&uab=64&uafvl=Not-A.Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B157.0.8103.51%7CChromium%3B157.0.8103.51&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=pt-pt&_s=2&tag_exp=115938466~115938468~118897920~118897930~120213116~120385422~120412528~120420414~120469145~120469153~121246026~121246034&sid=1794765740&sct=1&seg=1&dl=http%3A%2F%2Flocalhost%2F&dt=Avante%20Lingerie%20%7C%20Oficial&en=scroll&epn.percent_scrolled=90&_et=5&tfd=6849
+- status: 0
+- durationMs: 120
+
+## 2026-11-15 18:06:46.375Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 18:06:48.401Z network.error
+- method: GET
+- url: http://localhost:3000/hcgi/platform/api/collections/testimonials/records?page=1&perPage=10&filter=status%20%3D%20true&sort=-created
+- status: 400
+- statusText: Bad Request
+- response: 
+    {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+- durationMs: 2419
+
+## 2026-11-15 18:06:48.401Z console.error
+- text: 
+    Fetch error from http://localhost:3000/hcgi/platform/api/collections/testimonials/records?page=1&perPage=10&filter=status%20%3D%20true&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
+    
+
+## 2026-11-15 18:06:48.412Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:06:51.348Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-11-15 18:07:02.416Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-11-15 18:07:02.617Z navigate
+- url: http://localhost:3000/produto/5k7ajz8k7plq594
+- via: pushState
+
+## 2026-11-15 18:07:05.616Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:05.639Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:05.639Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:05.640Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:05.641Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:05.642Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:05.642Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:05.642Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:05.643Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:05.643Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:05.643Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:05.644Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:05.644Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:05.645Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:05.645Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:05.646Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:05.646Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:05.647Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:05.647Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:05.648Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:05.648Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:05.649Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:05.649Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:05.650Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:05.651Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:05.856Z network.error
+- method: POST
+- url: https://www.google.com/rmkt/collect/18499593515/?random=1794766025692&cv=11&fst=1794766025692&fmt=8&bg=ffffff&guid=ON&async=1&en=view_item&gtm=45be6bb1za200xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115616986~115938466~115938469~118897920~118897930~120385423~120412526~120420416~120469145~120469153~121191155~121246026~121246034~123988488&u_w=1366&u_h=768&url=http%3A%2F%2Flocalhost%3A3000%2Fproduto%2F5k7ajz8k7plq594&rcb=7&frm=0&tiba=Avante%20Lingerie%20%7C%20Sinta-se%20linda%2C%20confort%C3%A1vel%20e%20confiante&value=9.9&currency_code=BRL&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=314073967.1794765727&uaa=x86&uab=64&uafvl=Not-A.Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B157.0.8103.51%7CChromium%3B157.0.8103.51&uamb=0&uam=&uap=Windows&uapv=19.0.0&uaw=0&data=event%3Dview_item%3Bid%3D5k7ajz8k7plq594&ept=68&gcp=5
+- status: 0
+- durationMs: 95
+
+## 2026-11-15 18:07:05.858Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 18:07:05.864Z network.error
+- method: POST
+- url: https://analytics.google.com/g/collect?v=2&tid=G-E2FS36FRG1&gtm=45je6bb1v9259987036za200xf1&_p=1794766000306&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEAAACQC&ae=a&cid=187626561.1794765740&frm=0&ibt=1&ngs=1&pscdl=noapi&rcb=2&sr=1366x768&uaa=x86&uab=64&uafvl=Not-A.Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B157.0.8103.51%7CChromium%3B157.0.8103.51&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=pt-pt&_s=3&tag_exp=115938466~115938468~118897920~118897930~120213116~120385422~120412528~120420414~120469145~120469153~121246026~121246034&dl=http%3A%2F%2Flocalhost%3A3000%2Fproduto%2F5k7ajz8k7plq594&dr=http%3A%2F%2Flocalhost%3A3000%2F&sid=1794765740&sct=1&seg=1&dt=Avante%20Lingerie%20%7C%20Sinta-se%20linda%2C%20confort%C3%A1vel%20e%20confiante&en=page_view&_et=22460&tfd=26383
+- status: 0
+- durationMs: 75
+
+## 2026-11-15 18:07:05.864Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 18:07:05.882Z network.error
+- method: POST
+- url: https://www.google.com/ccm/collect?rcb=7&frm=0&apvc=0&auid=314073967.1794765727&dt=Avante%20Lingerie%20%7C%20Sinta-se%20linda%2C%20confort%C3%A1vel%20e%20confiante&tid=AW-18499593515&en=view_item&dl=http%3A%2F%2Flocalhost%3A3000%2Fproduto%2F5k7ajz8k7plq594&scrsrc=www.googletagmanager.com&rnd=955603423.1794766001&navt=n&npa=0&epn.value=9.9&ep.currency=BRL&gtm=45be6bb1za200xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115616986~115938466~115938469~118897920~118897930~120385423~120412526~120420416~120469145~120469153~121191155~121246026~121246034~123988488&tft=1794766025795&tfd=26390&tids=AW-18499593515&fmt=8
+- status: 0
+- durationMs: 85
+
+## 2026-11-15 18:07:05.882Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 18:07:05.905Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:05.919Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:05.920Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:05.921Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:05.922Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:05.922Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:05.922Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:05.924Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:05.926Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:10.863Z network.error
+- method: POST
+- url: https://analytics.google.com/g/collect?v=2&tid=G-E2FS36FRG1&gtm=45je6bb1v9259987036za200xf1&_p=1794766000306&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AAAAACQC&cid=187626561.1794765740&frm=0&ibt=1&ngs=1&pscdl=noapi&rcb=2&sr=1366x768&uaa=x86&uab=64&uafvl=Not-A.Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B157.0.8103.51%7CChromium%3B157.0.8103.51&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=pt-pt&_s=4&tag_exp=115938466~115938468~118897920~118897930~120213116~120385422~120412528~120420414~120469145~120469153~121246026~121246034&cu=BRL&sid=1794765740&sct=1&seg=1&dl=http%3A%2F%2Flocalhost%2Fproduto%2F5k7ajz8k7plq594&dr=http%3A%2F%2Flocalhost%3A3000%2F&dt=Avante%20Lingerie%20%7C%20Sinta-se%20linda%2C%20confort%C3%A1vel%20e%20confiante&en=view_item&_ee=1&pr1=id5k7ajz8k7plq594~nmCalcinhas%20C%C3%B3s%20Cintura%20Media%20Microfibra%20Cal%C3%A7ola%20%20Lingerie%20Feminina%20Confort%C3%A1vel%20%20Dia%20a%20Dia~pr9.9&epn.value=9.9&_et=2026&tfd=31387
+- status: 0
+- durationMs: 71
+
+## 2026-11-15 18:07:10.863Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 18:07:17.970Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"📦Aceitamos encomendas"}
+
+## 2026-11-15 18:07:23.262Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"📦Aceitamos encomendas"}
+
+## 2026-11-15 18:07:26.711Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"📦Aceitamos encomendas"}
+
+## 2026-11-15 18:07:33.084Z click
+- element: {"tag":"button","role":null,"ariaLabel":"Selecionar cor Rosê","name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-11-15 18:07:33.228Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:33.232Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:33.233Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:33.234Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:33.234Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:33.234Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:33.235Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:33.236Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:33.237Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:33.322Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:33.329Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:33.330Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:33.330Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:33.330Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:33.330Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:33.330Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:33.331Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:33.332Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:34.198Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"G"}
+
+## 2026-11-15 18:07:34.204Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:34.206Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:34.207Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:34.207Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:34.207Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:34.208Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:34.208Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:34.208Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:34.209Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:34.305Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:34.307Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:34.307Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:34.308Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:34.309Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:34.309Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:34.309Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:34.310Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:35.515Z click
+- element: {"tag":"button","role":null,"ariaLabel":"Aumentar quantidade","name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-11-15 18:07:35.518Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:35.520Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:35.520Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:35.521Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:35.521Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:35.521Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:35.522Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:35.522Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:35.697Z click
+- element: {"tag":"button","role":null,"ariaLabel":"Aumentar quantidade","name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-11-15 18:07:35.698Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:35.699Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:35.699Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:35.700Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:35.700Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:35.700Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:35.701Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:35.701Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:35.886Z click
+- element: {"tag":"button","role":null,"ariaLabel":"Aumentar quantidade","name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-11-15 18:07:35.887Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:35.888Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:35.888Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:35.888Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:35.888Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:35.889Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:35.889Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:35.890Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:36.053Z click
+- element: {"tag":"button","role":null,"ariaLabel":"Aumentar quantidade","name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-11-15 18:07:36.054Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:36.055Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:36.055Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:36.055Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:36.056Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:36.056Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:36.057Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:36.057Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:36.272Z click
+- element: {"tag":"button","role":null,"ariaLabel":"Aumentar quantidade","name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-11-15 18:07:36.272Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:36.273Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:36.273Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:36.274Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:36.274Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:36.274Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:36.274Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:36.274Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:37.217Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Adicionar"}
+
+## 2026-11-15 18:07:37.302Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:37.303Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:37.303Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:37.303Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:37.303Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:37.303Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:37.304Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:37.304Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:37.442Z network.error
+- method: POST
+- url: https://analytics.google.com/g/collect?v=2&tid=G-E2FS36FRG1&gtm=45je6bb1v9259987036za200xf1&_p=1794766000306&_gaz=1&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AAAAACQC&cid=187626561.1794765740&frm=0&ibt=1&ngs=1&pscdl=noapi&rcb=2&sr=1366x768&uaa=x86&uab=64&uafvl=Not-A.Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B157.0.8103.51%7CChromium%3B157.0.8103.51&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=pt-pt&_s=5&tag_exp=115938466~115938468~118897920~118897930~120213116~120385422~120412528~120420414~120469145~120469153~121246026~121246034&cu=BRL&sid=1794765740&sct=1&seg=1&dl=http%3A%2F%2Flocalhost%2Fproduto%2F5k7ajz8k7plq594&dr=http%3A%2F%2Flocalhost%3A3000%2F&dt=Calcinha%20Cal%C3%A7ola%20Feminina%20Microfibra%20Confort%C3%A1vel%20com%20Compress%C3%A3o%20Abdominal%20C%C3%B3s%20M%C3%A9dio%20%7C%20Avante%20Lingerie%20Oficial&en=add_to_cart&_ee=1&pr1=id5k7ajz8k7plq594~nmCalcinhas%20C%C3%B3s%20Cintura%20Media%20Microfibra%20Cal%C3%A7ola%20%20Lingerie%20Feminina%20Confort%C3%A1vel%20%20Dia%20a%20Dia~pr9.9~qt6&epn.value=59.400000000000006&_et=31498&tfd=57887
+- status: 0
+- durationMs: 150
+
+## 2026-11-15 18:07:37.443Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 18:07:37.524Z network.error
+- method: POST
+- url: https://ad.doubleclick.net/ccm/s/collect?auid=314073967.1794765727&gtm=45be6bb1za200xecxf1&fmt=8
+- status: 0
+- durationMs: 202
+
+## 2026-11-15 18:07:37.524Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 18:07:38.487Z network.error
+- method: POST
+- url: https://www.google.com/ccm/collect?rcb=7&frm=0&apvc=0&auid=314073967.1794765727&dt=Calcinha%20Cal%C3%A7ola%20Feminina%20Microfibra%20Confort%C3%A1vel%20com%20Compress%C3%A3o%20Abdominal%20C%C3%B3s%20M%C3%A9dio%20%7C%20Avante%20Lingerie%20Oficial&tid=AW-18499593515&en=add_to_cart&dl=http%3A%2F%2Flocalhost%3A3000%2Fproduto%2F5k7ajz8k7plq594&scrsrc=www.googletagmanager.com&rnd=955603423.1794766001&navt=n&npa=0&epn.value=59.400000000000006&ep.currency=BRL&gtm=45be6bb1za200xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115616986~115938466~115938469~118897920~118897930~120385423~120412526~120420416~120469145~120469153~121191155~121246026~121246034~123988488&tft=1794766057321&tfd=57916&tids=AW-18499593515&fmt=8
+- status: 0
+- durationMs: 1166
+
+## 2026-11-15 18:07:38.487Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 18:07:38.489Z network.error
+- method: POST
+- url: https://www.google.com/rmkt/collect/18499593515/?random=1794766057258&cv=11&fst=1794766057258&fmt=8&bg=ffffff&guid=ON&async=1&en=add_to_cart&gtm=45be6bb1za200xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115616986~115938466~115938469~118897920~118897930~120385423~120412526~120420416~120469145~120469153~121191155~121246026~121246034~123988488&u_w=1366&u_h=768&url=http%3A%2F%2Flocalhost%3A3000%2Fproduto%2F5k7ajz8k7plq594&rcb=7&frm=0&tiba=Calcinha%20Cal%C3%A7ola%20Feminina%20Microfibra%20Confort%C3%A1vel%20com%20Compress%C3%A3o%20Abdominal%20C%C3%B3s%20M%C3%A9dio%20%7C%20Avante%20Lingerie%20Oficial&value=59.400000000000006&currency_code=BRL&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=314073967.1794765727&uaa=x86&uab=64&uafvl=Not-A.Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B157.0.8103.51%7CChromium%3B157.0.8103.51&uamb=0&uam=&uap=Windows&uapv=19.0.0&uaw=0&data=event%3Dadd_to_cart%3Bid%3D5k7ajz8k7plq594&ept=68&gcp=5
+- status: 0
+- durationMs: 1211
+
+## 2026-11-15 18:07:38.489Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 18:07:41.038Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:41.039Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:41.040Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:41.040Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:41.040Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:41.040Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:41.040Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:41.041Z console.warn
+- text: Please replace pb.files.getUrl() with pb.files.getURL()
+
+## 2026-11-15 18:07:43.668Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"COMPRAR AGORA"}
+
+## 2026-11-15 18:07:43.696Z navigate
+- url: http://localhost:3000/cart
+- via: pushState
+
+## 2026-11-15 18:07:44.309Z network.error
+- method: POST
+- url: http://localhost:3000/hcgi/platform/api/realtime
+- requestBody: {"clientId":"BXGxrcaNlwbteQvaaWKI5L5CJHYbihhboCskbvDC","subscriptions":["variacoes/*"]}
+- message: signal is aborted without reason
+- durationMs: 199
+
+## 2026-11-15 18:07:52.058Z network.error
+- method: POST
+- url: https://analytics.google.com/g/collect?v=2&tid=G-E2FS36FRG1&gtm=45je6bb1v9259987036za200xf1&_p=1794766000306&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEAAACQC&ae=a&cid=187626561.1794765740&frm=0&ibt=1&ngs=1&pscdl=noapi&rcb=2&sr=1366x768&uaa=x86&uab=64&uafvl=Not-A.Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B157.0.8103.51%7CChromium%3B157.0.8103.51&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=pt-pt&_s=6&tag_exp=115938466~115938468~118897920~118897930~120213116~120385422~120412528~120420414~120469145~120469153~121246026~121246034&dl=http%3A%2F%2Flocalhost%3A3000%2Fcart&dr=http%3A%2F%2Flocalhost%3A3000%2Fproduto%2F5k7ajz8k7plq594&sid=1794765740&sct=1&seg=1&dt=Meu%20Carrinho%20%7C%20Avante%20Lingerie&en=page_view&_et=7835&tfd=70734
+- status: 0
+- durationMs: 1919
+
+## 2026-11-15 18:07:52.058Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 18:08:02.900Z click
+- element: {"tag":"button","role":null,"ariaLabel":"Aumentar quantidade","name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-11-15 18:08:06.479Z click
+- element: {"tag":"main","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"HomeCarrinhoMeu CarrinhoFinalização 100% SeguraBoutique de Descontos ProgressivosLeve mais, pague menosTotal Parcial:R$ 69,30✨ Luxo Máximo! Você desbloqueou o desconto especial de 5% OFF!1.67% OFFR$ 10,003.33% OFFR$ 24,015% OFFR$ 40,01Benefício disponível: 5% OFF no PIX à vistaFinalize sua compra via Pix e garanta este desconto extra.Seus Itens (1)Calcinhas Cós Cintura Media Microfibra Calçola  Lingerie Feminina Confortável  Dia a DiaCor:RosêTam: GQuantidade7R$ 9,90 / unR$ 69,30Calcular Frete e PrazoOKResumo do PedidoEconomia de FábricaVocê economiza R$ 6,93 neste pedido por comprar direto de fábrica!Presente VIP Disponível! Escolha 1 App Oficial Grátis para o seu pedidoEscolher →SubtotalR$ 69,30Desconto Progressivo (5%)-R$ 3,47Benefício disponível: 5% OFF no PIX à vistaFinalize sua compra via Pix e garanta este desconto extraDesconto Máximo AtingidoVocê garantiu 5% OFF Progressivo em sua compraFreteCalculado abaixoTotal EstimadoR$ 65,84Economia de R$ 3,47Finalizar CompraQuero Preço de Atacado Falta R$ 0,60 para comprar direto de fábrica e economizar cerca de R$ 6,93!CONTINUAR COMPRANDOCompra SeguraTroca FacilitadaEnvio RápidoAproveite e leve junto-23%LingerieREF: AVL-SHO-0184Short Fitness Poliamida Meia Coxa com Cós Duplo Anatômico Anti-Enrolamento5.0(128 avaliações)R$ 51,96R$ 39,97em até 4x no cartão No Atacado de FábricaPedido mín. R$ 69,90 na sacolaR$ 35,97/unEconomize 10%PIX 5% OFFATÉ 5% PROGRESSIVO🏭 Fábrica: 1.668 despachadas📦Aceitamos encomendasADICIONAR À SACOLA-23%LingerieREF: AVL-LEG-CANCalça Legging Fitness Canelada em Poliamida Cós Anatômico Alta Elasticidade5.0(128 avaliações)+2R$ 97,37R$ 74,90em até 6x no cartão No Atacado de FábricaPedido mín. R$ 69,90 na sacolaR$ 69,90/unEconomize 7%PIX 5% OFFATÉ 5% PROGRESSIVO🏭 Fábrica: 1.890 despachadas📦Aceitamos encomendasADICIONAR À SACOLA-23%LingerieREF: AVL-LEG-0109Calça Legging Fitness Poliamida Cós Alto Sem Costura Chapa Barriga Zero Transparência5.0(128 avaliações)R$ 77,87R$ 59,90em até 6x no cartão No A..."}
+
+## 2026-11-15 18:08:55.233Z click
+- element: {"tag":"div","role":"dialog","ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Presente VIP da Fábrica LiberadoEspere! Você ganhou um Aplicativo VIPPara celebrar seu pedido, escolha 1 Aplicativo Oficial inteiramente GRÁTIS HOJE para acompanhar sua compra:★ RENDA EXTRA DIRETO DA FÁBRICAMáquina de Vendas ZapCalculadora de Preço Inteligente, Scripts Prontos de WhatsApp e Manual de Revenda.De R$ 97GRÁTIS HOJE★ RESULTADO REAL & SILHUETAMétodo Cintura EsculpidaRotina de 21 Dias, Calculadora de Hidratação ml/kg e Guia de Drenagem com Modeladores.De R$ 97GRÁTIS HOJE★ MAIS ESCOLHIDO PELAS CLIENTESO Espelho SecretoQuiz VIP de Diagnóstico de Busto & Silhueta, Calculadora de Sutiã ABNT e Caimento Perfeito.De R$ 67GRÁTIS HOJE OFERTA VIP IMPERDÍVELDe R$ 261,00 por apenas:Destravar o Combo Completo com os 3 Aplicativos VIP por +R$ 9,90Receba acesso imediato à Máquina de Vendas Zap + Método Cintura Esculpida + O Espelho Secreto. Economize mais de R$ 250!GARANTIR O ESPELHO SECRETO GRÁTISPrefiro abrir mão do presente e continuar sem brinde... Acesso liberado no final do pedido• Funciona em qualquer celular"}
+
+## 2026-11-15 18:08:57.243Z click
+- element: {"tag":"path","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-11-15 18:10:44.681Z click
+- element: {"tag":"div","role":"dialog","ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Presente VIP da Fábrica LiberadoEspere! Você ganhou um Aplicativo VIPPara celebrar seu pedido, escolha 1 Aplicativo Oficial inteiramente GRÁTIS HOJE para acompanhar sua compra:★ RENDA EXTRA DIRETO DA FÁBRICAMáquina de Vendas ZapCalculadora de Preço Inteligente, Scripts Prontos de WhatsApp e Manual de Revenda.De R$ 97GRÁTIS HOJE★ RESULTADO REAL & SILHUETAMétodo Cintura EsculpidaRotina de 21 Dias, Calculadora de Hidratação ml/kg e Guia de Drenagem com Modeladores.De R$ 97GRÁTIS HOJE★ MAIS ESCOLHIDO PELAS CLIENTESO Espelho SecretoQuiz VIP de Diagnóstico de Busto & Silhueta, Calculadora de Sutiã ABNT e Caimento Perfeito.De R$ 67GRÁTIS HOJE OFERTA VIP IMPERDÍVELDe R$ 261,00 por apenas:Destravar o Combo Completo com os 3 Aplicativos VIP por +R$ 9,90Receba acesso imediato à Máquina de Vendas Zap + Método Cintura Esculpida + O Espelho Secreto. Economize mais de R$ 250!GARANTIR MÁQUINA DE VENDAS ZAP GRÁTISPrefiro abrir mão do presente e continuar sem brinde... Acesso liberado no final do pedido• Funciona em qualquer celular"}
+
+## 2026-11-15 18:10:47.779Z click
+- element: {"tag":"div","role":"dialog","ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Presente VIP da Fábrica LiberadoEspere! Você ganhou um Aplicativo VIPPara celebrar seu pedido, escolha 1 Aplicativo Oficial inteiramente GRÁTIS HOJE para acompanhar sua compra:★ RENDA EXTRA DIRETO DA FÁBRICAMáquina de Vendas ZapCalculadora de Preço Inteligente, Scripts Prontos de WhatsApp e Manual de Revenda.De R$ 97GRÁTIS HOJE★ RESULTADO REAL & SILHUETAMétodo Cintura EsculpidaRotina de 21 Dias, Calculadora de Hidratação ml/kg e Guia de Drenagem com Modeladores.De R$ 97GRÁTIS HOJE★ MAIS ESCOLHIDO PELAS CLIENTESO Espelho SecretoQuiz VIP de Diagnóstico de Busto & Silhueta, Calculadora de Sutiã ABNT e Caimento Perfeito.De R$ 67GRÁTIS HOJE OFERTA VIP IMPERDÍVELDe R$ 261,00 por apenas:Destravar o Combo Completo com os 3 Aplicativos VIP por +R$ 9,90Receba acesso imediato à Máquina de Vendas Zap + Método Cintura Esculpida + O Espelho Secreto. Economize mais de R$ 250!GARANTIR MÉTODO CINTURA ESCULPIDA GRÁTISPrefiro abrir mão do presente e continuar sem brinde... Acesso liberado no final do pedido• Funciona em qualquer celular"}
+
+## 2026-11-15 18:14:56.308Z click
+- element: {"tag":"div","role":"dialog","ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Presente VIP da Fábrica LiberadoEspere! Você ganhou um Aplicativo VIPPara celebrar seu pedido, escolha 1 Aplicativo Oficial inteiramente GRÁTIS HOJE para acompanhar sua compra:★ RENDA EXTRA DIRETO DA FÁBRICAMáquina de Vendas ZapCalculadora de Preço Inteligente, Scripts Prontos de WhatsApp e Manual de Revenda.De R$ 97GRÁTIS HOJE★ RESULTADO REAL & SILHUETAMétodo Cintura EsculpidaRotina de 21 Dias, Calculadora de Hidratação ml/kg e Guia de Drenagem com Modeladores.De R$ 97GRÁTIS HOJE★ MAIS ESCOLHIDO PELAS CLIENTESO Espelho SecretoQuiz VIP de Diagnóstico de Busto & Silhueta, Calculadora de Sutiã ABNT e Caimento Perfeito.De R$ 67GRÁTIS HOJE OFERTA VIP IMPERDÍVELDe R$ 261,00 por apenas:Destravar o Combo Completo com os 3 Aplicativos VIP por +R$ 9,90Receba acesso imediato à Máquina de Vendas Zap + Método Cintura Esculpida + O Espelho Secreto. Economize mais de R$ 250!GARANTIR OS 3 APLICATIVOS VIP (+R$ 9,90)Prefiro abrir mão do presente e continuar sem brinde... Acesso liberado no final do pedido• Funciona em qualquer celular"}
+
+## 2026-11-15 18:17:13.032Z click
+- element: {"tag":"div","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Presente VIP da Fábrica LiberadoEspere! Você ganhou um Aplicativo VIPPara celebrar seu pedido, escolha 1 Aplicativo Oficial inteiramente GRÁTIS HOJE para acompanhar sua compra:★ RENDA EXTRA DIRETO DA FÁBRICAMáquina de Vendas ZapCalculadora de Preço Inteligente, Scripts Prontos de WhatsApp e Manual de Revenda.De R$ 97GRÁTIS HOJE★ RESULTADO REAL & SILHUETAMétodo Cintura EsculpidaRotina de 21 Dias, Calculadora de Hidratação ml/kg e Guia de Drenagem com Modeladores.De R$ 97GRÁTIS HOJE★ MAIS ESCOLHIDO PELAS CLIENTESO Espelho SecretoQuiz VIP de Diagnóstico de Busto & Silhueta, Calculadora de Sutiã ABNT e Caimento Perfeito.De R$ 67GRÁTIS HOJE OFERTA VIP IMPERDÍVELDe R$ 261,00 por apenas:Destravar o Combo Completo com os 3 Aplicativos VIP por +R$ 9,90Receba acesso imediato à Máquina de Vendas Zap + Método Cintura Esculpida + O Espelho Secreto. Economize mais de R$ 250!GARANTIR OS 3 APLICATIVOS VIP (+R$ 9,90)Prefiro abrir mão do presente e continuar sem brinde... Acesso liberado no final do pedido• Funciona em qualquer celular"}
+
+## 2026-11-15 18:18:59.677Z click
+- element: {"tag":"div","role":"dialog","ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Presente VIP da Fábrica LiberadoEspere! Você ganhou um Aplicativo VIPPara celebrar seu pedido, escolha 1 Aplicativo Oficial inteiramente GRÁTIS HOJE para acompanhar sua compra:★ RENDA EXTRA DIRETO DA FÁBRICAMáquina de Vendas ZapCalculadora de Preço Inteligente, Scripts Prontos de WhatsApp e Manual de Revenda.De R$ 97GRÁTIS HOJE★ RESULTADO REAL & SILHUETAMétodo Cintura EsculpidaRotina de 21 Dias, Calculadora de Hidratação ml/kg e Guia de Drenagem com Modeladores.De R$ 97GRÁTIS HOJE★ MAIS ESCOLHIDO PELAS CLIENTESO Espelho SecretoQuiz VIP de Diagnóstico de Busto & Silhueta, Calculadora de Sutiã ABNT e Caimento Perfeito.De R$ 67GRÁTIS HOJE OFERTA VIP IMPERDÍVELDe R$ 261,00 por apenas:Destravar o Combo Completo com os 3 Aplicativos VIP por +R$ 9,90Receba acesso imediato à Máquina de Vendas Zap + Método Cintura Esculpida + O Espelho Secreto. Economize mais de R$ 250!GARANTIR OS 3 APLICATIVOS VIP (+R$ 9,90)Prefiro abrir mão do presente e continuar sem brinde... Acesso liberado no final do pedido• Funciona em qualquer celular"}
+
+## 2026-11-15 18:24:58.149Z click
+- element: {"tag":"div","role":"dialog","ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Presente VIP da Fábrica LiberadoEspere! Você ganhou um Aplicativo VIPPara celebrar seu pedido, escolha 1 Aplicativo Oficial inteiramente GRÁTIS HOJE para acompanhar sua compra:★ RENDA EXTRA DIRETO DA FÁBRICAMáquina de Vendas ZapCalculadora de Preço Inteligente, Scripts Prontos de WhatsApp e Manual de Revenda.De R$ 97GRÁTIS HOJE★ RESULTADO REAL & SILHUETAMétodo Cintura EsculpidaRotina de 21 Dias, Calculadora de Hidratação ml/kg e Guia de Drenagem com Modeladores.De R$ 97GRÁTIS HOJE★ MAIS ESCOLHIDO PELAS CLIENTESO Espelho SecretoQuiz VIP de Diagnóstico de Busto & Silhueta, Calculadora de Sutiã ABNT e Caimento Perfeito.De R$ 67GRÁTIS HOJE OFERTA VIP IMPERDÍVELDe R$ 261,00 por apenas:Destravar o Combo Completo com os 3 Aplicativos VIP por +R$ 9,90Receba acesso imediato à Máquina de Vendas Zap + Método Cintura Esculpida + O Espelho Secreto. Economize mais de R$ 250!GARANTIR OS 3 APLICATIVOS VIP (+R$ 9,90)Prefiro abrir mão do presente e continuar sem brinde... Acesso liberado no final do pedido• Funciona em qualquer celular"}
+
+## 2026-11-15 18:25:04.685Z click
+- element: {"tag":"div","role":"dialog","ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Presente VIP da Fábrica LiberadoEspere! Você ganhou um Aplicativo VIPPara celebrar seu pedido, escolha 1 Aplicativo Oficial inteiramente GRÁTIS HOJE para acompanhar sua compra:★ RENDA EXTRA DIRETO DA FÁBRICAMáquina de Vendas ZapCalculadora de Preço Inteligente, Scripts Prontos de WhatsApp e Manual de Revenda.De R$ 97GRÁTIS HOJE★ RESULTADO REAL & SILHUETAMétodo Cintura EsculpidaRotina de 21 Dias, Calculadora de Hidratação ml/kg e Guia de Drenagem com Modeladores.De R$ 97GRÁTIS HOJE★ MAIS ESCOLHIDO PELAS CLIENTESO Espelho SecretoQuiz VIP de Diagnóstico de Busto & Silhueta, Calculadora de Sutiã ABNT e Caimento Perfeito.De R$ 67GRÁTIS HOJE OFERTA VIP IMPERDÍVELDe R$ 261,00 por apenas:Destravar o Combo Completo com os 3 Aplicativos VIP por +R$ 9,90Receba acesso imediato à Máquina de Vendas Zap + Método Cintura Esculpida + O Espelho Secreto. Economize mais de R$ 250!GARANTIR OS 3 APLICATIVOS VIP (+R$ 9,90)Prefiro abrir mão do presente e continuar sem brinde... Acesso liberado no final do pedido• Funciona em qualquer celular"}
+
+## 2026-11-15 18:25:09.138Z click
+- element: {"tag":"div","role":"dialog","ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Presente VIP da Fábrica LiberadoEspere! Você ganhou um Aplicativo VIPPara celebrar seu pedido, escolha 1 Aplicativo Oficial inteiramente GRÁTIS HOJE para acompanhar sua compra:★ RENDA EXTRA DIRETO DA FÁBRICAMáquina de Vendas ZapCalculadora de Preço Inteligente, Scripts Prontos de WhatsApp e Manual de Revenda.De R$ 97GRÁTIS HOJE★ RESULTADO REAL & SILHUETAMétodo Cintura EsculpidaRotina de 21 Dias, Calculadora de Hidratação ml/kg e Guia de Drenagem com Modeladores.De R$ 97GRÁTIS HOJE★ MAIS ESCOLHIDO PELAS CLIENTESO Espelho SecretoQuiz VIP de Diagnóstico de Busto & Silhueta, Calculadora de Sutiã ABNT e Caimento Perfeito.De R$ 67GRÁTIS HOJE OFERTA VIP IMPERDÍVELDe R$ 261,00 por apenas:Destravar o Combo Completo com os 3 Aplicativos VIP por +R$ 9,90Receba acesso imediato à Máquina de Vendas Zap + Método Cintura Esculpida + O Espelho Secreto. Economize mais de R$ 250!GARANTIR MÁQUINA DE VENDAS ZAP GRÁTISPrefiro abrir mão do presente e continuar sem brinde... Acesso liberado no final do pedido• Funciona em qualquer celular"}
+
+## 2026-11-15 18:25:10.601Z click
+- element: {"tag":"div","role":"dialog","ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Presente VIP da Fábrica LiberadoEspere! Você ganhou um Aplicativo VIPPara celebrar seu pedido, escolha 1 Aplicativo Oficial inteiramente GRÁTIS HOJE para acompanhar sua compra:★ RENDA EXTRA DIRETO DA FÁBRICAMáquina de Vendas ZapCalculadora de Preço Inteligente, Scripts Prontos de WhatsApp e Manual de Revenda.De R$ 97GRÁTIS HOJE★ RESULTADO REAL & SILHUETAMétodo Cintura EsculpidaRotina de 21 Dias, Calculadora de Hidratação ml/kg e Guia de Drenagem com Modeladores.De R$ 97GRÁTIS HOJE★ MAIS ESCOLHIDO PELAS CLIENTESO Espelho SecretoQuiz VIP de Diagnóstico de Busto & Silhueta, Calculadora de Sutiã ABNT e Caimento Perfeito.De R$ 67GRÁTIS HOJE OFERTA VIP IMPERDÍVELDe R$ 261,00 por apenas:Destravar o Combo Completo com os 3 Aplicativos VIP por +R$ 9,90Receba acesso imediato à Máquina de Vendas Zap + Método Cintura Esculpida + O Espelho Secreto. Economize mais de R$ 250!GARANTIR MÉTODO CINTURA ESCULPIDA GRÁTISPrefiro abrir mão do presente e continuar sem brinde... Acesso liberado no final do pedido• Funciona em qualquer celular"}
+
+## 2026-11-15 18:25:12.215Z click
+- element: {"tag":"div","role":"dialog","ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Presente VIP da Fábrica LiberadoEspere! Você ganhou um Aplicativo VIPPara celebrar seu pedido, escolha 1 Aplicativo Oficial inteiramente GRÁTIS HOJE para acompanhar sua compra:★ RENDA EXTRA DIRETO DA FÁBRICAMáquina de Vendas ZapCalculadora de Preço Inteligente, Scripts Prontos de WhatsApp e Manual de Revenda.De R$ 97GRÁTIS HOJE★ RESULTADO REAL & SILHUETAMétodo Cintura EsculpidaRotina de 21 Dias, Calculadora de Hidratação ml/kg e Guia de Drenagem com Modeladores.De R$ 97GRÁTIS HOJE★ MAIS ESCOLHIDO PELAS CLIENTESO Espelho SecretoQuiz VIP de Diagnóstico de Busto & Silhueta, Calculadora de Sutiã ABNT e Caimento Perfeito.De R$ 67GRÁTIS HOJE OFERTA VIP IMPERDÍVELDe R$ 261,00 por apenas:Destravar o Combo Completo com os 3 Aplicativos VIP por +R$ 9,90Receba acesso imediato à Máquina de Vendas Zap + Método Cintura Esculpida + O Espelho Secreto. Economize mais de R$ 250!GARANTIR O ESPELHO SECRETO GRÁTISPrefiro abrir mão do presente e continuar sem brinde... Acesso liberado no final do pedido• Funciona em qualquer celular"}
+
