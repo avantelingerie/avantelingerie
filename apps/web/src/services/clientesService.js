@@ -265,20 +265,75 @@ export const clientesService = {
         status: 'aprovado'
       }, { $autoCancel: false });
 
+      // Resolve targetUserId robustamente (string, objeto, ou na própria solicitação)
+      let targetUserId = (typeof userId === 'string' && userId.trim()) 
+        ? userId.trim() 
+        : (userId?.id || solicitacao.user_id || solicitacao.expand?.user_id?.id || null);
+
       let user = null;
-      if (userId) {
-        user = await pb.collection('users').update(userId, {
-          tipo_cliente: 'revendedor',
-          commercial_profile: 'reseller',
-          cadastro_completo: true,
-          account_level: 'verified'
-        }, { $autoCancel: false });
+      if (targetUserId) {
+        try {
+          user = await pb.collection('users').update(targetUserId, {
+            tipo_cliente: 'revendedor',
+            commercial_profile: 'reseller',
+            cadastro_completo: true,
+            account_level: 'verified'
+          }, { $autoCancel: false });
+        } catch (errUser) {
+          console.warn('[clientesService] Falha ao atualizar user por targetUserId:', errUser);
+        }
       }
 
-      // 2. Extrair dados para a notificação de onboarding VIP
+      // Se não atualizou por targetUserId, busca contingência por e-mail, telefone ou CPF
+      if (!user) {
+        const emailSearch = solicitacao.email || solicitacao.expand?.user_id?.email;
+        const phoneDigits = (solicitacao.whatsapp || solicitacao.telefone || '').replace(/\D/g, '');
+        const cpfDigits = (solicitacao.cpf_cnpj || solicitacao.cpf || '').replace(/\D/g, '');
+
+        try {
+          const filterQueries = [];
+          if (emailSearch && emailSearch.includes('@')) {
+            filterQueries.push(`email = "${emailSearch.trim().toLowerCase()}"`);
+          }
+          if (phoneDigits && phoneDigits.length >= 10) {
+            filterQueries.push(`whatsapp ~ "${phoneDigits.slice(-8)}" || telefone ~ "${phoneDigits.slice(-8)}"`);
+          }
+          if (cpfDigits && cpfDigits.length >= 11) {
+            filterQueries.push(`cpf ~ "${cpfDigits}"`);
+          }
+
+          if (filterQueries.length > 0) {
+            const foundUsers = await pb.collection('users').getList(1, 1, {
+              filter: filterQueries.join(' || '),
+              $autoCancel: false
+            });
+            if (foundUsers.items.length > 0) {
+              const matchedUser = foundUsers.items[0];
+              targetUserId = matchedUser.id;
+              user = await pb.collection('users').update(matchedUser.id, {
+                tipo_cliente: 'revendedor',
+                commercial_profile: 'reseller',
+                cadastro_completo: true,
+                account_level: 'verified'
+              }, { $autoCancel: false });
+
+              // Vincula o user_id à solicitação se estava desvinculado
+              if (!solicitacao.user_id) {
+                await pb.collection('solicitacoes_revendedor').update(solicitacaoId, {
+                  user_id: matchedUser.id
+                }, { $autoCancel: false }).catch(() => {});
+              }
+            }
+          }
+        } catch (searchErr) {
+          console.warn('[clientesService] Busca de contingência de usuário falhou:', searchErr);
+        }
+      }
+
+      // 2. Extrair dados para a notificação de onboarding VIP (priorizando onde houver informação)
       const targetName = user?.name || user?.nome || solicitacao?.nome || 'Revendedora';
-      const targetEmail = user?.email || solicitacao?.email || '';
-      const targetPhone = user?.whatsapp || solicitacao?.whatsapp || solicitacao?.telefone || '';
+      const targetEmail = user?.email || solicitacao?.email || solicitacao?.expand?.user_id?.email || '';
+      const targetPhone = user?.whatsapp || user?.telefone || solicitacao?.whatsapp || solicitacao?.telefone || solicitacao?.expand?.user_id?.whatsapp || '';
 
       // 3. Disparar notificação automática (Resend E-mail + Lia WhatsApp) via backend
       let notification = null;
@@ -291,7 +346,7 @@ export const clientesService = {
             email: targetEmail,
             whatsapp: targetPhone,
             solicitacaoId,
-            userId
+            userId: targetUserId
           })
         });
 

@@ -115,7 +115,7 @@ export default function SolicitacoesRevendedorTable({ solicitacoes, isLoading, o
                     size="sm"
                     className="bg-green-600 hover:bg-green-700 text-white font-medium shadow-sm transition-all"
                     disabled={approvingId === solicitacao.id}
-                    onClick={() => onAprovar(solicitacao.id, solicitacao.user_id)}
+                    onClick={() => onAprovar(solicitacao.id, (typeof solicitacao.user_id === 'string' ? solicitacao.user_id : solicitacao.expand?.user_id?.id) || solicitacao.user_id)}
                   >
                     {approvingId === solicitacao.id ? (
                       <>
