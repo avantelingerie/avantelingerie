@@ -231,7 +231,8 @@ router.post('/create-order', async (req, res) => {
       observacoes: [
         isAtacadoOrder ? '[🏷️ PEDIDO ATACADO DIRETO DA FÁBRICA - MÍNIMO R$ 69,90 ATENDIDO]' : '',
         (cart || []).some(item => Boolean(item.is_encomenda)) ? '[🧵 PEDIDO SOB ENCOMENDA - CONFECÇÃO: 5 DIAS ÚTEIS]' : '',
-        cupomDesconto ? `[CUPOM: ${cupomDesconto} - DESCONTO R$ ${Number(verifiedDiscount).toFixed(2)}]` : ''
+        cupomDesconto ? `[CUPOM: ${cupomDesconto} - DESCONTO R$ ${Number(verifiedDiscount).toFixed(2)}]` : '',
+        req.body.brinde_vip ? `[🎁 BRINDE VIP: ${req.body.brinde_vip}]` : ''
       ].filter(Boolean).join(' | '),
       metodo_pagamento: paymentMethod === 'credit_card' ? 'credito' : (paymentMethod === 'pix' ? 'pix' : 'boleto'),
       

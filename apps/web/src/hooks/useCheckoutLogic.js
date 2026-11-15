@@ -546,6 +546,15 @@ export function useCheckoutLogic() {
 
     setIsSubmitting(true);
 
+    const savedGift = (() => {
+      try {
+        const raw = localStorage.getItem('avante_brinde_escolhido');
+        return raw ? JSON.parse(raw) : null;
+      } catch (e) {
+        return null;
+      }
+    })();
+
     const backendPayload = {
       personalInfo,
       billingAddress,
@@ -558,6 +567,7 @@ export function useCheckoutLogic() {
       finalDiscountAmount,
       finalTotal,
       cupom_desconto: appliedCoupon ? appliedCoupon.code : null,
+      brinde_vip: savedGift ? (savedGift.is_combo ? 'Combo 3 Apps VIP (+R$ 9,90)' : savedGift.name) : null,
       tipo_pedido: isReseller ? 'atacado' : 'varejo',
       cart: cart.map(item => ({
         id: item.id,

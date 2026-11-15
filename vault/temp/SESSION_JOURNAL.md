@@ -1,4471 +1,6 @@
 # SESSION_JOURNAL.md (rotated - earlier entries trimmed)
 
-3 16:53:09.961Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 16:53:09.961Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 16:53:12.415Z click
-- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Novo Produto"}
-
-## 2026-09-23 16:53:12.416Z navigate
-- url: http://localhost:3000/admin/produtos/novo
-- via: pushState
-
-## 2026-09-23 16:53:20.150Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Ex: Conjunto Rendado Paris","label":"Ex: Conjunto Rendado Paris","value":"","valueLength":0,"text":""}
-
-## 2026-09-23 16:53:20.376Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Ex: Conjunto Rendado Paris","label":"Ex: Conjunto Rendado Paris","value":"","valueLength":0,"text":""}
-
-## 2026-09-23 16:53:36.576Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Ex: Conjunto Rendado Paris","label":"Ex: Conjunto Rendado Paris","value":"Pijama Short Doll Sueder","valueLength":24,"text":""}
-
-## 2026-09-23 16:53:36.576Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Ex: Conjunto Rendado Paris","label":"Ex: Conjunto Rendado Paris","value":"Pijama Short Doll Sueder","valueLength":24,"text":""}
-
-## 2026-09-23 16:53:36.577Z focus
-- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"","valueLength":0,"text":"Selecionar Categoria...BodyCalcinhaCamisolaCinta ModeladoraConjuntoCroppedPijamaPlus Size"}
-
-## 2026-09-23 16:53:36.797Z click
-- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"","valueLength":0,"text":"Selecionar Categoria...BodyCalcinhaCamisolaCinta ModeladoraConjuntoCroppedPijamaPlus Size"}
-
-## 2026-09-23 16:53:39.815Z change
-- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"z7i4vmn1n7io1np","valueLength":15,"text":"Selecionar Categoria...BodyCalcinhaCamisolaCinta ModeladoraConjuntoCroppedPijamaPlus Size"}
-
-## 2026-09-23 16:53:39.827Z click
-- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"z7i4vmn1n7io1np","valueLength":15,"text":"Selecionar Categoria...BodyCalcinhaCamisolaCinta ModeladoraConjuntoCroppedPijamaPlus Size"}
-
-## 2026-09-23 16:53:41.660Z blur
-- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"z7i4vmn1n7io1np","valueLength":15,"text":"Selecionar Categoria...BodyCalcinhaCamisolaCinta ModeladoraConjuntoCroppedPijamaPlus Size"}
-
-## 2026-09-23 16:53:41.880Z click
-- element: {"tag":"main","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Novo Produto Cancelar SalvarInformações BásicasNome do Produto * (Título exibido na loja) Google SEO & IATítulo SEOMáx 60 caracteresMeta DescriptionMáx 160 caracteres Gerar Textos e SEO Automaticamente com IACategoria *Selecionar Categoria...BodyCalcinhaCamisolaCinta ModeladoraConjuntoCroppedPijamaPlus SizeReferência / Código Interno * Gerar AutomáticoColeções Especiais (Opcional)Dia do NamoradoModa FitnessModa SexyComplete o Look (Cross-sell)Nenhum (Venda isolada)Cropped Regata Canelada Gola Alta - AVL-CRO-1158Pijama Feminino Longo Suede Light Conjunto Blusa Calça Macio Confortável Inverno Aveludado Confortável Dia a Dia M G GG - AVL-PIJ-8689Selecione uma peça que combina perfeitamente para incentivar a compra do conjunto (Ex: calcinha para combinar com este sutiã).Status de ExibiçãoDeixe inativo para esconder o produto na loja.Destaques e Vitrines na HomeLançamentos RecentesOfertas ExclusivasMais Vendidos da AvanteDestaques de OuroPreço e LogísticaPreço de Venda Varejo (R$) *Preço de Atacado B2B (R$)Peso (g)Altura (cm)Largura (cm)Profundidade (cm)Variações do ProdutoInforme os atributos e valores padrões abaixo para gerar todas as variações.Estoque Total: 0 unTamanhos (ex: P, M, G, GG)Cores (ex: Preto, Romance, Chocolate)Estoque PadrãoPreço Varejo Padrão (R$)Preço Atacado Padrão (R$)Gerar VariaçõesCorTamanhoSKUImagem / FotoEstoquePreço Varejo (R$)Preço Atacado (R$)StatusAçõesNenhuma variação adicionada ainda. Digite tamanhos e cores na linha acima para gerar a lista!Descrições Detalhadas em AbasPreenchidas via IA na seção Informações Básicas acimaGeralTecidoModelagemCuidadosDiferenciaisCompra SeguraDescrição GeralMídias e Fotos Adicionar Fotos/VídeosNenhuma imagem adicionada.Vídeo Externo (YouTube/Vimeo/MP4)Para evitar lentidão e travamentos, cole o link do seu vídeo hospedado externamente.Exibir no FinalExibir como Primeira"}
-
-## 2026-09-23 17:02:47.960Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Ex: Conjunto Rendado Paris","label":"Ex: Conjunto Rendado Paris","value":"Pijama Short Doll Sueder","valueLength":24,"text":""}
-
-## 2026-09-23 17:02:48.417Z click
-- element: {"tag":"main","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Novo Produto Cancelar SalvarInformações BásicasNome do Produto * (Título exibido na loja) Google SEO & IATítulo SEOMáx 60 caracteresMeta DescriptionMáx 160 caracteres Gerar Textos e SEO Automaticamente com IACategoria *Selecionar Categoria...BodyCalcinhaCamisolaCinta ModeladoraConjuntoCroppedPijamaPlus SizeNCM (Fiscal)❓ AutomáticoReferência / Código Interno * Gerar AutomáticoColeções Especiais (Opcional)Dia do NamoradoModa FitnessModa SexyComplete o Look (Cross-sell)Nenhum (Venda isolada)Cropped Regata Canelada Gola Alta - AVL-CRO-1158Pijama Feminino Longo Suede Light Conjunto Blusa Calça Macio Confortável Inverno Aveludado Confortável Dia a Dia M G GG - AVL-PIJ-8689Selecione uma peça que combina perfeitamente para incentivar a compra do conjunto (Ex: calcinha para combinar com este sutiã).Status de ExibiçãoDeixe inativo para esconder o produto na loja.Destaques e Vitrines na HomeLançamentos RecentesOfertas ExclusivasMais Vendidos da AvanteDestaques de OuroPreço e LogísticaPreço de Venda Varejo (R$) *Preço de Atacado B2B (R$)Peso (g)Altura (cm)Largura (cm)Profundidade (cm)Variações do ProdutoInforme os atributos e valores padrões abaixo para gerar todas as variações.Estoque Total: 0 unTamanhos (ex: P, M, G, GG)Cores (ex: Preto, Romance, Chocolate)Estoque PadrãoPreço Varejo Padrão (R$)Preço Atacado Padrão (R$)Gerar VariaçõesCorTamanhoSKUImagem / FotoEstoquePreço Varejo (R$)Preço Atacado (R$)StatusAçõesNenhuma variação adicionada ainda. Digite tamanhos e cores na linha acima para gerar a lista!Descrições Detalhadas em AbasPreenchidas via IA na seção Informações Básicas acimaGeralTecidoModelagemCuidadosDiferenciaisCompra SeguraDescrição GeralMídias e Fotos Adicionar Fotos/VídeosNenhuma imagem adicionada.Vídeo Externo (YouTube/Vimeo/MP4)Para evitar lentidão e travamentos, cole o link do seu vídeo hospedado externamente.Exibir no FinalExibir como Primeira"}
-
-## 2026-09-23 17:02:52.673Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Ex: Conjunto Rendado Paris","label":"Ex: Conjunto Rendado Paris","value":"","valueLength":0,"text":""}
-
-## 2026-09-23 17:02:52.891Z click
-- element: {"tag":"header","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"☀️Ver Loja"}
-
-## 2026-09-23 17:02:55.324Z click
-- element: {"tag":"header","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"☀️Ver Loja"}
-
-## 2026-09-23 17:02:59.402Z click
-- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Cancelar"}
-
-## 2026-09-23 17:02:59.424Z navigate
-- url: http://localhost:3000/admin/produtos
-- via: pushState
-
-## 2026-09-23 17:02:59.728Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 17:02:59.730Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 17:02:59.733Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 17:02:59.733Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 17:03:02.381Z load
-- url: http://localhost:3000/admin/produtos
-- title: Avante Lingerie | Oficial
-
-## 2026-09-23 17:03:03.877Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 17:03:03.888Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 17:03:03.890Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 17:03:03.891Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 17:03:07.340Z click
-- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Novo Produto"}
-
-## 2026-09-23 17:03:07.341Z navigate
-- url: http://localhost:3000/admin/produtos/novo
-- via: pushState
-
-## 2026-09-23 17:03:12.763Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Ex: Conjunto Rendado Paris","label":"Ex: Conjunto Rendado Paris","value":"","valueLength":0,"text":""}
-
-## 2026-09-23 17:03:12.984Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Ex: Conjunto Rendado Paris","label":"Ex: Conjunto Rendado Paris","value":"","valueLength":0,"text":""}
-
-## 2026-09-23 17:03:18.237Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Ex: Conjunto Rendado Paris","label":"Ex: Conjunto Rendado Paris","value":"Pijama","valueLength":6,"text":""}
-
-## 2026-09-23 17:03:18.238Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Ex: Conjunto Rendado Paris","label":"Ex: Conjunto Rendado Paris","value":"Pijama","valueLength":6,"text":""}
-
-## 2026-09-23 17:03:18.239Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Gerado automaticamente pela IA...","label":"Gerado automaticamente pela IA...","value":"","valueLength":0,"text":""}
-
-## 2026-09-23 17:03:21.199Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Ex: Conjunto Rendado Paris","label":"Ex: Conjunto Rendado Paris","value":"Pijama","valueLength":6,"text":""}
-
-## 2026-09-23 17:03:21.420Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Ex: Conjunto Rendado Paris","label":"Ex: Conjunto Rendado Paris","value":"Pijama","valueLength":6,"text":""}
-
-## 2026-09-23 17:03:29.932Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Ex: Conjunto Rendado Paris","label":"Ex: Conjunto Rendado Paris","value":"Pijama Shot Doll","valueLength":16,"text":""}
-
-## 2026-09-23 17:03:29.932Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Ex: Conjunto Rendado Paris","label":"Ex: Conjunto Rendado Paris","value":"Pijama Shot Doll","valueLength":16,"text":""}
-
-## 2026-09-23 17:03:29.933Z focus
-- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"","valueLength":0,"text":"Selecionar Categoria...BodyCalcinhaCamisolaCinta ModeladoraConjuntoCroppedPijamaPlus Size"}
-
-## 2026-09-23 17:03:30.152Z click
-- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"","valueLength":0,"text":"Selecionar Categoria...BodyCalcinhaCamisolaCinta ModeladoraConjuntoCroppedPijamaPlus Size"}
-
-## 2026-09-23 17:03:32.552Z change
-- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"z7i4vmn1n7io1np","valueLength":15,"text":"Selecionar Categoria...BodyCalcinhaCamisolaCinta ModeladoraConjuntoCroppedPijamaPlus Size"}
-
-## 2026-09-23 17:03:32.563Z click
-- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"z7i4vmn1n7io1np","valueLength":15,"text":"Selecionar Categoria...BodyCalcinhaCamisolaCinta ModeladoraConjuntoCroppedPijamaPlus Size"}
-
-## 2026-09-23 17:03:37.283Z blur
-- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"z7i4vmn1n7io1np","valueLength":15,"text":"Selecionar Categoria...BodyCalcinhaCamisolaCinta ModeladoraConjuntoCroppedPijamaPlus Size"}
-
-## 2026-09-23 17:03:37.501Z click
-- element: {"tag":"label","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"NCM (Fiscal)❓ Automático"}
-
-## 2026-09-23 17:03:39.213Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Ex: Conjunto Rendado Paris","label":"Ex: Conjunto Rendado Paris","value":"Pijama Shot Doll","valueLength":16,"text":""}
-
-## 2026-09-23 17:03:39.439Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Ex: Conjunto Rendado Paris","label":"Ex: Conjunto Rendado Paris","value":"Pijama Shot Doll","valueLength":16,"text":""}
-
-## 2026-09-23 17:03:42.902Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Ex: Conjunto Rendado Paris","label":"Ex: Conjunto Rendado Paris","value":"Pijama Shot Doll Sueder","valueLength":23,"text":""}
-
-## 2026-09-23 17:03:42.903Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Ex: Conjunto Rendado Paris","label":"Ex: Conjunto Rendado Paris","value":"Pijama Shot Doll Sueder","valueLength":23,"text":""}
-
-## 2026-09-23 17:03:42.907Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Gerado automaticamente pela IA...","label":"Gerado automaticamente pela IA...","value":"","valueLength":0,"text":""}
-
-## 2026-09-23 17:03:47.800Z click
-- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Gerar Automático"}
-
-## 2026-09-23 17:03:50.548Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Ex: 6208.21.00","label":"Ex: 6208.21.00","value":"","valueLength":0,"text":""}
-
-## 2026-09-23 17:03:50.747Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Ex: 6208.21.00","label":"Ex: 6208.21.00","value":"","valueLength":0,"text":""}
-
-## 2026-09-23 17:03:52.511Z click
-- element: {"tag":"label","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"NCM (Fiscal)❓ Automático"}
-
-## 2026-09-23 17:03:54.881Z click
-- element: {"tag":"label","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Coleções Especiais (Opcional)"}
-
-## 2026-09-23 17:04:06.222Z click
-- element: {"tag":"label","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"NCM (Fiscal)❓ Automático"}
-
-## 2026-09-23 17:09:45.427Z click
-- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Gerar Textos e SEO Automaticamente com IA"}
-
-## 2026-09-23 17:09:45.590Z focus
-- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"conforto","valueLength":8,"text":"Básico / EssencialConforto / Dia a DiaSensual / OusadoRomântico / DelicadoLuxo / SofisticadoFitness / EsportivoPijama / LoungewearCropped / OutwearModelador / CintaMaternidade / GestantePlus Size / CurvyPraia / Resort"}
-
-## 2026-09-23 17:09:48.673Z click
-- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"conforto","valueLength":8,"text":"Básico / EssencialConforto / Dia a DiaSensual / OusadoRomântico / DelicadoLuxo / SofisticadoFitness / EsportivoPijama / LoungewearCropped / OutwearModelador / CintaMaternidade / GestantePlus Size / CurvyPraia / Resort"}
-
-## 2026-09-23 17:10:14.164Z change
-- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"pijama","valueLength":6,"text":"Básico / EssencialConforto / Dia a DiaSensual / OusadoRomântico / DelicadoLuxo / SofisticadoFitness / EsportivoPijama / LoungewearCropped / OutwearModelador / CintaMaternidade / GestantePlus Size / CurvyPraia / Resort"}
-
-## 2026-09-23 17:10:14.189Z click
-- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"pijama","valueLength":6,"text":"Básico / EssencialConforto / Dia a DiaSensual / OusadoRomântico / DelicadoLuxo / SofisticadoFitness / EsportivoPijama / LoungewearCropped / OutwearModelador / CintaMaternidade / GestantePlus Size / CurvyPraia / Resort"}
-
-## 2026-09-23 17:10:15.372Z blur
-- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"pijama","valueLength":6,"text":"Básico / EssencialConforto / Dia a DiaSensual / OusadoRomântico / DelicadoLuxo / SofisticadoFitness / EsportivoPijama / LoungewearCropped / OutwearModelador / CintaMaternidade / GestantePlus Size / CurvyPraia / Resort"}
-
-## 2026-09-23 17:10:15.373Z focus
-- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"microfibra","valueLength":10,"text":"MicrofibraRendaAlgodãoSuede / SuedineTuleCetimVeludoLiganeteViscolycraPoliamidaFluity (Toque de Seda)Modal"}
-
-## 2026-09-23 17:10:15.587Z click
-- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"microfibra","valueLength":10,"text":"MicrofibraRendaAlgodãoSuede / SuedineTuleCetimVeludoLiganeteViscolycraPoliamidaFluity (Toque de Seda)Modal"}
-
-## 2026-09-23 17:10:19.146Z change
-- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"suede","valueLength":5,"text":"MicrofibraRendaAlgodãoSuede / SuedineTuleCetimVeludoLiganeteViscolycraPoliamidaFluity (Toque de Seda)Modal"}
-
-## 2026-09-23 17:10:19.166Z click
-- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"suede","valueLength":5,"text":"MicrofibraRendaAlgodãoSuede / SuedineTuleCetimVeludoLiganeteViscolycraPoliamidaFluity (Toque de Seda)Modal"}
-
-## 2026-09-23 17:10:27.757Z blur
-- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"suede","valueLength":5,"text":"MicrofibraRendaAlgodãoSuede / SuedineTuleCetimVeludoLiganeteViscolycraPoliamidaFluity (Toque de Seda)Modal"}
-
-## 2026-09-23 17:10:27.978Z click
-- element: {"tag":"label","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Alças reguláveis"}
-
-## 2026-09-23 17:10:27.986Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"checkbox","id":null,"placeholder":null,"label":"Alças reguláveis","value":"on","valueLength":2,"text":""}
-
-## 2026-09-23 17:10:27.987Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"checkbox","id":null,"placeholder":null,"label":"Alças reguláveis","value":"on","valueLength":2,"text":""}
-
-## 2026-09-23 17:10:27.998Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"checkbox","id":null,"placeholder":null,"label":"Alças reguláveis","value":"on","valueLength":2,"text":""}
-
-## 2026-09-23 17:10:40.902Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"checkbox","id":null,"placeholder":null,"label":"Alças reguláveis","value":"on","valueLength":2,"text":""}
-
-## 2026-09-23 17:10:41.124Z click
-- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Gerar com Gemini AI"}
-
-## 2026-09-23 17:10:48.315Z network.error
-- method: POST
-- url: http://localhost:3000/hcgi/api/integracoes/gemini/gerar-descricao
-- status: 500
-- statusText: Internal Server Error
-- requestBody: {"name":"Pijama Shot Doll Sueder","categoryName":"Pijama","estilo":"pijama","tecido":"suede","destaques":["Alças reguláveis"]}
-- response: {"sucesso":false,"mensagem":"Erro ao gerar descrições com a IA: Todos os modelos falharam: {\"gemini-2.5-flash (v1)\":\"[Status 404] This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.6-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gemini-api/docs/get-started).\",\"gemini-2.5-flash (v1beta)\":\"[Status 404] This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.6-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gemini-api/docs/get-started).\",\"gemini-3.5-flash (v1)\":\"[Status 503] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\"gemini-3.5-flash (v1beta)\":\"[Status 503] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\"gemini-2.5-flash-lite (v1)\":\"[Status 404] This model models/gemini-2.5-flash-lite is no longer available to new users. Please update your code to use models/gemini-3.5-flash-lite for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gemini-api/docs/get-started).\",\"gemini-3.1-flash-lite (v1)\":\"[Status 503] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\"}. Modelos disponíveis para sua chave: [\"models/gemini-2.5-flash\",\"models/gemini-2.5-pro\",\"models/gemma-4-26b-a4b-it\",\"models/gemma-4-31b-it\",\"models/gemini-2.5-flash-lite\",\"models/gemini-2.5-flash-image\",\"models/gemini-3.1-flash-lite\",\"models/gemini-3-pro-image\",\"models/gemini-3.1-flash-image\",\"models/gemini-3.1-flash-lite-image\",\"models/gemini-3.5-flash\",\"models/gemini-3.5-flash-lite\",\"models/gemini-3.6-flash\",\"models/gemini-3.7-flash\",\"models/g...
-- durationMs: 7187
-
-## 2026-09-23 17:10:48.316Z console.error
-- text: Fetch error from http://localhost:3000/hcgi/api/integracoes/gemini/gerar-descricao: {"sucesso":false,"mensagem":"Erro ao gerar descrições com a IA: Todos os modelos falharam: {\"gemini-2.5-flash (v1)\":\"[Status 404] This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.6-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gemini-api/docs/get-started).\",\"gemini-2.5-flash (v1beta)\":\"[Status 404] This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.6-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gemini-api/docs/get-started).\",\"gemini-3.5-flash (v1)\":\"[Status 503] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\"gemini-3.5-flash (v1beta)\":\"[Status 503] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\"gemini-2.5-flash-lite (v1)\":\"[Status 404] This model models/gemini-2.5-flash-lite is no longer available to new users. Please update your code to use models/gemini-3.5-flash-lite for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gemini-api/docs/get-started).\",\"gemini-3.1-flash-lite (v1)\":\"[Status 503] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\"}. Modelos disponíveis para sua chave: [\"models/gemini-2.5-flash\",\"models/gemini-2.5-pro\",\"models/gemma-4-26b-a4b-it\",\"models/gemma-4-31b-it\",\"models/gemini-2.5-flash-lite\",\"models/gemini-2.5-flash-image\",\"models/gemini-3.1-flash-lite\",\"models/gemini-3-pro-image\",\"models/gemini-3.1-flash-image\",\"models/gemini-3.1-flash-lite-image\",\"models/gemini-3.5-flash\",\"models/gemini...
-
-## 2026-09-23 17:10:48.323Z console.error
-- text: Error: Erro ao gerar descrições com a IA: Todos os modelos falharam: {"gemini-2.5-flash (v1)":"[Status 404] This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.6-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gemini-api/docs/get-started).","gemini-2.5-flash (v1beta)":"[Status 404] This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.6-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gemini-api/docs/get-started).","gemini-3.5-flash (v1)":"[Status 503] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.","gemini-3.5-flash (v1beta)":"[Status 503] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.","gemini-2.5-flash-lite (v1)":"[Status 404] This model models/gemini-2.5-flash-lite is no longer available to new users. Please update your code to use models/gemini-3.5-flash-lite for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gemini-api/docs/get-started).","gemini-3.1-flash-lite (v1)":"[Status 503] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later."}. Modelos disponíveis para sua chave: ["models/gemini-2.5-flash","models/gemini-2.5-pro","models/gemma-4-26b-a4b-it","models/gemma-4-31b-it","models/gemini-2.5-flash-lite","models/gemini-2.5-flash-image","models/gemini-3.1-flash-lite","models/gemini-3-pro-image","models/gemini-3.1-flash-image","models/gemini-3.1-flash-lite-image","models/gemini-3.5-flash","models/gemini-3.5-flash-lite","models/gemini-3.6-flash","models/gemini-3.7-flash","models/gemini-3.8-flash","models/antigravity-preview-05-2026","models/antigravity-p...
-
-## 2026-09-23 17:31:23.049Z load
-- url: http://localhost:3000/admin/produtos/novo
-- title: Avante Lingerie | Oficial
-
-## 2026-09-23 17:31:27.744Z load
-- url: http://localhost:3000/admin/produtos/novo
-- title: Avante Lingerie | Oficial
-
-## 2026-09-23 17:31:30.628Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Ex: Conjunto Rendado Paris","label":"Ex: Conjunto Rendado Paris","value":"","valueLength":0,"text":""}
-
-## 2026-09-23 17:31:30.811Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Ex: Conjunto Rendado Paris","label":"Ex: Conjunto Rendado Paris","value":"","valueLength":0,"text":""}
-
-## 2026-09-23 17:32:26.364Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Ex: Conjunto Rendado Paris","label":"Ex: Conjunto Rendado Paris","value":"Pijama Short Doll Sueder","valueLength":24,"text":""}
-
-## 2026-09-23 17:32:26.366Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Ex: Conjunto Rendado Paris","label":"Ex: Conjunto Rendado Paris","value":"Pijama Short Doll Sueder","valueLength":24,"text":""}
-
-## 2026-09-23 17:32:26.368Z focus
-- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"","valueLength":0,"text":"Selecionar Categoria...BodyCalcinhaCamisolaCinta ModeladoraConjuntoCroppedPijamaPlus Size"}
-
-## 2026-09-23 17:32:26.596Z click
-- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"","valueLength":0,"text":"Selecionar Categoria...BodyCalcinhaCamisolaCinta ModeladoraConjuntoCroppedPijamaPlus Size"}
-
-## 2026-09-23 17:32:30.371Z change
-- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"z7i4vmn1n7io1np","valueLength":15,"text":"Selecionar Categoria...BodyCalcinhaCamisolaCinta ModeladoraConjuntoCroppedPijamaPlus Size"}
-
-## 2026-09-23 17:32:30.376Z click
-- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"z7i4vmn1n7io1np","valueLength":15,"text":"Selecionar Categoria...BodyCalcinhaCamisolaCinta ModeladoraConjuntoCroppedPijamaPlus Size"}
-
-## 2026-09-23 17:32:32.933Z blur
-- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"z7i4vmn1n7io1np","valueLength":15,"text":"Selecionar Categoria...BodyCalcinhaCamisolaCinta ModeladoraConjuntoCroppedPijamaPlus Size"}
-
-## 2026-09-23 17:32:33.152Z click
-- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Gerar Automático"}
-
-## 2026-09-23 17:33:15.712Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Ex: Conjunto Rendado Paris","label":"Ex: Conjunto Rendado Paris","value":"Pijama Short Doll Sueder","valueLength":24,"text":""}
-
-## 2026-09-23 17:33:16.266Z click
-- element: {"tag":"main","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Novo Produto Cancelar SalvarInformações BásicasNome do Produto * (Título exibido na loja) Google SEO & IATítulo SEOMáx 60 caracteresMeta DescriptionMáx 160 caracteres Gerar Textos e SEO Automaticamente com IACategoria *Selecionar Categoria...BodyCalcinhaCamisolaCinta ModeladoraConjuntoCroppedPijamaPlus SizeNCM (Fiscal)❓ AutomáticoReferência / Código Interno * Gerar AutomáticoColeções Especiais (Opcional)Dia do NamoradoModa FitnessModa SexyComplete o Look (Cross-sell)Nenhum (Venda isolada)Cropped Regata Canelada Gola Alta - AVL-CRO-1158Pijama Feminino Longo Suede Light Conjunto Blusa Calça Macio Confortável Inverno Aveludado Confortável Dia a Dia M G GG - AVL-PIJ-8689Selecione uma peça que combina perfeitamente para incentivar a compra do conjunto (Ex: calcinha para combinar com este sutiã).Status de ExibiçãoDeixe inativo para esconder o produto na loja.Destaques e Vitrines na HomeLançamentos RecentesOfertas ExclusivasMais Vendidos da AvanteDestaques de OuroPreço e LogísticaPreço de Venda Varejo (R$) *Preço de Atacado B2B (R$)Peso (g)Altura (cm)Largura (cm)Profundidade (cm)Variações do ProdutoInforme os atributos e valores padrões abaixo para gerar todas as variações.Estoque Total: 0 unTamanhos (ex: P, M, G, GG)Cores (ex: Preto, Romance, Chocolate)Estoque PadrãoPreço Varejo Padrão (R$)Preço Atacado Padrão (R$)Gerar VariaçõesCorTamanhoSKUImagem / FotoEstoquePreço Varejo (R$)Preço Atacado (R$)StatusAçõesNenhuma variação adicionada ainda. Digite tamanhos e cores na linha acima para gerar a lista!Descrições Detalhadas em AbasPreenchidas via IA na seção Informações Básicas acimaGeralTecidoModelagemCuidadosDiferenciaisCompra SeguraDescrição GeralMídias e Fotos Adicionar Fotos/VídeosNenhuma imagem adicionada.Vídeo Externo (YouTube/Vimeo/MP4)Para evitar lentidão e travamentos, cole o link do seu vídeo hospedado externamente.Exibir no FinalExibir como Primeira"}
-
-## 2026-09-23 17:33:22.537Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Ex: Conjunto Rendado Paris","label":"Ex: Conjunto Rendado Paris","value":"","valueLength":0,"text":""}
-
-## 2026-09-23 17:33:22.538Z focus
-- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"z7i4vmn1n7io1np","valueLength":15,"text":"Selecionar Categoria...BodyCalcinhaCamisolaCinta ModeladoraConjuntoCroppedPijamaPlus Size"}
-
-## 2026-09-23 17:33:22.761Z click
-- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"z7i4vmn1n7io1np","valueLength":15,"text":"Selecionar Categoria...BodyCalcinhaCamisolaCinta ModeladoraConjuntoCroppedPijamaPlus Size"}
-
-## 2026-09-23 17:33:24.137Z change
-- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"okqcy3xzr7pff8b","valueLength":15,"text":"Selecionar Categoria...BodyCalcinhaCamisolaCinta ModeladoraConjuntoCroppedPijamaPlus Size"}
-
-## 2026-09-23 17:33:24.168Z click
-- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"okqcy3xzr7pff8b","valueLength":15,"text":"Selecionar Categoria...BodyCalcinhaCamisolaCinta ModeladoraConjuntoCroppedPijamaPlus Size"}
-
-## 2026-09-23 17:33:31.272Z click
-- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"okqcy3xzr7pff8b","valueLength":15,"text":"Selecionar Categoria...BodyCalcinhaCamisolaCinta ModeladoraConjuntoCroppedPijamaPlus Size"}
-
-## 2026-09-23 17:33:36.764Z change
-- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"219neq337ly8hpm","valueLength":15,"text":"Selecionar Categoria...BodyCalcinhaCamisolaCinta ModeladoraConjuntoCroppedPijamaPlus Size"}
-
-## 2026-09-23 17:33:36.777Z click
-- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"219neq337ly8hpm","valueLength":15,"text":"Selecionar Categoria...BodyCalcinhaCamisolaCinta ModeladoraConjuntoCroppedPijamaPlus Size"}
-
-## 2026-09-23 17:33:39.032Z click
-- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"219neq337ly8hpm","valueLength":15,"text":"Selecionar Categoria...BodyCalcinhaCamisolaCinta ModeladoraConjuntoCroppedPijamaPlus Size"}
-
-## 2026-09-23 17:33:40.606Z change
-- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"z7i4vmn1n7io1np","valueLength":15,"text":"Selecionar Categoria...BodyCalcinhaCamisolaCinta ModeladoraConjuntoCroppedPijamaPlus Size"}
-
-## 2026-09-23 17:33:40.613Z click
-- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"z7i4vmn1n7io1np","valueLength":15,"text":"Selecionar Categoria...BodyCalcinhaCamisolaCinta ModeladoraConjuntoCroppedPijamaPlus Size"}
-
-## 2026-09-23 17:33:41.898Z blur
-- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"z7i4vmn1n7io1np","valueLength":15,"text":"Selecionar Categoria...BodyCalcinhaCamisolaCinta ModeladoraConjuntoCroppedPijamaPlus Size"}
-
-## 2026-09-23 17:33:41.899Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Ex: Conjunto Rendado Paris","label":"Ex: Conjunto Rendado Paris","value":"","valueLength":0,"text":""}
-
-## 2026-09-23 17:33:42.115Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Ex: Conjunto Rendado Paris","label":"Ex: Conjunto Rendado Paris","value":"","valueLength":0,"text":""}
-
-## 2026-09-23 17:33:46.189Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Ex: Conjunto Rendado Paris","label":"Ex: Conjunto Rendado Paris","value":"Pijama Feminino Short Doll Suede Confortável Tecido Leve e Macio Fresquinho","valueLength":75,"text":""}
-
-## 2026-09-23 17:34:24.747Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Ex: Conjunto Rendado Paris","label":"Ex: Conjunto Rendado Paris","value":"Pijama Feminino Short Doll Sueder Confortável Tecido Leve e Macio Fresquinho","valueLength":76,"text":""}
-
-## 2026-09-23 17:34:24.748Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Ex: Conjunto Rendado Paris","label":"Ex: Conjunto Rendado Paris","value":"Pijama Feminino Short Doll Sueder Confortável Tecido Leve e Macio Fresquinho","valueLength":76,"text":""}
-
-## 2026-09-23 17:34:24.750Z focus
-- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"","valueLength":0,"text":"Nenhum (Venda isolada)Cropped Regata Canelada Gola Alta - AVL-CRO-1158Pijama Feminino Longo Suede Light Conjunto Blusa Calça Macio Confortável Inverno Aveludado Confortável Dia a Dia M G GG - AVL-PIJ-8689"}
-
-## 2026-09-23 17:34:24.952Z click
-- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"","valueLength":0,"text":"Nenhum (Venda isolada)Cropped Regata Canelada Gola Alta - AVL-CRO-1158Pijama Feminino Longo Suede Light Conjunto Blusa Calça Macio Confortável Inverno Aveludado Confortável Dia a Dia M G GG - AVL-PIJ-8689"}
-
-## 2026-09-23 17:34:30.921Z change
-- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"40bnrds09kg7dio","valueLength":15,"text":"Nenhum (Venda isolada)Cropped Regata Canelada Gola Alta - AVL-CRO-1158Pijama Feminino Longo Suede Light Conjunto Blusa Calça Macio Confortável Inverno Aveludado Confortável Dia a Dia M G GG - AVL-PIJ-8689"}
-
-## 2026-09-23 17:34:30.928Z click
-- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"40bnrds09kg7dio","valueLength":15,"text":"Nenhum (Venda isolada)Cropped Regata Canelada Gola Alta - AVL-CRO-1158Pijama Feminino Longo Suede Light Conjunto Blusa Calça Macio Confortável Inverno Aveludado Confortável Dia a Dia M G GG - AVL-PIJ-8689"}
-
-## 2026-09-23 17:34:38.170Z blur
-- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"40bnrds09kg7dio","valueLength":15,"text":"Nenhum (Venda isolada)Cropped Regata Canelada Gola Alta - AVL-CRO-1158Pijama Feminino Longo Suede Light Conjunto Blusa Calça Macio Confortável Inverno Aveludado Confortável Dia a Dia M G GG - AVL-PIJ-8689"}
-
-## 2026-09-23 17:34:38.392Z click
-- element: {"tag":"button","role":"switch","ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-09-23 17:34:38.409Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"checkbox","id":null,"placeholder":null,"label":"[checkbox]","value":"on","valueLength":2,"text":""}
-
-## 2026-09-23 17:34:39.703Z click
-- element: {"tag":"button","role":"switch","ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-09-23 17:34:39.713Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"checkbox","id":null,"placeholder":null,"label":"[checkbox]","value":"on","valueLength":2,"text":""}
-
-## 2026-09-23 17:34:41.017Z click
-- element: {"tag":"button","role":"switch","ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-09-23 17:34:41.025Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"checkbox","id":null,"placeholder":null,"label":"[checkbox]","value":"on","valueLength":2,"text":""}
-
-## 2026-09-23 17:34:43.109Z click
-- element: {"tag":"button","role":"switch","ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-09-23 17:34:43.116Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"checkbox","id":null,"placeholder":null,"label":"[checkbox]","value":"on","valueLength":2,"text":""}
-
-## 2026-09-23 17:34:46.405Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":null,"label":"[number]","value":"","valueLength":0,"text":""}
-
-## 2026-09-23 17:34:46.621Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":null,"label":"[number]","value":"","valueLength":0,"text":""}
-
-## 2026-09-23 17:34:55.699Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":null,"label":"[number]","value":"39.90","valueLength":5,"text":""}
-
-## 2026-09-23 17:34:55.700Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":null,"label":"[number]","value":"39.90","valueLength":5,"text":""}
-
-## 2026-09-23 17:34:55.702Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":null,"label":"[number]","value":"","valueLength":0,"text":""}
-
-## 2026-09-23 17:35:01.360Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":null,"label":"[number]","value":"24.90","valueLength":5,"text":""}
-
-## 2026-09-23 17:35:01.360Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":null,"label":"[number]","value":"24.90","valueLength":5,"text":""}
-
-## 2026-09-23 17:35:01.365Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 150","label":"Ex: 150","value":"","valueLength":0,"text":""}
-
-## 2026-09-23 17:49:00.229Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 150","label":"Ex: 150","value":"","valueLength":0,"text":""}
-
-## 2026-09-23 17:49:04.130Z click
-- element: {"tag":"header","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"☀️Ver Loja"}
-
-## 2026-09-23 17:49:08.264Z click
-- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Cancelar"}
-
-## 2026-09-23 17:49:08.301Z navigate
-- url: http://localhost:3000/admin/produtos
-- via: pushState
-
-## 2026-09-23 17:49:09.287Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 17:49:09.295Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 17:49:09.299Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 17:49:09.300Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 17:49:11.440Z click
-- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Categorias"}
-
-## 2026-09-23 17:49:11.442Z navigate
-- url: http://localhost:3000/admin/categorias
-- via: pushState
-
-## 2026-09-23 17:49:14.044Z load
-- url: http://localhost:3000/admin/categorias
-- title: Avante Lingerie | Oficial
-
-## 2026-09-23 17:49:33.440Z click
-- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-09-23 17:49:35.118Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"URLs dos vídeos (separe por vírgula)","label":"URLs dos vídeos (separe por vírgula)","value":"","valueLength":0,"text":""}
-
-## 2026-09-23 17:49:35.338Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"URLs dos vídeos (separe por vírgula)","label":"URLs dos vídeos (separe por vírgula)","value":"","valueLength":0,"text":""}
-
-## 2026-09-23 17:53:42.531Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"URLs dos vídeos (separe por vírgula)","label":"URLs dos vídeos (separe por vírgula)","value":"","valueLength":0,"text":""}
-
-## 2026-09-23 17:55:18.822Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"URLs dos vídeos (separe por vírgula)","label":"URLs dos vídeos (separe por vírgula)","value":"","valueLength":0,"text":""}
-
-## 2026-09-23 17:55:58.963Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"URLs dos vídeos (separe por vírgula)","label":"URLs dos vídeos (separe por vírgula)","value":"","valueLength":0,"text":""}
-
-## 2026-09-23 17:56:22.710Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"URLs dos vídeos (separe por vírgula)","label":"URLs dos vídeos (separe por vírgula)","value":"","valueLength":0,"text":""}
-
-## 2026-09-23 17:56:38.609Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"URLs dos vídeos (separe por vírgula)","label":"URLs dos vídeos (separe por vírgula)","value":", https://avantelingerie.com.br/video/Short_doll.mp4","valueLength":52,"text":""}
-
-## 2026-09-23 17:56:38.609Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"URLs dos vídeos (separe por vírgula)","label":"URLs dos vídeos (separe por vírgula)","value":", https://avantelingerie.com.br/video/Short_doll.mp4","valueLength":52,"text":""}
-
-## 2026-09-23 17:56:44.490Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"URLs dos vídeos (separe por vírgula)","label":"URLs dos vídeos (separe por vírgula)","value":", https://avantelingerie.com.br/video/Short_doll.mp4","valueLength":52,"text":""}
-
-## 2026-09-23 17:56:50.733Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"URLs dos vídeos (separe por vírgula)","label":"URLs dos vídeos (separe por vírgula)","value":"https://avantelingerie.com.br/video/sueder.mp4, https://avantelingerie.com.br/video/Short_doll.mp4","valueLength":98,"text":""}
-
-## 2026-09-23 17:56:50.734Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"URLs dos vídeos (separe por vírgula)","label":"URLs dos vídeos (separe por vírgula)","value":"https://avantelingerie.com.br/video/sueder.mp4, https://avantelingerie.com.br/video/Short_doll.mp4","valueLength":98,"text":""}
-
-## 2026-09-23 17:56:50.949Z click
-- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-09-23 17:56:56.622Z load
-- url: http://localhost:3000/admin/categorias
-- title: Avante Lingerie | Oficial
-
-## 2026-09-23 17:57:19.374Z load
-- url: http://localhost:3000/
-- title: Avante Lingerie | Oficial
-
-## 2026-09-23 17:57:19.888Z navigate
-- url: http://localhost:3000/
-- via: replaceState
-
-## 2026-09-23 17:57:20.736Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 17:57:20.780Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 17:57:20.953Z network.error
-- method: GET
-- url: http://localhost:3000/hcgi/platform/api/collections/testimonials/records?page=1&perPage=10&filter=status%20%3D%20true&sort=-created
-- status: 400
-- statusText: Bad Request
-- response: 
-    {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-- durationMs: 148
-
-## 2026-09-23 17:57:20.954Z console.error
-- text: 
-    Fetch error from http://localhost:3000/hcgi/platform/api/collections/testimonials/records?page=1&perPage=10&filter=status%20%3D%20true&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-
-## 2026-09-23 17:57:20.972Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 17:57:20.975Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 17:57:20.975Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 17:57:20.982Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 17:57:20.983Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 17:57:21.008Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 17:57:21.009Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 17:57:21.019Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 17:57:21.019Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 17:57:21.021Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 17:57:21.022Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 17:57:21.023Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 17:57:21.023Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 17:57:21.025Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 17:57:21.025Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 17:57:48.220Z click
-- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-09-23 17:58:13.877Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 17:58:13.884Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 17:58:13.884Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 17:58:13.894Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 17:58:13.896Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 17:58:13.918Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 17:58:13.918Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 17:58:13.933Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 17:58:13.934Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 17:58:13.936Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 17:58:13.938Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 17:58:13.941Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 17:58:13.942Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 17:58:13.947Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 17:58:13.948Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 17:58:13.982Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 17:58:13.982Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 17:58:13.982Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 17:58:13.987Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 17:58:13.987Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 17:58:13.988Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 17:58:13.988Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 17:58:13.992Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 17:58:13.992Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 17:58:13.994Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 17:58:13.994Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 17:58:13.996Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 17:58:13.996Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 17:58:13.998Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 17:58:13.998Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 17:58:44.563Z click
-- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Produtos"}
-
-## 2026-09-23 17:58:44.587Z navigate
-- url: http://localhost:3000/admin/produtos
-- via: pushState
-
-## 2026-09-23 17:58:45.025Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 17:58:45.034Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 17:58:45.039Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 17:58:45.039Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 17:58:46.853Z click
-- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Novo Produto"}
-
-## 2026-09-23 17:58:46.855Z navigate
-- url: http://localhost:3000/admin/produtos/novo
-- via: pushState
-
-## 2026-09-23 17:58:57.220Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Ex: Conjunto Rendado Paris","label":"Ex: Conjunto Rendado Paris","value":"","valueLength":0,"text":""}
-
-## 2026-09-23 17:58:57.448Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Ex: Conjunto Rendado Paris","label":"Ex: Conjunto Rendado Paris","value":"","valueLength":0,"text":""}
-
-## 2026-09-23 17:59:02.830Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Ex: Conjunto Rendado Paris","label":"Ex: Conjunto Rendado Paris","value":"Pijama Feminino Short Doll Suede Confortável Tecido Leve e Macio Fresquinho","valueLength":75,"text":""}
-
-## 2026-09-23 17:59:02.831Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Ex: Conjunto Rendado Paris","label":"Ex: Conjunto Rendado Paris","value":"Pijama Feminino Short Doll Suede Confortável Tecido Leve e Macio Fresquinho","valueLength":75,"text":""}
-
-## 2026-09-23 17:59:02.832Z focus
-- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"","valueLength":0,"text":"Selecionar Categoria...BodyCalcinhaCamisolaCinta ModeladoraConjuntoCroppedPijamaPlus Size"}
-
-## 2026-09-23 17:59:03.060Z click
-- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"","valueLength":0,"text":"Selecionar Categoria...BodyCalcinhaCamisolaCinta ModeladoraConjuntoCroppedPijamaPlus Size"}
-
-## 2026-09-23 17:59:09.517Z change
-- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"z7i4vmn1n7io1np","valueLength":15,"text":"Selecionar Categoria...BodyCalcinhaCamisolaCinta ModeladoraConjuntoCroppedPijamaPlus Size"}
-
-## 2026-09-23 17:59:09.528Z click
-- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"z7i4vmn1n7io1np","valueLength":15,"text":"Selecionar Categoria...BodyCalcinhaCamisolaCinta ModeladoraConjuntoCroppedPijamaPlus Size"}
-
-## 2026-09-23 17:59:16.292Z blur
-- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"z7i4vmn1n7io1np","valueLength":15,"text":"Selecionar Categoria...BodyCalcinhaCamisolaCinta ModeladoraConjuntoCroppedPijamaPlus Size"}
-
-## 2026-09-23 18:03:28.125Z focus
-- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"z7i4vmn1n7io1np","valueLength":15,"text":"Selecionar Categoria...BodyCalcinhaCamisolaCinta ModeladoraConjuntoCroppedPijamaPlus Size"}
-
-## 2026-09-23 18:03:30.805Z blur
-- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"z7i4vmn1n7io1np","valueLength":15,"text":"Selecionar Categoria...BodyCalcinhaCamisolaCinta ModeladoraConjuntoCroppedPijamaPlus Size"}
-
-## 2026-09-23 18:03:31.003Z click
-- element: {"tag":"label","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Adicionar Fotos/Vídeos"}
-
-## 2026-09-23 18:03:31.020Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"file","id":null,"placeholder":null,"label":"Adicionar Fotos/Vídeos","value":"","valueLength":0,"text":""}
-
-## 2026-09-23 18:09:08.478Z click
-- element: {"tag":"label","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Adicionar Fotos/Vídeos"}
-
-## 2026-09-23 18:09:08.487Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"file","id":null,"placeholder":null,"label":"Adicionar Fotos/Vídeos","value":"","valueLength":0,"text":""}
-
-## 2026-09-23 18:09:16.867Z click
-- element: {"tag":"label","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Adicionar Fotos/Vídeos"}
-
-## 2026-09-23 18:09:16.868Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"file","id":null,"placeholder":null,"label":"Adicionar Fotos/Vídeos","value":"C:\\fakepath\\Azul Marinho Lacinho e Coração.jpeg","valueLength":47,"text":""}
-
-## 2026-09-23 18:09:22.142Z click
-- element: {"tag":"label","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Adicionar Fotos/Vídeos"}
-
-## 2026-09-23 18:09:22.143Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"file","id":null,"placeholder":null,"label":"Adicionar Fotos/Vídeos","value":"C:\\fakepath\\Azul Marinho Lacinho e Coração verso.png","valueLength":52,"text":""}
-
-## 2026-09-23 18:09:34.893Z click
-- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Capa"}
-
-## 2026-09-23 18:09:37.140Z click
-- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Verso"}
-
-## 2026-09-23 18:09:41.505Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"","valueLength":0,"text":""}
-
-## 2026-09-23 18:09:41.732Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"","valueLength":0,"text":""}
-
-## 2026-09-23 18:09:59.562Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"Azul Marinho Lacinho e Coração","valueLength":30,"text":""}
-
-## 2026-09-23 18:09:59.783Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"Azul Marinho Lacinho e Coração","valueLength":30,"text":""}
-
-## 2026-09-23 18:10:00.005Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"Azul Marinho Lacinho e Coração","valueLength":30,"text":""}
-
-## 2026-09-23 18:10:00.366Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"Azul Marinho Lacinho e Coração","valueLength":30,"text":""}
-
-## 2026-09-23 18:10:04.120Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"Azul Marinho Lacinho e Coração","valueLength":30,"text":""}
-
-## 2026-09-23 18:10:04.121Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"Azul Marinho Lacinho e Coração","valueLength":30,"text":""}
-
-## 2026-09-23 18:10:04.123Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"","valueLength":0,"text":""}
-
-## 2026-09-23 18:10:04.334Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"","valueLength":0,"text":""}
-
-## 2026-09-23 18:10:06.609Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"Azul Marinho Lacinho e Coração","valueLength":30,"text":""}
-
-## 2026-09-23 18:10:06.609Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"Azul Marinho Lacinho e Coração","valueLength":30,"text":""}
-
-## 2026-09-23 18:10:06.610Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"","valueLength":0,"text":""}
-
-## 2026-09-23 18:10:06.830Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"","valueLength":0,"text":""}
-
-## 2026-09-23 18:10:25.398Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"Rosa Claro Cerejinha","valueLength":20,"text":""}
-
-## 2026-09-23 18:10:25.401Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"Rosa Claro Cerejinha","valueLength":20,"text":""}
-
-## 2026-09-23 18:10:41.283Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"Rosa Claro Cerejinha","valueLength":20,"text":""}
-
-## 2026-09-23 18:10:44.376Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"Rosa Claro Cerejinha","valueLength":20,"text":""}
-
-## 2026-09-23 18:10:56.387Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"Rosa Claro Cerejinha e Borboleta","valueLength":32,"text":""}
-
-## 2026-09-23 18:10:56.387Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"Rosa Claro Cerejinha e Borboleta","valueLength":32,"text":""}
-
-## 2026-09-23 18:10:56.388Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"","valueLength":0,"text":""}
-
-## 2026-09-23 18:10:56.605Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"","valueLength":0,"text":""}
-
-## 2026-09-23 18:11:07.206Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"Amarelo Manteiga ","valueLength":17,"text":""}
-
-## 2026-09-23 18:11:07.206Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"Amarelo Manteiga ","valueLength":17,"text":""}
-
-## 2026-09-23 18:11:17.749Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"Amarelo Manteiga ","valueLength":17,"text":""}
-
-## 2026-09-23 18:11:20.234Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"Amarelo Manteiga ","valueLength":17,"text":""}
-
-## 2026-09-23 18:11:28.573Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"Amarelo Manteiga  Cerejinha","valueLength":27,"text":""}
-
-## 2026-09-23 18:11:28.575Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"Amarelo Manteiga  Cerejinha","valueLength":27,"text":""}
-
-## 2026-09-23 18:11:34.241Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"Amarelo Manteiga  Cerejinha","valueLength":27,"text":""}
-
-## 2026-09-23 18:11:37.322Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"Amarelo Manteiga  Cerejinha","valueLength":27,"text":""}
-
-## 2026-09-23 18:11:45.383Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"Amarelo Manteiga  Cerejinha e Flor","valueLength":34,"text":""}
-
-## 2026-09-23 18:11:45.384Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"Amarelo Manteiga  Cerejinha e Flor","valueLength":34,"text":""}
-
-## 2026-09-23 18:11:45.385Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"","valueLength":0,"text":""}
-
-## 2026-09-23 18:11:45.597Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"","valueLength":0,"text":""}
-
-## 2026-09-23 18:11:53.594Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"Rosa Chiclete ","valueLength":14,"text":""}
-
-## 2026-09-23 18:11:53.594Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"Rosa Chiclete ","valueLength":14,"text":""}
-
-## 2026-09-23 18:11:58.751Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"Rosa Chiclete ","valueLength":14,"text":""}
-
-## 2026-09-23 18:12:00.397Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"Rosa Chiclete ","valueLength":14,"text":""}
-
-## 2026-09-23 18:12:15.146Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"Rosa Chiclete Lacinho e Coração","valueLength":31,"text":""}
-
-## 2026-09-23 18:12:15.149Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"Rosa Chiclete Lacinho e Coração","valueLength":31,"text":""}
-
-## 2026-09-23 18:12:19.259Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"Rosa Chiclete Lacinho e Coração","valueLength":31,"text":""}
-
-## 2026-09-23 18:12:26.472Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"Rosa Chiclete Lacinho e Coração","valueLength":31,"text":""}
-
-## 2026-09-23 18:12:38.332Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"Rosa Chiclete Lacinho e Coração","valueLength":31,"text":""}
-
-## 2026-09-23 18:12:39.734Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"Rosa Chiclete Lacinho e Coração","valueLength":31,"text":""}
-
-## 2026-09-23 18:12:39.734Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"","valueLength":0,"text":""}
-
-## 2026-09-23 18:12:39.944Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"","valueLength":0,"text":""}
-
-## 2026-09-23 18:12:50.707Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"Azul Serenity Arco-iris","valueLength":23,"text":""}
-
-## 2026-09-23 18:12:50.707Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"Azul Serenity Arco-iris","valueLength":23,"text":""}
-
-## 2026-09-23 18:12:50.711Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"url","id":null,"placeholder":"Ex: https://youtube.com/shorts/... ou link .mp4","label":"Ex: https://youtube.com/shorts/... ou link .mp4","value":"","valueLength":0,"text":""}
-
-## 2026-09-23 18:12:50.921Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"url","id":null,"placeholder":"Ex: https://youtube.com/shorts/... ou link .mp4","label":"Ex: https://youtube.com/shorts/... ou link .mp4","value":"","valueLength":0,"text":""}
-
-## 2026-09-23 18:13:26.262Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"url","id":null,"placeholder":"Ex: https://youtube.com/shorts/... ou link .mp4","label":"Ex: https://youtube.com/shorts/... ou link .mp4","value":"https://avantelingerie.com.br/video/Short_doll.mp4","valueLength":50,"text":""}
-
-## 2026-09-23 18:13:26.504Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"url","id":null,"placeholder":"Ex: https://youtube.com/shorts/... ou link .mp4","label":"Ex: https://youtube.com/shorts/... ou link .mp4","value":"https://avantelingerie.com.br/video/Short_doll.mp4","valueLength":50,"text":""}
-
-## 2026-09-23 18:13:26.725Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"url","id":null,"placeholder":"Ex: https://youtube.com/shorts/... ou link .mp4","label":"Ex: https://youtube.com/shorts/... ou link .mp4","value":"https://avantelingerie.com.br/video/Short_doll.mp4","valueLength":50,"text":""}
-
-## 2026-09-23 18:13:40.201Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"url","id":null,"placeholder":"Ex: https://youtube.com/shorts/... ou link .mp4","label":"Ex: https://youtube.com/shorts/... ou link .mp4","value":"","valueLength":0,"text":""}
-
-## 2026-09-23 18:13:43.747Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"url","id":null,"placeholder":"Ex: https://youtube.com/shorts/... ou link .mp4","label":"Ex: https://youtube.com/shorts/... ou link .mp4","value":"https://avantelingerie.com.br/video/Short_doll.mp4","valueLength":50,"text":""}
-
-## 2026-09-23 18:13:43.747Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"url","id":null,"placeholder":"Ex: https://youtube.com/shorts/... ou link .mp4","label":"Ex: https://youtube.com/shorts/... ou link .mp4","value":"https://avantelingerie.com.br/video/Short_doll.mp4","valueLength":50,"text":""}
-
-## 2026-09-23 18:13:43.751Z focus
-- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"last","valueLength":4,"text":"Exibir no FinalExibir como Primeira"}
-
-## 2026-09-23 18:13:43.969Z click
-- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"last","valueLength":4,"text":"Exibir no FinalExibir como Primeira"}
-
-## 2026-09-23 18:13:45.271Z change
-- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"first","valueLength":5,"text":"Exibir no FinalExibir como Primeira"}
-
-## 2026-09-23 18:13:45.286Z click
-- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"first","valueLength":5,"text":"Exibir no FinalExibir como Primeira"}
-
-## 2026-09-23 18:13:49.574Z blur
-- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"first","valueLength":5,"text":"Exibir no FinalExibir como Primeira"}
-
-## 2026-09-23 18:13:49.793Z click
-- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Gerar Automático"}
-
-## 2026-09-23 18:13:58.689Z focus
-- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"","valueLength":0,"text":"Nenhum (Venda isolada)Cropped Regata Canelada Gola Alta - AVL-CRO-1158Pijama Feminino Longo Suede Light Conjunto Blusa Calça Macio Confortável Inverno Aveludado Confortável Dia a Dia M G GG - AVL-PIJ-8689"}
-
-## 2026-09-23 18:13:58.899Z click
-- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"","valueLength":0,"text":"Nenhum (Venda isolada)Cropped Regata Canelada Gola Alta - AVL-CRO-1158Pijama Feminino Longo Suede Light Conjunto Blusa Calça Macio Confortável Inverno Aveludado Confortável Dia a Dia M G GG - AVL-PIJ-8689"}
-
-## 2026-09-23 18:14:00.191Z change
-- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"40bnrds09kg7dio","valueLength":15,"text":"Nenhum (Venda isolada)Cropped Regata Canelada Gola Alta - AVL-CRO-1158Pijama Feminino Longo Suede Light Conjunto Blusa Calça Macio Confortável Inverno Aveludado Confortável Dia a Dia M G GG - AVL-PIJ-8689"}
-
-## 2026-09-23 18:14:00.198Z click
-- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"40bnrds09kg7dio","valueLength":15,"text":"Nenhum (Venda isolada)Cropped Regata Canelada Gola Alta - AVL-CRO-1158Pijama Feminino Longo Suede Light Conjunto Blusa Calça Macio Confortável Inverno Aveludado Confortável Dia a Dia M G GG - AVL-PIJ-8689"}
-
-## 2026-09-23 18:14:07.166Z blur
-- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"40bnrds09kg7dio","valueLength":15,"text":"Nenhum (Venda isolada)Cropped Regata Canelada Gola Alta - AVL-CRO-1158Pijama Feminino Longo Suede Light Conjunto Blusa Calça Macio Confortável Inverno Aveludado Confortável Dia a Dia M G GG - AVL-PIJ-8689"}
-
-## 2026-09-23 18:14:07.384Z click
-- element: {"tag":"button","role":"switch","ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-09-23 18:14:07.395Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"checkbox","id":null,"placeholder":null,"label":"[checkbox]","value":"on","valueLength":2,"text":""}
-
-## 2026-09-23 18:14:08.570Z click
-- element: {"tag":"button","role":"switch","ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-09-23 18:14:08.580Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"checkbox","id":null,"placeholder":null,"label":"[checkbox]","value":"on","valueLength":2,"text":""}
-
-## 2026-09-23 18:14:10.314Z click
-- element: {"tag":"button","role":"switch","ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-09-23 18:14:10.318Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"checkbox","id":null,"placeholder":null,"label":"[checkbox]","value":"on","valueLength":2,"text":""}
-
-## 2026-09-23 18:14:11.739Z click
-- element: {"tag":"button","role":"switch","ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-09-23 18:14:11.744Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"checkbox","id":null,"placeholder":null,"label":"[checkbox]","value":"on","valueLength":2,"text":""}
-
-## 2026-09-23 18:14:16.699Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":null,"label":"[number]","value":"","valueLength":0,"text":""}
-
-## 2026-09-23 18:14:16.927Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":null,"label":"[number]","value":"","valueLength":0,"text":""}
-
-## 2026-09-23 18:14:34.353Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":null,"label":"[number]","value":"39.90","valueLength":5,"text":""}
-
-## 2026-09-23 18:14:34.355Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":null,"label":"[number]","value":"39.90","valueLength":5,"text":""}
-
-## 2026-09-23 18:14:34.358Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":null,"label":"[number]","value":"","valueLength":0,"text":""}
-
-## 2026-09-23 18:14:34.575Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":null,"label":"[number]","value":"","valueLength":0,"text":""}
-
-## 2026-09-23 18:14:39.941Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":null,"label":"[number]","value":"27.90","valueLength":5,"text":""}
-
-## 2026-09-23 18:14:39.941Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":null,"label":"[number]","value":"27.90","valueLength":5,"text":""}
-
-## 2026-09-23 18:14:39.944Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 150","label":"Ex: 150","value":"","valueLength":0,"text":""}
-
-## 2026-09-23 18:14:40.165Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 150","label":"Ex: 150","value":"","valueLength":0,"text":""}
-
-## 2026-09-23 18:14:42.258Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 150","label":"Ex: 150","value":"200","valueLength":3,"text":""}
-
-## 2026-09-23 18:14:42.258Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 150","label":"Ex: 150","value":"200","valueLength":3,"text":""}
-
-## 2026-09-23 18:14:42.259Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 5","label":"Ex: 5","value":"","valueLength":0,"text":""}
-
-## 2026-09-23 18:14:42.472Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 5","label":"Ex: 5","value":"","valueLength":0,"text":""}
-
-## 2026-09-23 18:14:47.731Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 5","label":"Ex: 5","value":"5","valueLength":1,"text":""}
-
-## 2026-09-23 18:14:47.731Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 5","label":"Ex: 5","value":"5","valueLength":1,"text":""}
-
-## 2026-09-23 18:14:47.732Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 11","label":"Ex: 11","value":"","valueLength":0,"text":""}
-
-## 2026-09-23 18:14:47.957Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 11","label":"Ex: 11","value":"","valueLength":0,"text":""}
-
-## 2026-09-23 18:14:55.464Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 11","label":"Ex: 11","value":"15","valueLength":2,"text":""}
-
-## 2026-09-23 18:14:55.465Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 11","label":"Ex: 11","value":"15","valueLength":2,"text":""}
-
-## 2026-09-23 18:14:55.466Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 20","label":"Ex: 20","value":"","valueLength":0,"text":""}
-
-## 2026-09-23 18:14:55.689Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 20","label":"Ex: 20","value":"","valueLength":0,"text":""}
-
-## 2026-09-23 18:15:01.746Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 20","label":"Ex: 20","value":"25","valueLength":2,"text":""}
-
-## 2026-09-23 18:15:01.746Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 20","label":"Ex: 20","value":"25","valueLength":2,"text":""}
-
-## 2026-09-23 18:15:01.768Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Digite os tamanhos separados por vírgula...","label":"Digite os tamanhos separados por vírgula...","value":"","valueLength":0,"text":""}
-
-## 2026-09-23 18:15:01.967Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Digite os tamanhos separados por vírgula...","label":"Digite os tamanhos separados por vírgula...","value":"","valueLength":0,"text":""}
-
-## 2026-09-23 18:15:09.166Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Digite os tamanhos separados por vírgula...","label":"Digite os tamanhos separados por vírgula...","value":"P, M, G, GG","valueLength":11,"text":""}
-
-## 2026-09-23 18:15:09.166Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Digite os tamanhos separados por vírgula...","label":"Digite os tamanhos separados por vírgula...","value":"P, M, G, GG","valueLength":11,"text":""}
-
-## 2026-09-23 18:15:09.167Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"Azul Marinho Lacinho e Coração","valueLength":30,"text":""}
-
-## 2026-09-23 18:15:09.361Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"Azul Marinho Lacinho e Coração","valueLength":30,"text":""}
-
-## 2026-09-23 18:15:09.618Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"Azul Marinho Lacinho e Coração","valueLength":30,"text":""}
-
-## 2026-09-23 18:15:09.837Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"Azul Marinho Lacinho e Coração","valueLength":30,"text":""}
-
-## 2026-09-23 18:15:11.850Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"Azul Marinho Lacinho e Coração","valueLength":30,"text":""}
-
-## 2026-09-23 18:15:11.851Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Digite as cores separadas por vírgula...","label":"Digite as cores separadas por vírgula...","value":"","valueLength":0,"text":""}
-
-## 2026-09-23 18:15:12.080Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Digite as cores separadas por vírgula...","label":"Digite as cores separadas por vírgula...","value":"","valueLength":0,"text":""}
-
-## 2026-09-23 18:15:15.966Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Digite as cores separadas por vírgula...","label":"Digite as cores separadas por vírgula...","value":"Azul Marinho Lacinho e Coração, ","valueLength":32,"text":""}
-
-## 2026-09-23 18:15:15.966Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Digite as cores separadas por vírgula...","label":"Digite as cores separadas por vírgula...","value":"Azul Marinho Lacinho e Coração, ","valueLength":32,"text":""}
-
-## 2026-09-23 18:15:15.967Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"Rosa Claro Cerejinha e Borboleta","valueLength":32,"text":""}
-
-## 2026-09-23 18:15:16.161Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"Rosa Claro Cerejinha e Borboleta","valueLength":32,"text":""}
-
-## 2026-09-23 18:15:16.375Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"Rosa Claro Cerejinha e Borboleta","valueLength":32,"text":""}
-
-## 2026-09-23 18:15:16.592Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"Rosa Claro Cerejinha e Borboleta","valueLength":32,"text":""}
-
-## 2026-09-23 18:15:18.562Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"Rosa Claro Cerejinha e Borboleta","valueLength":32,"text":""}
-
-## 2026-09-23 18:15:18.563Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Digite as cores separadas por vírgula...","label":"Digite as cores separadas por vírgula...","value":"Azul Marinho Lacinho e Coração, ","valueLength":32,"text":""}
-
-## 2026-09-23 18:15:18.790Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Digite as cores separadas por vírgula...","label":"Digite as cores separadas por vírgula...","value":"Azul Marinho Lacinho e Coração, ","valueLength":32,"text":""}
-
-## 2026-09-23 18:15:22.780Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Digite as cores separadas por vírgula...","label":"Digite as cores separadas por vírgula...","value":"Azul Marinho Lacinho e Coração, Rosa Claro Cerejinha e Borboleta, ","valueLength":66,"text":""}
-
-## 2026-09-23 18:15:22.780Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Digite as cores separadas por vírgula...","label":"Digite as cores separadas por vírgula...","value":"Azul Marinho Lacinho e Coração, Rosa Claro Cerejinha e Borboleta, ","valueLength":66,"text":""}
-
-## 2026-09-23 18:15:22.781Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"Amarelo Manteiga  Cerejinha e Flor","valueLength":34,"text":""}
-
-## 2026-09-23 18:15:22.969Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"Amarelo Manteiga  Cerejinha e Flor","valueLength":34,"text":""}
-
-## 2026-09-23 18:15:23.167Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"Amarelo Manteiga  Cerejinha e Flor","valueLength":34,"text":""}
-
-## 2026-09-23 18:15:23.389Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"Amarelo Manteiga  Cerejinha e Flor","valueLength":34,"text":""}
-
-## 2026-09-23 18:15:25.437Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"Amarelo Manteiga  Cerejinha e Flor","valueLength":34,"text":""}
-
-## 2026-09-23 18:15:25.439Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Digite as cores separadas por vírgula...","label":"Digite as cores separadas por vírgula...","value":"Azul Marinho Lacinho e Coração, Rosa Claro Cerejinha e Borboleta, ","valueLength":66,"text":""}
-
-## 2026-09-23 18:15:25.659Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Digite as cores separadas por vírgula...","label":"Digite as cores separadas por vírgula...","value":"Azul Marinho Lacinho e Coração, Rosa Claro Cerejinha e Borboleta, ","valueLength":66,"text":""}
-
-## 2026-09-23 18:15:33.676Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Digite as cores separadas por vírgula...","label":"Digite as cores separadas por vírgula...","value":"Azul Marinho Lacinho e Coração, Rosa Claro Cerejinha e Borboleta, Amarelo Manteiga  Cerejinha e Flor, ","valueLength":102,"text":""}
-
-## 2026-09-23 18:15:33.676Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Digite as cores separadas por vírgula...","label":"Digite as cores separadas por vírgula...","value":"Azul Marinho Lacinho e Coração, Rosa Claro Cerejinha e Borboleta, Amarelo Manteiga  Cerejinha e Flor, ","valueLength":102,"text":""}
-
-## 2026-09-23 18:15:33.677Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"Rosa Chiclete Lacinho e Coração","valueLength":31,"text":""}
-
-## 2026-09-23 18:15:33.886Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"Rosa Chiclete Lacinho e Coração","valueLength":31,"text":""}
-
-## 2026-09-23 18:15:34.106Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"Rosa Chiclete Lacinho e Coração","valueLength":31,"text":""}
-
-## 2026-09-23 18:15:34.323Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"Rosa Chiclete Lacinho e Coração","valueLength":31,"text":""}
-
-## 2026-09-23 18:15:36.825Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"Rosa Chiclete Lacinho e Coração","valueLength":31,"text":""}
-
-## 2026-09-23 18:15:36.825Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Digite as cores separadas por vírgula...","label":"Digite as cores separadas por vírgula...","value":"Azul Marinho Lacinho e Coração, Rosa Claro Cerejinha e Borboleta, Amarelo Manteiga  Cerejinha e Flor, ","valueLength":102,"text":""}
-
-## 2026-09-23 18:15:37.055Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Digite as cores separadas por vírgula...","label":"Digite as cores separadas por vírgula...","value":"Azul Marinho Lacinho e Coração, Rosa Claro Cerejinha e Borboleta, Amarelo Manteiga  Cerejinha e Flor, ","valueLength":102,"text":""}
-
-## 2026-09-23 18:15:45.198Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Digite as cores separadas por vírgula...","label":"Digite as cores separadas por vírgula...","value":"Azul Marinho Lacinho e Coração, Rosa Claro Cerejinha e Borboleta, Amarelo Manteiga  Cerejinha e Flor, Rosa Chiclete Lacinho e Coração, ","valueLength":135,"text":""}
-
-## 2026-09-23 18:15:45.199Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Digite as cores separadas por vírgula...","label":"Digite as cores separadas por vírgula...","value":"Azul Marinho Lacinho e Coração, Rosa Claro Cerejinha e Borboleta, Amarelo Manteiga  Cerejinha e Flor, Rosa Chiclete Lacinho e Coração, ","valueLength":135,"text":""}
-
-## 2026-09-23 18:15:45.199Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"Azul Serenity Arco-iris","valueLength":23,"text":""}
-
-## 2026-09-23 18:15:45.393Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"Azul Serenity Arco-iris","valueLength":23,"text":""}
-
-## 2026-09-23 18:15:45.620Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"Azul Serenity Arco-iris","valueLength":23,"text":""}
-
-## 2026-09-23 18:15:45.849Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"Azul Serenity Arco-iris","valueLength":23,"text":""}
-
-## 2026-09-23 18:15:48.731Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Nome / Cor da Mídia","label":"Nome / Cor da Mídia","value":"Azul Serenity Arco-iris","valueLength":23,"text":""}
-
-## 2026-09-23 18:15:48.732Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Digite as cores separadas por vírgula...","label":"Digite as cores separadas por vírgula...","value":"Azul Marinho Lacinho e Coração, Rosa Claro Cerejinha e Borboleta, Amarelo Manteiga  Cerejinha e Flor, Rosa Chiclete Lacinho e Coração, ","valueLength":135,"text":""}
-
-## 2026-09-23 18:15:48.951Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Digite as cores separadas por vírgula...","label":"Digite as cores separadas por vírgula...","value":"Azul Marinho Lacinho e Coração, Rosa Claro Cerejinha e Borboleta, Amarelo Manteiga  Cerejinha e Flor, Rosa Chiclete Lacinho e Coração, ","valueLength":135,"text":""}
-
-## 2026-09-23 18:15:56.750Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Digite as cores separadas por vírgula...","label":"Digite as cores separadas por vírgula...","value":"Azul Marinho Lacinho e Coração, Rosa Claro Cerejinha e Borboleta, Amarelo Manteiga  Cerejinha e Flor, Rosa Chiclete Lacinho e Coração, Azul Serenity Arco-iris","valueLength":158,"text":""}
-
-## 2026-09-23 18:15:56.750Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Digite as cores separadas por vírgula...","label":"Digite as cores separadas por vírgula...","value":"Azul Marinho Lacinho e Coração, Rosa Claro Cerejinha e Borboleta, Amarelo Manteiga  Cerejinha e Flor, Rosa Chiclete Lacinho e Coração, Azul Serenity Arco-iris","valueLength":158,"text":""}
-
-## 2026-09-23 18:15:56.773Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 25","label":"Ex: 25","value":"","valueLength":0,"text":""}
-
-## 2026-09-23 18:15:56.978Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 25","label":"Ex: 25","value":"","valueLength":0,"text":""}
-
-## 2026-09-23 18:16:09.992Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 25","label":"Ex: 25","value":"100","valueLength":3,"text":""}
-
-## 2026-09-23 18:16:09.993Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 25","label":"Ex: 25","value":"100","valueLength":3,"text":""}
-
-## 2026-09-23 18:16:09.995Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 79.90","label":"Ex: 79.90","value":"","valueLength":0,"text":""}
-
-## 2026-09-23 18:16:10.208Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 79.90","label":"Ex: 79.90","value":"","valueLength":0,"text":""}
-
-## 2026-09-23 18:16:13.546Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 79.90","label":"Ex: 79.90","value":"39.90","valueLength":5,"text":""}
-
-## 2026-09-23 18:16:13.546Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 79.90","label":"Ex: 79.90","value":"39.90","valueLength":5,"text":""}
-
-## 2026-09-23 18:16:13.560Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 65.00","label":"Ex: 65.00","value":"","valueLength":0,"text":""}
-
-## 2026-09-23 18:16:13.763Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 65.00","label":"Ex: 65.00","value":"","valueLength":0,"text":""}
-
-## 2026-09-23 18:16:21.065Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 65.00","label":"Ex: 65.00","value":"27.90","valueLength":5,"text":""}
-
-## 2026-09-23 18:16:21.065Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 65.00","label":"Ex: 65.00","value":"27.90","valueLength":5,"text":""}
-
-## 2026-09-23 18:16:21.282Z click
-- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Gerar Variações"}
-
-## 2026-09-23 18:16:38.667Z click
-- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Gerar Textos e SEO Automaticamente com IA"}
-
-## 2026-09-23 18:16:38.764Z focus
-- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"conforto","valueLength":8,"text":"Básico / EssencialConforto / Dia a DiaSensual / OusadoRomântico / DelicadoLuxo / SofisticadoFitness / EsportivoPijama / LoungewearCropped / OutwearModelador / CintaMaternidade / GestantePlus Size / CurvyPraia / Resort"}
-
-## 2026-09-23 18:16:43.764Z click
-- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"conforto","valueLength":8,"text":"Básico / EssencialConforto / Dia a DiaSensual / OusadoRomântico / DelicadoLuxo / SofisticadoFitness / EsportivoPijama / LoungewearCropped / OutwearModelador / CintaMaternidade / GestantePlus Size / CurvyPraia / Resort"}
-
-## 2026-09-23 18:16:50.090Z change
-- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"pijama","valueLength":6,"text":"Básico / EssencialConforto / Dia a DiaSensual / OusadoRomântico / DelicadoLuxo / SofisticadoFitness / EsportivoPijama / LoungewearCropped / OutwearModelador / CintaMaternidade / GestantePlus Size / CurvyPraia / Resort"}
-
-## 2026-09-23 18:16:50.113Z click
-- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"pijama","valueLength":6,"text":"Básico / EssencialConforto / Dia a DiaSensual / OusadoRomântico / DelicadoLuxo / SofisticadoFitness / EsportivoPijama / LoungewearCropped / OutwearModelador / CintaMaternidade / GestantePlus Size / CurvyPraia / Resort"}
-
-## 2026-09-23 18:16:51.298Z blur
-- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"pijama","valueLength":6,"text":"Básico / EssencialConforto / Dia a DiaSensual / OusadoRomântico / DelicadoLuxo / SofisticadoFitness / EsportivoPijama / LoungewearCropped / OutwearModelador / CintaMaternidade / GestantePlus Size / CurvyPraia / Resort"}
-
-## 2026-09-23 18:16:51.299Z focus
-- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"microfibra","valueLength":10,"text":"MicrofibraRendaAlgodãoSuede / SuedineTuleCetimVeludoLiganeteViscolycraPoliamidaFluity (Toque de Seda)Modal"}
-
-## 2026-09-23 18:16:51.502Z click
-- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"microfibra","valueLength":10,"text":"MicrofibraRendaAlgodãoSuede / SuedineTuleCetimVeludoLiganeteViscolycraPoliamidaFluity (Toque de Seda)Modal"}
-
-## 2026-09-23 18:16:54.005Z change
-- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"suede","valueLength":5,"text":"MicrofibraRendaAlgodãoSuede / SuedineTuleCetimVeludoLiganeteViscolycraPoliamidaFluity (Toque de Seda)Modal"}
-
-## 2026-09-23 18:16:54.024Z click
-- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"suede","valueLength":5,"text":"MicrofibraRendaAlgodãoSuede / SuedineTuleCetimVeludoLiganeteViscolycraPoliamidaFluity (Toque de Seda)Modal"}
-
-## 2026-09-23 18:17:03.549Z blur
-- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"suede","valueLength":5,"text":"MicrofibraRendaAlgodãoSuede / SuedineTuleCetimVeludoLiganeteViscolycraPoliamidaFluity (Toque de Seda)Modal"}
-
-## 2026-09-23 18:17:03.551Z focus
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"checkbox","id":null,"placeholder":null,"label":"Alças reguláveis","value":"on","valueLength":2,"text":""}
-
-## 2026-09-23 18:17:03.773Z click
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"checkbox","id":null,"placeholder":null,"label":"Alças reguláveis","value":"on","valueLength":2,"text":""}
-
-## 2026-09-23 18:17:03.807Z change
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"checkbox","id":null,"placeholder":null,"label":"Alças reguláveis","value":"on","valueLength":2,"text":""}
-
-## 2026-09-23 18:17:13.782Z blur
-- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"checkbox","id":null,"placeholder":null,"label":"Alças reguláveis","value":"on","valueLength":2,"text":""}
-
-## 2026-09-23 18:17:14.001Z click
-- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Gerar com Gemini AI"}
-
-## 2026-09-23 18:17:39.799Z network.error
-- method: POST
-- url: http://localhost:3000/hcgi/api/integracoes/gemini/gerar-descricao
-- status: 500
-- statusText: Internal Server Error
-- requestBody: {"name":"Pijama Feminino Short Doll Suede Confortável Tecido Leve e Macio Fresquinho","categoryName":"Pijama","estilo":"pijama","tecido":"suede","destaques":["Alças reguláveis"]}
-- response: {"sucesso":false,"mensagem":"Erro ao gerar descrições com a IA: Todos os modelos falharam: {\"gemini-2.5-flash (v1)\":\"[Status 404] This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.6-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gemini-api/docs/get-started).\",\"gemini-2.5-flash (v1beta)\":\"[Status 404] This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.6-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gemini-api/docs/get-started).\",\"gemini-3.5-flash (v1)\":\"[Status 503] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\"gemini-3.5-flash (v1beta)\":\"[Status 503] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\"gemini-2.5-flash-lite (v1)\":\"[Status 404] This model models/gemini-2.5-flash-lite is no longer available to new users. Please update your code to use models/gemini-3.5-flash-lite for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gemini-api/docs/get-started).\",\"gemini-3.1-flash-lite (v1)\":\"[Status desconhecido] timeout of 20000ms exceeded\"}. Modelos disponíveis para sua chave: [\"models/gemini-2.5-flash\",\"models/gemini-2.5-pro\",\"models/gemma-4-26b-a4b-it\",\"models/gemma-4-31b-it\",\"models/gemini-2.5-flash-lite\",\"models/gemini-2.5-flash-image\",\"models/gemini-3.1-flash-lite\",\"models/gemini-3-pro-image\",\"models/gemini-3.1-flash-image\",\"models/gemini-3.1-flash-lite-image\",\"models/gemini-3.5-flash\",\"models/gemini-3.5-flash-lite\",\"models/gemini-3.6-flash\",\"models/gemini-3.7-flash\",\"models/gemini-3.8-flash\",\"models/antigravity-preview-05-2026\",\"models/antigravity...
-- durationMs: 25794
-
-## 2026-09-23 18:17:39.806Z console.error
-- text: Fetch error from http://localhost:3000/hcgi/api/integracoes/gemini/gerar-descricao: {"sucesso":false,"mensagem":"Erro ao gerar descrições com a IA: Todos os modelos falharam: {\"gemini-2.5-flash (v1)\":\"[Status 404] This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.6-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gemini-api/docs/get-started).\",\"gemini-2.5-flash (v1beta)\":\"[Status 404] This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.6-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gemini-api/docs/get-started).\",\"gemini-3.5-flash (v1)\":\"[Status 503] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\"gemini-3.5-flash (v1beta)\":\"[Status 503] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\"gemini-2.5-flash-lite (v1)\":\"[Status 404] This model models/gemini-2.5-flash-lite is no longer available to new users. Please update your code to use models/gemini-3.5-flash-lite for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gemini-api/docs/get-started).\",\"gemini-3.1-flash-lite (v1)\":\"[Status desconhecido] timeout of 20000ms exceeded\"}. Modelos disponíveis para sua chave: [\"models/gemini-2.5-flash\",\"models/gemini-2.5-pro\",\"models/gemma-4-26b-a4b-it\",\"models/gemma-4-31b-it\",\"models/gemini-2.5-flash-lite\",\"models/gemini-2.5-flash-image\",\"models/gemini-3.1-flash-lite\",\"models/gemini-3-pro-image\",\"models/gemini-3.1-flash-image\",\"models/gemini-3.1-flash-lite-image\",\"models/gemini-3.5-flash\",\"models/gemini-3.5-flash-lite\",\"models/gemini-3.6-flash\",\"models/gemini-3.7-flash\",\"m...
-
-## 2026-09-23 18:17:39.817Z console.error
-- text: Error: Erro ao gerar descrições com a IA: Todos os modelos falharam: {"gemini-2.5-flash (v1)":"[Status 404] This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.6-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gemini-api/docs/get-started).","gemini-2.5-flash (v1beta)":"[Status 404] This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.6-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gemini-api/docs/get-started).","gemini-3.5-flash (v1)":"[Status 503] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.","gemini-3.5-flash (v1beta)":"[Status 503] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.","gemini-2.5-flash-lite (v1)":"[Status 404] This model models/gemini-2.5-flash-lite is no longer available to new users. Please update your code to use models/gemini-3.5-flash-lite for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gemini-api/docs/get-started).","gemini-3.1-flash-lite (v1)":"[Status desconhecido] timeout of 20000ms exceeded"}. Modelos disponíveis para sua chave: ["models/gemini-2.5-flash","models/gemini-2.5-pro","models/gemma-4-26b-a4b-it","models/gemma-4-31b-it","models/gemini-2.5-flash-lite","models/gemini-2.5-flash-image","models/gemini-3.1-flash-lite","models/gemini-3-pro-image","models/gemini-3.1-flash-image","models/gemini-3.1-flash-lite-image","models/gemini-3.5-flash","models/gemini-3.5-flash-lite","models/gemini-3.6-flash","models/gemini-3.7-flash","models/gemini-3.8-flash","models/antigravity-preview-05-2026","models/antigravity-preview-09-2026","models/antigravity-preview-latest","models/deep-research-max...
-
-## 2026-09-23 18:17:53.823Z click
-- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Gerar com Gemini AI"}
-
-## 2026-09-23 18:18:07.920Z network.error
-- method: POST
-- url: http://localhost:3000/hcgi/api/integracoes/gemini/gerar-descricao
-- status: 500
-- statusText: Internal Server Error
-- requestBody: {"name":"Pijama Feminino Short Doll Suede Confortável Tecido Leve e Macio Fresquinho","categoryName":"Pijama","estilo":"pijama","tecido":"suede","destaques":["Alças reguláveis"]}
-- response: {"sucesso":false,"mensagem":"Erro ao gerar descrições com a IA: Todos os modelos falharam: {\"gemini-2.5-flash (v1)\":\"[Status 404] This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.6-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gemini-api/docs/get-started).\",\"gemini-2.5-flash (v1beta)\":\"[Status 404] This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.6-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gemini-api/docs/get-started).\",\"gemini-3.5-flash (v1)\":\"[Status 503] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\"gemini-3.5-flash (v1beta)\":\"[Status 503] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\"gemini-2.5-flash-lite (v1)\":\"[Status 404] This model models/gemini-2.5-flash-lite is no longer available to new users. Please update your code to use models/gemini-3.5-flash-lite for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gemini-api/docs/get-started).\",\"gemini-3.1-flash-lite (v1)\":\"[Status 503] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\"}. Modelos disponíveis para sua chave: [\"models/gemini-2.5-flash\",\"models/gemini-2.5-pro\",\"models/gemma-4-26b-a4b-it\",\"models/gemma-4-31b-it\",\"models/gemini-2.5-flash-lite\",\"models/gemini-2.5-flash-image\",\"models/gemini-3.1-flash-lite\",\"models/gemini-3-pro-image\",\"models/gemini-3.1-flash-image\",\"models/gemini-3.1-flash-lite-image\",\"models/gemini-3.5-flash\",\"models/gemini-3.5-flash-lite\",\"models/gemini-3.6-flash\",\"models/gemini-3.7-flash\",\"models/g...
-- durationMs: 14097
-
-## 2026-09-23 18:18:07.921Z console.error
-- text: Fetch error from http://localhost:3000/hcgi/api/integracoes/gemini/gerar-descricao: {"sucesso":false,"mensagem":"Erro ao gerar descrições com a IA: Todos os modelos falharam: {\"gemini-2.5-flash (v1)\":\"[Status 404] This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.6-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gemini-api/docs/get-started).\",\"gemini-2.5-flash (v1beta)\":\"[Status 404] This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.6-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gemini-api/docs/get-started).\",\"gemini-3.5-flash (v1)\":\"[Status 503] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\"gemini-3.5-flash (v1beta)\":\"[Status 503] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\"gemini-2.5-flash-lite (v1)\":\"[Status 404] This model models/gemini-2.5-flash-lite is no longer available to new users. Please update your code to use models/gemini-3.5-flash-lite for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gemini-api/docs/get-started).\",\"gemini-3.1-flash-lite (v1)\":\"[Status 503] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\"}. Modelos disponíveis para sua chave: [\"models/gemini-2.5-flash\",\"models/gemini-2.5-pro\",\"models/gemma-4-26b-a4b-it\",\"models/gemma-4-31b-it\",\"models/gemini-2.5-flash-lite\",\"models/gemini-2.5-flash-image\",\"models/gemini-3.1-flash-lite\",\"models/gemini-3-pro-image\",\"models/gemini-3.1-flash-image\",\"models/gemini-3.1-flash-lite-image\",\"models/gemini-3.5-flash\",\"models/gemini...
-
-## 2026-09-23 18:18:07.921Z console.error
-- text: Error: Erro ao gerar descrições com a IA: Todos os modelos falharam: {"gemini-2.5-flash (v1)":"[Status 404] This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.6-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gemini-api/docs/get-started).","gemini-2.5-flash (v1beta)":"[Status 404] This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.6-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gemini-api/docs/get-started).","gemini-3.5-flash (v1)":"[Status 503] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.","gemini-3.5-flash (v1beta)":"[Status 503] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.","gemini-2.5-flash-lite (v1)":"[Status 404] This model models/gemini-2.5-flash-lite is no longer available to new users. Please update your code to use models/gemini-3.5-flash-lite for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gemini-api/docs/get-started).","gemini-3.1-flash-lite (v1)":"[Status 503] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later."}. Modelos disponíveis para sua chave: ["models/gemini-2.5-flash","models/gemini-2.5-pro","models/gemma-4-26b-a4b-it","models/gemma-4-31b-it","models/gemini-2.5-flash-lite","models/gemini-2.5-flash-image","models/gemini-3.1-flash-lite","models/gemini-3-pro-image","models/gemini-3.1-flash-image","models/gemini-3.1-flash-lite-image","models/gemini-3.5-flash","models/gemini-3.5-flash-lite","models/gemini-3.6-flash","models/gemini-3.7-flash","models/gemini-3.8-flash","models/antigravity-preview-05-2026","models/antigravity-p...
-
-## 2026-09-23 18:18:20.938Z click
-- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Gerar Textos e SEO Automaticamente com IA"}
-
-## 2026-09-23 18:18:21.087Z focus
-- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"pijama","valueLength":6,"text":"Básico / EssencialConforto / Dia a DiaSensual / OusadoRomântico / DelicadoLuxo / SofisticadoFitness / EsportivoPijama / LoungewearCropped / OutwearModelador / CintaMaternidade / GestantePlus Size / CurvyPraia / Resort"}
-
-## 2026-09-23 18:18:23.649Z blur
-- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"pijama","valueLength":6,"text":"Básico / EssencialConforto / Dia a DiaSensual / OusadoRomântico / DelicadoLuxo / SofisticadoFitness / EsportivoPijama / LoungewearCropped / OutwearModelador / CintaMaternidade / GestantePlus Size / CurvyPraia / Resort"}
-
-## 2026-09-23 18:18:23.876Z click
-- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Gerar com Gemini AI"}
-
-## 2026-09-23 18:19:15.361Z click
-- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"submit","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Salvar"}
-
-## 2026-09-23 18:19:15.387Z submit
-- action: http://localhost:3000/admin/produtos/novo
-- fields: [{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[submit]","type":"submit","value":"","length":0,"redacted":false},{"label":"Ex: Conjunto Rendado Paris","type":"text","value":"Pijama Feminino Short Doll Suede Confortável Tecido Leve e Macio Fresquinho","length":75,"redacted":false},{"label":"Gerado automaticamente pela IA...","type":"text","value":"Pijama Short Doll Suede Confortável Feminino - Avante Lingerie","length":62,"redacted":false},{"label":"Gerado automaticamente pela IA com funil de Varejo/Atacado...","type":"textarea","value":"Noites revigorantes com o toque aveludado direto de Nova Friburgo. Economize no varejo ou ganhe descontos progressivos automáticos de atacado. Compre direto da fábrica!","length":168,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[select]","type":"select-one","value":"z7i4vmn1n7io1np","length":15,"redacted":false},{"label":"Ex: 6208.21.00","type":"text","value":"6108.32.00","length":10,"redacted":false},{"label":"Referência / Código Interno * Gerar Automático","type":"button","value":"","length":0,"redacted":false},{"label":"[input]","type":"text","value":"AVL-PIJ-2485","length":12,"redacted":false},{"label":"Dia do Namorado","type":"checkbox","value":"on","length":2,"redacted":false},{"label":"Moda Fitness","type":"checkbox","value":"on","length":2,"redacted":false},{"label":"Moda Sexy","type":"checkbox","value":"on","length":2,"redacted":false},{"label":"[select]","type":"select-one","value":"40bnrds09kg7dio","length":15,"redacted":false},{"label":"[button]","type":"button","value":"on","length":2,"redacted":false},{"label":"[checkbox]","type":"checkbox","value":"on","length":2,"redacted":false},{"label":"[button]","type":"button","value":"on","length":2,"redacted":false},{"label":"[checkbox]","type":"checkbox","value":"on","length":2,"redacted":false},{"label":"[button]","type":"button","value":"on","length":2,"redacted":false},{"label":"[checkbox]","type":"checkbox","value":"on","length":2,"redacted":false},{"label":"[button]","type":"button","value":"on","length":2,"redacted":false},{"label":"[checkbox]","type":"checkbox","value":"on","length":2,"redacted":false},{"label":"[button]","type":"button","value":"on","length":2,"redacted":false},{"label":"[checkbox]","type":"checkbox","value":"on","length":2,"redacted":false},{"label":"[number]","type":"number","value":"39.90","length":5,"redacted":false},{"label":"[number]","type":"number","value":"27.90","length":5,"redacted":false},{"label":"Ex: 150","type":"number","value":"200","length":3,"redacted":false},{"label":"Ex: 5","type":"number","value":"5","length":1,"redacted":false},{"label":"Ex: 11","type":"number","value":"15","length":2,"redacted":false},{"label":"Ex: 20","type":"number","value":"25","length":2,"redacted":false},{"label":"Digite os tamanhos separados por vírgula...","type":"text","value":"","length":0,"redacted":false},{"label":"Digite as cores separadas por vírgula...","type":"text","value":"","length":0,"redacted":false},{"label":"Ex: 25","type":"number","value":"","length":0,"redacted":false},{"label":"Ex: 79.90","type":"number","value":"","length":0,"redacted":false},{"label":"Ex: 65.00","type":"number","value":"","length":0,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[text]","type":"text","value":"AVL-PIJ-2485-AZUL-MARINHO-LA-P","length":30,"redacted":false},{"label":"[select]","type":"select-one","value":"new-1790186955187-0","length":19,"redacted":false},{"label":"[number]","type":"number","value":"100","length":3,"redacted":false},{"label":"Usar base","type":"number","value":"39.9","length":4,"redacted":false},{"label":"Usar base","type":"number","value":"27.9","length":4,"redacted":false},{"label":"[button]","type":"button","value":"on","length":2,"redacted":false},{"label":"[checkbox]","type":"checkbox","value":"on","length":2,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[text]","type":"text","value":"AVL-PIJ-2485-AZUL-MARINHO-LA-M","length":30,"redacted":false},{"label":"[select]","type":"select-one","value":"new-1790186955187-0","length":19,"redacted":false},{"label":"[number]","type":"number","value":"100","length":3,"redacted":false},{"label":"Usar base","type":"number","value":"39.9","length":4,"redacted":false},{"label":"Usar base","type":"number","value":"27.9","length":4,"redacted":false},{"label":"[button]","type":"button","value":"on","length":2,"redacted":false},{"label":"[checkbox]","type":"checkbox","value":"on","length":2,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[text]","type":"text","value":"AVL-PIJ-2485-AZUL-MARINHO-LA-G","length":30,"redacted":false},{"label":"[select]","type":"select-one","value":"new-1790186955187-0","length":19,"redacted":false},{"label":"[number]","type":"number","value":"100","length":3,"redacted":false},{"label":"Usar base","type":"number","value":"39.9","length":4,"redacted":false},{"label":"Usar base","type":"number","value":"27.9","length":4,"redacted":false},{"label":"[button]","type":"button","value":"on","length":2,"redacted":false},{"label":"[checkbox]","type":"checkbox","value":"on","length":2,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[text]","type":"text","value":"AVL-PIJ-2485-AZUL-MARINHO-LA-GG","length":31,"redacted":false},{"label":"[select]","type":"select-one","value":"new-1790186955187-0","length":19,"redacted":false},{"label":"[number]","type":"number","value":"100","length":3,"redacted":false},{"label":"Usar base","type":"number","value":"39.9","length":4,"redacted":false},{"label":"Usar base","type":"number","value":"27.9","length":4,"redacted":false},{"label":"[button]","type":"button","value":"on","length":2,"redacted":false},{"label":"[checkbox]","type":"checkbox","value":"on","length":2,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[text]","type":"text","value":"AVL-PIJ-2485-ROSA-CLARO-CERE-P","length":30,"redacted":false},{"label":"[select]","type":"select-one","value":"new-1790186971481-0","length":19,"redacted":false},{"label":"[number]","type":"number","value":"100","length":3,"redacted":false},{"label":"Usar base","type":"number","value":"39.9","length":4,"redacted":false},{"label":"Usar base","type":"number","value":"27.9","length":4,"redacted":false},{"label":"[button]","type":"button","value":"on","length":2,"redacted":false},{"label":"[checkbox]","type":"checkbox","value":"on","length":2,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[text]","type":"text","value":"AVL-PIJ-2485-ROSA-CLARO-CERE-M","length":30,"redacted":false},{"label":"[select]","type":"select-one","value":"new-1790186971481-0","length":19,"redacted":false},{"label":"[number]","type":"number","value":"100","length":3,"redacted":false},{"label":"Usar base","type":"number","value":"39.9","length":4,"redacted":false},{"label":"Usar base","type":"number","value":"27.9","length":4,"redacted":false},{"label":"[button]","type":"button","value":"on","length":2,"redacted":false},{"label":"[checkbox]","type":"checkbox","value":"on","length":2,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[text]","type":"text","value":"AVL-PIJ-2485-ROSA-CLARO-CERE-G","length":30,"redacted":false},{"label":"[select]","type":"select-one","value":"new-1790186971481-0","length":19,"redacted":false},{"label":"[number]","type":"number","value":"100","length":3,"redacted":false},{"label":"Usar base","type":"number","value":"39.9","length":4,"redacted":false},{"label":"Usar base","type":"number","value":"27.9","length":4,"redacted":false},{"label":"[button]","type":"button","value":"on","length":2,"redacted":false},{"label":"[checkbox]","type":"checkbox","value":"on","length":2,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[text]","type":"text","value":"AVL-PIJ-2485-ROSA-CLARO-CERE-GG","length":31,"redacted":false},{"label":"[select]","type":"select-one","value":"new-1790186971481-0","length":19,"redacted":false},{"label":"[number]","type":"number","value":"100","length":3,"redacted":false},{"label":"Usar base","type":"number","value":"39.9","length":4,"redacted":false},{"label":"Usar base","type":"number","value":"27.9","length":4,"redacted":false},{"label":"[button]","type":"button","value":"on","length":2,"redacted":false},{"label":"[checkbox]","type":"checkbox","value":"on","length":2,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[text]","type":"text","value":"AVL-PIJ-2485-AMARELO-MANTEIG-P","length":30,"redacted":false},{"label":"[select]","type":"select-one","value":"new-1790186971482-1","length":19,"redacted":false},{"label":"[number]","type":"number","value":"100","length":3,"redacted":false},{"label":"Usar base","type":"number","value":"39.9","length":4,"redacted":false},{"label":"Usar base","type":"number","value":"27.9","length":4,"redacted":false},{"label":"[button]","type":"button","value":"on","length":2,"redacted":false},{"label":"[checkbox]","type":"checkbox","value":"on","length":2,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[text]","type":"text","value":"AVL-PIJ-2485-AMARELO-MANTEIG-M","length":30,"redacted":false},{"label":"[select]","type":"select-one","value":"new-1790186971482-1","length":19,"redacted":false},{"label":"[number]","type":"number","value":"100","length":3,"redacted":false},{"label":"Usar base","type":"number","value":"39.9","length":4,"redacted":false},{"label":"Usar base","type":"number","value":"27.9","length":4,"redacted":false},{"label":"[button]","type":"button","value":"on","length":2,"redacted":false},{"label":"[checkbox]","type":"checkbox","value":"on","length":2,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[text]","type":"text","value":"AVL-PIJ-2485-AMARELO-MANTEIG-G","length":30,"redacted":false},{"label":"[select]","type":"select-one","value":"new-1790186971482-1","length":19,"redacted":false},{"label":"[number]","type":"number","value":"100","length":3,"redacted":false},{"label":"Usar base","type":"number","value":"39.9","length":4,"redacted":false},{"label":"Usar base","type":"number","value":"27.9","length":4,"redacted":false},{"label":"[button]","type":"button","value":"on","length":2,"redacted":false},{"label":"[checkbox]","type":"checkbox","value":"on","length":2,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[text]","type":"text","value":"AVL-PIJ-2485-AMARELO-MANTEIG-GG","length":31,"redacted":false},{"label":"[select]","type":"select-one","value":"new-1790186971482-1","length":19,"redacted":false},{"label":"[number]","type":"number","value":"100","length":3,"redacted":false},{"label":"Usar base","type":"number","value":"39.9","length":4,"redacted":false},{"label":"Usar base","type":"number","value":"27.9","length":4,"redacted":false},{"label":"[button]","type":"button","value":"on","length":2,"redacted":false},{"label":"[checkbox]","type":"checkbox","value":"on","length":2,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[text]","type":"text","value":"AVL-PIJ-2485-ROSA-CHICLETE-L-P","length":30,"redacted":false},{"label":"[select]","type":"select-one","value":"new-1790186971482-2","length":19,"redacted":false},{"label":"[number]","type":"number","value":"100","length":3,"redacted":false},{"label":"Usar base","type":"number","value":"39.9","length":4,"redacted":false},{"label":"Usar base","type":"number","value":"27.9","length":4,"redacted":false},{"label":"[button]","type":"button","value":"on","length":2,"redacted":false},{"label":"[checkbox]","type":"checkbox","value":"on","length":2,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[text]","type":"text","value":"AVL-PIJ-2485-ROSA-CHICLETE-L-M","length":30,"redacted":false},{"label":"[select]","type":"select-one","value":"new-1790186971482-2","length":19,"redacted":false},{"label":"[number]","type":"number","value":"100","length":3,"redacted":false},{"label":"Usar base","type":"number","value":"39.9","length":4,"redacted":false},{"label":"Usar base","type":"number","value":"27.9","length":4,"redacted":false},{"label":"[button]","type":"button","value":"on","length":2,"redacted":false},{"label":"[checkbox]","type":"checkbox","value":"on","length":2,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[text]","type":"text","value":"AVL-PIJ-2485-ROSA-CHICLETE-L-G","length":30,"redacted":false},{"label":"[select]","type":"select-one","value":"new-1790186971482-2","length":19,"redacted":false},{"label":"[number]","type":"number","value":"100","length":3,"redacted":false},{"label":"Usar base","type":"number","value":"39.9","length":4,"redacted":false},{"label":"Usar base","type":"number","value":"27.9","length":4,"redacted":false},{"label":"[button]","type":"button","value":"on","length":2,"redacted":false},{"label":"[checkbox]","type":"checkbox","value":"on","length":2,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[text]","type":"text","value":"AVL-PIJ-2485-ROSA-CHICLETE-L-GG","length":31,"redacted":false},{"label":"[select]","type":"select-one","value":"new-1790186971482-2","length":19,"redacted":false},{"label":"[number]","type":"number","value":"100","length":3,"redacted":false},{"label":"Usar base","type":"number","value":"39.9","length":4,"redacted":false},{"label":"Usar base","type":"number","value":"27.9","length":4,"redacted":false},{"label":"[button]","type":"button","value":"on","length":2,"redacted":false},{"label":"[checkbox]","type":"checkbox","value":"on","length":2,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[text]","type":"text","value":"AVL-PIJ-2485-AZUL-SERENITY-A-P","length":30,"redacted":false},{"label":"[select]","type":"select-one","value":"new-1790186971482-3","length":19,"redacted":false},{"label":"[number]","type":"number","value":"100","length":3,"redacted":false},{"label":"Usar base","type":"number","value":"39.9","length":4,"redacted":false},{"label":"Usar base","type":"number","value":"27.9","length":4,"redacted":false},{"label":"[button]","type":"button","value":"on","length":2,"redacted":false},{"label":"[checkbox]","type":"checkbox","value":"on","length":2,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[text]","type":"text","value":"AVL-PIJ-2485-AZUL-SERENITY-A-M","length":30,"redacted":false},{"label":"[select]","type":"select-one","value":"new-1790186971482-3","length":19,"redacted":false},{"label":"[number]","type":"number","value":"100","length":3,"redacted":false},{"label":"Usar base","type":"number","value":"39.9","length":4,"redacted":false},{"label":"Usar base","type":"number","value":"27.9","length":4,"redacted":false},{"label":"[button]","type":"button","value":"on","length":2,"redacted":false},{"label":"[checkbox]","type":"checkbox","value":"on","length":2,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[text]","type":"text","value":"AVL-PIJ-2485-AZUL-SERENITY-A-G","length":30,"redacted":false},{"label":"[select]","type":"select-one","value":"new-1790186971482-3","length":19,"redacted":false},{"label":"[number]","type":"number","value":"100","length":3,"redacted":false},{"label":"Usar base","type":"number","value":"39.9","length":4,"redacted":false},{"label":"Usar base","type":"number","value":"27.9","length":4,"redacted":false},{"label":"[button]","type":"button","value":"on","length":2,"redacted":false},{"label":"[checkbox]","type":"checkbox","value":"on","length":2,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[text]","type":"text","value":"AVL-PIJ-2485-AZUL-SERENITY-A-GG","length":31,"redacted":false},{"label":"[select]","type":"select-one","value":"new-1790186971482-3","length":19,"redacted":false},{"label":"[number]","type":"number","value":"100","length":3,"redacted":false},{"label":"Usar base","type":"number","value":"39.9","length":4,"redacted":false},{"label":"Usar base","type":"number","value":"27.9","length":4,"redacted":false},{"label":"[button]","type":"button","value":"on","length":2,"redacted":false},{"label":"[checkbox]","type":"checkbox","value":"on","length":2,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[textarea]","type":"textarea","value":"✨ Sinta o carinho de um pijama feito para elevar seu bem-estar. O Short Doll Suede da Avante Lingerie une o frescor necessário para noites tranquilas com o charme que você merece ao descansar.\n🌸 Confeccionado em nossa fábrica própria em Nova Friburgo, garantimos uma peça com acabamento impecável e pronta para transformar seus momentos de autocuidado.","length":353,"redacted":false},{"label":"Adicionar Fotos/Vídeos","type":"file","value":"C:\\fakepath\\Rosa Claro Cerejinha e Borboleta.jpeg","length":49,"redacted":false},{"label":"Nome / Cor da Mídia","type":"text","value":"Azul Marinho Lacinho e Coração","length":30,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"Nome / Cor da Mídia","type":"text","value":"Azul Marinho Lacinho e Coração","length":30,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"Nome / Cor da Mídia","type":"text","value":"Rosa Claro Cerejinha e Borboleta","length":32,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"Nome / Cor da Mídia","type":"text","value":"Amarelo Manteiga  Cerejinha e Flor","length":34,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"Nome / Cor da Mídia","type":"text","value":"Rosa Chiclete Lacinho e Coração","length":31,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"Nome / Cor da Mídia","type":"text","value":"Azul Serenity Arco-iris","length":23,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"Ex: https://youtube.com/shorts/... ou link .mp4","type":"url","value":"https://avantelingerie.com.br/video/Short_doll.mp4","length":50,"redacted":false},{"label":"[select]","type":"select-one","value":"first","length":5,"redacted":false}]
-
-## 2026-09-23 18:19:16.247Z network.error
-- method: POST
-- url: http://localhost:3000/hcgi/api/bling/produtos/sincronizar
-- status: 400
-- statusText: Bad Request
-- requestBody: {"produto_id":"yh5di7bkb7nc3tt"}
-- response: {"sucesso":false,"erro":"Erro de autenticação com o Bling: Nenhum token do Bling encontrado no banco de dados. Realize a autorização OAuth.. Recadastre suas credenciais."}
-- durationMs: 41
-
-## 2026-09-23 18:19:16.249Z console.error
-- text: Fetch error from http://localhost:3000/hcgi/api/bling/produtos/sincronizar: {"sucesso":false,"erro":"Erro de autenticação com o Bling: Nenhum token do Bling encontrado no banco de dados. Realize a autorização OAuth.. Recadastre suas credenciais."}
-
-## 2026-09-23 18:19:16.261Z navigate
-- url: http://localhost:3000/admin/produtos
-- via: pushState
-
-## 2026-09-23 18:19:16.611Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:19:16.614Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:19:16.619Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:19:16.619Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:19:16.619Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:19:16.620Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:19:32.186Z click
-- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Ver Loja"}
-
-## 2026-09-23 18:19:32.187Z navigate
-- url: http://localhost:3000/
-- via: pushState
-
-## 2026-09-23 18:19:32.927Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:19:32.937Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:19:33.025Z network.error
-- method: GET
-- url: http://localhost:3000/hcgi/platform/api/collections/testimonials/records?page=1&perPage=10&filter=status%20%3D%20true&sort=-created
-- status: 400
-- statusText: Bad Request
-- response: 
-    {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-- durationMs: 86
-
-## 2026-09-23 18:19:33.025Z console.error
-- text: 
-    Fetch error from http://localhost:3000/hcgi/platform/api/collections/testimonials/records?page=1&perPage=10&filter=status%20%3D%20true&sort=-created: {"data":{},"message":"Something went wrong while processing your request.","status":400}
-    
-
-## 2026-09-23 18:19:33.057Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:19:33.058Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:19:33.058Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:19:33.064Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:19:33.065Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:19:33.069Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:19:33.069Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:19:33.071Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:19:33.071Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:19:33.074Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:19:33.075Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:19:33.076Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:19:33.076Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:19:33.078Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:19:33.078Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:19:33.080Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:19:33.080Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:19:33.082Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:19:33.082Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:19:33.086Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:19:33.086Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:19:33.088Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:19:33.089Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:20:22.837Z click
-- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-09-23 18:20:59.383Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:20:59.396Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:20:59.396Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:20:59.439Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:20:59.441Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:20:59.452Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:20:59.453Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:20:59.454Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:20:59.454Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:20:59.474Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:20:59.474Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:20:59.475Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:20:59.475Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:20:59.476Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:20:59.477Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:20:59.484Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:20:59.484Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:20:59.486Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:20:59.486Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:20:59.488Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:20:59.488Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:20:59.489Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:20:59.490Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:20:59.521Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:20:59.521Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:20:59.521Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:20:59.524Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:20:59.524Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:20:59.525Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:20:59.525Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:20:59.527Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:20:59.527Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:20:59.532Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:20:59.532Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:20:59.533Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:20:59.533Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:20:59.534Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:20:59.534Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:20:59.535Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:20:59.535Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:20:59.536Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:20:59.537Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:20:59.538Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:20:59.538Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:20:59.539Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:20:59.539Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:18.495Z click
-- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-09-23 18:21:18.510Z navigate
-- url: http://localhost:3000/produto/yh5di7bkb7nc3tt
-- via: pushState
-
-## 2026-09-23 18:21:19.011Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:19.017Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:19.017Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:19.017Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:19.017Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:19.017Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:19.018Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:19.018Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:19.018Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:19.018Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:19.018Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:19.018Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:19.018Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:19.059Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:19.060Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:19.060Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:19.060Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:19.061Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:19.061Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:19.095Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:19.095Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:19.396Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:19.396Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:19.397Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:19.397Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:19.397Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:19.398Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:19.412Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:19.413Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:19.437Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:19.437Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:19.438Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:19.438Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:19.438Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:19.438Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:19.442Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:19.442Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:25.348Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:25.349Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:25.349Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:25.349Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:25.350Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:25.350Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:25.356Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:25.356Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:25.362Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:25.363Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:25.363Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:25.363Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:25.363Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:25.363Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:25.367Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:25.367Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:25.762Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:25.762Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:25.762Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:25.762Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:25.763Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:25.763Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:25.767Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:25.767Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:25.778Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:25.779Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:25.779Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:25.779Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:25.779Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:25.779Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:25.783Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:25.784Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:25.792Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:25.792Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:25.793Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:25.793Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:25.793Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:25.793Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:25.797Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:25.797Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:25.809Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:25.809Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:25.809Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:25.809Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:25.810Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:25.810Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:25.813Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:25.813Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:25.825Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:25.826Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:25.827Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:25.827Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:25.827Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:25.827Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:25.831Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:25.831Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:25.842Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:25.842Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:25.842Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:25.842Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:25.843Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:25.843Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:25.846Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:25.847Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:25.859Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:25.859Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:25.859Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:25.859Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:25.859Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:25.860Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:25.863Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:25.863Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:25.875Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:25.875Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:25.876Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:25.876Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:25.876Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:25.876Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:25.879Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:25.879Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:25.892Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:25.893Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:25.893Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:25.893Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:25.893Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:25.893Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:25.897Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:25.897Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:25.908Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:25.909Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:25.909Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:25.909Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:25.909Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:25.909Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:25.913Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:25.914Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:25.926Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:25.926Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:25.926Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:25.927Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:25.927Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:25.927Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:25.930Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:25.930Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:26.010Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:26.011Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:26.011Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:26.011Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:26.012Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:26.012Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:26.015Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:26.015Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:26.076Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:26.076Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:26.076Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:26.077Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:26.077Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:26.077Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:26.081Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:26.081Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:26.143Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:26.143Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:26.144Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:26.144Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:26.144Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:26.144Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:26.148Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:26.148Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:26.159Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:26.160Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:26.160Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:26.160Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:26.160Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:26.160Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:26.164Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:26.164Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:26.177Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:26.178Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:26.178Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:26.178Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:26.178Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:26.178Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:26.181Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:26.181Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:26.193Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:26.193Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:26.193Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:26.193Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:26.194Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:26.194Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:26.199Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:26.199Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:26.209Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:26.209Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:26.209Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:26.209Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:26.210Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:26.210Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:26.213Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:26.213Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:26.226Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:26.226Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:26.227Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:26.227Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:26.227Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:26.227Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:26.229Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:26.229Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:26.245Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:26.245Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:26.246Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:26.247Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:26.247Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:26.247Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:26.251Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:26.251Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:26.259Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:26.259Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:26.259Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:26.260Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:26.260Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:26.260Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:26.263Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:26.263Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:26.611Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:26.611Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:26.611Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:26.612Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:26.612Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:26.612Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:26.616Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:26.617Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:26.626Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:26.626Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:26.626Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:26.626Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:26.627Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:26.627Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:26.631Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:26.631Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:26.643Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:26.643Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:26.643Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:26.643Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:26.644Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:26.644Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:26.647Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:26.647Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:28.242Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:28.243Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:28.243Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:28.243Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:28.243Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:28.244Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:28.247Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:28.247Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:28.261Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:28.262Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:28.262Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:28.262Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:28.262Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:28.262Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:28.265Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:28.266Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:28.278Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:28.278Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:28.279Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:28.279Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:28.279Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:28.279Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:28.284Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:28.284Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:28.295Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:28.295Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:28.296Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:28.296Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:28.296Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:28.297Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:28.300Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:28.301Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:28.311Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:28.311Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:28.311Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:28.312Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:28.312Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:28.312Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:28.317Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:28.317Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:29.743Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:29.744Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:29.744Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:29.744Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:29.744Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:29.745Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.376Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.377Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.377Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.377Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.377Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.378Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.385Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.385Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.395Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.396Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.396Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.396Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.396Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.397Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.403Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.403Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.410Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.410Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.411Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.411Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.411Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.411Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.418Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.418Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.427Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.427Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.428Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.428Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.428Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.428Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.434Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.434Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.445Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.446Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.446Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.447Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.447Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.447Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.455Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.455Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.777Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.778Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.779Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.779Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.779Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.779Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.786Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.786Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.794Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.795Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.795Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.795Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.796Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.796Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.804Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.804Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.811Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.811Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.811Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.811Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.811Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.811Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.816Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.816Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.826Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.826Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.826Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.827Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.827Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.827Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.832Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.832Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.843Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.843Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.843Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.843Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.844Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.844Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.848Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.848Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.859Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.860Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.860Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.860Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.860Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.860Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.864Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.864Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.876Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.876Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.877Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.878Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.878Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.879Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.883Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.883Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.911Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.911Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.912Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.912Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.912Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.913Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.918Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.918Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.927Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.927Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.927Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.927Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.927Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.927Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.931Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.931Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.944Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.945Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.945Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.945Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.946Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.946Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.950Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.950Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.960Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.960Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.960Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.961Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.961Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.961Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.966Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.966Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.977Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.977Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.977Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.978Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.978Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.979Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.982Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.983Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.992Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.993Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.993Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.993Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.994Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.994Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.998Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:30.998Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.011Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.011Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.011Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.011Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.012Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.012Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.016Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.016Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.026Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.027Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.027Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.027Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.027Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.027Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.033Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.033Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.043Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.043Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.043Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.043Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.043Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.044Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.048Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.048Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.060Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.061Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.061Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.061Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.061Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.062Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.066Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.067Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.075Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.076Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.076Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.076Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.077Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.077Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.081Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.081Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.093Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.094Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.094Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.094Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.094Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.094Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.100Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.100Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.109Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.110Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.110Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.110Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.110Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.110Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.114Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.114Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.126Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.126Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.127Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.127Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.127Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.127Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.131Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.131Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.144Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.144Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.144Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.145Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.145Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.145Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.148Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.149Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.159Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.160Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.160Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.160Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.160Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.160Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.165Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.165Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.177Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.178Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.178Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.178Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.178Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.179Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.183Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.184Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.193Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.193Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.193Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.194Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.194Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.194Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.197Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.198Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.525Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.526Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.526Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.526Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.527Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.527Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.531Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.531Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.542Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.543Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.543Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.543Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.543Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.544Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.547Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.547Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.561Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.561Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.561Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.561Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.561Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.561Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.565Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.565Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.576Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.577Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.577Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.577Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.577Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.578Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.582Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.582Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.848Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.848Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.849Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.849Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.849Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.849Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.853Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.853Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.860Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.860Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.860Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.860Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.861Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.861Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.865Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.865Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.877Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.878Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.878Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.879Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.879Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.880Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.885Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.885Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.894Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.894Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.895Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.895Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.895Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.895Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.899Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.899Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.910Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.911Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.911Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.911Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.911Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.911Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.914Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.914Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.927Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.927Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.927Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.927Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.928Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.928Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.932Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.932Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.943Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.943Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.943Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.943Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.944Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.944Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.948Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.948Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.961Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.962Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.962Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.962Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.962Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.962Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.966Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.966Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.977Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.977Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.977Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.977Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.978Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.978Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.982Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.982Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.993Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.994Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.994Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.994Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.994Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.995Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:31.999Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.000Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.010Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.011Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.011Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.011Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.011Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.012Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.016Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.017Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.027Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.027Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.027Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.027Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.027Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.028Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.031Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.032Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.043Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.043Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.043Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.043Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.044Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.044Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.048Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.048Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.060Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.060Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.060Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.061Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.061Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.061Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.065Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.065Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.076Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.077Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.077Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.077Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.078Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.078Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.084Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.084Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.093Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.093Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.094Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.094Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.094Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.094Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.098Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.099Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.110Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.110Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.111Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.111Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.112Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.112Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.116Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.116Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.126Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.127Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.127Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.127Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.127Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.127Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.131Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.131Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.144Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.144Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.145Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.145Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.145Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.145Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.148Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.149Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.160Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.160Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.161Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.161Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.161Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.161Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.165Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.165Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.176Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.177Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.177Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.177Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.178Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.178Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.184Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.184Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.193Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.193Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.193Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.193Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.193Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.193Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.197Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.197Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.309Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.310Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.310Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.310Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.310Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.311Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.315Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.316Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.327Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.328Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.328Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.329Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.329Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.329Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.333Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.334Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.343Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.344Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.344Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.345Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.345Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.345Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.350Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.351Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.359Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.359Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.360Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.360Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.360Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.360Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.365Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.365Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.378Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.378Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.378Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.379Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.379Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.379Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.383Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.383Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.394Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.394Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.395Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.395Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.395Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.395Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.400Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.400Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.409Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.410Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.410Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.410Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.411Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.411Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.416Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.416Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.426Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.427Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.427Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.427Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.427Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.427Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.436Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.437Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.444Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.445Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.445Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.445Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.446Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.446Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.450Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.450Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.459Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.460Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.460Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.460Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.460Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.461Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.464Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.464Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.477Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.478Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.478Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.478Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.478Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.478Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.482Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.482Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.492Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.493Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.493Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.493Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.501Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.501Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.507Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.508Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.526Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.526Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.526Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.526Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.527Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.527Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.532Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.532Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.544Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.544Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.544Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.544Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.544Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.544Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.549Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:32.549Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:34.560Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:34.562Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:34.563Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:34.563Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:34.563Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:34.563Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:43.428Z click
-- element: {"tag":"button","role":null,"ariaLabel":"Selecionar cor Azul Marinho Lacinho e Coração","name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-09-23 18:21:43.429Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:43.430Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:43.430Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:43.430Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:43.430Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:43.433Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:43.440Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:43.440Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:43.460Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:43.460Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:43.460Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:43.460Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:43.461Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:43.461Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:44.597Z click
-- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"P"}
-
-## 2026-09-23 18:21:44.601Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:44.602Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:44.602Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:44.602Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:44.602Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:44.603Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:44.613Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:44.613Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:44.645Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:44.646Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:44.646Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:44.647Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:44.647Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:44.648Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:44.654Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:44.655Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:46.224Z click
-- element: {"tag":"button","role":null,"ariaLabel":"Selecionar cor Rosa Claro Cerejinha e Borboleta","name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-09-23 18:21:46.226Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:46.226Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:46.226Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:46.226Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:46.227Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:46.227Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:46.231Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:46.232Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:46.245Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:46.246Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:46.246Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:46.246Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:46.247Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:46.248Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:46.256Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:46.256Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:48.294Z click
-- element: {"tag":"button","role":null,"ariaLabel":"Selecionar cor Amarelo Manteiga  Cerejinha e Flor","name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-09-23 18:21:48.296Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:48.297Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:48.297Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:48.297Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:48.297Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:48.297Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:48.304Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:48.306Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:48.315Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:48.315Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:48.316Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:48.316Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:48.316Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:48.316Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:48.324Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:48.324Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:50.364Z click
-- element: {"tag":"button","role":null,"ariaLabel":"Selecionar cor Rosa Chiclete Lacinho e Coração","name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
-
-## 2026-09-23 18:21:50.366Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:50.367Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:50.367Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:50.367Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:50.368Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:50.368Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:50.375Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:50.375Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:50.383Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:50.383Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:50.384Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:50.384Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:50.384Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:50.385Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:50.392Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:50.392Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:51.777Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:51.777Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:51.777Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:51.778Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:51.778Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:51.779Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:51.783Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:51.783Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:51.794Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:51.795Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:51.796Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:51.796Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:51.796Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:51.796Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:51.801Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
-
-## 2026-09-23 18:21:51.801Z console.warn
-- text: Please replace pb.files.getUrl() with pb.files.getURL()
+e pb.files.getUrl() with pb.files.getURL()
 
 ## 2026-09-23 18:21:51.810Z console.warn
 - text: Please replace pb.files.getUrl() with pb.files.getURL()
@@ -8734,4 +4269,1788 @@
 
 ## 2026-10-17 01:22:52.789Z click
 - element: {"tag":"a","role":null,"ariaLabel":"Go to next page","name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Next"}
+
+## 2026-11-15 14:04:17.289Z load
+- url: http://localhost:3000/mimos/maquina-de-vendas
+- title: Avante Lingerie | Oficial
+
+## 2026-11-15 14:04:32.911Z navigate
+- url: http://localhost:3000/mimos/maquina-de-vendas
+- via: replaceState
+
+## 2026-11-15 14:04:33.746Z network.error
+- method: POST
+- url: https://www.google.com/ccm/collect?rcb=9&frm=0&apvc=0&auid=247244429.1794751457&dt=Avante%20Lingerie%20%7C%20Oficial&tid=AW-18499593515&en=page_view&dl=http%3A%2F%2Flocalhost%3A3000%2Fmimos%2Fmaquina-de-vendas&scrsrc=www.googletagmanager.com&rnd=424245981.1794751457&navt=n&npa=0&gtm=45be6bb1z8f_AW-18499593515za208xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115616985~115938465~115938468~117776796~118897920~118897930~120385422~120412526~120420414~120469145~120469153~121191153~121246026~121246034~123988486&tft=1794751473065&tfd=21066&tids=AW-18499593515&fmt=8
+- status: 0
+- durationMs: 681
+
+## 2026-11-15 14:04:33.747Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 14:04:33.751Z network.error
+- method: POST
+- url: https://www.google.com/rmkt/collect/18499593515/?random=1794751473019&cv=11&fst=1794751473019&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be6bb1z8f_AW-18499593515za208xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115616985~115938465~115938468~117776796~118897920~118897930~120385422~120412526~120420414~120469145~120469153~121191153~121246026~121246034~123988486&u_w=1366&u_h=768&url=http%3A%2F%2Flocalhost%3A3000%2Fmimos%2Fmaquina-de-vendas&rcb=9&frm=0&tiba=Avante%20Lingerie%20%7C%20Oficial&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=247244429.1794751457&uaa=x86&uab=64&uafvl=Not-A.Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B157.0.8103.51%7CChromium%3B157.0.8103.51&uamb=0&uam=&uap=Windows&uapv=19.0.0&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5
+- status: 0
+- durationMs: 706
+
+## 2026-11-15 14:04:33.751Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 14:04:35.020Z network.error
+- method: POST
+- url: https://analytics.google.com/g/collect?v=2&tid=G-E2FS36FRG1&gtm=45je6bb1v9259987036za208xf1&_p=1794751456557&_gaz=1&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AAAAACAC&cid=946152551.1794751474&frm=0&ibt=1&ngs=1&pscdl=noapi&rcb=19&sr=1366x768&uaa=x86&uab=64&uafvl=Not-A.Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B157.0.8103.51%7CChromium%3B157.0.8103.51&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=pt-pt&_s=1&tag_exp=100940090~115616986~115938465~115938468~118897920~118897930~120213116~120385423~120412528~120420414~120469145~120469153~121246026~121246034~123988486&sid=1794751473&sct=1&seg=0&dl=http%3A%2F%2Flocalhost%2Fmimos%2Fmaquina-de-vendas&dt=Avante%20Lingerie%20%7C%20Oficial&en=page_view&_fv=1&_nsi=1&_ss=1&_ee=1&tfd=21916
+- status: 0
+- durationMs: 1103
+
+## 2026-11-15 14:04:35.020Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 14:04:38.405Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Aceitar & Continuar"}
+
+## 2026-11-15 14:04:39.297Z network.error
+- method: POST
+- url: https://analytics.google.com/g/collect?v=2&tid=G-E2FS36FRG1&gtm=45je6bb1v9259987036za200xf1&_p=1794751456557&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEAAACQC&ae=a&cid=946152551.1794751474&frm=0&ibt=1&ngs=1&pscdl=noapi&rcb=19&sr=1366x768&uaa=x86&uab=64&uafvl=Not-A.Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B157.0.8103.51%7CChromium%3B157.0.8103.51&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=pt-pt&_s=2&tag_exp=100940090~115616986~115938465~115938468~118897920~118897930~120213116~120385423~120412528~120420414~120469145~120469153~121246026~121246034~123988486&sid=1794751473&sct=1&seg=0&dl=http%3A%2F%2Flocalhost%2Fmimos%2Fmaquina-de-vendas&dt=Avante%20Lingerie%20%7C%20Oficial&en=scroll&epn.percent_scrolled=90&tfd=27221
+- status: 0
+- durationMs: 76
+
+## 2026-11-15 14:04:39.297Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 14:05:35.273Z click
+- element: {"tag":"div","role":"tabpanel","ariaLabel":null,"name":null,"type":null,"id":"radix-:r4:-content-calculadora","placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Preço que Você Pagou na Fábrica (R$)Custo unitárioR$Exemplos fábrica:Calcinha R$ 9,90Conjunto R$ 24,90Body R$ 34,90Camisola R$ 39,90Margem de Lucro que Você Quer+100%60%Rápido80%Bom100%Padrão ⭐130%TopBlindagem contra Custos OcultosEvite perder dinheiro Taxa de Maquininha / CartãoCompensa a taxa da maquininha no preço parcelado3.5% Sacolinha & EmbalagemInclui o custo da sacolinha e laço bonito+R$ 2.50Preço Sugerido para Vender100% calibradoPreço no Pix (À Vista)R$ 52.90Lucro no Bolso: +R$ 25.50Preço no Cartão (Até 2x)R$ 54.902x de R$ 27.45Seu Lucro Líquido RealDescontando produto, embalagem e taxas+R$ 25.50Por peçaQuanto você pode colocar no bolso por mês com essa peça:1 peça/diaR$ 663lucro/mês3 peças/diaR$ 1989lucro/mês5 peças/diaR$ 3315lucro/mêsComo falar para a cliente achar barato:\"Amiga, uma lingerie com essa mesma renda francesa e acabamento em loja de shopping não sai por menos de R$ 90 a R$ 120. Comigo, como trago direto da fábrica de Nova Friburgo, você leva por apenas R$ 52.90 no Pix!\""}
+
+## 2026-11-15 14:05:46.935Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":null,"label":"[number]","value":"24.9","valueLength":4,"text":""}
+
+## 2026-11-15 14:05:46.949Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":null,"label":"[number]","value":"24.9","valueLength":4,"text":""}
+
+## 2026-11-15 14:05:52.175Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":null,"label":"[number]","value":"9.90","valueLength":4,"text":""}
+
+## 2026-11-15 14:05:52.179Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":null,"label":"[number]","value":"9.90","valueLength":4,"text":""}
+
+## 2026-11-15 14:05:55.526Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Calcinha R$ 9,90"}
+
+## 2026-11-15 14:05:56.933Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Calcinha R$ 9,90"}
+
+## 2026-11-15 14:06:01.003Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Conjunto R$ 24,90"}
+
+## 2026-11-15 14:06:14.685Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"80%Bom"}
+
+## 2026-11-15 14:06:20.963Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"60%Rápido"}
+
+## 2026-11-15 14:06:27.844Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"130%Top"}
+
+## 2026-11-15 14:07:32.926Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"100%Padrão ⭐"}
+
+## 2026-11-15 14:07:41.499Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Calcinha R$ 9,90"}
+
+## 2026-11-15 14:07:43.859Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":null,"label":"[number]","value":"9.9","valueLength":3,"text":""}
+
+## 2026-11-15 14:07:43.861Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":null,"label":"[number]","value":"9.9","valueLength":3,"text":""}
+
+## 2026-11-15 14:07:44.078Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":null,"label":"[number]","value":"9.9","valueLength":3,"text":""}
+
+## 2026-11-15 14:07:49.375Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":null,"label":"[number]","value":"10","valueLength":2,"text":""}
+
+## 2026-11-15 14:07:49.375Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":null,"label":"[number]","value":"10","valueLength":2,"text":""}
+
+## 2026-11-15 14:07:49.376Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"100%Padrão ⭐"}
+
+## 2026-11-15 14:07:54.273Z click
+- element: {"tag":"button","role":"switch","ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-11-15 14:07:55.527Z click
+- element: {"tag":"button","role":"switch","ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-11-15 14:08:54.636Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Salvar no CelularSalvar"}
+
+## 2026-11-15 14:09:46.756Z click
+- element: {"tag":"button","role":"tab","ariaLabel":null,"name":null,"type":"button","id":"radix-:r4:-trigger-scripts","placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Scripts Zap"}
+
+## 2026-11-15 14:10:28.656Z click
+- element: {"tag":"button","role":"tab","ariaLabel":null,"name":null,"type":"button","id":"radix-:r4:-trigger-guia","placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Baixar Guia"}
+
+## 2026-11-15 14:10:36.103Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Salvar / Imprimir E-book em PDF"}
+
+## 2026-11-15 14:11:02.984Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Ver Catálogo da Fábrica"}
+
+## 2026-11-15 14:11:03.963Z load
+- url: http://localhost:3000/quero-revender
+- title: Avante Lingerie | Oficial
+
+## 2026-11-15 14:11:04.990Z network.error
+- method: POST
+- url: https://www.google.com/ccm/collect?rcb=0&frm=0&apvc=1&auid=247244429.1794751457&dt=Avante%20Lingerie%20%7C%20Oficial&tid=AW-18499593515&en=page_view&dl=http%3A%2F%2Flocalhost%3A3000%2Fquero-revender&dr=http%3A%2F%2Flocalhost%3A3000%2Fmimos%2Fmaquina-de-vendas&scrsrc=www.googletagmanager.com&rnd=2032513908.1794751865&navt=n&npa=0&gtm=45be6bb1z8f_AW-18499593515za208xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115938465~115938468~117776796~118897920~118897930~120385423~120412526~120420414~120469145~120469153~121191153~121246026~121246034&tft=1794751864736&tfd=1735&tids=AW-18499593515&fmt=8
+- status: 0
+- durationMs: 253
+
+## 2026-11-15 14:11:04.991Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 14:11:04.992Z network.error
+- method: POST
+- url: https://www.google.com/rmkt/collect/18499593515/?random=1794751864680&cv=11&fst=1794751864680&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be6bb1z8f_AW-18499593515za208xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115938465~115938468~117776796~118897920~118897930~120385423~120412526~120420414~120469145~120469153~121191153~121246026~121246034&u_w=1366&u_h=768&url=http%3A%2F%2Flocalhost%3A3000%2Fquero-revender&ref=http%3A%2F%2Flocalhost%3A3000%2Fmimos%2Fmaquina-de-vendas&rcb=0&frm=0&tiba=Avante%20Lingerie%20%7C%20Oficial&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=247244429.1794751457&uaa=x86&uab=64&uafvl=Not-A.Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B157.0.8103.51%7CChromium%3B157.0.8103.51&uamb=0&uam=&uap=Windows&uapv=19.0.0&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5
+- status: 0
+- durationMs: 259
+
+## 2026-11-15 14:11:04.993Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 14:11:05.012Z navigate
+- url: http://localhost:3000/quero-revender
+- via: replaceState
+
+## 2026-11-15 14:11:05.267Z network.error
+- method: POST
+- url: https://ad.doubleclick.net/ccm/s/collect?auid=247244429.1794751457&gtm=45be6bb1z8f_AW-18499593515za208xecxf1&fmt=8
+- status: 0
+- durationMs: 529
+
+## 2026-11-15 14:11:05.267Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 14:11:05.320Z network.error
+- method: POST
+- url: https://www.google.com/rmkt/collect/18499593515/?random=1794751865185&cv=11&fst=1794751865185&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be6bb1z8f_AW-18499593515za208xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115938465~115938468~117776796~118897920~118897930~120385423~120412526~120420414~120469145~120469153~121191153~121246026~121246034&u_w=1366&u_h=768&url=http%3A%2F%2Flocalhost%3A3000%2Fquero-revender&ref=http%3A%2F%2Flocalhost%3A3000%2Fmimos%2Fmaquina-de-vendas&rcb=0&frm=0&tiba=Avante%20Lingerie%20%7C%20Oficial&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=247244429.1794751457&uaa=x86&uab=64&uafvl=Not-A.Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B157.0.8103.51%7CChromium%3B157.0.8103.51&uamb=0&uam=&uap=Windows&uapv=19.0.0&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5
+- status: 0
+- durationMs: 125
+
+## 2026-11-15 14:11:05.320Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 14:11:05.321Z network.error
+- method: POST
+- url: https://www.google.com/ccm/collect?rcb=0&frm=0&apvc=0&auid=247244429.1794751457&dt=Avante%20Lingerie%20%7C%20Oficial&tid=AW-18499593515&en=page_view&dl=http%3A%2F%2Flocalhost%3A3000%2Fquero-revender&dr=http%3A%2F%2Flocalhost%3A3000%2Fmimos%2Fmaquina-de-vendas&scrsrc=www.googletagmanager.com&rnd=2032513908.1794751865&navt=n&npa=0&gtm=45be6bb1z8f_AW-18499593515za208xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115938465~115938468~117776796~118897920~118897930~120385423~120412526~120420414~120469145~120469153~121191153~121246026~121246034&tft=1794751865206&tfd=2205&tids=AW-18499593515&fmt=8
+- status: 0
+- durationMs: 114
+
+## 2026-11-15 14:11:05.321Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 14:11:05.759Z network.error
+- method: POST
+- url: https://analytics.google.com/g/collect?v=2&tid=G-E2FS36FRG1&gtm=45je6bb1v9259987036za208xf1&_p=1794751863709&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AAAAACQC&cid=946152551.1794751474&frm=0&ibt=1&ngs=1&pscdl=noapi&rcb=18&sr=1366x768&uaa=x86&uab=64&uafvl=Not-A.Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B157.0.8103.51%7CChromium%3B157.0.8103.51&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=pt-pt&_s=1&tag_exp=100940092~115938465~115938469~118897920~118897930~120213116~120385423~120412526~120420416~120469145~120469153~121246026~121246034&sid=1794751473&sct=1&seg=1&dl=http%3A%2F%2Flocalhost%2Fquero-revender&dr=http%3A%2F%2Flocalhost%3A3000%2Fmimos%2Fmaquina-de-vendas&dt=Avante%20Lingerie%20%7C%20Oficial&en=page_view&_ee=1&tfd=2653
+- status: 0
+- durationMs: 103
+
+## 2026-11-15 14:11:05.759Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 14:11:10.838Z network.error
+- method: POST
+- url: https://analytics.google.com/g/collect?v=2&tid=G-E2FS36FRG1&gtm=45je6bb1v9259987036za200xf1&_p=1794751863709&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEAAACQC&ae=a&cid=946152551.1794751474&frm=0&ibt=1&ngs=1&pscdl=noapi&rcb=18&sr=1366x768&uaa=x86&uab=64&uafvl=Not-A.Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B157.0.8103.51%7CChromium%3B157.0.8103.51&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=pt-pt&_s=2&tag_exp=100940092~115938465~115938469~118897920~118897930~120213116~120385423~120412526~120420416~120469145~120469153~121246026~121246034&sid=1794751473&sct=1&seg=1&dl=http%3A%2F%2Flocalhost%2Fquero-revender&dr=http%3A%2F%2Flocalhost%3A3000%2Fmimos%2Fmaquina-de-vendas&dt=Avante%20Lingerie%20%7C%20Oficial&en=scroll&epn.percent_scrolled=90&_et=38&tfd=7656
+- status: 0
+- durationMs: 181
+
+## 2026-11-15 14:11:10.839Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 14:11:21.295Z load
+- url: http://localhost:3000/mimos/maquina-de-vendas
+- title: Avante Lingerie | Oficial
+
+## 2026-11-15 14:11:21.741Z network.error
+- method: POST
+- url: https://www.google.com/ccm/collect?rcb=4&frm=0&apvc=1&auid=247244429.1794751457&dt=Avante%20Lingerie%20%7C%20Oficial&tid=AW-18499593515&en=page_view&dl=http%3A%2F%2Flocalhost%3A3000%2Fmimos%2Fmaquina-de-vendas&scrsrc=www.googletagmanager.com&rnd=1232326051.1794751882&navt=n&npa=0&gtm=45be6bc0h2z8f_AW-18499593515za208xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115616986~115938465~115938469~117776796~118897920~118897930~120385423~120412528~120420414~120469145~120469153~121191153~121246026~121246034~123988485&tft=1794751881594&tfd=720&tids=AW-18499593515&fmt=8
+- status: 0
+- durationMs: 147
+
+## 2026-11-15 14:11:21.743Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 14:11:21.745Z network.error
+- method: POST
+- url: https://www.google.com/rmkt/collect/18499593515/?random=1794751881550&cv=11&fst=1794751881550&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be6bc0h2z8f_AW-18499593515za208xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115616986~115938465~115938469~117776796~118897920~118897930~120385423~120412528~120420414~120469145~120469153~121191153~121246026~121246034~123988485&u_w=1366&u_h=768&url=http%3A%2F%2Flocalhost%3A3000%2Fmimos%2Fmaquina-de-vendas&rcb=4&frm=0&tiba=Avante%20Lingerie%20%7C%20Oficial&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=247244429.1794751457&uaa=x86&uab=64&uafvl=Not-A.Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B157.0.8103.51%7CChromium%3B157.0.8103.51&uamb=0&uam=&uap=Windows&uapv=19.0.0&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5
+- status: 0
+- durationMs: 153
+
+## 2026-11-15 14:11:21.746Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 14:11:21.965Z navigate
+- url: http://localhost:3000/mimos/maquina-de-vendas
+- via: replaceState
+
+## 2026-11-15 14:11:22.112Z network.error
+- method: POST
+- url: https://www.google.com/rmkt/collect/18499593515/?random=1794751882006&cv=11&fst=1794751882006&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be6bc0h2z8f_AW-18499593515za208xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115616986~115938465~115938469~117776796~118897920~118897930~120385423~120412528~120420414~120469145~120469153~121191153~121246026~121246034~123988485&u_w=1366&u_h=768&url=http%3A%2F%2Flocalhost%3A3000%2Fmimos%2Fmaquina-de-vendas&rcb=4&frm=0&tiba=Avante%20Lingerie%20%7C%20Oficial&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=247244429.1794751457&uaa=x86&uab=64&uafvl=Not-A.Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B157.0.8103.51%7CChromium%3B157.0.8103.51&uamb=0&uam=&uap=Windows&uapv=19.0.0&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5
+- status: 0
+- durationMs: 100
+
+## 2026-11-15 14:11:22.112Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 14:11:22.117Z network.error
+- method: POST
+- url: https://www.google.com/ccm/collect?rcb=4&frm=0&apvc=0&auid=247244429.1794751457&dt=Avante%20Lingerie%20%7C%20Oficial&tid=AW-18499593515&en=page_view&dl=http%3A%2F%2Flocalhost%3A3000%2Fmimos%2Fmaquina-de-vendas&scrsrc=www.googletagmanager.com&rnd=1232326051.1794751882&navt=n&npa=0&gtm=45be6bc0h2z8f_AW-18499593515za208xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115616986~115938465~115938469~117776796~118897920~118897930~120385423~120412528~120420414~120469145~120469153~121191153~121246026~121246034~123988485&tft=1794751882017&tfd=1143&tids=AW-18499593515&fmt=8
+- status: 0
+- durationMs: 100
+
+## 2026-11-15 14:11:22.117Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 14:11:27.692Z network.error
+- method: POST
+- url: https://analytics.google.com/g/collect?v=2&tid=G-E2FS36FRG1&gtm=45je6bc0h2v9259987036za208xf1&_p=1794751881210&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AAAAACQC&cid=946152551.1794751474&frm=0&ibt=1&ngs=1&pscdl=noapi&rcb=15&sr=1366x768&uaa=x86&uab=64&uafvl=Not-A.Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B157.0.8103.51%7CChromium%3B157.0.8103.51&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=pt-pt&_s=1&tag_exp=100940092~115616986~115938465~115938469~118897920~118897930~120213116~120385422~120412526~120420416~120469145~120469153~121246026~121246034~123785234~123988488&sid=1794751473&sct=1&seg=1&dl=http%3A%2F%2Flocalhost%2Fmimos%2Fmaquina-de-vendas&dt=Avante%20Lingerie%20%7C%20Oficial&en=page_view&_ee=1&_et=1&tfd=6736
+- status: 0
+- durationMs: 79
+
+## 2026-11-15 14:11:27.692Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 14:12:22.345Z network.error
+- method: POST
+- url: https://analytics.google.com/g/collect?v=2&tid=G-E2FS36FRG1&gtm=45je6bc0h2v9259987036za200xf1&_p=1794751881210&_gaz=1&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEAAACQC&ae=a&cid=946152551.1794751474&frm=0&ibt=1&ngs=1&pscdl=noapi&rcb=15&sr=1366x768&uaa=x86&uab=64&uafvl=Not-A.Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B157.0.8103.51%7CChromium%3B157.0.8103.51&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=pt-pt&_s=2&tag_exp=100940092~115616986~115938465~115938469~118897920~118897930~120213116~120385422~120412526~120420416~120469145~120469153~121246026~121246034~123785234~123988488&sid=1794751473&sct=1&seg=1&dl=http%3A%2F%2Flocalhost%2Fmimos%2Fmaquina-de-vendas&dt=Avante%20Lingerie%20%7C%20Oficial&en=scroll&epn.percent_scrolled=90&_et=20106&tfd=61292
+- status: 0
+- durationMs: 178
+
+## 2026-11-15 14:12:22.346Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 14:13:42.134Z click
+- element: {"tag":"button","role":"tab","ariaLabel":null,"name":null,"type":"button","id":"radix-:r3:-trigger-scripts","placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Scripts Zap"}
+
+## 2026-11-15 14:13:45.207Z click
+- element: {"tag":"button","role":"tab","ariaLabel":null,"name":null,"type":"button","id":"radix-:r3:-trigger-guia","placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Baixar Guia"}
+
+## 2026-11-15 14:13:47.881Z click
+- element: {"tag":"button","role":"tab","ariaLabel":null,"name":null,"type":"button","id":"radix-:r3:-trigger-calculadora","placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Calculadora"}
+
+## 2026-11-15 14:14:00.917Z click
+- element: {"tag":"button","role":"tab","ariaLabel":null,"name":null,"type":"button","id":"radix-:r3:-trigger-guia","placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Baixar Guia"}
+
+## 2026-11-15 14:14:30.598Z load
+- url: http://localhost:3000/quero-revender
+- title: Avante Lingerie | Oficial
+
+## 2026-11-15 14:14:31.471Z network.error
+- method: POST
+- url: https://www.google.com/rmkt/collect/18499593515/?random=1794752070980&cv=11&fst=1794752070980&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be6bb1z8f_AW-18499593515za208xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115938466~115938469~117776796~118897920~118897930~119860442~120385422~120412528~120420414~120469145~120469153~121191153~121246026~121246034~123630401~123988485&u_w=1366&u_h=768&url=http%3A%2F%2Flocalhost%3A3000%2Fquero-revender&ref=http%3A%2F%2Flocalhost%3A3000%2Fmimos%2Fmaquina-de-vendas&rcb=8&frm=0&tiba=Avante%20Lingerie%20%7C%20Oficial&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=247244429.1794751457&uaa=x86&uab=64&uafvl=Not-A.Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B157.0.8103.51%7CChromium%3B157.0.8103.51&uamb=0&uam=&uap=Windows&uapv=19.0.0&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5
+- status: 0
+- durationMs: 350
+
+## 2026-11-15 14:14:31.472Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 14:14:31.479Z network.error
+- method: POST
+- url: https://www.google.com/ccm/collect?rcb=8&frm=0&apvc=1&auid=247244429.1794751457&dt=Avante%20Lingerie%20%7C%20Oficial&tid=AW-18499593515&en=page_view&dl=http%3A%2F%2Flocalhost%3A3000%2Fquero-revender&dr=http%3A%2F%2Flocalhost%3A3000%2Fmimos%2Fmaquina-de-vendas&scrsrc=www.googletagmanager.com&rnd=1549148303.1794752071&navt=n&npa=0&gtm=45be6bb1z8f_AW-18499593515za208xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115938466~115938469~117776796~118897920~118897930~119860442~120385422~120412528~120420414~120469145~120469153~121191153~121246026~121246034~123630401~123988485&tft=1794752071128&tfd=2460&tids=AW-18499593515&fmt=8
+- status: 0
+- durationMs: 349
+
+## 2026-11-15 14:14:31.479Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 14:14:31.483Z network.error
+- method: POST
+- url: https://ad.doubleclick.net/ccm/s/collect?auid=247244429.1794751457&gtm=45be6bb1z8f_AW-18499593515za208xecxf1&fmt=8
+- status: 0
+- durationMs: 352
+
+## 2026-11-15 14:14:31.483Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 14:14:32.058Z navigate
+- url: http://localhost:3000/quero-revender
+- via: replaceState
+
+## 2026-11-15 14:14:32.386Z network.error
+- method: POST
+- url: https://www.google.com/rmkt/collect/18499593515/?random=1794752072129&cv=11&fst=1794752072129&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be6bb1z8f_AW-18499593515za208xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115938466~115938469~117776796~118897920~118897930~119860442~120385422~120412528~120420414~120469145~120469153~121191153~121246026~121246034~123630401~123988485&u_w=1366&u_h=768&url=http%3A%2F%2Flocalhost%3A3000%2Fquero-revender&ref=http%3A%2F%2Flocalhost%3A3000%2Fmimos%2Fmaquina-de-vendas&rcb=8&frm=0&tiba=Avante%20Lingerie%20%7C%20Oficial&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=247244429.1794751457&uaa=x86&uab=64&uafvl=Not-A.Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B157.0.8103.51%7CChromium%3B157.0.8103.51&uamb=0&uam=&uap=Windows&uapv=19.0.0&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5
+- status: 0
+- durationMs: 245
+
+## 2026-11-15 14:14:32.386Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 14:14:32.387Z network.error
+- method: POST
+- url: https://www.google.com/ccm/collect?rcb=8&frm=0&apvc=0&auid=247244429.1794751457&dt=Avante%20Lingerie%20%7C%20Oficial&tid=AW-18499593515&en=page_view&dl=http%3A%2F%2Flocalhost%3A3000%2Fquero-revender&dr=http%3A%2F%2Flocalhost%3A3000%2Fmimos%2Fmaquina-de-vendas&scrsrc=www.googletagmanager.com&rnd=1549148303.1794752071&navt=n&npa=0&gtm=45be6bb1z8f_AW-18499593515za208xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115938466~115938469~117776796~118897920~118897930~119860442~120385422~120412528~120420414~120469145~120469153~121191153~121246026~121246034~123630401~123988485&tft=1794752072155&tfd=3487&tids=AW-18499593515&fmt=8
+- status: 0
+- durationMs: 232
+
+## 2026-11-15 14:14:32.388Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 14:14:32.812Z network.error
+- method: POST
+- url: https://analytics.google.com/g/collect?v=2&tid=G-E2FS36FRG1&gtm=45je6bb1v9259987036za208xf1&_p=1794752070435&_gaz=1&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AAAAACQC&cid=946152551.1794751474&frm=0&ibt=1&ngs=1&pscdl=noapi&rcb=10&sr=1366x768&uaa=x86&uab=64&uafvl=Not-A.Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B157.0.8103.51%7CChromium%3B157.0.8103.51&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=pt-pt&_s=1&tag_exp=115938466~115938468~118897920~118897930~119860442~120213116~120385422~120412528~120420414~120469145~120469153~121246026~121246034&sid=1794751473&sct=1&seg=1&dl=http%3A%2F%2Flocalhost%2Fquero-revender&dr=http%3A%2F%2Flocalhost%3A3000%2Fmimos%2Fmaquina-de-vendas&dt=Avante%20Lingerie%20%7C%20Oficial&en=page_view&_ee=1&tfd=3971
+- status: 0
+- durationMs: 171
+
+## 2026-11-15 14:14:32.812Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 14:15:00.262Z click
+- element: {"tag":"button","role":"tab","ariaLabel":null,"name":null,"type":"button","id":"radix-:r3:-trigger-scripts","placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Scripts Zap"}
+
+## 2026-11-15 14:15:02.993Z click
+- element: {"tag":"button","role":"tab","ariaLabel":null,"name":null,"type":"button","id":"radix-:r3:-trigger-calculadora","placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Calculadora"}
+
+## 2026-11-15 14:52:08.487Z load
+- url: http://localhost:3000/mimos/maquina-de-vendas
+- title: Avante Lingerie | Oficial
+
+## 2026-11-15 14:52:08.806Z network.error
+- method: POST
+- url: https://www.google.com/rmkt/collect/18499593515/?random=1794754328606&cv=11&fst=1794754328606&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be6bb1z8f_AW-18499593515za208xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=100940092~115938466~115938469~117776796~118897920~118897930~120385423~120412528~120420414~120469145~120469153~121191153~121246026~121246034&u_w=1366&u_h=768&url=http%3A%2F%2Flocalhost%3A3000%2Fmimos%2Fmaquina-de-vendas&rcb=5&frm=0&tiba=Avante%20Lingerie%20%7C%20Oficial&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=247244429.1794751457&uaa=x86&uab=64&uafvl=Not-A.Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B157.0.8103.51%7CChromium%3B157.0.8103.51&uamb=0&uam=&uap=Windows&uapv=19.0.0&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5
+- status: 0
+- durationMs: 161
+
+## 2026-11-15 14:52:08.806Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 14:52:08.815Z network.error
+- method: POST
+- url: https://www.google.com/ccm/collect?rcb=5&frm=0&apvc=1&auid=247244429.1794751457&dt=Avante%20Lingerie%20%7C%20Oficial&tid=AW-18499593515&en=page_view&dl=http%3A%2F%2Flocalhost%3A3000%2Fmimos%2Fmaquina-de-vendas&scrsrc=www.googletagmanager.com&rnd=1310026150.1794754329&navt=r&npa=0&gtm=45be6bb1z8f_AW-18499593515za208xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=100940092~115938466~115938469~117776796~118897920~118897930~120385423~120412528~120420414~120469145~120469153~121191153~121246026~121246034&tft=1794754328647&tfd=1714&tids=AW-18499593515&fmt=8
+- status: 0
+- durationMs: 167
+
+## 2026-11-15 14:52:08.815Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 14:52:08.817Z network.error
+- method: POST
+- url: https://ad.doubleclick.net/ccm/s/collect?auid=247244429.1794751457&gtm=45be6bb1z8f_AW-18499593515za208xecxf1&fmt=8
+- status: 0
+- durationMs: 168
+
+## 2026-11-15 14:52:08.817Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 14:52:11.422Z network.error
+- method: POST
+- url: https://www.google.com/rmkt/collect/18499593515/?random=1794754331251&cv=11&fst=1794754331251&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be6bb1z8f_AW-18499593515za208xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=100940092~115938466~115938469~117776796~118897920~118897930~120385423~120412528~120420414~120469145~120469153~121191153~121246026~121246034&u_w=1366&u_h=768&url=http%3A%2F%2Flocalhost%3A3000%2Fmimos%2Fmaquina-de-vendas&rcb=5&frm=0&tiba=Avante%20Lingerie%20%7C%20Oficial&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=247244429.1794751457&uaa=x86&uab=64&uafvl=Not-A.Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B157.0.8103.51%7CChromium%3B157.0.8103.51&uamb=0&uam=&uap=Windows&uapv=19.0.0&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5
+- status: 0
+- durationMs: 167
+
+## 2026-11-15 14:52:11.422Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 14:52:11.433Z network.error
+- method: POST
+- url: https://www.google.com/ccm/collect?rcb=5&frm=0&apvc=0&auid=247244429.1794751457&dt=Avante%20Lingerie%20%7C%20Oficial&tid=AW-18499593515&en=page_view&dl=http%3A%2F%2Flocalhost%3A3000%2Fmimos%2Fmaquina-de-vendas&scrsrc=www.googletagmanager.com&rnd=1310026150.1794754329&navt=r&npa=0&gtm=45be6bb1z8f_AW-18499593515za208xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=100940092~115938466~115938469~117776796~118897920~118897930~120385423~120412528~120420414~120469145~120469153~121191153~121246026~121246034&tft=1794754331264&tfd=4331&tids=AW-18499593515&fmt=8
+- status: 0
+- durationMs: 168
+
+## 2026-11-15 14:52:11.433Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 14:52:11.775Z network.error
+- method: POST
+- url: https://analytics.google.com/g/collect?v=2&tid=G-E2FS36FRG1&gtm=45je6bb1v9259987036za208xf1&_p=1794754328161&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AAAAACQC&cid=946152551.1794751474&frm=0&ibt=1&ngs=1&pscdl=noapi&rcb=13&sr=1366x768&uaa=x86&uab=64&uafvl=Not-A.Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B157.0.8103.51%7CChromium%3B157.0.8103.51&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=pt-pt&_s=1&tag_exp=100940090~115938466~115938469~118897920~118897930~120213116~120385422~120412526~120420414~120469145~120469153~121246026~121246034&sid=1794754327&sct=2&seg=1&dl=http%3A%2F%2Flocalhost%2Fmimos%2Fmaquina-de-vendas&dt=Avante%20Lingerie%20%7C%20Oficial&en=page_view&_ee=1&tfd=4731
+- status: 0
+- durationMs: 110
+
+## 2026-11-15 14:52:11.775Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 14:52:19.652Z network.error
+- method: POST
+- url: https://analytics.google.com/g/collect?v=2&tid=G-E2FS36FRG1&gtm=45je6bb1v9259987036za200xf1&_p=1794754328161&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEAAACQC&ae=a&cid=946152551.1794751474&frm=0&ibt=1&ngs=1&pscdl=noapi&rcb=13&sr=1366x768&uaa=x86&uab=64&uafvl=Not-A.Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B157.0.8103.51%7CChromium%3B157.0.8103.51&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=pt-pt&_s=2&tag_exp=100940090~115938466~115938469~118897920~118897930~120213116~120385422~120412526~120420414~120469145~120469153~121246026~121246034&sid=1794754327&sct=2&seg=1&dl=http%3A%2F%2Flocalhost%2Fmimos%2Fmaquina-de-vendas&dt=Avante%20Lingerie%20%7C%20Oficial&en=scroll&epn.percent_scrolled=90&_et=18&tfd=12641
+- status: 0
+- durationMs: 78
+
+## 2026-11-15 14:52:19.653Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 14:52:27.874Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Salvar no CelularSalvar"}
+
+## 2026-11-15 14:52:56.206Z click
+- element: {"tag":"div","role":"tabpanel","ariaLabel":null,"name":null,"type":null,"id":"radix-:r3:-content-calculadora","placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Quanto Você Pagou na Peça na Fábrica?Custo unitárioR$Pesquise preços reais das peças na nossa loja:Toque para abrir a categoriaClique nas categorias abaixo para conferir os preços de fábrica e escolher qual produto quer simular:👙ConjuntosA partir de R$ 19,90🩲CalcinhasA partir de R$ 9,90✨SutiãsA partir de R$ 16,90🌙Linha NoiteCamisolas & Pijamas👑BodiesTule e Alta Renda🛍️Kits AtacadoPacotes com DescontoOu escolha um valor comum:Calcinha R$ 9,90Sutiã R$ 16,90Conjunto R$ 24,90Body R$ 34,90Camisola R$ 39,90Margem de Lucro que Você Quer+100% de Lucro60%Rápido80%Bom100%Padrão Fábrica ⭐130%Alta MargemQuer escolher outra porcentagem?Digite qualquer porcentagem de lucro desejada%Blindagem contra Custos Ocultos (Edite os Valores)Evite PrejuízoPreencha os custos reais que você tem para o sistema calcular o seu lucro líquido exato:Taxa da sua Maquininha (%)Porcentagem que a maquininha desconta:%Sacolinha, Laço & Embalagem (R$)Quanto você gasta por sacolinha/brinde:R$Frete da Fábrica por Peça (R$)PREÇO SUGERIDO PARA VENDER100% CalibradoPreço no Pix (À Vista)R$ 52.90Lucro no Bolso: +R$ 25.50Preço no CartãoR$ 54.90Em até 2x de R$ 27.45Seu Lucro Líquido Real no BolsoCusto total descontado: R$ 27.40 (peça + embalagem + frete)+R$ 25.5093% de ganho limpoSimulação de Renda Extra Mensal com essa Peça (26 dias):1 peça/diaR$ 663lucro limpo/mês3 peças/dia ⭐R$ 1989lucro limpo/mês5 peças/diaR$ 3315lucro limpo/mêsDica de Ouro da Fábrica para a Cliente Achar Barato:\"Amiga, uma lingerie com esse mesmo padrão de alta costura em lojas de shopping custa facilmente de R$ 90 a R$ 120. Comigo, como trago direto da fábrica de Nova Friburgo sem intermediários, você leva essa joia por apenas R$ 52.90 no Pix ou 2x de R$ 27.45 no cartão!\""}
+
+## 2026-11-15 14:52:58.879Z click
+- element: {"tag":"div","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"AVANTE LINGERIEMimo da FábricaMáquina de Vendas ZapSalvar no CelularSalvarRENDA EXTRA DIRETO DA FÁBRICADe R$ 147 por: GRÁTIS HOJESeu Aplicativo VIP de Precificação & VendasPresente exclusivo da Avante Lingerie para você. Precifique suas peças com segurança, blinde seu lucro contra custos ocultos e use scripts prontos para faturar no WhatsApp.CalculadoraScripts ZapGuia PDFQuanto Você Pagou na Peça na Fábrica?Custo unitárioR$Pesquise preços reais das peças na nossa loja:Toque para abrir a categoriaClique nas categorias abaixo para conferir os preços de fábrica e escolher qual produto quer simular:👙ConjuntosA partir de R$ 19,90🩲CalcinhasA partir de R$ 9,90✨SutiãsA partir de R$ 16,90🌙Linha NoiteCamisolas & Pijamas👑BodiesTule e Alta Renda🛍️Kits AtacadoPacotes com DescontoOu escolha um valor comum:Calcinha R$ 9,90Sutiã R$ 16,90Conjunto R$ 24,90Body R$ 34,90Camisola R$ 39,90Margem de Lucro que Você Quer+100% de Lucro60%Rápido80%Bom100%Padrão Fábrica ⭐130%Alta MargemQuer escolher outra porcentagem?Digite qualquer porcentagem de lucro desejada%Blindagem contra Custos Ocultos (Edite os Valores)Evite PrejuízoPreencha os custos reais que você tem para o sistema calcular o seu lucro líquido exato:Taxa da sua Maquininha (%)Porcentagem que a maquininha desconta:%Sacolinha, Laço & Embalagem (R$)Quanto você gasta por sacolinha/brinde:R$Frete da Fábrica por Peça (R$)PREÇO SUGERIDO PARA VENDER100% CalibradoPreço no Pix (À Vista)R$ 52.90Lucro no Bolso: +R$ 25.50Preço no CartãoR$ 54.90Em até 2x de R$ 27.45Seu Lucro Líquido Real no BolsoCusto total descontado: R$ 27.40 (peça + embalagem + frete)+R$ 25.5093% de ganho limpoSimulação de Renda Extra Mensal com essa Peça (26 dias):1 peça/diaR$ 663lucro limpo/mês3 peças/dia ⭐R$ 1989lucro limpo/mês5 peças/diaR$ 3315lucro limpo/mêsDica de Ouro da Fábrica para a Cliente Achar Barato:\"Amiga, uma lingerie com esse mesmo padrão de alta costura em lojas de shopping custa facilmente de R$ 90 a R$ 120. Comigo, como trago direto da fábrica de Nova ..."}
+
+## 2026-11-15 14:53:16.931Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"🩲CalcinhasA partir de R$ 9,90"}
+
+## 2026-11-15 14:53:17.836Z load
+- url: http://localhost:3000/categoria/calcinhas
+- title: Avante Lingerie | Oficial
+
+## 2026-11-15 14:53:18.408Z network.error
+- method: POST
+- url: https://www.google.com/ccm/collect?rcb=1&frm=0&apvc=1&auid=247244429.1794751457&dt=Avante%20Lingerie%20%7C%20Oficial&tid=AW-18499593515&en=page_view&dl=http%3A%2F%2Flocalhost%3A3000%2Fcategoria%2Fcalcinhas&scrsrc=www.googletagmanager.com&rnd=1277643880.1794754398&navt=n&npa=0&gtm=45be6bb1z8f_AW-18499593515za208xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115616985~115938466~115938468~117776796~118897920~118897930~120385422~120412528~120420414~120469145~120469153~121191153~121246026~121246034&tft=1794754398173&tfd=1019&tids=AW-18499593515&fmt=8
+- status: 0
+- durationMs: 234
+
+## 2026-11-15 14:53:18.409Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 14:53:18.422Z network.error
+- method: POST
+- url: https://www.google.com/rmkt/collect/18499593515/?random=1794754398106&cv=11&fst=1794754398106&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be6bb1z8f_AW-18499593515za208xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115616985~115938466~115938468~117776796~118897920~118897930~120385422~120412528~120420414~120469145~120469153~121191153~121246026~121246034&u_w=1366&u_h=768&url=http%3A%2F%2Flocalhost%3A3000%2Fcategoria%2Fcalcinhas&rcb=1&frm=0&tiba=Avante%20Lingerie%20%7C%20Oficial&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=247244429.1794751457&uaa=x86&uab=64&uafvl=Not-A.Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B157.0.8103.51%7CChromium%3B157.0.8103.51&uamb=0&uam=&uap=Windows&uapv=19.0.0&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5
+- status: 0
+- durationMs: 252
+
+## 2026-11-15 14:53:18.422Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 14:53:18.427Z network.error
+- method: POST
+- url: https://ad.doubleclick.net/ccm/s/collect?auid=247244429.1794751457&gtm=45be6bb1z8f_AW-18499593515za208xecxf1&fmt=8
+- status: 0
+- durationMs: 252
+
+## 2026-11-15 14:53:18.427Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 14:53:18.665Z navigate
+- url: http://localhost:3000/categoria/calcinhas
+- via: replaceState
+
+## 2026-11-15 14:53:19.052Z network.error
+- method: POST
+- url: https://www.google.com/rmkt/collect/18499593515/?random=1794754398753&cv=11&fst=1794754398753&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be6bb1z8f_AW-18499593515za208xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115616985~115938466~115938468~117776796~118897920~118897930~120385422~120412528~120420414~120469145~120469153~121191153~121246026~121246034&u_w=1366&u_h=768&url=http%3A%2F%2Flocalhost%3A3000%2Fcategoria%2Fcalcinhas&rcb=1&frm=0&tiba=Avante%20Lingerie%20%7C%20Oficial&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=247244429.1794751457&uaa=x86&uab=64&uafvl=Not-A.Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B157.0.8103.51%7CChromium%3B157.0.8103.51&uamb=0&uam=&uap=Windows&uapv=19.0.0&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5
+- status: 0
+- durationMs: 287
+
+## 2026-11-15 14:53:19.052Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 14:53:19.054Z network.error
+- method: POST
+- url: https://www.google.com/ccm/collect?rcb=1&frm=0&apvc=0&auid=247244429.1794751457&dt=Avante%20Lingerie%20%7C%20Oficial&tid=AW-18499593515&en=page_view&dl=http%3A%2F%2Flocalhost%3A3000%2Fcategoria%2Fcalcinhas&scrsrc=www.googletagmanager.com&rnd=1277643880.1794754398&navt=n&npa=0&gtm=45be6bb1z8f_AW-18499593515za208xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115616985~115938466~115938468~117776796~118897920~118897930~120385422~120412528~120420414~120469145~120469153~121191153~121246026~121246034&tft=1794754398778&tfd=1625&tids=AW-18499593515&fmt=8
+- status: 0
+- durationMs: 276
+
+## 2026-11-15 14:53:19.054Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 14:53:19.367Z network.error
+- method: POST
+- url: https://analytics.google.com/g/collect?v=2&tid=G-E2FS36FRG1&gtm=45je6bb1v9259987036za208xf1&_p=1794754397694&_gaz=1&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AAAAACQC&cid=946152551.1794751474&frm=0&ibt=1&ngs=1&pscdl=noapi&rcb=14&sr=1366x768&uaa=x86&uab=64&uafvl=Not-A.Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B157.0.8103.51%7CChromium%3B157.0.8103.51&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=pt-pt&_s=1&tag_exp=115616986~115938466~115938468~118897920~118897930~120213116~120385422~120412528~120420416~120469145~120469153~121246026~121246034~123988486&sid=1794754327&sct=2&seg=1&dl=http%3A%2F%2Flocalhost%2Fcategoria%2Fcalcinhas&dt=Avante%20Lingerie%20%7C%20Oficial&en=page_view&_ee=1&tfd=2060
+- status: 0
+- durationMs: 153
+
+## 2026-11-15 14:53:19.367Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 14:53:24.321Z network.error
+- method: POST
+- url: https://analytics.google.com/g/collect?v=2&tid=G-E2FS36FRG1&gtm=45je6bb1v9259987036za200xf1&_p=1794754397694&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEAAACQC&ae=a&cid=946152551.1794751474&frm=0&ibt=1&ngs=1&pscdl=noapi&rcb=14&sr=1366x768&uaa=x86&uab=64&uafvl=Not-A.Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B157.0.8103.51%7CChromium%3B157.0.8103.51&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=pt-pt&_s=2&tag_exp=115616986~115938466~115938468~118897920~118897930~120213116~120385422~120412528~120420416~120469145~120469153~121246026~121246034~123988486&sid=1794754327&sct=2&seg=1&dl=http%3A%2F%2Flocalhost%2Fcategoria%2Fcalcinhas&dt=Avante%20Lingerie%20%7C%20Oficial&en=scroll&epn.percent_scrolled=90&_et=26&tfd=7091
+- status: 0
+- durationMs: 75
+
+## 2026-11-15 14:53:24.321Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 14:53:44.615Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"👙ConjuntosA partir de R$ 19,90"}
+
+## 2026-11-15 14:53:45.073Z load
+- url: http://localhost:3000/categoria/conjuntos
+- title: Avante Lingerie | Oficial
+
+## 2026-11-15 14:53:45.922Z network.error
+- method: POST
+- url: https://www.google.com/ccm/collect?rcb=12&frm=0&apvc=1&auid=247244429.1794751457&dt=Avante%20Lingerie%20%7C%20Oficial&tid=AW-18499593515&en=page_view&dl=http%3A%2F%2Flocalhost%3A3000%2Fcategoria%2Fconjuntos&scrsrc=www.googletagmanager.com&rnd=1927409778.1794754426&navt=n&npa=0&gtm=45be6bc0h2z8f_AW-18499593515za208xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=100940091~115616985~115938466~115938468~117776796~118897920~118897930~120385423~120412528~120420416~120469145~120469153~121191153~121246026~121246034~123785233&tft=1794754425734&tfd=1025&tids=AW-18499593515&fmt=8
+- status: 0
+- durationMs: 187
+
+## 2026-11-15 14:53:45.923Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 14:53:45.925Z network.error
+- method: POST
+- url: https://www.google.com/rmkt/collect/18499593515/?random=1794754425662&cv=11&fst=1794754425662&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be6bc0h2z8f_AW-18499593515za208xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=100940091~115616985~115938466~115938468~117776796~118897920~118897930~120385423~120412528~120420416~120469145~120469153~121191153~121246026~121246034~123785233&u_w=1366&u_h=768&url=http%3A%2F%2Flocalhost%3A3000%2Fcategoria%2Fconjuntos&rcb=12&frm=0&tiba=Avante%20Lingerie%20%7C%20Oficial&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=247244429.1794751457&uaa=x86&uab=64&uafvl=Not-A.Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B157.0.8103.51%7CChromium%3B157.0.8103.51&uamb=0&uam=&uap=Windows&uapv=19.0.0&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5
+- status: 0
+- durationMs: 194
+
+## 2026-11-15 14:53:45.925Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 14:53:45.941Z navigate
+- url: http://localhost:3000/categoria/conjuntos
+- via: replaceState
+
+## 2026-11-15 14:53:46.293Z network.error
+- method: POST
+- url: https://www.google.com/rmkt/collect/18499593515/?random=1794754425993&cv=11&fst=1794754425993&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be6bc0h2z8f_AW-18499593515za208xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=100940091~115616985~115938466~115938468~117776796~118897920~118897930~120385423~120412528~120420416~120469145~120469153~121191153~121246026~121246034~123785233&u_w=1366&u_h=768&url=http%3A%2F%2Flocalhost%3A3000%2Fcategoria%2Fconjuntos&rcb=12&frm=0&tiba=Avante%20Lingerie%20%7C%20Oficial&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=247244429.1794751457&uaa=x86&uab=64&uafvl=Not-A.Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B157.0.8103.51%7CChromium%3B157.0.8103.51&uamb=0&uam=&uap=Windows&uapv=19.0.0&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5
+- status: 0
+- durationMs: 289
+
+## 2026-11-15 14:53:46.293Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 14:53:46.295Z network.error
+- method: POST
+- url: https://www.google.com/ccm/collect?rcb=12&frm=0&apvc=0&auid=247244429.1794751457&dt=Avante%20Lingerie%20%7C%20Oficial&tid=AW-18499593515&en=page_view&dl=http%3A%2F%2Flocalhost%3A3000%2Fcategoria%2Fconjuntos&scrsrc=www.googletagmanager.com&rnd=1927409778.1794754426&navt=n&npa=0&gtm=45be6bc0h2z8f_AW-18499593515za208xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=100940091~115616985~115938466~115938468~117776796~118897920~118897930~120385423~120412528~120420416~120469145~120469153~121191153~121246026~121246034~123785233&tft=1794754426017&tfd=1308&tids=AW-18499593515&fmt=8
+- status: 0
+- durationMs: 278
+
+## 2026-11-15 14:53:46.295Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 14:53:46.666Z network.error
+- method: POST
+- url: https://analytics.google.com/g/collect?v=2&tid=G-E2FS36FRG1&gtm=45je6bc0h2v9259987036za208xf1&_p=1794754425010&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AAAAACQC&cid=946152551.1794751474&frm=0&ibt=1&ngs=1&pscdl=noapi&rcb=6&sr=1366x768&uaa=x86&uab=64&uafvl=Not-A.Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B157.0.8103.51%7CChromium%3B157.0.8103.51&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=pt-pt&_s=1&tag_exp=100940091~115938466~115938468~118897920~118897930~120213116~120385422~120412528~120420416~120469145~120469153~121246026~121246034~121284210&sid=1794754327&sct=2&seg=1&dl=http%3A%2F%2Flocalhost%2Fcategoria%2Fconjuntos&dt=Avante%20Lingerie%20%7C%20Oficial&en=page_view&_ee=1&tfd=1795
+- status: 0
+- durationMs: 162
+
+## 2026-11-15 14:53:46.666Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 14:53:51.622Z network.error
+- method: POST
+- url: https://analytics.google.com/g/collect?v=2&tid=G-E2FS36FRG1&gtm=45je6bc0h2v9259987036za200xf1&_p=1794754425010&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEAAACQC&ae=a&cid=946152551.1794751474&frm=0&ibt=1&ngs=1&pscdl=noapi&rcb=6&sr=1366x768&uaa=x86&uab=64&uafvl=Not-A.Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B157.0.8103.51%7CChromium%3B157.0.8103.51&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=pt-pt&_s=2&tag_exp=100940091~115938466~115938468~118897920~118897930~120213116~120385422~120412528~120420416~120469145~120469153~121246026~121246034~121284210&sid=1794754327&sct=2&seg=1&dl=http%3A%2F%2Flocalhost%2Fcategoria%2Fconjuntos&dt=Avante%20Lingerie%20%7C%20Oficial&en=scroll&epn.percent_scrolled=90&_et=51&tfd=6800
+- status: 0
+- durationMs: 113
+
+## 2026-11-15 14:53:51.622Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 14:53:55.730Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"🩲CalcinhasA partir de R$ 9,90"}
+
+## 2026-11-15 14:53:56.721Z load
+- url: http://localhost:3000/categoria/calcinhas
+- title: Avante Lingerie | Oficial
+
+## 2026-11-15 14:53:57.251Z network.error
+- method: POST
+- url: https://www.google.com/rmkt/collect/18499593515/?random=1794754437066&cv=11&fst=1794754437066&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be6bb1z8f_AW-18499593515za208xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115616986~115938465~115938468~117776796~118897920~118897930~120385422~120412528~120420414~120469145~120469153~121191153~121246026~121246034&u_w=1366&u_h=768&url=http%3A%2F%2Flocalhost%3A3000%2Fcategoria%2Fcalcinhas&rcb=6&frm=0&tiba=Avante%20Lingerie%20%7C%20Oficial&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=247244429.1794751457&uaa=x86&uab=64&uafvl=Not-A.Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B157.0.8103.51%7CChromium%3B157.0.8103.51&uamb=0&uam=&uap=Windows&uapv=19.0.0&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5
+- status: 0
+- durationMs: 135
+
+## 2026-11-15 14:53:57.252Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 14:53:57.256Z network.error
+- method: POST
+- url: https://www.google.com/ccm/collect?rcb=6&frm=0&apvc=1&auid=247244429.1794751457&dt=Avante%20Lingerie%20%7C%20Oficial&tid=AW-18499593515&en=page_view&dl=http%3A%2F%2Flocalhost%3A3000%2Fcategoria%2Fcalcinhas&scrsrc=www.googletagmanager.com&rnd=1700219145.1794754437&navt=n&npa=0&gtm=45be6bb1z8f_AW-18499593515za208xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115616986~115938465~115938468~117776796~118897920~118897930~120385422~120412528~120420414~120469145~120469153~121191153~121246026~121246034&tft=1794754437119&tfd=1259&tids=AW-18499593515&fmt=8
+- status: 0
+- durationMs: 136
+
+## 2026-11-15 14:53:57.256Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 14:53:57.693Z navigate
+- url: http://localhost:3000/categoria/calcinhas
+- via: replaceState
+
+## 2026-11-15 14:53:58.001Z network.error
+- method: POST
+- url: https://www.google.com/rmkt/collect/18499593515/?random=1794754437769&cv=11&fst=1794754437769&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be6bb1z8f_AW-18499593515za208xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115616986~115938465~115938468~117776796~118897920~118897930~120385422~120412528~120420414~120469145~120469153~121191153~121246026~121246034&u_w=1366&u_h=768&url=http%3A%2F%2Flocalhost%3A3000%2Fcategoria%2Fcalcinhas&rcb=6&frm=0&tiba=Avante%20Lingerie%20%7C%20Oficial&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=247244429.1794751457&uaa=x86&uab=64&uafvl=Not-A.Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B157.0.8103.51%7CChromium%3B157.0.8103.51&uamb=0&uam=&uap=Windows&uapv=19.0.0&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5
+- status: 0
+- durationMs: 223
+
+## 2026-11-15 14:53:58.001Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 14:53:58.002Z network.error
+- method: POST
+- url: https://www.google.com/ccm/collect?rcb=6&frm=0&apvc=0&auid=247244429.1794751457&dt=Avante%20Lingerie%20%7C%20Oficial&tid=AW-18499593515&en=page_view&dl=http%3A%2F%2Flocalhost%3A3000%2Fcategoria%2Fcalcinhas&scrsrc=www.googletagmanager.com&rnd=1700219145.1794754437&navt=n&npa=0&gtm=45be6bb1z8f_AW-18499593515za208xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115616986~115938465~115938468~117776796~118897920~118897930~120385422~120412528~120420414~120469145~120469153~121191153~121246026~121246034&tft=1794754437792&tfd=1932&tids=AW-18499593515&fmt=8
+- status: 0
+- durationMs: 210
+
+## 2026-11-15 14:53:58.003Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 14:53:58.500Z network.error
+- method: POST
+- url: https://analytics.google.com/g/collect?v=2&tid=G-E2FS36FRG1&gtm=45je6bb1v9259987036za208xf1&_p=1794754436616&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AAAAACQC&cid=946152551.1794751474&frm=0&ibt=1&ngs=1&pscdl=noapi&rcb=13&sr=1366x768&uaa=x86&uab=64&uafvl=Not-A.Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B157.0.8103.51%7CChromium%3B157.0.8103.51&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=pt-pt&_s=1&tag_exp=100940091~115938465~115938469~118897920~118897930~120213116~120385423~120412526~120420414~120469145~120469153~121246026~121246034&sid=1794754327&sct=2&seg=1&dl=http%3A%2F%2Flocalhost%2Fcategoria%2Fcalcinhas&dt=Avante%20Lingerie%20%7C%20Oficial&en=page_view&_ee=1&tfd=2482
+- status: 0
+- durationMs: 157
+
+## 2026-11-15 14:53:58.500Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 14:54:03.427Z network.error
+- method: POST
+- url: https://analytics.google.com/g/collect?v=2&tid=G-E2FS36FRG1&gtm=45je6bb1v9259987036za200xf1&_p=1794754436616&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEAAACQC&ae=a&cid=946152551.1794751474&frm=0&ibt=1&ngs=1&pscdl=noapi&rcb=13&sr=1366x768&uaa=x86&uab=64&uafvl=Not-A.Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B157.0.8103.51%7CChromium%3B157.0.8103.51&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=pt-pt&_s=2&tag_exp=100940091~115938465~115938469~118897920~118897930~120213116~120385423~120412526~120420414~120469145~120469153~121246026~121246034&sid=1794754327&sct=2&seg=1&dl=http%3A%2F%2Flocalhost%2Fcategoria%2Fcalcinhas&dt=Avante%20Lingerie%20%7C%20Oficial&en=scroll&epn.percent_scrolled=90&_et=19&tfd=7489
+- status: 0
+- durationMs: 78
+
+## 2026-11-15 14:54:03.427Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 14:54:07.245Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-11-15 14:54:15.665Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"🛍️Kits AtacadoPacotes com Desconto"}
+
+## 2026-11-15 14:54:16.101Z load
+- url: http://localhost:3000/categoria/kits
+- title: Avante Lingerie | Oficial
+
+## 2026-11-15 14:54:16.569Z network.error
+- method: POST
+- url: https://www.google.com/ccm/collect?rcb=17&frm=0&apvc=1&auid=247244429.1794751457&dt=Avante%20Lingerie%20%7C%20Oficial&tid=AW-18499593515&en=page_view&dl=http%3A%2F%2Flocalhost%3A3000%2Fcategoria%2Fkits&scrsrc=www.googletagmanager.com&rnd=1154743219.1794754456&navt=n&npa=0&gtm=45be6bb1z8f_AW-18499593515za208xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115616986~115938465~115938469~117776796~118897920~118897930~119860442~120385423~120412526~120420414~120469145~120469153~121191153~121246026~121246034~123630400~123988487&tft=1794754456439&tfd=720&tids=AW-18499593515&fmt=8
+- status: 0
+- durationMs: 130
+
+## 2026-11-15 14:54:16.571Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 14:54:16.575Z network.error
+- method: POST
+- url: https://www.google.com/rmkt/collect/18499593515/?random=1794754456385&cv=11&fst=1794754456385&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be6bb1z8f_AW-18499593515za208xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115616986~115938465~115938469~117776796~118897920~118897930~119860442~120385423~120412526~120420414~120469145~120469153~121191153~121246026~121246034~123630400~123988487&u_w=1366&u_h=768&url=http%3A%2F%2Flocalhost%3A3000%2Fcategoria%2Fkits&rcb=17&frm=0&tiba=Avante%20Lingerie%20%7C%20Oficial&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=247244429.1794751457&uaa=x86&uab=64&uafvl=Not-A.Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B157.0.8103.51%7CChromium%3B157.0.8103.51&uamb=0&uam=&uap=Windows&uapv=19.0.0&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5
+- status: 0
+- durationMs: 138
+
+## 2026-11-15 14:54:16.575Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 14:54:16.884Z navigate
+- url: http://localhost:3000/categoria/kits
+- via: replaceState
+
+## 2026-11-15 14:54:17.181Z network.error
+- method: POST
+- url: https://www.google.com/rmkt/collect/18499593515/?random=1794754456949&cv=11&fst=1794754456949&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be6bb1z8f_AW-18499593515za208xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115616986~115938465~115938469~117776796~118897920~118897930~119860442~120385423~120412526~120420414~120469145~120469153~121191153~121246026~121246034~123630400~123988487&u_w=1366&u_h=768&url=http%3A%2F%2Flocalhost%3A3000%2Fcategoria%2Fkits&rcb=17&frm=0&tiba=Avante%20Lingerie%20%7C%20Oficial&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=247244429.1794751457&uaa=x86&uab=64&uafvl=Not-A.Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B157.0.8103.51%7CChromium%3B157.0.8103.51&uamb=0&uam=&uap=Windows&uapv=19.0.0&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5
+- status: 0
+- durationMs: 220
+
+## 2026-11-15 14:54:17.181Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 14:54:17.182Z network.error
+- method: POST
+- url: https://www.google.com/ccm/collect?rcb=17&frm=0&apvc=0&auid=247244429.1794751457&dt=Avante%20Lingerie%20%7C%20Oficial&tid=AW-18499593515&en=page_view&dl=http%3A%2F%2Flocalhost%3A3000%2Fcategoria%2Fkits&scrsrc=www.googletagmanager.com&rnd=1154743219.1794754456&navt=n&npa=0&gtm=45be6bb1z8f_AW-18499593515za208xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115616986~115938465~115938469~117776796~118897920~118897930~119860442~120385423~120412526~120420414~120469145~120469153~121191153~121246026~121246034~123630400~123988487&tft=1794754456976&tfd=1258&tids=AW-18499593515&fmt=8
+- status: 0
+- durationMs: 206
+
+## 2026-11-15 14:54:17.182Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 14:54:17.623Z network.error
+- method: POST
+- url: https://analytics.google.com/g/collect?v=2&tid=G-E2FS36FRG1&gtm=45je6bb1v9259987036za208xf1&_p=1794754456061&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AAAAACQC&cid=946152551.1794751474&frm=0&ibt=1&ngs=1&pscdl=noapi&rcb=12&sr=1366x768&uaa=x86&uab=64&uafvl=Not-A.Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B157.0.8103.51%7CChromium%3B157.0.8103.51&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=pt-pt&_s=1&tag_exp=115616985~115938465~115938469~118897920~118897930~119860442~120213116~120385423~120412528~120420414~120469145~120469153~121246026~121246034~123785232~123988487&sid=1794754327&sct=2&seg=1&dl=http%3A%2F%2Flocalhost%2Fcategoria%2Fkits&dt=Avante%20Lingerie%20%7C%20Oficial&en=page_view&_ee=1&tfd=1729
+- status: 0
+- durationMs: 175
+
+## 2026-11-15 14:54:17.623Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 14:54:22.529Z network.error
+- method: POST
+- url: https://analytics.google.com/g/collect?v=2&tid=G-E2FS36FRG1&gtm=45je6bb1v9259987036za200xf1&_p=1794754456061&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEAAACQC&ae=a&cid=946152551.1794751474&frm=0&ibt=1&ngs=1&pscdl=noapi&rcb=12&sr=1366x768&uaa=x86&uab=64&uafvl=Not-A.Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B157.0.8103.51%7CChromium%3B157.0.8103.51&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=pt-pt&_s=2&tag_exp=115616985~115938465~115938469~118897920~118897930~119860442~120213116~120385423~120412528~120420414~120469145~120469153~121246026~121246034~123785232~123988487&sid=1794754327&sct=2&seg=1&dl=http%3A%2F%2Flocalhost%2Fcategoria%2Fkits&dt=Avante%20Lingerie%20%7C%20Oficial&en=scroll&epn.percent_scrolled=90&_et=15&tfd=6738
+- status: 0
+- durationMs: 71
+
+## 2026-11-15 14:54:22.529Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 14:54:30.682Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Calcinha R$ 9,90"}
+
+## 2026-11-15 14:55:02.984Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"80%Bom"}
+
+## 2026-11-15 14:55:05.903Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"130%Alta Margem"}
+
+## 2026-11-15 14:55:07.720Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"100%Padrão Fábrica ⭐"}
+
+## 2026-11-15 14:55:09.570Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 75","label":"Ex: 75","value":"100","valueLength":3,"text":""}
+
+## 2026-11-15 14:55:09.930Z click
+- element: {"tag":"div","role":"tabpanel","ariaLabel":null,"name":null,"type":null,"id":"radix-:r3:-content-calculadora","placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Quanto Você Pagou na Peça na Fábrica?Custo unitárioR$Pesquise preços reais das peças na nossa loja:Toque para abrir a categoriaClique nas categorias abaixo para conferir os preços de fábrica e escolher qual produto quer simular:👙ConjuntosA partir de R$ 19,90🩲CalcinhasA partir de R$ 9,90✨SutiãsA partir de R$ 16,90🌙Linha NoiteCamisolas & Pijamas👑BodiesTule e Alta Renda🛍️Kits AtacadoPacotes com DescontoOu escolha um valor comum:Calcinha R$ 9,90Sutiã R$ 16,90Conjunto R$ 24,90Body R$ 34,90Camisola R$ 39,90Margem de Lucro que Você Quer+100% de Lucro60%Rápido80%Bom100%Padrão Fábrica ⭐130%Alta MargemQuer escolher outra porcentagem?Digite qualquer porcentagem de lucro desejada%Blindagem contra Custos Ocultos (Edite os Valores)Evite PrejuízoPreencha os custos reais que você tem para o sistema calcular o seu lucro líquido exato:Taxa da sua Maquininha (%)Porcentagem que a maquininha desconta:%Sacolinha, Laço & Embalagem (R$)Quanto você gasta por sacolinha/brinde:R$Frete da Fábrica por Peça (R$)PREÇO SUGERIDO PARA VENDER100% CalibradoPreço no Pix (À Vista)R$ 22.90Lucro no Bolso: +R$ 10.50Preço no CartãoR$ 23.90Em até 2x de R$ 11.95Seu Lucro Líquido Real no BolsoCusto total descontado: R$ 12.40 (peça + embalagem + frete)+R$ 10.5085% de ganho limpoSimulação de Renda Extra Mensal com essa Peça (26 dias):1 peça/diaR$ 273lucro limpo/mês3 peças/dia ⭐R$ 819lucro limpo/mês5 peças/diaR$ 1365lucro limpo/mêsDica de Ouro da Fábrica para a Cliente Achar Barato:\"Amiga, uma lingerie com esse mesmo padrão de alta costura em lojas de shopping custa facilmente de R$ 90 a R$ 120. Comigo, como trago direto da fábrica de Nova Friburgo sem intermediários, você leva essa joia por apenas R$ 22.90 no Pix ou 2x de R$ 11.95 no cartão!\""}
+
+## 2026-11-15 14:55:12.449Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 75","label":"Ex: 75","value":"20","valueLength":2,"text":""}
+
+## 2026-11-15 14:55:12.452Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"number","id":null,"placeholder":"Ex: 75","label":"Ex: 75","value":"20","valueLength":2,"text":""}
+
+## 2026-11-15 14:55:26.793Z click
+- element: {"tag":"button","role":"switch","ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-11-15 14:55:29.146Z click
+- element: {"tag":"button","role":"switch","ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-11-15 14:55:32.105Z click
+- element: {"tag":"button","role":"switch","ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-11-15 14:55:34.073Z click
+- element: {"tag":"button","role":"switch","ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-11-15 14:55:35.804Z click
+- element: {"tag":"button","role":"switch","ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-11-15 15:04:50.903Z click
+- element: {"tag":"button","role":"tab","ariaLabel":null,"name":null,"type":"button","id":"radix-:r3:-trigger-scripts","placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Scripts Zap"}
+
+## 2026-11-15 15:04:56.954Z click
+- element: {"tag":"button","role":"tab","ariaLabel":null,"name":null,"type":"button","id":"radix-:r3:-trigger-guia","placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Guia PDF"}
+
+## 2026-11-15 15:05:00.927Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Salvar / Imprimir em PDF"}
+
+## 2026-11-15 15:05:15.271Z network.error
+- method: POST
+- url: https://www.facebook.com/tr/
+- status: 0
+- requestBody: id=981595838258999&ev=SubscribedButtonClick&dl=http%3A%2F%2Flocalhost%3A3000%2Fmimos%2Fmaquina-de-vendas&rl=&if=false&ts=1794755100935&iw=false&cd[buttonFeatures]=%7B%22classList%22%3A%22inline-flex%20items-center%20justify-center%20whitespace-nowrap%20transition-colors%20focus-visible%3Aoutline-none%20focus-visible%3Aring-1%20focus-visible%3Aring-ring%20disabled%3Apointer-events-none%20disabled%3Aopacity-50%20%5B%26_svg%5D%3Apointer-events-none%20%5B%26_svg%5D%3Asize-4%20%5B%26_svg%5D%3Ashrink-0%20bg-primary%20hover%3Abg-primary%2F90%20h-9%20px-4%20flex-1%20bg-gradient-to-r%20from-%5B%23d97706%5D%20via-%5B%23f59e0b%5D%20to-%5B%23b45309%5D%20hover%3Abrightness-110%20text-black%20font-black%20py-5%20rounded-2xl%20text-xs%20gap-2%20shadow-lg%20shadow-%5B%23f59e0b%5D%2F20%22%2C%22destination%22%3A%22%22%2C%22id%22%3A%22%22%2C%22imageUrl%22%3A%22linear-gradient(to%20right%2C%20rgb(217%2C%20119%2C%206)%2C%20rgb(245%2C%20158%2C%2011)%2C%20rgb(180%2C%2083%2C%209))%22%2C%22innerText%22%3A%22Salvar%20%2F%20Imprimir%20em%20PDF%22%2C%22numChildButtons%22%3A0%2C%22tag%22%3A%22button%22%2C%22type%22%3Anull%2C%22name%22%3A%22%22%2C%22value%22%3A%22%22%7D&cd[buttonText]=Salvar%20%2F%20Imprimir%20em%20PDF&cd[formFeatures]=%5B%5D&cd[pageFeatures]=%7B%22title%22%3A%22Avante%20Lingerie%20%7C%20Oficial%22%7D&sw=1366&sh=768&v=2.9.439&r=stable&ec=10&o=4126&aems=0%3B0&fbp=fb.0.1794751475253.778007154966658011&eid=ob3_plugin-set_d6e30c8e58bb390d43d69ff8bb76b5b0a5e18af754f5f121b5e5ca004bd1d2a9&ler=empty&cdl=API_unavailable&pmd[locale]=pt-BR&plt=1745.800000000745&iss=1&ss=%7B%22page_url%22%3A%5B%7B%22rid%22%3A%221115538474447526%22%2C%22v%22%3A%5B%22%2C90%22%5D%7D%2C%7B%22rid%22%3A%221705748144337634%22%2C%22v%22%3A%5B%22%2C90%22%5D%7D%5D%2C%22page_title%22%3A%5B%7B%22rid%22%3A%221181770751460176%22%2C%22v%22%3A%5B%22Avante%20Lingerie%20%7C%20Oficial%22%5D%7D%5D%2C%22entity_name%22%3A%5B%7B%22rid%22%3A%221492041266177207%22%2C%22v%22%3A%5B%22%2C90%22%5D%7D%5D%2C%22event_name%22%3A%5B%7B%22ri...
+- durationMs: 142
+
+## 2026-11-15 15:05:15.278Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 15:05:36.331Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Acessar Catálogo Atacado"}
+
+## 2026-11-15 15:05:37.972Z load
+- url: http://localhost:3000/quero-revender
+- title: Avante Lingerie | Oficial
+
+## 2026-11-15 15:05:38.779Z navigate
+- url: http://localhost:3000/quero-revender
+- via: replaceState
+
+## 2026-11-15 15:05:38.947Z network.error
+- method: POST
+- url: https://www.google.com/rmkt/collect/18499593515/?random=1794755138839&cv=11&fst=1794755138839&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be6bb1z8f_AW-18499593515za208xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115938466~115938469~117776796~118897920~118897930~120385423~120412528~120420416~120469145~120469153~121191153~121246026~121246034&u_w=1366&u_h=768&url=http%3A%2F%2Flocalhost%3A3000%2Fquero-revender&ref=http%3A%2F%2Flocalhost%3A3000%2Fmimos%2Fmaquina-de-vendas&rcb=6&frm=0&tiba=Avante%20Lingerie%20%7C%20Oficial&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=247244429.1794751457&uaa=x86&uab=64&uafvl=Not-A.Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B157.0.8103.51%7CChromium%3B157.0.8103.51&uamb=0&uam=&uap=Windows&uapv=19.0.0&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5
+- status: 0
+- durationMs: 102
+
+## 2026-11-15 15:05:38.948Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 15:05:38.958Z network.error
+- method: POST
+- url: https://www.google.com/ccm/collect?rcb=6&frm=0&apvc=0&auid=247244429.1794751457&dt=Avante%20Lingerie%20%7C%20Oficial&tid=AW-18499593515&en=page_view&dl=http%3A%2F%2Flocalhost%3A3000%2Fquero-revender&dr=http%3A%2F%2Flocalhost%3A3000%2Fmimos%2Fmaquina-de-vendas&scrsrc=www.googletagmanager.com&rnd=734944218.1794755138&navt=n&npa=0&gtm=45be6bb1z8f_AW-18499593515za208xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115938466~115938469~117776796~118897920~118897930~120385423~120412528~120420416~120469145~120469153~121191153~121246026~121246034&tft=1794755138856&tfd=2492&tids=AW-18499593515&fmt=8
+- status: 0
+- durationMs: 101
+
+## 2026-11-15 15:05:38.958Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 15:05:39.530Z network.error
+- method: POST
+- url: https://analytics.google.com/g/collect?v=2&tid=G-E2FS36FRG1&gtm=45je6bb1v9259987036za208xf1&_p=1794755137543&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AAAAACQC&cid=946152551.1794751474&frm=0&ibt=1&ngs=1&pscdl=noapi&rcb=8&sr=1366x768&uaa=x86&uab=64&uafvl=Not-A.Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B157.0.8103.51%7CChromium%3B157.0.8103.51&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=pt-pt&_s=1&tag_exp=115938466~115938468~118897920~118897930~120213116~120385423~120412526~120420414~120469145~120469153~121246026~121246034~123785234&sid=1794754327&sct=2&seg=1&dl=http%3A%2F%2Flocalhost%2Fquero-revender&dr=http%3A%2F%2Flocalhost%3A3000%2Fmimos%2Fmaquina-de-vendas&dt=Avante%20Lingerie%20%7C%20Oficial&en=page_view&_ee=1&tfd=3001
+- status: 0
+- durationMs: 164
+
+## 2026-11-15 15:05:39.530Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 15:05:44.500Z network.error
+- method: POST
+- url: https://analytics.google.com/g/collect?v=2&tid=G-E2FS36FRG1&gtm=45je6bb1v9259987036za200xf1&_p=1794755137543&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEAAACQC&ae=a&cid=946152551.1794751474&frm=0&ibt=1&ngs=1&pscdl=noapi&rcb=8&sr=1366x768&uaa=x86&uab=64&uafvl=Not-A.Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B157.0.8103.51%7CChromium%3B157.0.8103.51&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=pt-pt&_s=2&tag_exp=115938466~115938468~118897920~118897930~120213116~120385423~120412526~120420414~120469145~120469153~121246026~121246034~123785234&sid=1794754327&sct=2&seg=1&dl=http%3A%2F%2Flocalhost%2Fquero-revender&dr=http%3A%2F%2Flocalhost%3A3000%2Fmimos%2Fmaquina-de-vendas&dt=Avante%20Lingerie%20%7C%20Oficial&en=scroll&epn.percent_scrolled=90&_et=38&tfd=8004
+- status: 0
+- durationMs: 131
+
+## 2026-11-15 15:05:44.500Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 15:06:23.770Z load
+- url: http://localhost:3000/mimos/maquina-de-vendas
+- title: Avante Lingerie | Oficial
+
+## 2026-11-15 15:06:24.456Z network.error
+- method: POST
+- url: https://www.google.com/rmkt/collect/18499593515/?random=1794755184110&cv=11&fst=1794755184110&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be6bb1z8f_AW-18499593515za208xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=100940091~115616985~115938466~115938468~117776796~118897920~118897930~119863601~120385422~120412528~120420416~120469145~120469153~121191153~121246026~121246034&u_w=1366&u_h=768&url=http%3A%2F%2Flocalhost%3A3000%2Fmimos%2Fmaquina-de-vendas&rcb=18&frm=0&tiba=Avante%20Lingerie%20%7C%20Oficial&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=247244429.1794751457&uaa=x86&uab=64&uafvl=Not-A.Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B157.0.8103.51%7CChromium%3B157.0.8103.51&uamb=0&uam=&uap=Windows&uapv=19.0.0&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5
+- status: 0
+- durationMs: 251
+
+## 2026-11-15 15:06:24.459Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 15:06:24.487Z network.error
+- method: POST
+- url: https://www.google.com/ccm/collect?rcb=18&frm=0&apvc=1&auid=247244429.1794751457&dt=Avante%20Lingerie%20%7C%20Oficial&tid=AW-18499593515&en=page_view&dl=http%3A%2F%2Flocalhost%3A3000%2Fmimos%2Fmaquina-de-vendas&scrsrc=www.googletagmanager.com&rnd=366089093.1794755184&navt=n&npa=0&gtm=45be6bb1z8f_AW-18499593515za208xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=100940091~115616985~115938466~115938468~117776796~118897920~118897930~119863601~120385422~120412528~120420416~120469145~120469153~121191153~121246026~121246034&tft=1794755184209&tfd=1792&tids=AW-18499593515&fmt=8
+- status: 0
+- durationMs: 276
+
+## 2026-11-15 15:06:24.487Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 15:06:25.230Z navigate
+- url: http://localhost:3000/mimos/maquina-de-vendas
+- via: replaceState
+
+## 2026-11-15 15:06:25.544Z network.error
+- method: POST
+- url: https://www.google.com/rmkt/collect/18499593515/?random=1794755185310&cv=11&fst=1794755185310&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be6bb1z8f_AW-18499593515za208xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=100940091~115616985~115938466~115938468~117776796~118897920~118897930~119863601~120385422~120412528~120420416~120469145~120469153~121191153~121246026~121246034&u_w=1366&u_h=768&url=http%3A%2F%2Flocalhost%3A3000%2Fmimos%2Fmaquina-de-vendas&rcb=18&frm=0&tiba=Avante%20Lingerie%20%7C%20Oficial&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=247244429.1794751457&uaa=x86&uab=64&uafvl=Not-A.Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B157.0.8103.51%7CChromium%3B157.0.8103.51&uamb=0&uam=&uap=Windows&uapv=19.0.0&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5
+- status: 0
+- durationMs: 224
+
+## 2026-11-15 15:06:25.544Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 15:06:25.545Z network.error
+- method: POST
+- url: https://www.google.com/ccm/collect?rcb=18&frm=0&apvc=0&auid=247244429.1794751457&dt=Avante%20Lingerie%20%7C%20Oficial&tid=AW-18499593515&en=page_view&dl=http%3A%2F%2Flocalhost%3A3000%2Fmimos%2Fmaquina-de-vendas&scrsrc=www.googletagmanager.com&rnd=366089093.1794755184&navt=n&npa=0&gtm=45be6bb1z8f_AW-18499593515za208xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=100940091~115616985~115938466~115938468~117776796~118897920~118897930~119863601~120385422~120412528~120420416~120469145~120469153~121191153~121246026~121246034&tft=1794755185333&tfd=2916&tids=AW-18499593515&fmt=8
+- status: 0
+- durationMs: 212
+
+## 2026-11-15 15:06:25.545Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 15:06:26.085Z network.error
+- method: POST
+- url: https://analytics.google.com/g/collect?v=2&tid=G-E2FS36FRG1&gtm=45je6bb1v9259987036za208xf1&_p=1794755183400&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AAAAACQC&cid=946152551.1794751474&frm=0&ibt=1&ngs=1&pscdl=noapi&rcb=11&sr=1366x768&uaa=x86&uab=64&uafvl=Not-A.Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B157.0.8103.51%7CChromium%3B157.0.8103.51&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=pt-pt&_s=1&tag_exp=115616985~115938466~115938468~118897920~118897930~119863601~120213116~120385423~120412526~120420416~120469145~120469153~121246026~121246034~123988488&sid=1794754327&sct=2&seg=1&dl=http%3A%2F%2Flocalhost%2Fmimos%2Fmaquina-de-vendas&dt=Avante%20Lingerie%20%7C%20Oficial&en=page_view&_ee=1&tfd=3446
+- status: 0
+- durationMs: 221
+
+## 2026-11-15 15:06:26.085Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 15:06:29.681Z click
+- element: {"tag":"button","role":"tab","ariaLabel":null,"name":null,"type":"button","id":"radix-:r3:-trigger-guia","placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Guia PDF"}
+
+## 2026-11-15 15:06:30.957Z network.error
+- method: POST
+- url: https://analytics.google.com/g/collect?v=2&tid=G-E2FS36FRG1&gtm=45je6bb1v9259987036za200xf1&_p=1794755183400&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEAAACQC&ae=a&cid=946152551.1794751474&frm=0&ibt=1&ngs=1&pscdl=noapi&rcb=11&sr=1366x768&uaa=x86&uab=64&uafvl=Not-A.Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B157.0.8103.51%7CChromium%3B157.0.8103.51&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=pt-pt&_s=2&tag_exp=115616985~115938466~115938468~118897920~118897930~119863601~120213116~120385423~120412526~120420416~120469145~120469153~121246026~121246034~123988488&sid=1794754327&sct=2&seg=1&dl=http%3A%2F%2Flocalhost%2Fmimos%2Fmaquina-de-vendas&dt=Avante%20Lingerie%20%7C%20Oficial&en=scroll&epn.percent_scrolled=90&_et=16&tfd=8455
+- status: 0
+- durationMs: 83
+
+## 2026-11-15 15:06:30.957Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 15:06:38.546Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Copiar Resumo"}
+
+## 2026-11-15 15:06:58.540Z click
+- element: {"tag":"button","role":"tab","ariaLabel":null,"name":null,"type":"button","id":"radix-:r3:-trigger-scripts","placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Scripts Zap"}
+
+## 2026-11-15 15:07:01.655Z click
+- element: {"tag":"button","role":"tab","ariaLabel":null,"name":null,"type":"button","id":"radix-:r3:-trigger-guia","placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Guia PDF"}
+
+## 2026-11-15 15:09:25.362Z click
+- element: {"tag":"button","role":"tab","ariaLabel":null,"name":null,"type":"button","id":"radix-:r3:-trigger-scripts","placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Scripts Zap"}
+
+## 2026-11-15 15:09:30.191Z click
+- element: {"tag":"button","role":"tab","ariaLabel":null,"name":null,"type":"button","id":"radix-:r3:-trigger-calculadora","placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Calculadora"}
+
+## 2026-11-15 15:16:47.611Z load
+- url: http://localhost:3000/mimos/maquina-de-vendas
+- title: Avante Lingerie | Oficial
+
+## 2026-11-15 15:16:48.150Z network.error
+- method: POST
+- url: https://ad.doubleclick.net/ccm/s/collect?auid=247244429.1794751457&gtm=45be6bb1z8f_AW-18499593515za208xecxf1&fmt=8
+- status: 0
+- durationMs: 193
+
+## 2026-11-15 15:16:48.151Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 15:16:48.154Z network.error
+- method: POST
+- url: https://www.google.com/rmkt/collect/18499593515/?random=1794755807893&cv=11&fst=1794755807893&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be6bb1z8f_AW-18499593515za208xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115938466~115938469~117776796~118897920~118897930~119863601~120385422~120412528~120420416~120469145~120469153~121191153~121246026~121246034~123785234&u_w=1366&u_h=768&url=http%3A%2F%2Flocalhost%3A3000%2Fmimos%2Fmaquina-de-vendas&rcb=10&frm=0&tiba=Avante%20Lingerie%20%7C%20Oficial&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=247244429.1794751457&uaa=x86&uab=64&uafvl=Not-A.Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B157.0.8103.51%7CChromium%3B157.0.8103.51&uamb=0&uam=&uap=Windows&uapv=19.0.0&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5
+- status: 0
+- durationMs: 203
+
+## 2026-11-15 15:16:48.154Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 15:16:48.156Z network.error
+- method: POST
+- url: https://www.google.com/ccm/collect?rcb=10&frm=0&apvc=1&auid=247244429.1794751457&dt=Avante%20Lingerie%20%7C%20Oficial&tid=AW-18499593515&en=page_view&dl=http%3A%2F%2Flocalhost%3A3000%2Fmimos%2Fmaquina-de-vendas&scrsrc=www.googletagmanager.com&rnd=1586760171.1794755808&navt=r&npa=0&gtm=45be6bb1z8f_AW-18499593515za208xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115938466~115938469~117776796~118897920~118897930~119863601~120385422~120412528~120420416~120469145~120469153~121191153~121246026~121246034~123785234&tft=1794755807955&tfd=1652&tids=AW-18499593515&fmt=8
+- status: 0
+- durationMs: 199
+
+## 2026-11-15 15:16:48.156Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 15:16:51.161Z network.error
+- method: POST
+- url: https://www.google.com/rmkt/collect/18499593515/?random=1794755810759&cv=11&fst=1794755810759&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be6bb1z8f_AW-18499593515za208xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115938466~115938469~117776796~118897920~118897930~119863601~120385422~120412528~120420416~120469145~120469153~121191153~121246026~121246034~123785234&u_w=1366&u_h=768&url=http%3A%2F%2Flocalhost%3A3000%2Fmimos%2Fmaquina-de-vendas&rcb=10&frm=0&tiba=Avante%20Lingerie%20%7C%20Oficial&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=247244429.1794751457&uaa=x86&uab=64&uafvl=Not-A.Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B157.0.8103.51%7CChromium%3B157.0.8103.51&uamb=0&uam=&uap=Windows&uapv=19.0.0&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5
+- status: 0
+- durationMs: 389
+
+## 2026-11-15 15:16:51.161Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 15:16:51.163Z network.error
+- method: POST
+- url: https://www.google.com/ccm/collect?rcb=10&frm=0&apvc=0&auid=247244429.1794751457&dt=Avante%20Lingerie%20%7C%20Oficial&tid=AW-18499593515&en=page_view&dl=http%3A%2F%2Flocalhost%3A3000%2Fmimos%2Fmaquina-de-vendas&scrsrc=www.googletagmanager.com&rnd=1586760171.1794755808&navt=r&npa=0&gtm=45be6bb1z8f_AW-18499593515za208xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115938466~115938469~117776796~118897920~118897930~119863601~120385422~120412528~120420416~120469145~120469153~121191153~121246026~121246034~123785234&tft=1794755810820&tfd=4516&tids=AW-18499593515&fmt=8
+- status: 0
+- durationMs: 343
+
+## 2026-11-15 15:16:51.163Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 15:16:51.446Z network.error
+- method: POST
+- url: https://analytics.google.com/g/collect?v=2&tid=G-E2FS36FRG1&gtm=45je6bb1v9259987036za208xf1&_p=1794755807236&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AAAAACQC&cid=946152551.1794751474&frm=0&ibt=1&ngs=1&pscdl=noapi&rcb=2&sr=1366x768&uaa=x86&uab=64&uafvl=Not-A.Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B157.0.8103.51%7CChromium%3B157.0.8103.51&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=pt-pt&_s=1&tag_exp=115616985~115938466~115938468~118897920~118897930~119863601~120213116~120385423~120412526~120420414~120469145~120469153~121246026~121246034&sid=1794754327&sct=2&seg=1&dl=http%3A%2F%2Flocalhost%2Fmimos%2Fmaquina-de-vendas&dt=Avante%20Lingerie%20%7C%20Oficial&en=page_view&_ee=1&tfd=5060
+- status: 0
+- durationMs: 82
+
+## 2026-11-15 15:16:51.446Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 15:16:56.447Z network.error
+- method: POST
+- url: https://analytics.google.com/g/collect?v=2&tid=G-E2FS36FRG1&gtm=45je6bb1v9259987036za200xf1&_p=1794755807236&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEAAACQC&ae=a&cid=946152551.1794751474&frm=0&ibt=1&ngs=1&pscdl=noapi&rcb=2&sr=1366x768&uaa=x86&uab=64&uafvl=Not-A.Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B157.0.8103.51%7CChromium%3B157.0.8103.51&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=pt-pt&_s=2&tag_exp=115616985~115938466~115938468~118897920~118897930~119863601~120213116~120385423~120412526~120420414~120469145~120469153~121246026~121246034&sid=1794754327&sct=2&seg=1&dl=http%3A%2F%2Flocalhost%2Fmimos%2Fmaquina-de-vendas&dt=Avante%20Lingerie%20%7C%20Oficial&en=scroll&epn.percent_scrolled=90&_et=258&tfd=10065
+- status: 0
+- durationMs: 79
+
+## 2026-11-15 15:16:56.447Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 15:17:07.034Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Body"}
+
+## 2026-11-15 15:17:07.916Z load
+- url: http://localhost:3000/categoria/body
+- title: Avante Lingerie | Oficial
+
+## 2026-11-15 15:17:08.413Z network.error
+- method: POST
+- url: https://www.google.com/rmkt/collect/18499593515/?random=1794755828155&cv=11&fst=1794755828155&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be6bc0h2z8f_AW-18499593515za208xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=100940092~115616986~115938466~115938469~117776796~118897920~118897930~120385423~120412526~120420416~120469145~120469153~121191153~121246026~121246034~123785233&u_w=1366&u_h=768&url=http%3A%2F%2Flocalhost%3A3000%2Fcategoria%2Fbody&rcb=0&frm=0&tiba=Avante%20Lingerie%20%7C%20Oficial&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=247244429.1794751457&uaa=x86&uab=64&uafvl=Not-A.Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B157.0.8103.51%7CChromium%3B157.0.8103.51&uamb=0&uam=&uap=Windows&uapv=19.0.0&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5
+- status: 0
+- durationMs: 192
+
+## 2026-11-15 15:17:08.414Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 15:17:08.416Z network.error
+- method: POST
+- url: https://www.google.com/ccm/collect?rcb=0&frm=0&apvc=1&auid=247244429.1794751457&dt=Avante%20Lingerie%20%7C%20Oficial&tid=AW-18499593515&en=page_view&dl=http%3A%2F%2Flocalhost%3A3000%2Fcategoria%2Fbody&scrsrc=www.googletagmanager.com&rnd=1981692301.1794755828&navt=n&npa=0&gtm=45be6bc0h2z8f_AW-18499593515za208xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=100940092~115616986~115938466~115938469~117776796~118897920~118897930~120385423~120412526~120420416~120469145~120469153~121191153~121246026~121246034~123785233&tft=1794755828222&tfd=905&tids=AW-18499593515&fmt=8
+- status: 0
+- durationMs: 194
+
+## 2026-11-15 15:17:08.416Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 15:17:08.824Z navigate
+- url: http://localhost:3000/categoria/body
+- via: replaceState
+
+## 2026-11-15 15:17:09.110Z network.error
+- method: POST
+- url: https://www.google.com/rmkt/collect/18499593515/?random=1794755828924&cv=11&fst=1794755828924&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be6bc0h2z8f_AW-18499593515za208xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=100940092~115616986~115938466~115938469~117776796~118897920~118897930~120385423~120412526~120420416~120469145~120469153~121191153~121246026~121246034~123785233&u_w=1366&u_h=768&url=http%3A%2F%2Flocalhost%3A3000%2Fcategoria%2Fbody&rcb=0&frm=0&tiba=Avante%20Lingerie%20%7C%20Oficial&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=247244429.1794751457&uaa=x86&uab=64&uafvl=Not-A.Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B157.0.8103.51%7CChromium%3B157.0.8103.51&uamb=0&uam=&uap=Windows&uapv=19.0.0&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5
+- status: 0
+- durationMs: 176
+
+## 2026-11-15 15:17:09.110Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 15:17:09.110Z network.error
+- method: POST
+- url: https://www.google.com/ccm/collect?rcb=0&frm=0&apvc=0&auid=247244429.1794751457&dt=Avante%20Lingerie%20%7C%20Oficial&tid=AW-18499593515&en=page_view&dl=http%3A%2F%2Flocalhost%3A3000%2Fcategoria%2Fbody&scrsrc=www.googletagmanager.com&rnd=1981692301.1794755828&navt=n&npa=0&gtm=45be6bc0h2z8f_AW-18499593515za208xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=100940092~115616986~115938466~115938469~117776796~118897920~118897930~120385423~120412526~120420416~120469145~120469153~121191153~121246026~121246034~123785233&tft=1794755828948&tfd=1631&tids=AW-18499593515&fmt=8
+- status: 0
+- durationMs: 162
+
+## 2026-11-15 15:17:09.110Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 15:17:09.486Z network.error
+- method: POST
+- url: https://analytics.google.com/g/collect?v=2&tid=G-E2FS36FRG1&gtm=45je6bc0h2v9259987036za208xf1&_p=1794755827817&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AAAAACQC&cid=946152551.1794751474&frm=0&ibt=1&ngs=1&pscdl=noapi&rcb=16&sr=1366x768&uaa=x86&uab=64&uafvl=Not-A.Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B157.0.8103.51%7CChromium%3B157.0.8103.51&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=pt-pt&_s=1&tag_exp=115616986~115938466~115938469~118897920~118897930~120213116~120385422~120412528~120420414~120469145~120469153~121246026~121246034~123785234&sid=1794754327&sct=2&seg=1&dl=http%3A%2F%2Flocalhost%2Fcategoria%2Fbody&dt=Avante%20Lingerie%20%7C%20Oficial&en=page_view&_ee=1&tfd=2082
+- status: 0
+- durationMs: 86
+
+## 2026-11-15 15:17:09.486Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 15:17:14.474Z network.error
+- method: POST
+- url: https://analytics.google.com/g/collect?v=2&tid=G-E2FS36FRG1&gtm=45je6bc0h2v9259987036za200xf1&_p=1794755827817&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEAAACQC&ae=a&cid=946152551.1794751474&frm=0&ibt=1&ngs=1&pscdl=noapi&rcb=16&sr=1366x768&uaa=x86&uab=64&uafvl=Not-A.Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B157.0.8103.51%7CChromium%3B157.0.8103.51&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=pt-pt&_s=2&tag_exp=115616986~115938466~115938469~118897920~118897930~120213116~120385422~120412528~120420414~120469145~120469153~121246026~121246034~123785234&sid=1794754327&sct=2&seg=1&dl=http%3A%2F%2Flocalhost%2Fcategoria%2Fbody&dt=Avante%20Lingerie%20%7C%20Oficial&en=scroll&epn.percent_scrolled=90&_et=21&tfd=7089
+- status: 0
+- durationMs: 67
+
+## 2026-11-15 15:17:14.474Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 15:17:20.775Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Conjunto"}
+
+## 2026-11-15 15:17:21.221Z load
+- url: http://localhost:3000/categoria/conjunto
+- title: Avante Lingerie | Oficial
+
+## 2026-11-15 15:17:21.660Z network.error
+- method: POST
+- url: https://www.google.com/ccm/collect?rcb=17&frm=0&apvc=1&auid=247244429.1794751457&dt=Avante%20Lingerie%20%7C%20Oficial&tid=AW-18499593515&en=page_view&dl=http%3A%2F%2Flocalhost%3A3000%2Fcategoria%2Fconjunto&scrsrc=www.googletagmanager.com&rnd=785906273.1794755841&navt=n&npa=0&gtm=45be6bb1z8f_AW-18499593515za208xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115938466~115938469~117776796~118897920~118897930~120385423~120412526~120420416~120469145~120469153~121191153~121246026~121246034&tft=1794755841488&tfd=638&tids=AW-18499593515&fmt=8
+- status: 0
+- durationMs: 172
+
+## 2026-11-15 15:17:21.661Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 15:17:21.663Z network.error
+- method: POST
+- url: https://www.google.com/rmkt/collect/18499593515/?random=1794755841451&cv=11&fst=1794755841451&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be6bb1z8f_AW-18499593515za208xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115938466~115938469~117776796~118897920~118897930~120385423~120412526~120420416~120469145~120469153~121191153~121246026~121246034&u_w=1366&u_h=768&url=http%3A%2F%2Flocalhost%3A3000%2Fcategoria%2Fconjunto&rcb=17&frm=0&tiba=Avante%20Lingerie%20%7C%20Oficial&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=247244429.1794751457&uaa=x86&uab=64&uafvl=Not-A.Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B157.0.8103.51%7CChromium%3B157.0.8103.51&uamb=0&uam=&uap=Windows&uapv=19.0.0&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5
+- status: 0
+- durationMs: 178
+
+## 2026-11-15 15:17:21.663Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 15:17:22.040Z navigate
+- url: http://localhost:3000/categoria/conjunto
+- via: replaceState
+
+## 2026-11-15 15:17:22.371Z network.error
+- method: POST
+- url: https://www.google.com/rmkt/collect/18499593515/?random=1794755842092&cv=11&fst=1794755842092&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be6bb1z8f_AW-18499593515za208xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115938466~115938469~117776796~118897920~118897930~120385423~120412526~120420416~120469145~120469153~121191153~121246026~121246034&u_w=1366&u_h=768&url=http%3A%2F%2Flocalhost%3A3000%2Fcategoria%2Fconjunto&rcb=17&frm=0&tiba=Avante%20Lingerie%20%7C%20Oficial&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=247244429.1794751457&uaa=x86&uab=64&uafvl=Not-A.Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B157.0.8103.51%7CChromium%3B157.0.8103.51&uamb=0&uam=&uap=Windows&uapv=19.0.0&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5
+- status: 0
+- durationMs: 266
+
+## 2026-11-15 15:17:22.371Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 15:17:22.371Z network.error
+- method: POST
+- url: https://www.google.com/ccm/collect?rcb=17&frm=0&apvc=0&auid=247244429.1794751457&dt=Avante%20Lingerie%20%7C%20Oficial&tid=AW-18499593515&en=page_view&dl=http%3A%2F%2Flocalhost%3A3000%2Fcategoria%2Fconjunto&scrsrc=www.googletagmanager.com&rnd=785906273.1794755841&navt=n&npa=0&gtm=45be6bb1z8f_AW-18499593515za208xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115938466~115938469~117776796~118897920~118897930~120385423~120412526~120420416~120469145~120469153~121191153~121246026~121246034&tft=1794755842116&tfd=1267&tids=AW-18499593515&fmt=8
+- status: 0
+- durationMs: 255
+
+## 2026-11-15 15:17:22.371Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 15:17:22.676Z network.error
+- method: POST
+- url: https://analytics.google.com/g/collect?v=2&tid=G-E2FS36FRG1&gtm=45je6bb1v9259987036za208xf1&_p=1794755841173&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AAAAACQC&cid=946152551.1794751474&frm=0&ibt=1&ngs=1&pscdl=noapi&rcb=17&sr=1366x768&uaa=x86&uab=64&uafvl=Not-A.Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B157.0.8103.51%7CChromium%3B157.0.8103.51&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=pt-pt&_s=1&tag_exp=100940092~115938466~115938469~118897920~118897930~120213116~120385423~120412528~120420414~120469145~120469153~121246026~121246034~123988487&sid=1794754327&sct=2&seg=1&dl=http%3A%2F%2Flocalhost%2Fcategoria%2Fconjunto&dt=Avante%20Lingerie%20%7C%20Oficial&en=page_view&_ee=1&tfd=1708
+- status: 0
+- durationMs: 118
+
+## 2026-11-15 15:17:22.676Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 15:17:30.569Z network.error
+- method: POST
+- url: https://analytics.google.com/g/collect?v=2&tid=G-E2FS36FRG1&gtm=45je6bb1v9259987036za200xf1&_p=1794755841173&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEAAACQC&ae=a&cid=946152551.1794751474&frm=0&ibt=1&ngs=1&pscdl=noapi&rcb=17&sr=1366x768&uaa=x86&uab=64&uafvl=Not-A.Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B157.0.8103.51%7CChromium%3B157.0.8103.51&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=pt-pt&_s=2&tag_exp=100940092~115938466~115938469~118897920~118897930~120213116~120385423~120412528~120420414~120469145~120469153~121246026~121246034~123988487&sid=1794754327&sct=2&seg=1&dl=http%3A%2F%2Flocalhost%2Fcategoria%2Fconjunto&dt=Avante%20Lingerie%20%7C%20Oficial&en=scroll&epn.percent_scrolled=90&_et=20&tfd=9633
+- status: 0
+- durationMs: 86
+
+## 2026-11-15 15:17:30.569Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 15:17:40.380Z click
+- element: {"tag":"button","role":"switch","ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-11-15 15:25:26.680Z click
+- element: {"tag":"button","role":"tab","ariaLabel":null,"name":null,"type":"button","id":"radix-:r3:-trigger-scripts","placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Scripts Zap"}
+
+## 2026-11-15 15:25:28.055Z click
+- element: {"tag":"button","role":"tab","ariaLabel":null,"name":null,"type":"button","id":"radix-:r3:-trigger-guia","placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Guia PDF"}
+
+## 2026-11-15 15:25:55.970Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Salvar / Imprimir em PDF"}
+
+## 2026-11-15 15:26:17.276Z network.error
+- method: POST
+- url: https://www.facebook.com/tr/
+- status: 0
+- requestBody: id=981595838258999&ev=SubscribedButtonClick&dl=http%3A%2F%2Flocalhost%3A3000%2Fmimos%2Fmaquina-de-vendas&rl=&if=false&ts=1794756355991&iw=false&cd[buttonFeatures]=%7B%22classList%22%3A%22inline-flex%20items-center%20justify-center%20whitespace-nowrap%20transition-colors%20focus-visible%3Aoutline-none%20focus-visible%3Aring-1%20focus-visible%3Aring-ring%20disabled%3Apointer-events-none%20disabled%3Aopacity-50%20%5B%26_svg%5D%3Apointer-events-none%20%5B%26_svg%5D%3Asize-4%20%5B%26_svg%5D%3Ashrink-0%20bg-primary%20hover%3Abg-primary%2F90%20h-9%20px-4%20flex-1%20bg-gradient-to-r%20from-%5B%23d97706%5D%20via-%5B%23f59e0b%5D%20to-%5B%23b45309%5D%20hover%3Abrightness-110%20text-black%20font-black%20py-5%20rounded-2xl%20text-xs%20gap-2%20shadow-lg%20shadow-%5B%23f59e0b%5D%2F20%22%2C%22destination%22%3A%22%22%2C%22id%22%3A%22%22%2C%22imageUrl%22%3A%22linear-gradient(to%20right%2C%20rgb(217%2C%20119%2C%206)%2C%20rgb(245%2C%20158%2C%2011)%2C%20rgb(180%2C%2083%2C%209))%22%2C%22innerText%22%3A%22Salvar%20%2F%20Imprimir%20em%20PDF%22%2C%22numChildButtons%22%3A0%2C%22tag%22%3A%22button%22%2C%22type%22%3Anull%2C%22name%22%3A%22%22%2C%22value%22%3A%22%22%7D&cd[buttonText]=Salvar%20%2F%20Imprimir%20em%20PDF&cd[formFeatures]=%5B%5D&cd[pageFeatures]=%7B%22title%22%3A%22Avante%20Lingerie%20%7C%20Oficial%22%7D&sw=1366&sh=768&v=2.9.439&r=stable&ec=4&o=4126&aems=0%3B0&fbp=fb.0.1794751475253.778007154966658011&eid=ob3_plugin-set_d8d0f5e3b7aae82adb6a4655f96138884be9a83fce38d0a31cc5b11e434b25b6&ler=empty&cdl=API_unavailable&pmd[locale]=pt-BR&plt=1474.699999999255&iss=1&ss=%7B%22page_url%22%3A%5B%7B%22rid%22%3A%221115538474447526%22%2C%22v%22%3A%5B%22%2C90%22%5D%7D%2C%7B%22rid%22%3A%221705748144337634%22%2C%22v%22%3A%5B%22%2C90%22%5D%7D%5D%2C%22page_title%22%3A%5B%7B%22rid%22%3A%221181770751460176%22%2C%22v%22%3A%5B%22Avante%20Lingerie%20%7C%20Oficial%22%5D%7D%5D%2C%22entity_name%22%3A%5B%7B%22rid%22%3A%221492041266177207%22%2C%22v%22%3A%5B%22%2C90%22%5D%7D%5D%2C%22event_name%22%3A%5B%7B%22rid...
+- durationMs: 128
+
+## 2026-11-15 15:26:17.279Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 15:34:32.268Z load
+- url: http://localhost:3000/mimos/maquina-de-vendas
+- title: Avante Lingerie | Oficial
+
+## 2026-11-15 15:34:34.080Z network.error
+- method: POST
+- url: https://analytics.google.com/g/collect?v=2&tid=G-E2FS36FRG1&gtm=45je6bb1v9259987036za208xf1&_p=1794756871702&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AAAAACQC&cid=946152551.1794751474&frm=0&ibt=1&ngs=1&pscdl=noapi&rcb=6&sr=1366x768&uaa=x86&uab=64&uafvl=Not-A.Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B157.0.8103.51%7CChromium%3B157.0.8103.51&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=pt-pt&_s=1&tag_exp=115938466~115938469~118897920~118897930~120213116~120385423~120412528~120420416~120469145~120469153~121246026~121246034&sid=1794754327&sct=2&seg=1&dl=http%3A%2F%2Flocalhost%2Fmimos%2Fmaquina-de-vendas&dt=Avante%20Lingerie%20%7C%20Oficial&en=page_view&_ee=1&tfd=7159
+- status: 0
+- durationMs: 87
+
+## 2026-11-15 15:34:34.081Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 15:34:35.715Z network.error
+- method: POST
+- url: https://www.google.com/ccm/collect?rcb=12&frm=0&apvc=1&auid=247244429.1794751457&dt=Avante%20Lingerie%20%7C%20Oficial&tid=AW-18499593515&en=page_view&dl=http%3A%2F%2Flocalhost%3A3000%2Fmimos%2Fmaquina-de-vendas&scrsrc=www.googletagmanager.com&rnd=2127535267.1794756873&navt=r&npa=0&gtm=45be6bb1z8f_AW-18499593515za208xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=100940092~115938466~115938468~117776796~118897920~118897930~120385422~120412528~120420414~120469145~120469153~121191153~121246026~121246034~123988486&tft=1794756872715&tfd=5881&tids=AW-18499593515&fmt=8
+- status: 0
+- durationMs: 2999
+
+## 2026-11-15 15:34:35.715Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 15:34:35.737Z network.error
+- method: POST
+- url: https://ad.doubleclick.net/ccm/s/collect?auid=247244429.1794751457&gtm=45be6bb1z8f_AW-18499593515za208xecxf1&fmt=8
+- status: 0
+- durationMs: 3020
+
+## 2026-11-15 15:34:35.738Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 15:34:35.740Z network.error
+- method: POST
+- url: https://www.google.com/ccm/collect?rcb=12&frm=0&apvc=0&auid=247244429.1794751457&dt=Avante%20Lingerie%20%7C%20Oficial&tid=AW-18499593515&en=page_view&dl=http%3A%2F%2Flocalhost%3A3000%2Fmimos%2Fmaquina-de-vendas&scrsrc=www.googletagmanager.com&rnd=2127535267.1794756873&navt=r&npa=0&gtm=45be6bb1z8f_AW-18499593515za208xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=100940092~115938466~115938468~117776796~118897920~118897930~120385422~120412528~120420414~120469145~120469153~121191153~121246026~121246034~123988486&tft=1794756873469&tfd=6635&tids=AW-18499593515&fmt=8
+- status: 0
+- durationMs: 2271
+
+## 2026-11-15 15:34:35.740Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 15:34:35.741Z network.error
+- method: POST
+- url: https://www.google.com/rmkt/collect/18499593515/?random=1794756873439&cv=11&fst=1794756873439&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be6bb1z8f_AW-18499593515za208xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=100940092~115938466~115938468~117776796~118897920~118897930~120385422~120412528~120420414~120469145~120469153~121191153~121246026~121246034~123988486&u_w=1366&u_h=768&url=http%3A%2F%2Flocalhost%3A3000%2Fmimos%2Fmaquina-de-vendas&rcb=12&frm=0&tiba=Avante%20Lingerie%20%7C%20Oficial&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=247244429.1794751457&uaa=x86&uab=64&uafvl=Not-A.Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B157.0.8103.51%7CChromium%3B157.0.8103.51&uamb=0&uam=&uap=Windows&uapv=19.0.0&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5
+- status: 0
+- durationMs: 2288
+
+## 2026-11-15 15:34:35.741Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 15:34:35.742Z network.error
+- method: POST
+- url: https://www.google.com/rmkt/collect/18499593515/?random=1794756872634&cv=11&fst=1794756872634&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be6bb1z8f_AW-18499593515za208xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=100940092~115938466~115938468~117776796~118897920~118897930~120385422~120412528~120420414~120469145~120469153~121191153~121246026~121246034~123988486&u_w=1366&u_h=768&url=http%3A%2F%2Flocalhost%3A3000%2Fmimos%2Fmaquina-de-vendas&rcb=12&frm=0&tiba=Avante%20Lingerie%20%7C%20Oficial&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=247244429.1794751457&uaa=x86&uab=64&uafvl=Not-A.Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B157.0.8103.51%7CChromium%3B157.0.8103.51&uamb=0&uam=&uap=Windows&uapv=19.0.0&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5
+- status: 0
+- durationMs: 3031
+
+## 2026-11-15 15:34:35.742Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 15:34:39.085Z network.error
+- method: POST
+- url: https://analytics.google.com/g/collect?v=2&tid=G-E2FS36FRG1&gtm=45je6bb1v9259987036za200xf1&_p=1794756871702&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEAAACQC&ae=a&cid=946152551.1794751474&frm=0&ibt=1&ngs=1&pscdl=noapi&rcb=6&sr=1366x768&uaa=x86&uab=64&uafvl=Not-A.Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B157.0.8103.51%7CChromium%3B157.0.8103.51&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=pt-pt&_s=2&tag_exp=115938466~115938469~118897920~118897930~120213116~120385423~120412528~120420416~120469145~120469153~121246026~121246034&sid=1794754327&sct=2&seg=1&dl=http%3A%2F%2Flocalhost%2Fmimos%2Fmaquina-de-vendas&dt=Avante%20Lingerie%20%7C%20Oficial&en=scroll&epn.percent_scrolled=90&_et=39&tfd=12171
+- status: 0
+- durationMs: 78
+
+## 2026-11-15 15:34:39.085Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 15:34:59.348Z click
+- element: {"tag":"button","role":"tab","ariaLabel":null,"name":null,"type":"button","id":"radix-:r3:-trigger-guia","placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Guia PDF"}
+
+## 2026-11-15 16:18:43.182Z click
+- element: {"tag":"button","role":"tab","ariaLabel":null,"name":null,"type":"button","id":"radix-:r3:-trigger-calculadora","placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Calculadora"}
+
+## 2026-11-15 16:26:13.324Z load
+- url: http://localhost:3000/mimos/maquina-de-vendas
+- title: Avante Lingerie | Oficial
+
+## 2026-11-15 16:26:13.668Z network.error
+- method: POST
+- url: https://ad.doubleclick.net/ccm/s/collect?auid=247244429.1794751457&gtm=45be6bb1z8f_AW-18499593515za208xecxf1&fmt=8
+- status: 0
+- durationMs: 188
+
+## 2026-11-15 16:26:13.670Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 16:26:14.633Z network.error
+- method: POST
+- url: https://www.google.com/ccm/collect?rcb=6&frm=0&apvc=1&auid=247244429.1794751457&dt=Avante%20Lingerie%20%7C%20Oficial&tid=AW-18499593515&en=page_view&dl=http%3A%2F%2Flocalhost%3A3000%2Fmimos%2Fmaquina-de-vendas&scrsrc=www.googletagmanager.com&rnd=1482028985.1794759973&navt=r&npa=0&gtm=45be6bb1z8f_AW-18499593515za208xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115616985~115938465~115938469~117776796~118897920~118897930~120385422~120412526~120420416~120469145~120469153~121191153~121246026~121246034~123785233~123988488&tft=1794759973479&tfd=1813&tids=AW-18499593515&fmt=8
+- status: 0
+- durationMs: 1153
+
+## 2026-11-15 16:26:14.633Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 16:26:14.639Z network.error
+- method: POST
+- url: https://www.google.com/rmkt/collect/18499593515/?random=1794759973424&cv=11&fst=1794759973424&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be6bb1z8f_AW-18499593515za208xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115616985~115938465~115938469~117776796~118897920~118897930~120385422~120412526~120420416~120469145~120469153~121191153~121246026~121246034~123785233~123988488&u_w=1366&u_h=768&url=http%3A%2F%2Flocalhost%3A3000%2Fmimos%2Fmaquina-de-vendas&rcb=6&frm=0&tiba=Avante%20Lingerie%20%7C%20Oficial&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=247244429.1794751457&uaa=x86&uab=64&uafvl=Not-A.Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B157.0.8103.51%7CChromium%3B157.0.8103.51&uamb=0&uam=&uap=Windows&uapv=19.0.0&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5
+- status: 0
+- durationMs: 1161
+
+## 2026-11-15 16:26:14.639Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 16:26:15.922Z network.error
+- method: POST
+- url: https://www.google.com/rmkt/collect/18499593515/?random=1794759975793&cv=11&fst=1794759975793&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be6bb1z8f_AW-18499593515za208xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115616985~115938465~115938469~117776796~118897920~118897930~120385422~120412526~120420416~120469145~120469153~121191153~121246026~121246034~123785233~123988488&u_w=1366&u_h=768&url=http%3A%2F%2Flocalhost%3A3000%2Fmimos%2Fmaquina-de-vendas&rcb=6&frm=0&tiba=Avante%20Lingerie%20%7C%20Oficial&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=247244429.1794751457&uaa=x86&uab=64&uafvl=Not-A.Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B157.0.8103.51%7CChromium%3B157.0.8103.51&uamb=0&uam=&uap=Windows&uapv=19.0.0&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5
+- status: 0
+- durationMs: 123
+
+## 2026-11-15 16:26:15.922Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 16:26:15.925Z network.error
+- method: POST
+- url: https://www.google.com/ccm/collect?rcb=6&frm=0&apvc=0&auid=247244429.1794751457&dt=Avante%20Lingerie%20%7C%20Oficial&tid=AW-18499593515&en=page_view&dl=http%3A%2F%2Flocalhost%3A3000%2Fmimos%2Fmaquina-de-vendas&scrsrc=www.googletagmanager.com&rnd=1482028985.1794759973&navt=r&npa=0&gtm=45be6bb1z8f_AW-18499593515za208xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115616985~115938465~115938469~117776796~118897920~118897930~120385422~120412526~120420416~120469145~120469153~121191153~121246026~121246034~123785233~123988488&tft=1794759975815&tfd=4149&tids=AW-18499593515&fmt=8
+- status: 0
+- durationMs: 110
+
+## 2026-11-15 16:26:15.925Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 16:26:16.248Z network.error
+- method: POST
+- url: https://analytics.google.com/g/collect?v=2&tid=G-E2FS36FRG1&gtm=45je6bb1v9259987036za208xf1&_p=1794759972754&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AAAAACQC&cid=946152551.1794751474&frm=0&ibt=1&ngs=1&pscdl=noapi&rcb=19&sr=1366x768&uaa=x86&uab=64&uafvl=Not-A.Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B157.0.8103.51%7CChromium%3B157.0.8103.51&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=pt-pt&_s=1&tag_exp=115616985~115938465~115938469~118897920~118897930~120213116~120385423~120412526~120420416~120469145~120469153~121246026~121246034~123785233&sid=1794759972&sct=3&seg=1&dl=http%3A%2F%2Flocalhost%2Fmimos%2Fmaquina-de-vendas&dt=Avante%20Lingerie%20%7C%20Oficial&en=page_view&_ee=1&tfd=4509
+- status: 0
+- durationMs: 73
+
+## 2026-11-15 16:26:16.248Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 16:26:21.254Z network.error
+- method: POST
+- url: https://analytics.google.com/g/collect?v=2&tid=G-E2FS36FRG1&gtm=45je6bb1v9259987036za200xf1&_p=1794759972754&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEAAACQC&ae=a&cid=946152551.1794751474&frm=0&ibt=1&ngs=1&pscdl=noapi&rcb=19&sr=1366x768&uaa=x86&uab=64&uafvl=Not-A.Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B157.0.8103.51%7CChromium%3B157.0.8103.51&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=pt-pt&_s=2&tag_exp=115616985~115938465~115938469~118897920~118897930~120213116~120385423~120412526~120420416~120469145~120469153~121246026~121246034~123785233&sid=1794759972&sct=3&seg=1&dl=http%3A%2F%2Flocalhost%2Fmimos%2Fmaquina-de-vendas&dt=Avante%20Lingerie%20%7C%20Oficial&en=scroll&epn.percent_scrolled=90&_et=10&tfd=9515
+- status: 0
+- durationMs: 73
+
+## 2026-11-15 16:26:21.254Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 16:26:26.398Z click
+- element: {"tag":"button","role":"tab","ariaLabel":null,"name":null,"type":"button","id":"radix-:r3:-trigger-scripts","placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Scripts Zap"}
+
+## 2026-11-15 16:26:28.060Z click
+- element: {"tag":"button","role":"tab","ariaLabel":null,"name":null,"type":"button","id":"radix-:r3:-trigger-guia","placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Guia PDF"}
+
+## 2026-11-15 16:31:27.988Z load
+- url: http://localhost:3000/categoria/body
+- title: Avante Lingerie | Oficial
+
+## 2026-11-15 16:31:30.563Z network.error
+- method: POST
+- url: https://www.google.com/ccm/collect?rcb=3&frm=0&apvc=1&auid=247244429.1794751457&dt=Avante%20Lingerie%20%7C%20Oficial&tid=AW-18499593515&en=page_view&dl=http%3A%2F%2Flocalhost%3A3000%2Fcategoria%2Fbody&scrsrc=www.googletagmanager.com&rnd=1438069303.1794760290&navt=n&npa=0&gtm=45be6bb1z8f_AW-18499593515za208xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=100940090~115938466~115938468~117776796~118897920~118897930~119860443~120385422~120412526~120420414~120469145~120469153~121191153~121246026~121246034&tft=1794760290330&tfd=3799&tids=AW-18499593515&fmt=8
+- status: 0
+- durationMs: 232
+
+## 2026-11-15 16:31:30.565Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 16:31:30.568Z network.error
+- method: POST
+- url: https://www.google.com/rmkt/collect/18499593515/?random=1794760290239&cv=11&fst=1794760290239&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be6bb1z8f_AW-18499593515za208xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=100940090~115938466~115938468~117776796~118897920~118897930~119860443~120385422~120412526~120420414~120469145~120469153~121191153~121246026~121246034&u_w=1366&u_h=768&url=http%3A%2F%2Flocalhost%3A3000%2Fcategoria%2Fbody&rcb=3&frm=0&tiba=Avante%20Lingerie%20%7C%20Oficial&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=247244429.1794751457&uaa=x86&uab=64&uafvl=Not-A.Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B157.0.8103.51%7CChromium%3B157.0.8103.51&uamb=0&uam=&uap=Windows&uapv=19.0.0&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5
+- status: 0
+- durationMs: 241
+
+## 2026-11-15 16:31:30.568Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 16:31:30.569Z network.error
+- method: POST
+- url: https://ad.doubleclick.net/ccm/s/collect?auid=247244429.1794751457&gtm=45be6bb1z8f_AW-18499593515za208xecxf1&fmt=8
+- status: 0
+- durationMs: 237
+
+## 2026-11-15 16:31:30.569Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 16:31:30.742Z navigate
+- url: http://localhost:3000/categoria/body
+- via: replaceState
+
+## 2026-11-15 16:31:31.227Z network.error
+- method: POST
+- url: https://www.google.com/rmkt/collect/18499593515/?random=1794760290819&cv=11&fst=1794760290819&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be6bb1z8f_AW-18499593515za208xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=100940090~115938466~115938468~117776796~118897920~118897930~119860443~120385422~120412526~120420414~120469145~120469153~121191153~121246026~121246034&u_w=1366&u_h=768&url=http%3A%2F%2Flocalhost%3A3000%2Fcategoria%2Fbody&rcb=3&frm=0&tiba=Avante%20Lingerie%20%7C%20Oficial&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=247244429.1794751457&uaa=x86&uab=64&uafvl=Not-A.Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B157.0.8103.51%7CChromium%3B157.0.8103.51&uamb=0&uam=&uap=Windows&uapv=19.0.0&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5
+- status: 0
+- durationMs: 392
+
+## 2026-11-15 16:31:31.227Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 16:31:31.228Z network.error
+- method: POST
+- url: https://www.google.com/ccm/collect?rcb=3&frm=0&apvc=0&auid=247244429.1794751457&dt=Avante%20Lingerie%20%7C%20Oficial&tid=AW-18499593515&en=page_view&dl=http%3A%2F%2Flocalhost%3A3000%2Fcategoria%2Fbody&scrsrc=www.googletagmanager.com&rnd=1438069303.1794760290&navt=n&npa=0&gtm=45be6bb1z8f_AW-18499593515za208xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=100940090~115938466~115938468~117776796~118897920~118897930~119860443~120385422~120412526~120420414~120469145~120469153~121191153~121246026~121246034&tft=1794760290851&tfd=4320&tids=AW-18499593515&fmt=8
+- status: 0
+- durationMs: 378
+
+## 2026-11-15 16:31:31.228Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 16:31:34.511Z network.error
+- method: POST
+- url: https://analytics.google.com/g/collect?v=2&tid=G-E2FS36FRG1&gtm=45je6bb1v9259987036za208xf1&_p=1794760287874&_gaz=1&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AAAAACQC&cid=946152551.1794751474&frm=0&ibt=1&ngs=1&pscdl=noapi&rcb=1&sr=1366x768&uaa=x86&uab=64&uafvl=Not-A.Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B157.0.8103.51%7CChromium%3B157.0.8103.51&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=pt-pt&_s=1&tag_exp=100940090~115938466~115938468~118897920~118897930~119860443~120213116~120385422~120412528~120420414~120469145~120469153~121246026~121246034~123988487&sid=1794759972&sct=3&seg=1&dl=http%3A%2F%2Flocalhost%2Fcategoria%2Fbody&dt=Avante%20Lingerie%20%7C%20Oficial&en=page_view&_ee=1&tfd=4798
+- status: 0
+- durationMs: 3182
+
+## 2026-11-15 16:31:34.511Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 16:31:36.429Z network.error
+- method: POST
+- url: https://analytics.google.com/g/collect?v=2&tid=G-E2FS36FRG1&gtm=45je6bb1v9259987036za200xf1&_p=1794760287874&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEAAACQC&ae=a&cid=946152551.1794751474&frm=0&ibt=1&ngs=1&pscdl=noapi&rcb=1&sr=1366x768&uaa=x86&uab=64&uafvl=Not-A.Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B157.0.8103.51%7CChromium%3B157.0.8103.51&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=pt-pt&_s=2&tag_exp=100940090~115938466~115938468~118897920~118897930~119860443~120213116~120385422~120412528~120420414~120469145~120469153~121246026~121246034~123988487&sid=1794759972&sct=3&seg=1&dl=http%3A%2F%2Flocalhost%2Fcategoria%2Fbody&dt=Avante%20Lingerie%20%7C%20Oficial&en=scroll&epn.percent_scrolled=90&_et=22&tfd=9823
+- status: 0
+- durationMs: 75
+
+## 2026-11-15 16:31:36.429Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 16:36:02.181Z load
+- url: http://localhost:3000/mimos/cintura-esculpida
+- title: Avante Lingerie | Oficial
+
+## 2026-11-15 16:36:03.734Z network.error
+- method: POST
+- url: https://ad.doubleclick.net/ccm/s/collect?auid=247244429.1794751457&gtm=45be6bb1z8f_AW-18499593515za208xecxf1&fmt=8
+- status: 0
+- durationMs: 257
+
+## 2026-11-15 16:36:03.737Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 16:36:03.767Z network.error
+- method: POST
+- url: https://www.google.com/rmkt/collect/18499593515/?random=1794760563416&cv=11&fst=1794760563416&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be6bb1z8f_AW-18499593515za208xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115616986~115938465~115938468~117776796~118897920~118897930~120385423~120412526~120420414~120469145~120469153~121191153~121246026~121246034~123988488&u_w=1366&u_h=768&url=http%3A%2F%2Flocalhost%3A3000%2Fmimos%2Fcintura-esculpida&rcb=7&frm=0&tiba=Avante%20Lingerie%20%7C%20Oficial&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=247244429.1794751457&uaa=x86&uab=64&uafvl=Not-A.Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B157.0.8103.51%7CChromium%3B157.0.8103.51&uamb=0&uam=&uap=Windows&uapv=19.0.0&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5
+- status: 0
+- durationMs: 293
+
+## 2026-11-15 16:36:03.767Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 16:36:03.769Z network.error
+- method: POST
+- url: https://www.google.com/ccm/collect?rcb=7&frm=0&apvc=1&auid=247244429.1794751457&dt=Avante%20Lingerie%20%7C%20Oficial&tid=AW-18499593515&en=page_view&dl=http%3A%2F%2Flocalhost%3A3000%2Fmimos%2Fcintura-esculpida&scrsrc=www.googletagmanager.com&rnd=819771906.1794760563&navt=n&npa=0&gtm=45be6bb1z8f_AW-18499593515za208xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115616986~115938465~115938468~117776796~118897920~118897930~120385423~120412526~120420414~120469145~120469153~121191153~121246026~121246034~123988488&tft=1794760563476&tfd=3703&tids=AW-18499593515&fmt=8
+- status: 0
+- durationMs: 292
+
+## 2026-11-15 16:36:03.769Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 16:36:05.571Z navigate
+- url: http://localhost:3000/mimos/cintura-esculpida
+- via: replaceState
+
+## 2026-11-15 16:36:06.022Z network.error
+- method: POST
+- url: https://www.google.com/rmkt/collect/18499593515/?random=1794760565635&cv=11&fst=1794760565635&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be6bb1z8f_AW-18499593515za208xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115616986~115938465~115938468~117776796~118897920~118897930~120385423~120412526~120420414~120469145~120469153~121191153~121246026~121246034~123988488&u_w=1366&u_h=768&url=http%3A%2F%2Flocalhost%3A3000%2Fmimos%2Fcintura-esculpida&rcb=7&frm=0&tiba=Avante%20Lingerie%20%7C%20Oficial&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=247244429.1794751457&uaa=x86&uab=64&uafvl=Not-A.Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B157.0.8103.51%7CChromium%3B157.0.8103.51&uamb=0&uam=&uap=Windows&uapv=19.0.0&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5
+- status: 0
+- durationMs: 372
+
+## 2026-11-15 16:36:06.022Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 16:36:06.023Z network.error
+- method: POST
+- url: https://www.google.com/ccm/collect?rcb=7&frm=0&apvc=0&auid=247244429.1794751457&dt=Avante%20Lingerie%20%7C%20Oficial&tid=AW-18499593515&en=page_view&dl=http%3A%2F%2Flocalhost%3A3000%2Fmimos%2Fcintura-esculpida&scrsrc=www.googletagmanager.com&rnd=819771906.1794760563&navt=n&npa=0&gtm=45be6bb1z8f_AW-18499593515za208xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115616986~115938465~115938468~117776796~118897920~118897930~120385423~120412526~120420414~120469145~120469153~121191153~121246026~121246034~123988488&tft=1794760565660&tfd=5887&tids=AW-18499593515&fmt=8
+- status: 0
+- durationMs: 362
+
+## 2026-11-15 16:36:06.023Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 16:36:08.633Z network.error
+- method: POST
+- url: https://analytics.google.com/g/collect?v=2&tid=G-E2FS36FRG1&gtm=45je6bb1v9259987036za208xf1&_p=1794760562067&_gaz=1&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AAAAACQC&cid=946152551.1794751474&frm=0&ibt=1&ngs=1&pscdl=noapi&rcb=1&sr=1366x768&uaa=x86&uab=64&uafvl=Not-A.Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B157.0.8103.51%7CChromium%3B157.0.8103.51&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=pt-pt&_s=1&tag_exp=115938465~115938469~118897920~118897930~120213116~120385422~120412528~120420414~120469145~120469153~121246026~121246034~123785232&sid=1794759972&sct=3&seg=1&dl=http%3A%2F%2Flocalhost%2Fmimos%2Fcintura-esculpida&dt=Avante%20Lingerie%20%7C%20Oficial&en=page_view&_ee=1&tfd=6338
+- status: 0
+- durationMs: 2520
+
+## 2026-11-15 16:36:08.633Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 16:36:10.660Z console.warn
+- text: Coming Soon API timeout - defaulting to normal mode
+
+## 2026-11-15 16:36:11.287Z network.error
+- method: POST
+- url: https://analytics.google.com/g/collect?v=2&tid=G-E2FS36FRG1&gtm=45je6bb1v9259987036za200xf1&_p=1794760562067&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEAAACQC&ae=a&cid=946152551.1794751474&frm=0&ibt=1&ngs=1&pscdl=noapi&rcb=1&sr=1366x768&uaa=x86&uab=64&uafvl=Not-A.Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B157.0.8103.51%7CChromium%3B157.0.8103.51&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=pt-pt&_s=2&tag_exp=115938465~115938469~118897920~118897930~120213116~120385422~120412528~120420414~120469145~120469153~121246026~121246034~123785232&sid=1794759972&sct=3&seg=1&dl=http%3A%2F%2Flocalhost%2Fmimos%2Fcintura-esculpida&dt=Avante%20Lingerie%20%7C%20Oficial&en=scroll&epn.percent_scrolled=90&_et=73&tfd=11426
+- status: 0
+- durationMs: 87
+
+## 2026-11-15 16:36:11.287Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 16:36:28.388Z click
+- element: {"tag":"button","role":"tab","ariaLabel":null,"name":null,"type":"button","id":"radix-:r3:-trigger-hidratacao","placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Água & Detox"}
+
+## 2026-11-15 16:36:35.459Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"LeveTrabalho sentada (35ml/kg)"}
+
+## 2026-11-15 16:36:40.284Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"ModeradaCaminhada diária (40ml/kg)"}
+
+## 2026-11-15 16:36:41.155Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"IntensaTreino ou academia (45ml/kg)"}
+
+## 2026-11-15 16:36:55.906Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"ModeradaCaminhada diária (40ml/kg)"}
+
+## 2026-11-15 16:36:58.656Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"LeveTrabalho sentada (35ml/kg)"}
+
+## 2026-11-15 16:37:37.590Z click
+- element: {"tag":"button","role":"tab","ariaLabel":null,"name":null,"type":"button","id":"radix-:r3:-trigger-guia","placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Guia PDF"}
+
+## 2026-11-15 16:37:44.040Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Salvar / Imprimir em PDF"}
+
+## 2026-11-15 16:37:59.751Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Ver Modeladores na Loja"}
+
+## 2026-11-15 16:38:00.815Z load
+- url: http://localhost:3000/categoria/calcinha
+- title: Avante Lingerie | Oficial
+
+## 2026-11-15 16:38:01.719Z network.error
+- method: POST
+- url: https://www.google.com/rmkt/collect/18499593515/?random=1794760681435&cv=11&fst=1794760681435&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be6bb1z8f_AW-18499593515za208xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115938466~115938469~117776796~118897920~118897930~119860442~120385422~120412528~120420416~120469145~120469153~121191153~121246026~121246034&u_w=1366&u_h=768&url=http%3A%2F%2Flocalhost%3A3000%2Fcategoria%2Fcalcinha&rcb=3&frm=0&tiba=Avante%20Lingerie%20%7C%20Oficial&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=247244429.1794751457&uaa=x86&uab=64&uafvl=Not-A.Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B157.0.8103.51%7CChromium%3B157.0.8103.51&uamb=0&uam=&uap=Windows&uapv=19.0.0&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5
+- status: 0
+- durationMs: 199
+
+## 2026-11-15 16:38:01.719Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 16:38:01.720Z network.error
+- method: POST
+- url: https://www.google.com/ccm/collect?rcb=3&frm=0&apvc=1&auid=247244429.1794751457&dt=Avante%20Lingerie%20%7C%20Oficial&tid=AW-18499593515&en=page_view&dl=http%3A%2F%2Flocalhost%3A3000%2Fcategoria%2Fcalcinha&scrsrc=www.googletagmanager.com&rnd=1304786209.1794760681&navt=n&npa=0&gtm=45be6bb1z8f_AW-18499593515za208xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115938466~115938469~117776796~118897920~118897930~119860442~120385422~120412528~120420416~120469145~120469153~121191153~121246026~121246034&tft=1794760681523&tfd=1658&tids=AW-18499593515&fmt=8
+- status: 0
+- durationMs: 197
+
+## 2026-11-15 16:38:01.720Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 16:38:01.735Z navigate
+- url: http://localhost:3000/categoria/calcinha
+- via: replaceState
+
+## 2026-11-15 16:38:01.804Z network.error
+- method: POST
+- url: https://ad.doubleclick.net/ccm/s/collect?auid=247244429.1794751457&gtm=45be6bb1z8f_AW-18499593515za208xecxf1&fmt=8
+- status: 0
+- durationMs: 279
+
+## 2026-11-15 16:38:01.804Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 16:38:01.889Z network.error
+- method: POST
+- url: https://www.google.com/rmkt/collect/18499593515/?random=1794760681776&cv=11&fst=1794760681776&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be6bb1z8f_AW-18499593515za208xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115938466~115938469~117776796~118897920~118897930~119860442~120385422~120412528~120420416~120469145~120469153~121191153~121246026~121246034&u_w=1366&u_h=768&url=http%3A%2F%2Flocalhost%3A3000%2Fcategoria%2Fcalcinha&rcb=3&frm=0&tiba=Avante%20Lingerie%20%7C%20Oficial&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=247244429.1794751457&uaa=x86&uab=64&uafvl=Not-A.Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B157.0.8103.51%7CChromium%3B157.0.8103.51&uamb=0&uam=&uap=Windows&uapv=19.0.0&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5
+- status: 0
+- durationMs: 97
+
+## 2026-11-15 16:38:01.889Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 16:38:01.897Z network.error
+- method: POST
+- url: https://www.google.com/ccm/collect?rcb=3&frm=0&apvc=0&auid=247244429.1794751457&dt=Avante%20Lingerie%20%7C%20Oficial&tid=AW-18499593515&en=page_view&dl=http%3A%2F%2Flocalhost%3A3000%2Fcategoria%2Fcalcinha&scrsrc=www.googletagmanager.com&rnd=1304786209.1794760681&navt=n&npa=0&gtm=45be6bb1z8f_AW-18499593515za208xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115938466~115938469~117776796~118897920~118897930~119860442~120385422~120412528~120420416~120469145~120469153~121191153~121246026~121246034&tft=1794760681803&tfd=1938&tids=AW-18499593515&fmt=8
+- status: 0
+- durationMs: 94
+
+## 2026-11-15 16:38:01.897Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 16:38:05.286Z network.error
+- method: POST
+- url: https://analytics.google.com/g/collect?v=2&tid=G-E2FS36FRG1&gtm=45je6bb1v9259987036za208xf1&_p=1794760680716&_gaz=1&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AAAAACQC&cid=946152551.1794751474&frm=0&ibt=1&ngs=1&pscdl=noapi&rcb=14&sr=1366x768&uaa=x86&uab=64&uafvl=Not-A.Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B157.0.8103.51%7CChromium%3B157.0.8103.51&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=pt-pt&_s=1&tag_exp=100940090~115616985~115938466~115938468~118897920~118897930~119860442~120213116~120385422~120412526~120420416~120469145~120469153~121246026~121246034&sid=1794759972&sct=3&seg=1&dl=http%3A%2F%2Flocalhost%2Fcategoria%2Fcalcinha&dt=Avante%20Lingerie%20%7C%20Oficial&en=page_view&_ee=1&tfd=2233
+- status: 0
+- durationMs: 3188
+
+## 2026-11-15 16:38:05.286Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 16:38:07.191Z network.error
+- method: POST
+- url: https://analytics.google.com/g/collect?v=2&tid=G-E2FS36FRG1&gtm=45je6bb1v9259987036za200xf1&_p=1794760680716&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEAAACQC&ae=a&cid=946152551.1794751474&frm=0&ibt=1&ngs=1&pscdl=noapi&rcb=14&sr=1366x768&uaa=x86&uab=64&uafvl=Not-A.Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B157.0.8103.51%7CChromium%3B157.0.8103.51&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=pt-pt&_s=2&tag_exp=100940090~115616985~115938466~115938468~118897920~118897930~119860442~120213116~120385422~120412526~120420416~120469145~120469153~121246026~121246034&sid=1794759972&sct=3&seg=1&dl=http%3A%2F%2Flocalhost%2Fcategoria%2Fcalcinha&dt=Avante%20Lingerie%20%7C%20Oficial&en=scroll&epn.percent_scrolled=90&_et=10&tfd=7248
+- status: 0
+- durationMs: 78
+
+## 2026-11-15 16:38:07.191Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 16:38:14.649Z click
+- element: {"tag":"button","role":"tab","ariaLabel":null,"name":null,"type":"button","id":"radix-:r3:-trigger-protocolo","placeholder":null,"label":null,"value":null,"valueLength":0,"text":"21 Dias"}
+
+## 2026-11-15 16:45:29.700Z load
+- url: http://localhost:3000/mimos/espelho-secreto
+- title: Avante Lingerie | Oficial
+
+## 2026-11-15 16:45:30.654Z navigate
+- url: http://localhost:3000/mimos/espelho-secreto
+- via: replaceState
+
+## 2026-11-15 16:45:35.767Z network.error
+- method: POST
+- url: https://www.google.com/ccm/collect?rcb=14&frm=0&apvc=1&auid=247244429.1794751457&dt=Avante%20Lingerie%20%7C%20Oficial&tid=AW-18499593515&en=page_view&dl=http%3A%2F%2Flocalhost%3A3000%2Fmimos%2Fespelho-secreto&scrsrc=www.googletagmanager.com&rnd=1848339261.1794761130&navt=n&npa=0&gtm=45be6bb1z8f_AW-18499593515za208xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=100940090~115938465~115938468~117776796~118897920~118897930~120385423~120412526~120420414~120469145~120469153~121191153~121246026~121246034~123785233&tft=1794761130157&tfd=2979&tids=AW-18499593515&fmt=8
+- status: 0
+- durationMs: 5610
+
+## 2026-11-15 16:45:35.768Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 16:45:35.777Z network.error
+- method: POST
+- url: https://ad.doubleclick.net/ccm/s/collect?auid=247244429.1794751457&gtm=45be6bb1z8f_AW-18499593515za208xecxf1&fmt=8
+- status: 0
+- durationMs: 5619
+
+## 2026-11-15 16:45:35.777Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 16:45:35.779Z network.error
+- method: POST
+- url: https://www.google.com/ccm/collect?rcb=14&frm=0&apvc=0&auid=247244429.1794751457&dt=Avante%20Lingerie%20%7C%20Oficial&tid=AW-18499593515&en=page_view&dl=http%3A%2F%2Flocalhost%3A3000%2Fmimos%2Fespelho-secreto&scrsrc=www.googletagmanager.com&rnd=1848339261.1794761130&navt=n&npa=0&gtm=45be6bb1z8f_AW-18499593515za208xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=100940090~115938465~115938468~117776796~118897920~118897930~120385423~120412526~120420414~120469145~120469153~121191153~121246026~121246034~123785233&tft=1794761130740&tfd=3562&tids=AW-18499593515&fmt=8
+- status: 0
+- durationMs: 5039
+
+## 2026-11-15 16:45:35.779Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 16:45:35.782Z network.error
+- method: POST
+- url: https://www.google.com/rmkt/collect/18499593515/?random=1794761130713&cv=11&fst=1794761130713&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be6bb1z8f_AW-18499593515za208xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=100940090~115938465~115938468~117776796~118897920~118897930~120385423~120412526~120420414~120469145~120469153~121191153~121246026~121246034~123785233&u_w=1366&u_h=768&url=http%3A%2F%2Flocalhost%3A3000%2Fmimos%2Fespelho-secreto&rcb=14&frm=0&tiba=Avante%20Lingerie%20%7C%20Oficial&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=247244429.1794751457&uaa=x86&uab=64&uafvl=Not-A.Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B157.0.8103.51%7CChromium%3B157.0.8103.51&uamb=0&uam=&uap=Windows&uapv=19.0.0&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5
+- status: 0
+- durationMs: 5060
+
+## 2026-11-15 16:45:35.782Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 16:45:35.784Z network.error
+- method: POST
+- url: https://www.google.com/rmkt/collect/18499593515/?random=1794761130082&cv=11&fst=1794761130082&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be6bb1z8f_AW-18499593515za208xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=100940090~115938465~115938468~117776796~118897920~118897930~120385423~120412526~120420414~120469145~120469153~121191153~121246026~121246034~123785233&u_w=1366&u_h=768&url=http%3A%2F%2Flocalhost%3A3000%2Fmimos%2Fespelho-secreto&rcb=14&frm=0&tiba=Avante%20Lingerie%20%7C%20Oficial&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=247244429.1794751457&uaa=x86&uab=64&uafvl=Not-A.Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B157.0.8103.51%7CChromium%3B157.0.8103.51&uamb=0&uam=&uap=Windows&uapv=19.0.0&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5
+- status: 0
+- durationMs: 5631
+
+## 2026-11-15 16:45:35.784Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 16:45:41.556Z network.error
+- method: POST
+- url: https://analytics.google.com/g/collect?v=2&tid=G-E2FS36FRG1&gtm=45je6bb1v9259987036za200xf1&_p=1794761129593&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEAAACQC&ae=a&cid=946152551.1794751474&frm=0&ibt=1&ngs=1&pscdl=noapi&rcb=10&sr=1366x768&uaa=x86&uab=64&uafvl=Not-A.Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B157.0.8103.51%7CChromium%3B157.0.8103.51&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=pt-pt&_s=2&tag_exp=115938465~115938468~118897920~118897930~120213116~120385422~120412526~120420416~120469145~120469153~121246026~121246034&sid=1794759972&sct=3&seg=1&dl=http%3A%2F%2Flocalhost%2Fmimos%2Fespelho-secreto&dt=Avante%20Lingerie%20%7C%20Oficial&en=scroll&epn.percent_scrolled=90&_et=25&tfd=9084
+- status: 0
+- durationMs: 5293
+
+## 2026-11-15 16:45:41.556Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 16:45:41.557Z network.error
+- method: POST
+- url: https://analytics.google.com/g/collect?v=2&tid=G-E2FS36FRG1&gtm=45je6bb1v9259987036za208xf1&_p=1794761129593&_gaz=1&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AAAAACQC&cid=946152551.1794751474&frm=0&ibt=1&ngs=1&pscdl=noapi&rcb=10&sr=1366x768&uaa=x86&uab=64&uafvl=Not-A.Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B157.0.8103.51%7CChromium%3B157.0.8103.51&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=pt-pt&_s=1&tag_exp=115938465~115938468~118897920~118897930~120213116~120385422~120412526~120420416~120469145~120469153~121246026~121246034&sid=1794759972&sct=3&seg=1&dl=http%3A%2F%2Flocalhost%2Fmimos%2Fespelho-secreto&dt=Avante%20Lingerie%20%7C%20Oficial&en=page_view&_ee=1&tfd=4006
+- status: 0
+- durationMs: 10371
+
+## 2026-11-15 16:45:41.557Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 16:45:44.814Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Cinta Modeladora"}
+
+## 2026-11-15 16:45:45.721Z load
+- url: http://localhost:3000/categoria/cinta-modeladora
+- title: Avante Lingerie | Oficial
+
+## 2026-11-15 16:45:46.199Z network.error
+- method: POST
+- url: https://www.google.com/ccm/collect?rcb=4&frm=0&apvc=1&auid=247244429.1794751457&dt=Avante%20Lingerie%20%7C%20Oficial&tid=AW-18499593515&en=page_view&dl=http%3A%2F%2Flocalhost%3A3000%2Fcategoria%2Fcinta-modeladora&scrsrc=www.googletagmanager.com&rnd=1988380062.1794761146&navt=n&npa=0&gtm=45be6bb1z8f_AW-18499593515za208xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115616986~115938466~115938468~117776796~118897920~118897930~119793974~119860442~120385423~120412526~120420414~120469145~120469153~121191153~121246026~121246034~123988486&tft=1794761145945&tfd=994&tids=AW-18499593515&fmt=8
+- status: 0
+- durationMs: 254
+
+## 2026-11-15 16:45:46.200Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 16:45:46.205Z network.error
+- method: POST
+- url: https://www.google.com/rmkt/collect/18499593515/?random=1794761145925&cv=11&fst=1794761145925&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be6bb1z8f_AW-18499593515za208xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115616986~115938466~115938468~117776796~118897920~118897930~119793974~119860442~120385423~120412526~120420414~120469145~120469153~121191153~121246026~121246034~123988486&u_w=1366&u_h=768&url=http%3A%2F%2Flocalhost%3A3000%2Fcategoria%2Fcinta-modeladora&rcb=4&frm=0&tiba=Avante%20Lingerie%20%7C%20Oficial&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=247244429.1794751457&uaa=x86&uab=64&uafvl=Not-A.Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B157.0.8103.51%7CChromium%3B157.0.8103.51&uamb=0&uam=&uap=Windows&uapv=19.0.0&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5
+- status: 0
+- durationMs: 262
+
+## 2026-11-15 16:45:46.205Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 16:45:46.928Z navigate
+- url: http://localhost:3000/categoria/cinta-modeladora
+- via: replaceState
+
+## 2026-11-15 16:45:47.084Z network.error
+- method: POST
+- url: https://www.google.com/rmkt/collect/18499593515/?random=1794761146959&cv=11&fst=1794761146959&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be6bb1z8f_AW-18499593515za208xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115616986~115938466~115938468~117776796~118897920~118897930~119793974~119860442~120385423~120412526~120420414~120469145~120469153~121191153~121246026~121246034~123988486&u_w=1366&u_h=768&url=http%3A%2F%2Flocalhost%3A3000%2Fcategoria%2Fcinta-modeladora&rcb=4&frm=0&tiba=Avante%20Lingerie%20%7C%20Oficial&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=247244429.1794751457&uaa=x86&uab=64&uafvl=Not-A.Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B157.0.8103.51%7CChromium%3B157.0.8103.51&uamb=0&uam=&uap=Windows&uapv=19.0.0&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5
+- status: 0
+- durationMs: 121
+
+## 2026-11-15 16:45:47.084Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 16:45:47.086Z network.error
+- method: POST
+- url: https://www.google.com/ccm/collect?rcb=4&frm=0&apvc=0&auid=247244429.1794751457&dt=Avante%20Lingerie%20%7C%20Oficial&tid=AW-18499593515&en=page_view&dl=http%3A%2F%2Flocalhost%3A3000%2Fcategoria%2Fcinta-modeladora&scrsrc=www.googletagmanager.com&rnd=1988380062.1794761146&navt=n&npa=0&gtm=45be6bb1z8f_AW-18499593515za208xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115616986~115938466~115938468~117776796~118897920~118897930~119793974~119860442~120385423~120412526~120420414~120469145~120469153~121191153~121246026~121246034~123988486&tft=1794761146970&tfd=2019&tids=AW-18499593515&fmt=8
+- status: 0
+- durationMs: 116
+
+## 2026-11-15 16:45:47.086Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 16:45:52.826Z network.error
+- method: POST
+- url: https://analytics.google.com/g/collect?v=2&tid=G-E2FS36FRG1&gtm=45je6bb1v9259987036za208xf1&_p=1794761145529&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AAAAACQC&cid=946152551.1794751474&frm=0&ibt=1&ngs=1&pscdl=noapi&rcb=6&sr=1366x768&uaa=x86&uab=64&uafvl=Not-A.Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B157.0.8103.51%7CChromium%3B157.0.8103.51&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=pt-pt&_s=1&tag_exp=115616985~115938466~115938469~118897920~118897930~119860442~120213116~120385423~120412526~120420414~120469145~120469153~121246026~121246034~123988486&sid=1794759972&sct=3&seg=1&dl=http%3A%2F%2Flocalhost%2Fcategoria%2Fcinta-modeladora&dt=Cinta%20modeladora%20%7C%20Avante%20Lingerie&en=page_view&_ee=1&tfd=7804
+- status: 0
+- durationMs: 71
+
+## 2026-11-15 16:45:52.826Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 16:46:05.311Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Cropped"}
+
+## 2026-11-15 16:46:05.756Z load
+- url: http://localhost:3000/categoria/cropped
+- title: Avante Lingerie | Oficial
+
+## 2026-11-15 16:46:06.184Z network.error
+- method: POST
+- url: https://www.google.com/ccm/collect?rcb=4&frm=0&apvc=1&auid=247244429.1794751457&dt=Avante%20Lingerie%20%7C%20Oficial&tid=AW-18499593515&en=page_view&dl=http%3A%2F%2Flocalhost%3A3000%2Fcategoria%2Fcropped&scrsrc=www.googletagmanager.com&rnd=223868717.1794761166&navt=n&npa=0&gtm=45be6bb1z8f_AW-18499593515za208xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=100940090~115616985~115938465~115938468~117776796~118897920~118897930~119793974~120385422~120412526~120420416~120469145~120469153~121191153~121246026~121246034~123988485~123988488&tft=1794761166076&tfd=718&tids=AW-18499593515&fmt=8
+- status: 0
+- durationMs: 108
+
+## 2026-11-15 16:46:06.185Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 16:46:06.186Z network.error
+- method: POST
+- url: https://www.google.com/rmkt/collect/18499593515/?random=1794761166043&cv=11&fst=1794761166043&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be6bb1z8f_AW-18499593515za208xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=100940090~115616985~115938465~115938468~117776796~118897920~118897930~119793974~120385422~120412526~120420416~120469145~120469153~121191153~121246026~121246034~123988485~123988488&u_w=1366&u_h=768&url=http%3A%2F%2Flocalhost%3A3000%2Fcategoria%2Fcropped&rcb=4&frm=0&tiba=Avante%20Lingerie%20%7C%20Oficial&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=247244429.1794751457&uaa=x86&uab=64&uafvl=Not-A.Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B157.0.8103.51%7CChromium%3B157.0.8103.51&uamb=0&uam=&uap=Windows&uapv=19.0.0&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5
+- status: 0
+- durationMs: 111
+
+## 2026-11-15 16:46:06.186Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 16:46:06.281Z navigate
+- url: http://localhost:3000/categoria/cropped
+- via: replaceState
+
+## 2026-11-15 16:46:06.487Z network.error
+- method: POST
+- url: https://www.google.com/ccm/collect?rcb=4&frm=0&apvc=0&auid=247244429.1794751457&dt=Avante%20Lingerie%20%7C%20Oficial&tid=AW-18499593515&en=page_view&dl=http%3A%2F%2Flocalhost%3A3000%2Fcategoria%2Fcropped&scrsrc=www.googletagmanager.com&rnd=223868717.1794761166&navt=n&npa=0&gtm=45be6bb1z8f_AW-18499593515za208xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=100940090~115616985~115938465~115938468~117776796~118897920~118897930~119793974~120385422~120412526~120420416~120469145~120469153~121191153~121246026~121246034~123988485~123988488&tft=1794761166325&tfd=967&tids=AW-18499593515&fmt=8
+- status: 0
+- durationMs: 162
+
+## 2026-11-15 16:46:06.487Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 16:46:06.489Z network.error
+- method: POST
+- url: https://www.google.com/rmkt/collect/18499593515/?random=1794761166314&cv=11&fst=1794761166314&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be6bb1z8f_AW-18499593515za208xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=100940090~115616985~115938465~115938468~117776796~118897920~118897930~119793974~120385422~120412526~120420416~120469145~120469153~121191153~121246026~121246034~123988485~123988488&u_w=1366&u_h=768&url=http%3A%2F%2Flocalhost%3A3000%2Fcategoria%2Fcropped&rcb=4&frm=0&tiba=Avante%20Lingerie%20%7C%20Oficial&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=247244429.1794751457&uaa=x86&uab=64&uafvl=Not-A.Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B157.0.8103.51%7CChromium%3B157.0.8103.51&uamb=0&uam=&uap=Windows&uapv=19.0.0&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5
+- status: 0
+- durationMs: 170
+
+## 2026-11-15 16:46:06.489Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 16:46:07.032Z network.error
+- method: POST
+- url: https://analytics.google.com/g/collect?v=2&tid=G-E2FS36FRG1&gtm=45je6bb1v9259987036za208xf1&_p=1794761165694&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AAAAACQC&cid=946152551.1794751474&frm=0&ibt=1&ngs=1&pscdl=noapi&rcb=5&sr=1366x768&uaa=x86&uab=64&uafvl=Not-A.Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B157.0.8103.51%7CChromium%3B157.0.8103.51&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=pt-pt&_s=1&tag_exp=100940091~115938465~115938468~118897920~118897930~120213116~120385423~120412526~120420414~120469145~120469153~121246026~121246034&sid=1794759972&sct=3&seg=1&dl=http%3A%2F%2Flocalhost%2Fcategoria%2Fcropped&dt=Avante%20Lingerie%20%7C%20Oficial&en=page_view&_ee=1&tfd=1383
+- status: 0
+- durationMs: 291
+
+## 2026-11-15 16:46:07.032Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 16:46:19.051Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Busto Pequeno / Pouco VolumeSutiãs comuns costumam sobrar na taça ou ficar com espaço oco."}
+
+## 2026-11-15 16:46:31.592Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"← Voltar para etapa anterior"}
+
+## 2026-11-15 16:46:40.558Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Busto Espalhado para as LateraisO volume vai para os lados em direção à axila; precisa de aproximação."}
+
+## 2026-11-15 16:46:59.394Z click
+- element: {"tag":"button","role":"tab","ariaLabel":null,"name":null,"type":"button","id":"radix-:r3:-trigger-medidas","placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Medidas"}
+
+## 2026-11-15 16:47:12.112Z click
+- element: {"tag":"button","role":"tab","ariaLabel":null,"name":null,"type":"button","id":"radix-:r3:-trigger-guia","placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Guia PDF"}
+
+## 2026-11-15 16:47:17.044Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Salvar / Imprimir em PDF"}
+
+## 2026-11-15 16:47:38.621Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Copiar Resumo"}
+
+## 2026-11-15 16:47:42.884Z click
+- element: {"tag":"button","role":"tab","ariaLabel":null,"name":null,"type":"button","id":"radix-:r3:-trigger-medidas","placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Medidas"}
+
+## 2026-11-15 16:47:52.932Z click
+- element: {"tag":"button","role":"tab","ariaLabel":null,"name":null,"type":"button","id":"radix-:r3:-trigger-quiz","placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Quiz VIP"}
+
+## 2026-11-15 16:48:05.960Z click
+- element: {"tag":"button","role":"tab","ariaLabel":null,"name":null,"type":"button","id":"radix-:r3:-trigger-medidas","placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Medidas"}
+
+## 2026-11-15 16:48:12.051Z click
+- element: {"tag":"button","role":"tab","ariaLabel":null,"name":null,"type":"button","id":"radix-:r3:-trigger-quiz","placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Quiz VIP"}
+
+## 2026-11-15 16:48:17.134Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"O aro de ferro machuca o osso ou fura a lateralTermina o dia com marcas vermelhas e louca para arrancar o sutiã."}
+
+## 2026-11-15 16:48:21.684Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"← Voltar"}
+
+## 2026-11-15 16:48:22.528Z click
+- element: {"tag":"div","role":"tabpanel","ariaLabel":null,"name":null,"type":null,"id":"radix-:r3:-content-quiz","placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Encontre a sua modelagem na vitrine da fábrica:Toque para abrirBody•Calcinha•Camisola•Cinta Modeladora•Conjunto•Cropped•Fitness•PijamaEtapa 2 de 3Qual é o seu maior incômodo com sutiãs comuns?O que mais te irrita na hora de usar lingerie o dia todo?O aro de ferro machuca o osso ou fura a lateralTermina o dia com marcas vermelhas e louca para arrancar o sutiã.As alças ficam escorregando pelos ombrosTem que ficar puxando a alça o tempo todo por baixo da blusa.Gordurinha lateral ou nas costas fica marcadaA lateral aperta demais e cria dobras visíveis na roupa justa.Falta de sustentação (parece caído/esparramado)Gostaria de um colo mais firme, empinado e bem desenhado.← Voltar para etapa anterior"}
+
+## 2026-11-15 16:48:23.556Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"← Voltar para etapa anterior"}
+
+## 2026-11-15 16:48:26.398Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Busto Pequeno / Pouco VolumeSutiãs comuns costumam sobrar na taça ou ficar com espaço oco."}
+
+## 2026-11-15 16:48:29.296Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"As alças ficam escorregando pelos ombrosTem que ficar puxando a alça o tempo todo por baixo da blusa."}
+
+## 2026-11-15 16:48:31.273Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Costas Lisas & Laterais SegurasSem dobras nas costas, tecido nobre que abraça sem marcar."}
+
+## 2026-11-15 16:48:47.169Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Ver Peças Ideais na Loja"}
+
+## 2026-11-15 16:48:48.005Z load
+- url: http://localhost:3000/categoria/conjunto
+- title: Avante Lingerie | Oficial
+
+## 2026-11-15 16:48:48.772Z navigate
+- url: http://localhost:3000/categoria/conjunto
+- via: replaceState
+
+## 2026-11-15 16:48:50.627Z network.error
+- method: POST
+- url: https://ad.doubleclick.net/ccm/s/collect?auid=247244429.1794751457&gtm=45be6bb1z8f_AW-18499593515za208xecxf1&fmt=8
+- status: 0
+- durationMs: 1253
+
+## 2026-11-15 16:48:50.628Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 16:48:52.181Z network.error
+- method: POST
+- url: https://analytics.google.com/g/collect?v=2&tid=G-E2FS36FRG1&gtm=45je6bb1v9259987036za208xf1&_p=1794761327924&_gaz=1&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AAAAACQC&cid=946152551.1794751474&frm=0&ibt=1&ngs=1&pscdl=noapi&rcb=2&sr=1366x768&uaa=x86&uab=64&uafvl=Not-A.Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B157.0.8103.51%7CChromium%3B157.0.8103.51&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=pt-pt&_s=1&tag_exp=115938465~115938468~118897920~118897930~120213116~120385423~120412528~120420416~120469145~120469153~121246026~121246034&sid=1794759972&sct=3&seg=1&dl=http%3A%2F%2Flocalhost%2Fcategoria%2Fconjunto&dt=Avante%20Lingerie%20%7C%20Oficial&en=page_view&_ee=1&tfd=2354
+- status: 0
+- durationMs: 2522
+
+## 2026-11-15 16:48:52.182Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 16:48:53.216Z network.error
+- method: POST
+- url: https://www.google.com/ccm/collect?rcb=9&frm=0&apvc=1&auid=247244429.1794751457&dt=Avante%20Lingerie%20%7C%20Oficial&tid=AW-18499593515&en=page_view&dl=http%3A%2F%2Flocalhost%3A3000%2Fcategoria%2Fconjunto&scrsrc=www.googletagmanager.com&rnd=1465212763.1794761329&navt=n&npa=0&gtm=45be6bb1z8f_AW-18499593515za208xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115938465~115938468~117776796~118897920~118897930~120385422~120412528~120420416~120469145~120469153~121191153~121246026~121246034&tft=1794761329373&tfd=2068&tids=AW-18499593515&fmt=8
+- status: 0
+- durationMs: 3843
+
+## 2026-11-15 16:48:53.216Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 16:48:53.221Z network.error
+- method: POST
+- url: https://www.google.com/rmkt/collect/18499593515/?random=1794761329365&cv=11&fst=1794761329365&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be6bb1z8f_AW-18499593515za208xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115938465~115938468~117776796~118897920~118897930~120385422~120412528~120420416~120469145~120469153~121191153~121246026~121246034&u_w=1366&u_h=768&url=http%3A%2F%2Flocalhost%3A3000%2Fcategoria%2Fconjunto&rcb=9&frm=0&tiba=Avante%20Lingerie%20%7C%20Oficial&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=247244429.1794751457&uaa=x86&uab=64&uafvl=Not-A.Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B157.0.8103.51%7CChromium%3B157.0.8103.51&uamb=0&uam=&uap=Windows&uapv=19.0.0&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5
+- status: 0
+- durationMs: 3849
+
+## 2026-11-15 16:48:53.221Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 16:48:53.224Z network.error
+- method: POST
+- url: https://www.google.com/rmkt/collect/18499593515/?random=1794761329302&cv=11&fst=1794761329302&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be6bb1z8f_AW-18499593515za208xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115938465~115938468~117776796~118897920~118897930~120385422~120412528~120420416~120469145~120469153~121191153~121246026~121246034&u_w=1366&u_h=768&url=http%3A%2F%2Flocalhost%3A3000%2Fcategoria%2Fconjunto&rcb=9&frm=0&tiba=Avante%20Lingerie%20%7C%20Oficial&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=247244429.1794751457&uaa=x86&uab=64&uafvl=Not-A.Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B157.0.8103.51%7CChromium%3B157.0.8103.51&uamb=0&uam=&uap=Windows&uapv=19.0.0&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5
+- status: 0
+- durationMs: 3869
+
+## 2026-11-15 16:48:53.224Z console.error
+- text: Fetch error from : 
+
+## 2026-11-15 16:48:54.755Z network.error
+- method: POST
+- url: https://analytics.google.com/g/collect?v=2&tid=G-E2FS36FRG1&gtm=45je6bb1v9259987036za200xf1&_p=1794761327924&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEAAACQC&ae=a&cid=946152551.1794751474&frm=0&ibt=1&ngs=1&pscdl=noapi&rcb=2&sr=1366x768&uaa=x86&uab=64&uafvl=Not-A.Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B157.0.8103.51%7CChromium%3B157.0.8103.51&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=pt-pt&_s=2&tag_exp=115938465~115938468~118897920~118897930~120213116~120385423~120412528~120420416~120469145~120469153~121246026~121246034&sid=1794759972&sct=3&seg=1&dl=http%3A%2F%2Flocalhost%2Fcategoria%2Fconjunto&dt=Avante%20Lingerie%20%7C%20Oficial&en=scroll&epn.percent_scrolled=90&_et=13&tfd=7377
+- status: 0
+- durationMs: 73
+
+## 2026-11-15 16:48:54.755Z console.error
+- text: Fetch error from : 
 

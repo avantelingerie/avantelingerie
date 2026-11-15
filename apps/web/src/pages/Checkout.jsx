@@ -12,6 +12,8 @@ import { useCheckoutLogic } from '@/hooks/useCheckoutLogic.js';
 import CheckoutAddressForm from '@/components/CheckoutAddressForm.jsx';
 import CheckoutOrderSummary from '@/components/CheckoutOrderSummary.jsx';
 import CheckoutMicroOffer from '@/components/CheckoutMicroOffer.jsx';
+import MimoRetentionModal from '@/components/MimoRetentionModal.jsx';
+import { useCart } from '@/hooks/useCart.js';
 import { trackInitiateCheckout } from '@/lib/marketingPixels.js';
 import { getGenderTerms } from '@/utils/genderHelper.js';
 
@@ -108,6 +110,46 @@ export default function Checkout() {
       trackInitiateCheckout(cart, finalTotal);
     }
   }, [cart, finalTotal]);
+
+  // VIP Retention Gift (Mimo) Logic in Checkout
+  const { addToCart } = useCart();
+  const [chosenGift, setChosenGift] = React.useState(() => {
+    try {
+      const saved = localStorage.getItem('avante_brinde_escolhido');
+      return saved ? JSON.parse(saved) : null;
+    } catch (e) {
+      return null;
+    }
+  });
+  const [showGiftModal, setShowGiftModal] = React.useState(false);
+
+  const handleConfirmGift = (giftData) => {
+    setChosenGift(giftData);
+    const comboCartItemId = 'combo-3-apps-vip-Digital-Acesso VIP';
+    if (giftData.is_combo) {
+      const alreadyInCart = cart.some(i => i.cartItemId === comboCartItemId || i.id === 'combo-3-apps-vip');
+      if (!alreadyInCart) {
+        addToCart({
+          id: 'combo-3-apps-vip',
+          name: 'Combo 3 Aplicativos VIP da Fábrica',
+          price: 9.90,
+          preco_varejo: 9.90,
+          preco_atacado: 9.90,
+          image: '/assets/mimos/popup-brindes-transparente.png',
+          selectedSize: 'Digital',
+          selectedColor: 'Acesso VIP',
+          quantity: 1,
+          stock: 9999,
+          is_digital: true
+        });
+      }
+    } else {
+      const existingCombo = cart.find(i => i.cartItemId === comboCartItemId || i.id === 'combo-3-apps-vip');
+      if (existingCombo) {
+        removeFromCart(existingCombo.cartItemId);
+      }
+    }
+  };
 
   // Guests can purchase directly by filling in the personal data fields
   const [showExitModal, setShowExitModal] = React.useState(false);
@@ -644,6 +686,8 @@ export default function Checkout() {
                 onApplyCoupon={applyCoupon}
                 onRemoveCoupon={removeCoupon}
                 tipoCliente={currentUser?.tipo_cliente || 'varejo'}
+                chosenGift={chosenGift}
+                onOpenGiftModal={() => setShowGiftModal(true)}
               />
 
               <Button
@@ -821,6 +865,13 @@ export default function Checkout() {
           </div>
         </div>
       )}
+      {/* LUXURY VIP RETENTION MODAL (MIMOS DA FÁBRICA) */}
+      <MimoRetentionModal
+        isOpen={showGiftModal}
+        onClose={() => setShowGiftModal(false)}
+        onConfirmChoice={handleConfirmGift}
+        currentChoice={chosenGift}
+      />
     </main>
   );
 }

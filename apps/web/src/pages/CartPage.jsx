@@ -21,6 +21,7 @@ import UpsellSection from '@/components/UpsellSection.jsx';
 import TrustSection from '@/components/TrustSection.jsx';
 import FAQAccordion from '@/components/FAQAccordion.jsx';
 import { Button } from '@/components/ui/button.jsx';
+import MimoRetentionModal from '@/components/MimoRetentionModal.jsx';
 
 export default function CartPage() {
   const navigate = useNavigate();
@@ -397,6 +398,75 @@ export default function CartPage() {
 
   const isEmpty = cart.length === 0;
 
+  // VIP Retention Gift (Mimo) States & Logic
+  const [showGiftModal, setShowGiftModal] = useState(false);
+  const [chosenGift, setChosenGift] = useState(() => {
+    try {
+      const saved = localStorage.getItem('avante_brinde_escolhido');
+      return saved ? JSON.parse(saved) : null;
+    } catch (e) {
+      return null;
+    }
+  });
+
+  // Exit-Intent & Retention Idle Trigger for VIP Gift Popup
+  useEffect(() => {
+    if (isEmpty) return;
+    const hasDismissed = sessionStorage.getItem('avante_mimo_popup_dismissed');
+    if (hasDismissed) return;
+
+    const handleMouseLeave = (e) => {
+      if (e.clientY < 15) {
+        setShowGiftModal(true);
+        sessionStorage.setItem('avante_mimo_popup_dismissed', 'true');
+      }
+    };
+
+    document.addEventListener('mouseleave', handleMouseLeave);
+
+    const idleTimer = setTimeout(() => {
+      const dismissed = sessionStorage.getItem('avante_mimo_popup_dismissed');
+      const chosen = localStorage.getItem('avante_brinde_escolhido');
+      if (!dismissed && !chosen && !isEmpty) {
+        setShowGiftModal(true);
+        sessionStorage.setItem('avante_mimo_popup_dismissed', 'true');
+      }
+    }, 22000);
+
+    return () => {
+      document.removeEventListener('mouseleave', handleMouseLeave);
+      clearTimeout(idleTimer);
+    };
+  }, [isEmpty]);
+
+  const handleConfirmGift = (giftData) => {
+    setChosenGift(giftData);
+    const comboCartItemId = 'combo-3-apps-vip-Digital-Acesso VIP';
+    if (giftData.is_combo) {
+      const alreadyInCart = cart.some(i => i.cartItemId === comboCartItemId || i.id === 'combo-3-apps-vip');
+      if (!alreadyInCart) {
+        addToCart({
+          id: 'combo-3-apps-vip',
+          name: 'Combo 3 Aplicativos VIP da Fábrica',
+          price: 9.90,
+          preco_varejo: 9.90,
+          preco_atacado: 9.90,
+          image: '/assets/mimos/popup-brindes-transparente.png',
+          selectedSize: 'Digital',
+          selectedColor: 'Acesso VIP',
+          quantity: 1,
+          stock: 9999,
+          is_digital: true
+        });
+      }
+    } else {
+      const existingCombo = cart.find(i => i.cartItemId === comboCartItemId || i.id === 'combo-3-apps-vip');
+      if (existingCombo) {
+        removeFromCart(existingCombo.cartItemId);
+      }
+    }
+  };
+
   const testimonialsData = [
     { id: '1', customer_name: 'Maria Silva', comment: 'Chegou rápido e a qualidade é impecável! As medidas batiam certinho.', rating: 5 },
     { id: '2', customer_name: 'Ana Costa', comment: 'Amei os descontos progressivos, valeu muito a pena levar mais peças.', rating: 5 },
@@ -549,6 +619,8 @@ export default function CartPage() {
                     nextTierInfo={nextTierInfo}
                     onCheckout={handleCheckout} 
                     resellerSaving={resellerSaving}
+                    chosenGift={chosenGift}
+                    onOpenGiftModal={() => setShowGiftModal(true)}
                   />
                   
                   {/* B2C to B2B Manual Upgrade Banner */}
@@ -972,6 +1044,14 @@ export default function CartPage() {
           </div>
         </div>
       )}
+
+      {/* LUXURY VIP RETENTION MODAL (MIMOS DA FÁBRICA) */}
+      <MimoRetentionModal
+        isOpen={showGiftModal}
+        onClose={() => setShowGiftModal(false)}
+        onConfirmChoice={handleConfirmGift}
+        currentChoice={chosenGift}
+      />
     </main>
   );
 }

@@ -18,7 +18,11 @@ import {
   HeartHandshake,
   ChevronRight,
   Play,
-  Check
+  Check,
+  Gift,
+  ExternalLink,
+  Sparkles,
+  Flame
 } from 'lucide-react';
 import { Button } from '@/components/ui/button.jsx';
 import { Card, CardContent } from '@/components/ui/card.jsx';
@@ -28,6 +32,7 @@ import pb from '@/lib/pocketbaseClient.js';
 import apiServerClient from '@/lib/apiServerClient.js';
 import ProductCard from '@/components/ProductCard.jsx';
 import { trackPurchase } from '@/lib/marketingPixels.js';
+import { MIMO_APPS } from '@/components/MimoRetentionModal.jsx';
 
 export default function OrderConfirmation() {
   const { orderId } = useParams();
@@ -39,6 +44,43 @@ export default function OrderConfirmation() {
   const [isActivatingCoupon, setIsActivatingCoupon] = useState(false);
   const [couponActivated, setCouponActivated] = useState(false);
   const [couponCopied, setCouponCopied] = useState(false);
+
+  // Resolve VIP retention gift chosen during cart/checkout with complete fallbacks
+  const resolvedGift = React.useMemo(() => {
+    try {
+      const raw = localStorage.getItem('avante_brinde_escolhido');
+      if (raw) return JSON.parse(raw);
+    } catch (e) {}
+
+    const obs = order?.observacoes || '';
+    const items = order?.items || [];
+    const hasCombo = obs.includes('Combo 3 Apps VIP') || items.some(i => (i.id && String(i.id).includes('combo-3-apps')) || (i.name && i.name.toLowerCase().includes('combo 3')));
+    if (hasCombo) {
+      return {
+        id: 'combo-3-apps',
+        name: 'Combo 3 Aplicativos VIP da Fábrica',
+        is_combo: true,
+        price: 9.90,
+        coverImage: '/assets/mimos/popup-brindes-transparente.png',
+        apps: MIMO_APPS
+      };
+    }
+    if (obs.includes('Máquina de Vendas')) {
+      const app = MIMO_APPS.find(a => a.id === 'maquina-de-vendas');
+      return { ...app, is_combo: false, price: 0 };
+    }
+    if (obs.includes('Cintura Esculpida')) {
+      const app = MIMO_APPS.find(a => a.id === 'cintura-esculpida');
+      return { ...app, is_combo: false, price: 0 };
+    }
+    if (obs.includes('Espelho Secreto')) {
+      const app = MIMO_APPS.find(a => a.id === 'espelho-secreto');
+      return { ...app, is_combo: false, price: 0 };
+    }
+
+    const defaultApp = MIMO_APPS.find(a => a.id === 'espelho-secreto') || MIMO_APPS[0];
+    return { ...defaultApp, is_combo: false, price: 0 };
+  }, [order]);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -86,7 +128,8 @@ export default function OrderConfirmation() {
             cliente_telefone: rawOrder.cliente_telefone || '',
             cliente_cpf: rawOrder.cliente_cpf || rawOrder.cpf || '',
             cliente_email: rawOrder.cliente_email || '',
-            cliente_id: rawOrder.cliente_id || ''
+            cliente_id: rawOrder.cliente_id || '',
+            observacoes: rawOrder.observacoes || ''
           };
 
           // Avaliação de Primeira Compra para exibição do Cupom VIP da Lia
@@ -330,6 +373,103 @@ export default function OrderConfirmation() {
             </div>
           </CardContent>
         </Card>
+
+        {/* VIP DIGITAL GIFT DELIVERY CARD */}
+        {resolvedGift && (
+          <Card className="border border-[#D4AF37]/50 shadow-[0_0_35px_rgba(212,175,55,0.2)] rounded-3xl overflow-hidden bg-gradient-to-br from-[#17140e] via-[#0d0b08] to-[#1a150e] text-white">
+            <div className="bg-gradient-to-r from-[#2a2113] via-[#1a150e] to-[#2a2113] px-6 sm:px-8 py-4 border-b border-[#D4AF37]/30 flex flex-wrap items-center justify-between gap-3">
+              <div className="flex items-center gap-2 text-[#D4AF37]">
+                <Gift className="w-5 h-5 animate-bounce" />
+                <span className="text-xs sm:text-sm font-extrabold uppercase tracking-widest">
+                  {resolvedGift.is_combo ? 'Combo 3 Aplicativos VIP Liberado' : 'Seu Presente VIP da Fábrica está Liberado'}
+                </span>
+              </div>
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#34d399]/20 text-[#34d399] border border-[#34d399]/40 text-[10px] sm:text-xs font-bold uppercase tracking-wider">
+                <Sparkles className="w-3.5 h-3.5" /> Acesso Imediato
+              </span>
+            </div>
+
+            <CardContent className="p-6 sm:p-8">
+              {resolvedGift.is_combo ? (
+                <div className="flex flex-col gap-6">
+                  <div className="text-center sm:text-left">
+                    <h3 className="text-xl sm:text-2xl font-serif font-extrabold text-white">
+                      Parabéns! Você destravou o <span className="bg-gradient-to-r from-[#D4AF37] via-[#FFF3B0] to-[#D4AF37] bg-clip-text text-transparent">Combo Completo dos 3 Apps VIP</span>
+                    </h3>
+                    <p className="text-xs sm:text-sm text-gray-300 font-light mt-1">
+                      Todos os seus aplicativos já estão liberados e configurados para uso. Toque em qualquer um dos botões abaixo para abrir e começar a usar agora:
+                    </p>
+                  </div>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                    {MIMO_APPS.map((app) => (
+                      <div 
+                        key={app.id} 
+                        className="bg-[#120f0a] border border-[#D4AF37]/30 rounded-2xl p-4 flex flex-col justify-between hover:border-[#D4AF37] transition-all group"
+                      >
+                        <div>
+                          <div className="w-full aspect-square rounded-xl overflow-hidden mb-3 bg-black/40">
+                            <img src={app.coverImage} alt={app.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                          </div>
+                          <span className="text-[9px] font-bold text-[#D4AF37] uppercase tracking-wider block mb-1">
+                            ★ {app.badge}
+                          </span>
+                          <h4 className="text-sm font-bold text-white mb-1.5 line-clamp-1">{app.name}</h4>
+                          <p className="text-[11px] text-gray-400 font-light line-clamp-2 mb-4 leading-relaxed">{app.subtitle}</p>
+                        </div>
+
+                        <Button
+                          onClick={() => window.open(app.appUrl, '_blank', 'noopener,noreferrer')}
+                          className="w-full bg-gradient-to-r from-[#D4AF37] to-[#F59E0B] hover:from-[#F59E0B] hover:to-[#D4AF37] text-black font-extrabold text-xs uppercase tracking-wider py-5 rounded-xl shadow-md transition-all active:scale-95 flex items-center justify-center gap-1.5 cursor-pointer"
+                        >
+                          <ExternalLink className="w-3.5 h-3.5" /> Acessar App
+                        </Button>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ) : (
+                <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6 sm:gap-8">
+                  <div className="w-36 sm:w-44 aspect-square rounded-2xl overflow-hidden shrink-0 border-2 border-[#D4AF37]/40 shadow-[0_0_25px_rgba(212,175,55,0.3)] bg-black/50">
+                    <img 
+                      src={resolvedGift.coverImage || '/assets/mimos/popup-brindes-transparente.png'} 
+                      alt={resolvedGift.name} 
+                      className="w-full h-full object-cover" 
+                    />
+                  </div>
+
+                  <div className="flex flex-col flex-1 text-center sm:text-left justify-between h-full">
+                    <div>
+                      <span className="inline-flex items-center gap-1.5 text-[10px] sm:text-xs font-bold uppercase tracking-wider text-[#D4AF37] bg-[#D4AF37]/10 px-3 py-1 rounded-full border border-[#D4AF37]/30 mb-2">
+                        ★ Presente Exclusivo Liberado
+                      </span>
+                      <h3 className="text-xl sm:text-2.5xl font-serif font-extrabold text-white">
+                        {resolvedGift.name}
+                      </h3>
+                      <p className="text-xs sm:text-sm text-gray-300 font-light mt-2 leading-relaxed max-w-xl">
+                        {resolvedGift.subtitle || 'Seu aplicativo VIP oficial está 100% liberado para acompanhar o seu pedido. Você pode utilizá-lo direto no seu navegador ou salvar como atalho na tela inicial do seu celular.'}
+                      </p>
+                    </div>
+
+                    <div className="mt-5 flex flex-wrap items-center gap-3 justify-center sm:justify-start">
+                      <Button
+                        onClick={() => window.open(resolvedGift.appUrl || '/mimos/maquina-de-vendas', '_blank', 'noopener,noreferrer')}
+                        className="bg-gradient-to-r from-[#D4AF37] via-[#F59E0B] to-[#D4AF37] hover:from-[#F59E0B] hover:to-[#D4AF37] text-black font-extrabold text-xs sm:text-sm uppercase tracking-wider px-8 py-6 rounded-2xl shadow-[0_6px_25px_rgba(212,175,55,0.4)] transition-all active:scale-95 flex items-center gap-2 cursor-pointer"
+                      >
+                        <ExternalLink className="w-4 h-4 text-black" />
+                        <span>Acessar {resolvedGift.name} Agora</span>
+                      </Button>
+
+                      <span className="text-[11px] text-gray-400 font-light">
+                        (Abre em uma nova aba com acesso vitalício)
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              )}
+            </CardContent>
+          </Card>
+        )}
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
 

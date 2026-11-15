@@ -97,11 +97,39 @@ export default function CategoryPage() {
         const cat = await pb.collection('categorias').getFirstListItem(`slug = "${categoryName}"`, { $autoCancel: false });
         setCategoriaId(cat.id);
         setEntityName(cat.nome);
+        return;
       } catch (e1) {
+        // Tentar variação de plural / singular (ex: 'calcinhas' -> 'calcinha', 'conjuntos' -> 'conjunto', 'bodies' -> 'body')
+        let altSlug = categoryName;
+        if (categoryName.endsWith('s')) {
+          altSlug = categoryName.slice(0, -1);
+        }
+        if (categoryName === 'bodies' || categoryName === 'bodys') {
+          altSlug = 'body';
+        }
+        if (altSlug !== categoryName) {
+          try {
+            const catAlt = await pb.collection('categorias').getFirstListItem(`slug = "${altSlug}"`, { $autoCancel: false });
+            setCategoriaId(catAlt.id);
+            setEntityName(catAlt.nome);
+            return;
+          } catch (eAlt) {}
+        }
+
+        // Tentar busca por nome aproximado na tabela de categorias
         try {
-          const col = await pb.collection('colecoes').getFirstListItem(`slug = "${categoryName}"`, { $autoCancel: false });
+          const catNameSearch = await pb.collection('categorias').getFirstListItem(`nome ~ "${categoryName}" || slug ~ "${categoryName}"`, { $autoCancel: false });
+          setCategoriaId(catNameSearch.id);
+          setEntityName(catNameSearch.nome);
+          return;
+        } catch (eName) {}
+
+        // Tentar coleções
+        try {
+          const col = await pb.collection('colecoes').getFirstListItem(`slug = "${categoryName}" || slug = "${altSlug}"`, { $autoCancel: false });
           setColecaoId(col.id);
           setEntityName(col.nome);
+          return;
         } catch (e2) {
           setCategoriaId('__not_found__');
         }
@@ -115,11 +143,14 @@ export default function CategoryPage() {
 
     if (categoryName && categoryName !== 'todas') {
       if (categoriaId && categoriaId !== '__not_found__') {
-        filterStr = `status = true && categoria_id = "${categoriaId}"`;
+        const nameFilter = entityName ? ` || categoria ~ "${entityName}"` : '';
+        filterStr = `status = true && (categoria_id = "${categoriaId}"${nameFilter})`;
       } else if (colecaoId) {
         filterStr = `status = true && colecoes_ids ~ "${colecaoId}"`;
       } else if (categoriaId === '__not_found__') {
-        filterStr = 'status = true && id = ""';
+        // Fallback: se não encontrar ID, filtra por nome aproximado no nome ou categoria do produto para não ficar vazia
+        const cleanName = categoryName.replace(/-/g, ' ').replace(/s$/, '');
+        filterStr = `status = true && (categoria ~ "${cleanName}" || name ~ "${cleanName}")`;
       }
     }
 

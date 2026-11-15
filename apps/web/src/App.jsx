@@ -34,6 +34,11 @@ import ResellerPortalPage from '@/pages/ResellerPortalPage.jsx';
 import useMarketingTracker from '@/hooks/useMarketingTracker.js';
 import AnalyticsTracker from '@/components/AnalyticsTracker.jsx';
 
+// Mimos & Apps VIP Interativos
+import MaquinaVendasAppPage from '@/pages/mimos/MaquinaVendasAppPage.jsx';
+import CinturaEsculpidaAppPage from '@/pages/mimos/CinturaEsculpidaAppPage.jsx';
+import EspelhoSecretoAppPage from '@/pages/mimos/EspelhoSecretoAppPage.jsx';
+
 // Admin Components
 import AdminLogin from '@/pages/admin/AdminLogin.jsx';
 import AdminLayout from '@/components/admin/AdminLayout.jsx';
@@ -105,6 +110,16 @@ import LiaWidget from '@/components/LiaWidget.jsx';
 // Wrapper component to use useLocation hook for public routes
 const StoreLayout = ({ children }) => {
   const location = useLocation();
+  const isMimoApp = location.pathname.startsWith('/mimos');
+  
+  // Apps e Mimos Interativos rodam em tela cheia com interface de Smartphone Nativo VIP
+  if (isMimoApp) {
+    return (
+      <main className="w-full min-h-screen bg-[#070604]">
+        {children}
+      </main>
+    );
+  }
   
   const isFullBleed = location.pathname === '/' || 
                       location.pathname === '/cart' || 
@@ -288,6 +303,20 @@ const AppInterceptor = () => {
                 } 
               />
               <Route path="/cart" element={<ErrorBoundary><CartPage /></ErrorBoundary>} />
+              
+              {/* Mimos e Apps VIP Interativos */}
+              <Route path="/mimos/maquina-de-vendas" element={<ErrorBoundary><MaquinaVendasAppPage /></ErrorBoundary>} />
+              <Route path="/mimos/maquina-vendas" element={<Navigate to="/mimos/maquina-de-vendas" replace />} />
+              <Route path="/app/maquina-vendas" element={<Navigate to="/mimos/maquina-de-vendas" replace />} />
+              
+              <Route path="/mimos/cintura-esculpida" element={<ErrorBoundary><CinturaEsculpidaAppPage /></ErrorBoundary>} />
+              <Route path="/mimos/metodo-cintura-esculpida" element={<Navigate to="/mimos/cintura-esculpida" replace />} />
+              <Route path="/app/cintura-esculpida" element={<Navigate to="/mimos/cintura-esculpida" replace />} />
+
+              <Route path="/mimos/espelho-secreto" element={<ErrorBoundary><EspelhoSecretoAppPage /></ErrorBoundary>} />
+              <Route path="/mimos/o-espelho-secreto" element={<Navigate to="/mimos/espelho-secreto" replace />} />
+              <Route path="/app/espelho-secreto" element={<Navigate to="/mimos/espelho-secreto" replace />} />
+
               <Route path="*" element={<ErrorBoundary><NotFound /></ErrorBoundary>} />
             </Routes>
           </StoreLayout>
