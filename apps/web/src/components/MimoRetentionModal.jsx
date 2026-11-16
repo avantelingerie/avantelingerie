@@ -149,11 +149,11 @@ export default function MimoRetentionModal({
 
         {/* Top Hero: Single Gift Box with GANHOUU!! Badge */}
         <div className="flex flex-col items-center text-center relative z-10">
-          <div className="relative mb-1 transition-transform hover:scale-105 duration-300">
+          <div className="relative mb-2 transition-transform hover:scale-105 duration-300">
             <img 
               src="/assets/mimos/caixa-presente-ganhouu.png" 
               alt="GANHOUU!!"
-              className="h-16 sm:h-20 w-auto object-contain drop-shadow-[0_4px_16px_rgba(212,175,55,0.35)]"
+              className="h-24 sm:h-28 w-auto object-contain drop-shadow-[0_6px_25px_rgba(212,175,55,0.45)]"
             />
           </div>
 

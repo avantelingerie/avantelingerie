@@ -109,7 +109,11 @@ export default function CheckoutOrderSummary({
               <div key={item.cartItemId} className="flex items-start gap-4 group">
                 <div className={`w-16 h-16 rounded-lg ${item.is_mimo ? 'bg-white p-1 border border-primary/10 shadow-2xs' : 'bg-muted'} border border-primary/10 overflow-hidden shrink-0 flex items-center justify-center`}>
                   {item.is_mimo ? (
-                    <img src={item.image} alt={item.name} className="w-full h-full object-contain" />
+                    <img 
+                      src={item.image ? item.image.replace('.jpg', '.png') : item.image} 
+                      alt={item.name} 
+                      className="w-full h-full object-contain rounded-md" 
+                    />
                   ) : isDirectVideo(item.image) ? (
                     <div className="w-full h-full relative bg-[#1a1a1a] flex items-center justify-center">
                       <div className="w-6 h-6 rounded-full bg-[#c59b5f] flex items-center justify-center shadow-md">

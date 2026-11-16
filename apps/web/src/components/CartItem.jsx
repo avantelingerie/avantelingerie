@@ -10,6 +10,7 @@ export default function CartItem({ item, getItemPrice, onUpdateQuantity, onRemov
   const subtotal = price * item.quantity;
 
   const formatPrice = (val) => new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(val);
+  const displayImage = item.is_mimo && item.image ? item.image.replace('.jpg', '.png') : item.image;
 
   return (
     <motion.div 
@@ -20,18 +21,22 @@ export default function CartItem({ item, getItemPrice, onUpdateQuantity, onRemov
       transition={{ duration: 0.2 }}
       className="flex gap-4 py-6 border-b border-primary/10 last:border-0"
     >
-      <div className={`w-20 h-28 md:w-24 md:h-32 shrink-0 rounded-xl overflow-hidden border border-primary/10 relative flex items-center justify-center ${item.is_mimo ? 'bg-white p-1' : 'bg-muted'}`}>
-        {item.image ? (
-          isDirectVideo(item.image) ? (
+      <div className={`shrink-0 rounded-2xl overflow-hidden border relative flex items-center justify-center ${
+        item.is_mimo 
+          ? 'w-20 h-20 md:w-24 md:h-24 bg-white p-1 border-[#D4AF37]/35 shadow-xs' 
+          : 'w-20 h-28 md:w-24 md:h-32 bg-muted border-primary/10'
+      }`}>
+        {displayImage ? (
+          isDirectVideo(displayImage) ? (
             <div className="w-full h-full relative bg-[#1a1a1a] flex items-center justify-center">
               <div className="w-8 h-8 rounded-full bg-[#c59b5f] flex items-center justify-center shadow-md">
                 <Play className="w-4 h-4 text-black fill-black ml-0.5" />
               </div>
             </div>
-          ) : isExternalVideo(item.image) ? (
-            <img src={getYoutubeThumbnail(item.image)} alt={item.name} className="w-full h-full object-cover" />
+          ) : isExternalVideo(displayImage) ? (
+            <img src={getYoutubeThumbnail(displayImage)} alt={item.name} className="w-full h-full object-cover" />
           ) : (
-            <img src={item.image} alt={item.name} className={`w-full h-full ${item.is_mimo ? 'object-contain' : 'object-cover'}`} />
+            <img src={displayImage} alt={item.name} className={`w-full h-full ${item.is_mimo ? 'object-contain rounded-xl' : 'object-cover'}`} />
           )
         ) : (
           <div className="w-full h-full bg-primary/5 flex items-center justify-center text-xs text-muted-foreground">Sem foto</div>
