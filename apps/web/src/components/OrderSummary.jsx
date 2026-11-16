@@ -39,11 +39,13 @@ export default function OrderSummary({
       {/* VIP Retention Gift Status Box */}
       <div className="mb-6">
         {chosenGift ? (
-          <div className="bg-gradient-to-r from-[#17140e] to-[#0e0c08] border border-[#D4AF37]/40 rounded-xl p-3.5 shadow-sm text-white">
-            <div className="flex items-center justify-between pb-2 mb-2.5 border-b border-[#D4AF37]/20">
-              <div className="flex items-center gap-1.5">
-                <Gift className="w-4 h-4 text-[#D4AF37]" />
-                <span className="text-[11px] font-extrabold uppercase tracking-wider text-[#D4AF37]">
+          <div className="bg-[#FFFDF9] border border-[#D4AF37]/35 rounded-2xl p-4 shadow-xs text-gray-900">
+            <div className="flex items-center justify-between pb-2.5 mb-2.5 border-b border-[#D4AF37]/20">
+              <div className="flex items-center gap-2">
+                <div className="w-6 h-6 rounded-full bg-[#D4AF37]/15 flex items-center justify-center text-[#996515]">
+                  <Gift className="w-3.5 h-3.5" />
+                </div>
+                <span className="text-xs font-extrabold uppercase tracking-wider text-[#996515]">
                   {chosenGift.is_combo ? 'Combo 3 Apps VIP Liberado' : 'Presente VIP da Fábrica'}
                 </span>
               </div>
@@ -51,7 +53,7 @@ export default function OrderSummary({
                 <button
                   type="button"
                   onClick={onOpenGiftModal}
-                  className="text-[11px] text-[#D4AF37] hover:text-[#FFF3B0] font-semibold underline shrink-0 cursor-pointer"
+                  className="text-xs text-[#996515] hover:text-[#7A5110] font-bold underline cursor-pointer"
                 >
                   Trocar
                 </button>
@@ -61,8 +63,8 @@ export default function OrderSummary({
             {chosenGift.is_combo ? (
               <div className="flex flex-col gap-2">
                 {MIMO_APPS.map((app) => (
-                  <div key={app.id} className="flex items-center gap-2.5 bg-black/50 border border-white/5 rounded-lg p-2">
-                    <div className="w-10 h-10 rounded-md overflow-hidden shrink-0 border border-[#D4AF37]/30 bg-black flex items-center justify-center">
+                  <div key={app.id} className="flex items-center gap-3 bg-white border border-[#D4AF37]/25 rounded-xl p-2.5 shadow-2xs">
+                    <div className="w-12 h-12 rounded-lg overflow-hidden shrink-0 border border-primary/10 bg-white flex items-center justify-center p-0.5">
                       <img 
                         src={app.coverImage} 
                         alt={app.name} 
@@ -70,8 +72,8 @@ export default function OrderSummary({
                       />
                     </div>
                     <div className="flex flex-col min-w-0 flex-1">
-                      <span className="text-xs font-bold text-white line-clamp-1">{app.name}</span>
-                      <span className="text-[10px] font-semibold text-[#34d399]">
+                      <span className="text-xs font-bold text-gray-900 line-clamp-1">{app.name}</span>
+                      <span className="text-[11px] font-semibold text-emerald-700">
                         Incluso no Combo (+R$ 9,90)
                       </span>
                     </div>
@@ -79,17 +81,17 @@ export default function OrderSummary({
                 ))}
               </div>
             ) : (
-              <div className="flex items-center gap-3">
-                <div className="w-12 h-12 rounded-lg overflow-hidden shrink-0 border border-[#D4AF37]/30 bg-black flex items-center justify-center">
+              <div className="flex items-center gap-3 bg-white border border-[#D4AF37]/25 rounded-xl p-2.5 shadow-2xs">
+                <div className="w-12 h-12 rounded-lg overflow-hidden shrink-0 border border-primary/10 bg-white flex items-center justify-center p-0.5">
                   <img 
-                    src={chosenGift.coverImage || '/assets/mimos/capa-espelho-secreto-3d.jpg'} 
+                    src={chosenGift.coverImage || '/assets/mimos/capa-espelho-secreto-3d.png'} 
                     alt={chosenGift.name} 
                     className="w-full h-full object-contain" 
                   />
                 </div>
                 <div className="flex flex-col min-w-0 flex-1">
-                  <span className="text-xs font-bold text-white line-clamp-1">{chosenGift.name}</span>
-                  <span className="text-[10px] font-semibold text-[#34d399]">
+                  <span className="text-xs font-bold text-gray-900 line-clamp-1">{chosenGift.name}</span>
+                  <span className="text-[11px] font-bold text-emerald-700">
                     GRÁTIS HOJE (R$ 0,00)
                   </span>
                 </div>
@@ -99,14 +101,14 @@ export default function OrderSummary({
         ) : (
           <div 
             onClick={onOpenGiftModal}
-            className="bg-gradient-to-r from-[#FFF8E1] to-[#FFF3E0] border border-[#D4AF37]/50 rounded-xl p-3.5 shadow-sm flex items-center justify-between gap-3 cursor-pointer hover:border-[#D4AF37] transition-all group"
+            className="bg-[#FFFDF9] border border-[#D4AF37]/35 rounded-2xl p-3.5 shadow-xs flex items-center justify-between gap-3 cursor-pointer hover:border-[#D4AF37] transition-all group"
           >
-            <div className="flex items-center gap-2.5">
-              <div className="w-10 h-10 rounded-lg overflow-hidden shrink-0 border border-[#D4AF37]/40 bg-white shadow-xs flex items-center justify-center">
+            <div className="flex items-center gap-3">
+              <div className="w-11 h-11 rounded-xl overflow-hidden shrink-0 border border-[#D4AF37]/30 bg-white shadow-2xs flex items-center justify-center p-1">
                 <img 
-                  src="/assets/mimos/caixa-presente-laco-vermelho.jpg" 
+                  src="/assets/mimos/caixa-presente-transparente.png" 
                   alt="Presente VIP" 
-                  className="w-full h-full object-contain p-0.5" 
+                  className="w-full h-full object-contain" 
                 />
               </div>
               <div className="flex flex-col text-left">
@@ -116,7 +118,7 @@ export default function OrderSummary({
                 <span className="text-[11px] text-gray-600">Escolha 1 App Oficial Grátis para o seu pedido</span>
               </div>
             </div>
-            <span className="text-xs font-extrabold text-[#D4AF37] shrink-0 group-hover:translate-x-0.5 transition-transform">
+            <span className="text-xs font-extrabold text-[#996515] shrink-0 group-hover:translate-x-0.5 transition-transform">
               Escolher &rarr;
             </span>
           </div>

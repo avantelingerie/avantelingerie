@@ -20,7 +20,7 @@ export default function CartItem({ item, getItemPrice, onUpdateQuantity, onRemov
       transition={{ duration: 0.2 }}
       className="flex gap-4 py-6 border-b border-primary/10 last:border-0"
     >
-      <div className={`w-20 h-28 md:w-24 md:h-32 shrink-0 rounded-xl overflow-hidden border border-primary/10 relative flex items-center justify-center ${item.is_mimo ? 'bg-black p-0.5' : 'bg-muted'}`}>
+      <div className={`w-20 h-28 md:w-24 md:h-32 shrink-0 rounded-xl overflow-hidden border border-primary/10 relative flex items-center justify-center ${item.is_mimo ? 'bg-white p-1' : 'bg-muted'}`}>
         {item.image ? (
           isDirectVideo(item.image) ? (
             <div className="w-full h-full relative bg-[#1a1a1a] flex items-center justify-center">

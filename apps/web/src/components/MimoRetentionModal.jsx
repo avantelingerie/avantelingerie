@@ -11,7 +11,7 @@ export const MIMO_APPS = [
     originalPrice: 97,
     promoPrice: 'GRÁTIS HOJE',
     subtitle: 'Calculadora de Preço & Scripts de Vendas no WhatsApp.',
-    coverImage: '/assets/mimos/capa-maquina-vendas-3d.jpg',
+    coverImage: '/assets/mimos/capa-maquina-vendas-3d.png',
     appUrl: '/mimos/maquina-de-vendas',
     themeColor: '#D4AF37'
   },
@@ -22,7 +22,7 @@ export const MIMO_APPS = [
     originalPrice: 97,
     promoPrice: 'GRÁTIS HOJE',
     subtitle: 'Rotina de 21 Dias, Drenagem & Calculadora de Hidratação.',
-    coverImage: '/assets/mimos/capa-cintura-esculpida-3d.jpg',
+    coverImage: '/assets/mimos/capa-cintura-esculpida-3d.png',
     appUrl: '/mimos/cintura-esculpida',
     themeColor: '#38bdf8'
   },
@@ -33,7 +33,7 @@ export const MIMO_APPS = [
     originalPrice: 67,
     promoPrice: 'GRÁTIS HOJE',
     subtitle: 'Quiz VIP de Diagnóstico de Busto & Sutiã ABNT.',
-    coverImage: '/assets/mimos/capa-espelho-secreto-3d.jpg',
+    coverImage: '/assets/mimos/capa-espelho-secreto-3d.png',
     appUrl: '/mimos/espelho-secreto',
     themeColor: '#c084fc'
   }
@@ -153,7 +153,7 @@ export default function MimoRetentionModal({
             <img 
               src="/assets/mimos/caixa-presente-ganhouu.png" 
               alt="GANHOUU!!"
-              className="h-13 sm:h-15 w-auto object-contain drop-shadow-[0_4px_16px_rgba(212,175,55,0.45)]"
+              className="h-16 sm:h-20 w-auto object-contain drop-shadow-[0_4px_16px_rgba(212,175,55,0.35)]"
             />
           </div>
 
@@ -180,12 +180,12 @@ export default function MimoRetentionModal({
                     : 'bg-[#14120e]/90 border-white/10 hover:border-[#D4AF37]/50 hover:bg-[#181510]'
                 }`}
               >
-                {/* 3D Cover Thumbnail with 100% full contain, no cropping */}
-                <div className="relative w-full aspect-square rounded-lg overflow-hidden mb-1.5 bg-black flex items-center justify-center border border-white/5">
+                {/* 3D Cover Thumbnail with 100% full contain, transparent, no cropping */}
+                <div className="relative w-full aspect-square rounded-lg overflow-hidden mb-1.5 bg-transparent flex items-center justify-center border border-white/5">
                   <img
                     src={app.coverImage}
                     alt={app.name}
-                    className="w-full h-full object-contain bg-black transition-transform duration-300 group-hover:scale-105"
+                    className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-105"
                   />
                   {/* Selection Radio / Badge */}
                   <div className={`absolute top-1 right-1 w-5 h-5 rounded-full flex items-center justify-center transition-all ${

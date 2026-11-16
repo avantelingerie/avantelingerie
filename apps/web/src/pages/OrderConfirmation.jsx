@@ -408,8 +408,8 @@ export default function OrderConfirmation() {
                         className="bg-[#120f0a] border border-[#D4AF37]/30 rounded-2xl p-4 flex flex-col justify-between hover:border-[#D4AF37] transition-all group"
                       >
                         <div>
-                          <div className="w-full aspect-square rounded-xl overflow-hidden mb-3 bg-black/40">
-                            <img src={app.coverImage} alt={app.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                          <div className="w-full aspect-square rounded-xl overflow-hidden mb-3 bg-transparent flex items-center justify-center">
+                            <img src={app.coverImage} alt={app.name} className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" />
                           </div>
                           <span className="text-[9px] font-bold text-[#D4AF37] uppercase tracking-wider block mb-1">
                             ★ {app.badge}
@@ -430,7 +430,7 @@ export default function OrderConfirmation() {
                 </div>
               ) : (
                 <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6 sm:gap-8">
-                  <div className="w-36 sm:w-44 aspect-square rounded-2xl overflow-hidden shrink-0 border-2 border-[#D4AF37]/40 shadow-[0_0_25px_rgba(212,175,55,0.3)] bg-black">
+                  <div className="w-36 sm:w-44 aspect-square rounded-2xl overflow-hidden shrink-0 border-2 border-[#D4AF37]/40 shadow-[0_0_25px_rgba(212,175,55,0.3)] bg-transparent flex items-center justify-center">
                     <img 
                       src={resolvedGift.coverImage || '/assets/mimos/caixa-presente-ganhouu.png'} 
                       alt={resolvedGift.name} 
