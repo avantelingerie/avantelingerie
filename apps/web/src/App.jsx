@@ -272,6 +272,9 @@ const AppInterceptor = () => {
               <Route path="/quero-revender" element={<ErrorBoundary><QueroRevenderPage /></ErrorBoundary>} />
               <Route path="/revenda" element={<Navigate to="/quero-revender" replace />} />
               <Route path="/atacado" element={<Navigate to="/quero-revender" replace />} />
+              <Route path="/shop" element={<Navigate to="/categoria/todas" replace />} />
+              <Route path="/catalogo" element={<Navigate to="/categoria/todas" replace />} />
+              <Route path="/categoria/novidades" element={<Navigate to="/categoria/todas" replace />} />
               <Route 
                 path="/portal-revenda" 
                 element={

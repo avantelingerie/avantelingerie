@@ -34,8 +34,8 @@ export default function WelcomeModal() {
   };
 
   const handleNavigate = () => {
+    // Modal estritamente informativo: ao clicar, apenas fecha e mantém o cliente navegando na Home
     handleClose();
-    navigate('/quero-revender');
   };
 
   return (

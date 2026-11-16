@@ -281,7 +281,7 @@ class NotificationService {
 
                           <!-- Contato da Consultora Lia -->
                           <p style="margin: 30px 0 0; color: #71717a; font-size: 13px; text-align: center; border-top: 1px solid #e4e4e7; padding-top: 20px;">
-                            Precisa de ajuda com tamanhos ou quer o catálogo em PDF?<br>
+                            Precisa de ajuda com tamanhos ou quer conhecer nossa coleção completa?<br>
                             Fale diretamente com a <strong>Lia</strong> no WhatsApp: <a href="https://wa.me/5522981225010" style="color: #c59b5f; font-weight: 600; text-decoration: none;">(22) 98122-5010</a>
                           </p>
                         </td>
