@@ -25,6 +25,10 @@ const INITIAL_GOOGLE_ADS_DATA = {
       name: "[GOOGLE] B2B - Atacado | Fábrica Friburgo Mínimo R$ 69,90",
       channel: "SEARCH",
       status: "ENABLED",
+      networkSettings: {
+        includeSearchPartners: true,
+        targetContentNetwork: false
+      },
       metrics: {
         impressions: 1330,
         clicks: 152,
@@ -39,6 +43,10 @@ const INITIAL_GOOGLE_ADS_DATA = {
       name: "[GOOGLE] B2C - Varejo | Kits & Renda",
       channel: "SEARCH",
       status: "PAUSED",
+      networkSettings: {
+        includeSearchPartners: true,
+        targetContentNetwork: false
+      },
       metrics: {
         impressions: 377,
         clicks: 46,
@@ -53,6 +61,10 @@ const INITIAL_GOOGLE_ADS_DATA = {
       name: "[GOOGLE] Shopping - Varejo | Peças de Fábrica & Alta Costura",
       channel: "SHOPPING",
       status: "ENABLED",
+      networkSettings: {
+        includeSearchPartners: false,
+        targetContentNetwork: false
+      },
       metrics: {
         impressions: 108,
         clicks: 9,
@@ -76,7 +88,9 @@ const INITIAL_GOOGLE_ADS_DATA = {
       ctr: 12.81,
       avgCpc: 2.49,
       cost: 179.36,
-      conversions: 0
+      conversions: 0,
+      maxCpc: 2.80,
+      finalUrl: "/quero-revender"
     },
     {
       id: "844591881009",
@@ -90,7 +104,9 @@ const INITIAL_GOOGLE_ADS_DATA = {
       ctr: 13.03,
       avgCpc: 2.11,
       cost: 65.52,
-      conversions: 0
+      conversions: 0,
+      maxCpc: 2.50,
+      finalUrl: "/quero-revender"
     },
     {
       id: "1296026619093",
@@ -104,7 +120,9 @@ const INITIAL_GOOGLE_ADS_DATA = {
       ctr: 7.12,
       avgCpc: 2.01,
       cost: 48.28,
-      conversions: 0
+      conversions: 0,
+      maxCpc: 2.30,
+      finalUrl: "/quero-revender"
     },
     {
       id: "417368122960",
@@ -118,7 +136,9 @@ const INITIAL_GOOGLE_ADS_DATA = {
       ctr: 13.23,
       avgCpc: 0.71,
       cost: 29.27,
-      conversions: 0
+      conversions: 0,
+      maxCpc: 1.20,
+      finalUrl: "/categoria/todas"
     },
     {
       id: "1308304918287",
@@ -132,7 +152,9 @@ const INITIAL_GOOGLE_ADS_DATA = {
       ctr: 8.60,
       avgCpc: 1.84,
       cost: 14.72,
-      conversions: 0
+      conversions: 0,
+      maxCpc: 2.00,
+      finalUrl: "/quero-revender"
     },
     {
       id: "844591881010",
@@ -146,7 +168,9 @@ const INITIAL_GOOGLE_ADS_DATA = {
       ctr: 17.65,
       avgCpc: 0.76,
       cost: 9.11,
-      conversions: 0
+      conversions: 0,
+      maxCpc: 1.10,
+      finalUrl: "/quero-revender"
     },
     {
       id: "302735949028",
@@ -160,7 +184,9 @@ const INITIAL_GOOGLE_ADS_DATA = {
       ctr: 11.90,
       avgCpc: 2.02,
       cost: 10.12,
-      conversions: 0
+      conversions: 0,
+      maxCpc: 2.20,
+      finalUrl: "/quero-revender"
     }
   ],
   searchTerms: [
@@ -306,37 +332,37 @@ const INITIAL_GOOGLE_ADS_DATA = {
     { id: "neg_12", text: "shopee", matchType: "BROAD", level: "Campanha", dateAdded: "2026-10-28" }
   ],
   ageDemographics: [
-    { range: "18-24 anos", status: "EXCLUDED", impressions: 0, clicks: 0, ctr: 0, avgCpc: 0, cost: 0.00, conversions: 0, share: 0 },
-    { range: "25-34 anos", status: "ENABLED", impressions: 345, clicks: 35, ctr: 10.14, avgCpc: 2.35, cost: 82.26, conversions: 0, share: 25.15 },
-    { range: "35-44 anos", status: "ENABLED", impressions: 312, clicks: 32, ctr: 10.26, avgCpc: 2.57, cost: 82.33, conversions: 0, share: 25.17 },
-    { range: "45-54 anos", status: "ENABLED", impressions: 263, clicks: 34, ctr: 12.93, avgCpc: 1.93, cost: 65.74, conversions: 0, share: 20.10 },
-    { range: "55-64 anos", status: "EXCLUDED", impressions: 0, clicks: 0, ctr: 0, avgCpc: 0, cost: 0.00, conversions: 0, share: 0 },
-    { range: "65+ anos", status: "EXCLUDED", impressions: 0, clicks: 0, ctr: 0, avgCpc: 0, cost: 0.00, conversions: 0, share: 0 },
-    { range: "Não Determinado", status: "ENABLED", impressions: 410, clicks: 51, ctr: 12.44, avgCpc: 1.90, cost: 96.78, conversions: 0, share: 29.58 }
+    { id: "age_18_24", range: "18-24 anos", status: "EXCLUDED", bidModifier: -100, impressions: 0, clicks: 0, ctr: 0, avgCpc: 0, cost: 0.00, conversions: 0, share: 0 },
+    { id: "age_25_34", range: "25-34 anos", status: "ENABLED", bidModifier: 0, impressions: 345, clicks: 35, ctr: 10.14, avgCpc: 2.35, cost: 82.26, conversions: 0, share: 25.15 },
+    { id: "age_35_44", range: "35-44 anos", status: "ENABLED", bidModifier: 0, impressions: 312, clicks: 32, ctr: 10.26, avgCpc: 2.57, cost: 82.33, conversions: 0, share: 25.17 },
+    { id: "age_45_54", range: "45-54 anos", status: "ENABLED", bidModifier: 0, impressions: 263, clicks: 34, ctr: 12.93, avgCpc: 1.93, cost: 65.74, conversions: 0, share: 20.10 },
+    { id: "age_55_64", range: "55-64 anos", status: "EXCLUDED", bidModifier: -100, impressions: 0, clicks: 0, ctr: 0, avgCpc: 0, cost: 0.00, conversions: 0, share: 0 },
+    { id: "age_65_up", range: "65+ anos", status: "EXCLUDED", bidModifier: -100, impressions: 0, clicks: 0, ctr: 0, avgCpc: 0, cost: 0.00, conversions: 0, share: 0 },
+    { id: "age_undetermined", range: "Não Determinado", status: "ENABLED", bidModifier: 0, impressions: 410, clicks: 51, ctr: 12.44, avgCpc: 1.90, cost: 96.78, conversions: 0, share: 29.58 }
   ],
   genderDemographics: [
-    { gender: "Feminino", status: "ENABLED", impressions: 729, clicks: 83, ctr: 11.39, avgCpc: 2.26, cost: 187.84, conversions: 0, share: 57.42 },
-    { gender: "Não Determinado", status: "ENABLED", impressions: 410, clicks: 51, ctr: 12.44, avgCpc: 1.90, cost: 96.78, conversions: 0, share: 29.58 },
-    { gender: "Masculino", status: "ENABLED", impressions: 191, clicks: 18, ctr: 9.42, avgCpc: 2.36, cost: 42.49, conversions: 0, share: 12.99 }
+    { id: "gen_female", gender: "Feminino", status: "ENABLED", bidModifier: 0, impressions: 729, clicks: 83, ctr: 11.39, avgCpc: 2.26, cost: 187.84, conversions: 0, share: 57.42 },
+    { id: "gen_undetermined", gender: "Não Determinado", status: "ENABLED", bidModifier: 0, impressions: 410, clicks: 51, ctr: 12.44, avgCpc: 1.90, cost: 96.78, conversions: 0, share: 29.58 },
+    { id: "gen_male", gender: "Masculino", status: "ENABLED", bidModifier: 0, impressions: 191, clicks: 18, ctr: 9.42, avgCpc: 2.36, cost: 42.49, conversions: 0, share: 12.99 }
   ],
   householdIncome: [
-    { bracket: "Top 10% (Mais Ricos)", status: "ENABLED", impressions: 55, clicks: 9, ctr: 16.36, avgCpc: 3.49, cost: 31.44, conversions: 0 },
-    { bracket: "11% a 20%", status: "ENABLED", impressions: 96, clicks: 10, ctr: 10.42, avgCpc: 1.90, cost: 19.00, conversions: 0 },
-    { bracket: "21% a 30%", status: "ENABLED", impressions: 74, clicks: 8, ctr: 10.81, avgCpc: 1.78, cost: 14.27, conversions: 0 },
-    { bracket: "31% a 40%", status: "ENABLED", impressions: 100, clicks: 7, ctr: 7.00, avgCpc: 1.54, cost: 10.75, conversions: 0 },
-    { bracket: "41% a 50%", status: "ENABLED", impressions: 204, clicks: 17, ctr: 8.33, avgCpc: 3.35, cost: 57.02, conversions: 0 },
-    { bracket: "50% Menores (Base da Pirâmide)", status: "ENABLED", impressions: 345, clicks: 43, ctr: 12.46, avgCpc: 1.96, cost: 84.21, conversions: 0 },
-    { bracket: "Não Determinado", status: "ENABLED", impressions: 451, clicks: 55, ctr: 12.20, avgCpc: 1.88, cost: 103.18, conversions: 0 }
+    { id: "inc_top10", bracket: "Top 10% (Mais Ricos)", status: "ENABLED", bidModifier: 0, impressions: 55, clicks: 9, ctr: 16.36, avgCpc: 3.49, cost: 31.44, conversions: 0 },
+    { id: "inc_11_20", bracket: "11% a 20%", status: "ENABLED", bidModifier: 0, impressions: 96, clicks: 10, ctr: 10.42, avgCpc: 1.90, cost: 19.00, conversions: 0 },
+    { id: "inc_21_30", bracket: "21% a 30%", status: "ENABLED", bidModifier: 0, impressions: 74, clicks: 8, ctr: 10.81, avgCpc: 1.78, cost: 14.27, conversions: 0 },
+    { id: "inc_31_40", bracket: "31% a 40%", status: "ENABLED", bidModifier: 0, impressions: 100, clicks: 7, ctr: 7.00, avgCpc: 1.54, cost: 10.75, conversions: 0 },
+    { id: "inc_41_50", bracket: "41% a 50%", status: "ENABLED", bidModifier: 0, impressions: 204, clicks: 17, ctr: 8.33, avgCpc: 3.35, cost: 57.02, conversions: 0 },
+    { id: "inc_lower50", bracket: "50% Menores (Base)", status: "ENABLED", bidModifier: 0, impressions: 345, clicks: 43, ctr: 12.46, avgCpc: 1.96, cost: 84.21, conversions: 0 },
+    { id: "inc_undetermined", bracket: "Não Determinado", status: "ENABLED", bidModifier: 0, impressions: 451, clicks: 55, ctr: 12.20, avgCpc: 1.88, cost: 103.18, conversions: 0 }
   ],
   locations: [
-    { id: "loc_1", name: "Minas Gerais (Estado)", type: "Estado", status: "ENABLED", impressions: 430, clicks: 49, ctr: 11.40, avgCpc: 2.16, cost: 105.94, share: 32.39 },
-    { id: "loc_2", name: "Rio de Janeiro (Estado)", type: "Estado", status: "ENABLED", impressions: 412, clicks: 47, ctr: 11.41, avgCpc: 2.13, cost: 100.27, share: 30.65 },
-    { id: "loc_3", name: "São Paulo (Estado)", type: "Estado", status: "ENABLED", impressions: 328, clicks: 37, ctr: 11.28, avgCpc: 2.17, cost: 80.22, share: 24.52 },
-    { id: "loc_4", name: "Porto Alegre (Cidade)", type: "Capital", status: "ENABLED", impressions: 48, clicks: 6, ctr: 12.50, avgCpc: 1.94, cost: 11.65, share: 3.56 },
-    { id: "loc_5", name: "Salvador (Cidade)", type: "Capital", status: "ENABLED", impressions: 42, clicks: 5, ctr: 11.90, avgCpc: 1.96, cost: 9.81, share: 3.00 },
-    { id: "loc_6", name: "Curitiba (Cidade)", type: "Capital", status: "ENABLED", impressions: 31, clicks: 4, ctr: 12.90, avgCpc: 1.91, cost: 7.65, share: 2.34 },
-    { id: "loc_7", name: "Fortaleza (Cidade)", type: "Capital", status: "ENABLED", impressions: 24, clicks: 3, ctr: 12.50, avgCpc: 2.38, cost: 7.13, share: 2.18 },
-    { id: "loc_8", name: "Recife (Cidade)", type: "Capital", status: "ENABLED", impressions: 15, clicks: 2, ctr: 13.33, avgCpc: 2.23, cost: 4.45, share: 1.36 }
+    { id: "loc_1", name: "Minas Gerais (Estado)", type: "Estado", status: "ENABLED", bidModifier: 0, impressions: 430, clicks: 49, ctr: 11.40, avgCpc: 2.16, cost: 105.94, share: 32.39 },
+    { id: "loc_2", name: "Rio de Janeiro (Estado)", type: "Estado", status: "ENABLED", bidModifier: 0, impressions: 412, clicks: 47, ctr: 11.41, avgCpc: 2.13, cost: 100.27, share: 30.65 },
+    { id: "loc_3", name: "São Paulo (Estado)", type: "Estado", status: "ENABLED", bidModifier: 0, impressions: 328, clicks: 37, ctr: 11.28, avgCpc: 2.17, cost: 80.22, share: 24.52 },
+    { id: "loc_4", name: "Porto Alegre (Cidade)", type: "Capital", status: "ENABLED", bidModifier: 0, impressions: 48, clicks: 6, ctr: 12.50, avgCpc: 1.94, cost: 11.65, share: 3.56 },
+    { id: "loc_5", name: "Salvador (Cidade)", type: "Capital", status: "ENABLED", bidModifier: 0, impressions: 42, clicks: 5, ctr: 11.90, avgCpc: 1.96, cost: 9.81, share: 3.00 },
+    { id: "loc_6", name: "Curitiba (Cidade)", type: "Capital", status: "ENABLED", bidModifier: 0, impressions: 31, clicks: 4, ctr: 12.90, avgCpc: 1.91, cost: 7.65, share: 2.34 },
+    { id: "loc_7", name: "Fortaleza (Cidade)", type: "Capital", status: "ENABLED", bidModifier: 0, impressions: 24, clicks: 3, ctr: 12.50, avgCpc: 2.38, cost: 7.13, share: 2.18 },
+    { id: "loc_8", name: "Recife (Cidade)", type: "Capital", status: "ENABLED", bidModifier: 0, impressions: 15, clicks: 2, ctr: 13.33, avgCpc: 2.23, cost: 4.45, share: 1.36 }
   ],
   devices: [
     {
@@ -400,11 +426,11 @@ const INITIAL_GOOGLE_ADS_DATA = {
     excludedUrls: ["/admin/*", "/checkout/*", "/carrinho", "/termos", "/politica-privacidade"]
   },
   audiencesConfig: [
-    { name: "Visitantes do Site (30 dias)", type: "REMARKETING", size: "3.400+", mode: "OBSERVATION", bidModifier: 15 },
-    { name: "Carrinho Abandonado (14 dias)", type: "REMARKETING", size: "320+", mode: "OBSERVATION", bidModifier: 25 },
-    { name: "Compradores Recorrentes (Customer Match)", type: "CUSTOMER_LIST", size: "1.100+", mode: "OBSERVATION", bidModifier: 30 },
-    { name: "In-Market: Lingerie & Roupas Íntimas Atacado", type: "IN_MARKET", size: "Grande", mode: "OBSERVATION", bidModifier: 10 },
-    { name: "Afinidade: Empreendedores e Comércio de Moda", type: "AFFINITY", size: "Grande", mode: "OBSERVATION", bidModifier: 5 }
+    { id: "aud_1", name: "Visitantes do Site (30 dias)", type: "REMARKETING", size: "3.400+", mode: "OBSERVATION", bidModifier: 15 },
+    { id: "aud_2", name: "Carrinho Abandonado (14 dias)", type: "REMARKETING", size: "320+", mode: "OBSERVATION", bidModifier: 25 },
+    { id: "aud_3", name: "Compradores Recorrentes (Customer Match)", type: "CUSTOMER_LIST", size: "1.100+", mode: "OBSERVATION", bidModifier: 30 },
+    { id: "aud_4", name: "In-Market: Lingerie & Roupas Íntimas Atacado", type: "IN_MARKET", size: "Grande", mode: "OBSERVATION", bidModifier: 10 },
+    { id: "aud_5", name: "Afinidade: Empreendedores e Comércio de Moda", type: "AFFINITY", size: "Grande", mode: "OBSERVATION", bidModifier: 5 }
   ]
 };
 
@@ -429,23 +455,19 @@ function saveCache(data) {
   }
 }
 
-// Inicia o cache na memória
 let liveAdsData = loadCache();
 
 // 1. GET /api/ads/google/data - Consulta completa estruturada
 router.get('/google/data', (req, res) => {
   try {
-    const { timeRange = '30d', campaignId } = req.query;
+    const { timeRange = '30d' } = req.query;
 
-    // Fator multiplicador de escala temporal caso seja selecionado 7d ou 90d
     let multiplier = 1.0;
-    if (timeRange === '7d') multiplier = 0.28; // ~7/30
+    if (timeRange === '7d') multiplier = 0.28;
     if (timeRange === '90d') multiplier = 2.45;
 
-    // Clonar e ajustar métricas proporcionais ao timeRange
     const responseData = JSON.parse(JSON.stringify(liveAdsData));
 
-    // Ajusta métricas de campanha
     responseData.campaigns = responseData.campaigns.map(c => ({
       ...c,
       metrics: {
@@ -457,7 +479,6 @@ router.get('/google/data', (req, res) => {
       }
     }));
 
-    // Ajusta métricas de palavras-chave
     responseData.keywords = responseData.keywords.map(k => ({
       ...k,
       impressions: Math.round(k.impressions * multiplier),
@@ -465,7 +486,6 @@ router.get('/google/data', (req, res) => {
       cost: Number((k.cost * multiplier).toFixed(2))
     }));
 
-    // Ajusta métricas de termos de busca
     responseData.searchTerms = responseData.searchTerms.map(st => ({
       ...st,
       impressions: Math.max(1, Math.round(st.impressions * multiplier)),
@@ -473,7 +493,6 @@ router.get('/google/data', (req, res) => {
       cost: Number((st.cost * multiplier).toFixed(2))
     }));
 
-    // Ajusta métricas de idade
     responseData.ageDemographics = responseData.ageDemographics.map(ad => ({
       ...ad,
       impressions: Math.round(ad.impressions * multiplier),
@@ -481,7 +500,6 @@ router.get('/google/data', (req, res) => {
       cost: Number((ad.cost * multiplier).toFixed(2))
     }));
 
-    // Ajusta métricas de gênero
     responseData.genderDemographics = responseData.genderDemographics.map(gd => ({
       ...gd,
       impressions: Math.round(gd.impressions * multiplier),
@@ -489,7 +507,6 @@ router.get('/google/data', (req, res) => {
       cost: Number((gd.cost * multiplier).toFixed(2))
     }));
 
-    // Ajusta métricas de renda
     responseData.householdIncome = responseData.householdIncome.map(hi => ({
       ...hi,
       impressions: Math.round(hi.impressions * multiplier),
@@ -497,7 +514,6 @@ router.get('/google/data', (req, res) => {
       cost: Number((hi.cost * multiplier).toFixed(2))
     }));
 
-    // Ajusta métricas de locais
     responseData.locations = responseData.locations.map(loc => ({
       ...loc,
       impressions: Math.round(loc.impressions * multiplier),
@@ -505,7 +521,6 @@ router.get('/google/data', (req, res) => {
       cost: Number((loc.cost * multiplier).toFixed(2))
     }));
 
-    // Ajusta métricas de dispositivos
     responseData.devices = responseData.devices.map(dev => ({
       ...dev,
       impressions: Math.round(dev.impressions * multiplier),
@@ -524,12 +539,12 @@ router.get('/google/data', (req, res) => {
   }
 });
 
-// 2. POST /api/ads/google/keyword-status - Alterar status da palavra-chave (Ativar / Pausar)
-router.post('/google/keyword-status', (req, res) => {
+// 2. POST /api/ads/google/keyword-update - Editar correspondência, lance ou status de palavra-chave existente
+router.post('/google/keyword-update', (req, res) => {
   try {
-    const { keywordId, newStatus } = req.body;
-    if (!keywordId || !newStatus) {
-      return res.status(400).json({ success: false, error: 'keywordId e newStatus são obrigatórios.' });
+    const { keywordId, matchType, status, maxCpc, finalUrl } = req.body;
+    if (!keywordId) {
+      return res.status(400).json({ success: false, error: 'keywordId é obrigatório.' });
     }
 
     const keyword = liveAdsData.keywords.find(k => k.id === String(keywordId));
@@ -537,13 +552,17 @@ router.post('/google/keyword-status', (req, res) => {
       return res.status(404).json({ success: false, error: 'Palavra-chave não encontrada.' });
     }
 
-    keyword.status = newStatus;
+    if (matchType) keyword.matchType = matchType;
+    if (status) keyword.status = status;
+    if (maxCpc !== undefined) keyword.maxCpc = Number(maxCpc);
+    if (finalUrl !== undefined) keyword.finalUrl = finalUrl;
+
     liveAdsData.account.lastSync = new Date().toISOString();
     saveCache(liveAdsData);
 
     return res.json({
       success: true,
-      message: `Palavra-chave "${keyword.text}" atualizada para ${newStatus === 'ENABLED' ? 'ATIVA' : 'PAUSADA'}.`,
+      message: `Palavra-chave "${keyword.text}" atualizada com sucesso!`,
       keyword
     });
   } catch (error) {
@@ -552,18 +571,123 @@ router.post('/google/keyword-status', (req, res) => {
   }
 });
 
-// 3. POST /api/ads/google/negative-keyword - Adicionar nova palavra-chave negativa
-router.post('/google/negative-keyword', (req, res) => {
+// 3. POST /api/ads/google/keyword-add - Adicionar nova palavra-chave à campanha
+router.post('/google/keyword-add', (req, res) => {
   try {
-    const { text, matchType = 'PHRASE', campaignId = '24365539579' } = req.body;
+    const { text, matchType = 'PHRASE', maxCpc = 2.00, campaignId = '24365539579' } = req.body;
     if (!text || !text.trim()) {
-      return res.status(400).json({ success: false, error: 'Texto da palavra-chave negativa é obrigatório.' });
+      return res.status(400).json({ success: false, error: 'Texto da palavra-chave é obrigatório.' });
     }
 
     const cleanText = text.trim().toLowerCase();
-    const exists = liveAdsData.negativeKeywords.some(nk => nk.text.toLowerCase() === cleanText);
+    const exists = liveAdsData.keywords.some(k => k.text.toLowerCase() === cleanText);
     if (exists) {
-      return res.status(409).json({ success: false, error: 'Este termo já está na lista de negativas.' });
+      return res.status(409).json({ success: false, error: 'Esta palavra-chave já está cadastrada.' });
+    }
+
+    const newKeyword = {
+      id: `kw_${Date.now()}`,
+      campaignId,
+      adGroupId: '206854315411',
+      text: cleanText,
+      matchType,
+      status: 'ENABLED',
+      impressions: 0,
+      clicks: 0,
+      ctr: 0.00,
+      avgCpc: 0.00,
+      cost: 0.00,
+      conversions: 0,
+      maxCpc: Number(maxCpc),
+      finalUrl: '/quero-revender'
+    };
+
+    liveAdsData.keywords.unshift(newKeyword);
+    liveAdsData.account.lastSync = new Date().toISOString();
+    saveCache(liveAdsData);
+
+    return res.json({
+      success: true,
+      message: `Palavra-chave "${cleanText}" adicionada com sucesso!`,
+      keyword: newKeyword
+    });
+  } catch (error) {
+    console.error('[Ads Mutation Error]', error);
+    return res.status(500).json({ success: false, error: error.message });
+  }
+});
+
+// 4. POST /api/ads/google/keyword-promote - Promover termo de busca real para palavra-chave oficial
+router.post('/google/keyword-promote', (req, res) => {
+  try {
+    const { searchTerm, matchType = 'PHRASE', maxCpc = 2.20 } = req.body;
+    if (!searchTerm || !searchTerm.trim()) {
+      return res.status(400).json({ success: false, error: 'searchTerm é obrigatório.' });
+    }
+
+    const cleanText = searchTerm.trim().toLowerCase();
+    const existing = liveAdsData.keywords.find(k => k.text.toLowerCase() === cleanText);
+    if (existing) {
+      existing.status = 'ENABLED';
+      existing.matchType = matchType;
+      saveCache(liveAdsData);
+      return res.json({
+        success: true,
+        message: `Termo "${cleanText}" já existia e foi reativado como palavra-chave ativa.`,
+        keyword: existing
+      });
+    }
+
+    const newKeyword = {
+      id: `kw_${Date.now()}`,
+      campaignId: '24365539579',
+      adGroupId: '206854315411',
+      text: cleanText,
+      matchType,
+      status: 'ENABLED',
+      impressions: 1,
+      clicks: 0,
+      ctr: 0.00,
+      avgCpc: 0.00,
+      cost: 0.00,
+      conversions: 0,
+      maxCpc: Number(maxCpc),
+      finalUrl: '/quero-revender'
+    };
+
+    liveAdsData.keywords.unshift(newKeyword);
+    liveAdsData.account.lastSync = new Date().toISOString();
+    saveCache(liveAdsData);
+
+    return res.json({
+      success: true,
+      message: `Termo "${cleanText}" promovido a palavra-chave oficial!`,
+      keyword: newKeyword
+    });
+  } catch (error) {
+    console.error('[Ads Mutation Error]', error);
+    return res.status(500).json({ success: false, error: error.message });
+  }
+});
+
+// 5. POST /api/ads/google/negative-keyword - Adicionar ou alterar palavra negativa
+router.post('/google/negative-keyword', (req, res) => {
+  try {
+    const { text, matchType = 'PHRASE' } = req.body;
+    if (!text || !text.trim()) {
+      return res.status(400).json({ success: false, error: 'Texto da negativa é obrigatório.' });
+    }
+
+    const cleanText = text.trim().toLowerCase();
+    const existing = liveAdsData.negativeKeywords.find(nk => nk.text.toLowerCase() === cleanText);
+    if (existing) {
+      existing.matchType = matchType;
+      saveCache(liveAdsData);
+      return res.json({
+        success: true,
+        message: `Correspondência do termo negativo "${cleanText}" atualizada para ${matchType}.`,
+        negativeKeyword: existing
+      });
     }
 
     const newNegative = {
@@ -589,7 +713,7 @@ router.post('/google/negative-keyword', (req, res) => {
   }
 });
 
-// 4. DELETE /api/ads/google/negative-keyword/:id - Remover palavra-chave negativa
+// 6. DELETE /api/ads/google/negative-keyword/:id - Remover negativa
 router.delete('/google/negative-keyword/:id', (req, res) => {
   try {
     const { id } = req.params;
@@ -608,12 +732,151 @@ router.delete('/google/negative-keyword/:id', (req, res) => {
       message: 'Palavra-chave negativa removida com sucesso.'
     });
   } catch (error) {
-    console.error('[Ads Mutation Error]', error);
     return res.status(500).json({ success: false, error: error.message });
   }
 });
 
-// 5. POST /api/ads/google/device-modifier - Ajustar modificador de lance de dispositivo
+// 7. POST /api/ads/google/age-modifier - Atualizar status e ajuste de lance (%) por faixa etária
+router.post('/google/age-modifier', (req, res) => {
+  try {
+    const { range, status, bidModifier } = req.body;
+    if (!range) return res.status(400).json({ success: false, error: 'range é obrigatório.' });
+
+    const item = liveAdsData.ageDemographics.find(a => a.range === range);
+    if (!item) return res.status(404).json({ success: false, error: 'Faixa etária não encontrada.' });
+
+    if (status) item.status = status;
+    if (bidModifier !== undefined) {
+      item.bidModifier = Number(bidModifier);
+      if (item.bidModifier === -100) item.status = 'EXCLUDED';
+      else if (item.status === 'EXCLUDED' && item.bidModifier > -100) item.status = 'ENABLED';
+    }
+
+    liveAdsData.account.lastSync = new Date().toISOString();
+    saveCache(liveAdsData);
+
+    return res.json({
+      success: true,
+      message: `Faixa etária "${range}" atualizada: Status ${item.status}, Lance ${item.bidModifier}%`,
+      item
+    });
+  } catch (error) {
+    return res.status(500).json({ success: false, error: error.message });
+  }
+});
+
+// 8. POST /api/ads/google/gender-modifier - Atualizar status e ajuste de lance (%) por gênero
+router.post('/google/gender-modifier', (req, res) => {
+  try {
+    const { gender, status, bidModifier } = req.body;
+    if (!gender) return res.status(400).json({ success: false, error: 'gender é obrigatório.' });
+
+    const item = liveAdsData.genderDemographics.find(g => g.gender === gender);
+    if (!item) return res.status(404).json({ success: false, error: 'Gênero não encontrado.' });
+
+    if (status) item.status = status;
+    if (bidModifier !== undefined) {
+      item.bidModifier = Number(bidModifier);
+      if (item.bidModifier === -100) item.status = 'EXCLUDED';
+      else if (item.status === 'EXCLUDED' && item.bidModifier > -100) item.status = 'ENABLED';
+    }
+
+    liveAdsData.account.lastSync = new Date().toISOString();
+    saveCache(liveAdsData);
+
+    return res.json({
+      success: true,
+      message: `Gênero "${gender}" atualizado: Status ${item.status}, Lance ${item.bidModifier}%`,
+      item
+    });
+  } catch (error) {
+    return res.status(500).json({ success: false, error: error.message });
+  }
+});
+
+// 9. POST /api/ads/google/income-modifier - Atualizar status e lance (%) por renda
+router.post('/google/income-modifier', (req, res) => {
+  try {
+    const { bracket, status, bidModifier } = req.body;
+    if (!bracket) return res.status(400).json({ success: false, error: 'bracket é obrigatório.' });
+
+    const item = liveAdsData.householdIncome.find(i => i.bracket === bracket);
+    if (!item) return res.status(404).json({ success: false, error: 'Faixa de renda não encontrada.' });
+
+    if (status) item.status = status;
+    if (bidModifier !== undefined) {
+      item.bidModifier = Number(bidModifier);
+      if (item.bidModifier === -100) item.status = 'EXCLUDED';
+      else if (item.status === 'EXCLUDED' && item.bidModifier > -100) item.status = 'ENABLED';
+    }
+
+    liveAdsData.account.lastSync = new Date().toISOString();
+    saveCache(liveAdsData);
+
+    return res.json({
+      success: true,
+      message: `Renda "${bracket}" atualizada: Status ${item.status}, Lance ${item.bidModifier}%`,
+      item
+    });
+  } catch (error) {
+    return res.status(500).json({ success: false, error: error.message });
+  }
+});
+
+// 10. POST /api/ads/google/location-modifier - Atualizar lance (%) ou adicionar novo local
+router.post('/google/location-modifier', (req, res) => {
+  try {
+    const { id, name, type = 'Estado', bidModifier, status } = req.body;
+
+    if (id) {
+      const item = liveAdsData.locations.find(l => l.id === id);
+      if (!item) return res.status(404).json({ success: false, error: 'Local não encontrado.' });
+
+      if (bidModifier !== undefined) item.bidModifier = Number(bidModifier);
+      if (status) item.status = status;
+
+      liveAdsData.account.lastSync = new Date().toISOString();
+      saveCache(liveAdsData);
+
+      return res.json({
+        success: true,
+        message: `Local "${item.name}" atualizado com ajuste de ${item.bidModifier}%.`,
+        item
+      });
+    }
+
+    if (name) {
+      const newLoc = {
+        id: `loc_${Date.now()}`,
+        name: name.trim(),
+        type,
+        status: 'ENABLED',
+        bidModifier: Number(bidModifier || 0),
+        impressions: 0,
+        clicks: 0,
+        ctr: 0.00,
+        avgCpc: 0.00,
+        cost: 0.00,
+        share: 0.00
+      };
+      liveAdsData.locations.push(newLoc);
+      liveAdsData.account.lastSync = new Date().toISOString();
+      saveCache(liveAdsData);
+
+      return res.json({
+        success: true,
+        message: `Novo local "${newLoc.name}" adicionado à segmentação com sucesso!`,
+        item: newLoc
+      });
+    }
+
+    return res.status(400).json({ success: false, error: 'id ou name são obrigatórios.' });
+  } catch (error) {
+    return res.status(500).json({ success: false, error: error.message });
+  }
+});
+
+// 11. POST /api/ads/google/device-modifier - Ajustar modificador de lance de dispositivo
 router.post('/google/device-modifier', (req, res) => {
   try {
     const { deviceType, bidModifier } = req.body;
@@ -642,12 +905,121 @@ router.post('/google/device-modifier', (req, res) => {
       device
     });
   } catch (error) {
-    console.error('[Ads Mutation Error]', error);
     return res.status(500).json({ success: false, error: error.message });
   }
 });
 
-// 6. POST /api/ads/google/refresh - Forçar sincronização imediata
+// 12. POST /api/ads/google/schedule-update - Atualizar programação de anúncios e lance por turno
+router.post('/google/schedule-update', (req, res) => {
+  try {
+    const { day, timeSlots, bidModifier, status } = req.body;
+    if (!day) return res.status(400).json({ success: false, error: 'day é obrigatório.' });
+
+    const sched = liveAdsData.adSchedule.find(s => s.day === day);
+    if (!sched) return res.status(404).json({ success: false, error: 'Dia não encontrado.' });
+
+    if (timeSlots !== undefined) sched.timeSlots = timeSlots;
+    if (bidModifier !== undefined) sched.bidModifier = Number(bidModifier);
+    if (status) sched.status = status;
+
+    liveAdsData.account.lastSync = new Date().toISOString();
+    saveCache(liveAdsData);
+
+    return res.json({
+      success: true,
+      message: `Programação de "${day}" atualizada com sucesso!`,
+      sched
+    });
+  } catch (error) {
+    return res.status(500).json({ success: false, error: error.message });
+  }
+});
+
+// 13. POST /api/ads/google/audience-modifier - Atualizar modo e lance de públicos
+router.post('/google/audience-modifier', (req, res) => {
+  try {
+    const { id, mode, bidModifier } = req.body;
+    if (!id) return res.status(400).json({ success: false, error: 'id é obrigatório.' });
+
+    const aud = liveAdsData.audiencesConfig.find(a => a.id === id);
+    if (!aud) return res.status(404).json({ success: false, error: 'Público não encontrado.' });
+
+    if (mode) aud.mode = mode;
+    if (bidModifier !== undefined) aud.bidModifier = Number(bidModifier);
+
+    liveAdsData.account.lastSync = new Date().toISOString();
+    saveCache(liveAdsData);
+
+    return res.json({
+      success: true,
+      message: `Público "${aud.name}" atualizado: Modo ${aud.mode}, Lance +${aud.bidModifier}%`,
+      aud
+    });
+  } catch (error) {
+    return res.status(500).json({ success: false, error: error.message });
+  }
+});
+
+// 14. POST /api/ads/google/dsa-update - Adicionar ou remover URLs excluídas do DSA
+router.post('/google/dsa-update', (req, res) => {
+  try {
+    const { action, url, category } = req.body; // action: 'add_url' | 'remove_url' | 'add_category' | 'remove_category'
+
+    if (action === 'add_url' && url) {
+      if (!liveAdsData.dsaConfig.excludedUrls.includes(url)) {
+        liveAdsData.dsaConfig.excludedUrls.push(url);
+      }
+    } else if (action === 'remove_url' && url) {
+      liveAdsData.dsaConfig.excludedUrls = liveAdsData.dsaConfig.excludedUrls.filter(u => u !== url);
+    } else if (action === 'add_category' && category) {
+      if (!liveAdsData.dsaConfig.targetedCategories.includes(category)) {
+        liveAdsData.dsaConfig.targetedCategories.push(category);
+      }
+    } else if (action === 'remove_category' && category) {
+      liveAdsData.dsaConfig.targetedCategories = liveAdsData.dsaConfig.targetedCategories.filter(c => c !== category);
+    }
+
+    liveAdsData.account.lastSync = new Date().toISOString();
+    saveCache(liveAdsData);
+
+    return res.json({
+      success: true,
+      message: 'Configurações de DSA atualizadas com sucesso!',
+      dsaConfig: liveAdsData.dsaConfig
+    });
+  } catch (error) {
+    return res.status(500).json({ success: false, error: error.message });
+  }
+});
+
+// 15. POST /api/ads/google/network-update - Atualizar Parceiros de Pesquisa e Display
+router.post('/google/network-update', (req, res) => {
+  try {
+    const { campaignId = '24365539579', includeSearchPartners, targetContentNetwork } = req.body;
+    const campaign = liveAdsData.campaigns.find(c => c.id === campaignId);
+    if (!campaign) return res.status(404).json({ success: false, error: 'Campanha não encontrada.' });
+
+    if (!campaign.networkSettings) {
+      campaign.networkSettings = { includeSearchPartners: true, targetContentNetwork: false };
+    }
+
+    if (includeSearchPartners !== undefined) campaign.networkSettings.includeSearchPartners = Boolean(includeSearchPartners);
+    if (targetContentNetwork !== undefined) campaign.networkSettings.targetContentNetwork = Boolean(targetContentNetwork);
+
+    liveAdsData.account.lastSync = new Date().toISOString();
+    saveCache(liveAdsData);
+
+    return res.json({
+      success: true,
+      message: 'Configurações de rede da campanha atualizadas com sucesso!',
+      networkSettings: campaign.networkSettings
+    });
+  } catch (error) {
+    return res.status(500).json({ success: false, error: error.message });
+  }
+});
+
+// 16. POST /api/ads/google/refresh - Sincronização geral
 router.post('/google/refresh', (req, res) => {
   try {
     liveAdsData.account.lastSync = new Date().toISOString();
