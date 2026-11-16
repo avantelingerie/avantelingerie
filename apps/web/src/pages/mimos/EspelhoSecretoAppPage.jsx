@@ -235,9 +235,9 @@ export default function EspelhoSecretoAppPage() {
             {/* Imagem Bonita 3D Oficial (Sem linha dourada em volta) */}
             <div className="w-24 sm:w-28 shrink-0 relative group">
               <img 
-                src="/assets/mimos/capa-espelho-secreto-3d.jpg" 
+                src="/assets/mimos/capa-espelho-secreto-3d.png" 
                 alt="O Espelho Secreto • Capa 3D" 
-                className="w-full h-auto rounded-2xl drop-shadow-[0_12px_25px_rgba(0,0,0,0.85)] group-hover:scale-105 transition-transform duration-300"
+                className="w-full h-auto drop-shadow-[0_12px_25px_rgba(0,0,0,0.85)] group-hover:scale-105 transition-transform duration-300"
               />
             </div>
 
@@ -696,9 +696,9 @@ export default function EspelhoSecretoAppPage() {
               {/* Capa 3D Oficial do E-book (Sem linha dourada em volta) */}
               <div className="w-36 sm:w-44 mx-auto">
                 <img 
-                  src="/assets/mimos/capa-espelho-secreto-3d.jpg" 
+                  src="/assets/mimos/capa-espelho-secreto-3d.png" 
                   alt="Capa Oficial do E-book O Espelho Secreto" 
-                  className="w-full h-auto rounded-2xl drop-shadow-[0_15px_30px_rgba(0,0,0,0.9)]"
+                  className="w-full h-auto drop-shadow-[0_15px_30px_rgba(0,0,0,0.9)]"
                 />
               </div>
 

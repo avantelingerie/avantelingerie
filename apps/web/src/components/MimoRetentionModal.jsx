@@ -147,17 +147,26 @@ export default function MimoRetentionModal({
           <X className="w-4 h-4" />
         </button>
 
-        {/* Top Hero: Single Gift Box with GANHOUU!! Badge */}
-        <div className="flex flex-col items-center text-center relative z-10">
-          <div className="relative mb-2 transition-transform hover:scale-105 duration-300">
+        {/* Top Hero: Single Gift Box with Big Prominent GANHOU!! Badge */}
+        <div className="flex flex-col items-center text-center relative z-10 mb-1 sm:mb-2">
+          <div className="relative transition-transform hover:scale-105 duration-300 flex flex-col items-center">
             <img 
-              src="/assets/mimos/caixa-presente-ganhouu.png" 
-              alt="GANHOUU!!"
-              className="h-24 sm:h-28 w-auto object-contain drop-shadow-[0_6px_25px_rgba(212,175,55,0.45)]"
+              src="/assets/mimos/caixa-presente-transparente.png" 
+              alt="Presente VIP da Fábrica"
+              className="h-24 sm:h-28 w-auto object-contain drop-shadow-[0_8px_30px_rgba(212,175,55,0.5)]"
             />
+            {/* Super Prominent GANHOU!! Badge */}
+            <div className="relative -mt-4 sm:-mt-5 z-20">
+              <div className="inline-flex items-center gap-1.5 sm:gap-2 px-4 sm:px-6 py-1.5 sm:py-2 rounded-full bg-gradient-to-r from-red-600 via-rose-600 to-red-600 border-2 border-amber-300 shadow-[0_4px_25px_rgba(220,38,38,0.7),0_0_15px_rgba(212,175,55,0.5)] ring-2 ring-red-500/40 animate-pulse">
+                <span className="text-sm sm:text-base">🎁</span>
+                <span className="text-xs sm:text-sm md:text-base font-black uppercase tracking-wider text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
+                  GANHOU!!
+                </span>
+              </div>
+            </div>
           </div>
 
-          <h2 id="mimo-modal-title" className="text-base sm:text-xl font-serif font-extrabold text-white tracking-tight leading-snug">
+          <h2 id="mimo-modal-title" className="text-base sm:text-xl font-serif font-extrabold text-white tracking-tight leading-snug mt-2">
             Espere! Escolha seu <span className="bg-gradient-to-r from-[#D4AF37] via-[#FFF3B0] to-[#D4AF37] bg-clip-text text-transparent">Aplicativo VIP</span> Grátis
           </h2>
 
@@ -181,11 +190,11 @@ export default function MimoRetentionModal({
                 }`}
               >
                 {/* 3D Cover Thumbnail with 100% full contain, transparent, no cropping */}
-                <div className="relative w-full aspect-square rounded-lg overflow-hidden mb-1.5 bg-transparent flex items-center justify-center border border-white/5">
+                <div className="relative w-full aspect-square rounded-xl mb-1.5 bg-transparent flex items-center justify-center p-0.5">
                   <img
                     src={app.coverImage}
                     alt={app.name}
-                    className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-105"
+                    className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-105 drop-shadow-[0_6px_16px_rgba(0,0,0,0.4)]"
                   />
                   {/* Selection Radio / Badge */}
                   <div className={`absolute top-1 right-1 w-5 h-5 rounded-full flex items-center justify-center transition-all ${
