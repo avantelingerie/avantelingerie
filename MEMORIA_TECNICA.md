@@ -2611,3 +2611,16 @@ Garantir que as dimensﾃｵes e pesos cadastrados na loja e calculados no check
      - ESLint aprovado com 0 erros.
      - Build de produção do Vite (`apps/web`) concluído com sucesso em 28.56s.
      - Deploy #168 submetido ao GitHub Actions para atualização da VPS.
+
+
+### 13. Aprimoramento Visual dos Aplicativos VIP, Pop-up de Retenção e Cérebro da Lia
+- **Data:** 15 e 16 de Novembro de 2026
+- **Contexto:**
+  1. *Cérebro da Lia:* Correção do erro de inicialização TDZ (ReferenceError: Cannot access 'Me' before initialization) que impedia a abertura da aba de IA no painel administrativo.
+  2. *Aprovação B2B:* Blindagem completa do fluxo de aprovação de revendedores com aplicação da tarja laranja e disparo de WhatsApp/E-mail sem ocultação de botões de ação.
+  3. *Pop-up de Retenção VIP:* Substituição de banners pesados pela caixa de presente de luxo com laço de cetim vermelho e selo '🎁 GANHOUU!!' em PNG 100% transparente, sem bordas ou caixas escuras. Ampliado para tamanho nobre e imponente no topo do modal.
+  4. *Apresentação dos Apps na Sacola e Checkout:*
+     - Apps listados individualmente com capas 3D oficiais e preços proporcionais (+R$ 9,90 no combo ou R$ 0,00 no brinde individual).
+     - Contêiner de imagem no carrinho ajustado para proporção quadrada (w-20 h-20 md:w-24 md:h-24) com cantos arredondados e transparência total, eliminando qualquer deformação ou fundo preto.
+     - Resumo do Pedido convertido para layout claro (bg-[#FFFDF9]) com tipografia escura visível, aprovado pela diretoria.
+     - Blindagem de regras comerciais: itens digitais isentos de multiplicadores de atacado e excluídos do frete do Melhor Envio.
