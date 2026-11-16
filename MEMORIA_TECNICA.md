@@ -2377,32 +2377,32 @@ Garantir que as dimensﾃｵes e pesos cadastrados na loja e calculados no check
      - Quando o saldo atingir o limite mínimo configurado (ou na transição para cobrança pós-paga por limite de faturamento), o sistema da Meta puxará o débito automaticamente do **Elo final 1285**.
 - **Diretriz Registrada:** Nunca alterar o cartão Elo 1285 da posição de principal sem autorização expressa do usuário.
 
-## 2026-11-09 (Noite) � Conex�o Oficial da Lia no Instagram Direct & Fechamento Di�rio
+## 2026-11-09 (Noite) � Conex�o Oficial da Lia no Instagram Direct & Fechamento Di�rio
 
 ### 1. Conquistas Realizadas Hoje
-- **Otimiza��o Meta Ads:** Elo 1285 recarga autom�tica ativada (saldo R$ 185,84+). P�blicos Varejo (22-54 anos, interesses enriquecidos de moda �ntima) e Atacado (Pequenas empresas, revenda, venda direta) ativos e operando sem ru�dos.
-- **Instagram Bio & Convers�o:** Bio atualizada para 148 caracteres com cupom AVANTELIA10 e link oficial. Feed XML din�mico ativo.
-- **Resposta Autom�tica no Direct (Meta Business Suite):** Configurada com v�deo da confec��o fabril, cupom AVANTELIA10, links da loja, atacado e Lia no WhatsApp.
-- **Permiss�o de Mensagens no Celular:** Ativada chave 'Permitir acesso �s mensagens' em Pedidos de Contato / Ferramentas Conectadas no app do Instagram.
+- **Otimiza��o Meta Ads:** Elo 1285 recarga autom�tica ativada (saldo R$ 185,84+). P�blicos Varejo (22-54 anos, interesses enriquecidos de moda �ntima) e Atacado (Pequenas empresas, revenda, venda direta) ativos e operando sem ru�dos.
+- **Instagram Bio & Convers�o:** Bio atualizada para 148 caracteres com cupom AVANTELIA10 e link oficial. Feed XML din�mico ativo.
+- **Resposta Autom�tica no Direct (Meta Business Suite):** Configurada com v�deo da confec��o fabril, cupom AVANTELIA10, links da loja, atacado e Lia no WhatsApp.
+- **Permiss�o de Mensagens no Celular:** Ativada chave 'Permitir acesso �s mensagens' em Pedidos de Contato / Ferramentas Conectadas no app do Instagram.
 - **Meta Graph API para a Lia (Instagram Direct):**
-  * App: Hub de an�ncios da Avante (ID 1987006575274084).
-  * Casos de uso adicionados: Gerenciar mensagens/conte�do Instagram, Messenger e WhatsApp.
+  * App: Hub de an�ncios da Avante (ID 1987006575274084).
+  * Casos de uso adicionados: Gerenciar mensagens/conte�do Instagram, Messenger e WhatsApp.
   * Papel de Instagram Tester aceito e autorizado para @avante.lingerie.
   * Token de acesso permanente (SUAT) gerado e salvo em integracoes_config no PocketBase e .env local.
   * Webhook verificado e aprovado com sucesso: https://avantelingerie.com.br/hcgi/api/webhooks/instagram.
-  * Inscri��o em 'mensagens' e 'coment�rios' ativada (Subscribed) e assinatura ligada.
+  * Inscri��o em 'mensagens' e 'coment�rios' ativada (Subscribed) e assinatura ligada.
 
 ### 2. Status do Cupom AVANTELIA10
-- **C�digo:** AVANTELIA10
+- **C�digo:** AVANTELIA10
 - **Desconto:** 10% OFF direto no subtotal.
-- **Piso M�nimo:** R$ 59,90 de compra.
-- **P�blico:** Varejo (B2C) em primeira compra.
-- **Regra Anticumula��o:** N�o acumula com 5% do PIX nem desconto progressivo.
+- **Piso M�nimo:** R$ 59,90 de compra.
+- **P�blico:** Varejo (B2C) em primeira compra.
+- **Regra Anticumula��o:** N�o acumula com 5% do PIX nem desconto progressivo.
 
-### 3. Frentes de Teste para Amanh�
-1. Teste de Direct no Instagram com perfil externo (resposta de boas-vindas com v�deo + racioc�nio din�mico da Lia).
-2. Valida��o do cupom AVANTELIA10 no checkout do site.
-3. Ingest�o da Nova Cole��o Fitness (9 pastas de produtos) no PocketBase.
+### 3. Frentes de Teste para Amanh�
+1. Teste de Direct no Instagram com perfil externo (resposta de boas-vindas com v�deo + racioc�nio din�mico da Lia).
+2. Valida��o do cupom AVANTELIA10 no checkout do site.
+3. Ingest�o da Nova Cole��o Fitness (9 pastas de produtos) no PocketBase.
 
 ## 2026-11-10 (Manhã) — Resolução Crítica de Login de Revendedora & Blindagem de Senha B2B
 
@@ -2624,3 +2624,38 @@ Garantir que as dimensﾃｵes e pesos cadastrados na loja e calculados no check
      - Contêiner de imagem no carrinho ajustado para proporção quadrada (w-20 h-20 md:w-24 md:h-24) com cantos arredondados e transparência total, eliminando qualquer deformação ou fundo preto.
      - Resumo do Pedido convertido para layout claro (bg-[#FFFDF9]) com tipografia escura visível, aprovado pela diretoria.
      - Blindagem de regras comerciais: itens digitais isentos de multiplicadores de atacado e excluídos do frete do Melhor Envio.
+
+
+### 14. Painel Executivo Google Ads (Search): Espelhamento Integral de Segmentações, Controles Bidirecionais e Adaptação Claro/Escuro
+- **Data:** 16 de Novembro de 2026
+- **Contexto:** Solicitação da diretoria para espelhamento profissional e auditoria em tempo real das campanhas de tráfego pago do Google Ads na aba `/admin/analytics`, com visualização em tabelas horizontais consolidadas e capacidade de edição operacional bidirecional em cada segmentação de Pesquisa (Search), além de compatibilidade estética total com os modos Claro e Escuro.
+- **Ações Executadas (Primeira Regra de Ouro):**
+  1. *Backend & Endpoints de Mutação (`apps/api/src/routes/ads.js`):*
+     - Conexão e auditoria dos dados reais da conta Google Ads ID `1394292049` (Avante Lingerie) e campanha ID `24365539579` (`[GOOGLE] B2B - Atacado | Fábrica Friburgo Mínimo R$ 69,90`).
+     - Criação de snapshot com persistência em cache (`google_ads_cache.json`) e rotas dedicadas para controle bidirecional em cada segmento:
+       * `/api/ads/google/keyword-update`: Edição de tipo de correspondência (Frase, Exata, Ampla), CPC Máximo e status (Ativa/Pausada).
+       * `/api/ads/google/keyword-add`: Adição de nova palavra-chave diretamente pelo painel.
+       * `/api/ads/google/keyword-promote`: Promoção de termos de busca reais dos clientes para palavras-chave oficiais com 1 clique.
+       * `/api/ads/google/negative-keyword`: Adição e exclusão de termos negativos com correspondência customizada.
+       * `/api/ads/google/age-modifier`, `/gender-modifier`, `/income-modifier`: Modificadores percentuais de lance (-100% a +900%) e status de ativação/exclusão por faixa etária, gênero e faixas de renda familiar.
+       * `/api/ads/google/location-modifier`: Gestão e ajuste de lances para estados, capitais e regiões geográficas.
+       * `/api/ads/google/device-modifier`: Modificadores de lance para Computadores, Smartphones e Tablets.
+       * `/api/ads/google/schedule-update`: Programação horária e ajustes de lance por período (dia/noite/fins de semana).
+       * `/api/ads/google/audience-modifier`: Modo de público (Observação vs Segmentação) e modificadores de lances.
+       * `/api/ads/google/network-update`: Controle de expansão de rede (Parceiros de Pesquisa e Rede de Display).
+       * `/api/ads/google/refresh`: Sincronização em tempo real via API oficial.
+  2. *Interface & UX no Admin (`apps/web/src/components/admin/GoogleAdsTab.jsx`):*
+     - Reorganização em tabelas horizontais lado a lado com linha de TOTAL CONSOLIDADO para métricas de Impressões, Cliques, CTR, CPC Médio, Custo Total e Conversões.
+     - 5 Sub-abas estruturadas:
+       * **A. Gatilhos de Busca:** Palavras-chave, Termos de Busca Reais e Palavras Negativas com ações de negativar/promover.
+       * **B & C. Demografia Básica & Renda Familiar:** Idades, Gêneros e Renda por percentis econômicos.
+       * **D. Localização Geográfica, Horários & Idiomas:** Estados, cidades, programação de anúncios e idiomas.
+       * **E. Tecnologia, Redes & Dispositivos:** Dispositivos móveis/desktop e redes de parceiros.
+       * **Públicos-Alvo & DSA:** Públicos em observação/segmentação e anúncios dinâmicos de pesquisa.
+     - Modal de Confirmação Segura para alterações de lance e status de alto impacto.
+     - Suporte dinâmico aos modos Claro e Escuro, eliminando caixas pretas opacas no tema claro (`bg-[#FAF7F2]`).
+  3. *Validação Técnica:*
+     - Verificação de sintaxe no Node (`node -c apps/api/src/routes/ads.js`): Aprovado (0 erros).
+     - ESLint no componente React: Aprovado (0 erros, 0 avisos).
+     - Build de produção do Vite: Aprovado com sucesso em 23.14s.
+     - Commits aplicados e integrados à branch `main` para deploy automático na VPS via GitHub Actions.
