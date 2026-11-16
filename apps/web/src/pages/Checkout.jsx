@@ -93,13 +93,14 @@ export default function Checkout() {
     }
   }, [isBoletoActive, paymentMethod, setPaymentMethod]);
 
-  // High #18: Redirect to store after 3s if cart is empty, avoiding static stranded UX
+  // Blindagem Inegociável: Redireciona para o carrinho se a sacola estiver vazia OU não contiver peças físicas de lingerie
   React.useEffect(() => {
-    if (cart.length === 0) {
-      toast.info('Seu carrinho está vazio. Redirecionando para as nossas coleções...');
+    const physicalItems = cart.filter(item => !item.is_digital && !item.is_mimo && !item.is_combo_item);
+    if (cart.length === 0 || physicalItems.length === 0) {
+      toast.error('O seu pedido precisa de pelo menos 1 peça de lingerie para ir para o pagamento. Redirecionando para a sacola...', { duration: 3500 });
       const timer = setTimeout(() => {
-        navigate('/');
-      }, 3000);
+        navigate('/carrinho');
+      }, 2000);
       return () => clearTimeout(timer);
     }
   }, [cart, navigate]);
@@ -255,16 +256,19 @@ export default function Checkout() {
     }
   };
 
-  if (cart.length === 0) {
+  const physicalItems = cart.filter(item => !item.is_digital && !item.is_mimo && !item.is_combo_item);
+  if (cart.length === 0 || physicalItems.length === 0) {
     return (
       <div className="min-h-[80vh] flex flex-col items-center justify-center text-center p-4 bg-[#FFFBF8] font-sans">
-        <h1 className="text-3xl font-serif font-bold text-gray-900 mb-6">Seu carrinho está vazio</h1>
-        <p className="text-gray-400 text-xs font-light mb-6">Estamos te levando de volta para a nossa vitrine de lançamentos...</p>
+        <h1 className="text-3xl font-serif font-bold text-gray-900 mb-4">Sua sacola precisa de peças de lingerie</h1>
+        <p className="text-gray-500 text-xs font-normal max-w-md mb-6 leading-relaxed">
+          O presente VIP acompanha suas compras de fábrica. Adicione pelo menos 1 peça de lingerie à sacola para seguir para o pagamento seguro.
+        </p>
         <Button
-          onClick={() => navigate('/')}
-          className="bg-[#121212] hover:bg-[#c59b5f] text-white hover:text-black border border-[#c59b5f]/30 rounded-2xl px-10 py-6 text-xs font-bold tracking-widest uppercase transition-all duration-300 shadow-md active:scale-95 animate-pulse"
+          onClick={() => navigate('/carrinho')}
+          className="bg-[#121212] hover:bg-[#c59b5f] text-white hover:text-black border border-[#c59b5f]/30 rounded-2xl px-10 py-6 text-xs font-bold tracking-widest uppercase transition-all duration-300 shadow-md active:scale-95 cursor-pointer"
         >
-          Voltar para a loja
+          Voltar para a Sacola
         </Button>
       </div>
     );

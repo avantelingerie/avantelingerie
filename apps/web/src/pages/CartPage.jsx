@@ -156,6 +156,15 @@ export default function CartPage() {
       toast.error('Seu carrinho está vazio');
       return;
     }
+
+    // Blindagem Inegociável: Não permitir checkout sem ao menos 1 produto físico de lingerie
+    const physicalItems = cart.filter(i => !i.is_mimo && !i.is_digital && !i.is_combo_item);
+    if (physicalItems.length === 0) {
+      toast.error('Adicione pelo menos 1 peça de lingerie à sua sacola para acompanhar o presente e finalizar o pedido.', {
+        duration: 4500
+      });
+      return;
+    }
     
     if (isReseller) {
       if (subtotal < limiteUpgrade) {
@@ -507,7 +516,22 @@ export default function CartPage() {
       toast.info('Presente VIP removido da sacola.');
       return;
     }
+
+    // Verifica se após a remoção ainda restará algum item físico
+    const remainingPhysical = cart.filter(i => 
+      i.cartItemId !== cartItemId && 
+      !i.is_mimo && 
+      !i.is_digital && 
+      !i.is_combo_item
+    );
+
     removeFromCart(cartItemId);
+
+    if (remainingPhysical.length === 0 && cart.some(i => i.is_mimo || i.is_combo_item)) {
+      toast.warning('O presente VIP é um benefício exclusivo para acompanhar seu pedido. Adicione ao menos 1 peça de lingerie para liberá-lo no checkout!', { 
+        duration: 5000 
+      });
+    }
   };
 
   const testimonialsData = [
@@ -663,6 +687,7 @@ export default function CartPage() {
                     onCheckout={handleCheckout} 
                     resellerSaving={resellerSaving}
                     chosenGift={chosenGift}
+                    hasPhysicalItems={cart.some(i => !i.is_mimo && !i.is_digital && !i.is_combo_item)}
                     onOpenGiftModal={() => setShowGiftModal(true)}
                   />
                   

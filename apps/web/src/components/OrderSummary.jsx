@@ -13,6 +13,7 @@ export default function OrderSummary({
   onCheckout, 
   resellerSaving,
   chosenGift = null,
+  hasPhysicalItems = true,
   onOpenGiftModal = null
 }) {
   const formatPrice = (val) => new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(val);
@@ -215,12 +216,29 @@ export default function OrderSummary({
         </div>
       </div>
 
+      {/* Alerta de Blindagem: Presente VIP aguardando ao menos 1 peça física de lingerie */}
+      {!hasPhysicalItems && chosenGift && (
+        <div className="bg-[#FFF8E7] border border-[#D4AF37]/50 rounded-xl p-3 mb-3 flex items-start gap-2.5 text-amber-950 text-xs shadow-xs animate-in fade-in duration-300">
+          <Gift className="w-4 h-4 text-[#D4AF37] shrink-0 mt-0.5" />
+          <div className="flex flex-col gap-0.5">
+            <span className="font-bold text-[11px] uppercase tracking-wider text-[#996515]">Presente VIP Reservado</span>
+            <span className="text-[11px] leading-tight text-gray-700">
+              Adicione pelo menos <strong>1 peça de lingerie</strong> à sacola para liberar o presente e seguir para o pagamento.
+            </span>
+          </div>
+        </div>
+      )}
+
       <Button 
         onClick={onCheckout}
-        className="w-full bg-[#3A2E2A] hover:bg-[#2A1E1A] text-white font-bold py-6 text-base rounded-xl shadow-md transition-all active:scale-[0.98] uppercase tracking-wide group"
+        className={`w-full font-bold py-6 text-base rounded-xl shadow-md transition-all active:scale-[0.98] uppercase tracking-wide group ${
+          !hasPhysicalItems && chosenGift
+            ? 'bg-[#5a4841] hover:bg-[#483933] text-amber-100 cursor-pointer'
+            : 'bg-[#3A2E2A] hover:bg-[#2A1E1A] text-white cursor-pointer'
+        }`}
       >
         <ShoppingBag className="w-5 h-5 mr-2 text-[#D4AF37]" />
-        Finalizar Compra
+        {!hasPhysicalItems && chosenGift ? 'Adicione 1 Peça para Finalizar' : 'Finalizar Compra'}
         <ArrowRight className="w-4 h-4 ml-2 opacity-70 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
       </Button>
     </div>

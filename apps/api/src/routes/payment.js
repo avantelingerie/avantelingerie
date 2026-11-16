@@ -42,6 +42,12 @@ router.post('/create-order', async (req, res) => {
       return res.status(400).json({ error: 'Informações pessoais incompletas.' });
     }
 
+    // Regra Inegociável: O pedido deve conter pelo menos 1 peça física de lingerie (mimos não podem ser comprados avulsos)
+    const physicalItems = (cart || []).filter(item => !item.is_digital && !item.is_mimo && !item.is_combo_item);
+    if (physicalItems.length === 0) {
+      return res.status(400).json({ error: 'O pedido deve conter pelo menos 1 peça física de lingerie.' });
+    }
+
     let targetUserId = userId || '';
 
     // Verify if targetUserId actually exists in the database to prevent relation integrity errors

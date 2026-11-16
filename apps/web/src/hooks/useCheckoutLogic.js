@@ -557,6 +557,14 @@ export function useCheckoutLogic() {
       }
     })();
 
+    // Blindagem: Rejeita checkout se não houver pelo menos 1 peça física de lingerie
+    const physicalItems = cart.filter(item => !item.is_digital && !item.is_mimo && !item.is_combo_item);
+    if (physicalItems.length === 0) {
+      toast.error('O seu pedido precisa de pelo menos 1 peça de lingerie física para ser finalizado.');
+      setIsSubmitting(false);
+      return null;
+    }
+
     const backendPayload = {
       personalInfo,
       billingAddress,

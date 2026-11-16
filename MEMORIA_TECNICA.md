@@ -2659,3 +2659,24 @@ Garantir que as dimensﾃｵes e pesos cadastrados na loja e calculados no check
      - ESLint no componente React: Aprovado (0 erros, 0 avisos).
      - Build de produção do Vite: Aprovado com sucesso em 23.14s.
      - Commits aplicados e integrados à branch `main` para deploy automático na VPS via GitHub Actions.
+
+
+### 15. Blindagem de Não-Regressão e Regra de Mínimo 1 Produto Físico para Checkout
+- **Data:** 16 de Novembro de 2026 (Noite)
+- **Contexto:** Solicitação da diretoria para blindagem inegociável do ecossistema e correção de vulnerabilidade crítica descoberta em teste prático: cliente podia adicionar presente/combo de aplicativos VIP, remover todas as peças físicas da sacola e prosseguir para o checkout levando apenas o brinde (R$ 0,00).
+- **Ações Executadas (Primeira Regra de Ouro):**
+  1. *Regra Oficial de Governança (.agents/rules/09-blindagem-do-ecossistema.md):*
+     - Documentação formal dos 5 Pilares de Invariantes Inegociáveis do ecossistema.
+     - Proibição absoluta de compra avulsa de brindes e mimos digitais: o checkout exige obrigatoriamente a presença de ao menos 1 peça física de lingerie.
+  2. *Blindagem Multi-camada de Carrinho e Checkout:*
+     - *Camada 1 (CartPage.jsx - handleCheckout):* Validação estrita de itens físicos. Se `physicalItems.length === 0`, bloqueia navegação para o checkout e emite alerta instrutivo.
+     - *Camada 2 (CartPage.jsx - handleRemoveCartItem):* Ao excluir o último produto físico deixando apenas o brinde na sacola, notifica a cliente em tempo real que o brinde exige peças na sacola para ser resgatado.
+     - *Camada 3 (OrderSummary.jsx):* Exibição de card de alerta dourado 'Presente VIP Reservado' e alteração dinâmica do botão para 'Adicione 1 Peça para Finalizar' quando houver brinde sem produtos físicos.
+     - *Camada 4 (Checkout.jsx):* Redirecionamento automático para a sacola com aviso pedagógico caso alguém acerte a rota `/checkout` com 0 itens físicos.
+     - *Camada 5 (useCheckoutLogic.js & payment.js):* Bloqueio preventivo no hook e rejeição estrita no backend (`/payment/create-order` com status 400).
+  3. *Auditor Automatizado de Blindagem (tools/verify_system_integrity.js & npm run test:shield):*
+     - Script com 17 verificações automatizadas de integridade arquitetural (sintaxe, ESM, invariantes de mimos, bloqueio de checkout sem produto, rotas de Google Ads e Lia).
+  4. *Validação Técnica:*
+     - Testes automatizados de blindagem: 17/17 verificações aprovadas com 100% de sucesso.
+     - ESLint aprovado com 0 erros.
+     - Vite production build aprovado com sucesso.
