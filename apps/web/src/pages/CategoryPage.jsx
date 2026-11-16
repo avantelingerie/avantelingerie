@@ -72,7 +72,7 @@ export default function CategoryPage() {
   const [entityName, setEntityName] = useState(''); // Real name from DB
 
   const formattedCategoryName = entityName || (categoryName
-    ? categoryName.charAt(0).toUpperCase() + categoryName.slice(1).replace(/-/g, ' ')
+    ? (categoryName === 'todas' ? 'Coleção Completa' : categoryName.charAt(0).toUpperCase() + categoryName.slice(1).replace(/-/g, ' '))
     : 'Todas as Peças');
 
   // Sincroniza modo atacado para ordenação pelo menor preço e memória de compras
