@@ -15,6 +15,7 @@ import { Skeleton } from '@/components/ui/skeleton.jsx';
 import { toast } from 'sonner';
 import pb from '@/lib/pocketbaseClient.js';
 import TrackingPixelsTab from '@/components/admin/TrackingPixelsTab.jsx';
+import GoogleAdsTab from '@/components/admin/GoogleAdsTab.jsx';
 
 // Dicionário completo de DDDs brasileiros para mapeamento de Estados
 const DDD_TO_STATE = {
@@ -803,32 +804,39 @@ export default function AnalyticsPage() {
 
         {/* Date Filters & Controls */}
         <div className="flex flex-wrap items-center gap-3 w-full sm:w-auto">
-          {/* Alternador de Quatro Abas Premium */}
-          <div className="flex items-center bg-white dark:bg-[#181818] border border-zinc-200 dark:border-zinc-800 rounded-xl p-1 shadow-sm mr-2">
+          {/* Alternador de Cinco Abas Premium */}
+          <div className="flex items-center bg-white dark:bg-[#181818] border border-zinc-200 dark:border-zinc-800 rounded-xl p-1 shadow-sm mr-2 overflow-x-auto scrollbar-none">
             <button 
               onClick={() => setActiveTab('geral')}
-              className={`px-4 py-2 text-xs font-bold rounded-lg transition-all duration-300 flex items-center gap-2 ${activeTab === 'geral' ? 'bg-[#c59b5f] text-black shadow-md' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white'}`}
+              className={`px-3.5 py-2 text-xs font-bold rounded-lg transition-all duration-300 flex items-center gap-2 whitespace-nowrap ${activeTab === 'geral' ? 'bg-[#c59b5f] text-black shadow-md' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white'}`}
             >
               <TrendingUp className="w-3.5 h-3.5" />
               Desempenho Geral
             </button>
             <button 
               onClick={() => setActiveTab('demografia')}
-              className={`px-4 py-2 text-xs font-bold rounded-lg transition-all duration-300 flex items-center gap-2 ${activeTab === 'demografia' ? 'bg-[#c59b5f] text-black shadow-md' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white'}`}
+              className={`px-3.5 py-2 text-xs font-bold rounded-lg transition-all duration-300 flex items-center gap-2 whitespace-nowrap ${activeTab === 'demografia' ? 'bg-[#c59b5f] text-black shadow-md' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white'}`}
             >
               <Users className="w-3.5 h-3.5" />
               Demografia (GA4)
             </button>
             <button 
               onClick={() => setActiveTab('jornadas')}
-              className={`px-4 py-2 text-xs font-bold rounded-lg transition-all duration-300 flex items-center gap-2 ${activeTab === 'jornadas' ? 'bg-[#c59b5f] text-black shadow-md' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white'}`}
+              className={`px-3.5 py-2 text-xs font-bold rounded-lg transition-all duration-300 flex items-center gap-2 whitespace-nowrap ${activeTab === 'jornadas' ? 'bg-[#c59b5f] text-black shadow-md' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white'}`}
             >
               <Activity className="w-3.5 h-3.5" />
               Jornadas ao Vivo
             </button>
             <button 
+              onClick={() => setActiveTab('google_ads')}
+              className={`px-3.5 py-2 text-xs font-bold rounded-lg transition-all duration-300 flex items-center gap-2 whitespace-nowrap ${activeTab === 'google_ads' ? 'bg-[#c59b5f] text-black shadow-md' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white'}`}
+            >
+              <Megaphone className="w-3.5 h-3.5" />
+              Google Ads (Search)
+            </button>
+            <button 
               onClick={() => setActiveTab('tracking')}
-              className={`px-4 py-2 text-xs font-bold rounded-lg transition-all duration-300 flex items-center gap-2 ${activeTab === 'tracking' ? 'bg-[#c59b5f] text-black shadow-md' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white'}`}
+              className={`px-3.5 py-2 text-xs font-bold rounded-lg transition-all duration-300 flex items-center gap-2 whitespace-nowrap ${activeTab === 'tracking' ? 'bg-[#c59b5f] text-black shadow-md' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white'}`}
             >
               <Target className="w-3.5 h-3.5" />
               Tracking & Pixels
@@ -1531,6 +1539,16 @@ export default function AnalyticsPage() {
                   )}
                 </Card>
               </div>
+            </motion.div>
+          ) : activeTab === 'google_ads' ? (
+            <motion.div
+              key="google_ads"
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -15 }}
+              transition={{ duration: 0.25 }}
+            >
+              <GoogleAdsTab dateRange={dateRange} />
             </motion.div>
           ) : (
             <motion.div
