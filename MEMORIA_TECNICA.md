@@ -2732,3 +2732,41 @@ Garantir que as dimensﾃｵes e pesos cadastrados na loja e calculados no check
      - `npm run test:shield`: 17/17 verificações aprovadas.
      - ESLint: 0 erros no frontend e backend.
      - Vite production build: 3123 módulos compilados com sucesso em 39.52s.
+
+
+### 18. Calibração Definitiva Google & Meta Ads, Descoberta QSA da Sócia Michele e Transição para Antigravity 2.0
+- **Data:** 17 de Novembro de 2026 (Tarde / Fechamento)
+- **Contexto:** Resolução dos entraves da Validação do Anunciante no Google Ads, auditoria empírica das vendas reais no PocketBase, balanceamento estratégico do tráfego pago no Meta Ads, sincronização do Painel Administrativo de Anúncios e definição da infraestrutura de IA para otimização da memória RAM do notebook (3,73 GB).
+- **Ações Executadas e Decisões Históricas (Primeira Regra de Ouro):**
+  1. *Descoberta da Titularidade Legal do Google Ads (Validação de Anunciante):*
+     - A Dun & Bradstreet aprovou a organização `AVANTE LINGERIE LTDA` (CNPJ `54.615.037/0001-53`) com selo verde em 17/11/2026.
+     - Identificado o motivo das tentativas frustradas de afiliação com Luiz Taveira Machado e Dooner: O cadastro oficial na Receita Federal possui como única Sócia-Administradora **Michele de Medeiros Deruci**.
+     - Definição: A validação final de afiliação ("Valide com o seu ID") será concluída anexando a CNH/RG de **Michele de Medeiros Deruci**, garantindo aprovação direta no cruzamento do QSA da Receita Federal sem necessidade de procuração.
+     - O lojista foi orientado a **NÃO alterar** os dados cadastrais prévios no Perfil de Pagamentos para não invalidar a aprovação da D&B.
+  2. *Auditoria Empírica de Pedidos Reais no Banco de Dados (PocketBase):*
+     - Consultado em tempo real o histórico de vendas da loja:
+       - `PED-003`: Ísis Santos (Contagem/MG) — R$ 127,77 via PIX (4x Conjuntos Cropped + 1x Especial).
+       - `PED-004`: Tatiane Albiati (Jaguariúna/SP) — R$ 71,31 via PIX (2x Conjuntos Cropped).
+       - `PED-005`: Inês dos Santos (Araucária/PR) — R$ 74,54 via PIX (2x Cintas + 1x Cropped).
+       - `PED-007`: Laís do Val (Goiânia/GO) — R$ 41,09 via PIX (1x Conjunto Cropped).
+       - `PED-008`: Talita Tomio (Araquari/SC) — R$ 150,46 (Lote de Atacado com 6 conjuntos).
+     - **Conclusão:** 100% das vendas pagas vieram do Meta Ads através do anúncio do **Conjunto Cropped (`AD 02`)** e foram quitadas via **PIX**.
+  3. *Calibração Cirúrgica do Meta Ads e Google Ads:*
+     - **Google Ads:** Pausada a campanha de Pesquisa (`[GOOGLE] B2B - Atacado`) e mantida exclusivamente a campanha de alta eficiência `[GOOGLE] Shopping` com CPC médio de R$ 0,37 e teto de R$ 20,00/dia.
+     - **Meta Ads - B2B Atacado (`AD B2B 01`):** Orçamento diário ampliado de R$ 15,00 para **R$ 25,00 /dia**. Motivo: CTR estelar de 8,19% e cliques a R$ 0,38 para abastecer a Lia no WhatsApp com revendedoras. Destino oficial mantido em `/categoria/todas?modo=atacado`.
+     - **Meta Ads - B2C Varejo (`AD 02 - Cropped`):** Orçamento diário calibrado para **R$ 20,00 /dia**, focado 100% no Conjunto Cropped. Destino mantido na página do produto.
+     - **Anúncios Pausados no Meta:** `AD 01 - Calcinha Cinta Modeladora` e `AD 03 - Pijama Short Doll (Baby Doll)` pausados para eliminar dispersão de verba.
+     - **Total Diário Consolidado:** R$ 45,00 no Meta + R$ 20,00 no Google = **R$ 65,00 /dia**.
+  4. *Sincronização do Painel Admin da Loja (`/admin/analytics`):*
+     - Atualizados os dados em `apps/api/src/routes/ads.js` e persistência de cache para que o painel reflita os novos orçamentos (R$ 25 e R$ 20) e as insígnias de `PAUSADO` no Google e no Meta.
+     - Deploy disparado pelo usuário via `git push origin main` (commits `90bea12` e `2f11d11`).
+  5. *Governança e Arquitetura de IA (Alívio de RAM):*
+     - Cancelada a contratação de Inner AI + Mago.
+     - Adotada oficialmente a API direta da Anthropic (Chave `Antigravity-PC` com Claude 3.5 Sonnet) como consultor sênior de Segunda Opinião.
+     - Nemotron mantido em nuvem (OpenRouter) como validador algorítmico prévio (Portão Nemotron).
+     - Jev / TypeSafe AI 100% inativo.
+     - Transição do lojista para o **Antigravity 2.0** para liberar ~1 GB de memória física no notebook de 3,73 GB.
+- **Validações de Qualidade:**
+  - `npm run test:shield`: 17/17 verificações aprovadas com 100% de sucesso.
+  - `node --check apps/api/src/routes/ads.js`: Sintaxe ESM válida.
+  - ESLint no frontend (`apps/web`): 0 erros.
