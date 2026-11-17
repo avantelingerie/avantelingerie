@@ -16,6 +16,7 @@ import { toast } from 'sonner';
 import pb from '@/lib/pocketbaseClient.js';
 import TrackingPixelsTab from '@/components/admin/TrackingPixelsTab.jsx';
 import GoogleAdsTab from '@/components/admin/GoogleAdsTab.jsx';
+import MetaAdsTab from '@/components/admin/MetaAdsTab.jsx';
 
 // Dicionário completo de DDDs brasileiros para mapeamento de Estados
 const DDD_TO_STATE = {
@@ -835,6 +836,13 @@ export default function AnalyticsPage() {
               Google Ads (Search)
             </button>
             <button 
+              onClick={() => setActiveTab('meta_ads')}
+              className={`px-3.5 py-2 text-xs font-bold rounded-lg transition-all duration-300 flex items-center gap-2 whitespace-nowrap ${activeTab === 'meta_ads' ? 'bg-[#c59b5f] text-black shadow-md' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white'}`}
+            >
+              <Smartphone className="w-3.5 h-3.5" />
+              Meta Ads (Instagram/FB)
+            </button>
+            <button 
               onClick={() => setActiveTab('tracking')}
               className={`px-3.5 py-2 text-xs font-bold rounded-lg transition-all duration-300 flex items-center gap-2 whitespace-nowrap ${activeTab === 'tracking' ? 'bg-[#c59b5f] text-black shadow-md' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white'}`}
             >
@@ -1549,6 +1557,16 @@ export default function AnalyticsPage() {
               transition={{ duration: 0.25 }}
             >
               <GoogleAdsTab dateRange={dateRange} />
+            </motion.div>
+          ) : activeTab === 'meta_ads' ? (
+            <motion.div
+              key="meta_ads"
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -15 }}
+              transition={{ duration: 0.25 }}
+            >
+              <MetaAdsTab dateRange={dateRange} />
             </motion.div>
           ) : (
             <motion.div

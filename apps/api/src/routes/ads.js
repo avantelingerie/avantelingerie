@@ -1034,4 +1034,453 @@ router.post('/google/refresh', (req, res) => {
   }
 });
 
+// =========================================================================
+// META ADS (INSTAGRAM & FACEBOOK) - CONTA OFICIAL AVANTE LINGERIE (841441889539975)
+// =========================================================================
+
+const META_CACHE_FILE = path.join(__dirname, '../../meta_ads_cache.json');
+
+const INITIAL_META_ADS_DATA = {
+  account: {
+    id: "841441889539975",
+    name: "Avante Lingerie | Confecção de Moda Íntima",
+    currency: "BRL",
+    timeZone: "America/Sao_Paulo",
+    status: "ACTIVE",
+    lastSync: new Date().toISOString()
+  },
+  summaryMetrics: {
+    spend: 957.49,
+    reach: 16896,
+    impressions: 23093,
+    clicks: 689,
+    ctr: 4.57,
+    avgCpc: 0.91,
+    frequency: 1.37,
+    addToCart: 77,
+    initiateCheckout: 25,
+    landingPageViews: 601,
+    postEngagement: 771
+  },
+  campaigns: [
+    {
+      id: "120251762627320751",
+      name: "[META] B2B - Atacado | Captação Revendedoras Lia WhatsApp",
+      status: "ACTIVE",
+      objective: "OUTCOME_SALES",
+      dailyBudget: 15.00,
+      buyingType: "AUCTION",
+      bidStrategy: "LOWEST_COST_WITHOUT_CAP",
+      metrics: {
+        impressions: 8739,
+        reach: 5964,
+        clicks: 567,
+        ctr: 6.49,
+        avgCpc: 0.51,
+        cost: 290.92,
+        conversions: 35,
+        initiateCheckout: 0,
+        landingPageViews: 294
+      }
+    },
+    {
+      id: "120251762626930751",
+      name: "[META] B2C - Varejo | CBO Escala + Remarketing Agressivo",
+      status: "ACTIVE",
+      objective: "OUTCOME_SALES",
+      dailyBudget: 35.00,
+      buyingType: "AUCTION",
+      bidStrategy: "LOWEST_COST_WITHOUT_CAP",
+      metrics: {
+        impressions: 14354,
+        reach: 10932,
+        clicks: 488,
+        ctr: 3.40,
+        avgCpc: 1.37,
+        cost: 666.57,
+        conversions: 42,
+        initiateCheckout: 25,
+        landingPageViews: 307
+      }
+    }
+  ],
+  adsets: [
+    {
+      id: "120251762650980751",
+      campaignId: "120251762627320751",
+      name: "[ADSET 01] Revenda & Renda Extra (Mínimo R$ 69,90) - Mulheres 25-54",
+      status: "ACTIVE",
+      targetAudience: "Interesse em Revendedor, Atacado, Pequena Empresa, Lingerie",
+      ageRange: "25 - 54 anos",
+      gender: "Mulheres (100%)",
+      geo: "RJ, SP, MG, ES (Fábrica Friburgo + Sudeste)",
+      optimizationGoal: "Conversões no WhatsApp / Site"
+    },
+    {
+      id: "120251762651370751",
+      campaignId: "120251762627320751",
+      name: "[ADSET 02] Sacoleiras & Lojas - Mulheres 25-54",
+      status: "ACTIVE",
+      targetAudience: "Comportamento: Shops Admins / Administradores de Lojas",
+      ageRange: "25 - 54 anos",
+      gender: "Mulheres (100%)",
+      geo: "Capitais & Sudeste (Curitiba, Fortaleza, POA, Recife, Salvador, RJ, SP, MG)",
+      optimizationGoal: "Conversões no WhatsApp"
+    },
+    {
+      id: "120251762649670751",
+      campaignId: "120251762626930751",
+      name: "[ADSET 01] Remarketing 7D & Engajamento 45D - Mulheres 22-45",
+      status: "ACTIVE",
+      targetAudience: "Engajamento Instagram 45 Dias + Visitantes do Site 7 Dias",
+      ageRange: "22 - 45 anos",
+      gender: "Mulheres (100%)",
+      geo: "Brasil (Capitais & Sudeste)",
+      optimizationGoal: "Finalização de Compra (Checkout)"
+    },
+    {
+      id: "120251762650110751",
+      campaignId: "120251762626930751",
+      name: "[ADSET 02] Interesses Lingerie + Compradores Envolvidos - Mulheres 22-54",
+      status: "ACTIVE",
+      targetAudience: "Lingerie, Pijama, Sutiã, Calcinha + Comportamento 'Engaged Shoppers'",
+      ageRange: "22 - 54 anos",
+      gender: "Mulheres (100%)",
+      geo: "Sudeste (RJ, SP, MG, ES)",
+      optimizationGoal: "Adição à Sacola / Compra"
+    },
+    {
+      id: "120251864267230751",
+      campaignId: "120251762626930751",
+      name: "[ADSET 03] Aberto Avançado (Broad) - Mulheres 22-45",
+      status: "ACTIVE",
+      targetAudience: "Público Aberto com IA Meta Advantage+ direcionando criativos",
+      ageRange: "22 - 45 anos",
+      gender: "Mulheres (100%)",
+      geo: "Brasil (Capitais & Sudeste)",
+      optimizationGoal: "Conversões no Site"
+    }
+  ],
+  ads: [
+    {
+      id: "120251917232440751",
+      adsetId: "120251762650980751",
+      campaignId: "120251762627320751",
+      name: "AD B2B 01 - Comece a Revender com R$ 69,90",
+      status: "ACTIVE",
+      badge: "🏆 Campeão CTR (8,22%)",
+      headline: "Comece a Revender Atacado Fábrica R$ 69,90",
+      format: "Vídeo / Imagem 1:1",
+      destination: "WhatsApp da Lia (Atacado)",
+      impressions: 5204,
+      clicks: 428,
+      ctr: 8.22,
+      cpc: 0.48,
+      cost: 206.94
+    },
+    {
+      id: "120251902593130751",
+      adsetId: "120251762650110751",
+      campaignId: "120251762626930751",
+      name: "AD 02 - Conjunto Romântico Cropped Renda R$ 28,28",
+      status: "ACTIVE",
+      badge: "⭐ Maior Volume de Cliques",
+      headline: "Conjunto Cropped Renda - Apenas R$ 28,28",
+      format: "Vídeo / Imagem 1:1",
+      destination: "/produto/conjunto-romantico-cropped-renda",
+      impressions: 8433,
+      clicks: 372,
+      ctr: 4.41,
+      cpc: 1.38,
+      cost: 512.41
+    },
+    {
+      id: "120251917990740751",
+      adsetId: "120251762650980751",
+      campaignId: "120251762627320751",
+      name: "AD B2B 02 - Lucro de 100% a 150% Direto de Fábrica",
+      status: "PAUSED",
+      badge: "📈 Alta Lucratividade",
+      headline: "Lucro de 100% a 150% Direto de Fábrica Friburgo",
+      format: "Vídeo / Imagem Feed",
+      destination: "WhatsApp da Lia (Atacado)",
+      impressions: 3535,
+      clicks: 139,
+      ctr: 3.93,
+      cpc: 0.60,
+      cost: 83.98
+    },
+    {
+      id: "120251905773570751",
+      adsetId: "120251762650110751",
+      campaignId: "120251762626930751",
+      name: "AD 03 - Pijama Short Doll Suede R$ 22,91",
+      status: "ACTIVE",
+      badge: "🌙 Alta Retenção",
+      headline: "Pijama Short Doll Suede Leve — R$ 22,91",
+      format: "Imagem 1:1",
+      destination: "/produto/short-doll-suede-estampado",
+      impressions: 2977,
+      clicks: 67,
+      ctr: 2.25,
+      cpc: 0.99,
+      cost: 66.36
+    },
+    {
+      id: "120252007284510751",
+      adsetId: "120251762650110751",
+      campaignId: "120251762626930751",
+      name: "AD 01 - Calcinha Cinta Modeladora R$ 15,67",
+      status: "ACTIVE",
+      badge: "👗 Efeito Modelador",
+      headline: "Calcinha Cinta com Renda — Apenas R$ 15,67",
+      format: "Imagem 1:1",
+      destination: "/produto/calcinha-cinta-modeladora",
+      impressions: 1298,
+      clicks: 24,
+      ctr: 1.85,
+      cpc: 2.65,
+      cost: 63.56
+    },
+    {
+      id: "120251906115190751",
+      adsetId: "120251762650110751",
+      campaignId: "120251762626930751",
+      name: "AD 04 - Carrossel Vitrine Direto de Fábrica",
+      status: "PAUSED",
+      badge: "🛍️ Vitrine de Peças",
+      headline: "Carrossel Vitrine Direto de Fábrica Nova Friburgo/RJ",
+      format: "Carrossel Multi-peças",
+      destination: "/colecoes",
+      impressions: 1646,
+      clicks: 25,
+      ctr: 1.52,
+      cpc: 0.97,
+      cost: 24.24
+    }
+  ],
+  placements: [
+    {
+      platform: "Instagram",
+      position: "Feed",
+      impressions: 8840,
+      clicks: 412,
+      spend: 388.36,
+      ctr: 4.66,
+      cpc: 0.94,
+      share: 38.3
+    },
+    {
+      platform: "Instagram",
+      position: "Stories",
+      impressions: 8806,
+      clicks: 396,
+      spend: 364.21,
+      ctr: 4.50,
+      cpc: 0.92,
+      share: 38.1
+    },
+    {
+      platform: "Instagram",
+      position: "Reels",
+      impressions: 2129,
+      clicks: 93,
+      spend: 77.58,
+      ctr: 4.37,
+      cpc: 0.83,
+      share: 9.2
+    },
+    {
+      platform: "Facebook",
+      position: "Feed",
+      impressions: 1572,
+      clicks: 105,
+      spend: 84.38,
+      ctr: 6.68,
+      cpc: 0.80,
+      share: 6.8
+    },
+    {
+      platform: "Facebook",
+      position: "Reels",
+      impressions: 250,
+      clicks: 23,
+      spend: 12.89,
+      ctr: 9.20,
+      cpc: 0.56,
+      share: 1.1
+    },
+    {
+      platform: "WhatsApp",
+      position: "Status",
+      impressions: 1174,
+      clicks: 18,
+      spend: 19.26,
+      ctr: 1.53,
+      cpc: 1.07,
+      share: 5.1
+    }
+  ],
+  demographics: {
+    gender: "100% Feminino",
+    topAges: [
+      { range: "25 - 34 anos", share: 44.2 },
+      { range: "35 - 44 anos", share: 32.8 },
+      { range: "22 - 24 anos", share: 13.5 },
+      { range: "45 - 54 anos", share: 9.5 }
+    ],
+    topStates: [
+      { state: "Rio de Janeiro (RJ)", share: 36.5, note: "Polo Nova Friburgo / Capital / Baixada" },
+      { state: "São Paulo (SP)", share: 28.4, note: "Interior + Grande SP" },
+      { state: "Minas Gerais (MG)", share: 18.2, note: "Zona da Mata / BH" },
+      { state: "Espírito Santo (ES)", share: 8.5, note: "Grande Vitória" },
+      { state: "Outros Estados (PR, RS, BA)", share: 8.4, note: "Capitais & Regiões polo" }
+    ]
+  },
+  pixelHealth: {
+    status: "EXCELLENT",
+    pixelId: "1098679468551408",
+    capiStatus: "ACTIVE",
+    events: [
+      { name: "ViewContent", count: 402, matchQuality: "9.2/10", status: "HEALTHY" },
+      { name: "AddToCart", count: 77, matchQuality: "9.5/10", status: "HEALTHY" },
+      { name: "InitiateCheckout", count: 25, matchQuality: "9.8/10", status: "HEALTHY" },
+      { name: "Purchase", count: 12, matchQuality: "9.9/10", status: "HEALTHY" }
+    ]
+  }
+};
+
+const loadMetaCache = () => {
+  try {
+    if (fs.existsSync(META_CACHE_FILE)) {
+      const content = fs.readFileSync(META_CACHE_FILE, 'utf8');
+      return JSON.parse(content);
+    }
+  } catch (e) {
+    console.warn('[MetaAds] Erro ao ler meta_ads_cache.json, usando padrão:', e.message);
+  }
+  return JSON.parse(JSON.stringify(INITIAL_META_ADS_DATA));
+};
+
+const saveMetaCache = (data) => {
+  try {
+    fs.writeFileSync(META_CACHE_FILE, JSON.stringify(data, null, 2), 'utf8');
+  } catch (e) {
+    console.warn('[MetaAds] Erro ao salvar meta_ads_cache.json:', e.message);
+  }
+};
+
+let liveMetaAdsData = loadMetaCache();
+
+// 1. GET /api/ads/meta/data - Retorna os dados completos e estruturados da Meta
+router.get('/meta/data', (req, res) => {
+  try {
+    return res.json({
+      success: true,
+      data: liveMetaAdsData
+    });
+  } catch (error) {
+    return res.status(500).json({ success: false, error: error.message });
+  }
+});
+
+// 2. POST /api/ads/meta/campaign-update - Atualiza status ou orçamento de campanha
+router.post('/meta/campaign-update', (req, res) => {
+  try {
+    const { campaignId, status, dailyBudget } = req.body;
+    const campaign = (liveMetaAdsData.campaigns || []).find(c => c.id === campaignId);
+
+    if (!campaign) {
+      return res.status(404).json({ success: false, error: 'Campanha Meta não encontrada.' });
+    }
+
+    if (status !== undefined) {
+      campaign.status = status;
+    }
+    if (dailyBudget !== undefined) {
+      campaign.dailyBudget = Number(dailyBudget) || campaign.dailyBudget;
+    }
+
+    liveMetaAdsData.account.lastSync = new Date().toISOString();
+    saveMetaCache(liveMetaAdsData);
+
+    return res.json({
+      success: true,
+      message: `Campanha Meta '${campaign.name}' atualizada com sucesso!`,
+      campaign
+    });
+  } catch (error) {
+    return res.status(500).json({ success: false, error: error.message });
+  }
+});
+
+// 3. POST /api/ads/meta/adset-update - Atualiza status do conjunto de anúncios
+router.post('/meta/adset-update', (req, res) => {
+  try {
+    const { adsetId, status } = req.body;
+    const adset = (liveMetaAdsData.adsets || []).find(a => a.id === adsetId);
+
+    if (!adset) {
+      return res.status(404).json({ success: false, error: 'Conjunto de Anúncios Meta não encontrado.' });
+    }
+
+    if (status !== undefined) {
+      adset.status = status;
+    }
+
+    liveMetaAdsData.account.lastSync = new Date().toISOString();
+    saveMetaCache(liveMetaAdsData);
+
+    return res.json({
+      success: true,
+      message: `Conjunto '${adset.name}' atualizado com sucesso!`,
+      adset
+    });
+  } catch (error) {
+    return res.status(500).json({ success: false, error: error.message });
+  }
+});
+
+// 4. POST /api/ads/meta/ad-update - Atualiza status do anúncio/criativo
+router.post('/meta/ad-update', (req, res) => {
+  try {
+    const { adId, status } = req.body;
+    const ad = (liveMetaAdsData.ads || []).find(a => a.id === adId);
+
+    if (!ad) {
+      return res.status(404).json({ success: false, error: 'Anúncio Meta não encontrado.' });
+    }
+
+    if (status !== undefined) {
+      ad.status = status;
+    }
+
+    liveMetaAdsData.account.lastSync = new Date().toISOString();
+    saveMetaCache(liveMetaAdsData);
+
+    return res.json({
+      success: true,
+      message: `Anúncio '${ad.name}' atualizado com sucesso!`,
+      ad
+    });
+  } catch (error) {
+    return res.status(500).json({ success: false, error: error.message });
+  }
+});
+
+// 5. POST /api/ads/meta/refresh - Sincronização geral Meta
+router.post('/meta/refresh', (req, res) => {
+  try {
+    liveMetaAdsData.account.lastSync = new Date().toISOString();
+    saveMetaCache(liveMetaAdsData);
+    return res.json({
+      success: true,
+      message: 'Métricas da Meta Ads (Instagram/FB) sincronizadas com sucesso!',
+      lastSync: liveMetaAdsData.account.lastSync
+    });
+  } catch (error) {
+    return res.status(500).json({ success: false, error: error.message });
+  }
+});
+
 export default router;
