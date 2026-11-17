@@ -2703,3 +2703,32 @@ Garantir que as dimensﾃｵes e pesos cadastrados na loja e calculados no check
      - 'npm run test:shield': 17/17 verificações aprovadas.
      - ESLint: 0 erros.
      - Vite production build: 3122 módulos compilados com sucesso em 38.53s.
+
+### 17. Mini-Pesquisa de Abandono da Lia, Destaque dos Mimos VIP & Painel Executivo Meta Ads
+- **Data:** 17 de Novembro de 2026 (Manhã)
+- **Contexto:** Execução do Passo 1 (Resgate cirúrgico com mini-pesquisa de 4 dígitos via WhatsApp e auto-save de lead no checkout), investigação do comportamento de abandono no caso Talita Tomio (falta de mouse no mobile e oportunidade de convite no checkout), visibilidade de presentes no painel e construção completa do Painel Executivo Meta Ads no `/admin/analytics`.
+- **Ações Executadas (Primeira Regra de Ouro):**
+  1. *Mini-Pesquisa Interativa da Lia (recoveryService.js & lia.js):*
+     - Disparo de abandono reformulado com 4 opções numéricas diretas (`1️⃣ Frete alto/prazo longo`, `2️⃣ Dúvida/dificuldade no PIX ou Cartão`, `3️⃣ Dúvida de tamanho/caimento`, `4️⃣ Só dando uma olhadinha/comprar depois`).
+     - Webhook do WhatsApp da Lia capacitado para interpretar respostas de dígito único ("1", "2", "3", "4"), registrar o motivo nas `observacoes` do pedido no PocketBase e devolver contra-proposta personalizada de conversão imediata.
+     - Auto-save silencioso em `leads_abandono` acionado no `onBlur` do WhatsApp e E-mail no `Checkout.jsx`.
+  2. *Resolução do Abandono de Presentes no Mobile & Checkout (CartPage.jsx & CheckoutOrderSummary.jsx):*
+     - Diagnóstico: Telas touch não disparam `mouseleave`. Redução do timer de inatividade de 22s para 7s no mobile.
+     - Inclusão de convite dourado oficial de resgate de presente dentro do `CheckoutOrderSummary.jsx` para visitantes que avançam direto para o checkout sem ter escolhido o presente na sacola.
+  3. *Visibilidade de Mimos e Combo no Painel Admin (PedidosTable.jsx, PedidoResumo.jsx & PedidoItens.jsx):*
+     - Badges `💎 COMBO VIP (+R$ 9,90)` e `🎁 PRESENTE VIP` na tabela de pedidos e no resumo financeiro.
+     - Identificação visual colorida de cada aplicativo na listagem de itens do pedido.
+  4. *Painel Executivo Meta Ads & Instagram (apps/web/src/components/admin/MetaAdsTab.jsx & apps/api/src/routes/ads.js):*
+     - Conexão e integração com a conta real Meta Ads da Avante Lingerie (`act_841441889539975`).
+     - Header executivo com 6 KPIs consolidados (Investimento R$ 957,49, Alcance 16.896, Impressões 23.093, Cliques 689, CTR 4,57%, CPC R$ 0,91, Funil com 77 Add to Cart e 25 Checkouts Iniciados).
+     - Sub-abas especializadas:
+       - *Campanhas & Orçamentos:* B2B Atacado (Lia WhatsApp) e B2C Varejo (CBO Escala + Remarketing) com controles de status e edição de orçamento diário com modal seguro.
+       - *Criativos Campeões:* Vitrine dos 6 anúncios reais com destaque para o AD B2B 01 (CTR de 8,22%!) e controles de ativação/pausa.
+       - *Posicionamentos:* Distribuição e comparativo de CPC entre Instagram (Feed, Stories, Reels), Facebook (Feed, Reels) e WhatsApp (Status).
+       - *Públicos & Demografia:* 100% Feminino, faixa 22-54 anos, estados polo (RJ, SP, MG, ES, PR, RS, BA) e segmentações Advantage+.
+       - *Pixel & CAPI Server:* Diagnóstico de saúde dos eventos com qualidade de correspondência (9.2 a 9.9/10).
+     - Aba "Meta Ads (Instagram/FB)" incorporada no `/admin/analytics` (`AnalyticsPage.jsx`).
+  5. *Validações de Qualidade & Blindagem:*
+     - `npm run test:shield`: 17/17 verificações aprovadas.
+     - ESLint: 0 erros no frontend e backend.
+     - Vite production build: 3123 módulos compilados com sucesso em 39.52s.
