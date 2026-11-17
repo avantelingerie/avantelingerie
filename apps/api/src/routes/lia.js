@@ -545,6 +545,92 @@ router.post('/whatsapp-webhook', async (req, res) => {
 
     historico.push({ role: 'user', content: mensagem, timestamp: nowIso });
 
+    // === MINI-PESQUISA INTERATIVA DE ABANDONO (RESPOSTAS NUMÉRICAS 1, 2, 3 OU 4) ===
+    const cleanMsg = (mensagem || '').trim().toLowerCase();
+    const lastAssistantMsg = [...historico.slice(0, -1)].reverse().find(m => m.role === 'assistant');
+    const isSurveyContext = lastAssistantMsg && (
+      lastAssistantMsg.content.includes('1️⃣') ||
+      lastAssistantMsg.content.includes('responda apenas com o número') ||
+      lastAssistantMsg.content.includes('o que houve?')
+    );
+
+    let surveyChoice = null;
+    let surveyLabel = '';
+
+    if (isSurveyContext) {
+      if (cleanMsg === '1' || cleanMsg.startsWith('1 ') || cleanMsg === '1.' || cleanMsg.includes('opcao 1') || cleanMsg.includes('opção 1') || cleanMsg.includes('frete')) {
+        surveyChoice = '1';
+        surveyLabel = 'Frete alto ou prazo longo';
+      } else if (cleanMsg === '2' || cleanMsg.startsWith('2 ') || cleanMsg === '2.' || cleanMsg.includes('opcao 2') || cleanMsg.includes('opção 2') || cleanMsg.includes('cartao') || cleanMsg.includes('cartão') || cleanMsg.includes('pix') || cleanMsg.includes('pagamento')) {
+        surveyChoice = '2';
+        surveyLabel = 'Dificuldade/dúvida no pagamento';
+      } else if (cleanMsg === '3' || cleanMsg.startsWith('3 ') || cleanMsg === '3.' || cleanMsg.includes('opcao 3') || cleanMsg.includes('opção 3') || cleanMsg.includes('tamanho') || cleanMsg.includes('medida') || cleanMsg.includes('cor') || cleanMsg.includes('caimento')) {
+        surveyChoice = '3';
+        surveyLabel = 'Dúvida sobre tamanho, cor ou caimento';
+      } else if (cleanMsg === '4' || cleanMsg.startsWith('4 ') || cleanMsg === '4.' || cleanMsg.includes('opcao 4') || cleanMsg.includes('opção 4') || cleanMsg.includes('depois') || cleanMsg.includes('olhando') || cleanMsg.includes('olhadinha') || cleanMsg.includes('pesquisando')) {
+        surveyChoice = '4';
+        surveyLabel = 'Pesquisando / Comprar mais tarde';
+      }
+    }
+
+    if (surveyChoice) {
+      logger.info(`[Lia Pesquisa Abandono] Cliente ${telefone} respondeu Opção ${surveyChoice} (${surveyLabel})`);
+      const firstName = (nome_cliente || conversa.cliente_nome || 'Amor').split(' ')[0];
+
+      // Busca pedido pendente recente para registrar o motivo e obter link de pagamento
+      let pedidoRecente = null;
+      try {
+        const cleanPhoneDigits = telefone.replace(/\D/g, '');
+        const shortPhone = cleanPhoneDigits.startsWith('55') ? cleanPhoneDigits.slice(2) : cleanPhoneDigits;
+        const peds = await pb.collection('pedidos').getList(1, 1, {
+          filter: `status = 'pendente' && (cliente_telefone ~ '${shortPhone}' || cliente_telefone ~ '${cleanPhoneDigits}')`,
+          sort: '-created',
+          $autoCancel: false
+        });
+        if (peds.items.length > 0) {
+          pedidoRecente = peds.items[0];
+          const obsAtual = pedidoRecente.observacoes || '';
+          await pb.collection('pedidos').update(pedidoRecente.id, {
+            observacoes: obsAtual + `\n[PESQUISA LIA] Resposta da cliente: Opção ${surveyChoice} (${surveyLabel}) em ${new Date().toLocaleString('pt-BR')}`
+          }, { $autoCancel: false });
+        }
+      } catch (errPed) {
+        logger.warn(`[Lia Pesquisa] Aviso ao vincular resposta ao pedido: ${errPed.message}`);
+      }
+
+      const checkoutUrl = pedidoRecente
+        ? `https://avantelingerie.com.br/checkout?order_id=${pedidoRecente.id}`
+        : 'https://avantelingerie.com.br/carrinho';
+
+      let respostaPesquisa = '';
+      if (surveyChoice === '1') {
+        respostaPesquisa = `Entendi perfeitamente, ${firstName}! Frete é coisa séria e nós queremos muito você usando nossas lingeries direto da fábrica. 📦✨\n\nComo você nos deu esse retorno, conversei com o nosso gestor e consigo liberar uma condição especial para abater parte do frete hoje! Você gostaria de concluir seu pedido com esse desconto exclusivo no envio?`;
+      } else if (surveyChoice === '2') {
+        respostaPesquisa = `Poxa, que bom que me avisou, ${firstName}! Às vezes o gateway de pagamento dá alguma trava no cartão ou conexão. 💳\n\nMas fique tranquila: consigo te gerar uma chave PIX direta (com mais 5% de desconto à vista) ou te enviar um link alternativo sem burocracia. Qual você prefere?`;
+      } else if (surveyChoice === '3') {
+        respostaPesquisa = `Ah, que bom saber, ${firstName}! Nossas peças são confecção própria em Nova Friburgo com elastano premium e modelagem que veste perfeitamente. 👙✨\n\nQual modelo você ficou em dúvida sobre o tamanho (P, M, G ou GG) ou caimento? Me conta que te oriento agora mesmo!`;
+      } else {
+        respostaPesquisa = `Sem problemas, ${firstName}! Compreendo perfeitamente. 🥰\n\nPara você não correr o risco de ficar sem o seu tamanho ou cor na mesa de corte, deixei suas peças reservadas no nosso sistema por 24 horas!\n\nQuando quiser concluir, o seu link direto e seguro é este:\n👉 ${checkoutUrl}\n\nSe precisar de qualquer coisa, estou por aqui!`;
+      }
+
+      historico.push({
+        role: 'assistant',
+        content: respostaPesquisa,
+        timestamp: new Date().toISOString(),
+        survey_option: surveyChoice,
+        survey_label: surveyLabel
+      });
+
+      await pb.collection('lia_conversas').update(conversa.id, {
+        mensagens: historico
+      });
+
+      return res.json({
+        sucesso: true,
+        resposta: respostaPesquisa
+      });
+    }
+
     // 2. Monta o contexto dinâmico sincronizado com o Admin da loja
     const knowledgeContext = await getLiaKnowledge();
     const catalogContext = await getLiaProducts();

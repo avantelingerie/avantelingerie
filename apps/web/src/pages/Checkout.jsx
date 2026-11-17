@@ -249,6 +249,27 @@ export default function Checkout() {
     }
   };
 
+  const hasAutoSavedLeadRef = React.useRef(false);
+
+  const handleAutoSaveLead = async () => {
+    const cleanPhone = (personalInfo.whatsapp || '').replace(/\D/g, '');
+    if (cleanPhone.length < 10 || cart.length === 0 || hasAutoSavedLeadRef.current) return;
+
+    try {
+      await pb.collection('leads_abandono').create({
+        nome: personalInfo.nome || 'Visitante Checkout',
+        email: personalInfo.email || '',
+        whatsapp: personalInfo.whatsapp,
+        valor_carrinho: finalTotal || subtotal,
+        itens_carrinho: cart
+      }, { $autoCancel: false });
+      hasAutoSavedLeadRef.current = true;
+      console.log('[Checkout] Lead de abandono prévio registrado silenciosamente.');
+    } catch (e) {
+      // Silencioso para não afetar a experiência do usuário
+    }
+  };
+
   const handleFinalizeOrder = async () => {
     const orderId = await finalizeOrder();
     if (orderId) {
@@ -450,6 +471,7 @@ export default function Checkout() {
                         placeholder="exemplo@email.com"
                         value={personalInfo.email}
                         onChange={(e) => handlePersonalInfoChange('email', e.target.value)}
+                        onBlur={handleAutoSaveLead}
                         className="bg-gray-50 border border-gray-100 rounded-2xl p-4 text-sm focus:outline-none focus:ring-2 focus:ring-[#c59b5f]/30 transition-all text-gray-900"
                       />
                     </div>
@@ -463,6 +485,7 @@ export default function Checkout() {
                         placeholder="(00) 00000-0000"
                         value={personalInfo.whatsapp}
                         onChange={(e) => handlePersonalInfoChange('whatsapp', e.target.value)}
+                        onBlur={handleAutoSaveLead}
                         className="bg-gray-50 border border-gray-100 rounded-2xl p-4 text-sm focus:outline-none focus:ring-2 focus:ring-[#c59b5f]/30 transition-all text-gray-900"
                       />
                     </div>
