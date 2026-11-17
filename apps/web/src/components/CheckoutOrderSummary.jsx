@@ -1,5 +1,5 @@
 import React from 'react';
-import { ShoppingBag, Tag, ShieldCheck, Trash2, Play, Gift } from 'lucide-react';
+import { ShoppingBag, Tag, ShieldCheck, Trash2, Play, Gift, Sparkles } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card.jsx';
 import { isExternalVideo, getYoutubeThumbnail, isDirectVideo } from '@/lib/utils.js';
 import { MIMO_APPS } from '@/components/MimoRetentionModal.jsx';
@@ -39,7 +39,7 @@ export default function CheckoutOrderSummary({
 
       <CardContent className="p-5 flex flex-col gap-6">
         {/* VIP Gift Status in Checkout */}
-        {chosenGift && (
+        {chosenGift ? (
           <div className="bg-[#FFFDF9] border border-[#D4AF37]/35 rounded-2xl p-4 shadow-xs text-gray-900">
             <div className="flex items-center justify-between pb-2.5 mb-2.5 border-b border-[#D4AF37]/20">
               <div className="flex items-center gap-2">
@@ -99,7 +99,31 @@ export default function CheckoutOrderSummary({
               </div>
             )}
           </div>
-        )}
+        ) : onOpenGiftModal ? (
+          <div 
+            onClick={onOpenGiftModal}
+            className="bg-[#FFFDF9] border border-[#D4AF37]/35 rounded-2xl p-3.5 shadow-xs flex items-center justify-between gap-3 cursor-pointer hover:border-[#D4AF37] transition-all group"
+          >
+            <div className="flex items-center gap-3">
+              <div className="w-11 h-11 rounded-xl overflow-hidden shrink-0 border border-[#D4AF37]/30 bg-white shadow-2xs flex items-center justify-center p-1">
+                <img 
+                  src="/assets/mimos/caixa-presente-transparente.png" 
+                  alt="Presente VIP" 
+                  className="w-full h-full object-contain" 
+                />
+              </div>
+              <div className="flex flex-col text-left">
+                <span className="text-xs font-bold text-[#8B7355] flex items-center gap-1">
+                  Presente VIP Disponível! <Sparkles className="w-3 h-3 text-[#D4AF37]" />
+                </span>
+                <span className="text-[11px] text-gray-600">Você tem direito a 1 App Oficial Grátis no seu pedido</span>
+              </div>
+            </div>
+            <span className="text-xs font-extrabold text-[#996515] shrink-0 group-hover:translate-x-0.5 transition-transform">
+              Escolher &rarr;
+            </span>
+          </div>
+        ) : null}
 
         {/* Item List */}
         <div className="flex flex-col gap-4 max-h-[300px] overflow-y-auto pr-2 scrollbar-thin scrollbar-thumb-primary/20">

@@ -440,7 +440,7 @@ export default function CartPage() {
         setShowGiftModal(true);
         sessionStorage.setItem('avante_mimo_popup_dismissed', 'true');
       }
-    }, 22000);
+    }, 7000);
 
     return () => {
       document.removeEventListener('mouseleave', handleMouseLeave);

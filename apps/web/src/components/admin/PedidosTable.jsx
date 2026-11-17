@@ -79,7 +79,16 @@ export default function PedidosTable({ pedidos, isLoading }) {
         <TableBody>
           {pedidos.map((pedido) => (
             <TableRow key={pedido.id} className="cursor-pointer hover:bg-muted/50" onClick={() => navigate(`/admin/pedidos/${pedido.id}`)}>
-              <TableCell className="font-medium">{pedido.numero_pedido}</TableCell>
+              <TableCell className="font-medium">
+                <div className="flex items-center gap-1.5">
+                  {pedido.observacoes?.includes('Combo 3 Apps VIP') ? (
+                    <span title="Comprou o Combo 3 Apps VIP">💎</span>
+                  ) : pedido.observacoes?.includes('[🎁 BRINDE VIP:') ? (
+                    <span title="Resgatou Presente VIP Grátis">🎁</span>
+                  ) : null}
+                  <span>{pedido.numero_pedido}</span>
+                </div>
+              </TableCell>
               <TableCell>{pedido.cliente_nome || 'N/A'}</TableCell>
               <TableCell>{new Date(pedido.created).toLocaleDateString('pt-BR')}</TableCell>
               <TableCell>
@@ -90,6 +99,15 @@ export default function PedidosTable({ pedidos, isLoading }) {
                   <Badge variant="outline" className={`border-0 whitespace-nowrap ${pedido.bling_pedido_id ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}`}>
                     {pedido.bling_pedido_id ? 'BLING: ENVIADO' : 'BLING: PENDENTE'}
                   </Badge>
+                  {pedido.observacoes?.includes('Combo 3 Apps VIP') ? (
+                    <Badge variant="outline" className="border-0 whitespace-nowrap bg-amber-100 text-amber-900 dark:bg-amber-950/40 dark:text-amber-300 font-bold border border-amber-300">
+                      💎 COMBO VIP (+R$ 9,90)
+                    </Badge>
+                  ) : pedido.observacoes?.includes('[🎁 BRINDE VIP:') ? (
+                    <Badge variant="outline" className="border-0 whitespace-nowrap bg-emerald-100 text-emerald-900 dark:bg-emerald-950/40 dark:text-emerald-300 font-bold border border-emerald-300">
+                      🎁 PRESENTE VIP
+                    </Badge>
+                  ) : null}
                   {(pedido.observacoes?.includes('ENCOMENDA') || (Array.isArray(pedido.itens) && pedido.itens.some(i => i.is_encomenda))) && (
                     <Badge variant="outline" className="border-0 whitespace-nowrap bg-amber-100 text-amber-900 font-bold border border-amber-300">
                       🧵 ENCOMENDA (5 DIAS)

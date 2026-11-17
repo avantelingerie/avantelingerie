@@ -47,7 +47,19 @@ export default function PedidoItens({ itens }) {
               parsedItens.map((item, idx) => (
                 <TableRow key={idx}>
                   <TableCell className="pl-6 font-medium">
-                    {item.nome || item.name || item.produto || 'Produto'}
+                    <div className="flex items-center gap-2 flex-wrap">
+                      <span>{item.nome || item.name || item.produto || 'Produto'}</span>
+                      {item.is_combo_item && (
+                        <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-bold bg-amber-100 text-amber-800 dark:bg-amber-950/40 dark:text-amber-300 border border-amber-300 dark:border-amber-600/30">
+                          💎 App VIP Combo
+                        </span>
+                      )}
+                      {(item.is_mimo || item.is_digital) && !item.is_combo_item && (
+                        <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 text-emerald-800 dark:bg-emerald-950/40 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-600/30">
+                          🎁 Brinde VIP Grátis
+                        </span>
+                      )}
+                    </div>
                     {(item.size || item.tamanho || item.color || item.cor) && (
                       <span className="block text-[10px] text-muted-foreground font-normal mt-0.5">
                         {item.size || item.tamanho ? `Tam: ${item.size || item.tamanho}` : ''}
