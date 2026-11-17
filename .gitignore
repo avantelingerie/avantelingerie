@@ -6,6 +6,8 @@ build/
 pb_data/
 apps/api/node_modules/
 apps/web/node_modules/
+apps/web/dist/
+.vite/
 *.mp4
 .wwebjs_auth/
 apps/whatsapp-bot/.wwebjs_auth/

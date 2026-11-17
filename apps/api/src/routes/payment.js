@@ -291,12 +291,9 @@ router.post('/create-order', async (req, res) => {
       logger.error(`[CreateOrder] Erro ao enviar notificação de pedido criado: ${err.message}`);
     });
 
-    // INTEGRAÇÃO BLING: Envio imediato do pedido de venda para o ERP Bling
-    blingService.sendPedidoToBling(createdOrder.id).then(resBling => {
-      logger.info(`[CreateOrder] Pedido ${numero_pedido} enviado com sucesso para o Bling:`, resBling);
-    }).catch(errBling => {
-      logger.error(`[CreateOrder] Erro ao sincronizar pedido ${numero_pedido} com o Bling: ${errBling.message}`);
-    });
+    // BLINDAGEM BLING: O pedido só é sincronizado com o ERP Bling após a confirmação do pagamento (status 'confirmado' ou 'pago').
+    // Pedidos pendentes NÃO são enviados ao Bling para evitar pedidos de venda abertos/abandonados sem pagamento.
+    logger.info(`[CreateOrder] Pedido ${numero_pedido} registrado como PENDENTE. O envio ao Bling aguardará a aprovação do pagamento.`);
 
     // NOVO: Atualizar/reduzir o estoque das variações (com bypass para encomendas)
     try {

@@ -700,6 +700,28 @@ export default function Checkout() {
                     O envio de comprovantes de pagamento não antecipa a liberação do pedido.
                   </div>
                 </div>
+              ) : paymentMethod === 'credit_card' ? (
+                <div className="bg-[#FFFBF8] border border-[#c59b5f]/30 rounded-2xl p-4.5 mt-6 flex items-start gap-3.5 text-xs text-gray-700 shadow-premium-sm transition-all duration-300">
+                  <div className="w-8 h-8 rounded-full bg-[#c59b5f]/15 border border-[#c59b5f]/30 flex items-center justify-center text-[#c59b5f] shrink-0 mt-0.5">
+                    <Lock className="w-4 h-4" />
+                  </div>
+                  <div className="flex-1 text-left">
+                    <div className="flex items-center justify-between gap-2 flex-wrap mb-1">
+                      <strong className="font-bold text-gray-950 text-sm">Ambiente Oficial Seguro Mercado Pago</strong>
+                      <span className="text-[10px] uppercase font-bold tracking-wider text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-200">
+                        Criptografia 256-bit SSL
+                      </span>
+                    </div>
+                    <p className="text-gray-500 font-light leading-relaxed">
+                      Ao clicar no botão abaixo, você será direcionada para a tela oficial de pagamento seguro do <strong>Mercado Pago</strong> para inserir os dados do seu cartão ou escolher suas parcelas com proteção total da sua compra.
+                    </p>
+                    <div className="flex items-center gap-2 mt-2.5 text-[11px] text-gray-400 font-medium">
+                      <span>Aceita:</span>
+                      <span className="text-gray-700 font-semibold">Visa, Mastercard, Elo, Hipercard, Amex</span>
+                      <span>• Em até {maxCardInstallments}x</span>
+                    </div>
+                  </div>
+                </div>
               ) : (
                 <div className="bg-[#FFFBF8] p-5 rounded-2xl text-center text-xs text-gray-400 border border-dashed border-[#c59b5f]/25 font-light mt-6 opacity-80">
                   Ambiente de pagamento 100% seguro pelo Mercado Pago. Aceitamos Cartões, PIX, Boleto (a partir de R$ 59,90) e Mercado Crédito (a partir de R$ 29,90).
@@ -748,7 +770,15 @@ export default function Checkout() {
                 ) : (
                   <Lock className="w-4 h-4 mr-2 text-[#c59b5f] group-hover:text-black transition-colors" />
                 )}
-                {isSubmitting ? 'PROCESSANDO PEDIDO...' : showWholesaleLock ? 'MÍNIMO DE ATACADO NÃO ATINGIDO' : 'CONCLUIR COMPRA'}
+                {isSubmitting
+                  ? 'PROCESSANDO PEDIDO...'
+                  : showWholesaleLock
+                  ? 'MÍNIMO DE ATACADO NÃO ATINGIDO'
+                  : paymentMethod === 'credit_card'
+                  ? 'PAGAR COM CARTÃO NO MERCADO PAGO 🔒'
+                  : paymentMethod === 'pix'
+                  ? 'PAGAR COM PIX (5% OFF) ⚡'
+                  : 'CONCLUIR COMPRA COM BOLETO'}
               </Button>
 
               <p className="text-[10px] text-gray-400 font-light text-center mt-3.5 px-4 leading-normal max-w-sm mx-auto">

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { ArrowLeft, Send, FileText, Copy, CheckCircle2, Truck, ExternalLink, MessageCircle, RotateCw, Loader2, Check, Sparkles, Printer, Search, Tag, Barcode } from 'lucide-react';
+import { ArrowLeft, Send, FileText, Copy, CheckCircle2, Truck, ExternalLink, MessageCircle, RotateCw, Loader2, Check, Sparkles, Printer, Search, Tag, Barcode, Clock, AlertTriangle } from 'lucide-react';
 import { Button } from '@/components/ui/button.jsx';
 import { Badge } from '@/components/ui/badge.jsx';
 import { Input } from '@/components/ui/input.jsx';
@@ -160,6 +160,12 @@ export default function PedidoDetalhePage() {
   };
 
   const handleGerarEtiquetaUnificada = async () => {
+    if (pedido?.status === 'pendente') {
+      const confirmPending = window.confirm(
+        `⚠️ ATENÇÃO: O pagamento do pedido ${pedido.numero_pedido || ''} ainda está PENDENTE no Mercado Pago!\n\nDeseja realmente gerar/contratar a etiqueta de envio no Melhor Envio antes da confirmação do pagamento?`
+      );
+      if (!confirmPending) return;
+    }
     setIsGeneratingLabel(true);
     try {
       const res = await pedidosService.gerarEtiquetaUnificada({
@@ -243,6 +249,9 @@ export default function PedidoDetalhePage() {
   if (!pedido) return null;
 
   const canSendToBling = pedido.status === 'pago' || pedido.status === 'em_separacao' || pedido.status === 'confirmado' || pedido.status === 'processando';
+  const isPaidOrConfirmed = pedido.status === 'pago' || pedido.status === 'confirmado' || pedido.status === 'em_separacao' || pedido.status === 'processando' || pedido.status === 'enviado' || pedido.status === 'entregue';
+  const isPendingPayment = pedido.status === 'pendente';
+  const isCancelled = pedido.status === 'cancelado';
 
   return (
     <div className="max-w-5xl mx-auto space-y-6 pb-12">
@@ -320,9 +329,17 @@ export default function PedidoDetalhePage() {
                   <Badge className="bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 border border-emerald-500/30 gap-1.5 px-3 py-1">
                     <CheckCircle2 className="w-3.5 h-3.5" /> Enviado à Transportadora
                   </Badge>
-                ) : (
+                ) : isCancelled ? (
+                  <Badge variant="outline" className="border-red-500/40 text-red-500 gap-1.5 px-3 py-1">
+                    <AlertTriangle className="w-3.5 h-3.5" /> Pedido Cancelado
+                  </Badge>
+                ) : isPaidOrConfirmed ? (
                   <Badge variant="outline" className="border-amber-500/40 text-amber-600 dark:text-amber-400 gap-1.5 px-3 py-1">
                     <Sparkles className="w-3.5 h-3.5" /> Pronto p/ Expedição
+                  </Badge>
+                ) : (
+                  <Badge variant="outline" className="border-amber-500/40 bg-amber-500/10 text-amber-600 dark:text-amber-400 gap-1.5 px-3 py-1">
+                    <Clock className="w-3.5 h-3.5" /> Aguardando Pagamento
                   </Badge>
                 )}
               </div>
@@ -345,10 +362,17 @@ export default function PedidoDetalhePage() {
                 </div>
               </div>
               <div className="text-right">
-                <span className="text-muted-foreground">Valor pago de frete: </span>
+                <span className="text-muted-foreground">
+                  {isPaidOrConfirmed ? 'Valor pago de frete: ' : 'Valor do frete cotado: '}
+                </span>
                 <strong className="text-foreground font-semibold">
                   {Number(pedido.valor_frete) > 0 ? `R$ ${Number(pedido.valor_frete).toFixed(2).replace('.', ',')}` : 'Frete Grátis'}
                 </strong>
+                {!isPaidOrConfirmed && (
+                  <span className="text-[10px] text-amber-500 dark:text-amber-400 block font-medium">
+                    (Aguardando Pagamento do Pedido)
+                  </span>
+                )}
               </div>
             </div>
 

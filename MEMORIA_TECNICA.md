@@ -2680,3 +2680,26 @@ Garantir que as dimensﾃｵes e pesos cadastrados na loja e calculados no check
      - Testes automatizados de blindagem: 17/17 verificações aprovadas com 100% de sucesso.
      - ESLint aprovado com 0 erros.
      - Vite production build aprovado com sucesso.
+
+### 16. Sincronização Inteligente Bling Pós-Pagamento & Transparência no Checkout
+- **Data:** 17 de Novembro de 2026 (Manhã)
+- **Contexto:** Investigação profunda do pedido PED-008 (Talita Tomio) que gerou pedido de venda 'Em aberto' no Bling mas não constava pago no Mercado Pago. O lojista notou ainda que o valor de frete aparecia como 'pago' no painel admin mesmo com status pendente.
+- **Ações Executadas (Primeira Regra de Ouro):**
+  1. *Desacoplamento do Bling na Criação do Pedido (payment.js & webhooks.js):*
+     - Removido o disparo imediato para o Bling em pedidos 'pendentes' no momento da criação do checkout.
+     - O pedido só é transmitido ao Bling ERP quando o pagamento é efetivamente APROVADO via webhook do Mercado Pago / Stripe ('payment.status === approved') ou quando o administrador reenviar manualmente no painel.
+     - Adicionado método 'sincronizarPedido' em blingService.js como alias resiliente de 'sendPedidoToBling'.
+  2. *Refinamento Visual no Painel Admin (PedidoDetalhePage.jsx):*
+     - Substituição da insígnia 'Pronto p/ Expedição' por 'Aguardando Pagamento' para pedidos com status pendente.
+     - Diferenciação do frete: 'Valor do frete cotado: R$ X,XX (Aguardando Pagamento do Pedido)' quando pendente, e 'Valor pago de frete: R$ X,XX' somente quando pago/confirmado.
+     - Trava de confirmação no botão 'Gerar no Melhor Envio' para impedir contratação inadvertida de frete em pedidos pendentes.
+  3. *Transparência e Alta Conversão no Checkout (Checkout.jsx):*
+     - Adicionado card oficial de segurança: 'Ambiente Oficial Seguro Mercado Pago • Criptografia 256-bit SSL' ao selecionar Cartão de Crédito.
+     - Botão contextual: 'PAGAR COM CARTÃO NO MERCADO PAGO 🔒' e 'PAGAR COM PIX (5% OFF) ⚡', eliminando surpresas ou quebras de confiança no redirecionamento.
+  4. *Limpeza e Otimização do Ambiente Windows:*
+     - Removida pasta 'dist' acumulada (357 MB liberados).
+     - Criado script 1-clique 'limpar_e_fechar.bat' para encerrar processos órfãos e limpar locks sem necessidade de Gerenciador de Tarefas.
+  5. *Validações de Qualidade:*
+     - 'npm run test:shield': 17/17 verificações aprovadas.
+     - ESLint: 0 erros.
+     - Vite production build: 3122 módulos compilados com sucesso em 38.53s.

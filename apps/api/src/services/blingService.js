@@ -178,6 +178,10 @@ export const blingService = {
     return this.processarEnvioPedidoBling(pedidoId);
   },
 
+  async sincronizarPedido(pedidoOrId) {
+    return this.sendPedidoToBling(pedidoOrId);
+  },
+
   async processarEnvioPedidoBling(pedidoId) {
     try {
       const pedido = await pb.collection('pedidos').getOne(pedidoId, { $autoCancel: false });
