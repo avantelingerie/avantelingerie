@@ -1337,6 +1337,49 @@ const INITIAL_META_ADS_DATA = {
       { state: "Outros Estados (PR, RS, BA)", share: 8.4, note: "Capitais & Regiões polo" }
     ]
   },
+  ageDemographics: [
+    { range: "18-24 anos", status: "ENABLED", bidModifier: 0, impressions: 120, clicks: 8, ctr: 6.67, avgCpc: 0.65, cost: 5.20 },
+    { range: "25-34 anos", status: "ENABLED", bidModifier: 15, impressions: 10200, clicks: 305, ctr: 4.88, avgCpc: 0.88, cost: 423.21 },
+    { range: "35-44 anos", status: "ENABLED", bidModifier: 10, impressions: 7580, clicks: 226, ctr: 4.60, avgCpc: 0.92, cost: 314.05 },
+    { range: "45-54 anos", status: "ENABLED", bidModifier: 0, impressions: 4800, clicks: 142, ctr: 4.25, avgCpc: 0.98, cost: 198.83 },
+    { range: "55-64 anos", status: "EXCLUDED", bidModifier: -100, impressions: 250, clicks: 5, ctr: 2.00, avgCpc: 1.40, cost: 7.00 },
+    { range: "65+ anos", status: "EXCLUDED", bidModifier: -100, impressions: 143, clicks: 3, ctr: 2.10, avgCpc: 3.07, cost: 9.20 }
+  ],
+  genderDemographics: [
+    { gender: "Feminino", status: "ENABLED", bidModifier: 20, clicks: 681, cost: 947.29 },
+    { gender: "Não Determinado", status: "ENABLED", bidModifier: 0, clicks: 8, cost: 10.20 },
+    { gender: "Masculino", status: "EXCLUDED", bidModifier: -100, clicks: 0, cost: 0.00 }
+  ],
+  incomeDemographics: [
+    { tier: "Top 10% (Mais Ricos)", status: "ENABLED", bidModifier: 10, clicks: 45, cost: 78.40 },
+    { tier: "11% a 20%", status: "ENABLED", bidModifier: 10, clicks: 88, cost: 112.50 },
+    { tier: "21% a 30%", status: "ENABLED", bidModifier: 5, clicks: 142, cost: 185.20 },
+    { tier: "31% a 40%", status: "ENABLED", bidModifier: 0, clicks: 195, cost: 245.80 },
+    { tier: "41% a 50%", status: "ENABLED", bidModifier: 0, clicks: 110, cost: 160.40 },
+    { tier: "50% Menores (Base)", status: "ENABLED", bidModifier: 0, clicks: 109, cost: 175.19 }
+  ],
+  locations: [
+    { name: "Rio de Janeiro (Estado / Fábrica Polo)", type: "Estado", impressions: 8430, clicks: 251, ctr: 4.70, avgCpc: 0.90, cost: 349.50, status: "ENABLED", bidModifier: 15 },
+    { name: "São Paulo (Estado)", type: "Estado", impressions: 6560, clicks: 196, ctr: 4.55, avgCpc: 0.92, cost: 271.90, status: "ENABLED", bidModifier: 10 },
+    { name: "Minas Gerais (Estado)", type: "Estado", impressions: 4200, clicks: 125, ctr: 4.45, avgCpc: 0.88, cost: 174.20, status: "ENABLED", bidModifier: 5 },
+    { name: "Espírito Santo (Estado)", type: "Estado", impressions: 1960, clicks: 59, ctr: 4.60, avgCpc: 0.85, cost: 81.40, status: "ENABLED", bidModifier: 0 },
+    { name: "Curitiba / Paraná", type: "Cidade", impressions: 650, clicks: 21, ctr: 4.80, avgCpc: 0.95, cost: 26.50, status: "ENABLED", bidModifier: 0 },
+    { name: "Porto Alegre / RS", type: "Cidade", impressions: 450, clicks: 14, ctr: 4.50, avgCpc: 0.98, cost: 18.20, status: "ENABLED", bidModifier: 0 },
+    { name: "Fortaleza / Ceará", type: "Cidade", impressions: 440, clicks: 12, ctr: 4.30, avgCpc: 1.05, cost: 17.50, status: "ENABLED", bidModifier: 0 },
+    { name: "Recife / Pernambuco", type: "Cidade", impressions: 403, clicks: 11, ctr: 4.20, avgCpc: 1.08, cost: 18.29, status: "ENABLED", bidModifier: 0 }
+  ],
+  devices: [
+    { type: "MOBILE", name: "Smartphone (Celular Mobile)", impressions: 22843, clicks: 685, ctr: 4.60, avgCpc: 0.91, cost: 952.19, status: "ENABLED", bidModifier: 20 },
+    { type: "DESKTOP", name: "Computador (Desktop)", impressions: 250, clicks: 4, ctr: 1.60, avgCpc: 1.32, cost: 5.30, status: "ENABLED", bidModifier: -20 },
+    { type: "TABLET", name: "Tablet", impressions: 0, clicks: 0, ctr: 0, avgCpc: 0, cost: 0, status: "EXCLUDED", bidModifier: -100 }
+  ],
+  audiencesConfig: [
+    { id: "aud_meta_01", name: "Remarketing 7D (Visitantes do Site & Sacola Aberta)", size: "12.000", mode: "TARGETING", bidModifier: 25, status: "ENABLED" },
+    { id: "aud_meta_02", name: "Engajamento 45D (Interações no Perfil Instagram)", size: "34.000", mode: "TARGETING", bidModifier: 15, status: "ENABLED" },
+    { id: "aud_meta_03", name: "Comportamento: Shops Admins / Lojistas & Sacoleiras", size: "85.000", mode: "TARGETING", bidModifier: 10, status: "ENABLED" },
+    { id: "aud_meta_04", name: "Interesse: Lingerie, Atacado & Revenda Fábrica", size: "180.000", mode: "OBSERVATION", bidModifier: 0, status: "ENABLED" },
+    { id: "aud_meta_05", name: "Público Aberto IA Meta Advantage+ (Broad)", size: "1.200.000", mode: "TARGETING", bidModifier: 0, status: "ENABLED" }
+  ],
   pixelHealth: {
     status: "EXCELLENT",
     pixelId: "1098679468551408",
@@ -1468,7 +1511,134 @@ router.post('/meta/ad-update', (req, res) => {
   }
 });
 
-// 5. POST /api/ads/meta/refresh - Sincronização geral Meta
+// 5. POST /api/ads/meta/age-modifier - Atualiza lance e status por idade
+router.post('/meta/age-modifier', (req, res) => {
+  try {
+    const { range, status, bidModifier } = req.body;
+    let item = (liveMetaAdsData.ageDemographics || []).find(a => a.range === range);
+    if (!item) {
+      item = { range, status: status || 'ENABLED', bidModifier: Number(bidModifier) || 0 };
+      liveMetaAdsData.ageDemographics.push(item);
+    } else {
+      if (status !== undefined) item.status = status;
+      if (bidModifier !== undefined) item.bidModifier = Number(bidModifier);
+    }
+    saveMetaCache(liveMetaAdsData);
+    return res.json({ success: true, message: `Ajuste para faixa ${range} atualizado para ${item.bidModifier}%!`, item });
+  } catch (error) {
+    return res.status(500).json({ success: false, error: error.message });
+  }
+});
+
+// 6. POST /api/ads/meta/gender-modifier - Atualiza lance e status por gênero
+router.post('/meta/gender-modifier', (req, res) => {
+  try {
+    const { gender, status, bidModifier } = req.body;
+    let item = (liveMetaAdsData.genderDemographics || []).find(g => g.gender === gender);
+    if (!item) {
+      item = { gender, status: status || 'ENABLED', bidModifier: Number(bidModifier) || 0 };
+      liveMetaAdsData.genderDemographics.push(item);
+    } else {
+      if (status !== undefined) item.status = status;
+      if (bidModifier !== undefined) item.bidModifier = Number(bidModifier);
+    }
+    saveMetaCache(liveMetaAdsData);
+    return res.json({ success: true, message: `Ajuste para ${gender} atualizado!`, item });
+  } catch (error) {
+    return res.status(500).json({ success: false, error: error.message });
+  }
+});
+
+// 7. POST /api/ads/meta/income-modifier - Atualiza lance e status por renda
+router.post('/meta/income-modifier', (req, res) => {
+  try {
+    const { tier, status, bidModifier } = req.body;
+    let item = (liveMetaAdsData.incomeDemographics || []).find(i => i.tier === tier);
+    if (!item) {
+      item = { tier, status: status || 'ENABLED', bidModifier: Number(bidModifier) || 0 };
+      liveMetaAdsData.incomeDemographics.push(item);
+    } else {
+      if (status !== undefined) item.status = status;
+      if (bidModifier !== undefined) item.bidModifier = Number(bidModifier);
+    }
+    saveMetaCache(liveMetaAdsData);
+    return res.json({ success: true, message: `Ajuste para ${tier} atualizado!`, item });
+  } catch (error) {
+    return res.status(500).json({ success: false, error: error.message });
+  }
+});
+
+// 8. POST /api/ads/meta/location-modifier - Atualiza lance e status por local
+router.post('/meta/location-modifier', (req, res) => {
+  try {
+    const { name, status, bidModifier } = req.body;
+    let item = (liveMetaAdsData.locations || []).find(l => l.name === name);
+    if (!item) {
+      item = { name, type: 'Região', status: status || 'ENABLED', bidModifier: Number(bidModifier) || 0 };
+      liveMetaAdsData.locations.push(item);
+    } else {
+      if (status !== undefined) item.status = status;
+      if (bidModifier !== undefined) item.bidModifier = Number(bidModifier);
+    }
+    saveMetaCache(liveMetaAdsData);
+    return res.json({ success: true, message: `Ajuste para ${name} atualizado!`, item });
+  } catch (error) {
+    return res.status(500).json({ success: false, error: error.message });
+  }
+});
+
+// 9. POST /api/ads/meta/device-modifier - Atualiza lance por dispositivo
+router.post('/meta/device-modifier', (req, res) => {
+  try {
+    const { deviceType, bidModifier } = req.body;
+    let item = (liveMetaAdsData.devices || []).find(d => d.type === deviceType);
+    if (!item) {
+      item = { type: deviceType, status: bidModifier === -100 ? 'EXCLUDED' : 'ENABLED', bidModifier: Number(bidModifier) || 0 };
+      liveMetaAdsData.devices.push(item);
+    } else {
+      item.bidModifier = Number(bidModifier);
+      item.status = Number(bidModifier) === -100 ? 'EXCLUDED' : 'ENABLED';
+    }
+    saveMetaCache(liveMetaAdsData);
+    return res.json({ success: true, message: `Ajuste para ${deviceType} atualizado!`, item });
+  } catch (error) {
+    return res.status(500).json({ success: false, error: error.message });
+  }
+});
+
+// 10. POST /api/ads/meta/placement-modifier - Atualiza lance por posicionamento
+router.post('/meta/placement-modifier', (req, res) => {
+  try {
+    const { position, bidModifier, status } = req.body;
+    let item = (liveMetaAdsData.placements || []).find(p => p.position === position || `${p.platform} ${p.position}` === position);
+    if (item) {
+      if (bidModifier !== undefined) item.bidModifier = Number(bidModifier);
+      if (status !== undefined) item.status = status;
+    }
+    saveMetaCache(liveMetaAdsData);
+    return res.json({ success: true, message: `Posicionamento ${position} atualizado!`, item });
+  } catch (error) {
+    return res.status(500).json({ success: false, error: error.message });
+  }
+});
+
+// 11. POST /api/ads/meta/audience-modifier - Atualiza público-alvo
+router.post('/meta/audience-modifier', (req, res) => {
+  try {
+    const { id, mode, bidModifier } = req.body;
+    let item = (liveMetaAdsData.audiencesConfig || []).find(a => a.id === id);
+    if (item) {
+      if (mode !== undefined) item.mode = mode;
+      if (bidModifier !== undefined) item.bidModifier = Number(bidModifier);
+    }
+    saveMetaCache(liveMetaAdsData);
+    return res.json({ success: true, message: `Público atualizado com sucesso!`, item });
+  } catch (error) {
+    return res.status(500).json({ success: false, error: error.message });
+  }
+});
+
+// 12. POST /api/ads/meta/refresh - Sincronização geral Meta
 router.post('/meta/refresh', (req, res) => {
   try {
     liveMetaAdsData.account.lastSync = new Date().toISOString();
