@@ -24,7 +24,7 @@ const INITIAL_GOOGLE_ADS_DATA = {
       id: "24365539579",
       name: "[GOOGLE] B2B - Atacado | Fábrica Friburgo Mínimo R$ 69,90",
       channel: "SEARCH",
-      status: "ENABLED",
+      status: "PAUSED",
       networkSettings: {
         includeSearchPartners: true,
         targetContentNetwork: false
@@ -456,6 +456,9 @@ function saveCache(data) {
 }
 
 let liveAdsData = loadCache();
+try {
+  saveCache(liveAdsData);
+} catch (e) {}
 
 // 1. GET /api/ads/google/data - Consulta completa estruturada
 router.get('/google/data', (req, res) => {
@@ -1068,7 +1071,7 @@ const INITIAL_META_ADS_DATA = {
       name: "[META] B2B - Atacado | Captação Revendedoras Lia WhatsApp",
       status: "ACTIVE",
       objective: "OUTCOME_SALES",
-      dailyBudget: 15.00,
+      dailyBudget: 25.00,
       buyingType: "AUCTION",
       bidStrategy: "LOWEST_COST_WITHOUT_CAP",
       metrics: {
@@ -1088,7 +1091,7 @@ const INITIAL_META_ADS_DATA = {
       name: "[META] B2C - Varejo | CBO Escala + Remarketing Agressivo",
       status: "ACTIVE",
       objective: "OUTCOME_SALES",
-      dailyBudget: 35.00,
+      dailyBudget: 20.00,
       buyingType: "AUCTION",
       bidStrategy: "LOWEST_COST_WITHOUT_CAP",
       metrics: {
@@ -1215,7 +1218,7 @@ const INITIAL_META_ADS_DATA = {
       adsetId: "120251762650110751",
       campaignId: "120251762626930751",
       name: "AD 03 - Pijama Short Doll Suede R$ 22,91",
-      status: "ACTIVE",
+      status: "PAUSED",
       badge: "🌙 Alta Retenção",
       headline: "Pijama Short Doll Suede Leve — R$ 22,91",
       format: "Imagem 1:1",
@@ -1231,7 +1234,7 @@ const INITIAL_META_ADS_DATA = {
       adsetId: "120251762650110751",
       campaignId: "120251762626930751",
       name: "AD 01 - Calcinha Cinta Modeladora R$ 15,67",
-      status: "ACTIVE",
+      status: "PAUSED",
       badge: "👗 Efeito Modelador",
       headline: "Calcinha Cinta com Renda — Apenas R$ 15,67",
       format: "Imagem 1:1",
@@ -1414,6 +1417,9 @@ const saveMetaCache = (data) => {
 };
 
 let liveMetaAdsData = loadMetaCache();
+try {
+  saveMetaCache(liveMetaAdsData);
+} catch (e) {}
 
 // 1. GET /api/ads/meta/data - Retorna os dados completos e estruturados da Meta
 router.get('/meta/data', (req, res) => {
