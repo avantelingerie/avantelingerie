@@ -29,6 +29,7 @@ import RastreioPage from '@/pages/RastreioPage.jsx';
 import MedidasPage from '@/pages/MedidasPage.jsx';
 import MinhaContaPage from '@/pages/MinhaContaPage.jsx';
 import QueroRevenderPage from '@/pages/QueroRevenderPage.jsx';
+import ResetPasswordPage from '@/pages/ResetPasswordPage.jsx';
 import ProtectedRouteReseller from '@/components/ProtectedRouteReseller.jsx';
 import ResellerPortalPage from '@/pages/ResellerPortalPage.jsx';
 import useMarketingTracker from '@/hooks/useMarketingTracker.js';
@@ -260,7 +261,15 @@ const AppInterceptor = () => {
               <Route path="/produto" element={<ErrorBoundary><ProductPage /></ErrorBoundary>} />
               <Route path="/categoria/:categoryName" element={<ErrorBoundary><CategoryPage /></ErrorBoundary>} />
               <Route path="/login" element={<ErrorBoundary><LoginPage /></ErrorBoundary>} />
+              <Route path="/redefinir-senha" element={<ErrorBoundary><ResetPasswordPage /></ErrorBoundary>} />
+              <Route path="/redefinir-senha/:token" element={<ErrorBoundary><ResetPasswordPage /></ErrorBoundary>} />
+              <Route path="/reset-password" element={<ErrorBoundary><ResetPasswordPage /></ErrorBoundary>} />
+              <Route path="/reset-password/:token" element={<ErrorBoundary><ResetPasswordPage /></ErrorBoundary>} />
+              <Route path="/auth/confirm-password-reset/:token" element={<ErrorBoundary><ResetPasswordPage /></ErrorBoundary>} />
+              <Route path="/_" element={<ErrorBoundary><ResetPasswordPage /></ErrorBoundary>} />
+              <Route path="/_/*" element={<ErrorBoundary><ResetPasswordPage /></ErrorBoundary>} />
               <Route path="/checkout" element={<ErrorBoundary><Checkout /></ErrorBoundary>} />
+              <Route path="/order-confirmation" element={<ErrorBoundary><OrderConfirmation /></ErrorBoundary>} />
               <Route path="/order-confirmation/:orderId" element={<ErrorBoundary><OrderConfirmation /></ErrorBoundary>} />
               <Route path="/central-da-cliente" element={<ErrorBoundary><CentralDaClientePage /></ErrorBoundary>} />
               <Route path="/contato" element={<ErrorBoundary><ContactPage /></ErrorBoundary>} />

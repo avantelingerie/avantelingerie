@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams, useNavigate, Link } from 'react-router-dom';
+import { useParams, useNavigate, useSearchParams, Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import { toast } from 'sonner';
 import {
@@ -22,8 +22,11 @@ import {
   Gift,
   ExternalLink,
   Sparkles,
-  Flame
+  Flame,
+  Lock,
+  Zap
 } from 'lucide-react';
+import { Dialog, DialogContent } from '@/components/ui/dialog.jsx';
 import { Button } from '@/components/ui/button.jsx';
 import { Card, CardContent } from '@/components/ui/card.jsx';
 import { Separator } from '@/components/ui/separator.jsx';
@@ -33,10 +36,12 @@ import apiServerClient from '@/lib/apiServerClient.js';
 import ProductCard from '@/components/ProductCard.jsx';
 import { trackPurchase } from '@/lib/marketingPixels.js';
 import { MIMO_APPS } from '@/components/MimoRetentionModal.jsx';
+import OrderCelebrationOverlay from '@/components/OrderCelebrationOverlay.jsx';
 
 export default function OrderConfirmation() {
   const { orderId } = useParams();
   const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
   const [order, setOrder] = useState(null);
   const [suggestions, setSuggestions] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -44,6 +49,12 @@ export default function OrderConfirmation() {
   const [isActivatingCoupon, setIsActivatingCoupon] = useState(false);
   const [couponActivated, setCouponActivated] = useState(false);
   const [couponCopied, setCouponCopied] = useState(false);
+  const [pixCopied, setPixCopied] = useState(false);
+  const [boletoCopied, setBoletoCopied] = useState(false);
+  const [timeLeft, setTimeLeft] = useState(30 * 60); // 30 minutos em segundos
+  const [showGiftLockModal, setShowGiftLockModal] = useState(false);
+  const [isRegeneratingPix, setIsRegeneratingPix] = useState(false);
+  const [showCelebration, setShowCelebration] = useState(false);
 
   // Resolve VIP retention gift chosen during cart/checkout with complete fallbacks
   const resolvedGift = React.useMemo(() => {
@@ -87,6 +98,68 @@ export default function OrderConfirmation() {
 
     const fetchOrderAndSuggestions = async () => {
       try {
+        // MODO DEMO / PREVIEW: Permite ao lojista visualizar o pedido confirmado e a celebração instantaneamente
+        if (!orderId || orderId === 'preview' || orderId === 'demo' || orderId === 'teste') {
+          const previewOrder = {
+            id: 'demo-preview',
+            numero_pedido: 'PED-PREVIEW',
+            created: new Date().toISOString(),
+            status: 'confirmed',
+            isPaid: true,
+            rawStatus: 'confirmado',
+            paymentMethod: 'pix',
+            installments: 1,
+            subtotal: 157.79,
+            shippingCost: 0,
+            discount: 7.89,
+            discountLabel: 'PIX 5% OFF',
+            total: 149.90,
+            pix_qr_code_url: '/assets/demo-pix-qrcode.png',
+            pix_copia_cola: '00020126580014br.gov.bcb.pix0136avantelingerie-demo5204000053039865406149.905802BR5915AVANTE LINGERIE6013NOVA FRIBURGO62070503***6304ABCD',
+            estimatedDelivery: '3 a 5 dias úteis',
+            cliente_nome: 'Cliente VIP Avante',
+            cliente_telefone: '229981225010',
+            cliente_cpf: '000.000.000-00',
+            cliente_email: 'cliente@avantelingerie.com.br',
+            shippingAddress: {
+              rua: 'Avenida Alberto Braune',
+              numero: '100',
+              complemento: 'Loja de Fábrica',
+              bairro: 'Centro',
+              cidade: 'Nova Friburgo',
+              estado: 'RJ',
+              cep: '28610-000'
+            },
+            items: [
+              {
+                id: 'prod-demo-1',
+                name: 'Conjunto Lingerie Renda Sublime Alta Costura',
+                size: 'M',
+                color: 'Preto Nobre',
+                quantity: 1,
+                price: 149.90,
+                image: 'https://images.unsplash.com/photo-1701017718943-996aa586e955?w=800&q=80'
+              },
+              {
+                id: 'app-mimo-cintura-esculpida',
+                name: 'App VIP: Método Cintura Esculpida',
+                size: 'App VIP',
+                color: 'Acesso Digital',
+                quantity: 1,
+                price: 0,
+                is_mimo: true,
+                is_digital: true,
+                image: '/assets/mimos/capa-cintura-esculpida-3d.png'
+              }
+            ],
+            observacoes: '[🎁 BRINDE VIP: Método Cintura Esculpida]'
+          };
+          setOrder(previewOrder);
+          setShowCelebration(true);
+          setLoading(false);
+          return;
+        }
+
         let fetchedOrder;
         try {
           // Attempt 1: Fetch from 'pedidos' collection
@@ -107,6 +180,12 @@ export default function OrderConfirmation() {
           parsedAddress.cidade = rawOrder.cidade || '';
           parsedAddress.cep = rawOrder.cep || '';
           parsedAddress.estado = rawOrder.estado || '';
+
+          let localPix = null;
+          try {
+            const rawPix = sessionStorage.getItem(`avante_pix_${orderId}`);
+            if (rawPix) localPix = JSON.parse(rawPix);
+          } catch (e) {}
 
           // Map snake_case to the confirmation component expected attributes
           fetchedOrder = {
@@ -129,7 +208,14 @@ export default function OrderConfirmation() {
             cliente_cpf: rawOrder.cliente_cpf || rawOrder.cpf || '',
             cliente_email: rawOrder.cliente_email || '',
             cliente_id: rawOrder.cliente_id || '',
-            observacoes: rawOrder.observacoes || ''
+            observacoes: rawOrder.observacoes || '',
+            pix_copia_cola: rawOrder.pix_copia_cola || localPix?.qr_code || localPix?.pix_copia_cola || '',
+            pix_qr_code_base64: rawOrder.pix_qr_code_base64 || localPix?.qr_code_base64 || localPix?.pix_qr_code_base64 || '',
+            pix_expiracao: rawOrder.pix_expiracao || localPix?.date_of_expiration || localPix?.pix_expiracao || '',
+            boleto_barcode: rawOrder.boleto_barcode || '',
+            boleto_url: rawOrder.boleto_url || '',
+            isPaid: rawOrder.status === 'confirmado' || rawOrder.status === 'pago',
+            rawStatus: rawOrder.status || 'pendente'
           };
 
           // Avaliação de Primeira Compra para exibição do Cupom VIP da Lia
@@ -208,6 +294,169 @@ export default function OrderConfirmation() {
       trackPurchase(order.numero_pedido || order.id, order.total, order.items || [], order.paymentMethod);
     }
   }, [order, loading]);
+
+  // Celebração de "PARABÉNS!" com confetes ao confirmar o pagamento
+  useEffect(() => {
+    if (searchParams.get('celebrate') === '1' || searchParams.get('celebrate') === 'true') {
+      setShowCelebration(true);
+      return;
+    }
+    if (order?.isPaid) {
+      const orderKey = order.numero_pedido || order.id;
+      const alreadyCelebrated = sessionStorage.getItem(`avante_celebrated_${orderKey}`);
+      if (!alreadyCelebrated) {
+        setShowCelebration(true);
+        sessionStorage.setItem(`avante_celebrated_${orderKey}`, 'true');
+      }
+    }
+  }, [order?.isPaid, order?.id, order?.numero_pedido, searchParams]);
+
+  // Polling em tempo real e recuperação imediata para PIX / Boleto
+  useEffect(() => {
+    if (!orderId || orderId === 'preview' || orderId === 'demo' || orderId === 'teste' || !order || order.isPaid) return;
+
+    let isMounted = true;
+
+    const checkStatus = async () => {
+      try {
+        const res = await apiServerClient.fetch(`/payment/order-status/${orderId}`);
+        if (res.ok && isMounted) {
+          const data = await res.json();
+          if (data.isApproved) {
+            setOrder(prev => prev ? {
+              ...prev,
+              status: 'confirmed',
+              isPaid: true,
+              rawStatus: 'confirmado',
+            } : prev);
+            setShowCelebration(true);
+            toast.success('🎉 Pagamento aprovado com sucesso! Seu pedido já está sendo preparado pela fábrica.');
+            return;
+          }
+          if (data.pix_copia_cola || data.pix_qr_code_base64) {
+            setOrder(prev => prev ? {
+              ...prev,
+              pix_copia_cola: data.pix_copia_cola || prev.pix_copia_cola,
+              pix_qr_code_base64: data.pix_qr_code_base64 || prev.pix_qr_code_base64,
+              pix_expiracao: data.pix_expiracao || prev.pix_expiracao,
+            } : prev);
+          }
+        }
+      } catch (err) {
+        // silencioso
+      }
+    };
+
+    // Dispara checagem imediata
+    checkStatus();
+
+    // Se após 1.5s o QR Code ainda estiver ausente e o método for PIX, solicita diretamente ao backend
+    const fallbackTimer = setTimeout(async () => {
+      if (order.paymentMethod === 'pix' && !order.pix_copia_cola && isMounted) {
+        try {
+          const pixRes = await apiServerClient.fetch('/payment/pix-transparent', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ orderId }),
+          });
+          if (pixRes.ok && isMounted) {
+            const pixData = await pixRes.json();
+            if (pixData.qr_code || pixData.qr_code_base64) {
+              setOrder(prev => prev ? {
+                ...prev,
+                pix_copia_cola: pixData.qr_code || prev.pix_copia_cola,
+                pix_qr_code_base64: pixData.qr_code_base64 || prev.pix_qr_code_base64,
+                pix_expiracao: pixData.date_of_expiration || prev.pix_expiracao,
+              } : prev);
+              try {
+                sessionStorage.setItem(`avante_pix_${orderId}`, JSON.stringify(pixData));
+              } catch (e) {}
+            }
+          }
+        } catch (e) {
+          console.warn('[OrderConfirmation] Fallback de geração PIX:', e);
+        }
+      }
+    }, 1500);
+
+    const interval = setInterval(checkStatus, 3500);
+
+    return () => {
+      isMounted = false;
+      clearInterval(interval);
+      clearTimeout(fallbackTimer);
+    };
+  }, [orderId, order?.isPaid, order?.pix_copia_cola, order?.paymentMethod]);
+
+  // Contagem regressiva do PIX (30 minutos)
+  useEffect(() => {
+    if (!order || order.isPaid || order.paymentMethod !== 'pix') return;
+
+    const timer = setInterval(() => {
+      setTimeLeft(prev => (prev > 0 ? prev - 1 : 0));
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, [order?.isPaid, order?.paymentMethod]);
+
+  const handleCopyPix = () => {
+    if (!order?.pix_copia_cola) return;
+    navigator.clipboard.writeText(order.pix_copia_cola);
+    setPixCopied(true);
+    toast.success('Chave PIX Copia e Cola copiada com sucesso! Abra o app do seu banco para pagar.');
+    setTimeout(() => setPixCopied(false), 4000);
+  };
+
+  const handleRegeneratePix = async () => {
+    if (!orderId || orderId === 'preview' || orderId === 'demo' || orderId === 'teste') {
+      toast.success('QR Code Oficial atualizado com sucesso!');
+      return;
+    }
+    setIsRegeneratingPix(true);
+    try {
+      const pixRes = await apiServerClient.fetch('/payment/pix-transparent', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ orderId }),
+      });
+      if (pixRes.ok) {
+        const pixData = await pixRes.json();
+        if (pixData.qr_code || pixData.qr_code_base64) {
+          setOrder(prev => prev ? {
+            ...prev,
+            pix_copia_cola: pixData.qr_code || prev.pix_copia_cola,
+            pix_qr_code_base64: pixData.qr_code_base64 || prev.pix_qr_code_base64,
+            pix_expiracao: pixData.date_of_expiration || prev.pix_expiracao,
+          } : prev);
+          try {
+            sessionStorage.setItem(`avante_pix_${orderId}`, JSON.stringify(pixData));
+          } catch (e) {}
+          toast.success('Novo QR Code PIX carregado com sucesso!');
+        }
+      } else {
+        const err = await pixRes.json();
+        toast.error(err.error || 'Não foi possível gerar novo QR Code no momento.');
+      }
+    } catch (e) {
+      toast.error('Erro de conexão ao gerar o PIX.');
+    } finally {
+      setIsRegeneratingPix(false);
+    }
+  };
+
+  const handleCopyBoleto = () => {
+    if (!order?.boleto_barcode) return;
+    navigator.clipboard.writeText(order.boleto_barcode);
+    setBoletoCopied(true);
+    toast.success('Linha digitável do boleto copiada com sucesso!');
+    setTimeout(() => setBoletoCopied(false), 4000);
+  };
+
+  const formatCountdown = (seconds) => {
+    const m = Math.floor(seconds / 60);
+    const s = seconds % 60;
+    return `${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
+  };
 
   const formatPrice = (val) => new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(val);
 
@@ -314,65 +563,240 @@ export default function OrderConfirmation() {
 
         <div className="max-w-4xl mx-auto relative z-10 flex flex-col items-center text-center">
           <div className="w-20 h-20 bg-[#c59b5f]/10 rounded-full flex items-center justify-center mb-8 border border-[#c59b5f]/20 shadow-[0_0_30px_rgba(197,155,95,0.25)]">
-            <CheckCircle2 className="w-10 h-10 text-[#c59b5f]" strokeWidth={1.5} />
+            {order.paymentMethod === 'pix' && !order.isPaid ? (
+              <Sparkles className="w-10 h-10 text-[#c59b5f] animate-pulse" strokeWidth={1.5} />
+            ) : order.paymentMethod === 'boleto' && !order.isPaid ? (
+              <Clock className="w-10 h-10 text-[#c59b5f]" strokeWidth={1.5} />
+            ) : (
+              <CheckCircle2 className="w-10 h-10 text-[#c59b5f]" strokeWidth={1.5} />
+            )}
           </div>
 
           <h1 className="text-3xl md:text-4.5xl lg:text-5.5xl font-serif font-bold text-white mb-4 tracking-tight text-balance leading-tight">
-            Pedido confirmado com sucesso ✨
+            {order.paymentMethod === 'pix' && !order.isPaid
+              ? 'Aguardando Pagamento do PIX ⚡'
+              : order.paymentMethod === 'boleto' && !order.isPaid
+              ? 'Aguardando Pagamento do Boleto 📄'
+              : 'Pedido confirmado com sucesso ✨'}
           </h1>
           <p className="text-base md:text-lg text-white/70 max-w-2xl font-light text-balance leading-relaxed">
-            Seu pedido Avante já está sendo preparado com todo o nosso carinho e rigor de alta costura.
-            Enviamos os detalhes completos para o seu e-mail.
+            {order.paymentMethod === 'pix' && !order.isPaid
+              ? 'Seu pedido foi registrado na fábrica! Conclua o pagamento via PIX no seu banco para que a confecção e separação iniciem imediatamente.'
+              : order.paymentMethod === 'boleto' && !order.isPaid
+              ? 'Seu boleto bancário foi gerado com sucesso. Efetue o pagamento em qualquer banco ou aplicativo para liberação do pedido.'
+              : 'Seu pedido Avante já está sendo preparado com todo o nosso carinho e rigor de alta costura. Enviamos os detalhes completos para o seu e-mail.'}
           </p>
         </div>
       </div>
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 -mt-10 relative z-20 flex flex-col gap-8">
 
-        {/* STATUS STEPS TRACKER */}
-        <Card className="border border-[#c59b5f]/30 shadow-premium-sm rounded-3xl overflow-hidden bg-[#1A1A1A] transition-all hover:shadow-[0_12px_30px_rgba(197,155,95,0.15)]">
-          <CardContent className="p-8 md:p-10">
-            <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 relative">
-              <div className="hidden md:block absolute top-6 left-[10%] right-[10%] h-0.5 bg-gray-800 z-0">
-                <div className="h-full bg-[#c59b5f] w-[15%] transition-all duration-1000"></div>
+        {/* SLEEK MINIMAL HORIZONTAL TRACKER (APENAS APÓS O PAGAMENTO CONFIRMADO) */}
+        {order.isPaid && (
+          <div className="bg-white border border-[#c59b5f]/30 rounded-2xl p-4 sm:p-6 shadow-sm">
+            <div className="flex flex-wrap items-center justify-between gap-2 mb-4 pb-3 border-b border-gray-100">
+              <div className="flex items-center gap-2">
+                <Package className="w-4 h-4 text-[#c59b5f]" />
+                <span className="text-xs font-bold uppercase tracking-wider text-gray-900 font-serif">
+                  Acompanhamento da Produção & Entrega
+                </span>
+              </div>
+              <span className="text-[11px] font-bold text-emerald-800 bg-emerald-50 px-3 py-0.5 rounded-full border border-emerald-200 flex items-center gap-1.5">
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-ping" />
+                Pagamento Aprovado
+              </span>
+            </div>
+
+            {/* Linha Horizontal Elegante */}
+            <div className="relative flex items-center justify-between px-1 sm:px-6">
+              {/* Linha contínua de fundo */}
+              <div className="absolute top-4 left-6 right-6 h-0.5 bg-gray-200 z-0">
+                <div className="h-full bg-gradient-to-r from-[#deb881] to-[#c59b5f] w-1/4 transition-all duration-700" />
               </div>
 
-              {statusSteps.map((step, index) => {
+              {statusSteps.map((step) => {
                 const Icon = step.icon;
                 return (
-                  <div key={step.id} className="flex md:flex-col items-center gap-4 md:gap-3 relative z-10 w-full md:w-1/4">
-                    {index !== statusSteps.length - 1 && (
-                      <div className="md:hidden absolute left-6 top-12 bottom-[-2rem] w-0.5 bg-gray-800 z-0">
-                        {step.active && <div className="w-full bg-[#c59b5f] h-1/2"></div>}
-                      </div>
-                    )}
-
-                    <div className={`w-12 h-12 rounded-full flex items-center justify-center shrink-0 transition-all duration-500 ${step.active
-                        ? 'bg-gradient-to-br from-[#c59b5f] to-[#a37c46] border border-[#c59b5f]/30 text-black shadow-[0_0_15px_rgba(197,155,95,0.3)] ring-4 ring-[#c59b5f]/10'
-                        : 'bg-[#242424] text-gray-600 border border-gray-700'
-                      }`}>
-                      <Icon className="w-5 h-5" strokeWidth={1.5} />
+                  <div key={step.id} className="relative z-10 flex flex-col items-center text-center">
+                    <div className={`w-8 h-8 rounded-full flex items-center justify-center transition-all ${
+                      step.active
+                        ? 'bg-gradient-to-br from-[#deb881] to-[#c59b5f] text-black shadow-sm ring-4 ring-[#c59b5f]/20 font-bold'
+                        : 'bg-white border border-gray-300 text-gray-400'
+                    }`}>
+                      <Icon className="w-4 h-4" strokeWidth={step.active ? 2.5 : 1.5} />
                     </div>
-
-                    <div className="flex flex-col md:items-center md:text-center">
-                      <span className={`font-serif text-sm md:text-base ${step.active ? 'text-white font-bold' : 'text-gray-500 font-light'}`}>
-                        {step.label}
+                    <span className={`text-[10px] sm:text-xs mt-1.5 font-medium max-w-[68px] sm:max-w-none truncate sm:whitespace-normal ${step.active ? 'text-gray-900 font-bold' : 'text-gray-400'}`}>
+                      {step.label}
+                    </span>
+                    {step.date ? (
+                      <span className="text-[9px] text-[#c59b5f] font-mono mt-0.5">
+                        {new Intl.DateTimeFormat('pt-BR', { day: '2-digit', month: 'short' }).format(new Date(step.date))}
                       </span>
-                      {step.date && (
-                        <span className="text-[10px] uppercase font-bold tracking-wider text-[#c59b5f] mt-1">
-                          {new Intl.DateTimeFormat('pt-BR', { day: '2-digit', month: 'short', hour: '2-digit', minute: '2-digit' }).format(new Date(step.date))}
-                        </span>
-                      )}
-                      {step.id === 'separation' && step.active && (
-                        <span className="text-xs text-[#c59b5f] font-semibold mt-1 uppercase tracking-widest">Em andamento</span>
-                      )}
-                    </div>
+                    ) : (
+                      <span className="text-[9px] text-gray-400 mt-0.5">Aguardando</span>
+                    )}
                   </div>
                 );
               })}
             </div>
-          </CardContent>
-        </Card>
+          </div>
+        )}
+
+        {/* CARD NOBRE DO PIX TRANSPARENTE NATIVO (LIGHT LUXURY HAUTE COUTURE) */}
+        {order.paymentMethod === 'pix' && !order.isPaid && (
+          <Card className="border-2 border-[#c59b5f]/60 shadow-[0_12px_45px_rgba(197,155,95,0.18)] rounded-3xl overflow-hidden bg-gradient-to-br from-[#FFFDF9] via-[#FAF6F0] to-[#FFF8EE] text-gray-900">
+            <div className="bg-gradient-to-r from-[#FAF4EA] via-[#F4ECE0] to-[#FAF4EA] px-6 sm:px-8 py-5 border-b border-[#c59b5f]/30 flex flex-wrap items-center justify-between gap-3">
+              <div className="flex items-center gap-2.5 text-amber-950">
+                <Sparkles className="w-5 h-5 text-amber-700" />
+                <span className="text-xs sm:text-sm font-black uppercase tracking-widest text-amber-950">
+                  Pagamento Instantâneo PIX • 5% OFF Garantido
+                </span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-emerald-100 text-emerald-800 border border-emerald-300 text-xs font-bold uppercase tracking-wider shadow-2xs">
+                  <span className="w-2 h-2 rounded-full bg-emerald-500 animate-ping" />
+                  Aguardando Pagamento ({formatCountdown(timeLeft)})
+                </span>
+              </div>
+            </div>
+
+            <CardContent className="p-5 sm:p-8 md:p-10 flex flex-col lg:flex-row items-center lg:items-start gap-8 lg:gap-10 w-full overflow-hidden">
+              {/* Imagem do QR Code em Destaque */}
+              <div className="flex flex-col items-center shrink-0 w-full sm:w-auto">
+                <div className="w-56 h-56 sm:w-64 sm:h-64 rounded-2xl bg-white p-3 shadow-md border-2 border-[#deb881] flex items-center justify-center relative overflow-hidden">
+                  {order.pix_qr_code_base64 || order.pix_qr_code_url ? (
+                    <img
+                      src={order.pix_qr_code_url || (order.pix_qr_code_base64?.startsWith('data:') ? order.pix_qr_code_base64 : `data:image/png;base64,${order.pix_qr_code_base64}`)}
+                      alt="QR Code PIX Avante Lingerie"
+                      className="w-full h-full object-contain"
+                    />
+                  ) : (
+                    <div className="flex flex-col items-center justify-center text-gray-500 text-center p-4">
+                      <Sparkles className="w-8 h-8 text-[#c59b5f] animate-spin mb-2" />
+                      <span className="text-xs font-semibold text-gray-800">Gerando QR Code Oficial...</span>
+                      <p className="text-[10px] text-gray-500 font-light mt-1 max-w-[180px]">
+                        Conectando com o Banco Central
+                      </p>
+                      <Button
+                        onClick={handleRegeneratePix}
+                        disabled={isRegeneratingPix}
+                        className="mt-3 text-[11px] font-bold bg-[#FAF4EA] text-amber-900 hover:bg-[#F5ECE0] border border-[#c59b5f]/40 px-3 py-1.5 h-auto rounded-lg cursor-pointer"
+                      >
+                        {isRegeneratingPix ? 'Atualizando...' : 'Recarregar QR Code'}
+                      </Button>
+                    </div>
+                  )}
+                </div>
+                <span className="text-[11px] text-gray-600 mt-2.5 font-medium text-center">
+                  Aponte a câmera no aplicativo do seu banco
+                </span>
+              </div>
+
+              {/* Chave Copia e Cola & Instruções com Distribuição Perfeita */}
+              <div className="flex-1 min-w-0 w-full flex flex-col text-center lg:text-left justify-between">
+                <div>
+                  <span className="text-xs text-gray-600 font-medium block uppercase tracking-wider mb-1">
+                    Valor com Desconto de Fábrica
+                  </span>
+                  <div className="flex items-baseline gap-3 justify-center lg:justify-start flex-wrap">
+                    <span className="text-3xl sm:text-4.5xl font-serif font-black text-[#8c6721]">
+                      {formatPrice(order.total)}
+                    </span>
+                    <span className="text-xs font-bold text-emerald-800 bg-emerald-100 px-3 py-1 rounded-full border border-emerald-300">
+                      Economia de 5% Aplicada
+                    </span>
+                  </div>
+
+                  <p className="text-xs sm:text-sm text-gray-700 font-normal mt-3 leading-relaxed">
+                    Se você estiver no celular, toque no botão abaixo para copiar a chave e utilize a opção <strong>"PIX Copia e Cola"</strong> no app do seu banco:
+                  </p>
+
+                  {/* Campo Copia e Cola com Botão Nobre */}
+                  <div className="mt-4 flex flex-col sm:flex-row items-stretch gap-2.5 w-full">
+                    <div className="flex-1 min-w-0 bg-white border border-[#deb881]/60 rounded-xl px-4 py-3.5 text-xs font-mono text-gray-800 truncate select-all shadow-inner">
+                      {order.pix_copia_cola || 'Carregando chave PIX...'}
+                    </div>
+                    <Button
+                      onClick={handleCopyPix}
+                      disabled={!order.pix_copia_cola}
+                      className="w-full sm:w-auto shrink-0 bg-gradient-to-r from-[#deb881] via-[#c59b5f] to-[#b0874c] hover:from-[#c59b5f] hover:to-[#deb881] text-black font-black text-xs uppercase tracking-wider py-4 sm:py-3.5 px-6 rounded-xl shadow-md transition-all active:scale-95 flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50"
+                    >
+                      {pixCopied ? (
+                        <>
+                          <Check className="w-4 h-4 text-black stroke-[3]" />
+                          <span>Chave Copiada!</span>
+                        </>
+                      ) : (
+                        <>
+                          <Copy className="w-4 h-4 text-black stroke-[2.5]" />
+                          <span>Copiar Código PIX</span>
+                        </>
+                      )}
+                    </Button>
+                  </div>
+                </div>
+
+                {/* Radar e Atualização Automática */}
+                <div className="mt-6 pt-4 border-t border-[#c59b5f]/20 flex items-center justify-center lg:justify-start gap-3 text-xs text-gray-700">
+                  <div className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-ping shrink-0" />
+                  <span className="font-medium text-gray-700 text-balance">
+                    Identificação em tempo real: esta página será atualizada automaticamente assim que o pagamento for concluído.
+                  </span>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        )}
+
+        {/* CARD NOBRE DO BOLETO TRANSPARENTE */}
+        {order.paymentMethod === 'boleto' && !order.isPaid && (
+          <Card className="border-2 border-amber-600/40 shadow-premium-sm rounded-3xl overflow-hidden bg-white text-gray-900">
+            <div className="bg-amber-50 px-6 sm:px-8 py-5 border-b border-amber-200/60 flex flex-wrap items-center justify-between gap-3">
+              <div className="flex items-center gap-2.5 text-amber-900">
+                <Clock className="w-5 h-5 text-amber-700" />
+                <span className="text-xs sm:text-sm font-bold uppercase tracking-wider">
+                  Boleto Bancário Gerado com Sucesso
+                </span>
+              </div>
+              <span className="text-xs font-semibold text-amber-800 bg-amber-100 px-3 py-1 rounded-full">
+                Vencimento em 3 dias úteis
+              </span>
+            </div>
+
+            <CardContent className="p-6 sm:p-8 flex flex-col gap-5 text-left">
+              <div>
+                <p className="text-xs sm:text-sm text-gray-600 font-light leading-relaxed">
+                  Utilize a linha digitável abaixo para pagar pelo aplicativo do seu banco ou internet banking, ou clique para visualizar e imprimir o boleto oficial:
+                </p>
+
+                {order.boleto_barcode && (
+                  <div className="mt-4 flex flex-col sm:flex-row items-stretch gap-2.5">
+                    <div className="flex-1 bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-xs font-mono text-gray-800 select-all truncate">
+                      {order.boleto_barcode}
+                    </div>
+                    <Button
+                      onClick={handleCopyBoleto}
+                      className="bg-gray-900 hover:bg-[#c59b5f] text-white hover:text-black text-xs font-bold uppercase tracking-wider py-5 px-5 rounded-xl transition-all"
+                    >
+                      {boletoCopied ? 'Linha Copiada!' : 'Copiar Linha Digitável'}
+                    </Button>
+                  </div>
+                )}
+              </div>
+
+              {order.boleto_url && (
+                <div className="flex justify-start">
+                  <Button
+                    onClick={() => window.open(order.boleto_url, '_blank')}
+                    className="bg-amber-600 hover:bg-amber-700 text-white font-bold text-xs uppercase tracking-wider py-5 px-6 rounded-xl flex items-center gap-2"
+                  >
+                    <ExternalLink className="w-4 h-4" /> Baixar / Visualizar Boleto PDF
+                  </Button>
+                </div>
+              )}
+            </CardContent>
+          </Card>
+        )}
 
         {/* VIP DIGITAL GIFT DELIVERY CARD */}
         {resolvedGift && (
@@ -381,12 +805,20 @@ export default function OrderConfirmation() {
               <div className="flex items-center gap-2 text-[#D4AF37]">
                 <Gift className="w-5 h-5 animate-bounce" />
                 <span className="text-xs sm:text-sm font-extrabold uppercase tracking-widest">
-                  {resolvedGift.is_combo ? 'Combo 3 Aplicativos VIP Liberado' : 'Seu Presente VIP da Fábrica está Liberado'}
+                  {resolvedGift.is_combo
+                    ? (order.isPaid ? 'Combo 3 Aplicativos VIP Liberado' : 'Combo 3 Apps VIP Reservado na Fábrica')
+                    : (order.isPaid ? 'Seu Presente VIP da Fábrica está Liberado' : 'Seu Presente VIP da Fábrica está Reservado')}
                 </span>
               </div>
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#34d399]/20 text-[#34d399] border border-[#34d399]/40 text-[10px] sm:text-xs font-bold uppercase tracking-wider">
-                <Sparkles className="w-3.5 h-3.5" /> Acesso Imediato
-              </span>
+              {order.isPaid ? (
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#34d399]/20 text-[#34d399] border border-[#34d399]/40 text-[10px] sm:text-xs font-bold uppercase tracking-wider">
+                  <Sparkles className="w-3.5 h-3.5" /> Acesso Imediato
+                </span>
+              ) : (
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-500/20 text-amber-300 border border-amber-500/40 text-[10px] sm:text-xs font-bold uppercase tracking-wider">
+                  <Lock className="w-3.5 h-3.5" /> Liberado Após Pagamento do PIX
+                </span>
+              )}
             </div>
 
             <CardContent className="p-6 sm:p-8">
@@ -394,10 +826,16 @@ export default function OrderConfirmation() {
                 <div className="flex flex-col gap-6">
                   <div className="text-center sm:text-left">
                     <h3 className="text-xl sm:text-2xl font-serif font-extrabold text-white">
-                      Parabéns! Você destravou o <span className="bg-gradient-to-r from-[#D4AF37] via-[#FFF3B0] to-[#D4AF37] bg-clip-text text-transparent">Combo Completo dos 3 Apps VIP</span>
+                      {order.isPaid ? (
+                        <>Parabéns! Você destravou o <span className="bg-gradient-to-r from-[#D4AF37] via-[#FFF3B0] to-[#D4AF37] bg-clip-text text-transparent">Combo Completo dos 3 Apps VIP</span></>
+                      ) : (
+                        <>Seu <span className="bg-gradient-to-r from-[#D4AF37] via-[#FFF3B0] to-[#D4AF37] bg-clip-text text-transparent">Combo dos 3 Apps VIP</span> está Reservado</>
+                      )}
                     </h3>
                     <p className="text-xs sm:text-sm text-gray-300 font-light mt-1">
-                      Todos os seus aplicativos já estão liberados e configurados para uso. Toque em qualquer um dos botões abaixo para abrir e começar a usar agora:
+                      {order.isPaid
+                        ? 'Todos os seus aplicativos já estão liberados e configurados para uso. Toque em qualquer um dos botões abaixo para abrir e começar a usar agora:'
+                        : 'Seus 3 aplicativos já estão reservados com exclusividade. Conclua o pagamento do PIX acima para desbloquear o acesso vitalício de cada um deles:'}
                     </p>
                   </div>
 
@@ -418,12 +856,21 @@ export default function OrderConfirmation() {
                           <p className="text-[11px] text-gray-400 font-light line-clamp-2 mb-4 leading-relaxed">{app.subtitle}</p>
                         </div>
 
-                        <Button
-                          onClick={() => window.open(app.appUrl, '_blank', 'noopener,noreferrer')}
-                          className="w-full bg-gradient-to-r from-[#D4AF37] to-[#F59E0B] hover:from-[#F59E0B] hover:to-[#D4AF37] text-black font-extrabold text-xs uppercase tracking-wider py-5 rounded-xl shadow-md transition-all active:scale-95 flex items-center justify-center gap-1.5 cursor-pointer"
-                        >
-                          <ExternalLink className="w-3.5 h-3.5" /> Acessar App
-                        </Button>
+                        {order.isPaid ? (
+                          <Button
+                            onClick={() => window.open(app.appUrl, '_blank', 'noopener,noreferrer')}
+                            className="w-full bg-gradient-to-r from-[#D4AF37] to-[#F59E0B] hover:from-[#F59E0B] hover:to-[#D4AF37] text-black font-extrabold text-xs uppercase tracking-wider py-5 rounded-xl shadow-md transition-all active:scale-95 flex items-center justify-center gap-1.5 cursor-pointer"
+                          >
+                            <ExternalLink className="w-3.5 h-3.5" /> Acessar App
+                          </Button>
+                        ) : (
+                          <Button
+                            onClick={() => setShowGiftLockModal(true)}
+                            className="w-full bg-zinc-800 hover:bg-zinc-700 text-amber-300 font-bold text-xs uppercase tracking-wider py-5 rounded-xl border border-amber-500/30 transition-all flex items-center justify-center gap-1.5 cursor-pointer"
+                          >
+                            <Lock className="w-3.5 h-3.5 text-amber-400" /> Acesso Reservado
+                          </Button>
+                        )}
                       </div>
                     ))}
                   </div>
@@ -440,28 +887,40 @@ export default function OrderConfirmation() {
 
                   <div className="flex flex-col flex-1 text-center sm:text-left justify-between h-full">
                     <div>
-                      <span className="inline-flex items-center gap-1.5 text-[10px] sm:text-xs font-bold uppercase tracking-wider text-[#D4AF37] bg-[#D4AF37]/10 px-3 py-1 rounded-full border border-[#D4AF37]/30 mb-2">
-                        ★ Presente Exclusivo Liberado
+                      <span className={`inline-flex items-center gap-1.5 text-[10px] sm:text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full border mb-2 ${order.isPaid ? 'text-[#D4AF37] bg-[#D4AF37]/10 border-[#D4AF37]/30' : 'text-amber-300 bg-amber-500/15 border-amber-500/30'}`}>
+                        {order.isPaid ? '★ Presente Exclusivo Liberado' : '🔒 Presente VIP Reservado'}
                       </span>
                       <h3 className="text-xl sm:text-2.5xl font-serif font-extrabold text-white">
                         {resolvedGift.name}
                       </h3>
                       <p className="text-xs sm:text-sm text-gray-300 font-light mt-2 leading-relaxed max-w-xl">
-                        {resolvedGift.subtitle || 'Seu aplicativo VIP oficial está 100% liberado para acompanhar o seu pedido. Você pode utilizá-lo direto no seu navegador ou salvar como atalho na tela inicial do seu celular.'}
+                        {order.isPaid
+                          ? (resolvedGift.subtitle || 'Seu aplicativo VIP oficial está 100% liberado para acompanhar o seu pedido. Você pode utilizá-lo direto no seu navegador ou salvar como atalho na tela inicial do seu celular.')
+                          : 'Seu aplicativo VIP oficial já está reservado com carinho para acompanhar suas peças. Ele será liberado automaticamente com acesso vitalício nesta mesma página assim que o pagamento do PIX for confirmado.'}
                       </p>
                     </div>
 
-                    <div className="mt-5 flex flex-wrap items-center gap-3 justify-center sm:justify-start">
-                      <Button
-                        onClick={() => window.open(resolvedGift.appUrl || '/mimos/maquina-de-vendas', '_blank', 'noopener,noreferrer')}
-                        className="bg-gradient-to-r from-[#D4AF37] via-[#F59E0B] to-[#D4AF37] hover:from-[#F59E0B] hover:to-[#D4AF37] text-black font-extrabold text-xs sm:text-sm uppercase tracking-wider px-8 py-6 rounded-2xl shadow-[0_6px_25px_rgba(212,175,55,0.4)] transition-all active:scale-95 flex items-center gap-2 cursor-pointer"
-                      >
-                        <ExternalLink className="w-4 h-4 text-black" />
-                        <span>Acessar {resolvedGift.name} Agora</span>
-                      </Button>
+                    <div className="mt-5 flex flex-wrap items-center gap-3 justify-center sm:justify-start w-full">
+                      {order.isPaid ? (
+                        <Button
+                          onClick={() => window.open(resolvedGift.appUrl || '/mimos/maquina-de-vendas', '_blank', 'noopener,noreferrer')}
+                          className="w-full sm:w-auto bg-gradient-to-r from-[#D4AF37] via-[#F59E0B] to-[#D4AF37] hover:from-[#F59E0B] hover:to-[#D4AF37] text-black font-extrabold text-xs sm:text-sm uppercase tracking-wider px-8 py-6 rounded-2xl shadow-[0_6px_25px_rgba(212,175,55,0.4)] transition-all active:scale-95 flex items-center justify-center gap-2 cursor-pointer"
+                        >
+                          <ExternalLink className="w-4 h-4 text-black" />
+                          <span>Acessar {resolvedGift.name} Agora</span>
+                        </Button>
+                      ) : (
+                        <Button
+                          onClick={() => setShowGiftLockModal(true)}
+                          className="w-full sm:w-auto bg-zinc-800/90 hover:bg-zinc-800 text-amber-300 border border-amber-500/40 font-extrabold text-xs sm:text-sm uppercase tracking-wider px-8 py-6 rounded-2xl shadow-md transition-all active:scale-95 flex items-center justify-center gap-2 cursor-pointer"
+                        >
+                          <Lock className="w-4 h-4 text-amber-400" />
+                          <span>Liberar {resolvedGift.name} (Após o PIX)</span>
+                        </Button>
+                      )}
 
                       <span className="text-[11px] text-gray-400 font-light">
-                        (Abre em uma nova aba com acesso vitalício)
+                        {order.isPaid ? '(Abre em uma nova aba com acesso vitalício)' : '(Acesso vitalício liberado imediatamente após a confirmação)'}
                       </span>
                     </div>
                   </div>
@@ -493,14 +952,20 @@ export default function OrderConfirmation() {
                     const size = item.size || item.tamanho || '';
                     const color = item.color || item.cor || '';
                     const quantity = Number(item.quantity !== undefined ? item.quantity : item.quantidade) || 0;
-                    const price = Number(item.price !== undefined ? item.price : item.preco) || 0;
+                    const rawPrice = Number(item.price !== undefined ? item.price : item.preco) || 0;
+                    const isMimoOrDigital = Boolean(item.is_mimo || item.is_digital || name.toLowerCase().includes('app vip') || name.toLowerCase().includes('brinde'));
+                    const isFreeGift = isMimoOrDigital && (!item.is_combo_item || Number(item.preco_unitario) === 0 || rawPrice <= 0.05);
+                    const price = isFreeGift ? 0 : rawPrice;
+
                     const image = item.image || item.imagem || '';
-                    const imageUrl = image ? (image.startsWith('http') ? image : `${pb.baseUrl}/api/files/products/${item.id}/${image}`) : '';
+                    const imageUrl = image
+                      ? (image.startsWith('http') || image.startsWith('/') ? image : `${pb.baseUrl}/api/files/products/${item.id}/${image}`)
+                      : (isMimoOrDigital ? '/assets/mimos/capa-cintura-esculpida-3d.png' : '');
                     const isVideo = imageUrl.toLowerCase().endsWith('.mp4') || imageUrl.toLowerCase().endsWith('.webm') || imageUrl.toLowerCase().endsWith('.mov');
 
                     return (
                       <div key={idx} className="p-6 flex items-start gap-4 hover:bg-gray-50 transition-colors">
-                        <div className="w-20 h-24 rounded-2xl bg-gray-50 border border-gray-200 overflow-hidden shrink-0">
+                        <div className={`w-20 h-24 rounded-2xl ${isMimoOrDigital ? 'bg-white p-1.5 border border-[#c59b5f]/25 shadow-2xs' : 'bg-gray-50 border border-gray-200'} overflow-hidden shrink-0 flex items-center justify-center`}>
                           {imageUrl ? (
                             isVideo ? (
                               <div className="w-full h-full relative bg-[#1a1a1a] flex items-center justify-center">
@@ -509,7 +974,7 @@ export default function OrderConfirmation() {
                                 </div>
                               </div>
                             ) : (
-                              <img src={imageUrl} alt={name} className="w-full h-full object-cover" />
+                              <img src={imageUrl} alt={name} className={`w-full h-full ${isMimoOrDigital ? 'object-contain' : 'object-cover'}`} />
                             )
                           ) : (
                             <div className="w-full h-full bg-gray-100 flex items-center justify-center text-gray-400">
@@ -519,14 +984,30 @@ export default function OrderConfirmation() {
                         </div>
                         <div className="flex flex-col flex-1 justify-between h-full min-h-[6rem]">
                           <div>
-                            <h3 className="text-sm font-bold text-gray-900 line-clamp-2 leading-snug mb-1">{name}</h3>
-                            <p className="text-xs text-gray-500 font-light">
+                            <div className="flex items-center gap-2 flex-wrap">
+                              <h3 className="text-sm font-bold text-gray-900 line-clamp-2 leading-snug">{name}</h3>
+                              {isFreeGift && (
+                                <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 text-emerald-800 border border-emerald-300">
+                                  🎁 Brinde VIP Grátis
+                                </span>
+                              )}
+                              {item.is_combo_item && (
+                                <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-bold bg-amber-100 text-amber-800 border border-amber-300">
+                                  💎 App VIP Combo
+                                </span>
+                              )}
+                            </div>
+                            <p className="text-xs text-gray-500 font-light mt-1">
                               Tamanho: {size} | Cor: {color}
                             </p>
                           </div>
                           <div className="flex items-end justify-between mt-2">
                             <span className="text-xs font-medium text-gray-500">Qtd: {quantity}</span>
-                            <span className="text-base font-bold text-[#c59b5f]">{formatPrice(price * quantity)}</span>
+                            {isFreeGift ? (
+                              <span className="text-base font-bold text-emerald-600">GRÁTIS</span>
+                            ) : (
+                              <span className="text-base font-bold text-[#c59b5f]">{formatPrice(price * quantity)}</span>
+                            )}
                           </div>
                         </div>
                       </div>
@@ -565,17 +1046,37 @@ export default function OrderConfirmation() {
                 <Separator className="bg-gray-100" />
 
                 <div className="flex justify-between items-center py-2">
-                  <span className="font-bold text-gray-900 font-serif">Total Pago</span>
+                  <span className="font-bold text-gray-900 font-serif">
+                    {order.isPaid ? 'Total Pago' : 'Total a Pagar'}
+                  </span>
                   <span className="text-2xl md:text-3xl font-extrabold text-[#c59b5f]">{formatPrice(order.total)}</span>
                 </div>
 
-                <div className="mt-2 flex items-center gap-2.5 text-xs text-gray-600 bg-gray-50 p-4 rounded-2xl border border-dashed border-gray-300 font-light">
-                  <CreditCard className="w-4.5 h-4.5 text-[#c59b5f] shrink-0" strokeWidth={1.5} />
-                  <span>
-                    Pago via <strong className="text-gray-900 uppercase font-extrabold">{(order.paymentMethod === 'credit_card' || order.paymentMethod === 'credito') ? 'Cartão de Crédito' : (order.paymentMethod === 'boleto' ? 'Boleto Bancário' : 'PIX')}</strong>
-                    {order.installments > 1 ? ` em ${order.installments}x no cartão` : ''}
-                  </span>
-                </div>
+                {order.paymentMethod === 'pix' ? (
+                  <div className={`mt-2 flex items-center gap-2.5 text-xs p-4 rounded-2xl border font-medium ${order.isPaid ? 'text-emerald-900 bg-emerald-50/90 border-emerald-300' : 'text-amber-900 bg-amber-50/90 border-amber-200'}`}>
+                    {order.isPaid ? (
+                      <CheckCircle2 className="w-4.5 h-4.5 text-emerald-600 shrink-0" />
+                    ) : (
+                      <Zap className="w-4.5 h-4.5 text-amber-600 fill-amber-500 shrink-0" />
+                    )}
+                    <span>
+                      Forma de Pagamento: <strong className="text-gray-950 uppercase font-extrabold">PIX Instantâneo (5% OFF)</strong>
+                      {order.isPaid ? ' — Confirmado com Sucesso' : ' — Aguardando Pagamento'}
+                    </span>
+                  </div>
+                ) : (
+                  <div className="mt-2 flex items-center gap-2.5 text-xs text-gray-700 bg-gray-50 p-4 rounded-2xl border border-dashed border-gray-300 font-medium">
+                    <CreditCard className="w-4.5 h-4.5 text-[#c59b5f] shrink-0" strokeWidth={1.5} />
+                    <span>
+                      {order.isPaid ? 'Pago com sucesso via ' : 'Forma de Pagamento: '}
+                      <strong className="text-gray-950 uppercase font-extrabold">
+                        {(order.paymentMethod === 'credit_card' || order.paymentMethod === 'credito') ? 'Cartão de Crédito' : 'Boleto Bancário'}
+                      </strong>
+                      {order.installments > 1 ? ` em ${order.installments}x no cartão` : ''}
+                      {!order.isPaid && order.paymentMethod === 'boleto' ? ' — Aguardando Compensação' : ''}
+                    </span>
+                  </div>
+                )}
 
                 {order.paymentMethod === 'boleto' && (
                   <div className="mt-3 bg-amber-50 border border-amber-200/50 rounded-2xl p-4 flex gap-3 text-xs text-amber-800 leading-relaxed font-light">
@@ -821,6 +1322,71 @@ export default function OrderConfirmation() {
         </div>
 
       </div>
+
+      {/* MODAL INTELIGENTE E EDUCADO DE BLOQUEIO DO PRESENTE VIP */}
+      <Dialog open={showGiftLockModal} onOpenChange={setShowGiftLockModal}>
+        <DialogContent className="max-w-md w-[92vw] p-6 sm:p-8 rounded-3xl bg-gradient-to-b from-[#18140F] via-[#0E0C09] to-[#080705] border border-[#D4AF37]/50 text-white text-center shadow-[0_0_50px_rgba(212,175,55,0.3)] z-50">
+          <div className="w-16 h-16 rounded-full bg-[#D4AF37]/15 border border-[#D4AF37]/40 flex items-center justify-center mx-auto mb-4 shadow-inner">
+            <Lock className="w-8 h-8 text-[#deb881]" />
+          </div>
+          
+          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-500/15 border border-amber-500/30 text-amber-300 text-[10px] font-bold tracking-widest uppercase mb-2">
+            ★ Acesso Vitalício Reservado
+          </span>
+
+          <h3 className="text-xl sm:text-2xl font-serif font-extrabold text-white mb-2 leading-tight">
+            Quase lá! Seu <span className="text-[#deb881]">Presente VIP</span> Já Está Garantido 🎁
+          </h3>
+
+          <p className="text-xs sm:text-sm text-gray-300 font-light leading-relaxed mb-6">
+            O seu aplicativo exclusivo acompanha o seu pedido de fábrica.
+            <br /><br />
+            Para desbloquear o acesso imediato e vitalício, basta efetuar o pagamento do <strong>PIX de R$ {order ? formatPrice(order.total) : ''}</strong> no topo desta página.
+            <br /><br />
+            A identificação do banco é 100% automática e leva menos de 10 segundos. Assim que compensar, esta página vai atualizar e o botão de acesso será liberado!
+          </p>
+
+          <Button
+            onClick={() => {
+              setShowGiftLockModal(false);
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
+            className="w-full bg-gradient-to-r from-[#deb881] via-[#c59b5f] to-[#b0874c] hover:from-[#c59b5f] hover:to-[#deb881] text-black font-extrabold text-xs uppercase tracking-wider py-6 rounded-2xl shadow-lg transition-all active:scale-95 cursor-pointer"
+          >
+            Entendido, Vou Concluir o PIX Acima
+          </Button>
+        </DialogContent>
+      </Dialog>
+
+      {/* OVERLAY DE CELEBRAÇÃO ("PARABÉNS! VENDA CONCLUÍDA") COM CONFETES */}
+      <OrderCelebrationOverlay
+        isVisible={showCelebration}
+        onClose={() => setShowCelebration(false)}
+      />
+
+      {/* BARRA DE DEMONSTRAÇÃO / PREVIEW EXCLUSIVA PARA O LOJISTA */}
+      {(!orderId || orderId === 'preview' || orderId === 'demo' || orderId === 'teste') && (
+        <aside aria-label="Painel de Demonstração" className="fixed bottom-5 right-5 z-50 bg-[#121212]/95 backdrop-blur-md text-white border-2 border-[#deb881]/80 rounded-2xl p-3 sm:p-3.5 shadow-[0_10px_35px_rgba(0,0,0,0.6)] flex flex-wrap items-center gap-2 sm:gap-2.5 animate-in fade-in slide-in-from-bottom-4 duration-500 max-w-[calc(100vw-2rem)]">
+          <div className="flex items-center gap-1.5 pr-2 border-r border-white/15">
+            <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse" />
+            <span className="text-xs font-serif text-[#deb881] font-bold tracking-wide">Preview Lojista</span>
+          </div>
+          <button
+            type="button"
+            onClick={() => setShowCelebration(true)}
+            className="px-3 py-1.5 bg-gradient-to-r from-[#deb881] to-[#c59b5f] hover:from-[#c59b5f] hover:to-[#deb881] text-black font-extrabold text-xs rounded-xl transition-all shadow-md active:scale-95 flex items-center gap-1.5 cursor-pointer"
+          >
+            <Sparkles className="w-3.5 h-3.5 text-black" /> Rever "PARABÉNS!" Confetes
+          </button>
+          <button
+            type="button"
+            onClick={() => setOrder(prev => ({ ...prev, isPaid: !prev.isPaid }))}
+            className="px-3 py-1.5 bg-white/10 hover:bg-white/20 text-white font-medium text-xs rounded-xl transition-all border border-white/20 active:scale-95 cursor-pointer"
+          >
+            Alternar: {order?.isPaid ? 'Ver Pendente (PIX Claro)' : 'Ver Aprovado (Rastreio Nobre)'}
+          </button>
+        </aside>
+      )}
     </main>
   );
 }

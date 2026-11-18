@@ -13,3 +13,4 @@ apps/web/dist/
 apps/whatsapp-bot/.wwebjs_auth/
 apps/whatsapp-bot/.reset_flag
 scratch/
+apps/api/*_cache.json

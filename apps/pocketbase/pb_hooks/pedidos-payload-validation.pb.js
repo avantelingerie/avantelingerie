@@ -189,8 +189,10 @@ onRecordCreate((e) => {
       }
 
       const numPreco = Number(preco);
-      if (isNaN(numPreco) || numPreco < 0.01) {
-        throw new BadRequestError('itens[' + i + ']: preco must be at least 0.01');
+      // Mimos digitais, brindes e bonificações da fábrica possuem preço 0.00 por regra de negócio.
+      // Proibimos apenas valores negativos ou inválidos (NaN).
+      if (isNaN(numPreco) || numPreco < 0) {
+        throw new BadRequestError('itens[' + i + ']: preco cannot be negative');
       }
     }
   }

@@ -70,9 +70,19 @@ export default function PedidoItens({ itens }) {
                   </TableCell>
                   <TableCell className="text-muted-foreground">{item.sku || '-'}</TableCell>
                   <TableCell className="text-center">{item.quantidade || item.quantity || 1}</TableCell>
-                  <TableCell className="text-right">R$ {(item.preco_unitario || item.preco || item.price || 0).toFixed(2).replace('.', ',')}</TableCell>
+                  <TableCell className="text-right">
+                    {(item.is_mimo || item.is_digital) && (!item.preco_unitario || Number(item.preco_unitario) === 0) ? (
+                      <span className="text-emerald-600 font-semibold text-xs">GRÁTIS</span>
+                    ) : (
+                      `R$ ${(item.preco_unitario !== undefined ? item.preco_unitario : (item.preco || item.price || 0)).toFixed(2).replace('.', ',')}`
+                    )}
+                  </TableCell>
                   <TableCell className="text-right pr-6 font-medium">
-                    R$ {((item.quantidade || item.quantity || 1) * (item.preco_unitario || item.preco || item.price || 0)).toFixed(2).replace('.', ',')}
+                    {(item.is_mimo || item.is_digital) && (!item.preco_unitario || Number(item.preco_unitario) === 0) ? (
+                      <span className="text-emerald-600 font-semibold text-xs">R$ 0,00</span>
+                    ) : (
+                      `R$ ${((item.quantidade || item.quantity || 1) * (item.preco_unitario !== undefined ? item.preco_unitario : (item.preco || item.price || 0))).toFixed(2).replace('.', ',')}`
+                    )}
                   </TableCell>
                 </TableRow>
               ))

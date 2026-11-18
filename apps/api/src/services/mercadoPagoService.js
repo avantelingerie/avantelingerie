@@ -311,6 +311,279 @@ class MercadoPagoService {
   }
 
   /**
+   * Cria pagamento instantâneo via PIX Transparente (Nativo da Loja).
+   * Retorna QR Code em imagem (base64) e chave Copia e Cola.
+   */
+  async createPixPayment(order) {
+    const creds = await this.getCredentials();
+    if (!creds.accessToken) {
+      throw new Error('Gateway Mercado Pago não configurado. Adicione o Access Token no Admin.');
+    }
+
+    const apiUrl = process.env.PUBLIC_API_URL || 'https://avantelingerie.com.br/hcgi/api';
+    const finalTotal = Number(Number(order.valor_total).toFixed(2));
+    const cleanCpf = (order.cpf || order.cliente_cpf || '').replace(/\D/g, '');
+    const cleanPhone = (order.cliente_telefone || '').replace(/\D/g, '');
+
+    const nameParts = (order.cliente_nome || 'Cliente').trim().split(/\s+/);
+    const firstName = nameParts[0] || 'Cliente';
+    const lastName = nameParts.slice(1).join(' ') || 'Avante';
+
+    // Expiração em 30 minutos
+    const expirationDate = new Date(Date.now() + 30 * 60 * 1000).toISOString();
+
+    const pixPayload = {
+      transaction_amount: finalTotal,
+      description: `Pedido Avante Lingerie #${order.numero_pedido || order.id.slice(-6).toUpperCase()}`,
+      payment_method_id: 'pix',
+      date_of_expiration: expirationDate,
+      payer: {
+        email: order.cliente_email,
+        first_name: firstName,
+        last_name: lastName,
+        identification: cleanCpf.length >= 11 ? {
+          type: cleanCpf.length === 14 ? 'CNPJ' : 'CPF',
+          number: cleanCpf,
+        } : undefined,
+      },
+      notification_url: `${apiUrl}/webhooks/mercadopago`,
+      external_reference: String(order.id),
+      metadata: {
+        order_id: String(order.id),
+        numero_pedido: order.numero_pedido || '',
+        cliente_id: order.cliente_id || '',
+      },
+    };
+
+    const idempotencyKey = `pix-${order.id}-${order.numero_pedido || Date.now()}`;
+    logger.info(`[MercadoPagoService] Gerando PIX Transparente para pedido ${order.numero_pedido || order.id} (R$ ${finalTotal})`);
+
+    try {
+      const response = await axios.post(
+        'https://api.mercadopago.com/v1/payments',
+        pixPayload,
+        {
+          headers: {
+            Authorization: `Bearer ${creds.accessToken}`,
+            'X-Idempotency-Key': idempotencyKey,
+            'Content-Type': 'application/json',
+          },
+          timeout: 20000,
+        }
+      );
+
+      const data = response.data;
+      const txData = data.point_of_interaction?.transaction_data || {};
+
+      logger.info(`[MercadoPagoService] PIX gerado com sucesso: ID=${data.id}, Status=${data.status}`);
+
+      return {
+        id: String(data.id),
+        status: data.status,
+        status_detail: data.status_detail,
+        qr_code: txData.qr_code,
+        qr_code_base64: txData.qr_code_base64,
+        ticket_url: txData.ticket_url,
+        date_of_expiration: data.date_of_expiration || expirationDate,
+      };
+    } catch (err) {
+      const errorMsg = err.response?.data?.message || err.message;
+      const errorCauses = err.response?.data?.cause?.map(c => `${c.code}: ${c.description}`).join('; ');
+      logger.error(`[MercadoPagoService] Falha ao criar PIX: ${errorMsg} ${errorCauses ? `(${errorCauses})` : ''}`);
+
+      if (errorMsg && (errorMsg.toLowerCase().includes('collector') || errorMsg.toLowerCase().includes('payer'))) {
+        throw new Error('O e-mail do cliente utilizado não pode ser o mesmo da conta recebedora do Mercado Pago (o titular da conta não pode pagar a si mesmo). Por favor, informe outro e-mail de cliente.');
+      }
+      throw new Error(`Mercado Pago PIX: ${errorMsg || 'Erro ao gerar pagamento'}`);
+    }
+  }
+
+  /**
+   * Processa pagamento com Cartão de Crédito Transparente (Nativo da Loja).
+   * Recebe o token gerado diretamente no navegador pelo SDK JS do Mercado Pago (PCI-DSS).
+   */
+  async createCardPayment(order, { token, installments, payment_method_id, issuer_id, payerIdentification }) {
+    const creds = await this.getCredentials();
+    if (!creds.accessToken) {
+      throw new Error('Gateway Mercado Pago não configurado. Adicione o Access Token no Admin.');
+    }
+
+    const apiUrl = process.env.PUBLIC_API_URL || 'https://avantelingerie.com.br/hcgi/api';
+    const finalTotal = Number(Number(order.valor_total).toFixed(2));
+    const cleanCpf = (payerIdentification?.number || order.cpf || order.cliente_cpf || '').replace(/\D/g, '');
+
+    const nameParts = (order.cliente_nome || 'Cliente').trim().split(/\s+/);
+    const firstName = nameParts[0] || 'Cliente';
+    const lastName = nameParts.slice(1).join(' ') || 'Avante';
+
+    const cardPayload = {
+      transaction_amount: finalTotal,
+      token,
+      description: `Pedido Avante Lingerie #${order.numero_pedido || order.id.slice(-6).toUpperCase()}`,
+      installments: Number(installments) || 1,
+      payment_method_id: payment_method_id || undefined,
+      issuer_id: issuer_id ? Number(issuer_id) : undefined,
+      payer: {
+        email: order.cliente_email,
+        first_name: firstName,
+        last_name: lastName,
+        identification: cleanCpf ? {
+          type: payerIdentification?.type || (cleanCpf.length === 14 ? 'CNPJ' : 'CPF'),
+          number: cleanCpf,
+        } : undefined,
+      },
+      notification_url: `${apiUrl}/webhooks/mercadopago`,
+      external_reference: String(order.id),
+      statement_descriptor: 'AVANTE LINGERIE',
+      binary_mode: true,
+      metadata: {
+        order_id: String(order.id),
+        numero_pedido: order.numero_pedido || '',
+        cliente_id: order.cliente_id || '',
+      },
+    };
+
+    const idempotencyKey = `card-${order.id}-${String(token).slice(0, 10)}`;
+    logger.info(`[MercadoPagoService] Processando Cartão Transparente para pedido ${order.numero_pedido || order.id} (${installments}x R$ ${finalTotal})`);
+
+    const response = await axios.post(
+      'https://api.mercadopago.com/v1/payments',
+      cardPayload,
+      {
+        headers: {
+          Authorization: `Bearer ${creds.accessToken}`,
+          'X-Idempotency-Key': idempotencyKey,
+          'Content-Type': 'application/json',
+        },
+        timeout: 25000,
+      }
+    );
+
+    const data = response.data;
+    logger.info(`[MercadoPagoService] Cartão processado: ID=${data.id}, Status=${data.status}, Detalhe=${data.status_detail}`);
+
+    return {
+      id: String(data.id),
+      status: data.status,
+      status_detail: data.status_detail,
+      payment_method_id: data.payment_method_id,
+      installments: data.installments,
+      human_message: this.getHumanStatusMessage(data.status, data.status_detail),
+      card: data.card ? {
+        last_four_digits: data.card.last_four_digits,
+        first_six_digits: data.card.first_six_digits,
+        cardholder: data.card.cardholder?.name,
+      } : undefined,
+    };
+  }
+
+  /**
+   * Gera boleto bancário tradicional transparente.
+   */
+  async createBoletoPayment(order) {
+    const creds = await this.getCredentials();
+    if (!creds.accessToken) {
+      throw new Error('Gateway Mercado Pago não configurado. Adicione o Access Token no Admin.');
+    }
+
+    const apiUrl = process.env.PUBLIC_API_URL || 'https://avantelingerie.com.br/hcgi/api';
+    const finalTotal = Number(Number(order.valor_total).toFixed(2));
+    const cleanCpf = (order.cpf || order.cliente_cpf || '').replace(/\D/g, '');
+    const cleanCep = (order.cep || '').replace(/\D/g, '');
+
+    const nameParts = (order.cliente_nome || 'Cliente').trim().split(/\s+/);
+    const firstName = nameParts[0] || 'Cliente';
+    const lastName = nameParts.slice(1).join(' ') || 'Avante';
+
+    // Vencimento em 3 dias úteis
+    const expirationDate = new Date(Date.now() + 3 * 24 * 60 * 60 * 1000).toISOString();
+
+    const boletoPayload = {
+      transaction_amount: finalTotal,
+      description: `Pedido Avante Lingerie #${order.numero_pedido || order.id.slice(-6).toUpperCase()}`,
+      payment_method_id: 'bolbradesco',
+      date_of_expiration: expirationDate,
+      payer: {
+        email: order.cliente_email,
+        first_name: firstName,
+        last_name: lastName,
+        identification: cleanCpf ? {
+          type: cleanCpf.length === 14 ? 'CNPJ' : 'CPF',
+          number: cleanCpf,
+        } : undefined,
+        address: {
+          zip_code: cleanCep,
+          street_name: order.endereco_entrega || 'Endereço',
+        },
+      },
+      notification_url: `${apiUrl}/webhooks/mercadopago`,
+      external_reference: String(order.id),
+      metadata: {
+        order_id: String(order.id),
+        numero_pedido: order.numero_pedido || '',
+        cliente_id: order.cliente_id || '',
+      },
+    };
+
+    const idempotencyKey = `bol-${order.id}-${order.numero_pedido || Date.now()}`;
+    logger.info(`[MercadoPagoService] Gerando Boleto Transparente para pedido ${order.numero_pedido || order.id} (R$ ${finalTotal})`);
+
+    const response = await axios.post(
+      'https://api.mercadopago.com/v1/payments',
+      boletoPayload,
+      {
+        headers: {
+          Authorization: `Bearer ${creds.accessToken}`,
+          'X-Idempotency-Key': idempotencyKey,
+          'Content-Type': 'application/json',
+        },
+        timeout: 20000,
+      }
+    );
+
+    const data = response.data;
+    const barcode = data.barcode?.content || data.transaction_details?.barcode?.content || '';
+    const ticketUrl = data.transaction_details?.external_resource_url || '';
+
+    logger.info(`[MercadoPagoService] Boleto gerado: ID=${data.id}, Status=${data.status}`);
+
+    return {
+      id: String(data.id),
+      status: data.status,
+      status_detail: data.status_detail,
+      barcode,
+      ticket_url: ticketUrl,
+      date_of_expiration: data.date_of_expiration || expirationDate,
+    };
+  }
+
+  /**
+   * Traduz códigos técnicos de rejeição do Mercado Pago em mensagens humanizadas e acolhedoras.
+   */
+  getHumanStatusMessage(status, statusDetail) {
+    if (status === 'approved') {
+      return 'Pagamento aprovado com sucesso!';
+    }
+    if (status === 'in_process') {
+      return 'O seu pagamento está em análise pela operadora do cartão. Assim que for confirmado, avisaremos você!';
+    }
+
+    const messages = {
+      cc_rejected_bad_filled_security_code: 'Código de segurança (CVV) inválido. Por favor, confira os dígitos no verso do seu cartão.',
+      cc_rejected_bad_filled_date: 'Data de validade do cartão incorreta ou vencida. Por favor, verifique o mês e ano.',
+      cc_rejected_bad_filled_other: 'Por favor, revise os dados do cartão preenchidos.',
+      cc_rejected_insufficient_amount: 'Saldo ou limite insuficiente no cartão de crédito. Que tal aproveitar 5% de desconto pagando via PIX?',
+      cc_rejected_call_for_authorize: 'Pagamento não autorizado pela administradora do cartão. Ligue para seu banco ou pague via PIX com 5% de desconto.',
+      cc_rejected_card_disabled: 'Este cartão não está habilitado para compras pela internet. Ligue para a operadora ou finalize com PIX.',
+      cc_rejected_duplicated_payment: 'Detectamos uma tentativa recente idêntica. Por favor, aguarde alguns instantes antes de tentar novamente.',
+      cc_rejected_high_risk: 'Transação recusada pelas políticas de segurança da operadora. Recomendamos finalizar via PIX com 5% de desconto.',
+      cc_rejected_max_attempts: 'Limite de tentativas excedido para este cartão. Que tal aproveitar 5% OFF pagando via PIX?',
+    };
+
+    return messages[statusDetail] || 'O pagamento não foi autorizado pela operadora. Você pode tentar outro cartão ou finalizar com PIX garantindo 5% de desconto!';
+  }
+
+  /**
    * Valida a assinatura HMAC SHA-256 do webhook do Mercado Pago (Segurança P0).
    * Headers: x-signature (ts=...,v1=...), x-request-id
    */

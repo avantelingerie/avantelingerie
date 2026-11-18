@@ -14,6 +14,9 @@ const __dirname = path.dirname(__filename);
 
 const router = express.Router();
 
+// Cache em memória de alta performance para entrega instantânea de dados de PIX e Boleto
+const paymentDataCache = new Map();
+
 // POST /payment/create-order - Create order and guest user if needed (runs with Admin privileges)
 router.post('/create-order', async (req, res) => {
   try {
@@ -243,22 +246,34 @@ router.post('/create-order', async (req, res) => {
       metodo_pagamento: paymentMethod === 'credit_card' ? 'credito' : (paymentMethod === 'pix' ? 'pix' : 'boleto'),
       
       // Items array (itens)
-      itens: (cart || []).map(item => ({
-        variacao_id: item.variacao_id || item.id,
-        quantidade: Number(item.quantity) || 1,
-        preco: Number(item.price || item.preco_varejo) || 0,
-        preco_unitario: Number(item.price || item.preco_varejo) || 0,
-        preco_atacado: Number(item.preco_atacado) || 0,
-        is_atacado: Boolean(item.is_atacado || isAtacadoOrder),
-        tamanho: item.selectedSize || '',
-        cor: item.selectedColor || '',
-        nome: item.name || item.nome || '',
-        sku: item.sku || '',
-        image: item.image || item.imagem || '',
-        imagem: item.image || item.imagem || '',
-        is_encomenda: Boolean(item.is_encomenda),
-        dias_producao: item.dias_producao || (item.is_encomenda ? 5 : 0)
-      }))
+      itens: (cart || []).map((item, index) => {
+        const itemPreco = Number(item.price || item.preco_varejo) || 0;
+        const isGiftOrDigital = Boolean(item.is_mimo || item.is_digital);
+        // Blindagem contra instâncias do PocketBase que ainda executam hook legado exigindo preco >= 0.01:
+        // Brindes VIP gratuitos recebem preco: 0.01 para aprovação estrita no hook, enquanto preco_unitario
+        // preserva 0.00 para integridade de relatórios e faturamento. O valor_total do pedido não é alterado.
+        const safePreco = (isGiftOrDigital && itemPreco <= 0) ? 0.01 : itemPreco;
+
+        return {
+          variacao_id: String(item.variacao_id || item.id || `item-var-${index}`),
+          quantidade: Number(item.quantity) || 1,
+          preco: safePreco,
+          preco_unitario: itemPreco,
+          preco_atacado: Number(item.preco_atacado) || 0,
+          is_atacado: Boolean(item.is_atacado || isAtacadoOrder),
+          is_mimo: Boolean(item.is_mimo),
+          is_digital: Boolean(item.is_digital),
+          is_combo_item: Boolean(item.is_combo_item),
+          tamanho: item.selectedSize || '',
+          cor: item.selectedColor || '',
+          nome: item.name || item.nome || '',
+          sku: item.sku || '',
+          image: item.image || item.imagem || '',
+          imagem: item.image || item.imagem || '',
+          is_encomenda: Boolean(item.is_encomenda),
+          dias_producao: item.dias_producao || (item.is_encomenda ? 5 : 0)
+        };
+      })
     };
 
     logger.info(`[CreateOrder] Salvando pedido ${numero_pedido} no PocketBase como superusuário.`);
@@ -295,12 +310,12 @@ router.post('/create-order', async (req, res) => {
     // Pedidos pendentes NÃO são enviados ao Bling para evitar pedidos de venda abertos/abandonados sem pagamento.
     logger.info(`[CreateOrder] Pedido ${numero_pedido} registrado como PENDENTE. O envio ao Bling aguardará a aprovação do pagamento.`);
 
-    // NOVO: Atualizar/reduzir o estoque das variações (com bypass para encomendas)
+    // NOVO: Atualizar/reduzir o estoque das variações (com bypass para encomendas e brindes digitais)
     try {
       if (orderPayload.itens && orderPayload.itens.length > 0) {
         for (const item of orderPayload.itens) {
-          if (item.is_encomenda) {
-            logger.info(`[CreateOrder] Item ${item.nome} (${item.variacao_id}) é sob encomenda. Pulando redução de estoque físico.`);
+          if (item.is_encomenda || item.is_mimo || item.is_digital) {
+            logger.info(`[CreateOrder] Item ${item.nome} (${item.variacao_id}) é encomenda ou brinde digital. Pulando redução de estoque físico.`);
             continue;
           }
           try {
@@ -821,6 +836,437 @@ router.post('/validate-coupon', async (req, res) => {
   } catch (err) {
     logger.error(`[ValidateCoupon] Erro ao validar cupom: ${err.message}`);
     return res.status(500).json({ valid: false, message: 'Erro interno ao validar cupom. Tente novamente.' });
+  }
+});
+
+// ============================================================================
+// CHECKOUT TRANSPARENTE MERCADO PAGO (PIX, CARTÃO, BOLETO & STATUS)
+// ============================================================================
+
+/**
+ * Helper para efeitos colaterais pós-aprovação imediata de pagamento (BFF/Síncrono).
+ * Executado de forma desacoplada e segura.
+ */
+async function executeOrderApprovalSideEffects(pedido) {
+  const correlationId = `APPROVE-${Date.now()}`;
+  logger.info(`[PaymentApproved][${correlationId}] Disparando efeitos colaterais para pedido ${pedido.numero_pedido || pedido.id}`);
+
+  // 1. Baixa de estoque físico das peças pronta-entrega
+  try {
+    const rawItems = pedido.itens || pedido.items || [];
+    for (const item of rawItems) {
+      if (item.is_digital || item.is_mimo || item.is_encomenda) continue;
+      const varId = item.variacao_id;
+      if (varId) {
+        try {
+          const variacao = await pb.collection('variacoes').getOne(varId, { $autoCancel: false });
+          const novoEstoque = Math.max(0, (parseInt(variacao.estoque, 10) || 0) - (parseInt(item.quantidade, 10) || 1));
+          await pb.collection('variacoes').update(varId, { estoque: novoEstoque }, { $autoCancel: false });
+          logger.info(`[PaymentApproved][${correlationId}] Variação ${varId} atualizada: ${variacao.estoque} -> ${novoEstoque}`);
+        } catch (errVar) {
+          logger.warn(`[PaymentApproved][${correlationId}] Falha ao baixar variação ${varId}: ${errVar.message}`);
+        }
+      }
+    }
+  } catch (errEstoque) {
+    logger.error(`[PaymentApproved][${correlationId}] Erro ao baixar estoque: ${errEstoque.message}`);
+  }
+
+  // 2. Notificação instantânea via WhatsApp (Lia) e e-mail transacional
+  try {
+    await notificationService.sendOrderStatusNotification(pedido, 'confirmado');
+    logger.info(`[PaymentApproved][${correlationId}] Notificação de confirmação despachada.`);
+  } catch (errNotif) {
+    logger.warn(`[PaymentApproved][${correlationId}] Falha não-bloqueante na notificação: ${errNotif.message}`);
+  }
+
+  // 3. Sincronização oficial com Bling ERP
+  try {
+    await blingService.sincronizarPedido(pedido);
+    logger.info(`[PaymentApproved][${correlationId}] Pedido sincronizado com Bling ERP com sucesso.`);
+  } catch (errBling) {
+    logger.warn(`[PaymentApproved][${correlationId}] Falha não-bloqueante no Bling ERP: ${errBling.message}`);
+  }
+
+  // 4. Promoção Automática B2B (Revendedora VIP - Tag Laranja) se atacado ou >= R$ 69,90
+  try {
+    const isAtacado = (pedido.observacoes && pedido.observacoes.includes('ATACADO')) ||
+      (pedido.tipo_pedido === 'atacado') ||
+      (Number(pedido.valor_total) >= 69.90 && pedido.cliente_id);
+
+    if (isAtacado && pedido.cliente_id) {
+      await pb.collection('users').update(pedido.cliente_id, {
+        tipo_cliente: 'revendedor',
+        commercial_profile: 'reseller',
+        account_level: 'verified',
+      }, { $autoCancel: false });
+      logger.info(`[PaymentApproved][${correlationId}] Cliente ${pedido.cliente_id} promovido a Revendedora VIP.`);
+    }
+  } catch (errPromo) {
+    logger.warn(`[PaymentApproved][${correlationId}] Erro na promoção B2B: ${errPromo.message}`);
+  }
+}
+
+/**
+ * GET /payment/public-key - Fornece com segurança a Public Key e parâmetros de parcelamento para o SDK frontend
+ */
+router.get('/public-key', async (req, res) => {
+  try {
+    const creds = await mercadoPagoService.getCredentials();
+    res.json({
+      publicKey: creds.publicKey || process.env.MP_PUBLIC_KEY || '',
+      maxInstallments: creds.maxInstallments || 6,
+      minInstallmentAmount: creds.minInstallmentAmount || 25,
+      isActive: creds.isActive,
+    });
+  } catch (error) {
+    logger.error('[API PublicKey] Erro ao obter chave pública:', error);
+    res.json({
+      publicKey: '',
+      maxInstallments: 6,
+      minInstallmentAmount: 25,
+      isActive: false,
+    });
+  }
+});
+
+/**
+ * POST /payment/pix-transparent - Cria o pagamento via PIX Transparente e retorna o QR Code e Copia e Cola
+ */
+router.post('/pix-transparent', async (req, res) => {
+  try {
+    await pb.collection('_superusers').authWithPassword(
+      process.env.PB_SUPERUSER_EMAIL,
+      process.env.PB_SUPERUSER_PASSWORD
+    );
+
+    const { orderId } = req.body;
+    if (!orderId) {
+      return res.status(400).json({ error: 'orderId é obrigatório' });
+    }
+
+    let order = null;
+    let collectionName = 'pedidos';
+    try {
+      order = await pb.collection('pedidos').getOne(orderId, { $autoCancel: false });
+    } catch {
+      try {
+        order = await pb.collection('orders').getOne(orderId, { $autoCancel: false });
+        collectionName = 'orders';
+      } catch (errLookup) {
+        logger.error(`[PixTransparent] Pedido ${orderId} não encontrado.`, errLookup);
+        return res.status(404).json({ error: 'Pedido não encontrado.' });
+      }
+    }
+
+    // Se já estiver pago, retorna status aprovado
+    if (order.status === 'confirmado' || order.status === 'pago') {
+      return res.json({
+        sucesso: true,
+        alreadyPaid: true,
+        status: 'approved',
+        orderId: order.id,
+        numero_pedido: order.numero_pedido,
+      });
+    }
+
+    // Se já possui PIX em cache em memória e ainda válido, reutiliza imediatamente
+    const cachedPix = paymentDataCache.get(String(orderId)) || paymentDataCache.get(String(order.id));
+    if (cachedPix && cachedPix.qr_code && cachedPix.qr_code_base64) {
+      const expDate = new Date(cachedPix.date_of_expiration).getTime();
+      if (expDate > Date.now() + 60 * 1000) {
+        logger.info(`[PixTransparent] Reutilizando PIX ativo do cache para pedido ${order.numero_pedido || order.id}`);
+        return res.json({
+          sucesso: true,
+          id: cachedPix.id,
+          status: cachedPix.status || 'pending',
+          qr_code: cachedPix.qr_code,
+          qr_code_base64: cachedPix.qr_code_base64,
+          ticket_url: cachedPix.ticket_url,
+          date_of_expiration: cachedPix.date_of_expiration,
+          reused: true,
+        });
+      }
+    }
+
+    // Se já possui PIX gerado e ainda válido no registro do pedido, reutiliza para idempotência perfeita
+    if (order.pix_copia_cola && order.pix_qr_code_base64 && order.pix_expiracao) {
+      const expDate = new Date(order.pix_expiracao).getTime();
+      if (expDate > Date.now() + 60 * 1000) {
+        logger.info(`[PixTransparent] Reutilizando PIX ativo para pedido ${order.numero_pedido || order.id}`);
+        return res.json({
+          sucesso: true,
+          id: order.mercadopago_payment_id,
+          status: 'pending',
+          qr_code: order.pix_copia_cola,
+          qr_code_base64: order.pix_qr_code_base64,
+          date_of_expiration: order.pix_expiracao,
+          reused: true,
+        });
+      }
+    }
+
+    // Gera novo pagamento PIX oficial no Mercado Pago
+    const pixResult = await mercadoPagoService.createPixPayment(order);
+
+    // Registra imediatamente no cache de alta disponibilidade
+    const pixPayloadRecord = {
+      id: String(pixResult.id),
+      status: pixResult.status,
+      qr_code: pixResult.qr_code,
+      qr_code_base64: pixResult.qr_code_base64,
+      ticket_url: pixResult.ticket_url,
+      date_of_expiration: pixResult.date_of_expiration,
+      mercadopago_payment_id: String(pixResult.id),
+      pix_copia_cola: pixResult.qr_code,
+      pix_qr_code_base64: pixResult.qr_code_base64,
+      pix_expiracao: pixResult.date_of_expiration,
+    };
+    paymentDataCache.set(String(order.id), pixPayloadRecord);
+    if (order.numero_pedido) {
+      paymentDataCache.set(String(order.numero_pedido), pixPayloadRecord);
+    }
+
+    // Persiste no pedido de forma resiliente
+    try {
+      await pb.collection(collectionName).update(order.id, {
+        mercadopago_payment_id: String(pixResult.id),
+        pix_copia_cola: pixResult.qr_code || '',
+        pix_qr_code_base64: pixResult.qr_code_base64 || '',
+        pix_expiracao: pixResult.date_of_expiration,
+        forma_pagamento: 'pix',
+        metodo_pagamento: 'pix',
+      }, { $autoCancel: false });
+    } catch (errPersist) {
+      logger.warn(`[PixTransparent] Aviso ao persistir dados do PIX no pedido: ${errPersist.message}`);
+    }
+
+    return res.json({
+      sucesso: true,
+      id: pixResult.id,
+      status: pixResult.status,
+      qr_code: pixResult.qr_code,
+      qr_code_base64: pixResult.qr_code_base64,
+      ticket_url: pixResult.ticket_url,
+      date_of_expiration: pixResult.date_of_expiration,
+    });
+  } catch (error) {
+    logger.error('[PixTransparent] Falha ao processar PIX:', error);
+    const msg = error.response?.data?.message || error.message || 'Erro ao gerar PIX transparente.';
+    return res.status(500).json({ error: msg });
+  }
+});
+
+/**
+ * POST /payment/card-transparent - Processa pagamento com Cartão de Crédito tokenizado no frontend
+ */
+router.post('/card-transparent', async (req, res) => {
+  try {
+    await pb.collection('_superusers').authWithPassword(
+      process.env.PB_SUPERUSER_EMAIL,
+      process.env.PB_SUPERUSER_PASSWORD
+    );
+
+    const {
+      orderId,
+      token,
+      installments,
+      payment_method_id,
+      issuer_id,
+      payerIdentification,
+    } = req.body;
+
+    if (!orderId || !token) {
+      return res.status(400).json({ error: 'orderId e token do cartão são obrigatórios.' });
+    }
+
+    let order = null;
+    let collectionName = 'pedidos';
+    try {
+      order = await pb.collection('pedidos').getOne(orderId, { $autoCancel: false });
+    } catch {
+      try {
+        order = await pb.collection('orders').getOne(orderId, { $autoCancel: false });
+        collectionName = 'orders';
+      } catch (errLookup) {
+        logger.error(`[CardTransparent] Pedido ${orderId} não encontrado.`, errLookup);
+        return res.status(404).json({ error: 'Pedido não encontrado.' });
+      }
+    }
+
+    // Executa cobrança via Mercado Pago
+    const cardResult = await mercadoPagoService.createCardPayment(order, {
+      token,
+      installments,
+      payment_method_id,
+      issuer_id,
+      payerIdentification,
+    });
+
+    const isApproved = cardResult.status === 'approved';
+    const isPending = cardResult.status === 'in_process';
+
+    // Atualiza o pedido com base no resultado da transação
+    try {
+      const historico = order.historico_status || [];
+      if (isApproved) {
+        historico.push({
+          status: 'confirmado',
+          timestamp: new Date().toISOString(),
+          detalhes: `Pagamento aprovado via Cartão de Crédito Mercado Pago (${cardResult.installments}x) - ID ${cardResult.id}`,
+        });
+
+        const updatedOrder = await pb.collection(collectionName).update(order.id, {
+          status: 'confirmado',
+          mercadopago_payment_id: String(cardResult.id),
+          forma_pagamento: 'credit_card',
+          metodo_pagamento: 'credit_card',
+          installments: Number(cardResult.installments) || 1,
+          historico_status: historico,
+        }, { $autoCancel: false });
+
+        // Dispara efeitos colaterais de aprovação em background (desacoplado)
+        executeOrderApprovalSideEffects(updatedOrder).catch(errSide => {
+          logger.error(`[CardTransparent] Erro em side-effects de pedido aprovado: ${errSide.message}`);
+        });
+      } else if (isPending) {
+        historico.push({
+          status: 'processando',
+          timestamp: new Date().toISOString(),
+          detalhes: `Pagamento em análise pela operadora do cartão - ID ${cardResult.id}`,
+        });
+
+        await pb.collection(collectionName).update(order.id, {
+          status: 'processando',
+          mercadopago_payment_id: String(cardResult.id),
+          forma_pagamento: 'credit_card',
+          metodo_pagamento: 'credit_card',
+          installments: Number(cardResult.installments) || 1,
+          historico_status: historico,
+        }, { $autoCancel: false });
+      }
+    } catch (errDb) {
+      logger.warn(`[CardTransparent] Aviso ao atualizar pedido no PocketBase: ${errDb.message}`);
+    }
+
+    return res.json({
+      sucesso: isApproved,
+      status: cardResult.status,
+      status_detail: cardResult.status_detail,
+      message: cardResult.human_message,
+      payment_id: cardResult.id,
+      orderId: order.id,
+    });
+  } catch (error) {
+    logger.error('[CardTransparent] Falha ao processar cartão:', error);
+    const msg = error.response?.data?.message || error.message || 'Erro ao processar pagamento com cartão.';
+    return res.status(500).json({ error: msg });
+  }
+});
+
+/**
+ * POST /payment/boleto-transparent - Gera boleto bancário tradicional para pedidos >= R$ 59,90
+ */
+router.post('/boleto-transparent', async (req, res) => {
+  try {
+    await pb.collection('_superusers').authWithPassword(
+      process.env.PB_SUPERUSER_EMAIL,
+      process.env.PB_SUPERUSER_PASSWORD
+    );
+
+    const { orderId } = req.body;
+    if (!orderId) {
+      return res.status(400).json({ error: 'orderId é obrigatório' });
+    }
+
+    let order = null;
+    let collectionName = 'pedidos';
+    try {
+      order = await pb.collection('pedidos').getOne(orderId, { $autoCancel: false });
+    } catch {
+      try {
+        order = await pb.collection('orders').getOne(orderId, { $autoCancel: false });
+        collectionName = 'orders';
+      } catch (errLookup) {
+        return res.status(404).json({ error: 'Pedido não encontrado.' });
+      }
+    }
+
+    // Regra da Avante Lingerie: Boleto exige compra mínima de R$ 59,90
+    if (Number(order.valor_total) < 59.90) {
+      return res.status(400).json({
+        error: 'O boleto bancário é permitido apenas para pedidos a partir de R$ 59,90. Escolha PIX com 5% OFF ou Cartão de Crédito.',
+      });
+    }
+
+    const boletoResult = await mercadoPagoService.createBoletoPayment(order);
+
+    try {
+      await pb.collection(collectionName).update(order.id, {
+        mercadopago_payment_id: String(boletoResult.id),
+        boleto_barcode: boletoResult.barcode || '',
+        boleto_url: boletoResult.ticket_url || '',
+        forma_pagamento: 'boleto',
+        metodo_pagamento: 'boleto',
+      }, { $autoCancel: false });
+    } catch (errPersist) {
+      logger.warn(`[BoletoTransparent] Aviso ao persistir dados do boleto: ${errPersist.message}`);
+    }
+
+    return res.json({
+      sucesso: true,
+      id: boletoResult.id,
+      status: boletoResult.status,
+      barcode: boletoResult.barcode,
+      ticket_url: boletoResult.ticket_url,
+      date_of_expiration: boletoResult.date_of_expiration,
+    });
+  } catch (error) {
+    logger.error('[BoletoTransparent] Falha ao processar boleto:', error);
+    const msg = error.response?.data?.message || error.message || 'Erro ao gerar boleto transparente.';
+    return res.status(500).json({ error: msg });
+  }
+});
+
+/**
+ * GET /payment/order-status/:orderId - Consulta leve para polling em tempo real na tela de confirmação
+ */
+router.get('/order-status/:orderId', async (req, res) => {
+  try {
+    await pb.collection('_superusers').authWithPassword(
+      process.env.PB_SUPERUSER_EMAIL,
+      process.env.PB_SUPERUSER_PASSWORD
+    );
+
+    const { orderId } = req.params;
+    let order = null;
+    try {
+      order = await pb.collection('pedidos').getOne(orderId, { $autoCancel: false });
+    } catch {
+      try {
+        order = await pb.collection('orders').getOne(orderId, { $autoCancel: false });
+      } catch {
+        return res.status(404).json({ error: 'Pedido não encontrado' });
+      }
+    }
+
+    const cached = paymentDataCache.get(String(order.id)) || paymentDataCache.get(String(order.numero_pedido)) || {};
+
+    return res.json({
+      id: order.id,
+      numero_pedido: order.numero_pedido,
+      status: order.status,
+      isApproved: order.status === 'confirmado' || order.status === 'pago',
+      forma_pagamento: order.forma_pagamento || order.metodo_pagamento,
+      payment_id: order.mercadopago_payment_id || cached.mercadopago_payment_id || '',
+      pix_copia_cola: order.pix_copia_cola || cached.pix_copia_cola || cached.qr_code || '',
+      pix_qr_code_base64: order.pix_qr_code_base64 || cached.pix_qr_code_base64 || cached.qr_code_base64 || '',
+      pix_expiracao: order.pix_expiracao || cached.pix_expiracao || cached.date_of_expiration || '',
+      boleto_barcode: order.boleto_barcode || cached.boleto_barcode || cached.barcode || '',
+      boleto_url: order.boleto_url || cached.boleto_url || cached.ticket_url || '',
+    });
+  } catch (error) {
+    return res.status(500).json({ error: error.message });
   }
 });
 

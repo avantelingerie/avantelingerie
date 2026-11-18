@@ -22,10 +22,11 @@ import TrustSection from '@/components/TrustSection.jsx';
 import FAQAccordion from '@/components/FAQAccordion.jsx';
 import { Button } from '@/components/ui/button.jsx';
 import MimoRetentionModal, { MIMO_APPS } from '@/components/MimoRetentionModal.jsx';
+import GiftReservedReminderModal from '@/components/cart/GiftReservedReminderModal.jsx';
 
 export default function CartPage() {
   const navigate = useNavigate();
-  const { currentUser, isAuthenticated, updateUser, signup, login } = useAuth();
+  const { currentUser, isAuthenticated, updateUser, signup, login, requestPasswordReset } = useAuth();
   const genderTerms = getGenderTerms(currentUser?.name || currentUser?.nome_completo);
   
   const { 
@@ -49,7 +50,7 @@ export default function CartPage() {
   const [hasDismissedUpgrade, setHasDismissedUpgrade] = useState(false);
   const [isSubmittingUpgrade, setIsSubmittingUpgrade] = useState(false);
   const [isLoginMode, setIsLoginMode] = useState(false);
-  const [errorModal, setErrorModal] = useState('');
+  const [modalFeedback, setModalFeedback] = useState(null); // { type: 'info' | 'success' | 'error', message: '' }
   
   const [upgradeFormData, setUpgradeFormData] = useState({
     name: '',
@@ -204,7 +205,7 @@ export default function CartPage() {
   const handleUpgradeSubmit = async (e) => {
     e.preventDefault();
     setIsSubmittingUpgrade(true);
-    setErrorModal('');
+    setModalFeedback(null);
 
     const createB2bRequestSilently = async (userId, userData) => {
       try {
@@ -226,7 +227,7 @@ export default function CartPage() {
       if (isAuthenticated) {
         // SCENARIO 1: User is already logged in
         if (!upgradeFormData.cpf) {
-          setErrorModal('O CPF/CNPJ é obrigatório para faturamento de revenda.');
+          setModalFeedback({ type: 'error', message: 'O CPF/CNPJ é obrigatório para faturamento de revenda.' });
           setIsSubmittingUpgrade(false);
           return;
         }
@@ -255,7 +256,20 @@ export default function CartPage() {
       } else {
         // SCENARIO 2: Guest User
         if (!upgradeFormData.email || !upgradeFormData.password) {
-          setErrorModal('E-mail e Senha são obrigatórios.');
+          setModalFeedback({ type: 'error', message: 'E-mail e Senha são obrigatórios.' });
+          setIsSubmittingUpgrade(false);
+          return;
+        }
+
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(upgradeFormData.email.trim())) {
+          setModalFeedback({ type: 'error', message: 'Por favor, informe um e-mail válido (exemplo: seuemail@gmail.com).' });
+          setIsSubmittingUpgrade(false);
+          return;
+        }
+
+        if (upgradeFormData.password.length < 8) {
+          setModalFeedback({ type: 'error', message: 'A senha deve conter no mínimo 8 caracteres.' });
           setIsSubmittingUpgrade(false);
           return;
         }
@@ -290,7 +304,7 @@ export default function CartPage() {
         } else {
           // B) Fast Register & Upgrade
           if (!upgradeFormData.name || !upgradeFormData.cpf) {
-            setErrorModal('Nome completo e CPF/CNPJ são necessários para cadastrar como revenda.');
+            setModalFeedback({ type: 'error', message: 'Nome completo e CPF/CNPJ são necessários para cadastrar como revenda.' });
             setIsSubmittingUpgrade(false);
             return;
           }
@@ -325,13 +339,70 @@ export default function CartPage() {
         } catch (e) {}
       }
     } catch (err) {
-      console.error(err);
-      const msg = err && typeof err === 'object'
-        ? (err.response?.message || err.message)
-        : (err ? String(err) : '');
-      setErrorModal(msg || 'Erro ao processar ativação de revenda. Tente novamente.');
+      console.error('Erro no upgrade de atacado:', err);
+      
+      const fieldErrors = err?.data?.data || err?.response?.data || {};
+
+      if (fieldErrors.email?.code === 'validation_not_unique' || fieldErrors.email?.message?.toLowerCase().includes('unique')) {
+        setModalFeedback({
+          type: 'info',
+          message: 'Que bom ver você de volta! Identificamos sua conta cadastrada. Digite sua senha para entrar e ativar seus descontos de atacado.'
+        });
+        setIsLoginMode(true);
+      } else if (fieldErrors.email?.code === 'validation_is_email' || fieldErrors.email?.message?.toLowerCase().includes('valid email')) {
+        setModalFeedback({
+          type: 'error',
+          message: 'O e-mail digitado parece incompleto ou inválido. Por favor, confira o endereço (ex: nome@gmail.com).'
+        });
+      } else if (fieldErrors.password) {
+        setModalFeedback({
+          type: 'error',
+          message: 'A senha informada deve ter no mínimo 8 caracteres.'
+        });
+      } else if (err?.message?.includes('Failed to authenticate')) {
+        setModalFeedback({
+          type: 'error',
+          message: 'Senha incorreta. Por favor, confira os dados ou clique em "Esqueceu a senha?".'
+        });
+      } else if (err?.message?.includes('Failed to create record')) {
+        setModalFeedback({
+          type: 'info',
+          message: 'Identificamos que você já possui conta! Digite sua senha para entrar e ativar o atacado.'
+        });
+        setIsLoginMode(true);
+      } else {
+        setModalFeedback({
+          type: 'error',
+          message: err?.response?.message || err?.message || 'Erro ao processar ativação de revenda. Tente novamente.'
+        });
+      }
     } finally {
       setIsSubmittingUpgrade(false);
+    }
+  };
+
+  const handleForgotPassword = async () => {
+    const cleanEmail = (upgradeFormData.email || '').trim().toLowerCase();
+    if (!cleanEmail || !cleanEmail.includes('@')) {
+      setModalFeedback({
+        type: 'error',
+        message: 'Por favor, informe seu e-mail no campo acima para receber as instruções de recuperação.'
+      });
+      return;
+    }
+    try {
+      await requestPasswordReset(cleanEmail);
+      toast.success('Link de recuperação enviado com sucesso para seu e-mail!');
+      setModalFeedback({
+        type: 'success',
+        message: 'Enviamos o link de recuperação para seu e-mail! Abra sua caixa de entrada no Gmail para criar sua nova senha.'
+      });
+    } catch (err) {
+      toast.error('Não foi possível enviar o e-mail de recuperação. Verifique se o e-mail está cadastrado.');
+      setModalFeedback({
+        type: 'error',
+        message: 'Não foi possível enviar o e-mail de recuperação. Verifique se o e-mail está cadastrado.'
+      });
     }
   };
 
@@ -409,6 +480,7 @@ export default function CartPage() {
 
   // VIP Retention Gift (Mimo) States & Logic
   const [showGiftModal, setShowGiftModal] = useState(false);
+  const [showGiftReminderModal, setShowGiftReminderModal] = useState(false);
   const [chosenGift, setChosenGift] = useState(() => {
     try {
       const saved = localStorage.getItem('avante_brinde_escolhido');
@@ -418,35 +490,53 @@ export default function CartPage() {
     }
   });
 
-  // Exit-Intent & Retention Idle Trigger for VIP Gift Popup
+  // Exit-Intent & Retention Trigger para Presentes VIP na Sacola (Duplo Estágio Inteligente)
   useEffect(() => {
     if (isEmpty) return;
-    const hasDismissed = sessionStorage.getItem('avante_mimo_popup_dismissed');
-    if (hasDismissed) return;
 
     const handleMouseLeave = (e) => {
+      // Dispara quando o cursor do mouse se move em direção ao topo da janela (sair da página ou fechar aba)
       if (e.clientY < 15) {
-        setShowGiftModal(true);
-        sessionStorage.setItem('avante_mimo_popup_dismissed', 'true');
+        const hasExistingGift = cart.some(i => i.is_mimo || i.is_combo_item) || localStorage.getItem('avante_brinde_escolhido');
+        
+        if (hasExistingGift) {
+          // ESTÁGIO 2: Cliente JÁ escolheu um brinde (ou combo), mas cisma de tentar sair da sacola!
+          // Exibe o modal de lembrete com a caixa de presente animada para não repetir a tela de escolha dos 3 apps.
+          const reminderShown = sessionStorage.getItem('avante_mimo_reminder_shown');
+          if (!reminderShown) {
+            setShowGiftReminderModal(true);
+            sessionStorage.setItem('avante_mimo_reminder_shown', 'true');
+          }
+        } else {
+          // ESTÁGIO 1: Cliente AINDA NÃO escolheu o brinde.
+          // Exibe o modal de retenção para escolher 1 dos 3 Apps ou o Combo.
+          const selectionShown = sessionStorage.getItem('avante_mimo_selection_shown');
+          if (!selectionShown) {
+            setShowGiftModal(true);
+            sessionStorage.setItem('avante_mimo_selection_shown', 'true');
+          }
+        }
       }
     };
 
     document.addEventListener('mouseleave', handleMouseLeave);
 
+    // Timer de inatividade (8 segundos) disparado apenas para quem ainda NÃO possui brinde
     const idleTimer = setTimeout(() => {
-      const dismissed = sessionStorage.getItem('avante_mimo_popup_dismissed');
-      const chosen = localStorage.getItem('avante_brinde_escolhido');
-      if (!dismissed && !chosen && !isEmpty) {
+      const selectionShown = sessionStorage.getItem('avante_mimo_selection_shown');
+      const hasChosen = localStorage.getItem('avante_brinde_escolhido');
+      const hasItemInCart = cart.some(i => i.is_mimo || i.is_combo_item);
+      if (!selectionShown && !hasChosen && !hasItemInCart && !isEmpty) {
         setShowGiftModal(true);
-        sessionStorage.setItem('avante_mimo_popup_dismissed', 'true');
+        sessionStorage.setItem('avante_mimo_selection_shown', 'true');
       }
-    }, 7000);
+    }, 8000);
 
     return () => {
       document.removeEventListener('mouseleave', handleMouseLeave);
       clearTimeout(idleTimer);
     };
-  }, [isEmpty]);
+  }, [isEmpty, cart]);
 
   const handleConfirmGift = (giftData) => {
     setChosenGift(giftData);
@@ -504,6 +594,7 @@ export default function CartPage() {
   const handleRemoveCartItem = (cartItemId) => {
     const item = cart.find(i => i.cartItemId === cartItemId);
     if (item?.is_mimo || item?.is_combo_item) {
+      const isCombo = item.is_combo_item || cart.some(i => i.is_combo_item);
       const allMimoItems = cart.filter(i => 
         i.is_mimo || 
         i.is_combo_item || 
@@ -511,10 +602,40 @@ export default function CartPage() {
         i.id === 'combo-3-apps-vip'
       );
       allMimoItems.forEach(mi => removeFromCart(mi.cartItemId));
-      setChosenGift(null);
-      localStorage.removeItem('avante_brinde_escolhido');
-      toast.info('Presente VIP removido da sacola.');
-      return;
+
+      if (isCombo) {
+        // Se o cliente desfez o Combo de 3 Apps (+R$ 9,90), ele NÃO fica de mãos vazias!
+        // Mantemos 1 App VIP 100% GRÁTIS como brinde legítimo da fábrica:
+        const freeGiftApp = MIMO_APPS[0]; // Método Cintura Esculpida
+        addToCart({
+          id: `app-mimo-${freeGiftApp.id}`,
+          name: `App VIP: ${freeGiftApp.name}`,
+          price: 0,
+          preco_varejo: 0,
+          preco_atacado: 0,
+          image: freeGiftApp.coverImage,
+          selectedSize: 'App VIP',
+          selectedColor: 'Acesso Digital',
+          quantity: 1,
+          stock: 9999,
+          is_digital: true,
+          is_mimo: true,
+          is_combo_item: false,
+          mimo_app_id: freeGiftApp.id
+        });
+        const savedChoice = { ...freeGiftApp, is_combo: false };
+        setChosenGift(savedChoice);
+        localStorage.setItem('avante_brinde_escolhido', JSON.stringify(savedChoice));
+        toast.info('Combo de 3 apps desfeito. Mantivemos o seu 1º App VIP 100% GRÁTIS na sacola!', {
+          duration: 4500
+        });
+        return;
+      } else {
+        setChosenGift(null);
+        localStorage.removeItem('avante_brinde_escolhido');
+        toast.info('Presente VIP removido da sacola.');
+        return;
+      }
     }
 
     // Verifica se após a remoção ainda restará algum item físico
@@ -900,9 +1021,18 @@ export default function CartPage() {
                     </div>
                   </div>
 
-                  {errorModal && (
-                    <div className="mb-3 p-2.5 bg-red-50 border border-red-200 rounded-xl text-red-700 text-xs font-semibold text-center shadow-sm">
-                      {errorModal}
+                  {modalFeedback && (
+                    <div className={`mb-3.5 p-3.5 rounded-xl text-xs font-medium leading-relaxed flex items-start gap-2.5 shadow-sm text-left ${
+                      modalFeedback.type === 'info'
+                        ? 'bg-[#FFFDF9] border border-[#c59b5f]/40 text-[#7A5110]'
+                        : modalFeedback.type === 'success'
+                        ? 'bg-emerald-50 border border-emerald-200 text-emerald-800'
+                        : 'bg-red-50 border border-red-200 text-red-700'
+                    }`}>
+                      {modalFeedback.type === 'info' && <Sparkles className="w-4 h-4 text-[#c59b5f] flex-shrink-0 mt-0.5" />}
+                      {modalFeedback.type === 'success' && <CheckCircle2 className="w-4 h-4 text-emerald-600 flex-shrink-0 mt-0.5" />}
+                      {modalFeedback.type === 'error' && <AlertCircle className="w-4 h-4 text-red-600 flex-shrink-0 mt-0.5" />}
+                      <span className="flex-1">{modalFeedback.message}</span>
                     </div>
                   )}
 
@@ -912,14 +1042,14 @@ export default function CartPage() {
                       <div className="flex border border-gray-200 rounded-xl p-1 bg-gray-55 mb-3">
                         <button
                           type="button"
-                          onClick={() => { setIsLoginMode(false); setErrorModal(''); }}
+                          onClick={() => { setIsLoginMode(false); setModalFeedback(null); }}
                           className={`flex-1 py-1.5 text-xs font-bold rounded-lg transition-all ${!isLoginMode ? 'bg-white text-black shadow-sm' : 'text-gray-500 hover:text-black'}`}
                         >
                           Criar Cadastro Revenda
                         </button>
                         <button
                           type="button"
-                          onClick={() => { setIsLoginMode(true); setErrorModal(''); }}
+                          onClick={() => { setIsLoginMode(true); setModalFeedback(null); }}
                           className={`flex-1 py-1.5 text-xs font-bold rounded-lg transition-all ${isLoginMode ? 'bg-white text-black shadow-sm' : 'text-gray-500 hover:text-black'}`}
                         >
                           Já Tenho Conta (Entrar)
@@ -955,7 +1085,18 @@ export default function CartPage() {
                           />
                         </div>
                         <div className="form-group text-left">
-                          <label className="text-[11px] font-bold text-gray-700 uppercase tracking-wider mb-0.5 block">Senha</label>
+                          <div className="flex items-center justify-between mb-0.5">
+                            <label className="text-[11px] font-bold text-gray-700 uppercase tracking-wider block">Senha</label>
+                            {isLoginMode && (
+                              <button
+                                type="button"
+                                onClick={handleForgotPassword}
+                                className="text-[10px] text-[#c59b5f] hover:text-[#996515] font-semibold underline cursor-pointer"
+                              >
+                                Esqueceu a senha?
+                              </button>
+                            )}
+                          </div>
                           <input
                             type="password"
                             required
@@ -1119,6 +1260,15 @@ export default function CartPage() {
         onClose={() => setShowGiftModal(false)}
         onConfirmChoice={handleConfirmGift}
         currentChoice={chosenGift}
+      />
+
+      {/* POP-UP DE LEMBRETE DE PRESENTE RESERVADO (QUANDO JÁ ESCOLHIDO) */}
+      <GiftReservedReminderModal
+        isOpen={showGiftReminderModal}
+        onClose={() => setShowGiftReminderModal(false)}
+        onProceedToCheckout={handleCheckout}
+        chosenGiftName={chosenGift?.name || 'Aplicativo VIP Exclusivo'}
+        isCombo={Boolean(chosenGift?.is_combo || cart.some(i => i.is_combo_item))}
       />
     </main>
   );

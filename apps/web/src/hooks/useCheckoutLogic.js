@@ -485,7 +485,7 @@ export function useCheckoutLogic() {
   };
 
   // Critical #2 & #16: Build full order payload and save to Pocketbase with retry and double collection fallback
-  const finalizeOrder = async () => {
+  const finalizeOrder = async (cardPayload = null) => {
     if (cart.length === 0) {
       toast.error('Seu carrinho está vazio.');
       return null;
@@ -644,9 +644,99 @@ export function useCheckoutLogic() {
         }
       }
 
-      // Order created successfully!
-      // If payment method is card, PIX or boleto, create a Stripe checkout session
-      if (paymentMethod === 'credit_card' || paymentMethod === 'pix' || paymentMethod === 'boleto') {
+      // ========================================================================
+      // PROCESSAMENTO NATIVO DO CHECKOUT TRANSPARENTE
+      // ========================================================================
+
+      // 1. PIX Transparente (Nativo da Loja - Sem Redirecionamento)
+      if (paymentMethod === 'pix') {
+        try {
+          const pixResponse = await apiServerClient.fetch('/payment/pix-transparent', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ orderId: createdOrder.id }),
+          });
+
+          if (pixResponse.ok) {
+            const pixData = await pixResponse.json();
+            try {
+              sessionStorage.setItem(`avante_pix_${createdOrder.id}`, JSON.stringify(pixData));
+            } catch (e) {
+              console.warn('[Checkout] Aviso ao salvar PIX em sessionStorage:', e);
+            }
+            clearCart();
+            return createdOrder.id;
+          } else {
+            const errPix = await pixResponse.json();
+            toast.error(errPix.error || 'Erro ao gerar o código PIX. Tente novamente.');
+            return null;
+          }
+        } catch (errPixConn) {
+          console.error('[Checkout] Erro ao conectar PIX Transparente:', errPixConn);
+          toast.error('Erro de conexão ao gerar o PIX. Por favor, tente novamente.');
+          return null;
+        }
+      }
+
+      // 2. Cartão de Crédito Transparente (Nativo da Loja via Tokenização Segura)
+      if (paymentMethod === 'credit_card') {
+        if (!cardPayload || !cardPayload.token) {
+          toast.error('Por favor, preencha os dados do seu cartão de crédito para continuar.');
+          return null;
+        }
+
+        try {
+          const cardResponse = await apiServerClient.fetch('/payment/card-transparent', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              orderId: createdOrder.id,
+              ...cardPayload,
+            }),
+          });
+
+          const cardResult = await cardResponse.json();
+
+          if (cardResponse.ok && (cardResult.sucesso || cardResult.status === 'approved' || cardResult.status === 'in_process')) {
+            clearCart();
+            return createdOrder.id;
+          } else {
+            toast.error(cardResult.message || cardResult.error || 'Cartão não autorizado pela operadora.');
+            return null;
+          }
+        } catch (errCardConn) {
+          console.error('[Checkout] Erro ao processar Cartão Transparente:', errCardConn);
+          toast.error('Erro de conexão ao processar seu cartão. Por favor, verifique os dados ou tente pagar com PIX.');
+          return null;
+        }
+      }
+
+      // 3. Boleto Bancário Transparente (Mínimo R$ 59,90)
+      if (paymentMethod === 'boleto') {
+        try {
+          const bolResponse = await apiServerClient.fetch('/payment/boleto-transparent', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ orderId: createdOrder.id }),
+          });
+
+          if (bolResponse.ok) {
+            clearCart();
+            return createdOrder.id;
+          } else {
+            const errBol = await bolResponse.json();
+            toast.error(errBol.error || 'Erro ao emitir o boleto bancário.');
+            return null;
+          }
+        } catch (errBolConn) {
+          console.error('[Checkout] Erro ao conectar Boleto Transparente:', errBolConn);
+          toast.error('Erro de conexão ao emitir o boleto. Tente novamente.');
+          return null;
+        }
+      }
+
+      // 4. Mercado Crédito (Parcelado sem Cartão via Carteira MP - Mínimo R$ 29,90)
+      if (paymentMethod === 'mercado_credito') {
         try {
           const checkoutResponse = await apiServerClient.fetch('/payment/create-checkout-session', {
             method: 'POST',
@@ -659,29 +749,16 @@ export function useCheckoutLogic() {
             if (checkoutSession.url) {
               clearCart();
               window.location.href = checkoutSession.url;
-              return null; // Don't redirect immediately to confirmation page
+              return null;
             }
           } else {
             const errData = await checkoutResponse.json();
-            console.error('[Checkout] Falha ao criar sessão de pagamento Stripe:', errData);
-            toast.error(errData.error || 'Erro ao iniciar sessão de pagamento.');
-            // Cancel order creation since payment session failed
-            try {
-              await pb.collection('pedidos').delete(createdOrder.id);
-            } catch (errDel) {
-              console.warn('[Checkout] Erro ao deletar pedido órfão após falha da Stripe:', errDel);
-            }
+            toast.error(errData.error || 'Erro ao iniciar Linha de Crédito Mercado Pago.');
             return null;
           }
-        } catch (errStripe) {
-          console.error('[Checkout] Erro de rede ao conectar com Stripe:', errStripe);
-          toast.error('Erro de conexão ao iniciar o portal de pagamentos.');
-          // Cancel order creation since payment session failed
-          try {
-            await pb.collection('pedidos').delete(createdOrder.id);
-          } catch (errDel) {
-            console.warn('[Checkout] Erro ao deletar pedido órfão após falha de conexão:', errDel);
-          }
+        } catch (errMc) {
+          console.error('[Checkout] Erro ao conectar Mercado Crédito:', errMc);
+          toast.error('Erro de conexão ao iniciar Mercado Crédito.');
           return null;
         }
       }

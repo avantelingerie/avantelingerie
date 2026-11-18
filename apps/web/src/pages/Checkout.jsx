@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { useNavigate, Link } from 'react-router-dom';
-import { Lock, Shield, UserCircle, Truck, CreditCard, ChevronRight, Loader2, X, Mail, Gift, Clock, CheckCircle } from 'lucide-react';
+import { Lock, Shield, ShieldCheck, UserCircle, Truck, CreditCard, ChevronRight, Loader2, X, Mail, Gift, Clock, CheckCircle, Sparkles, Wallet } from 'lucide-react';
 import { Button } from '@/components/ui/button.jsx';
 import { Switch } from '@/components/ui/switch.jsx';
 import { Label } from '@/components/ui/label.jsx';
@@ -12,6 +12,7 @@ import { useCheckoutLogic } from '@/hooks/useCheckoutLogic.js';
 import CheckoutAddressForm from '@/components/CheckoutAddressForm.jsx';
 import CheckoutOrderSummary from '@/components/CheckoutOrderSummary.jsx';
 import CheckoutMicroOffer from '@/components/CheckoutMicroOffer.jsx';
+import CheckoutCreditCardForm from '@/components/CheckoutCreditCardForm.jsx';
 import MimoRetentionModal, { MIMO_APPS } from '@/components/MimoRetentionModal.jsx';
 import { useCart } from '@/hooks/useCart.js';
 import { trackInitiateCheckout } from '@/lib/marketingPixels.js';
@@ -29,6 +30,7 @@ const formatCPF = (value) => {
 
 export default function Checkout() {
   const navigate = useNavigate();
+  const cardFormRef = React.useRef(null);
   const {
     currentUser,
     personalInfo,
@@ -49,6 +51,8 @@ export default function Checkout() {
     paymentMethod,
     setPaymentMethod,
     isBoletoActive,
+    isBoletoAvailable,
+    boletoValorMinimo,
     boletoVencimentoDias,
     mpMaxParcelas,
     mpParcelaMinima,
@@ -177,19 +181,23 @@ export default function Checkout() {
     }
   };
 
+  const handleRemoveGift = () => {
+    const allMimoItems = cart.filter(i => 
+      i.is_mimo || 
+      i.is_combo_item || 
+      (i.id && i.id.startsWith('app-mimo-')) || 
+      i.id === 'combo-3-apps-vip'
+    );
+    allMimoItems.forEach(mi => removeFromCart(mi.cartItemId));
+    setChosenGift(null);
+    localStorage.removeItem('avante_brinde_escolhido');
+    toast.info('Presente VIP removido do pedido.');
+  };
+
   const handleRemoveCartItem = (cartItemId) => {
     const item = cart.find(i => i.cartItemId === cartItemId);
     if (item?.is_mimo || item?.is_combo_item) {
-      const allMimoItems = cart.filter(i => 
-        i.is_mimo || 
-        i.is_combo_item || 
-        (i.id && i.id.startsWith('app-mimo-')) || 
-        i.id === 'combo-3-apps-vip'
-      );
-      allMimoItems.forEach(mi => removeFromCart(mi.cartItemId));
-      setChosenGift(null);
-      localStorage.removeItem('avante_brinde_escolhido');
-      toast.info('Presente VIP removido do pedido.');
+      handleRemoveGift();
       return;
     }
     removeFromCart(cartItemId);
@@ -271,7 +279,19 @@ export default function Checkout() {
   };
 
   const handleFinalizeOrder = async () => {
-    const orderId = await finalizeOrder();
+    let cardPayload = null;
+    if (paymentMethod === 'credit_card') {
+      if (!cardFormRef.current) {
+        toast.error('Formulário de cartão não encontrado.');
+        return;
+      }
+      cardPayload = await cardFormRef.current.createToken();
+      if (!cardPayload) {
+        return;
+      }
+    }
+
+    const orderId = await finalizeOrder(cardPayload);
     if (orderId) {
       navigate(`/order-confirmation/${orderId}`);
     }
@@ -655,101 +675,235 @@ export default function Checkout() {
               )}
             </div>
 
+            {/* BRASÃO NOBRE DE BLINDAGEM & COMPRA DIRETA DA FÁBRICA */}
+            <div className="bg-gradient-to-r from-[#17140e] via-[#1f1a12] to-[#17140e] text-white rounded-3xl p-6 sm:p-7 border border-[#c59b5f]/40 shadow-[0_8px_30px_rgba(197,155,95,0.18)] flex flex-col transition-all relative overflow-hidden">
+              <div className="absolute -top-12 -right-12 w-44 h-44 bg-[#c59b5f]/15 rounded-full blur-3xl pointer-events-none" />
+              
+              <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 sm:gap-5 relative z-10 text-center sm:text-left">
+                {/* Ícone Brasão com Glow Nobre */}
+                <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-gradient-to-br from-[#c59b5f] via-[#deb881] to-[#b0874c] p-0.5 shadow-[0_0_25px_rgba(197,155,95,0.4)] shrink-0 flex items-center justify-center">
+                  <div className="w-full h-full bg-[#120f0a] rounded-[14px] flex items-center justify-center text-[#deb881]">
+                    <ShieldCheck className="w-8 h-8 text-[#deb881]" strokeWidth={1.75} />
+                  </div>
+                </div>
+
+                <div className="flex-1">
+                  <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#c59b5f]/20 border border-[#c59b5f]/40 text-[#deb881] text-[10px] sm:text-xs font-bold uppercase tracking-widest mb-2">
+                    <Lock className="w-3 h-3" /> Checkout 100% Blindado
+                  </div>
+                  <h3 className="font-serif font-extrabold text-base sm:text-lg text-white leading-tight">
+                    Ambiente Seguro & Compra Direta da Fábrica
+                  </h3>
+                  <p className="text-xs sm:text-sm text-gray-300 font-light mt-1.5 leading-relaxed max-w-xl">
+                    Seus dados estão protegidos com criptografia bancária oficial de 256 bits pelo <strong className="text-white font-semibold">Mercado Pago</strong>. Compre com a tranquilidade e a garantia de quem confecciona em Nova Friburgo/RJ.
+                  </p>
+
+                  {/* 3 Selos de Ouro da Fábrica */}
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 mt-4 pt-3.5 border-t border-white/10 text-[11px] text-gray-300">
+                    <div className="flex items-center justify-center sm:justify-start gap-1.5 font-medium">
+                      <span className="text-[#deb881]">🔒</span> Criptografia Bancária 256-bit
+                    </div>
+                    <div className="flex items-center justify-center sm:justify-start gap-1.5 font-medium">
+                      <span className="text-[#deb881]">🏭</span> Fábrica Própria Friburgo
+                    </div>
+                    <div className="flex items-center justify-center sm:justify-start gap-1.5 font-medium">
+                      <span className="text-[#deb881]">✨</span> Troca Descomplicada 7 Dias
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
             {/* PAYMENT METHODS SECTION */}
             <div className="bg-white border border-[#c59b5f]/15 rounded-3xl p-6 md:p-8 shadow-premium-sm flex flex-col transition-all duration-300 hover:shadow-[0_12px_30px_rgba(197,155,95,0.04)]">
               <div className="flex items-center gap-2 mb-6">
                 <div className="w-8 h-8 rounded-full bg-[#c59b5f]/10 border border-[#c59b5f]/20 flex items-center justify-center text-[#c59b5f]">
                   <CreditCard className="w-4 h-4" strokeWidth={1.5} />
                 </div>
-                <h3 className="text-base font-serif font-bold text-gray-950">Forma de Pagamento</h3>
+                <div>
+                  <h3 className="text-base font-serif font-bold text-gray-950">Forma de Pagamento</h3>
+                  <p className="text-xs text-gray-400 font-light">Selecione como prefere pagar o seu pedido</p>
+                </div>
               </div>
 
-              <div className={`grid grid-cols-1 ${isBoletoActive ? 'sm:grid-cols-3' : 'sm:grid-cols-2'} gap-4`}>
-                <div
-                  onClick={() => !isSubmitting && setPaymentMethod('credit_card')}
-                  className={`border-2 rounded-2xl p-6 cursor-pointer transition-all duration-300 ${isSubmitting ? 'cursor-not-allowed opacity-60' : ''} ${paymentMethod === 'credit_card' ? 'border-[#c59b5f] bg-[#c59b5f]/5 shadow-premium-sm scale-[1.01]' : 'border-gray-100 hover:border-[#c59b5f]/30 hover:bg-[#FFFBF8]'}`}
-                >
-                  <div className="flex items-center gap-3">
-                    <div className={`w-5 h-5 rounded-full border-2 flex items-center justify-center transition-colors ${paymentMethod === 'credit_card' ? 'border-[#c59b5f]' : 'border-gray-300'}`}>
-                      {paymentMethod === 'credit_card' && <div className="w-2.5 h-2.5 rounded-full bg-[#c59b5f]" />}
-                    </div>
-                    <span className="font-bold text-gray-900 text-sm tracking-wide">Cartão de Crédito</span>
-                  </div>
-                  <p className="text-xs text-gray-400 font-light mt-2 ml-8">
-                    {maxCardInstallments > 1
-                      ? `Em até ${maxCardInstallments}x de R$ ${cardInstallmentValue} no cartão`
-                      : `1x de R$ ${(finalTotal || 0).toFixed(2).replace('.', ',')} no cartão`}
-                  </p>
-                </div>
+              {/* Grid Responsiva das Formas de Pagamento */}
+              {(() => {
+                const isBoletoEligible = isBoletoActive && finalTotal >= (boletoValorMinimo || 59.90);
+                const isMercadoCreditoEligible = finalTotal >= 29.90;
 
-                <div
-                  onClick={() => !isSubmitting && setPaymentMethod('pix')}
-                  className={`border-2 rounded-2xl p-6 cursor-pointer transition-all duration-300 ${isSubmitting ? 'cursor-not-allowed opacity-60' : ''} ${paymentMethod === 'pix' ? 'border-[#c59b5f] bg-[#c59b5f]/5 shadow-premium-sm scale-[1.01]' : 'border-gray-100 hover:border-[#c59b5f]/30 hover:bg-[#FFFBF8]'}`}
-                >
-                  <div className="flex items-center gap-3">
-                    <div className={`w-5 h-5 rounded-full border-2 flex items-center justify-center transition-colors ${paymentMethod === 'pix' ? 'border-[#c59b5f]' : 'border-gray-300'}`}>
-                      {paymentMethod === 'pix' && <div className="w-2.5 h-2.5 rounded-full bg-[#c59b5f]" />}
-                    </div>
-                    <span className="font-bold text-gray-900 text-sm tracking-wide">PIX</span>
-                  </div>
-                  <p className="text-xs text-[#c59b5f] font-extrabold mt-2 ml-8 uppercase tracking-widest">5% OFF</p>
-                </div>
-
-                {isBoletoActive && (
-                  <div
-                    onClick={() => !isSubmitting && setPaymentMethod('boleto')}
-                    className={`border-2 rounded-2xl p-6 cursor-pointer transition-all duration-300 ${isSubmitting ? 'cursor-not-allowed opacity-60' : ''} ${paymentMethod === 'boleto' ? 'border-[#c59b5f] bg-[#c59b5f]/5 shadow-premium-sm scale-[1.01]' : 'border-gray-100 hover:border-[#c59b5f]/30 hover:bg-[#FFFBF8]'}`}
-                  >
-                    <div className="flex items-center gap-3">
-                      <div className={`w-5 h-5 rounded-full border-2 flex items-center justify-center transition-colors ${paymentMethod === 'boleto' ? 'border-[#c59b5f]' : 'border-gray-300'}`}>
-                        {paymentMethod === 'boleto' && <div className="w-2.5 h-2.5 rounded-full bg-[#c59b5f]" />}
+                return (
+                  <>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                      {/* 1. Cartão de Crédito Transparente */}
+                      <div
+                        onClick={() => !isSubmitting && setPaymentMethod('credit_card')}
+                        className={`border-2 rounded-2xl p-5 cursor-pointer transition-all duration-300 ${isSubmitting ? 'cursor-not-allowed opacity-60' : ''} ${paymentMethod === 'credit_card' ? 'border-[#c59b5f] bg-[#c59b5f]/5 shadow-premium-sm scale-[1.01]' : 'border-gray-100 hover:border-[#c59b5f]/30 hover:bg-[#FFFBF8]'}`}
+                      >
+                        <div className="flex items-center justify-between">
+                          <div className="flex items-center gap-3">
+                            <div className={`w-5 h-5 rounded-full border-2 flex items-center justify-center transition-colors ${paymentMethod === 'credit_card' ? 'border-[#c59b5f]' : 'border-gray-300'}`}>
+                              {paymentMethod === 'credit_card' && <div className="w-2.5 h-2.5 rounded-full bg-[#c59b5f]" />}
+                            </div>
+                            <span className="font-bold text-gray-900 text-sm tracking-wide">Cartão de Crédito</span>
+                          </div>
+                          <span className="text-[10px] font-bold uppercase tracking-wider text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-200">
+                            Até {maxCardInstallments}x
+                          </span>
+                        </div>
+                        <p className="text-xs text-gray-500 font-light mt-2 ml-8">
+                          {maxCardInstallments > 1
+                            ? `Em até ${maxCardInstallments}x de R$ ${cardInstallmentValue} sem juros`
+                            : `1x de R$ ${(finalTotal || 0).toFixed(2).replace('.', ',')} no cartão`}
+                        </p>
                       </div>
-                      <span className="font-bold text-gray-900 text-sm tracking-wide">Boleto</span>
-                    </div>
-                    <p className="text-xs text-gray-400 font-light mt-2 ml-8">
-                      Vencimento em {boletoVencimentoDias} {parseInt(boletoVencimentoDias, 10) === 1 ? 'dia' : 'dias'}
-                    </p>
-                  </div>
-                )}
-              </div>
 
-              {paymentMethod === 'boleto' ? (
-                <div className="bg-amber-50/60 border border-amber-200/50 rounded-2xl p-5 flex gap-4 text-xs text-amber-800 leading-relaxed font-light mt-6">
-                  <Clock className="w-5 h-5 text-amber-600 shrink-0 mt-0.5" strokeWidth={1.5} />
-                  <div className="text-left">
-                    <strong className="block font-serif text-sm font-bold text-amber-900 mb-1">Aviso de Compensação:</strong>
-                    O boleto bancário pode levar **de 1 a 3 dias úteis** para ser compensado pelo sistema.
-                    Seu pedido será preparado e enviado somente após a confirmação automática do pagamento pelo Mercado Pago.
-                    O envio de comprovantes de pagamento não antecipa a liberação do pedido.
-                  </div>
-                </div>
-              ) : paymentMethod === 'credit_card' ? (
-                <div className="bg-[#FFFBF8] border border-[#c59b5f]/30 rounded-2xl p-4.5 mt-6 flex items-start gap-3.5 text-xs text-gray-700 shadow-premium-sm transition-all duration-300">
-                  <div className="w-8 h-8 rounded-full bg-[#c59b5f]/15 border border-[#c59b5f]/30 flex items-center justify-center text-[#c59b5f] shrink-0 mt-0.5">
-                    <Lock className="w-4 h-4" />
-                  </div>
-                  <div className="flex-1 text-left">
-                    <div className="flex items-center justify-between gap-2 flex-wrap mb-1">
-                      <strong className="font-bold text-gray-950 text-sm">Ambiente Oficial Seguro Mercado Pago</strong>
-                      <span className="text-[10px] uppercase font-bold tracking-wider text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-200">
-                        Criptografia 256-bit SSL
-                      </span>
+                      {/* 2. PIX Instantâneo com 5% OFF */}
+                      <div
+                        onClick={() => !isSubmitting && setPaymentMethod('pix')}
+                        className={`border-2 rounded-2xl p-5 cursor-pointer transition-all duration-300 ${isSubmitting ? 'cursor-not-allowed opacity-60' : ''} ${paymentMethod === 'pix' ? 'border-[#c59b5f] bg-[#c59b5f]/5 shadow-premium-sm scale-[1.01]' : 'border-gray-100 hover:border-[#c59b5f]/30 hover:bg-[#FFFBF8]'}`}
+                      >
+                        <div className="flex items-center justify-between">
+                          <div className="flex items-center gap-3">
+                            <div className={`w-5 h-5 rounded-full border-2 flex items-center justify-center transition-colors ${paymentMethod === 'pix' ? 'border-[#c59b5f]' : 'border-gray-300'}`}>
+                              {paymentMethod === 'pix' && <div className="w-2.5 h-2.5 rounded-full bg-[#c59b5f]" />}
+                            </div>
+                            <span className="font-bold text-gray-900 text-sm tracking-wide">PIX Instantâneo</span>
+                          </div>
+                          <span className="text-[10px] font-extrabold uppercase tracking-wider text-black bg-[#c59b5f] px-2.5 py-0.5 rounded-full shadow-sm">
+                            ⚡ 5% OFF
+                          </span>
+                        </div>
+                        <p className="text-xs text-gray-500 font-light mt-2 ml-8">
+                          Aprovação imediata na tela com chave Copia e Cola
+                        </p>
+                      </div>
+
+                      {/* 3. Mercado Crédito (Parcelado sem Cartão) - Elegível >= R$ 29,90 */}
+                      {isMercadoCreditoEligible && (
+                        <div
+                          onClick={() => !isSubmitting && setPaymentMethod('mercado_credito')}
+                          className={`border-2 rounded-2xl p-5 cursor-pointer transition-all duration-300 ${isSubmitting ? 'cursor-not-allowed opacity-60' : ''} ${paymentMethod === 'mercado_credito' ? 'border-[#c59b5f] bg-[#c59b5f]/5 shadow-premium-sm scale-[1.01]' : 'border-gray-100 hover:border-[#c59b5f]/30 hover:bg-[#FFFBF8]'}`}
+                        >
+                          <div className="flex items-center justify-between">
+                            <div className="flex items-center gap-3">
+                              <div className={`w-5 h-5 rounded-full border-2 flex items-center justify-center transition-colors ${paymentMethod === 'mercado_credito' ? 'border-[#c59b5f]' : 'border-gray-300'}`}>
+                                {paymentMethod === 'mercado_credito' && <div className="w-2.5 h-2.5 rounded-full bg-[#c59b5f]" />}
+                              </div>
+                              <span className="font-bold text-gray-900 text-sm tracking-wide">Mercado Crédito</span>
+                            </div>
+                            <span className="text-[10px] font-bold uppercase tracking-wider text-blue-800 bg-blue-50 px-2 py-0.5 rounded-full border border-blue-200">
+                              Sem Cartão
+                            </span>
+                          </div>
+                          <p className="text-xs text-gray-500 font-light mt-2 ml-8">
+                            Pague parcelado em até 12x usando limite da conta MP
+                          </p>
+                        </div>
+                      )}
+
+                      {/* 4. Boleto Bancário - Elegível >= R$ 59,90 */}
+                      {isBoletoEligible && (
+                        <div
+                          onClick={() => !isSubmitting && setPaymentMethod('boleto')}
+                          className={`border-2 rounded-2xl p-5 cursor-pointer transition-all duration-300 ${isSubmitting ? 'cursor-not-allowed opacity-60' : ''} ${paymentMethod === 'boleto' ? 'border-[#c59b5f] bg-[#c59b5f]/5 shadow-premium-sm scale-[1.01]' : 'border-gray-100 hover:border-[#c59b5f]/30 hover:bg-[#FFFBF8]'}`}
+                        >
+                          <div className="flex items-center justify-between">
+                            <div className="flex items-center gap-3">
+                              <div className={`w-5 h-5 rounded-full border-2 flex items-center justify-center transition-colors ${paymentMethod === 'boleto' ? 'border-[#c59b5f]' : 'border-gray-300'}`}>
+                                {paymentMethod === 'boleto' && <div className="w-2.5 h-2.5 rounded-full bg-[#c59b5f]" />}
+                              </div>
+                              <span className="font-bold text-gray-900 text-sm tracking-wide">Boleto Bancário</span>
+                            </div>
+                            <span className="text-[10px] font-medium text-gray-500 bg-gray-100 px-2 py-0.5 rounded-full">
+                              3 dias úteis
+                            </span>
+                          </div>
+                          <p className="text-xs text-gray-500 font-light mt-2 ml-8">
+                            Vencimento em {boletoVencimentoDias || 3} dias úteis
+                          </p>
+                        </div>
+                      )}
                     </div>
-                    <p className="text-gray-500 font-light leading-relaxed">
-                      Ao clicar no botão abaixo, você será direcionada para a tela oficial de pagamento seguro do <strong>Mercado Pago</strong> para inserir os dados do seu cartão ou escolher suas parcelas com proteção total da sua compra.
-                    </p>
-                    <div className="flex items-center gap-2 mt-2.5 text-[11px] text-gray-400 font-medium">
-                      <span>Aceita:</span>
-                      <span className="text-gray-700 font-semibold">Visa, Mastercard, Elo, Hipercard, Amex</span>
-                      <span>• Em até {maxCardInstallments}x</span>
-                    </div>
-                  </div>
-                </div>
-              ) : (
-                <div className="bg-[#FFFBF8] p-5 rounded-2xl text-center text-xs text-gray-400 border border-dashed border-[#c59b5f]/25 font-light mt-6 opacity-80">
-                  Ambiente de pagamento 100% seguro pelo Mercado Pago. Aceitamos Cartões, PIX, Boleto (a partir de R$ 59,90) e Mercado Crédito (a partir de R$ 29,90).
-                </div>
-              )}
+
+                    {/* BLOCO DE TRANSPARÊNCIA & DESBLOQUEIO DE PAGAMENTOS (UPSELL POSITIVO) */}
+                    {(finalTotal < 29.90 || (!isBoletoEligible && finalTotal < 59.90)) && (
+                      <div className="bg-gradient-to-r from-[#FFFDF9] via-[#FAF6F0] to-[#FFFDF9] border border-[#c59b5f]/35 rounded-2xl p-5 mt-5 shadow-xs text-left">
+                        <div className="flex items-center gap-2.5 text-[#c59b5f] font-serif font-bold text-sm mb-3">
+                          <div className="w-6 h-6 rounded-full bg-[#c59b5f]/15 border border-[#c59b5f]/30 flex items-center justify-center shrink-0">
+                            <Sparkles className="w-3.5 h-3.5 text-[#c59b5f]" />
+                          </div>
+                          <span className="tracking-wide">Condições Especiais da Fábrica</span>
+                        </div>
+                        <div className="space-y-2.5 text-gray-700 font-light text-xs">
+                          {finalTotal < 29.90 && (
+                            <div className="flex items-start gap-2.5">
+                              <span className="w-1.5 h-1.5 rounded-full bg-[#c59b5f] mt-1.5 shrink-0" />
+                              <p className="leading-relaxed">
+                                <strong className="font-semibold text-gray-900">Desbloqueie Mercado Crédito (sem cartão):</strong> Disponível para compras a partir de <strong>R$ 29,90</strong> em até 12x. Faltam apenas <strong className="text-[#c59b5f] font-bold">R$ {(29.90 - finalTotal).toFixed(2).replace('.', ',')}</strong> no seu pedido.
+                              </p>
+                            </div>
+                          )}
+                          {finalTotal < 59.90 && (
+                            <div className="flex items-start gap-2.5">
+                              <span className="w-1.5 h-1.5 rounded-full bg-[#c59b5f] mt-1.5 shrink-0" />
+                              <p className="leading-relaxed">
+                                <strong className="font-semibold text-gray-900">Desbloqueie Boleto Bancário:</strong> Liberado para compras a partir de <strong>R$ 59,90</strong>. Adicione mais <strong className="text-[#c59b5f] font-bold">R$ {(59.90 - finalTotal).toFixed(2).replace('.', ',')}</strong> em peças de lingerie para pagar no boleto.
+                              </p>
+                            </div>
+                          )}
+                        </div>
+                      </div>
+                    )}
+
+                    {/* CONTEÚDO ESPECÍFICO DO MÉTODO SELECIONADO */}
+                    {paymentMethod === 'credit_card' ? (
+                      <CheckoutCreditCardForm
+                        ref={cardFormRef}
+                        finalTotal={finalTotal}
+                        defaultCpf={personalInfo?.cpf || currentUser?.cpf}
+                        defaultName={personalInfo?.nome || currentUser?.name}
+                      />
+                    ) : paymentMethod === 'pix' ? (
+                      <div className="bg-[#FFFDF9] border border-[#c59b5f]/30 rounded-2xl p-5 mt-6 flex items-start gap-3.5 text-xs text-gray-700 shadow-premium-sm transition-all text-left">
+                        <div className="w-9 h-9 rounded-full bg-[#c59b5f]/15 border border-[#c59b5f]/30 flex items-center justify-center text-[#c59b5f] shrink-0 mt-0.5">
+                          <Sparkles className="w-5 h-5 text-[#c59b5f]" />
+                        </div>
+                        <div>
+                          <strong className="block font-serif text-sm font-bold text-gray-900 mb-1">
+                            PIX Transparente da Fábrica • 5% de Desconto Imediato
+                          </strong>
+                          <p className="text-gray-500 font-light leading-relaxed">
+                            Ao clicar no botão de concluir, geraremos na hora o seu <strong>QR Code</strong> e a <strong>Chave Copia e Cola</strong> diretamente nesta página, com confirmação automática em segundos pelo seu aplicativo do banco.
+                          </p>
+                        </div>
+                      </div>
+                    ) : paymentMethod === 'mercado_credito' ? (
+                      <div className="bg-[#F0F8FF] border border-blue-200 rounded-2xl p-5 mt-6 flex items-start gap-3.5 text-xs text-gray-700 shadow-premium-sm transition-all text-left">
+                        <div className="w-9 h-9 rounded-full bg-blue-100 border border-blue-200 flex items-center justify-center text-blue-600 shrink-0 mt-0.5">
+                          <Wallet className="w-5 h-5 text-blue-600" />
+                        </div>
+                        <div>
+                          <strong className="block font-serif text-sm font-bold text-blue-950 mb-1">
+                            Parcelamento sem Cartão (Mercado Crédito)
+                          </strong>
+                          <p className="text-gray-600 font-light leading-relaxed">
+                            Você utilizará o seu limite disponível do Mercado Pago para parcelar suas compras em até 12x no boleto ou Pix. Ao clicar abaixo, a tela de autorização segura será iniciada.
+                          </p>
+                        </div>
+                      </div>
+                    ) : (
+                      <div className="bg-amber-50/60 border border-amber-200/50 rounded-2xl p-5 flex gap-4 text-xs text-amber-800 leading-relaxed font-light mt-6 text-left">
+                        <Clock className="w-5 h-5 text-amber-600 shrink-0 mt-0.5" strokeWidth={1.5} />
+                        <div>
+                          <strong className="block font-serif text-sm font-bold text-amber-900 mb-1">Aviso de Compensação:</strong>
+                          O boleto bancário pode levar <strong>de 1 a 3 dias úteis</strong> para ser compensado pelo sistema.
+                          Seu pedido entrará em separação na fábrica assim que o pagamento for confirmado.
+                        </div>
+                      </div>
+                    )}
+                  </>
+                );
+              })()}
             </div>
 
           </div>
@@ -780,6 +934,7 @@ export default function Checkout() {
                 tipoCliente={currentUser?.tipo_cliente || 'varejo'}
                 chosenGift={chosenGift}
                 onOpenGiftModal={() => setShowGiftModal(true)}
+                onRemoveGift={handleRemoveGift}
               />
 
               <Button
@@ -798,10 +953,12 @@ export default function Checkout() {
                   : showWholesaleLock
                   ? 'MÍNIMO DE ATACADO NÃO ATINGIDO'
                   : paymentMethod === 'credit_card'
-                  ? 'PAGAR COM CARTÃO NO MERCADO PAGO 🔒'
+                  ? 'CONFIRMAR PAGAMENTO NO CARTÃO 🔒'
                   : paymentMethod === 'pix'
-                  ? 'PAGAR COM PIX (5% OFF) ⚡'
-                  : 'CONCLUIR COMPRA COM BOLETO'}
+                  ? 'CONCLUIR PEDIDO COM PIX (5% OFF) ⚡'
+                  : paymentMethod === 'mercado_credito'
+                  ? 'PAGAR COM MERCADO CRÉDITO 💎'
+                  : 'CONCLUIR COMPRA COM BOLETO 📄'}
               </Button>
 
               <p className="text-[10px] text-gray-400 font-light text-center mt-3.5 px-4 leading-normal max-w-sm mx-auto">

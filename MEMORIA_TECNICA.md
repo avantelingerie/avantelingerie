@@ -2770,3 +2770,137 @@ Garantir que as dimensﾃｵes e pesos cadastrados na loja e calculados no check
   - `npm run test:shield`: 17/17 verificações aprovadas com 100% de sucesso.
   - `node --check apps/api/src/routes/ads.js`: Sintaxe ESM válida.
   - ESLint no frontend (`apps/web`): 0 erros.
+
+### 19. Implementação do Checkout Transparente Mercado Pago, Resolução de Validação de Mimos e Ajustes Finos de UX
+- **Data:** 17 de Novembro de 2026 (Noite / Fechamento de Sessão)
+- **Contexto:** Construção e refinamento do Checkout Transparente da Avante Lingerie sem redirecionamento para o Checkout Pro, preservando o cliente dentro do domínio `avantelingerie.com.br`. Resolução dos entraves de validação de itens com preço zero (mimos) e estabilização do fluxo de PIX.
+- **Ações Executadas e Decisões Históricas (Primeira Regra de Ouro):**
+  1. *Arquitetura do Checkout Transparente:*
+     - Frontend com visual nobre de alta conversão: Brasão Nobre, headline de blindagem SSL, 3 Selos de Ouro, seletor de 4 meios de pagamento (Cartão de Crédito até 6x, PIX Instantâneo com 5% OFF, Boleto Bancário e Mercado Crédito).
+     - Formulário nativo de Cartão de Crédito com detecção dinâmica de bandeira e tokenização segura via SDK JS v2 do Mercado Pago (`window.MercadoPago`).
+     - Box elegante de transparência e upsell positivo de condições de pagamento (aviso sobre limites mínimos de R$ 29,90 para Mercado Crédito e R$ 59,90 para Boleto).
+  2. *Resolução do Erro de Validação de Brindes (`Itens[1]: preco must be at least 0.01`):*
+     - Causa Raiz: O hook de validação do PocketBase (`apps/pocketbase/pb_hooks/pedidos-payload-validation.pb.js`) barrava itens com preço inferior a R$ 0,01. Ao adicionar brindes digitais gratuitos (`preco: 0`), o pedido era rejeitado.
+     - Solução:
+       - Atualizado o hook `pedidos-payload-validation.pb.js` para aceitar `preco >= 0.00`, barrando apenas valores negativos.
+       - Backend (`payment.js`) implementou fallback inteligente com `preco_unitario: 0.00` e bypass de redução de estoque físico para itens digitais/encomendas.
+       - Admin (`PedidoItens.jsx`) atualizado para exibir `GRÁTIS` e `R$ 0,00` com badge destacada.
+  3. *Correção dos 3 Pontos Reportados pelo Lojista:*
+     - **Print 1 (Alinhamento das Condições Especiais):** Substituídos marcadores de texto cru por bullets dourados circulares com margem e alinhamento vertical perfeitos, recuo elegante e tipografia nítida.
+     - **Print 2 (Imagem e Valor do App VIP na Confirmação):** Corrigido o resolvedor de imagem em `OrderConfirmation.jsx` para aceitar caminhos absolutos locais (`/assets/...`), container com fundo branco e `object-contain`, e preço formatado como `GRÁTIS / R$ 0,00` acompanhado do selo `🎁 Brinde VIP Grátis`.
+     - **Print 3 (QR Code do PIX e Carregamento Contínuo):** Implementado cache em memória de alta performance no backend (`paymentDataCache`) para persistir o QR Code gerado pelo Mercado Pago. No frontend, adicionada persistência em `sessionStorage` e rotina de auto-recuperação imediata com polling no `OrderConfirmation.jsx` que requisita o PIX sob demanda caso não venha no payload inicial, eliminando qualquer estado de carregamento infinito.
+- **Validações de Qualidade:**
+  - `npm run test:shield`: 17/17 verificações aprovadas com 100% de sucesso.
+  - `node --check apps/api/src/routes/payment.js`: Sintaxe ESM válida (código 0).
+  - Integridade dos arquivos confirmada. Pronto para continuidade na manhã de 18/11/2026.
+
+### 20. Otimização de Hardware Local: Eliminação de Vazamento de 3,4 GB de Memória RAM (ElevocControlService)
+- **Data:** 18 de Novembro de 2026 (Manhã)
+- **Contexto:** Diagnóstico de lentidão severa e congelamento no notebook do lojista (com 3,7 GB de RAM física e Windows 11). Identificação e neutralização do vilão que sobrecarregava o sistema operacional e a memória virtual.
+- **Ações Executadas e Descobertas:**
+  1. *Diagnóstico da Causa Raiz:*
+     - A máquina apresentava 89% de uso de RAM e 10,8 GB de memória comprometida (commit charge).
+     - Identificado vazamento massivo de memória (*memory leak*) no serviço de fábrica da Lenovo **`ElevocService` (`ElevocControlService.exe`)**, que acumulou sozinho **3.416 MB (3,41 GB)** de memória privada.
+  2. *Resolução Cirúrgica e Definitiva:*
+     - O serviço foi interrompido e configurado formalmente como **`Desativado` (`Disabled`)** no `services.msc`.
+     - O processo `ElevocControlService.exe` foi totalmente encerrado da memória.
+     - O driver oficial de som e microfone (`Realtek(R) Audio`) e o recurso de fala por voz da Microsoft (`Windows + H`) permaneceram 100% preservados e funcionais.
+     - Mais de **3,4 GB de memória** foram devolvidos ao sistema operacional, liberando o gargalo do SSD e restaurando a fluidez da máquina.
+
+
+
+
+---
+
+## Capítulo 21: Refinamento de Alta Conversão do Checkout Transparente, Pop-up de Retenção e Auditoria de Gateways (Novembro/2026)
+
+### 1. Contexto e Objetivos do Refinamento
+Após a implementação inicial do Checkout Transparente (PIX, Cartão e Boleto direto na loja), a liderança técnica e o fundador conduziram testes empíricos de ponta a ponta na esteira de compras. As auditorias práticas apontaram melhorias cruciais de UX, psicologia de consumo e regras de negócio para maximizar a conversão e blindar a percepção de valor:
+
+1. **Desfazimento Inteligente do Combo 3 Apps (+R$ 9,90):**
+   - No carrinho, ao excluir 1 dos 3 apps do combo, o sistema cancela a taxa de R$ 9,90 do pacote, mas **preserva automaticamente 1 App VIP 100% GRÁTIS** (Método Cintura Esculpida) para que o cliente nunca se sinta penalizado ou perca o benefício a que tem direito.
+2. **Pop-up Exclusivo de Retenção com Presente Já Escolhido:**
+   - Criação do componente `GiftReservedReminderModal.jsx`. Quando o cliente que já possui um brinde VIP na sacola tenta sair da página (Exit-Intent), a interface não exibe novamente a seleção de apps, mas sim uma notificação de alto impacto com a caixa de presente dourada com fita vermelha em tamanho imponente, alertando que a reserva exclusiva será cancelada caso a compra não seja concluída.
+3. **Desacoplamento do Rastreador de Pedido Pendente:**
+   - Na página de confirmação (`OrderConfirmation.jsx`), o componente de esteira de envio ("Pedido Confirmado -> Em separação -> Enviado -> Entregue") foi condicionado estritamente a `order.isPaid`. Durante a pendência de PIX ou Boleto, a esteira é oculta para manter o foco total do cliente no pagamento imediato.
+4. **Card Nobre do PIX em Estilo Haute Couture Light Luxury:**
+   - Redesenho completo do Card do PIX, substituindo o fundo escuro por um gradiente Creme Acetinado e Ouro Nobre (`from-[#FFFDF9] via-[#FAF6F0] to-[#FFF8EE]` com borda dourada), criando contraste e ritmo visual elegante com o Card do Presente VIP em estojo escuro logo abaixo.
+   - Inclusão de botão de recarregamento e tratamento de fallback para evitar travamento em spinner.
+5. **Bloqueio Educado do Presente VIP Antes da Confirmação do Pagamento:**
+   - Enquanto `!order.isPaid`, os botões de acesso ao aplicativo exibem estado reservado com cadeado (`🔒 Acesso Reservado`). Ao clicar, um modal elegante explica educadamente que o acesso vitalício é liberado automaticamente assim que o PIX for compensado no banco (em menos de 10 segundos).
+6. **Harmonização do Resumo Financeiro:**
+   - Correção do rótulo para `Total a Pagar` durante a pendência e substituição do ícone de cartão pelo ícone de raio esmeralda (`Zap`) com o texto: `Forma de Pagamento: PIX Instantâneo (5% OFF) — Aguardando Pagamento`.
+7. **Auditoria de Taxas e Parcelamento (Mercado Pago e Stripe):**
+   - Mapeamento das regras de parcelamento nacional no Mercado Pago (absorção de custos via painel "Parcelamento sem acréscimo" vs repasse de juros ao comprador) e internacional na Stripe.
+
+### 2. Validação e Não-Regressão
+- `npm run test:shield`: 17/17 verificações aprovadas com louvor.
+- `npm run build --prefix apps/web`: Build de produção Vite concluído com sucesso e saída otimizada.
+
+
+---
+
+## 22. Auditoria e Calibração de Responsividade Completa (Celulares, Tablets e Notebooks)
+- **Overlay de Celebração (`OrderCelebrationOverlay.jsx`):**
+  - Dimensionamento proporcional testado para telas de 320px (iPhone SE) até 4K (Ultra-Wide).
+  - Imagem transparente (`celebration-banner.png`) flutuante com `max-w-[360px] sm:max-w-[440px] md:max-w-[470px]` e `max-h-[82vh]`.
+  - Dupla saída: toque em qualquer ponto da tela (listener com captura) e auto-dispensação suave em 6,5 segundos.
+- **Card de Pagamento PIX Transparente (`OrderConfirmation.jsx`):**
+  - Aplicação de `min-w-0` em todos os nós flex para garantir reticências automáticas na chave longa sem empurrar o botão de cópia.
+  - Botão "Copiar Código PIX" adaptativo: ocupa largura total em smartphones e inline no desktop.
+- **Esteira de Produção & Entrega Horizontal:**
+  - Tratamento para telas ultra-estreitas (<360px) com `truncate` inteligente e preservação de 4 etapas sem quebra ou sobreposição.
+- **Formulário de Cartão de Crédito (`CheckoutCreditCardForm.jsx`):**
+  - Alinhado com modalidade "Parcelado Cliente" do Mercado Pago.
+  - Campos numéricos com `inputMode="numeric"` para acionamento do teclado numérico nativo em smartphones.
+- **Pop-up de Retenção do Presente VIP (`GiftReservedReminderModal.jsx`):**
+  - Layout modal 94vw com caixas de presente 3D transparentes e botões táteis ampliados para conversão rápida no mobile.
+
+
+### 22.3 Resolução Cirúrgica de Itens Duplicados no Resumo do Checkout
+- **Diagnóstico:** No componente `CheckoutOrderSummary.jsx`, quando um brinde VIP ou o Combo 3 Apps estava ativo, o card dourado superior (`chosenGift`) já renderizava os apps de forma destacada com capa e benefícios. Porém, a lista de itens logo abaixo (`cart.map`) também iterava sobre a totalidade da sacola (`cart`), fazendo com que os mesmos 3 aplicativos aparecessem repetidos logo abaixo da lingerie física.
+- **Solução Implementada:** 
+  1. Criação de `displayedItems` com `useMemo` filtrando `!item.is_digital && !item.is_mimo && !item.is_combo_item`. Na presença de peças físicas, apenas elas são listadas no rol de produtos, mantendo os apps digitais no card dourado superior.
+  2. Adição do botão "Remover" ao lado de "Trocar" no cabeçalho do card VIP, com o handler `handleRemoveGift` repassado de `Checkout.jsx`, permitindo a gestão transparente do presente pelo cliente.
+  3. Ajuste do texto individual no Combo de `(+R$ 9,90)` para `Incluso no Combo (R$ 3,30)`, e cabeçalho `Combo 3 Apps VIP Liberado (+R$ 9,90)`, eliminando qualquer ambiguidade de cobrança.
+- **Validação:** Testes de blindagem `npm run test:shield` 17/17 aprovados e build do Vite finalizado com sucesso em 29.6s.
+
+
+### 22.4 Resolução do Erro "Failed to create record." no Modal de Atacado da Sacola
+- **Diagnóstico:** Ao tentar ativar o perfil de revendedora no modal *"Upgrade Atacado Destravado!"* em `CartPage.jsx`, o cliente com e-mail já cadastrado recebia o erro em inglês cru `Failed to create record.`. Isso ocorria porque a validação de unicidade de e-mail do PocketBase (`validation_not_unique`) era capturada como mensagem genérica sem inspeção de `err.data.data`.
+- **Solução Implementada:** 
+  1. Adicionada validação prévia de e-mail (regex) e tamanho mínimo de senha (8 caracteres) no frontend antes do disparo da requisição.
+  2. Tratamento inteligente de erros específicos do PocketBase (`validation_not_unique`, `validation_is_email`, `validation_min_text_constraint`, `Failed to authenticate`).
+  3. Quando o e-mail já possui conta, o modal agora informa com clareza em português e **comuta automaticamente para a aba "Já Tenho Conta (Entrar)"**, preservando os dados digitados e adicionando a opção de recuperação de senha ("Esqueceu a senha?").
+  4. Padronização da mesma lógica em `LoginPage.jsx`.
+- **Validação:** Testes de blindagem `npm run test:shield` 17/17 aprovados e build do Vite finalizado com sucesso em 21.25s.
+
+
+### 22.5 Arquitetura de Duplo Estágio de Retenção de Presentes VIP na Sacola
+- **Conceito e Fluxo:** Criada a separação definitiva entre o **Estágio 1** (Oferta de Escolha entre os 3 Apps VIP) e o **Estágio 2** (Lembrete de Presente Reservado).
+- **Comportamento Sequencial:**
+  1. *Estágio 1:* Se o cliente entra na sacola e ainda não escolheu um brinde, ao atingir 8 segundos de inatividade ou tentar sair da aba (`e.clientY < 15`), abre o `MimoRetentionModal` com os 3 apps para escolha de 1 grátis ou combo +R$ 9,90.
+  2. *Estágio 2:* Após escolher seu presente/combo, se o cliente tentar sair novamente da sacola, o sistema detecta que o brinde já está no carrinho e abre o `GiftReservedReminderModal` ("Espere! Seu Presente VIP já está reservado!"), sem repetir a tela de escolha dos 3 apps e fornecendo o botão direto para o checkout seguro.
+- **Validação:** Testes de blindagem `npm run test:shield` 17/17 aprovados e build do Vite finalizado com sucesso em 15.05s.
+
+
+### 22.6 Criação e Roteamento da Página de Redefinição de Senha (ResetPasswordPage.jsx)
+- **Diagnóstico:** O e-mail de recuperação de senha enviado pelo PocketBase gerava o link `{APP_URL}/_/#/auth/confirm-password-reset/{TOKEN}`. Como o PocketBase em produção fica atrás do proxy reverso (`/hcgi/platform`), as requisições para a raiz `/_/` caíam no React Router do frontend. Porém, não existia uma rota nem componente para processar a redefinição, resultando no erro 404 ("Página não encontrada").
+- **Solução Implementada:** 
+  1. Criação da página `ResetPasswordPage.jsx` com layout de alta conversão, campos protegidos para "Nova Senha" e "Confirmar Nova Senha", além de campo opcional de e-mail para autenticação imediata pós-redefinição.
+  2. Suporte universal a tokens: o componente extrai o token de redefinição de múltiplos formatos (parâmetro de rota `/redefinir-senha/:token`, query string `?token=XYZ` ou hash padrão do PocketBase `#/auth/confirm-password-reset/XYZ`), garantindo que **mesmo os e-mails já enviados anteriormente para a caixa de entrada dos clientes passem a funcionar de imediato**.
+  3. Registro das rotas `/redefinir-senha`, `/reset-password`, `/auth/confirm-password-reset/:token` e `/_/*` em `App.jsx`.
+  4. Atualização via API do template `users.resetPasswordTemplate` no PocketBase em produção para apontar diretamente para `{APP_URL}/redefinir-senha?token={TOKEN}`.
+- **Validação:** Testes de blindagem `npm run test:shield` 17/17 aprovados e build do Vite finalizado com sucesso em 24.64s.
+
+### 22.7 Resolução de Threading do Gmail, Anti-Ocultação de E-mail e Refinamento Visual do Modal de Atacado
+- **Diagnóstico do Gmail:**
+  1. *E-mails sem botão em tentativas seguidas:* O Gmail agrupa e-mails com mesmo remetente e assunto em uma única thread ("conversa"). Quando as mensagens subsequentes possuem conteúdo HTML/texto muito similar, o algoritmo do Gmail oculta o miolo da mensagem atrás de reticências cinzas (...), dando a falsa impressão de que o botão sumiu.
+  2. *Erro 404 ao clicar:* O e-mail enviado pelo PocketBase usa a URL oficial (https://avantelingerie.com.br). Como a VPS em produção ainda estava com a versão estável anterior (aguardando autorização do usuário para git push), as rotas recém-criadas de redefinição só existiam localmente.
+  3. *Caixa Vermelha no Modal:* O aviso de e-mail existente exibia uma caixa com fundo vermelho (g-red-50 text-red-700), que soava como advertência punitiva/alarme, causando estranheza e confusão visual no cliente.
+- **Solução Implementada:**
+  1. *Quebra de Simetria no Gmail:* O template de e-mail no PocketBase foi atualizado para incluir um bloco de segurança exclusivo com {TOKEN} visível e humanizado (Chave de Validação Exclusiva: {TOKEN}), quebrando a paridade de hash entre e-mails e impedindo o colapso (...) do Gmail nas tentativas sucessivas.
+  2. *Refatoração de Feedback Visual:* Substituída a caixa vermelha por um card champanhe dourado elegante (#FFFDF9, borda dourada #c59b5f/40, texto #7A5110 com ícone Sparkles), acolhendo o cliente recorrente com tom sofisticado e convidando-o amigavelmente a confirmar sua senha para liberar os descontos de atacado.
+  3. *Tríade de Feedback:* Sistema estruturado com modalFeedback = { type: 'info' | 'success' | 'error', message: '' } para diferenciar avisos amigáveis (dourado), sucessos de envio (verde esmeralda) e falhas reais (vermelho).
+- **Validação:** Testes de blindagem 
+pm run test:shield 17/17 aprovados e build do Vite finalizado com sucesso em 35.75s.

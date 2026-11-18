@@ -156,7 +156,18 @@ export default function LoginPage() {
       navigate(destination, { replace: true });
     } catch (err) {
       console.error(err);
-      setError(err.response?.message || 'Ocorreu um erro ao criar a conta. Tente outro e-mail.');
+      const fieldErrors = err?.data?.data || err?.response?.data || {};
+      let msg = 'Ocorreu um erro ao criar a conta. Tente outro e-mail.';
+      if (fieldErrors.email?.code === 'validation_not_unique' || fieldErrors.email?.message?.toLowerCase().includes('unique')) {
+        msg = 'Este e-mail já está cadastrado no sistema! Acesse a aba "Entrar" para fazer login.';
+      } else if (fieldErrors.email?.code === 'validation_is_email') {
+        msg = 'Por favor, informe um endereço de e-mail válido (ex: seuemail@gmail.com).';
+      } else if (fieldErrors.password) {
+        msg = 'A senha informada deve ter pelo menos 8 caracteres.';
+      } else if (err?.message?.includes('Failed to create record')) {
+        msg = 'Não foi possível cadastrar a conta. Verifique se o e-mail já possui cadastro.';
+      }
+      setError(msg);
     } finally {
       setIsLoading(false);
     }

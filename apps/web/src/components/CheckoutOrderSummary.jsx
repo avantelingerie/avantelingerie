@@ -23,10 +23,21 @@ export default function CheckoutOrderSummary({
   onRemoveCoupon,
   tipoCliente = 'varejo',
   chosenGift = null,
-  onOpenGiftModal = null
+  onOpenGiftModal = null,
+  onRemoveGift = null
 }) {
   const [showCouponInput, setShowCouponInput] = React.useState(Boolean(appliedCoupon));
   const formatPrice = (val) => new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(val);
+
+  // Evita duplicação visual no Checkout:
+  // Se o brinde/combo VIP já estiver selecionado e exibido com destaque máximo no card dourado superior,
+  // a lista de produtos abaixo deve exibir apenas as peças físicas de lingerie.
+  const displayedItems = React.useMemo(() => {
+    const physicalItems = (cart || []).filter(
+      (item) => !item.is_digital && !item.is_mimo && !item.is_combo_item
+    );
+    return physicalItems.length > 0 ? physicalItems : cart || [];
+  }, [cart]);
 
   return (
     <Card className="border-primary/10 shadow-lg bg-card overflow-hidden">
@@ -47,18 +58,30 @@ export default function CheckoutOrderSummary({
                   <Gift className="w-3.5 h-3.5" />
                 </div>
                 <span className="text-xs font-extrabold uppercase tracking-wider text-[#996515]">
-                  {chosenGift.is_combo ? 'Combo 3 Apps VIP Liberado' : 'Presente VIP Garantido'}
+                  {chosenGift.is_combo ? 'Combo 3 Apps VIP Liberado (+R$ 9,90)' : 'Presente VIP Garantido (Grátis)'}
                 </span>
               </div>
-              {onOpenGiftModal && (
-                <button
-                  type="button"
-                  onClick={onOpenGiftModal}
-                  className="text-xs text-[#996515] hover:text-[#7A5110] font-bold underline cursor-pointer"
-                >
-                  Trocar
-                </button>
-              )}
+              <div className="flex items-center gap-2.5">
+                {onOpenGiftModal && (
+                  <button
+                    type="button"
+                    onClick={onOpenGiftModal}
+                    className="text-xs text-[#996515] hover:text-[#7A5110] font-bold underline cursor-pointer"
+                  >
+                    Trocar
+                  </button>
+                )}
+                {onRemoveGift && (
+                  <button
+                    type="button"
+                    onClick={onRemoveGift}
+                    className="text-xs text-muted-foreground hover:text-destructive font-medium transition-colors cursor-pointer"
+                    title="Remover presente do pedido"
+                  >
+                    Remover
+                  </button>
+                )}
+              </div>
             </div>
 
             {chosenGift.is_combo ? (
@@ -75,7 +98,7 @@ export default function CheckoutOrderSummary({
                     <div className="flex flex-col min-w-0 flex-1">
                       <span className="text-xs font-bold text-gray-900 line-clamp-1">{app.name}</span>
                       <span className="text-[11px] font-semibold text-emerald-700">
-                        Incluso no Combo (+R$ 9,90)
+                        Incluso no Combo (R$ 3,30)
                       </span>
                     </div>
                   </div>
@@ -125,9 +148,9 @@ export default function CheckoutOrderSummary({
           </div>
         ) : null}
 
-        {/* Item List */}
+        {/* Item List (Exibe apenas as peças físicas quando os presentes já estão no card VIP) */}
         <div className="flex flex-col gap-4 max-h-[300px] overflow-y-auto pr-2 scrollbar-thin scrollbar-thumb-primary/20">
-          {cart.map((item) => {
+          {displayedItems.map((item) => {
             const activeItemPrice = getItemPrice ? getItemPrice(item) : item.price;
             return (
               <div key={item.cartItemId} className="flex items-start gap-4 group">
