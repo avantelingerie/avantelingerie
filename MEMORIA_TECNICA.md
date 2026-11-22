@@ -2904,3 +2904,23 @@ Após a implementação inicial do Checkout Transparente (PIX, Cartão e Boleto 
   3. *Tríade de Feedback:* Sistema estruturado com modalFeedback = { type: 'info' | 'success' | 'error', message: '' } para diferenciar avisos amigáveis (dourado), sucessos de envio (verde esmeralda) e falhas reais (vermelho).
 - **Validação:** Testes de blindagem 
 pm run test:shield 17/17 aprovados e build do Vite finalizado com sucesso em 35.75s.
+
+
+### 22.8 Refinamento do Cérebro da Lia, Humanização do Transbordo e Parser de Links no Admin
+- **Diagnóstico:** A Lia vinha gerando links crus de Markdown `[Falar com Sr. Luiz Machado](https://wa.me/...)` que vazavam colchetes, parênteses e URLs codificadas no WhatsApp e no painel admin, além de realizar transbordo prematuro com respostas simples afirmativas ("Sim") com frase burocrática fria ("Vou passar para o administrativo Sr. Luiz Machado").
+- **Solução Implementada:**
+  1. *Diretriz de Links Limpos no WhatsApp (`lia.js` e `liaKnowledgeBase.js`):* Proibição estrita de Markdown de links no canal do WhatsApp; links de produtos e contato agora são enviados como URLs diretas e limpas (Catálogo geral: `https://avantelingerie.com.br/categoria/todas` e WhatsApp do Luiz: `(22) 98112-4281` -> `https://wa.me/5522981124281`).
+  2. *Blindagem Anti-Descarte de Leads:* Retirado o gatilho automático de transbordo para respostas curtas ("Sim", "Quero", "Como funciona"). A Lia agora conduz a venda, apresenta a coleção e explica o pedido mínimo de atacado (R$ 69,90 direto de fábrica). O transbordo para o gestor Luiz ocorre apenas se solicitado expressamente ou em pedidos de lojistas com grandes volumes industriais.
+  3. *Humanização do Tom de Voz:* Substituída a linguagem burocrática por acolhimento empático com o Luiz como gestor da fábrica em Nova Friburgo.
+  4. *Parser Inteligente no Painel Admin (`LiaAdminPage.jsx`):* Implementado o helper `renderMessageContent` para converter links de Markdown e URLs soltas em links clicáveis e exibir botão tátil verde de WhatsApp para o contato com Luiz Machado.
+- **Validação:** Testes de blindagem `npm run test:shield`, linter e build do Vite aprovados com sucesso.
+
+
+### 22.9 Diretrizes Comerciais da Lia: Objeção de "Pouco Produto" e Gatilho Ativo de Insatisfação
+- **Requisito do Fundador:**
+  1. *Objeção de "Pouco Produto":* Ao enviar o link do catálogo (`https://avantelingerie.com.br/categoria/todas`), se o cliente comentar que tem poucos produtos ou pouca variedade, a Lia deve explicar com gentileza e carinho que somos confecção própria em Nova Friburgo e que ainda há muitos produtos e novidades para subir no site.
+  2. *Gatilho de Insatisfação / Preço / Condições:* Se a cliente demonstrar insatisfação por preço, frete ou qualquer outro motivo, a Lia não deve perder a cliente: deve perguntar gentilmente se ela não gostaria de conversar diretamente com o Luiz (gestor da fábrica) no WhatsApp para ver uma condição especial.
+- **Implementação:**
+  - Inseridas as instruções no prompt central da Lia (`apps/api/src/routes/lia.js`), no prompt dedicado do WhatsApp (`/whatsapp-webhook`) e na base de conhecimento oficial (`apps/api/src/utils/liaKnowledgeBase.js`).
+  - Atualizada a ferramenta `salvar_lead_contato` e a memória persistente (`MEMORY.md`).
+- **Validação:** Verificação completa de sintaxe e testes de integridade `npm run test:shield`.

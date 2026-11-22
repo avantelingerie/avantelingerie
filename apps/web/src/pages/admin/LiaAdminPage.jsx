@@ -141,6 +141,97 @@ function formatMessageTime(dateInput, fallbackTimestamp) {
   return `${d.toLocaleDateString('pt-BR', { day: '2-digit', month: '2-digit' })} às ${timeStr}`;
 }
 
+// Renderizador inteligente de links e botões para mensagens no Admin
+function renderMessageContent(text) {
+  if (typeof text !== 'string') return text;
+
+  // Regex para Markdown [texto](url)
+  const markdownRegex = /\[([^\]]+)\]\(([^)]+)\)/g;
+  const parts = [];
+  let lastIndex = 0;
+  let match;
+
+  while ((match = markdownRegex.exec(text)) !== null) {
+    if (match.index > lastIndex) {
+      parts.push(text.substring(lastIndex, match.index));
+    }
+    const label = match[1];
+    const url = match[2];
+    parts.push(
+      <a 
+        key={`md-${match.index}`}
+        href={url}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="font-bold underline text-emerald-800 dark:text-emerald-300 hover:text-emerald-600 dark:hover:text-emerald-200 transition-colors inline-flex items-center gap-1"
+      >
+        {label}
+        <ExternalLink className="w-2.5 h-2.5 inline" />
+      </a>
+    );
+    lastIndex = match.index + match[0].length;
+  }
+  if (lastIndex < text.length) {
+    parts.push(text.substring(lastIndex));
+  }
+
+  // Regex para URLs puras nos trechos restantes
+  const urlRegex = /(https?:\/\/[^\s)]+)/g;
+  const formattedElements = parts.map((part, i) => {
+    if (typeof part !== 'string') return part;
+
+    const subParts = [];
+    let subLastIndex = 0;
+    let urlMatch;
+
+    while ((urlMatch = urlRegex.exec(part)) !== null) {
+      if (urlMatch.index > subLastIndex) {
+        subParts.push(part.substring(subLastIndex, urlMatch.index));
+      }
+      const rawUrl = urlMatch[1];
+      subParts.push(
+        <a
+          key={`url-${i}-${urlMatch.index}`}
+          href={rawUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="font-bold underline text-emerald-800 dark:text-emerald-300 hover:text-emerald-600 dark:hover:text-emerald-200 transition-colors break-all inline-flex items-center gap-1"
+        >
+          {rawUrl}
+          <ExternalLink className="w-2.5 h-2.5 inline shrink-0" />
+        </a>
+      );
+      subLastIndex = urlMatch.index + rawUrl.length;
+    }
+
+    if (subLastIndex < part.length) {
+      subParts.push(part.substring(subLastIndex));
+    }
+
+    return <React.Fragment key={`part-${i}`}>{subParts}</React.Fragment>;
+  });
+
+  return (
+    <>
+      <div>{formattedElements}</div>
+      {/* Botão de Ação Rápida para Transbordo do Luiz */}
+      {(text.includes('5522981124281') || text.includes('981124281') || text.includes('Luiz Machado') || text.includes('Sr. Luiz')) && (
+        <div className="mt-2 pt-2 border-t border-emerald-200/60 dark:border-emerald-800/40">
+          <a
+            href="https://wa.me/5522981124281"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-[10px] shadow-sm transition-all"
+          >
+            <Smartphone className="w-3 h-3" />
+            Falar com Luiz Machado no WhatsApp (22 98112-4281)
+          </a>
+        </div>
+      )}
+    </>
+  );
+}
+
 export default function LiaAdminPage() {
   useAdminAuth();
   
@@ -1011,7 +1102,7 @@ export default function LiaAdminPage() {
 
                                 {/* Conteúdo da Mensagem */}
                                 <div className="leading-relaxed whitespace-pre-wrap select-text">
-                                  {msg.content}
+                                  {renderMessageContent(msg.content)}
                                 </div>
 
                                 {/* Rodapé do Balão com Hora e Ticks */}

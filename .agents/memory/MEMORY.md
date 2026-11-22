@@ -61,12 +61,19 @@ Este documento consolida os identificadores definitivos, credenciais, configura�
   * Se houver solicitação pendente em `solicitacoes_revendedor`, ela é aprovada automaticamente.
   * O sistema despacha o e-mail VIP de boas-vindas com o acesso ao Portal de Fotos/Vídeos para revenda.
 
-## 5. Protocolo de Transbordo e Atendimento Humano (Sr. Luiz Machado) (11/11/2026)
+## 5. Protocolo de Transbordo e Atendimento Humano (Luiz Machado) (Atualizado em 22/11/2026)
 
-* **Princípio:** A Lia AI continua atendendo 100% no automático como consultora virtual da loja e no WhatsApp oficial (`(22) 98122-5010`).
-* **Condição de Transbordo (MANDATÓRIA):** SE E SOMENTE SE o cliente pedir explicitamente para falar com uma pessoa, um atendente humano, gerência ou administrativo (ex: "quero falar com um humano", "falar com atendente", "falar com o Luiz"):
-  * A Lia responde: *"Vou passar para o administrativo Sr. Luiz Machado."*
+* **Princípio:** A Lia AI é a consultora oficial de vendas e atende com autonomia, simpatia e acolhimento no site e no WhatsApp oficial (`(22) 98122-5010`).
+* **Regra Anti-Descarte de Leads:** A Lia NUNCA deve transferir o cliente por respostas curtas afirmativas (ex: "Sim", "Quero", "Como funciona") ou dúvidas de compra. Ela deve conduzir a venda, enviar o catálogo geral (`https://avantelingerie.com.br/categoria/todas`) e explicar o pedido mínimo de atacado (R$ 69,90 direto de fábrica).
+* **Condição Estrita de Transbordo Humano:** SE E SOMENTE SE:
+  1. O cliente pedir explicitamente para falar com uma pessoa real, atendente humano ou Luiz;
+  2. For pedido de lote industrial pesado para loja física (centenas de peças) ou confecção sob encomenda exclusiva;
+  3. **Insatisfação / Objeção de Preço ou Condições:** Se a cliente demonstrar insatisfação por preço, frete ou outro motivo, a Lia acolhe e pergunta proativamente se ela gostaria de falar com o Luiz no WhatsApp para ver uma condição especial.
+* **Objeção "Tem Pouco Produto no Site":** Se o cliente comentar que a vitrine tem poucos produtos ou pouca variedade, a Lia deve explicar de forma muito gentil e educada que somos fábrica própria em Nova Friburgo e que ainda há muitos produtos e novidades para subir no site! Em seguida, pergunta qual modelo ou tamanho o cliente procura.
+* **Tom e Contato Direto do Gestor Luiz Machado:**
+  * Tom acolhedor e humanizado (sem jargões frios de "passar para o administrativo"). Exemplo: *"Vou te colocar em contato direto com o Luiz, nosso gestor aqui da fábrica! Ele vai cuidar de você com muito carinho."*
   * Contato direto: WhatsApp `(22) 98112-4281` (`https://wa.me/5522981124281`).
-* **Botão na Vitrine de Atacado (`/categoria/todas?modo=atacado`):** Aponta diretamente para o WhatsApp do Sr. Luiz Machado (`https://wa.me/5522981124281`) para fechar vendas de grandes revendedoras e lojistas.
+  * No WhatsApp, links NUNCA devem usar sintaxe Markdown `[texto](url)`, devendo ser enviados sempre como URLs puras e limpas.
+* **Botão na Vitrine de Atacado (`/categoria/todas?modo=atacado`):** Aponta diretamente para o WhatsApp do Luiz Machado (`https://wa.me/5522981124281`) para fechar vendas de grandes revendedoras e lojistas.
 
 
