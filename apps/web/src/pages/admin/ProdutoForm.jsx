@@ -30,7 +30,9 @@ export const PADROES_MEDIDAS_AVANTE = [
   { id: 'fitness_short', label: '🏋️‍♀️ Conjunto Fitness (Top e Short)', peso_g: 250, altura_cm: 4, largura_cm: 18, comprimento_cm: 22 },
   { id: 'fitness_legging', label: '🏃‍♀️ Conjunto Fitness (Top e Calça Legging)', peso_g: 420, altura_cm: 6, largura_cm: 20, comprimento_cm: 25 },
   { id: 'short_fitness', label: '🩳 Short fitness avulso', peso_g: 140, altura_cm: 3, largura_cm: 15, comprimento_cm: 20 },
-  { id: 'cinta_fitness', label: '⏳ Calcinha cinta Fitness / Modeladora', peso_g: 150, altura_cm: 3, largura_cm: 15, comprimento_cm: 20 }
+  { id: 'cinta_fitness', label: '⏳ Calcinha cinta Fitness / Modeladora', peso_g: 150, altura_cm: 3, largura_cm: 15, comprimento_cm: 20 },
+  { id: 'calcinha_plus', label: '👑 Calcinha / Calçola Plus Size (Hot Pants / Modeladora)', peso_g: 85, altura_cm: 3, largura_cm: 15, comprimento_cm: 20 },
+  { id: 'conjunto_plus', label: '👑 Conjunto Plus Size Reforçado (Sutiã + Calcinha 48 ao 54)', peso_g: 220, altura_cm: 8, largura_cm: 18, comprimento_cm: 22 }
 ];
 
 export default function ProdutoForm() {
@@ -1072,11 +1074,11 @@ export default function ProdutoForm() {
                   </Badge>
                 </div>
                 
-                {/* Dropdown com os 12 Padrões Oficiais da Fábrica */}
+                {/* Dropdown com os 14 Padrões Oficiais da Fábrica */}
                 <div className="w-full sm:w-80">
                   <Select onValueChange={aplicarPadraoMedidas}>
                     <SelectTrigger className="h-8 text-xs bg-zinc-50 dark:bg-zinc-900 border-zinc-300 dark:border-amber-500/30">
-                      <SelectValue placeholder="⚡ Padrão da Fábrica (12 categorias)..." />
+                      <SelectValue placeholder="⚡ Padrão da Fábrica (14 categorias)..." />
                     </SelectTrigger>
                     <SelectContent className="max-h-72">
                       {PADROES_MEDIDAS_AVANTE.map(p => (
@@ -1089,7 +1091,7 @@ export default function ProdutoForm() {
                 </div>
               </div>
 
-              {/* 4 Botões de Atalho Rápido (1 Clique) - Os Mais Usados */}
+              {/* 5 Botões de Atalho Rápido (1 Clique) - Os Mais Usados */}
               <div className="flex items-center gap-1.5 flex-wrap">
                 <span className="text-[11px] font-medium text-zinc-500 dark:text-zinc-400 mr-1 flex items-center gap-1">
                   <Sparkles className="w-3 h-3 text-amber-500" />
@@ -1109,11 +1111,31 @@ export default function ProdutoForm() {
                   type="button"
                   variant="outline"
                   size="sm"
+                  onClick={() => aplicarPadraoMedidas('calcinha_plus')}
+                  className="h-7 text-xs px-2.5 bg-zinc-50 hover:bg-amber-500/10 hover:border-amber-500/50 dark:bg-zinc-900 dark:hover:bg-amber-500/15"
+                  title="Calçola Plus Size: 85g | 3 x 15 x 20 cm"
+                >
+                  👑 Calçola Plus (85g)
+                </Button>
+                <Button
+                  type="button"
+                  variant="outline"
+                  size="sm"
                   onClick={() => aplicarPadraoMedidas('conjunto_sem_bojo')}
                   className="h-7 text-xs px-2.5 bg-zinc-50 hover:bg-amber-500/10 hover:border-amber-500/50 dark:bg-zinc-900 dark:hover:bg-amber-500/15"
                   title="Conjunto sem bojo: 150g | 4 x 15 x 20 cm"
                 >
                   👙 Conjunto s/ Bojo (150g)
+                </Button>
+                <Button
+                  type="button"
+                  variant="outline"
+                  size="sm"
+                  onClick={() => aplicarPadraoMedidas('conjunto_plus')}
+                  className="h-7 text-xs px-2.5 bg-zinc-50 hover:bg-amber-500/10 hover:border-amber-500/50 dark:bg-zinc-900 dark:hover:bg-amber-500/15"
+                  title="Conjunto Plus Size: 220g | 8 x 18 x 22 cm"
+                >
+                  👑 Conjunto Plus (220g)
                 </Button>
                 <Button
                   type="button"

@@ -245,16 +245,30 @@ export default function LiaWidget() {
                 }`}>
                   {renderMessageWithLinks(msg.content)}
                   
-                  {/* Renderiza o botão do WhatsApp se a Lia transferir para atendimento humano */}
-                  {((msg.content.includes('botão abaixo') && msg.content.includes('WhatsApp')) || msg.content.includes('5522981124281') || msg.content.includes('Luiz Machado') || msg.content.includes('administrativo') || msg.content.includes('Luiz')) && (
+                  {/* Renderiza o botão verde do WhatsApp se a Lia transferir para atendimento com o Sr. Luiz Machado */}
+                  {((msg.content.includes('botão abaixo') && (msg.content.includes('WhatsApp') || msg.content.includes('responder') || msg.content.includes('Luiz') || msg.content.includes('clicar'))) || 
+                    msg.content.includes('5522981124281') || 
+                    msg.content.includes('Luiz Machado') || 
+                    msg.content.includes('responsável administrativo') || 
+                    msg.content.includes('administrativo da confecção') || 
+                    msg.content.includes('Sr. Luiz')) && (
                     <a 
-                      href="https://wa.me/5522981124281?text=Ol%C3%A1%20Luiz,%20estava%20conversando%20com%20a%20Lia%20no%20site%20e%20gostaria%20de%20falar%20com%20voc%C3%AA%20sobre%20as%20pe%C3%A7as%20da%20f%C3%A1brica." 
+                      href={(() => {
+                        const waMatch = msg.content.match(/https:\/\/wa\.me\/5522981124281[^\s\)\"\']*/);
+                        if (waMatch) return waMatch[0];
+                        const nameMatch = msg.content.match(/Que maravilhosa notícia,?\s+([A-ZÀ-Ú][a-zà-ú]+)/i) || msg.content.match(/notícia,?\s+([A-ZÀ-Ú][a-zà-ú]+)/i);
+                        const clientName = nameMatch ? nameMatch[1].trim() : '';
+                        const waText = clientName 
+                          ? encodeURIComponent(`Olá Sr. Luiz! Meu nome é ${clientName}. Conversei com a Lia no site sobre revender as peças da confecção e gostaria de falar com você!`)
+                          : encodeURIComponent('Olá Sr. Luiz! Estava conversando com a Lia no site sobre revender as peças da confecção e gostaria de falar com você.');
+                        return `https://wa.me/5522981124281?text=${waText}`;
+                      })()}
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="mt-3 flex items-center justify-center gap-2 bg-[#25D366] text-white px-4 py-2.5 rounded-full font-bold text-xs hover:bg-[#20b858] transition-all hover:scale-102 active:scale-98 shadow-md"
                     >
                       <MessageSquare className="w-4 h-4" />
-                      Falar com Luiz no WhatsApp (22 98112-4281)
+                      Falar com Sr. Luiz Machado no WhatsApp (22 98112-4281)
                     </a>
                   )}
                 </div>

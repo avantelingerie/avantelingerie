@@ -912,6 +912,15 @@ export default function LiaAdminPage() {
                                 </span>
                               )}
 
+                              {conversa.mensagens?.some(m => {
+                                const c = (m.content || '').toLowerCase();
+                                return c.includes('revender') || c.includes('revenda') || c.includes('luiz machado') || c.includes('responsável administrativo');
+                              }) && (
+                                <span className="inline-flex items-center gap-1 text-[9px] font-bold text-amber-900 dark:text-amber-300 bg-amber-100 dark:bg-amber-950/80 border border-amber-300 dark:border-amber-700/60 px-1.5 py-0.5 rounded-md">
+                                  👑 Revenda
+                                </span>
+                              )}
+
                               {conversa.converteu && (
                                 <span className="inline-flex items-center gap-1 text-[9px] font-bold text-emerald-900 dark:text-emerald-300 bg-emerald-100 dark:bg-emerald-900/70 border border-emerald-300 dark:border-emerald-700/60 px-1.5 py-0.5 rounded-md">
                                   ✓ Compra Fechada
@@ -983,6 +992,14 @@ export default function LiaAdminPage() {
                           ) : (
                             <Badge className="bg-[#c59b5f]/15 border-[#c59b5f]/40 text-[#966e2d] dark:text-[#c59b5f] text-[10px] py-0 px-2 font-semibold">
                               Loja Virtual
+                            </Badge>
+                          )}
+                          {selectedConversa.mensagens?.some(m => {
+                            const c = (m.content || '').toLowerCase();
+                            return c.includes('revender') || c.includes('revenda') || c.includes('luiz machado') || c.includes('responsável administrativo');
+                          }) && (
+                            <Badge className="bg-amber-100 dark:bg-amber-950/80 border-amber-300 dark:border-amber-700/60 text-amber-900 dark:text-amber-300 text-[10px] py-0 px-2 font-bold flex items-center gap-1">
+                              👑 Lead de Revenda / Atacado
                             </Badge>
                           )}
                         </div>

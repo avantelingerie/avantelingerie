@@ -1,0 +1,347 @@
+================================================================================
+RELATÓRIO ESTRATÉGICO DE DESEJOS DOS CLIENTES - AVANTE LINGERIE
+Base de Dados: 113 atendimentos reais da Consultora Lia (lia_conversas)
+Data: 23 de Novembro de 2026
+================================================================================
+
+
+1. RADIOGRAFIA DAS CONVERSAS: VOLUME, PORCENTAGENS E PERFIS
+--------------------------------------------------------------------------------
+Total de Conversas Analisadas: 113 atendimentos reais
+
+[1] ATACADO / REVENDA
+- Volume: 44 clientes (38,9% do total)
+- Perfil: Revendedoras, sacoleiras e lojistas de rua/internet.
+- Intenção: Comprar direto da fábrica em Nova Friburgo com margem de 100% a 150%. 
+  Buscam compras iniciais de R$ 300,00 a R$ 500,00 e pedidos recorrentes acima de 
+  R$ 1.000,00.
+- Diagnóstico: É o motor principal do negócio! Quase 40% de quem procura a Lia quer 
+  revender. A principal queixa é que a vitrine virtual tem poucas peças cadastradas 
+  (apenas 2 ou 3 conjuntos), o que trava o fechamento do pedido.
+
+[2] VAREJO / USO PRÓPRIO
+- Volume: 11 clientes (9,7% do total)
+- Perfil: Consumidoras finais para uso pessoal ou parceiros comprando presentes.
+- Intenção: Comprar peças específicas de alto impacto visual (conjunto de renda Rubi, 
+  body rendado para sair à noite, cropped gola alta) ou peças para solucionar 
+  problemas de caimento do próprio corpo (exemplo: busto 48 com quadril 38).
+- Diagnóstico: Menor volume de mensagens, mas com alta sensibilidade a fotos e apelo 
+  estético nas redes sociais.
+
+[3] OUTROS / INTERAÇÕES PRELIMINARES
+- Volume: 58 atendimentos (51,3% do total)
+- Divisão dos 58 atendimentos:
+  * 36 abandonos no início (pessoas que abriram a conversa e não responderam).
+  * 13 saudações rápidas ("Oi", "Olá", "Boa tarde" sem continuidade imediata).
+  * 4 dúvidas de preços genéricos ou pedidos de catálogo sem definir quantidade.
+  * 4 testes técnicos da equipe interna de desenvolvimento.
+  * 1 mensagem operacional de transportadora/coleta da Shopee.
+- Diagnóstico: Pelo menos 17 pessoas dessa lista demonstraram interesse inicial, mas 
+  esfriaram porque não receberam fotos atrativas de imediato no WhatsApp.
+
+
+================================================================================
+2. RANKING DE PRODUTOS MAIS PEDIDOS PELAS CLIENTES (ORDEM DE DEMANDA)
+================================================================================
+
+A) NO ATACADO (REVENDA) - O QUE AS REVENDEDORAS MAIS PEDEM:
+--------------------------------------------------------------------------------
+1º LUGAR: CALCINHAS BÁSICAS, ALGODÃO E LINHA CONFORTO
+- Modelos pedidos: Calcinhas 100% algodão, calcinhas cós alto que cobrem o bumbum 
+  (linha cristã/conforto - "não querem fio dental"), corte a laser sem costura e 
+  fio duplo.
+- Por que vende tanto: É o produto de maior giro e recompra imediata da moda íntima. 
+  A revendedora vende kits fechados com 3, 5 ou 10 unidades com extrema facilidade.
+
+2º LUGAR: CONJUNTOS DE LINGERIE (RENDADOS E BÁSICOS)
+- Modelos pedidos: Conjuntos de renda sofisticados (cores Rubi/Vermelho, Preto e 
+  Vinho) e conjuntos básicos para trabalhar (microfibra/algodão).
+- Por que vende tanto: É o produto de maior valor percebido e maior ticket médio. A 
+  revendedora lucra de R$ 40,00 a R$ 60,00 limpos em cada conjunto vendido. Elas 
+  cobram insistentemente mais modelos na loja.
+
+3º LUGAR: LINHA PLUS SIZE (TAMANHOS 48 AO 54)
+- Modelos pedidos: Sutiãs reforçados com alças largas e boa sustentação, calcinhas 
+  confortáveis de cintura alta nos tamanhos 48, 50, 52 e 54.
+- Por que vende tanto: Mercado com pouquíssima concorrência de qualidade. Mulheres 
+  plus size são clientes fiéis e pagam o preço cobrado sem pechinchar quando 
+  encontram peças que vestem com conforto.
+
+4º LUGAR: LINHA NOITE (BABY DOLL ADULTO/INFANTIL E CAMISOLAS)
+- Modelos pedidos: Baby dolls para kits "mãe e filha", camisolas de manga curta sem 
+  decotes exagerados e pijamas de tecido leve.
+- Por que vende tanto: Peça forte para presentes, datas comemorativas e épocas de 
+  calor.
+
+5º LUGAR: MODA FITNESS (BERMUDAS DE ACADEMIA E TOPS)
+- Modelos pedidos: Bermudas de academia em suplex do P ao GG.
+- Por que vende tanto: Revendedoras de lingerie também atendem clientes em 
+  academias e caminhadas. Incluir fitness no catálogo aumenta o valor do pedido.
+
+6º LUGAR: SUTIÃS ESPECÍFICOS (TOMARA QUE CAIA E AVULSOS)
+- Modelos pedidos: Sutiã tomara que caia estruturado (muito procurado para blusas 
+  de verão) e sutiãs avulsos reforçados.
+- Por que vende tanto: Mulheres compram sutiãs avulsos com frequência para repor 
+  peças gastas no dia a dia.
+
+7º LUGAR: LINHA INFANTOJUVENIL / MENINA MOÇA
+- Modelos pedidos: Sutiãs "menina moça" (sem bojo e sem aro, com toque macio) e 
+  calcinhas infantis de algodão.
+- Por que vende tanto: Venda casada para mães que compram para si e aproveitam para 
+  vestir as filhas.
+
+
+B) NO VAREJO (CONSUMO PRÓPRIO) - O QUE AS CONSUMIDORAS BUSCAM:
+--------------------------------------------------------------------------------
+1º LUGAR: CONJUNTO DE RENDA COR RUBI (TAMANHO M)
+- Peça mais desejada para ocasiões especiais e sensualidade elegante. Cor campeã 
+  absoluta de atração nos anúncios.
+
+2º LUGAR: BODYS RENDADOS (MODA BALADA / OUTWEAR)
+- Peça sofisticada para usar aparente com calça jeans, saia ou terninho para sair. 
+  Altíssimo valor percebido e excelente margem de lucro.
+
+3º LUGAR: CROPPEDS DE GOLA ALTA (CORES NEUTRAS E VINHO)
+- Muito buscado no tamanho M nas cores off-white, preto e vinho para compor looks 
+  urbanos do dia a dia.
+
+4º LUGAR: SUTIÃS AVULSOS GRANDES / PEÇAS DESMEMBRADAS
+- Solução para o dilema de biotipo real: mulheres que usam sutiã 48 e calcinha 38 
+  (o conjunto fechado não serve).
+
+5º LUGAR: KITS DE CALCINHAS CONFORTO
+- Compra utilitária para renovar a gaveta pessoal com calcinhas macias.
+
+
+================================================================================
+3. RELAÇÃO DETALHADA DE CLIENTES MAPEADAS (CONTATOS E PRODUTOS PEDIDOS)
+================================================================================
+
+A) CLIENTES DE ATACADO (REVENDA - CONTATOS QUENTES):
+--------------------------------------------------------------------------------
+
+1. VANUSA - SÃO PAULO / SP
+- Telefone / WhatsApp: (11) 95937-8959
+- Canal: WhatsApp
+- Perfil: Revendedora iniciando compras de atacado (primeiro pedido de R$ 300 a 500).
+- Produtos Pedidos:
+  * Conjuntos tradicionais (P, M, G, GG) e Plus Size.
+  * Calcinhas de cós alto que cubram o bumbum (cor bege/nude, linha cristã/conforto).
+    OBS: Deixou claro que NÃO quer calcinha fio dental ("minhas clientes são cristãs").
+  * Camisola de manga curta.
+  * Moda fitness (bermudas de academia P ao GG).
+- Falas Reais: "Eu estou vendo mas só aparece 3 conjuntos... Minhas clientes são cristãs, 
+  não gostam de fio... Quero muito ver moda fitness... Manda as fotos e valores por favor?"
+
+2. NERIDES - SÃO FRANCISCO DE ITABAPOANA / RJ
+- Telefone / WhatsApp: (22) 99905-4474
+- Canal: Site e WhatsApp
+- Perfil: Revendedora ativa querendo comprar sem CNPJ.
+- Produtos Pedidos:
+  * Calcinhas 100% Algodão avulsas.
+  * Calcinha dupla totalmente de algodão nos tamanhos M e G.
+- Falas Reais: "Gostaria de ver calcinhas de algodão e o valor de atacado. Compro sem CNPJ... 
+  Gostei da calça dupla totalmente de algodão, vou passar meu número: 22 99905-4474."
+
+3. DANIELLE - RIO DE JANEIRO / RJ
+- Contato: Veio pelo WhatsApp oficial (ID: 86659555172444@lid)
+- Canal: WhatsApp
+- Perfil: Iniciando na revenda com foco em família completa.
+- Produtos Pedidos:
+  * Todos os conjuntos de calcinha e sutiã.
+  * Baby doll infantil e adulto (linha mãe e filha).
+  * Calcinhas de renda e calcinhas infantis/juvenis.
+  * Sutiãs "menina moça" e camisolas.
+- Falas Reais: "Tds conjuntos de calcinha, baby doll infantil e adulto, calcinhas de renda, 
+  calcinhas infantil e juvenil, sutiãs menina moça, camisolas tds kkk. Chamei no seu whats."
+
+4. ELISÂNGELA REGINA ALVES - ARARAS / SP
+- Telefone / WhatsApp: (19) 99882-5321
+- E-mail: eliuniararas@gmail.com
+- Canal: WhatsApp e Site
+- Perfil: Revendedora experiente.
+- Produtos Pedidos: Catálogo de atacado para revenda e consulta de pagamento por boleto/PIX.
+
+5. ODETE - GOIÁS / GO
+- Telefone / WhatsApp: (62) 99138-2008
+- Canal: Site
+- Perfil: Revendedora pronta para comprar.
+- Falas Reais: "Pode me chamar no WhatsApp 62991382008 Odete. Me chama no WhatsApp nesse 
+  número, quero revender."
+
+6. INGRID CUNHA DO PRADO - RIO DE JANEIRO / RJ
+- Contato: WhatsApp oficial (ID: 79559991021760@lid)
+- Canal: WhatsApp
+- Perfil: Revendedora de moda íntima com clientela exigente.
+- Produtos Pedidos:
+  * Calcinhas sem costura (corte a laser) e calcinhas fio duplo, tamanhos M e G.
+  * Sutiãs avulsos (reclamou que não encontrou sutiãs no site).
+- Falas Reais: "Tem outras calcinhas sem essas calçolas? Sem costura e fio duplo seria para 
+  minha cliente, M e G. E sutiãs, vocês têm opções? Não acho sutiã no site."
+
+7. REVENDEDORA DE ORLÂNDIA / SP
+- Contato: WhatsApp oficial (ID: 109007421182200@lid)
+- Canal: WhatsApp
+- Perfil: Revendedora atuante.
+- Produtos Pedidos:
+  * Sutiã tomara que caia.
+  * Calcinha corte a laser.
+  * Bermuda de academia (moda fitness).
+- Falas Reais: "Procuro sutiã tomara q caia, calcinha laser e bermuda de academia. Qual o 
+  mínimo de compras?"
+
+8. GRACE - JUIZ DE FORA / MG
+- Contato: WhatsApp oficial (ID: 254288253194367@lid)
+- Canal: WhatsApp
+- Perfil: Revendedora de Minas Gerais.
+- Produtos Pedidos: Conjuntos rendados, conjuntos básicos e peças avulsas. Perguntou valor 
+  do frete e se faz retirada em Nova Friburgo.
+
+9. REVENDEDORA DA ZONA NORTE - RIO DE JANEIRO / RJ
+- Contato: WhatsApp oficial (ID: 97131322933267@lid)
+- Canal: WhatsApp
+- Perfil: Lojista de sapatos e bolsas de couro agregando lingerie premium.
+- Produtos Pedidos: Grade ampla de conjuntos de lingerie sofisticados.
+- Falas Reais: "Porém de conjunto de lingerie só aparece dois modelos pra mim. É somente 
+  o que tem?"
+
+10. DALVA - MANGARATIBA / RJ
+- Contato: WhatsApp oficial (ID: 184322967490791@lid)
+- Canal: WhatsApp
+- Produtos Pedidos: Calcinhas para o dia a dia (reclamou de pouca variedade no site).
+
+11. DANIELE - RIO DE JANEIRO / RJ (MARKETPLACE)
+- Canal: Site
+- Perfil: Iniciando revenda online via marketplace.
+- Produtos Pedidos: Conjuntos de lingerie, pijamas e moda fitness.
+
+12. REVENDEDORA PLUS SIZE - RIO DE JANEIRO / RJ
+- Contato: WhatsApp oficial (ID: 149206775791789@lid)
+- Canal: WhatsApp
+- Produtos Pedidos: Linha Plus Size tamanhos 50, 52 e 54.
+- Falas Reais: "Vocês trabalham com plus size? Só até o 48? Poxa, tenho clientes 50, 52 e 54."
+
+13. SANDRA - SÃO PAULO / SP
+- Canal: Site
+- Produtos Pedidos: Calcinhas de atacado para revenda em SP.
+
+14. ELISETE - CAXIAS DO SUL / RS
+- Canal: Site
+- Produtos Pedidos: Calcinhas de fábrica para revenda no Sul.
+
+15. TAIMARA - NOVA FRIBURGO / RJ
+- Canal: Site
+- Produtos Pedidos: Atacado de calcinhas de fábrica local.
+
+
+B) CLIENTES DE VAREJO (CONSUMO PRÓPRIO):
+--------------------------------------------------------------------------------
+1. CRIS (Site)
+- Pedido: Sutiã Reforçado Tamanho 48 + Calcinha Tamanho 38/M.
+- Fala Real: "Boa noite, uso 48 de sutiã e na calcinha tamanho médio (38). O sutiã pode 
+  ficar bom, mas a calcinha vai ficar imensa."
+
+2. LU (Site)
+- Pedido: Conjunto de Renda Rubi Tamanho M, calcinha Rubi M e pijama longo preto.
+
+3. CLIENTE BODY RENDADO (Site)
+- Pedido: Body rendado preto/vinho para sair à noite (dúvida se sutiã G e calça 40 aperta).
+
+4. CLIENTE CROPPED GOLA ALTA (Site)
+- Pedido: Cropped gola alta M nas cores neutras e vinho.
+
+5. DOONER (Site)
+- Pedido: Conjuntos de lingerie avulsos.
+
+
+================================================================================
+4. RESUMO ESTRATÉGICO: O MELHOR CAMINHO PARA SE AJEITAR E VENDER JÁ
+================================================================================
+
+Premissa do Negócio:
+"Somos confecção própria em Nova Friburgo, estamos começando no digital agora, temos 
+muitos produtos para subir no catálogo e ainda não temos alguns modelos prontos para 
+confeccionar imediatamente na fábrica. A meta imediata é se ajeitar para vender: 
+precisamos gerar vendas e caixa já!"
+
+Para executar essa estratégia com perfeição, divida a operação em 3 frentes práticas:
+
+--------------------------------------------------------------------------------
+FRENTE 1: O QUE CONFECCIONAR INTERNAMENTE NA FÁBRICA AGORA (PRIORIDADE MÁXIMA)
+--------------------------------------------------------------------------------
+Foque as máquinas de costura no que tem maior giro, custo de tecido baixo e costura rápida:
+
+1. KITS DE CALCINHAS 100% ALGODÃO E CALCINHAS DUPLAS:
+   * Por quê: Nerides, Vanusa, Sandra e Ingrid pediram isso com insistência. Custo de 
+     produção em Nova Friburgo é baixo, consome pouca matéria-prima e vende em kits de 
+     3 a 10 unidades.
+2. CALCINHA CÓS ALTO / "COBRE BUMBUM" (LINHA CRISTÃ / CONFORTO):
+   * Por quê: A Vanusa (SP) avisou expressamente que NÃO vende fio dental para clientes 
+     evangélicas e mulheres maduras. Essa calcinha tem cintura alta, modela a cintura e 
+     não aperta. Cores obrigatórias: Bege/Nude, Preto, Branco e Romance.
+3. CONJUNTOS RENDADOS CAMPEÕES (2 A 3 MODELOS EM CORES FORTES):
+   * Cores prioritárias: Rubi (Vermelho), Preto e Vinho. É o produto que chama a 
+     atenção nos anúncios e eleva o valor do pedido.
+
+
+--------------------------------------------------------------------------------
+FRENTE 2: O QUE COMPRAR PRONTO NO POLO DE NOVA FRIBURGO TEMPORARIAMENTE
+--------------------------------------------------------------------------------
+Como a fábrica está situada no maior polo de moda íntima do país, NÃO perca vendas de 
+R$ 500 a R$ 1.000 por não ter a peça cortada no momento. Compre pronto a preço de atacado 
+de confecções parceiras vizinhas e revenda com margem:
+
+1. MODA FITNESS (BERMUDAS DE ACADEMIA E TOPS EM SUPLEX):
+   * Por quê: Várias revendedoras pediram fitness para aproveitar o mesmo frete. Não 
+     vale a pena desregular máquinas de lingerie delicada para costurar suplex grosso. 
+     Compre 15 a 20 bermudas prontas no polo e atenda o pedido da cliente.
+2. SUTIÃ TOMARA QUE CAIA ESTRUTURADO (COM BOJO BOLHA E BARBATANA):
+   * Por quê: Exige molde técnico complexo e silicone antiderrapante. Enquanto não 
+     desenvolver a matriz na fábrica, compre no polo para atender clientes como a de 
+     Orlândia.
+3. LINHA NOITE INFANTIL E BABY DOLLS ESTAMPADOS:
+   * Por quê: A Danielle pediu linha infantil e baby doll. Em Friburgo há fábricas 
+     especializadas em liganete e malha infantil a preços baixíssimos. Compre pronto para 
+     compor o mix.
+4. CALCINHAS CORTE A LASER (SEM COSTURA):
+   * Por quê: Exige máquina de corte por ultrassom e colagem térmica. Compre pacotes 
+     prontos no atacado local.
+
+
+--------------------------------------------------------------------------------
+FRENTE 3: PLANO DE AÇÃO IMEDIATO PARA OS PRÓXIMOS 3 DIAS
+--------------------------------------------------------------------------------
+
+PASSO 1: ABORDAGEM ATIVA NO WHATSAPP (HOJE MESMO PELO SR. LUIZ MACHADO)
+Mandar mensagem direta para as revendedoras quentes que deixaram o contato:
+
+* MENSAGEM PARA A VANUSA - (11) 95937-8959:
+  "Olá Vanusa, boa tarde! Aqui é o Luiz Machado da Avante Lingerie. Conforme combinamos, 
+  separei as fotos dos conjuntos e das calcinhas de cós alto que não são fio dental 
+  (linha cristã/conforto que você pediu), além das bermudas fitness. Vou te enviar aqui 
+  para você escolher as peças do seu pedido de teste de R$ 300! Pode ser?"
+
+* MENSAGEM PARA A NERIDES - (22) 99905-4474:
+  "Oi Nerides, boa tarde! Aqui é o Luiz da Avante Lingerie. Estou com as calcinhas 100% 
+  algodão e calcinhas duplas nos tamanhos M e G que você queria ver. Vou te mandar as 
+  fotos e a tabela de preço de fábrica direto aqui no WhatsApp, tá bom?"
+
+* MENSAGEM PARA ELISÂNGELA (19) 99882-5321 E ODETE (62) 99138-2008:
+  Enviar as fotos e a condição de pagamento de atacado via WhatsApp.
+
+
+PASSO 2: ACABAR COM A QUEIXA DE "LOJA VAZIA" (EM 48 HORAS)
+* Tirar fotos simples no celular (em manequim ou fundo branco bem iluminado) de 10 a 15 
+  peças que você já tem no estoque físico da fábrica.
+* Cadastrar na loja online com nomes diretos:
+  1. Conjunto Rendado Rubi Luxo
+  2. Kit 5 Calcinhas 100% Algodão Conforto
+  3. Calcinha Cós Alto Cobre Bumbum (Linha Conforto)
+  4. Sutiã Reforçado Plus Size 48 ao 52
+  5. Bermuda de Academia Suplex Fitness
+* Isso elimina imediatamente o receio das revendedoras de que a loja tem poucas opções 
+  e destrava o carrinho de compras.
+
+================================================================================
+FIM DO RELATÓRIO
+================================================================================

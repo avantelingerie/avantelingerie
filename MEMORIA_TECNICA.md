@@ -2924,3 +2924,51 @@ pm run test:shield 17/17 aprovados e build do Vite finalizado com sucesso em 35.
   - Inseridas as instruções no prompt central da Lia (`apps/api/src/routes/lia.js`), no prompt dedicado do WhatsApp (`/whatsapp-webhook`) e na base de conhecimento oficial (`apps/api/src/utils/liaKnowledgeBase.js`).
   - Atualizada a ferramenta `salvar_lead_contato` e a memória persistente (`MEMORY.md`).
 - **Validação:** Verificação completa de sintaxe e testes de integridade `npm run test:shield`.
+
+
+### 23/11/2026 — Cadastro de Categoria 'Plus Size' e Calçola Modeladora
+- **Categoria Criada:** 'Plus Size' (ID: `1ilukbnspp76cdf`, slug: `plus-size`).
+- **Produto Cadastrado:** 'Calcinha Cintura Alta Modeladora Plus Size Feminina Microfibra Gestante Hot Pants Pós-Parto Calçola Básica' (ID: `8f7o7s84bj98u1f`, Ref: `CAL-PLUS-MOD-01`).
+- **Imagens:** 12 fotos cadastradas (Frente e verso das cores: Bege, Branca, Marrom, Bordô, Azul Marinho, Azul Claro).
+- **Variações:** 24 variações geradas na coleção `variacoes` (4 tamanhos: XG/G1 46/48, EG/G2 50, EG/G3 52, EG/G4 54 x 6 cores).
+- **Status Inicial:** Desativado (`status: false`) no banco de dados, aguardando precificação do lojista no painel admin para ativação.
+
+
+### 23/11/2026 — Cadastro da Calcinha Cós Alto Fio Duplo Cinta Modeladora
+- **Categoria Vinculada:** 'Calcinha' (ID: `t8rptpnohl0eety`).
+- **Produto Cadastrado:** 'Calcinha Cós Alto Fio Duplo Cinta Modeladora Cintura Alta Lingerie Feminina' (ID: `a61rw32hc91zq31`, Ref: `CAL-COS-FIO-02`).
+- **Imagens:** 8 fotos cadastradas (Frente e verso das 4 cores: Bege, Cinza, Vinho, Azul Marinho).
+- **Variações:** 12 variações estruturadas na coleção `variacoes` (3 tamanhos: M 38/40, G 40/42, GG 44/46 x 4 cores).
+- **Status Inicial:** Desativado (`status: false`) no banco de dados, aguardando precificação do lojista no painel admin para ativação.
+
+
+### 23/11/2026 — Cadastro da Calcinha Tailandesa com Pérolas Fio Dental
+- **Categoria Vinculada:** 'Calcinha' (ID: `t8rptpnohl0eety`).
+- **Produto Cadastrado:** 'Calcinha Tailandesa Pérolas Fio Dental Sensual Rendada Lingerie Espera Marido Massageadora' (ID: `1y126wty2qdkcf2`, Ref: `CAL-TAILAN-PERL-03`).
+- **Imagens:** 6 fotos cadastradas (Frente e verso das 3 cores: Preta, Vermelha, Branca).
+- **Variações:** 9 variações estruturadas na coleção `variacoes` (3 tamanhos: M 38/40, G 40/42, GG 44/46 x 3 cores).
+- **Status Inicial:** Desativado (`status: false`) no banco de dados, aguardando precificação do lojista no painel admin para ativação.
+
+- **Imagem Promocional Adicionada:** Adicionada a 7ª foto na galeria do produto (`calcinha_tailandesa_perolas_modelo_todas_cores_6z1hladucs.jpg`), exibindo a modelo segurando as 3 cores (Preta, Branca e Vermelha com pérolas).
+
+
+### [23/11/2026 - 18:30] Implementação do Protocolo "Filtradora de Ouro" (A Ponte de Autoridade) na Lia
+- **Objetivo**: Transformar o atendimento inicial da Lia em uma triagem rápida, educada e estratégica (Filtradora de Ouro) no estilo ping-pong amigável.
+- **Estrutura de Triagem**:
+  1. Pergunta 1: Nome da cliente (com auto-captura para `cliente_nome`).
+  2. Pergunta 2: Cidade de onde fala.
+  3. Pergunta 3: Finalidade ("É para revenda ou uso próprio?").
+  4. Pergunta 4 (se revenda): "Você já revende ou está começando agora?".
+- **Bifurcação de Caminho**:
+  - **Caminho 1 (Uso Próprio / Varejo)**: A Lia mantém atendimento autônomo, encantador e persuasivo, recomendando peças, tirando dúvidas de tamanhos e tecidos, oferecendo links clicáveis `[Nome da Peça](/produto/slug)` e guiando até o checkout da loja virtual.
+  - **Caminho 2 (Revenda / Atacado)**: A Lia aciona a Pergunta de Ouro de inteligência da confecção:
+    `"[Nome], você já tem algum modelo ou cor específica que as suas clientes sempre te pedem na sua cidade e que você tem dificuldade de achar com bom preço?"`.
+    Ao receber a resposta:
+    - Grava o lead no sistema com persistência garantida em `contact_messages` (assunto: `Atacado / Revendas`, com nome, cidade, modelos solicitados, canal e data) e atualiza `cliente_nome` em `lia_conversas`.
+    - Responde com a mensagem calorosa e exata de autoridade da confecção:
+      `"Que maravilhosa notícia, [Nome]! Fico muito feliz com seu interesse em revender nossas peças. Vou te passar agora mesmo para o Sr. Luiz Machado. Ele é o responsável administrativo da confecção e vai cuidar pessoalmente do seu atendimento, tá bom? É só clicar no botão abaixo que ele já vai te responder."`
+- **Frontend (`LiaWidget.jsx`)**:
+  - Detecção inteligente da mensagem de transbordo renderizando o botão verde de WhatsApp com link direto para o Sr. Luiz Machado (`(22) 98112-4281` / `5522981124281`) personalizado com o nome da cliente.
+- **Painel Administrativo (`LiaAdminPage.jsx`)**:
+  - Inclusão da tag dourada `👑 Revenda` na listagem de conversas e badge `👑 Lead de Revenda / Atacado` no cabeçalho da conversa selecionada.
+- **Validações**: `npm run test:shield` (17/17 PASS), `npm run lint --prefix apps/web` (0 erros), Vite production build (0 erros).
