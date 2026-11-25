@@ -2972,3 +2972,20 @@ pm run test:shield 17/17 aprovados e build do Vite finalizado com sucesso em 35.
 - **Painel Administrativo (`LiaAdminPage.jsx`)**:
   - Inclusão da tag dourada `👑 Revenda` na listagem de conversas e badge `👑 Lead de Revenda / Atacado` no cabeçalho da conversa selecionada.
 - **Validações**: `npm run test:shield` (17/17 PASS), `npm run lint --prefix apps/web` (0 erros), Vite production build (0 erros).
+
+
+### [25/11/2026 - 10:10] Substituição da Seção Coleções pelas Vitrines Diretas "Linha Fitness" e "Especial Plus Size" na Home
+- **Motivação & CRO**: Eliminar a ambiguidade da seção genérica de Coleções e oferecer proposta de valor instantânea com vitrines de produtos reais com foto, preço, parcelamento em 6x e botão Comprar na Home:
+  1. *Linha Fitness da Fábrica*: Treino, performance e cross-sell legítimo de lingeries e roupas esportivas.
+  2. *Especial Plus Size & Modeladores*: Acolhimento e alta conversão para o público do 46 ao 54 (G1 ao G4), reduzindo o bounce rate a zero.
+- **Banco de Dados (PocketBase)**:
+  - Adicionados campos não-destrutivos `is_fitness` (bool) e `is_plus_size` (bool) na coleção `products`.
+  - Fallback inteligente na Home: query busca `status = true && (is_fitness = true || categoria_id.slug = "fitness")` e `status = true && (is_plus_size = true || categoria_id.slug = "plus-size")`.
+- **Painel de Cadastro de Produtos (`ProdutoForm.jsx`)**:
+  - Adicionados os switches de curadoria com acabamento dourado e descrições claras:
+    - ⚡ `Vitrine Linha Fitness (Home)` -> grava em `is_fitness`
+    - 👑 `Vitrine Especial Plus Size (Home)` -> grava em `is_plus_size`
+- **Página Inicial (`HomePage.jsx`)**:
+  - Ocultada a antiga Section 9 de cards conceituais de Coleções.
+  - Inseridas Section 9A (Linha Fitness da Fábrica) e Section 9B (Especial Plus Size & Modeladores) com grade de ProductCards e botões direcionando para `/categoria/fitness` e `/categoria/plus-size`.
+- **Validações**: `npm run test:shield` (17/17 PASS), `npm run lint --prefix apps/web` (0 erros), `vite build` (0 erros em 21.22s).

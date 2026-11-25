@@ -98,7 +98,9 @@ export default function HomePage() {
     newArrivals: [],
     kits: [],
     testimonials: [],
-    colecoes: []
+    colecoes: [],
+    fitness: [],
+    plusSize: []
   });
 
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: 'start' });
@@ -146,14 +148,16 @@ export default function HomePage() {
           }
         }));
 
-        const [maisVendidosRes, favoritesRes, promosRes, newArrivalsRes, kitsRes, testimonialsRes, colecoesRes] = await Promise.allSettled([
+        const [maisVendidosRes, favoritesRes, promosRes, newArrivalsRes, kitsRes, testimonialsRes, colecoesRes, fitnessRes, plusSizeRes] = await Promise.allSettled([
           pb.collection('products').getList(1, 8, { filter: 'status = true && is_mais_vendido = true', sort: '-created', expand: 'categoria_id', $autoCancel: false }),
           pb.collection('products').getList(1, 8, { filter: 'status = true && is_favorito = true', sort: '-created', expand: 'categoria_id', $autoCancel: false }),
           pb.collection('products').getList(1, 8, { filter: 'status = true && is_promocao = true', sort: '-created', expand: 'categoria_id', $autoCancel: false }),
           pb.collection('products').getList(1, 8, { filter: 'status = true && is_novidade = true', sort: '-created', expand: 'categoria_id', $autoCancel: false }),
           pb.collection('products').getList(1, 8, { filter: 'status = true && categoria_id.slug = "kits"', sort: '-created', expand: 'categoria_id', $autoCancel: false }),
           pb.collection('testimonials').getList(1, 10, { filter: 'status = true', sort: '-created', $autoCancel: false }),
-          pb.collection('colecoes').getList(1, 3, { filter: 'ativo = true', sort: '-created', $autoCancel: false })
+          pb.collection('colecoes').getList(1, 3, { filter: 'ativo = true', sort: '-created', $autoCancel: false }),
+          pb.collection('products').getList(1, 8, { filter: 'status = true && (is_fitness = true || categoria_id.slug = "fitness")', sort: '-created', expand: 'categoria_id', $autoCancel: false }),
+          pb.collection('products').getList(1, 8, { filter: 'status = true && (is_plus_size = true || categoria_id.slug = "plus-size")', sort: '-created', expand: 'categoria_id', $autoCancel: false })
         ]);
 
         const getItems = res => res.status === 'fulfilled' ? res.value.items : [];
@@ -167,7 +171,9 @@ export default function HomePage() {
             newArrivals: getItems(newArrivalsRes),
             kits: getItems(kitsRes),
             testimonials: getItems(testimonialsRes),
-            colecoes: getItems(colecoesRes)
+            colecoes: getItems(colecoesRes),
+            fitness: getItems(fitnessRes),
+            plusSize: getItems(plusSizeRes)
           });
           setLoading(false);
         }
@@ -466,38 +472,103 @@ export default function HomePage() {
       )}
 
       {/* ==========================================
-          SECTION 9: LUXURY COLLECTIONS (OCULTA SE VAZIA)
+          SECTION 9A: LINHA FITNESS DA FÁBRICA (NOVA VITRINE DIRETA)
           ========================================== */}
-      {!loading && data.colecoes && data.colecoes.length > 0 && (
-        <section id="colecoes" className="py-24 bg-white relative overflow-hidden">
-          <div className="absolute top-1/2 left-0 w-[550px] h-[550px] bg-[#c59b5f]/5 rounded-full blur-[100px] -translate-y-1/2 -translate-x-1/2 pointer-events-none" />
-          <div className="container-custom">
+      {(loading || data.fitness.length > 0) && (
+        <section id="fitness" className="py-24 bg-white relative overflow-hidden border-t border-gray-100">
+          <div className="absolute top-0 left-1/4 w-[450px] h-[450px] bg-[#c59b5f]/5 rounded-full blur-[120px] pointer-events-none" />
+
+          <div className="container-custom relative z-10">
             <div className="text-center mb-16">
-              <span className="text-[10px] md:text-xs font-bold uppercase tracking-[3px] text-[#c59b5f]">
-                Conceito & Essência
+              <span className="text-[10px] md:text-xs font-bold uppercase tracking-[3px] text-[#c59b5f] flex items-center justify-center gap-1.5">
+                <span>⚡</span> Performance, Treino & Zero Transparência
               </span>
               <h2 className="text-3xl md:text-4.5xl font-serif font-bold text-gray-900 mt-2">
-                Explore Nossas Coleções
+                Linha Fitness da Fábrica
               </h2>
-              <p className="text-gray-500 text-sm md:text-base font-light max-w-md mx-auto mt-2">
-                Concebidas artesanalmente para cada instante da sua rotina ou ocasiões especiais.
+              <p className="text-gray-500 text-sm md:text-base font-light max-w-xl mx-auto mt-2">
+                Tops de sustentação anatômica, leggings e conjuntos de alta compressão produzidos em Nova Friburgo. O caimento perfeito que não enrola e valoriza seu treino.
               </p>
               <div className="w-16 h-0.5 bg-[#c59b5f] mx-auto mt-4 rounded-full"></div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 relative z-10">
-              {data.colecoes.map((col, idx) => (
-                <div key={col.id} onClick={() => navigate(`/categoria/${col.slug}`)} className={`cursor-pointer ${idx === 0 ? 'md:col-span-2 lg:col-span-2 aspect-[4/3] lg:aspect-auto' : ''}`}>
-                  <CollectionCard 
-                    title={col.nome} 
-                    image={col.imagem_capa ? pb.files.getUrl(col, col.imagem_capa) : 'https://images.unsplash.com/photo-1568441556126-f36ae0900180?w=600&q=80'} 
-                  />
+            {loading ? (
+              <ProductGridSkeleton count={4} />
+            ) : (
+              <div className="space-y-12">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+                  {data.fitness.slice(0, 8).map(p => (
+                    <ProductCard key={p.id} produto={p} onComprarAgora={handleComprarAgora} onFavorite={handleFavoriteToggle} />
+                  ))}
                 </div>
-              ))}
-            </div>
+                
+                <div className="flex justify-center pt-2">
+                  <Button
+                    onClick={() => navigate('/categoria/fitness')}
+                    variant="outline"
+                    className="border-[#c59b5f] text-gray-900 hover:bg-[#c59b5f] hover:text-black font-bold px-8 py-6 rounded-full text-xs uppercase tracking-wider transition-all duration-300 shadow-sm hover:scale-105 active:scale-95 group"
+                  >
+                    Ver Toda a Linha Fitness
+                    <ChevronRight className="w-4 h-4 ml-1.5 group-hover:translate-x-1 transition-transform" />
+                  </Button>
+                </div>
+              </div>
+            )}
           </div>
         </section>
       )}
+
+      {/* ==========================================
+          SECTION 9B: ESPECIAL PLUS SIZE & MODELADORES (NOVA VITRINE DIRETA)
+          ========================================== */}
+      {(loading || data.plusSize.length > 0) && (
+        <section id="plus-size" className="py-24 bg-[#FFF8F5] border-y border-[#c59b5f]/15 relative overflow-hidden">
+          <div className="absolute top-1/2 right-0 w-[500px] h-[500px] bg-[#c59b5f]/5 rounded-full blur-[120px] -translate-y-1/2 pointer-events-none" />
+
+          <div className="container-custom relative z-10">
+            <div className="text-center mb-16">
+              <span className="text-[10px] md:text-xs font-bold uppercase tracking-[3px] text-[#c59b5f] flex items-center justify-center gap-1.5">
+                <Crown className="w-3.5 h-3.5" /> Curvas Reais • Do 46 ao 54 (G1 ao G4)
+              </span>
+              <h2 className="text-3xl md:text-4.5xl font-serif font-bold text-gray-900 mt-2">
+                Especial Plus Size & Modeladores
+              </h2>
+              <p className="text-gray-500 text-sm md:text-base font-light max-w-xl mx-auto mt-2">
+                Calcinhas cinta com cós alto duplo que não enrolam, sutiãs com sustentação reforçada e modelagem milimetricamente desenhada para abraçar seu corpo sem machucar.
+              </p>
+              <div className="w-16 h-0.5 bg-[#c59b5f] mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            {loading ? (
+              <ProductGridSkeleton count={4} />
+            ) : (
+              <div className="space-y-12">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+                  {data.plusSize.slice(0, 8).map(p => (
+                    <ProductCard key={p.id} produto={p} onComprarAgora={handleComprarAgora} onFavorite={handleFavoriteToggle} />
+                  ))}
+                </div>
+
+                <div className="flex justify-center pt-2">
+                  <Button
+                    onClick={() => navigate('/categoria/plus-size')}
+                    className="bg-[#c59b5f] hover:bg-white text-black font-bold px-8 py-6 rounded-full text-xs uppercase tracking-wider transition-all duration-300 shadow-md shadow-[#c59b5f]/20 border border-[#c59b5f] hover:scale-105 active:scale-95 group"
+                  >
+                    Explorar Coleção Plus Size Completa
+                    <ChevronRight className="w-4 h-4 ml-1.5 group-hover:translate-x-1 transition-transform" />
+                  </Button>
+                </div>
+              </div>
+            )}
+          </div>
+        </section>
+      )}
+
+      {/* ==========================================
+          SECTION 9 (ANTIGA): COLEÇÕES CONCEITUAIS (OCULTA CONFORME SOLICITADO)
+          Nota: O código de cards de coleção foi ocultado para dar lugar às
+          vitrines diretas de alta conversão de Fitness e Plus Size.
+          ========================================== */}
 
       {/* ==========================================
           SECTION 10: NEW ARRIVALS (LANCAMENTOS DYNAMIC - OCULTA SE VAZIA)

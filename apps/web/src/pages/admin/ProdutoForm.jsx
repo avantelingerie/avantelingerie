@@ -71,6 +71,8 @@ export default function ProdutoForm() {
     is_promocao: false,
     is_mais_vendido: false,
     is_favorito: false,
+    is_fitness: false,
+    is_plus_size: false,
     video_url: '',
     cross_sell_id: '',
     colecoes_ids: ''
@@ -203,6 +205,8 @@ export default function ProdutoForm() {
         is_promocao: !!record.is_promocao,
         is_mais_vendido: !!record.is_mais_vendido,
         is_favorito: !!record.is_favorito,
+        is_fitness: !!record.is_fitness,
+        is_plus_size: !!record.is_plus_size,
         video_url: record.video_url || '',
         cross_sell_id: record.cross_sell_id || '',
         colecoes_ids: record.colecoes_ids || ''
@@ -590,6 +594,8 @@ export default function ProdutoForm() {
       pbFormData.append('is_promocao', formData.is_promocao);
       pbFormData.append('is_mais_vendido', formData.is_mais_vendido);
       pbFormData.append('is_favorito', formData.is_favorito);
+      pbFormData.append('is_fitness', formData.is_fitness);
+      pbFormData.append('is_plus_size', formData.is_plus_size);
       pbFormData.append('video_url', formData.video_url);
       pbFormData.append('cross_sell_id', formData.cross_sell_id);
       pbFormData.append('colecoes_ids', formData.colecoes_ids);
@@ -1017,6 +1023,26 @@ export default function ProdutoForm() {
                       <h4 className="font-bold text-xs text-zinc-900 dark:text-white">Destaques de Ouro</h4>
                     </div>
                     <Switch checked={formData.is_favorito} onCheckedChange={(c) => handleInputChange('is_favorito', c)} className="data-[state=checked]:bg-[#c59b5f]" />
+                  </div>
+
+                  <div className="flex items-center justify-between p-4 bg-zinc-50 dark:bg-[#1a1a1a] rounded-xl border border-zinc-200 dark:border-[#c59b5f]/20 hover:border-[#c59b5f]/40 transition-all shadow-sm">
+                    <div>
+                      <h4 className="font-bold text-xs text-zinc-900 dark:text-white flex items-center gap-1.5">
+                        <span>⚡</span> Vitrine Linha Fitness (Home)
+                      </h4>
+                      <p className="text-[10px] text-zinc-500 dark:text-gray-400 mt-0.5">Exibir na seção de treino e fitness da página inicial</p>
+                    </div>
+                    <Switch checked={formData.is_fitness} onCheckedChange={(c) => handleInputChange('is_fitness', c)} className="data-[state=checked]:bg-[#c59b5f]" />
+                  </div>
+
+                  <div className="flex items-center justify-between p-4 bg-zinc-50 dark:bg-[#1a1a1a] rounded-xl border border-zinc-200 dark:border-[#c59b5f]/20 hover:border-[#c59b5f]/40 transition-all shadow-sm">
+                    <div>
+                      <h4 className="font-bold text-xs text-zinc-900 dark:text-white flex items-center gap-1.5">
+                        <span>👑</span> Vitrine Especial Plus Size (Home)
+                      </h4>
+                      <p className="text-[10px] text-zinc-500 dark:text-gray-400 mt-0.5">Exibir na seção especial de Plus Size da página inicial</p>
+                    </div>
+                    <Switch checked={formData.is_plus_size} onCheckedChange={(c) => handleInputChange('is_plus_size', c)} className="data-[state=checked]:bg-[#c59b5f]" />
                   </div>
                 </div>
               </div>
