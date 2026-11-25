@@ -3016,3 +3016,25 @@ pm run test:shield 17/17 aprovados e build do Vite finalizado com sucesso em 35.
   - `npm run test:shield`: 17/17 verificações aprovadas.
   - `npm run lint --prefix apps/web`: 0 erros.
   - `npm run build --prefix apps/web`: 3.127 módulos transformados com sucesso em 18.57s.
+
+
+### [25/11/2026 - 15:10] Reposicionamento das Seções Linha Fitness e Plus Size Acima dos Benefícios na Home
+- **Contexto & CRO**:
+  - As seções **Linha Fitness da Fábrica** (`#fitness`) e **Especial Plus Size & Modeladores** (`#plus-size`) foram reposicionadas estrategicamente para ficarem **acima** da seção persuasiva de benefícios (*"Luxo que se Sente, Economia que se Vive!"* / `HomeBeneficiosSection`).
+- **Nova Ordem de Navegação na Home Page**:
+  1. Hero Video e Benefícios Rápidos
+  2. Histórias / Categorias Dinâmicas
+  3. FactorySection (Tour da Fábrica)
+  4. Mais Vendidos da Avante (Grade dinâmica em linhas contínuas)
+  5. Revendedores & Depoimentos / Histórias de Sucesso
+  6. **Ofertas Exclusivas** (Champagne / #FFF8F5)
+  7. **Linha Fitness da Fábrica** (Branco / Pure White)
+  8. **Especial Plus Size & Modeladores** (Champagne / #FFF8F5)
+  9. **Benefícios da Fábrica: Varejo & Atacado** (*"Luxo que se Sente, Economia que se Vive!"* / Dark Luxury)
+  10. Lançamentos Recentes (Branco)
+- **Harmonia Visual**:
+  - A alternância cromática ficou refinada: alternando entre o fundo nobre champagne, fundo branco puro e o bloco nobre escuro de benefícios.
+- **Validações e Não-Regressão**:
+  - `npm run test:shield`: 17/17 verificações aprovadas.
+  - `npm run lint --prefix apps/web`: 0 erros.
+  - `npm run build --prefix apps/web`: 3.127 módulos transformados com sucesso em 21.57s.

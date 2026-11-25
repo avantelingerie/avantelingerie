@@ -443,11 +443,6 @@ export default function HomePage() {
       )}
 
       {/* ==========================================
-          SECTION 6: DUAL PERSUASIVE BANNER (VAREJO & ATACADO) - 100% DINÂMICO COM O ADMIN
-          ========================================== */}
-      <HomeBeneficiosSection onScrollToCategorias={() => scrollToSection('categorias')} />
-
-      {/* ==========================================
           SECTION 9A: LINHA FITNESS DA FÁBRICA (NOVA VITRINE DIRETA)
           ========================================== */}
       {(loading || data.fitness.length > 0) && (
@@ -540,6 +535,11 @@ export default function HomePage() {
           </div>
         </section>
       )}
+
+      {/* ==========================================
+          SECTION 6: DUAL PERSUASIVE BANNER (VAREJO & ATACADO) - 100% DINÂMICO COM O ADMIN
+          ========================================== */}
+      <HomeBeneficiosSection onScrollToCategorias={() => scrollToSection('categorias')} />
 
       {/* ==========================================
           SECTION 9 (ANTIGA): COLEÇÕES CONCEITUAIS (OCULTA CONFORME SOLICITADO)
