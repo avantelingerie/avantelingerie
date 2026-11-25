@@ -593,7 +593,7 @@ export default function ProdutoForm() {
       pbFormData.append('is_novidade', formData.is_novidade);
       pbFormData.append('is_promocao', formData.is_promocao);
       pbFormData.append('is_mais_vendido', formData.is_mais_vendido);
-      pbFormData.append('is_favorito', formData.is_favorito);
+      pbFormData.append('is_favorito', false);
       pbFormData.append('is_fitness', formData.is_fitness);
       pbFormData.append('is_plus_size', formData.is_plus_size);
       pbFormData.append('video_url', formData.video_url);
@@ -1016,13 +1016,6 @@ export default function ProdutoForm() {
                       <h4 className="font-bold text-xs text-zinc-900 dark:text-white">Mais Vendidos da Avante</h4>
                     </div>
                     <Switch checked={formData.is_mais_vendido} onCheckedChange={(c) => handleInputChange('is_mais_vendido', c)} className="data-[state=checked]:bg-[#c59b5f]" />
-                  </div>
-
-                  <div className="flex items-center justify-between p-4 bg-zinc-50 dark:bg-[#1a1a1a] rounded-xl border border-zinc-200 dark:border-[#c59b5f]/20 hover:border-[#c59b5f]/40 transition-all shadow-sm">
-                    <div>
-                      <h4 className="font-bold text-xs text-zinc-900 dark:text-white">Destaques de Ouro</h4>
-                    </div>
-                    <Switch checked={formData.is_favorito} onCheckedChange={(c) => handleInputChange('is_favorito', c)} className="data-[state=checked]:bg-[#c59b5f]" />
                   </div>
 
                   <div className="flex items-center justify-between p-4 bg-zinc-50 dark:bg-[#1a1a1a] rounded-xl border border-zinc-200 dark:border-[#c59b5f]/20 hover:border-[#c59b5f]/40 transition-all shadow-sm">

@@ -148,10 +148,9 @@ export default function HomePage() {
           }
         }));
 
-        const [maisVendidosRes, favoritesRes, promosRes, newArrivalsRes, kitsRes, testimonialsRes, colecoesRes, fitnessRes, plusSizeRes] = await Promise.allSettled([
-          pb.collection('products').getList(1, 8, { filter: 'status = true && is_mais_vendido = true', sort: '-created', expand: 'categoria_id', $autoCancel: false }),
-          pb.collection('products').getList(1, 8, { filter: 'status = true && is_favorito = true', sort: '-created', expand: 'categoria_id', $autoCancel: false }),
-          pb.collection('products').getList(1, 8, { filter: 'status = true && is_promocao = true', sort: '-created', expand: 'categoria_id', $autoCancel: false }),
+        const [maisVendidosRes, promosRes, newArrivalsRes, kitsRes, testimonialsRes, colecoesRes, fitnessRes, plusSizeRes] = await Promise.allSettled([
+          pb.collection('products').getFullList({ filter: 'status = true && is_mais_vendido = true', sort: '-created', expand: 'categoria_id', $autoCancel: false }),
+          pb.collection('products').getFullList({ filter: 'status = true && is_promocao = true', sort: '-created', expand: 'categoria_id', $autoCancel: false }),
           pb.collection('products').getList(1, 8, { filter: 'status = true && is_novidade = true', sort: '-created', expand: 'categoria_id', $autoCancel: false }),
           pb.collection('products').getList(1, 8, { filter: 'status = true && categoria_id.slug = "kits"', sort: '-created', expand: 'categoria_id', $autoCancel: false }),
           pb.collection('testimonials').getList(1, 10, { filter: 'status = true', sort: '-created', $autoCancel: false }),
@@ -160,13 +159,17 @@ export default function HomePage() {
           pb.collection('products').getList(1, 8, { filter: 'status = true && (is_plus_size = true || categoria_id.slug = "plus-size")', sort: '-created', expand: 'categoria_id', $autoCancel: false })
         ]);
 
-        const getItems = res => res.status === 'fulfilled' ? res.value.items : [];
+        const getItems = res => {
+          if (res.status !== 'fulfilled') return [];
+          if (Array.isArray(res.value)) return res.value;
+          return res.value?.items || [];
+        };
 
         if (isMounted) {
           setCategories(dynamicCategories);
           setData({
             maisVendidos: getItems(maisVendidosRes),
-            favorites: getItems(favoritesRes),
+            favorites: [],
             promos: getItems(promosRes),
             newArrivals: getItems(newArrivalsRes),
             kits: getItems(kitsRes),
@@ -391,7 +394,7 @@ export default function HomePage() {
               <ProductGridSkeleton count={4} />
             ) : (
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 relative z-10">
-                {data.maisVendidos.slice(0, 8).map(p => (
+                {data.maisVendidos.map(p => (
                   <ProductCard key={p.id} produto={p} onComprarAgora={handleComprarAgora} onFavorite={handleFavoriteToggle} />
                 ))}
               </div>
@@ -412,28 +415,25 @@ export default function HomePage() {
       </section>
 
       {/* ==========================================
-          SECTION 7: FAVORITES DYNAMIC (SUBIU! AGORA ANTES DA SECTION 6)
+          SECTION: OFERTAS EXCLUSIVAS (SUBIU PARA O LUGAR DE DESTAQUES DE OURO)
           ========================================== */}
-      {(loading || data.favorites.length > 0) && (
-        <section id="favoritos" className="py-24 bg-white relative overflow-hidden">
+      {(loading || data.promos.length > 0) && (
+        <section id="promocoes" className="py-24 bg-[#FFF8F5] border-y border-[#c59b5f]/15 relative overflow-hidden">
           <div className="container-custom">
             <div className="text-center mb-16">
-              <span className="text-[10px] md:text-xs font-bold uppercase tracking-[3px] text-[#c59b5f]">
-                Sua Próxima Joia
+              <span className="text-[10px] md:text-xs font-bold text-[#c59b5f] uppercase tracking-[3px] font-extrabold block">
+                Oportunidade Premium
               </span>
               <h2 className="text-3xl md:text-4.5xl font-serif font-bold text-gray-900 mt-2">
-                Destaques de Ouro
+                Ofertas Exclusivas
               </h2>
-              <p className="text-gray-500 text-sm md:text-base font-light max-w-md mx-auto mt-2">
-                Modelagem refinada e luxo traduzidos em lingeries atemporais.
-              </p>
               <div className="w-16 h-0.5 bg-[#c59b5f] mx-auto mt-4 rounded-full"></div>
             </div>
             {loading ? (
               <ProductGridSkeleton count={4} />
             ) : (
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-                {data.favorites.slice(0, 8).map(p => (
+                {data.promos.map(p => (
                   <ProductCard key={p.id} produto={p} onComprarAgora={handleComprarAgora} onFavorite={handleFavoriteToggle} />
                 ))}
               </div>
@@ -446,30 +446,6 @@ export default function HomePage() {
           SECTION 6: DUAL PERSUASIVE BANNER (VAREJO & ATACADO) - 100% DINÂMICO COM O ADMIN
           ========================================== */}
       <HomeBeneficiosSection onScrollToCategorias={() => scrollToSection('categorias')} />
-
-      {/* ==========================================
-          SECTION 8: PROMOTIONS DYNAMIC
-          ========================================== */}
-      {!loading && data.promos.length > 0 && (
-        <section id="promocoes" className="py-24 bg-[#FFF8F5] border-y border-[#c59b5f]/15">
-          <div className="container-custom">
-            <div className="text-center mb-16">
-              <span className="text-[10px] md:text-xs font-bold text-[#c59b5f] uppercase tracking-[3px] font-extrabold block">
-                Oportunidade Premium
-              </span>
-              <h2 className="text-3xl md:text-4.5xl font-serif font-bold text-gray-900 mt-2">
-                Ofertas Exclusivas
-              </h2>
-              <div className="w-16 h-0.5 bg-[#c59b5f] mx-auto mt-4 rounded-full"></div>
-            </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-              {data.promos.slice(0, 8).map(p => (
-                <ProductCard key={p.id} produto={p} onComprarAgora={handleComprarAgora} onFavorite={handleFavoriteToggle} />
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
 
       {/* ==========================================
           SECTION 9A: LINHA FITNESS DA FÁBRICA (NOVA VITRINE DIRETA)
@@ -552,7 +528,8 @@ export default function HomePage() {
                 <div className="flex justify-center pt-2">
                   <Button
                     onClick={() => navigate('/categoria/plus-size')}
-                    className="bg-[#c59b5f] hover:bg-white text-black font-bold px-8 py-6 rounded-full text-xs uppercase tracking-wider transition-all duration-300 shadow-md shadow-[#c59b5f]/20 border border-[#c59b5f] hover:scale-105 active:scale-95 group"
+                    variant="outline"
+                    className="border-[#c59b5f] text-gray-900 hover:bg-[#c59b5f] hover:text-black font-bold px-8 py-6 rounded-full text-xs uppercase tracking-wider transition-all duration-300 shadow-sm hover:scale-105 active:scale-95 group"
                   >
                     Explorar Coleção Plus Size Completa
                     <ChevronRight className="w-4 h-4 ml-1.5 group-hover:translate-x-1 transition-transform" />

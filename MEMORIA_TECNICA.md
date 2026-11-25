@@ -2989,3 +2989,30 @@ pm run test:shield 17/17 aprovados e build do Vite finalizado com sucesso em 35.
   - Ocultada a antiga Section 9 de cards conceituais de Coleções.
   - Inseridas Section 9A (Linha Fitness da Fábrica) e Section 9B (Especial Plus Size & Modeladores) com grade de ProductCards e botões direcionando para `/categoria/fitness` e `/categoria/plus-size`.
 - **Validações**: `npm run test:shield` (17/17 PASS), `npm run lint --prefix apps/web` (0 erros), `vite build` (0 erros em 21.22s).
+
+
+### [25/11/2026 - 12:25] Padronização Visual dos Botões e Limite de Grade (Fitness & Plus Size)
+- **Motivação**: Unificar a identidade visual dos botões de ação nas seções de alta conversão da Home Page conforme apontado pelo usuário.
+- **Ajuste no Botão Plus Size (`HomePage.jsx`)**:
+  - Alinhado com o padrão nobre da seção Fitness: visual `variant="outline"` com fundo claro, borda dourada elegante (`border-[#c59b5f]`), texto escuro (`text-gray-900`) e efeito hover com preenchimento dourado da marca (`hover:bg-[#c59b5f] hover:text-black`).
+- **Estrutura de Grade das Vitrines**:
+  - Ambas as seções operam estritamente no padrão de 2 linhas com 4 cards no desktop (`grid-cols-1 sm:grid-cols-2 lg:grid-cols-4`, limitado com `.slice(0, 8)`) seguidas pelo botão de exploração da coleção completa centralizado logo abaixo.
+- **Validações**: `npm run test:shield` (17/17 PASS), `npm run lint --prefix apps/web` (0 erros), `vite build` (0 erros em 18.66s).
+
+
+### [25/11/2026 - 13:00] Reorganização Estratégica da Home: Mais Vendidos Dinâmico e Elevação de Ofertas Exclusivas
+- **1. Seção "Mais Vendidos da Avante" Flexível e Dinâmica**:
+  - Removido o teto fixo de 8 cards (`.slice(0, 8)`) no `HomePage.jsx`.
+  - A consulta foi atualizada para `getFullList`, permitindo que todos os produtos com `is_mais_vendido = true` sejam exibidos na grade de 4 colunas desktop (`grid-cols-1 sm:grid-cols-2 lg:grid-cols-4`), criando automaticamente quantas linhas forem necessárias (2, 3, 4+ linhas).
+- **2. Extinção da Seção "Destaques de Ouro" & Subida de "Ofertas Exclusivas"**:
+  - A antiga seção "Destaques de Ouro" foi eliminada da Home (`HomePage.jsx`) e seu switch correspondente foi removido da tela de cadastro/edição de produtos (`ProdutoForm.jsx`).
+  - No salvamento do formulário, `is_favorito` é forçado como `false` de modo seguro.
+  - A seção **"Ofertas Exclusivas"** (`#promocoes`) subiu estrategicamente para a posição imediatamente após os Depoimentos / Histórias de Sucesso (onde antes ficava Destaques de Ouro).
+  - A antiga seção de Ofertas Exclusivas abaixo do banner de benefícios foi descontinuada para evitar duplicação, garantindo um fluxo visual premium e alternado: Depoimentos (Branco) -> Ofertas Exclusivas (#FFF8F5) -> Benefícios da Fábrica (Dark Luxury) -> Linha Fitness (Branco) -> Especial Plus Size (#FFF8F5).
+- **3. Migração de Dados (PocketBase & SQLite)**:
+  - Criada a migração `apps/pocketbase/pb_migrations/1787900000_migrate_favoritos_to_promocoes.js` que executa `UPDATE products SET is_promocao = 1 WHERE is_favorito = 1` automaticamente na inicialização do contêiner Docker na VPS.
+  - Executada a migração local no SQLite (`apps/pocketbase/pb_data/data.db`), garantindo que todos os produtos selecionados como Destaque Ouro passem a integrar imediatamente a seção Ofertas Exclusivas.
+- **4. Validações e Não-Regressão**:
+  - `npm run test:shield`: 17/17 verificações aprovadas.
+  - `npm run lint --prefix apps/web`: 0 erros.
+  - `npm run build --prefix apps/web`: 3.127 módulos transformados com sucesso em 18.57s.
