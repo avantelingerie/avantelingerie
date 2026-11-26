@@ -53,16 +53,18 @@ export function useCheckoutLogic() {
 
   // Sync personal info when currentUser is loaded, or fallback to localStorage drafts
   useEffect(() => {
+    const savedCpf = (typeof window !== 'undefined' ? localStorage.getItem('checkout_cpf') : '') || '';
+
     if (currentUser) {
       setPersonalInfo({
         nome: currentUser.name || currentUser.nome_completo || '',
         email: currentUser.email || '',
         whatsapp: currentUser.whatsapp || currentUser.telefone || '',
-        cpf: currentUser.cpf || currentUser.cnpj || ''
+        cpf: currentUser.cpf || currentUser.cnpj || savedCpf || ''
       });
     } else {
       // 1. Try reading from guest checkout cache
-      const guestCache = localStorage.getItem('avante_guest_info');
+      const guestCache = typeof window !== 'undefined' ? localStorage.getItem('avante_guest_info') : null;
       if (guestCache) {
         try {
           const parsed = JSON.parse(guestCache);
@@ -70,7 +72,7 @@ export function useCheckoutLogic() {
             nome: parsed.nome || '',
             email: parsed.email || '',
             whatsapp: parsed.whatsapp || '',
-            cpf: parsed.cpf || ''
+            cpf: parsed.cpf || savedCpf || ''
           });
           return;
         } catch (e) {
@@ -79,7 +81,7 @@ export function useCheckoutLogic() {
       }
 
       // 2. Try reading from reseller pre-registration draft
-      const resellerDraft = localStorage.getItem('avante_reseller_draft');
+      const resellerDraft = typeof window !== 'undefined' ? localStorage.getItem('avante_reseller_draft') : null;
       if (resellerDraft) {
         try {
           const parsed = JSON.parse(resellerDraft);
@@ -87,11 +89,20 @@ export function useCheckoutLogic() {
             nome: parsed.nome || '',
             email: parsed.email || '',
             whatsapp: parsed.whatsapp || '',
-            cpf: parsed.cpf || ''
+            cpf: parsed.cpf || savedCpf || ''
           });
+          return;
         } catch (e) {
           console.warn('[useCheckoutLogic] Erro ao ler avante_reseller_draft do localStorage', e);
         }
+      }
+
+      // 3. Fallback if savedCpf exists
+      if (savedCpf) {
+        setPersonalInfo(prev => ({
+          ...prev,
+          cpf: savedCpf
+        }));
       }
     }
   }, [currentUser]);

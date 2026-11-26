@@ -173,14 +173,14 @@ export default function CartPage() {
         return;
       }
       
-      // Check if incomplete reseller (missing document)
-      const isDocMissing = !currentUser?.cpf && !currentUser?.cnpj && !currentUser?.cadastro_completo;
+      // Check if incomplete reseller (logged in user missing document)
+      const isDocMissing = Boolean(currentUser && !currentUser.cpf && !currentUser.cnpj && !currentUser.cadastro_completo);
       if (isDocMissing) {
         setShowIncompletoCheckoutModal(true);
         return;
       }
 
-      // If complete, proceed to checkout
+      // If complete or guest in wholesale mode, proceed directly to checkout
       proceedToCheckout();
     } else {
       // B2C client
@@ -429,43 +429,67 @@ export default function CartPage() {
   };
 
   const handleIncompletoSubmit = async (e) => {
-    e.preventDefault();
-    if (!incompletoCpf) {
-      setErrorIncompleto('Por favor, informe seu CPF ou CNPJ.');
+    if (e && e.preventDefault) e.preventDefault();
+    
+    const cleanDoc = (incompletoCpf || '').replace(/\D/g, '');
+    if (!cleanDoc || (cleanDoc.length !== 11 && cleanDoc.length !== 14)) {
+      setErrorIncompleto('Por favor, informe um CPF (11 dígitos) ou CNPJ (14 dígitos) válido.');
       return;
     }
+
     setIsSubmittingIncompleto(true);
     setErrorIncompleto('');
-    try {
-      // Atualiza apenas o documento, sem dar o cadastro completo B2B
-      const updated = await pb.collection('users').update(currentUser.id, {
-        cpf: incompletoCpf
-      }, { $autoCancel: false });
 
-      // Registra a solicitação para avaliação da diretoria
+    try {
+      // 1. Sempre salva localmente para que o Checkout use imediatamente
+      localStorage.setItem('checkout_cpf', cleanDoc);
       try {
-        if (!currentUser?.cadastro_completo) {
-          await pb.collection('solicitacoes_revendedor').create({
-            user_id: currentUser.id,
-            nome: currentUser.name || currentUser.nome_completo || 'Revendedora',
-            whatsapp: currentUser.whatsapp || currentUser.telefone || '',
-            cpf_cnpj: incompletoCpf,
-            cidade_estado: 'Preenchido no Checkout',
-            ja_revende: 'sim',
-            status: 'pendente'
-          }, { $autoCancel: false });
-        }
-      } catch (errReq) {
-        console.error('Erro ao registrar solicitação B2B no checkout:', errReq);
+        const guest = JSON.parse(localStorage.getItem('avante_guest_info') || '{}');
+        localStorage.setItem('avante_guest_info', JSON.stringify({ ...guest, cpf: cleanDoc }));
+      } catch (eGuest) {
+        console.warn('[CartPage] Erro ao sincronizar guest_info:', eGuest);
       }
 
-      updateUser(updated);
-      toast.success('Documento salvo! Compra liberada. Seu perfil B2B irá para análise das mídias.');
+      // 2. Se o usuário estiver autenticado no PocketBase, tenta atualizar o cadastro
+      if (currentUser?.id && pb.authStore.isValid) {
+        try {
+          const updated = await pb.collection('users').update(currentUser.id, {
+            cpf: cleanDoc
+          }, { $autoCancel: false });
+
+          if (typeof updateUser === 'function') {
+            updateUser(updated);
+          }
+        } catch (errUser) {
+          console.warn('[CartPage] Aviso ao atualizar users.cpf no PocketBase:', errUser);
+        }
+
+        // Tenta registrar solicitação B2B se necessário, sem travar o checkout
+        try {
+          if (!currentUser?.cadastro_completo) {
+            await pb.collection('solicitacoes_revendedor').create({
+              user_id: currentUser.id,
+              nome: currentUser.name || currentUser.nome_completo || 'Revendedora',
+              whatsapp: currentUser.whatsapp || currentUser.telefone || '',
+              cpf_cnpj: cleanDoc,
+              cidade_estado: 'Preenchido no Checkout',
+              ja_revende: 'sim',
+              status: 'pendente'
+            }, { $autoCancel: false });
+          }
+        } catch (errReq) {
+          console.warn('[CartPage] Aviso ao registrar solicitação B2B:', errReq);
+        }
+      }
+
+      toast.success('Documento confirmado! Redirecionando para o checkout...', { duration: 1500 });
       setShowIncompletoCheckoutModal(false);
       proceedToCheckout();
     } catch (err) {
-      console.error(err);
-      setErrorIncompleto('Erro ao salvar documento. Tente novamente.');
+      console.error('[CartPage] Erro no fluxo de documento:', err);
+      // NUNCA trava o cliente: fecha o modal e segue para o checkout seguro
+      setShowIncompletoCheckoutModal(false);
+      proceedToCheckout();
     } finally {
       setIsSubmittingIncompleto(false);
     }
@@ -1219,6 +1243,7 @@ export default function CartPage() {
                     required
                     placeholder="Digite seu CPF ou CNPJ"
                     value={incompletoCpf}
+                    maxLength={18}
                     onChange={(e) => setIncompletoCpf(e.target.value)}
                     className="w-full text-sm h-10 px-4 border border-gray-200 rounded-xl focus:border-[#c59b5f] focus:outline-none transition-colors focus:bg-[#FFFBF8]"
                   />

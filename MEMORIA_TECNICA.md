@@ -3038,3 +3038,24 @@ pm run test:shield 17/17 aprovados e build do Vite finalizado com sucesso em 35.
   - `npm run test:shield`: 17/17 verificações aprovadas.
   - `npm run lint --prefix apps/web`: 0 erros.
   - `npm run build --prefix apps/web`: 3.127 módulos transformados com sucesso em 21.57s.
+
+
+---
+
+## 26/11/2026 — Correção Crítica de Desbloqueio de Checkout Atacado Visitante (CartPage & useCheckoutLogic)
+
+- **Contexto & Diagnóstico**:
+  - Usuário testando o fluxo comercial em vídeo: Home -> `categorias/todas` -> ativou modo atacado (`avante_modo_compra = 'atacado'`) -> adicionou produto com valor mínimo (>= R$ 69,90) + Aplicativo VIP gratuito -> foi para a sacola (`/cart`) -> clicou em "Finalizar Compra".
+  - O modal de "Cadastro Pendente / Liberação Comercial" abria indevidamente para usuários anônimos/visitantes devido à verificação `!currentUser?.cpf && !currentUser?.cnpj && !currentUser?.cadastro_completo`, que avaliava para `true` quando `currentUser` era `null`.
+  - Ao preencher o CPF e clicar em "Salvar Documento & Ir para Checkout", ocorria `TypeError: Cannot read properties of null (reading 'id')` ao tentar atualizar `pb.collection('users').update(currentUser.id, ...)`, disparando o erro em vermelho `"Erro ao salvar documento. Tente novamente."` e congelando o modal sem deixar o cliente avançar.
+- **Implementações & Blindagens**:
+  1. `apps/web/src/pages/CartPage.jsx`:
+     - `isDocMissing` corrigido para `Boolean(currentUser && !currentUser.cpf && !currentUser.cnpj && !currentUser.cadastro_completo)`, permitindo que visitantes no modo atacado sigam direto para o checkout oficial onde o formulário completo de dados de entrega e nota fiscal é solicitado com segurança.
+     - `handleIncompletoSubmit` blindado com sanitização de caracteres (`replace(/\D/g, '')`), validação de tamanho (11 para CPF ou 14 para CNPJ), persistência em `localStorage.setItem('checkout_cpf', cleanDoc)` e `avante_guest_info`, e execução segura de atualização no PocketBase apenas se `currentUser?.id && pb.authStore.isValid`. Em caso de qualquer oscilação ou erro, nunca trava o checkout, fechando o modal e navegando diretamente para `/checkout`.
+     - Campo do modal protegido com `maxLength={18}`.
+  2. `apps/web/src/hooks/useCheckoutLogic.js`:
+     - Sincronização automática do `localStorage.getItem('checkout_cpf')` tanto no perfil do usuário quanto nos caches de visitante (`avante_guest_info` e `avante_reseller_draft`), garantindo que o documento informado no carrinho chegue pré-preenchido no checkout transparente da loja.
+- **Validações de Não-Regressão**:
+  - `npm run test:shield`: 17/17 verificações aprovadas.
+  - `npm run lint --prefix apps/web`: 0 erros.
+  - `npm run build --prefix apps/web`: Compilação de produção Vite bem-sucedida (3.127 módulos transformados, 22.61s).
