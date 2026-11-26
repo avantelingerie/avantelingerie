@@ -4,6 +4,7 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import { toast } from 'sonner';
 import { Loader2, UserCircle2, Sparkles, ChevronRight, Eye, EyeOff, KeyRound, Mail, CheckCircle2 } from 'lucide-react';
 import { useAuth } from '@/context/AuthContext.jsx';
+import { useCart } from '@/hooks/useCart.js';
 
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs.jsx";
 import { Input } from "@/components/ui/input.jsx";
@@ -14,11 +15,27 @@ import pb from '@/lib/pocketbaseClient.js';
 
 export default function LoginPage() {
   const { login, signup, isAuthenticated, requestPasswordReset } = useAuth();
+  const { cart } = useCart();
   const navigate = useNavigate();
   const location = useLocation();
 
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
+
+  // Resolve para onde direcionar o cliente após login/cadastro
+  const resolvePostAuthDestination = () => {
+    const from = location.state?.from?.pathname;
+    // Se o usuário veio de uma página específica (ex: /checkout, /categoria/fitness), preserva o destino
+    if (from && from !== '/login') {
+      // Se veio para o carrinho mas a sacola está vazia, envia para a Home para ver as vitrines
+      if (from === '/cart' && (!cart || cart.length === 0)) {
+        return '/';
+      }
+      return from;
+    }
+    // Se tiver itens na sacola, vai para o carrinho; se a sacola estiver vazia, vai direto para a Home
+    return cart && cart.length > 0 ? '/cart' : '/';
+  };
 
   // Default tab based on query param if provided
   const queryParams = new URLSearchParams(location.search);
@@ -75,10 +92,9 @@ export default function LoginPage() {
   // Redirect if already authenticated
   useEffect(() => {
     if (isAuthenticated) {
-      const from = location.state?.from?.pathname || '/cart';
-      navigate(from, { replace: true });
+      navigate(resolvePostAuthDestination(), { replace: true });
     }
-  }, [isAuthenticated, navigate, location]);
+  }, [isAuthenticated, navigate, location, cart?.length]);
 
   const handleLoginSubmit = async (e) => {
     e.preventDefault();
@@ -88,8 +104,7 @@ export default function LoginPage() {
     try {
       await login(loginData.email, loginData.password);
       toast.success('Login realizado com sucesso!');
-      const from = location.state?.from?.pathname || '/cart';
-      navigate(from, { replace: true });
+      navigate(resolvePostAuthDestination(), { replace: true });
     } catch (err) {
       console.error(err);
       setError('Credenciais inválidas. Verifique seu e-mail e senha.');
@@ -150,10 +165,9 @@ export default function LoginPage() {
       }
 
       toast.success(signupData.tipo_cliente === 'revendedor' 
-        ? '👑 Conta de revendedora criada! Complete seu WhatsApp no perfil para liberar descontos.'
+        ? '👑 Conta de revendedora criada! Bem-vinda à fábrica Avante Lingerie.'
         : 'Conta criada com sucesso!');
-      const destination = signupData.tipo_cliente === 'revendedor' ? '/minha-conta' : '/cart';
-      navigate(destination, { replace: true });
+      navigate(resolvePostAuthDestination(), { replace: true });
     } catch (err) {
       console.error(err);
       const fieldErrors = err?.data?.data || err?.response?.data || {};

@@ -829,12 +829,20 @@ export default function QueroRevenderPage() {
                   Sua conta de nível Bronze foi ativada. Você já está logada e visualiza preços de atacado!
                   Para fazer download das fotos e vídeos, acesse o Portal de Revenda e envie os dados comerciais na seção Minha Conta. Seja muito bem-vinda!
                 </p>
-                <button
-                  onClick={() => navigate('/portal-revenda')}
-                  className="px-8 py-3 bg-[#C59B5F] hover:bg-[#b0874e] text-black font-extrabold text-xs uppercase tracking-wider rounded-xl shadow-md transition-colors"
-                >
-                  Acessar Painel do Portal
-                </button>
+                <div className="flex flex-col sm:flex-row gap-3 justify-center items-center pt-2">
+                  <button
+                    onClick={() => navigate('/')}
+                    className="w-full sm:w-auto px-8 py-3.5 bg-gradient-to-r from-[#c59b5f] to-[#e5c595] hover:brightness-110 text-black font-extrabold text-xs uppercase tracking-wider rounded-xl shadow-lg transition-all cursor-pointer"
+                  >
+                    Ver Produtos de Fábrica na Home
+                  </button>
+                  <button
+                    onClick={() => navigate('/portal-revenda')}
+                    className="w-full sm:w-auto px-6 py-3.5 bg-white/10 hover:bg-white/20 text-white font-bold text-xs uppercase tracking-wider rounded-xl transition-colors border border-white/10 cursor-pointer"
+                  >
+                    Acessar Painel do Portal
+                  </button>
+                </div>
               </motion.div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6 text-left">

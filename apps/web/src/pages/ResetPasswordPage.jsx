@@ -8,6 +8,7 @@ import { Label } from "@/components/ui/label.jsx";
 import { Button } from "@/components/ui/button.jsx";
 import pb from '@/lib/pocketbaseClient.js';
 import { useAuth } from '@/context/AuthContext.jsx';
+import { useCart } from '@/hooks/useCart.js';
 
 export default function ResetPasswordPage() {
   const navigate = useNavigate();
@@ -15,6 +16,7 @@ export default function ResetPasswordPage() {
   const { token: routeToken } = useParams();
   const [searchParams] = useSearchParams();
   const { login } = useAuth();
+  const { cart } = useCart();
 
   // Extrai o token de redefinição de todas as origens possíveis:
   // 1. Parâmetro de rota (/redefinir-senha/:token)
@@ -89,7 +91,7 @@ export default function ResetPasswordPage() {
           await login(email.trim().toLowerCase(), password.trim());
           toast.success('Login realizado com sucesso! Redirecionando...');
           setTimeout(() => {
-            navigate('/cart');
+            navigate(cart && cart.length > 0 ? '/cart' : '/');
           }, 1500);
           return;
         } catch (loginErr) {

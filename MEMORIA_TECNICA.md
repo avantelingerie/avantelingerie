@@ -3059,3 +3059,29 @@ pm run test:shield 17/17 aprovados e build do Vite finalizado com sucesso em 35.
   - `npm run test:shield`: 17/17 verificações aprovadas.
   - `npm run lint --prefix apps/web`: 0 erros.
   - `npm run build --prefix apps/web`: Compilação de produção Vite bem-sucedida (3.127 módulos transformados, 22.61s).
+
+
+---
+
+## 26/11/2026 — Otimização de Redirecionamento Pós-Autenticação: Destino Inteligente (Home vs. Carrinho)
+
+- **Contexto & Diagnóstico Comercial**:
+  - Usuários que realizavam login ou criavam conta de revenda (informando e-mail e celular/WhatsApp) eram compulsoriamente redirecionados para a rota `/cart` via fallback estático `location.state?.from?.pathname || '/cart'`.
+  - Como esses clientes haviam acabado de entrar no sistema e ainda não tinham selecionado produtos físicos, o carrinho estava vazio (`cart.length === 0`), exibindo a mensagem "Sua sacola está vazia" e um botão "Explorar Produtos".
+  - Essa quebra de fluxo esfriava a jornada comercial, pois o cliente deseja ver imediatamente a vitrine de produtos, novidades e os preços de atacado ativados.
+- **Implementação & Blindagem Arquitetural**:
+  1. `apps/web/src/pages/LoginPage.jsx`:
+     - Criada a função `resolvePostAuthDestination()`:
+       - Se o cliente estava em uma rota de compra anterior (ex: `/checkout`, `/categoria/fitness`), preserva o retorno àquela página específica.
+       - Se a rota de origem for `/cart` mas a sacola estiver vazia (`cart.length === 0`), redireciona para a Home (`/`).
+       - Se a sacola possuir itens (`cart.length > 0`), direciona para o carrinho `/cart` para continuar o pedido.
+       - Se não houver rota de origem e a sacola estiver vazia, direciona para a Home (`/`).
+     - Aplicado em `useEffect` (sessão já ativa), `handleLoginSubmit` (login efetuado) e `handleSignupSubmit` (nova conta criada).
+  2. `apps/web/src/pages/ResetPasswordPage.jsx`:
+     - Redirecionamento pós-redefinição ajustado para `cart && cart.length > 0 ? '/cart' : '/'`.
+  3. `apps/web/src/pages/QueroRevenderPage.jsx`:
+     - Adicionado botão de ação principal dourado "Ver Produtos de Fábrica na Home" (`navigate('/')`), mantendo o botão secundário para o Painel do Portal de Revenda.
+- **Validações de Não-Regressão**:
+  - `npm run test:shield`: 17/17 verificações aprovadas.
+  - `npm run lint --prefix apps/web`: 0 erros.
+  - `npm run build --prefix apps/web`: 3.127 módulos transformados com sucesso em 28.14s gerando `dist/apps/web`.
